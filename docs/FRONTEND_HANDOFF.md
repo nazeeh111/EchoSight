@@ -89,3 +89,7 @@ Exact waveform reuse produces rejected observations and `duplicate_waveform_grou
 ### Comparison support identity update
 
 Comparison outputs now use version `1.1`; scene outputs stay `1.0`, and previous comparison versions1.0/1.1 can carry display tracks. Use `(session_id, capture_id)` references for recording evidence, never a bare capture name across sessions. Read `support_comparison_status` before displaying counts: `unavailable` has null additional-support counts and empty delta arrays. [Tracking contract](TRACKING.md) and [schema](../schemas/comparison.schema.json) define the migration. This change does not authenticate measurements or imply their physical independence.
+
+### Deferred interpretation layers
+
+After acoustic geometry, later material inference may consume acoustic evidence; a separate appearance stage may estimate plausible real-world colors from material/geometry/context. Neither exists in the current output. Keep acoustic false-color styling separate from any future predicted appearance, and display unknown states when evidence is insufficient. Later five-perspective reasoning/adjudication must cite immutable inputs and remain a separate interpretation, never rewrite measured evidence or fitted geometry. [Current steering and boundaries](CHARTER_ADDENDUM.md) preserve these later stages without introducing premature schema fields or model dependencies.

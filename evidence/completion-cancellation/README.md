@@ -1,0 +1,9 @@
+# Completion-boundary cancellation repairs
+
+Parent code: `f5bf0fa412db9479779a7e944e14ea8c4ea983b7`. The [independent assembled review](../independent-review-f5bf0fa.md) reproduced two inherited P2 defects: controlled cancellation retained change claims, and the outer pipeline could return geometry after its final callback requested cancellation.
+
+One copying scene-cancellation helper now serves inference, multi-source processing and the raw pipeline. Controlled comparison has a separate finalizer for its cross-epoch decisions. Every controlled return checks cancellation. Completed inputs and recording provenance remain available; unfinished geometry/change claims are cleared. Both output schemas reject claim-bearing cancelled envelopes. This removes three divergent scene cleanup implementations without new classes, dependencies or public fields.
+
+`tests/test_completion_cancellation.py` exercises actual recording-derived epoch results, real CLI SIGINT, terminal progress callbacks, positive uncancelled controls, input preservation and schema rejection. Cached completed epoch results isolate cancellation boundaries without inventing acoustic observations or geometry. Twelve failing subcases are retained in the before log. The intermediate mixed string/object diagnostic failure is also retained. The final focused suite passes17 tests in13.470s. The full suite passes201 tests in65.132s; all51 recorded runtime/test/schema hashes were unchanged after execution. Exact commands and limits are in the JSON records.
+
+Cancellation is cooperative, not asynchronous preemption. Store publication separately enforces its event/lock boundary. No new physical measurement, scientific acceptance result or hardware accuracy follows from this repair. Independent follow-up and clean GitHub reproduction are separate delivery checks.

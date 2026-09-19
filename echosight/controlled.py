@@ -238,54 +238,66 @@ def _native_control_conflicts(protocol,observations,ids):
     return conflicts
 
 
+def _finalize_controlled(out,cancel):
+    """Publish no cross-epoch decision when cooperative cancellation is observed."""
+    if out['status']!='cancelled' and not cancel():return out
+    out=dict(out)
+    out.update(status='cancelled',receiver_evidence=[],conditional_spatial_changes=[],
+               physical_scene_change_established=False)
+    out['diagnostics']=list(out['diagnostics'])
+    if not any(d.get('code')=='cancelled_by_caller' for d in out['diagnostics']):
+        out['diagnostics'].append({'code':'cancelled_by_caller','message':'Cross-epoch comparison was cancelled. Retained epoch results and recording hashes are input evidence for recovery, not a completed change decision.'})
+    return out
+
+
 def process_controlled_protocol(protocol,cancel=None,progress=None):
     """Raw-recording entry point; exactly four epochs, bounded by session limits."""
     from .pipeline import process_session
     cancel=cancel or (lambda:False);progress=progress or (lambda fraction,message='':None)
-    if cancel():return _empty(protocol if isinstance(protocol,dict) else {},'cancelled')
+    if cancel():return _finalize_controlled(_empty(protocol if isinstance(protocol,dict) else {},'cancelled'),cancel)
     try:protocol,sessions=_load(protocol)
-    except (ValueError,TypeError,KeyError,OSError) as exc:return _empty(protocol if isinstance(protocol,dict) else {},code='protocol_invalid_or_controls_changed',message=str(exc))
+    except (ValueError,TypeError,KeyError,OSError) as exc:return _finalize_controlled(_empty(protocol if isinstance(protocol,dict) else {},code='protocol_invalid_or_controls_changed',message=str(exc)),cancel)
     out=_empty(protocol);out['declared_controls']=protocol['controls'];out['intervention_description']=protocol['intervention_description']
     out['coordinate_frame_id']=protocol['coordinate_frame_id']
     out['epoch_control_declarations']=[{k:e[k] for k in ('epoch','calibration_id','source_configuration_id','route_ids')} for e in protocol['epochs']]
     try:out['protocol_sha256']=hashlib.sha256(json.dumps(protocol,sort_keys=True,allow_nan=False).encode()).hexdigest()
-    except (ValueError,TypeError) as exc:return _empty(protocol,code='protocol_invalid_or_controls_changed',message=str(exc))
+    except (ValueError,TypeError) as exc:return _finalize_controlled(_empty(protocol,code='protocol_invalid_or_controls_changed',message=str(exc)),cancel)
     results=[]
     for i,session in enumerate(sessions):
-        if cancel():out['status']='cancelled';return out
+        if cancel():out['status']='cancelled';return _finalize_controlled(out,cancel)
         result=process_session(session,cancel=cancel,progress=lambda f,m='',i=i:progress((i+f)/4,m))
         results.append(result);out['epoch_results'].append({'epoch':EPOCHS[i],'result':_compact_epoch(result)})
-        if result['status']=='cancelled':out['status']='cancelled';return out
+        if result['status']=='cancelled':out['status']='cancelled';return _finalize_controlled(out,cancel)
     observations=[{o['capture_id']:o for o in r.get('observations',[])} for r in results]
     ids={c['capture_id'] for c in sessions[0]['captures']}
     if any(set(o)!=ids or any(v.get('status')!='ok' for v in o.values()) for o in observations):
-        out['diagnostics'].append({'code':'capture_quality_failed','message':'Every declared capture must pass signal checks in all four epochs.'});return out
+        out['diagnostics'].append({'code':'capture_quality_failed','message':'Every declared capture must pass signal checks in all four epochs.'});return _finalize_controlled(out,cancel)
     conflicts=_native_control_conflicts(protocol,observations,ids)
     if conflicts:
         out['diagnostics'].append({'code':'native_controls_contradict_protocol','message':'; '.join(conflicts)})
-        return out
+        return _finalize_controlled(out,cancel)
     hashes=[o.get('recording_sha256') for epoch in observations for o in epoch.values()]
     if None in hashes or len(set(hashes))!=len(hashes):
-        out['diagnostics'].append({'code':'recordings_reused','message':'Independent epochs and devices require distinct preserved recording bytes.'});return out
+        out['diagnostics'].append({'code':'recordings_reused','message':'Independent epochs and devices require distinct preserved recording bytes.'});return _finalize_controlled(out,cancel)
     waveforms=[o.get('waveform_sha256') for epoch in observations for o in epoch.values()]
     if any(waveforms) and (None in waveforms or len(set(waveforms))!=len(waveforms)):
         out['diagnostics'].append({'code':'recording_waveforms_reused','message':'Distinct containers cannot make identical decoded audio independent across epochs or devices.'})
-        return out
+        return _finalize_controlled(out,cancel)
     try:
         for cid in sorted(ids):
-            if cancel():out['status']='cancelled';return out
+            if cancel():out['status']='cancelled';return _finalize_controlled(out,cancel)
             out['receiver_evidence'].append(_receiver_evidence([o[cid] for o in observations],protocol['controls']['differential_timing_std_s']))
     except (KeyError,ValueError,TypeError) as exc:
-        out['diagnostics'].append({'code':'response_comparison_unavailable','message':str(exc)});return out
+        out['diagnostics'].append({'code':'response_comparison_unavailable','message':str(exc)});return _finalize_controlled(out,cancel)
     if any(not e['repeat_consistent'] for e in out['receiver_evidence']):
-        out['diagnostics'].append({'code':'return_or_repeat_failed','message':'A-return or B-repeat differs beyond the declared timing and repeatability gates.'});return out
+        out['diagnostics'].append({'code':'return_or_repeat_failed','message':'A-return or B-repeat differs beyond the declared timing and repeatability gates.'});return _finalize_controlled(out,cancel)
     changed=sum(e['repeatable_change'] for e in out['receiver_evidence'])
     if changed<max(3,math.ceil(len(ids)/2)):
         out['status']='no_repeatable_change'
-        out['diagnostics'].append({'code':'change_not_established','message':'Insufficient repeated multi-view change. This does not prove scene identity.'});return out
+        out['diagnostics'].append({'code':'change_not_established','message':'Insufficient repeated multi-view change. This does not prove scene identity.'});return _finalize_controlled(out,cancel)
     out['status']='repeatable_acoustic_change_unlocalized'
     out['conditional_spatial_changes']=_spatial_changes(results,out['receiver_evidence'])
     if out['conditional_spatial_changes']:out['status']='conditional_spatial_change'
-    if cancel():out['status']='cancelled';return out
+    if cancel():out['status']='cancelled';return _finalize_controlled(out,cancel)
     out['diagnostics'].append({'code':'controlled_acoustic_difference','message':'Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional.'})
-    return out
+    return _finalize_controlled(out,cancel)

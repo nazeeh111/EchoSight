@@ -1,0 +1,29 @@
+{
+  "commit": "f5bf0fa412db9479779a7e944e14ea8c4ea983b7",
+  "source_files": {
+    "echosight/acquisition.py": "ca2effe95ae170b25a7eb8944a3bf16a255263668aca9c7b0da63b14b7503279",
+    "echosight/calibration.py": "0d007c12b1f8ff026e4f9c6c8f4475b97bab4340a185819a36c71bf5d6f27618",
+    "echosight/controlled.py": "0b2e14c3b61245ed475434486e619a744152cae77c1ab89f4fe68ec2b9d59a9b",
+    "echosight/evolution.py": "21caa2ba190a637b26c9188ee90bed3a34d6b90228a28699181d85a7b921b7c5",
+    "echosight/inference.py": "f2dd54fad0a31ee062918a2a594bb0c397ac97699113a7d78b3578312393c03a",
+    "echosight/multisource.py": "fe0b0df716447eb0088b131f0341136dfd9677fe3f5a5fc515c5869a21ced93b",
+    "echosight/pipeline.py": "8ef6a86b12ecadecf7c2065534b5194f4c5a0adbbfa1a7c7145321f708d7ece0",
+    "echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816",
+    "echosight/storage.py": "df884e5a1c8746934ef752dd6e4d90dcdf0654becf5dad6581c4b58911fcae63",
+    "echosight/cli.py": "94efd77383ec0ee43c770e078cf25bffdc7339ace7c8b353d5e26e719b49c4cb",
+    "echosight/api.py": "734c309b59ad19a3cf9c44a33d9365f1b6062408c8945a816e9cfc6f33cae1e3",
+    "schemas/comparison.schema.json": "f22e7335dc28a6f2d7fd841c8a57c90e7dbdabf1067366ab7ace56b13413ff7c",
+    "schemas/controlled-result.schema.json": "38c3151f6bc3062c08855d594d0862f56845140c93ff9050ec125db376e93536",
+    "schemas/result.schema.json": "ecca616fb3986db7433b23004c623afbaeac1b70fc6a05e95e45dd2ae4e8eb41"
+  },
+  "reviewer_files": {
+    "probe.py": "b78537197a716706811c997ec52287bd9de5809215254b0239ee868680df38db",
+    "probe-results.json": "a2e14085bc816a513257cc292f53657f3745f1b07c07ba0650f76dc0fad0af22",
+    "schema-probe.py": "27e814a4c20f5029a5a771e1c5e9c92dd5ef4ed6efd8c76a218e65f3e9b53d68",
+    "schema-probe-results.json": "c548788197f920d8a01b4dca69e2c848bf870a9c46ce4d4c0ecf03bde3d06c0a",
+    "focused-tests.txt": "d71cb8241d80257474de12378172e70e13aa54cbf742fbaf024b68a2870f353d",
+    "cancellation-tests.txt": "12ba5a70cd8122da5f5ccf4d2f68f9c260f8ae16fc2dafdc43d33a961c7d71a2",
+    "publication-tests.txt": "92b6a39162833e02a414dec405432a73e8ad91d1425ad8e3b39893bfa9ed5142",
+    "http-publication-test.txt": "f8264605a6cfb87ccb3d47608b4223aeb6e81264423d84d9fc2109b14eb12a55"
+  }
+}

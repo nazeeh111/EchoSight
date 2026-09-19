@@ -1,0 +1,46 @@
+{
+  "base_commit": "f5bf0fa412db9479779a7e944e14ea8c4ea983b7",
+  "files_sha256": {
+    "echosight/controlled.py": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646",
+    "echosight/inference.py": "fe031cc0e6795906d8b6b411704dd81e8096370ce3d84c9e663898c747ad4b66",
+    "echosight/multisource.py": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+    "echosight/pipeline.py": "cd78d4b9de5faa96d194f19cdcb9b2398af7760e5a90fe59e388043470572520",
+    "tests/test_completion_cancellation.py": "db9088ec19137d1f03f4dad704d7a09e4a14c423bb59e08f277d788178b828e6",
+    "schemas/result.schema.json": "fb826b0a18bf502b097d4e7fd78af23d069c1cc94c5300585858ba2a9a224934",
+    "schemas/controlled-result.schema.json": "af808c60fde6347b21d36df7f6e4caeb2e0f9229399ead5855b7f532f500ba48"
+  },
+  "before": {
+    "log": "work/completion-cancellation-before.txt",
+    "tests": 3,
+    "failing_subcases": 12
+  },
+  "intermediate_regression_failure": {
+    "log": "work/completion-cancellation-final.txt",
+    "cause": "Existing solver cancellation diagnostics are strings; final publisher initially assumed objects. Fixed mixed-format admission without changing diagnostic provenance."
+  },
+  "final": {
+    "log": "work/completion-cancellation-consolidated-final.txt",
+    "tests": 17,
+    "seconds": 13.47,
+    "status": "passed",
+    "command": ".venv/bin/python -m unittest tests.test_completion_cancellation tests.test_controlled tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_shared_helper_source_fields_and_controlled_reuse tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_cli_interrupt_saves_cancelled_evidence_without_geometry -v tests.test_mapping_admission_cancellation.MultisourceAdmissionTests.test_joint_late_cancel_discards_all_derived_geometry_but_keeps_inputs",
+    "previous_log": "work/completion-cancellation-final-v2.txt"
+  },
+  "checks": [
+    "Core and CLI actual SIGINT: mid receiver, final spatial comparison, last receiver no-change and failed-return early decisions",
+    "Core and CLI actual SIGINT: outer pipeline terminal callback, mapper and baseline",
+    "Schema validation of actual cancelled result envelopes",
+    "Completed raw-derived epoch objects unchanged; retained surfaces, recording hashes and four epoch results",
+    "Uncancelled moved/null-by-timing-budget/failed-return decisions preserved",
+    "git diff --check passed",
+    "Mixed string/object diagnostics preserve previous cancellation marker without duplication",
+    "Both public cancelled schemas reject actual completed claim-bearing results with status relabeled cancelled",
+    "Shared scene helper preserves original inputs and is idempotent; multi-source late cancellation regression passes"
+  ],
+  "limits": [
+    "Cancellation is cooperative at publication boundaries, not asynchronous preemption.",
+    "Controlled comparison test isolates boundaries using deep copies of completed raw-recording pipeline results; no fabricated geometry or echo evidence.",
+    "No physical-device validation or scientific model changes."
+  ],
+  "consolidation": "One copying, idempotent _cancelled_result helper in existing inference.py clears union of single/multi-source derived fields. All three scene producers reuse it; solver exception handlers rebind out so finally runtime updates affect returned copies. Controlled cross-epoch finalization remains separate."
+}

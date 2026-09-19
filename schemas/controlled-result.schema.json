@@ -88,5 +88,29 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "cancelled"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "receiver_evidence": {
+            "maxItems": 0
+          },
+          "conditional_spatial_changes": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
 }

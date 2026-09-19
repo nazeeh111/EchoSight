@@ -1,0 +1,9 @@
+test_every_inference_wrapper_forwards_cancel_and_progress (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_every_inference_wrapper_forwards_cancel_and_progress) ... ok
+test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry) ... ok
+test_cli_interrupt_saves_cancelled_evidence_without_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_cli_interrupt_saves_cancelled_evidence_without_geometry) ... ok
+test_joint_late_cancel_discards_all_derived_geometry_but_keeps_inputs (tests.test_mapping_admission_cancellation.MultisourceAdmissionTests.test_joint_late_cancel_discards_all_derived_geometry_but_keeps_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.501s
+
+OK

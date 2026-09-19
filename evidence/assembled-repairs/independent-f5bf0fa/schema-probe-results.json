@@ -1,0 +1,14 @@
+{
+  "cancelled_controlled_claims_schema_valid": true,
+  "comparison_version": "1.1",
+  "cross_session_additional_support": [
+    4
+  ],
+  "legacy_carry_status": "comparable",
+  "legacy_carry_version": "1.1",
+  "missing_scope_counts": [
+    null
+  ],
+  "cancelled_compare_status": "incomparable",
+  "cancelled_compare_tracks": []
+}

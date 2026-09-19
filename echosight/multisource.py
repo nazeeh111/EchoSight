@@ -403,9 +403,8 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
         single._check(cancel)
         return out
     except single._Cancelled:
-        for key in ('surfaces','hypotheses','dimensions','guidance'):out[key]=[]
-        for key in ('shared_plane_parameter_covariance_m2','score','parent_model_comparison','path_model_comparison'):out.pop(key,None)
-        out['status']='cancelled';out['diagnostics'].append('cancelled_by_caller');return out
+        out=single._cancelled_result(out)
+        return out
     except (ValueError,KeyError,TypeError,np.linalg.LinAlgError) as exc:
         out['diagnostics'].append(str(exc));out['status']='calibration_needed';out['surfaces']=[]
         for hypothesis in out['hypotheses']:
@@ -483,7 +482,7 @@ def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
         fingerprint=json.dumps(dict(bundle=bundle,recordings=[[o.get('recording_sha256') for o in item['observations']] for item in processed],method=method),sort_keys=True,allow_nan=False)
         result['result_id']='scene-'+hashlib.sha256(fingerprint.encode()).hexdigest()[:20]
         return result
-    except single._Cancelled:out['status']='cancelled'
+    except single._Cancelled:out=single._cancelled_result(out)
     except (ValueError,KeyError,TypeError,OSError) as exc:out['diagnostics'].append(str(exc))
     out['processed_sessions']=processed;out['runtime_s']=time.perf_counter()-start
     return out

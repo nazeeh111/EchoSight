@@ -1,0 +1,14 @@
+{
+  "commit": "f5bf0fa412db9479779a7e944e14ea8c4ea983b7",
+  "command": ".venv/bin/python -m echosight demo work/assembled-repairs/demo --seed 1 --captures 12",
+  "evidence_class": "synthetic raw recordings",
+  "status": "partial",
+  "surfaces": 6,
+  "horizontal_surfaces": 2,
+  "observations": 12,
+  "implementation_sha256": "7b2350eca260ede7d9130ae8a0b27bef60f55e4ed8c0d00c8739fedfcbb32812",
+  "runtime_s": 0.6721384170014062,
+  "physical_validation": false,
+  "export_sha256": "8805783e5571a51373546e89b44fc4de1370e396d94abbb5cd98fc58d11a74c2",
+  "note": "CLI demo and export completed before interruption. Search budget diagnostic retained; this is not a new acceptance evaluation."
+}

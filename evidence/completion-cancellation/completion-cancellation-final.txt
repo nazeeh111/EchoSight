@@ -1,0 +1,63 @@
+test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) ... ok
+test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) ... ok
+test_uncancelled_decisions_remain_available (tests.test_completion_cancellation.CompletionCancellationTests.test_uncancelled_decisions_remain_available) ... ok
+test_clock_uncertainty_and_duplicate_bytes_cannot_strengthen_evidence (tests.test_controlled.ControlledAcquisitionTests.test_clock_uncertainty_and_duplicate_bytes_cannot_strengthen_evidence) ... ok
+test_failure_to_restore_A_prevents_change_claim (tests.test_controlled.ControlledAcquisitionTests.test_failure_to_restore_A_prevents_change_claim) ... ok
+test_four_stationary_phones_keep_ambiguous_geometry_unlocalized (tests.test_controlled.ControlledAcquisitionTests.test_four_stationary_phones_keep_ambiguous_geometry_unlocalized) ... ok
+test_missing_controls_and_cancellation_are_explicit (tests.test_controlled.ControlledAcquisitionTests.test_missing_controls_and_cancellation_are_explicit) ... ok
+test_raw_null_and_gain_only_do_not_claim_spatial_change (tests.test_controlled.ControlledAcquisitionTests.test_raw_null_and_gain_only_do_not_claim_spatial_change) ... ok
+test_reversible_reflector_move_is_supported_by_positive_echoes (tests.test_controlled.ControlledAcquisitionTests.test_reversible_reflector_move_is_supported_by_positive_echoes) ... ok
+test_route_and_calibration_drift_rejected_before_processing (tests.test_controlled.ControlledAcquisitionTests.test_route_and_calibration_drift_rejected_before_processing) ... ok
+test_shared_timing_budget_does_not_shrink_across_receivers (tests.test_controlled.ControlledAcquisitionTests.test_shared_timing_budget_does_not_shrink_across_receivers) ... ok
+test_shared_helper_source_fields_and_controlled_reuse (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_shared_helper_source_fields_and_controlled_reuse) ... ok
+test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry) ... 
+  test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry) (method='mapper') ... ERROR
+test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry) ... ERROR
+test_cli_interrupt_saves_cancelled_evidence_without_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_cli_interrupt_saves_cancelled_evidence_without_geometry) ... ERROR
+
+======================================================================
+ERROR: test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry) (method='mapper')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_mapping_admission_cancellation.py", line 66, in test_late_mapper_and_baseline_cancel_discard_unverified_geometry
+    result=process_session(self.session,method=method,cancel=lambda:state['cancelled'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/pipeline.py", line 177, in process_session
+    if not any(d.get("code") == "cancelled_by_caller" for d in result["diagnostics"]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/pipeline.py", line 177, in <genexpr>
+    if not any(d.get("code") == "cancelled_by_caller" for d in result["diagnostics"]):
+               ^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+======================================================================
+ERROR: test_late_mapper_and_baseline_cancel_discard_unverified_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_late_mapper_and_baseline_cancel_discard_unverified_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_mapping_admission_cancellation.py", line 67, in test_late_mapper_and_baseline_cancel_discard_unverified_geometry
+    self.assertTrue(state['cancelled']);self.assert_cancelled_without_geometry(result)
+                                                                               ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+
+======================================================================
+ERROR: test_cli_interrupt_saves_cancelled_evidence_without_geometry (tests.test_mapping_admission_cancellation.MappingAdmissionCancellationTests.test_cli_interrupt_saves_cancelled_evidence_without_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_mapping_admission_cancellation.py", line 78, in test_cli_interrupt_saves_cancelled_evidence_without_geometry
+    code=main(['process',str(self.root/'raw'/'session.json'),'--method',method,'--output',str(output)])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/cli.py", line 116, in main
+    result = process_session(session, cancel=cancelled.is_set,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/pipeline.py", line 177, in process_session
+    if not any(d.get("code") == "cancelled_by_caller" for d in result["diagnostics"]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/pipeline.py", line 177, in <genexpr>
+    if not any(d.get("code") == "cancelled_by_caller" for d in result["diagnostics"]):
+               ^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.765s
+
+FAILED (errors=3)

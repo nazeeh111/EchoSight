@@ -1,0 +1,164 @@
+test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) ... 
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='mid_receiver', cli=False) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='mid_receiver', cli=True) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='spatial', cli=False) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='spatial', cli=True) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_no_change', cli=False) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_no_change', cli=True) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_failed_return', cli=False) ... FAIL
+  test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_failed_return', cli=True) ... FAIL
+test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) ... 
+  test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='mapper', cli=False) ... FAIL
+  test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='mapper', cli=True) ... FAIL
+  test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='baseline', cli=False) ... FAIL
+  test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='baseline', cli=True) ... FAIL
+test_uncancelled_decisions_remain_available (tests.test_completion_cancellation.CompletionCancellationTests.test_uncancelled_decisions_remain_available) ... ok
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='mid_receiver', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 38, in assert_cancelled_comparison
+    self.assertEqual(result['receiver_evidence'], [])
+AssertionError: Lists differ: [{'capture_id': 'view-00', 'A_return_relat[876 chars]t.'}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'capture_id': 'view-00', 'A_return_relative_difference': 0.0024382208321821765, 'B_repeat_relative_difference': 0.01566650642533646, 'cross_state_relative_difference': 1.8361048364420804, 'timing_relative_difference_bound': np.float64(0.265192343182456), 'change_gate': np.float64(0.795577029547368), 'repeat_consistent': True, 'repeatable_change': True, 'shifted_positive_echoes': [{'A_delay_s': 0.007171462255424375, 'B_delay_s': 0.006103177670556875, 'delay_change_s': -0.0010682845848675, 'differential_std_bound_s': 0.00010210615446133217, 'A_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'B_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'interpretation': 'Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association.'}], 'gate_semantics': 'Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.'}
+
+Diff is 1512 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='mid_receiver', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 38, in assert_cancelled_comparison
+    self.assertEqual(result['receiver_evidence'], [])
+AssertionError: Lists differ: [{'A_return_relative_difference': 0.002438[852 chars]456}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'A_return_relative_difference': 0.0024382208321821765, 'B_repeat_relative_difference': 0.01566650642533646, 'capture_id': 'view-00', 'change_gate': 0.795577029547368, 'cross_state_relative_difference': 1.8361048364420804, 'gate_semantics': 'Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.', 'repeat_consistent': True, 'repeatable_change': True, 'shifted_positive_echoes': [{'A_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'A_delay_s': 0.007171462255424375, 'B_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'B_delay_s': 0.006103177670556875, 'delay_change_s': -0.0010682845848675, 'differential_std_bound_s': 0.00010210615446133217, 'interpretation': 'Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association.'}], 'timing_relative_difference_bound': 0.265192343182456}
+
+Diff is 1488 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='spatial', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 38, in assert_cancelled_comparison
+    self.assertEqual(result['receiver_evidence'], [])
+AssertionError: Lists differ: [{'capture_id': 'view-00', 'A_return_relat[11048 chars]t.'}] != []
+
+First list contains 12 additional elements.
+First extra element 0:
+{'capture_id': 'view-00', 'A_return_relative_difference': 0.0024382208321821765, 'B_repeat_relative_difference': 0.01566650642533646, 'cross_state_relative_difference': 1.8361048364420804, 'timing_relative_difference_bound': np.float64(0.265192343182456), 'change_gate': np.float64(0.795577029547368), 'repeat_consistent': True, 'repeatable_change': True, 'shifted_positive_echoes': [{'A_delay_s': 0.007171462255424375, 'B_delay_s': 0.006103177670556875, 'delay_change_s': -0.0010682845848675, 'differential_std_bound_s': 0.00010210615446133217, 'A_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'B_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'interpretation': 'Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association.'}], 'gate_semantics': 'Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.'}
+
+Diff is 18108 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='spatial', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 38, in assert_cancelled_comparison
+    self.assertEqual(result['receiver_evidence'], [])
+AssertionError: Lists differ: [{'A_return_relative_difference': 0.002438[10772 chars]259}] != []
+
+First list contains 12 additional elements.
+First extra element 0:
+{'A_return_relative_difference': 0.0024382208321821765, 'B_repeat_relative_difference': 0.01566650642533646, 'capture_id': 'view-00', 'change_gate': 0.795577029547368, 'cross_state_relative_difference': 1.8361048364420804, 'gate_semantics': 'Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.', 'repeat_consistent': True, 'repeatable_change': True, 'shifted_positive_echoes': [{'A_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'A_delay_s': 0.007171462255424375, 'B_candidate_ids': ['view-00:echo:00', 'view-00:echo:00'], 'B_delay_s': 0.006103177670556875, 'delay_change_s': -0.0010682845848675, 'differential_std_bound_s': 0.00010210615446133217, 'interpretation': 'Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association.'}], 'timing_relative_difference_bound': 0.265192343182456}
+
+Diff is 17832 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_no_change', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 37, in assert_cancelled_comparison
+    self.assertEqual(result['status'], 'cancelled')
+AssertionError: 'no_repeatable_change' != 'cancelled'
+- no_repeatable_change
++ cancelled
+
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_no_change', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 79, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assertEqual(code, 130)
+AssertionError: 0 != 130
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_failed_return', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 83, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assert_cancelled_comparison(result, scenario)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 37, in assert_cancelled_comparison
+    self.assertEqual(result['status'], 'cancelled')
+AssertionError: 'inconclusive' != 'cancelled'
+- inconclusive
++ cancelled
+
+
+======================================================================
+FAIL: test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns (tests.test_completion_cancellation.CompletionCancellationTests.test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns) (boundary='last_failed_return', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 79, in test_controlled_core_and_cli_mid_late_and_last_receiver_early_returns
+    self.assertEqual(code, 130)
+AssertionError: 2 != 130
+
+======================================================================
+FAIL: test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='mapper', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 121, in test_outer_pipeline_terminal_callback_core_and_cli
+    self.assertEqual(result['status'], 'cancelled')
+AssertionError: 'ok' != 'cancelled'
+- ok
++ cancelled
+
+
+======================================================================
+FAIL: test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='mapper', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 116, in test_outer_pipeline_terminal_callback_core_and_cli
+    self.assertEqual(code, 130)
+AssertionError: 0 != 130
+
+======================================================================
+FAIL: test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='baseline', cli=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 121, in test_outer_pipeline_terminal_callback_core_and_cli
+    self.assertEqual(result['status'], 'cancelled')
+AssertionError: 'ok' != 'cancelled'
+- ok
++ cancelled
+
+
+======================================================================
+FAIL: test_outer_pipeline_terminal_callback_core_and_cli (tests.test_completion_cancellation.CompletionCancellationTests.test_outer_pipeline_terminal_callback_core_and_cli) (method='baseline', cli=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_completion_cancellation.py", line 116, in test_outer_pipeline_terminal_callback_core_and_cli
+    self.assertEqual(code, 130)
+AssertionError: 0 != 130
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.521s
+
+FAILED (failures=12)

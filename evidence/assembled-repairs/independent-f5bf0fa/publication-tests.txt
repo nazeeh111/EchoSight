@@ -1,0 +1,28 @@
+test_cancellation_and_failed_publication_never_serve_result (tests.test_controlled_jobs.ControlledJobTests.test_cancellation_and_failed_publication_never_serve_result) ... ok
+test_http_cancellation_waits_for_worker_without_publishing (tests.test_api.APITests.test_http_cancellation_waits_for_worker_without_publishing) ... ERROR
+test_jobs_cancel_and_recover (tests.test_storage.StorageTests.test_jobs_cancel_and_recover) ... ok
+
+======================================================================
+ERROR: test_http_cancellation_waits_for_worker_without_publishing (tests.test_api.APITests.test_http_cancellation_waits_for_worker_without_publishing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/review-f5bf0fa/source/tests/test_api.py", line 22, in setUp
+    self.server = create_server(self.tmp.name, port=0, processor=process)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/review-f5bf0fa/source/echosight/api.py", line 154, in create_server
+    try: server = _Server((host, port), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/review-f5bf0fa/source/echosight/api.py", line 20, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/nazeeh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/nazeeh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/nazeeh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.111s
+
+FAILED (errors=1)

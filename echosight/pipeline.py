@@ -52,7 +52,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         return _empty(session if isinstance(session, dict) else {}, "cancelled", [])
     from .storage import load_session, validate_session, read_recording_evidence_snapshot
     from .signals import process_recording
-    from .inference import infer_scene, infer_baseline
+    from .inference import infer_scene, infer_baseline, _cancelled_result
 
     if method not in ("mapper", "baseline"):
         raise ValueError("method must be mapper or baseline")
@@ -164,4 +164,8 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     result["result_id"] = "result-" + hashlib.sha256(fingerprint.encode()).hexdigest()[:20]
     result["runtime_s"] = time.perf_counter() - start
     progress(1.0, result.get("status", "complete"))
+    # The caller may request cancellation from this final callback, after the
+    # solver's own completion check. Preserve raw evidence but retract claims.
+    if cancel():
+        result = _cancelled_result(result)
     return result

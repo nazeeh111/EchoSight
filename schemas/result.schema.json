@@ -470,5 +470,54 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "cancelled"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "surfaces": {
+            "maxItems": 0
+          },
+          "hypotheses": {
+            "maxItems": 0
+          },
+          "dimensions": {
+            "maxItems": 0
+          },
+          "guidance": {
+            "maxItems": 0
+          }
+        },
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "shared_image_source_covariance_m2"
+              ]
+            },
+            {
+              "required": [
+                "higher_order_explanations"
+              ]
+            },
+            {
+              "required": [
+                "score"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

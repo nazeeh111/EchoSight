@@ -22,6 +22,27 @@ SIGMA_REF = 1e-4
 class _Cancelled(Exception): pass
 
 
+def _cancelled_result(result):
+    """Retract unfinished scene claims without mutating completed input evidence.
+
+    This is the shared publication policy for single-source, multi-source and
+    recording-pipeline cancellation. Callers still own their timing/finally work.
+    """
+    out=dict(result)
+    out.update(status='cancelled',surfaces=[],hypotheses=[],dimensions=[],guidance=[])
+    for key in ('shared_image_source_covariance_m2','higher_order_explanations',
+                'shared_plane_parameter_covariance_m2','score',
+                'parent_model_comparison','path_model_comparison'):
+        out.pop(key,None)
+    if 'search' in out:out['search']=dict(out['search'],complete=False)
+    out['diagnostics']=list(out.get('diagnostics',[]))
+    if not any((d.get('code') if isinstance(d,dict) else d)=='cancelled_by_caller'
+               for d in out['diagnostics']):
+        out['diagnostics'].append({'code':'cancelled_by_caller',
+            'message':'Processing was cancelled before publication; recording evidence is retained for recovery.'})
+    return out
+
+
 def _check(cancel):
     if cancel and cancel(): raise _Cancelled()
 
@@ -520,12 +541,8 @@ def _run(session,observations,cancel,progress,method):
         _check(cancel)
         return out
     except _Cancelled:
-        # A fit is assembled before its ambiguity checks finish. Never publish
-        # those intermediate objects as definitive or qualified hypotheses.
-        for key in ('surfaces','hypotheses','dimensions','guidance'):out[key]=[]
-        for key in ('shared_image_source_covariance_m2','higher_order_explanations','score'):out.pop(key,None)
-        out['search']['complete']=False
-        out['status']='cancelled';out['diagnostics'].append('cancelled_by_caller');return out
+        out=_cancelled_result(out)
+        return out
     finally:
         out['runtime_s']=time.perf_counter()-start
 

@@ -1,0 +1,528 @@
+{
+  "commit": "f5bf0fa412db9479779a7e944e14ea8c4ea983b7",
+  "raw_epoch_statuses": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+  ],
+  "core_late_cancel": {
+    "status": "cancelled",
+    "conditional_spatial_changes": [
+      {
+        "track_id": "reflector-fd1593822f43",
+        "previous_surface_id": "reflector-fd1593822f43",
+        "current_surface_id": "reflector-fd1593822f43",
+        "normal_change_deg": 0.007776766157476253,
+        "offset_change_m": -0.19994059674379283,
+        "offset_reference_point_m": [
+          1.2,
+          1.7,
+          1.1
+        ],
+        "offset_semantics": "signed_plane_offset_change_at_shared_source_reference",
+        "additional_support_count": 12,
+        "additional_support_capture_ids": [
+          "view-00",
+          "view-01",
+          "view-02",
+          "view-03",
+          "view-04",
+          "view-05",
+          "view-06",
+          "view-07",
+          "view-08",
+          "view-09",
+          "view-10",
+          "view-11"
+        ],
+        "lost_support_capture_ids": [
+          "view-00",
+          "view-01",
+          "view-02",
+          "view-03",
+          "view-04",
+          "view-05",
+          "view-06",
+          "view-07",
+          "view-08",
+          "view-09",
+          "view-10",
+          "view-11"
+        ],
+        "additional_support_references": [
+          {
+            "session_id": "B_first",
+            "capture_id": "view-00"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-01"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-02"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-03"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-04"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-05"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-06"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-07"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-08"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-09"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-10"
+          },
+          {
+            "session_id": "B_first",
+            "capture_id": "view-11"
+          }
+        ],
+        "lost_support_references": [
+          {
+            "session_id": "A_before",
+            "capture_id": "view-00"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-01"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-02"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-03"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-04"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-05"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-06"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-07"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-08"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-09"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-10"
+          },
+          {
+            "session_id": "A_before",
+            "capture_id": "view-11"
+          }
+        ],
+        "A_return_surface_id": "reflector-fd1593822f43",
+        "B_repeat_surface_id": "reflector-fd1593822f43",
+        "conservative_offset_std_bound_m": 0.02349906214896064,
+        "positive_echo_capture_ids": [
+          "view-00",
+          "view-01",
+          "view-02",
+          "view-03",
+          "view-04",
+          "view-05",
+          "view-06",
+          "view-07",
+          "view-08",
+          "view-09",
+          "view-10",
+          "view-11"
+        ],
+        "claim": "Conditional displacement of supported planar reflection geometry, not object identity or causal proof."
+      }
+    ],
+    "receiver_evidence": [
+      {
+        "capture_id": "view-00",
+        "A_return_relative_difference": 0.0024382208321821765,
+        "B_repeat_relative_difference": 0.01566650642533646,
+        "cross_state_relative_difference": 1.8361048364420804,
+        "timing_relative_difference_bound": 0.265192343182456,
+        "change_gate": 0.795577029547368,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.007171462255424375,
+            "B_delay_s": 0.006103177670556875,
+            "delay_change_s": -0.0010682845848675,
+            "differential_std_bound_s": 0.00010210615446133217,
+            "A_candidate_ids": [
+              "view-00:echo:00",
+              "view-00:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-00:echo:00",
+              "view-00:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-01",
+        "A_return_relative_difference": 0.12254892468873448,
+        "B_repeat_relative_difference": 0.2300441781391234,
+        "cross_state_relative_difference": 1.874165869357918,
+        "timing_relative_difference_bound": 0.28536264697508035,
+        "change_gate": 0.9201767125564936,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.010548072406112375,
+            "B_delay_s": 0.00940864204380899,
+            "delay_change_s": -0.0011394303623033855,
+            "differential_std_bound_s": 0.00010210615514990872,
+            "A_candidate_ids": [
+              "view-01:echo:00",
+              "view-01:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-01:echo:00",
+              "view-01:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-02",
+        "A_return_relative_difference": 0.08679848814109568,
+        "B_repeat_relative_difference": 0.024926572048518884,
+        "cross_state_relative_difference": 1.8819730070034566,
+        "timing_relative_difference_bound": 0.2743384652936933,
+        "change_gate": 0.82301539588108,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.013713467708222855,
+            "B_delay_s": 0.012556127407053244,
+            "delay_change_s": -0.0011573403011696116,
+            "differential_std_bound_s": 0.00010210615605405286,
+            "A_candidate_ids": [
+              "view-02:echo:00",
+              "view-02:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-02:echo:00",
+              "view-02:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-03",
+        "A_return_relative_difference": 0.058413972222254765,
+        "B_repeat_relative_difference": 0.015559934613015348,
+        "cross_state_relative_difference": 1.8709860995247494,
+        "timing_relative_difference_bound": 0.26979579874943993,
+        "change_gate": 0.8093873962483198,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.012130058690531072,
+            "B_delay_s": 0.010995782964237307,
+            "delay_change_s": -0.0011342757262937653,
+            "differential_std_bound_s": 0.00010210615557282181,
+            "A_candidate_ids": [
+              "view-03:echo:00",
+              "view-03:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-03:echo:00",
+              "view-03:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-04",
+        "A_return_relative_difference": 0.10332157285036679,
+        "B_repeat_relative_difference": 0.06999589084344153,
+        "cross_state_relative_difference": 1.879246415501673,
+        "timing_relative_difference_bound": 0.27852401013494466,
+        "change_gate": 0.835572030404834,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.012137657116919887,
+            "B_delay_s": 0.010983474953391578,
+            "delay_change_s": -0.001154182163528309,
+            "differential_std_bound_s": 0.00010210615557239233,
+            "A_candidate_ids": [
+              "view-04:echo:00",
+              "view-04:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-04:echo:00",
+              "view-04:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-05",
+        "A_return_relative_difference": 0.05918840751431319,
+        "B_repeat_relative_difference": 0.05927302312055043,
+        "cross_state_relative_difference": 1.8642187170340145,
+        "timing_relative_difference_bound": 0.27350847318175936,
+        "change_gate": 0.820525419545278,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.009826968467465001,
+            "B_delay_s": 0.008707155611210169,
+            "delay_change_s": -0.0011198128562548322,
+            "differential_std_bound_s": 0.00010210615497998822,
+            "A_candidate_ids": [
+              "view-05:echo:00",
+              "view-05:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-05:echo:00",
+              "view-05:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-06",
+        "A_return_relative_difference": 0.08024109764095605,
+        "B_repeat_relative_difference": 0.029783122597323325,
+        "cross_state_relative_difference": 1.8603934109385738,
+        "timing_relative_difference_bound": 0.271212796473442,
+        "change_gate": 0.813638389420326,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.011300177634236255,
+            "B_delay_s": 0.010187396775533469,
+            "delay_change_s": -0.0011127808587027867,
+            "differential_std_bound_s": 0.00010210615534613044,
+            "A_candidate_ids": [
+              "view-06:echo:00",
+              "view-06:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-06:echo:00",
+              "view-06:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-07",
+        "A_return_relative_difference": 0.11161101066422208,
+        "B_repeat_relative_difference": 0.020176551609296316,
+        "cross_state_relative_difference": 1.87964409461344,
+        "timing_relative_difference_bound": 0.27428310728917554,
+        "change_gate": 0.8228493218675266,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.010971387034924878,
+            "B_delay_s": 0.009816205577484714,
+            "delay_change_s": -0.0011551814574401638,
+            "differential_std_bound_s": 0.00010210615525490496,
+            "A_candidate_ids": [
+              "view-07:echo:00",
+              "view-07:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-07:echo:00",
+              "view-07:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-08",
+        "A_return_relative_difference": 0.07506509848202965,
+        "B_repeat_relative_difference": 0.02127321055176732,
+        "cross_state_relative_difference": 1.8723946039681136,
+        "timing_relative_difference_bound": 0.2752334211779075,
+        "change_gate": 0.8257002635337225,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.0074678684702193885,
+            "B_delay_s": 0.006332019153452911,
+            "delay_change_s": -0.0011358493167664772,
+            "differential_std_bound_s": 0.00010210615450588918,
+            "A_candidate_ids": [
+              "view-08:echo:00",
+              "view-08:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-08:echo:00",
+              "view-08:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-09",
+        "A_return_relative_difference": 0.09426791560726265,
+        "B_repeat_relative_difference": 0.03096760544417704,
+        "cross_state_relative_difference": 1.8779160911499084,
+        "timing_relative_difference_bound": 0.27232304929700796,
+        "change_gate": 0.8169691478910239,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.011407328968097371,
+            "B_delay_s": 0.0102564899817775,
+            "delay_change_s": -0.0011508389863198708,
+            "differential_std_bound_s": 0.00010210615537011651,
+            "A_candidate_ids": [
+              "view-09:echo:00",
+              "view-09:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-09:echo:00",
+              "view-09:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-10",
+        "A_return_relative_difference": 0.06071913187266282,
+        "B_repeat_relative_difference": 0.034335586439893574,
+        "cross_state_relative_difference": 1.870578598429925,
+        "timing_relative_difference_bound": 0.2714989602149195,
+        "change_gate": 0.8144968806447584,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.012312278387939843,
+            "B_delay_s": 0.011177910488366926,
+            "delay_change_s": -0.0011343678995729169,
+            "differential_std_bound_s": 0.00010210615562544764,
+            "A_candidate_ids": [
+              "view-10:echo:00",
+              "view-10:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-10:echo:00",
+              "view-10:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      },
+      {
+        "capture_id": "view-11",
+        "A_return_relative_difference": 0.09150108954911346,
+        "B_repeat_relative_difference": 0.008460387883793231,
+        "cross_state_relative_difference": 1.8641015781062231,
+        "timing_relative_difference_bound": 0.2743578248739259,
+        "change_gate": 0.8230734746217777,
+        "repeat_consistent": true,
+        "repeatable_change": true,
+        "shifted_positive_echoes": [
+          {
+            "A_delay_s": 0.010162875045883375,
+            "B_delay_s": 0.009041741257673801,
+            "delay_change_s": -0.0011211337882095739,
+            "differential_std_bound_s": 0.00010210615505845944,
+            "A_candidate_ids": [
+              "view-11:echo:00",
+              "view-11:echo:00"
+            ],
+            "B_candidate_ids": [
+              "view-11:echo:00",
+              "view-11:echo:00"
+            ],
+            "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+          }
+        ],
+        "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count."
+      }
+    ]
+  },
+  "cli": {
+    "exit_code": 130,
+    "status": "cancelled",
+    "conditional_spatial_changes": 1,
+    "receiver_evidence": 12
+  },
+  "receiver_cancel": {
+    "status": "cancelled",
+    "receiver_evidence": 1,
+    "repeatable_change": true
+  },
+  "outer_pipeline_callback": {
+    "cancel_requested": true,
+    "status": "ok",
+    "surfaces": 1
+  }
+}
