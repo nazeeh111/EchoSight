@@ -33,7 +33,7 @@ A comparison contains:
 
 ```json
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "previous_result_id": "raw-1",
   "current_result_id": "raw-2",
   "status": "comparable",
@@ -48,11 +48,21 @@ This fragment illustrates the added fields; the complete comparison also include
 
 ## Binding and uniqueness
 
-A supplied prior comparison must have schema version `1.0` and status `comparable`. Its `current_result_id` must equal a nonempty `previous.result_id`. Its `current_tracks` array must cover **exactly** the previous result's surface IDs, including surfaces born at that prior step. Every entry has exactly `surface_id` and `track_id`; both identities must be unique across entries. IDs are strings of 1–160 characters, and at most 128 entries are accepted by the processing core. The HTTP route retains its narrower 64-surface limit.
+A supplied prior comparison must have schema version `1.0` or `1.1` and status `comparable`. Its `current_result_id` must equal a nonempty `previous.result_id`. Its `current_tracks` array must cover **exactly** the previous result's surface IDs, including surfaces born at that prior step. Every entry has exactly `surface_id` and `track_id`; both identities must be unique across entries. IDs are strings of 1–160 characters, and at most 128 entries are accepted by the processing core. The HTTP route retains its narrower 64-surface limit.
 
 Result surface IDs and effective starting track IDs must also be unique and bounded. A supplied optional `track_id` cannot be null. When prior display state is supplied, an explicit track label on a previous surface must agree with it; a contradiction fails instead of silently choosing one identity. Result IDs and status labels, when supplied, must also be bounded strings.
 
 These checks bind the carry object to a declared revision; they do not authenticate it. A caller can intentionally choose display labels. Geometry association and measurement provenance remain separately derived from the results. Formal JSON Schema checks structure and exact duplicate entries; the runtime additionally checks cross-entry track/surface uniqueness and complete coverage against the previous result.
+
+## Recording support identity (comparison v1.1)
+
+New comparisons emit schema version `1.1`; raw scene results remain `1.0`. The comparison schema accepts saved v1.0 comparisons for display-track carry, but their old unscoped support counts are not evidence of recording identity across sessions. Upgrade consumers to v1.1 before using support deltas.
+
+A recording reference is the pair `{session_id, capture_id}`. Capture names are only unique inside their session. Thus two sessions both using captures `0` through `3` have four additional and four lost support references when their fitted planes match. This means different declared recording entries support the fits, not independent physical measurements or newly observed space. Same-session append/reprocessing retains the existing references; different result IDs alone do not make the reused recordings new evidence.
+
+`previous_session_id` and `current_session_id` give the scopes. `new_capture_references`, and each correspondence's `additional_support_references` and `lost_support_references`, contain explicit pairs. The retained `new_capture_ids` and `additional_support_capture_ids` are local IDs in the current session; `lost_support_capture_ids` belongs to the previous session. Do not combine them in a global capture-ID lookup.
+
+If either session identity is missing, `support_comparison_status` is `unavailable`, `additional_support_count` is null, and support/reference delta arrays are empty. Geometry can still be compared when calibration matches. Empty arrays in this state do not mean there was no change. Incomparable geometry also leaves support comparison unavailable. Contradictory top-level/acquisition session IDs, malformed IDs and duplicate observation/support IDs are rejected. A nested acquisition session ID can supply the scope when the top-level field is absent. These are declared identity checks, not authenticated provenance.
 
 ## Continuity, births and missing surfaces
 

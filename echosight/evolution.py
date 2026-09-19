@@ -13,6 +13,25 @@ def _identifier(value, name):
     return value
 
 
+def _session_scope(result):
+    top = result.get("session_id")
+    nested = (result.get("acquisition") or {}).get("session_id")
+    for value in (top, nested):
+        if value is not None:
+            _identifier(value, "session_id")
+    if top is not None and nested is not None and top != nested:
+        raise ValueError("result and acquisition session_id disagree")
+    return top if top is not None else nested
+
+
+def _capture_keys(items, scope):
+    return {(scope, item["capture_id"]) for item in items}
+
+
+def _capture_references(keys):
+    return [{"session_id": session, "capture_id": capture} for session, capture in sorted(keys)]
+
+
 def _validate_result(result):
     if not isinstance(result, dict):
         raise ValueError("result must be an object")
@@ -24,6 +43,7 @@ def _validate_result(result):
         _identifier(result["status"], "result status")
     if result.get("acquisition") is not None and not isinstance(result["acquisition"], dict):
         raise ValueError("acquisition must be an object")
+    _session_scope(result)
     acquisition = result.get("acquisition") or {}
     if "source_position_m" in acquisition:
         position = acquisition["source_position_m"]
@@ -55,16 +75,20 @@ def _validate_result(result):
         support = surface.get("support", [])
         if not isinstance(support, list) or len(support) > 32 or any(not isinstance(e, dict) or not isinstance(e.get("capture_id"), str) for e in support):
             raise ValueError("invalid surface support")
-    if any(not isinstance(o.get("capture_id"), str) for o in result.get("observations", [])):
-        raise ValueError("observation capture_id must be a string")
+        ids = [_identifier(e["capture_id"], "support capture_id") for e in support]
+        if len(ids) != len(set(ids)):
+            raise ValueError("support capture IDs must be unique within a surface")
+    ids = [_identifier(o.get("capture_id"), "observation capture_id") for o in result.get("observations", [])]
+    if len(ids) != len(set(ids)):
+        raise ValueError("observation capture IDs must be unique within a result")
 
 
 def _previous_tracks(previous, comparison):
     surfaces = previous.get("surfaces", [])
     if comparison is None:
         return {s["surface_id"]: s.get("track_id", s["surface_id"]) for s in surfaces}
-    if not isinstance(comparison, dict) or comparison.get("schema_version") != "1.0" or comparison.get("status") != "comparable":
-        raise ValueError("previous_comparison must be a comparable v1 comparison")
+    if not isinstance(comparison, dict) or comparison.get("schema_version") not in ("1.0", "1.1") or comparison.get("status") != "comparable":
+        raise ValueError("previous_comparison must be a comparable v1.0 or v1.1 comparison")
     expected = _identifier(previous.get("result_id"), "previous result_id for track carry")
     if comparison.get("current_result_id") != expected:
         raise ValueError("previous_comparison does not belong to the previous result")
@@ -120,8 +144,12 @@ def compare_results(previous, current, *, previous_comparison=None, maximum_angl
     prior_tracks = _previous_tracks(previous, previous_comparison)
     if not 0 < maximum_angle_deg < 90 or not 0 < maximum_offset_m < 10:
         raise ValueError("invalid surface continuity gates")
-    out = {"schema_version": "1.0", "previous_result_id": previous.get("result_id"),
+    previous_scope, current_scope = _session_scope(previous), _session_scope(current)
+    scoped = previous_scope is not None and current_scope is not None
+    out = {"schema_version": "1.1", "previous_result_id": previous.get("result_id"),
            "current_result_id": current.get("result_id"), "status": "comparable",
+           "previous_session_id": previous_scope, "current_session_id": current_scope,
+           "support_comparison_status": "unavailable", "new_capture_references": [],
            "correspondences": [], "newly_supported_surface_ids": [],
            "current_tracks": [],
            "unconfirmed_previous_surface_ids": [], "new_capture_ids": [],
@@ -138,6 +166,11 @@ def compare_results(previous, current, *, previous_comparison=None, maximum_angl
             "message": "Use the same surveyed coordinate frame, source and probe, or reprocess both sessions."}])
         out["current_tracks"] = _current_tracks(previous, current, {}, prior_tracks.values())
         return out
+    if scoped:
+        out["support_comparison_status"] = "available"
+    else:
+        out["diagnostics"] = [{"code": "capture_scope_missing", "message":
+            "Session identity is missing; display geometry can be compared but recording support changes are unavailable."}]
     before = previous.get("surfaces", [])
     after = current.get("surfaces", [])
     reference = np.asarray(a["source_position_m"], float)
@@ -164,8 +197,8 @@ def compare_results(previous, current, *, previous_comparison=None, maximum_angl
             if cost[i, j] >= 1e6:
                 continue
             left, right = before[i], after[j]
-            old_support = {e["capture_id"] for e in left.get("support", [])}
-            new_support = {e["capture_id"] for e in right.get("support", [])}
+            old_support = _capture_keys(left.get("support", []), previous_scope) if scoped else set()
+            new_support = _capture_keys(right.get("support", []), current_scope) if scoped else set()
             angle, offset = differences[i, j]
             track = prior_tracks[left["surface_id"]]
             assigned[right["surface_id"]] = track
@@ -174,15 +207,18 @@ def compare_results(previous, current, *, previous_comparison=None, maximum_angl
                 "normal_change_deg": angle, "offset_change_m": offset,
                 "offset_reference_point_m": reference.tolist(),
                 "offset_semantics": "signed_plane_offset_change_at_shared_source_reference",
-                "additional_support_count": len(new_support - old_support),
-                "additional_support_capture_ids": sorted(new_support - old_support),
-                "lost_support_capture_ids": sorted(old_support - new_support)})
+                "additional_support_count": len(new_support - old_support) if scoped else None,
+                "additional_support_capture_ids": [capture for _, capture in sorted(new_support - old_support)],
+                "lost_support_capture_ids": [capture for _, capture in sorted(old_support - new_support)],
+                "additional_support_references": _capture_references(new_support - old_support),
+                "lost_support_references": _capture_references(old_support - new_support)})
             matched_before.add(i); matched_after.add(j)
     out["newly_supported_surface_ids"] = [p["surface_id"] for j,p in enumerate(after) if j not in matched_after]
     out["unconfirmed_previous_surface_ids"] = [p["surface_id"] for i,p in enumerate(before) if i not in matched_before]
-    old_captures = {o["capture_id"] for o in previous.get("observations", [])}
-    new_captures = {o["capture_id"] for o in current.get("observations", [])}
-    out["new_capture_ids"] = sorted(new_captures - old_captures)
+    old_captures = _capture_keys(previous.get("observations", []), previous_scope) if scoped else set()
+    new_captures = _capture_keys(current.get("observations", []), current_scope) if scoped else set()
+    out["new_capture_ids"] = [capture for _, capture in sorted(new_captures - old_captures)]
+    out["new_capture_references"] = _capture_references(new_captures - old_captures)
     out["ambiguity_reduced"] = previous.get("status") == "ambiguous" and current.get("status") in ("ok", "partial") and bool(after)
     out["status_transition"] = [previous.get("status"), current.get("status")]
     out["current_tracks"] = _current_tracks(previous, current, assigned, prior_tracks.values())

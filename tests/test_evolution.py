@@ -3,7 +3,7 @@ import unittest
 
 
 def result(surface_offset=2., count=4):
-    return {"schema_version": "1.0", "result_id": "r", "status": "partial",
+    return {"schema_version": "1.0", "result_id": "r", "session_id": "session-a", "status": "partial",
             "acquisition": {"coordinate_frame_id": "room-survey", "source_position_m": [0, 0, 1], "sound_speed_m_s": 343.,
                             "source_clock_scale": 1., "probe": {"probe_id": "p"}},
             "surfaces": [{"surface_id": "s", "normal": [1, 0, 0], "offset_m": surface_offset,
@@ -12,6 +12,43 @@ def result(surface_offset=2., count=4):
 
 
 class EvolutionTests(unittest.TestCase):
+    def test_cross_session_capture_names_do_not_erase_new_evidence(self):
+        from echosight.evolution import compare_results
+        a, b = result(), result()
+        b['session_id'] = 'session-b'
+        comparison = compare_results(a, b)
+        self.assertEqual(comparison['new_capture_ids'], ['0', '1', '2', '3'])
+        item = comparison['correspondences'][0]
+        self.assertEqual(item['additional_support_count'], 4)
+        self.assertEqual(item['lost_support_capture_ids'], ['0', '1', '2', '3'])
+        self.assertEqual(item['additional_support_references'][0],
+                         {'session_id': 'session-b', 'capture_id': '0'})
+        self.assertEqual(item['lost_support_references'][0],
+                         {'session_id': 'session-a', 'capture_id': '0'})
+        self.assertFalse(comparison['physical_scene_change_established'])
+
+    def test_missing_session_scope_does_not_claim_evidence_identity(self):
+        from echosight.evolution import compare_results
+        a, b = result(), result(count=7)
+        del a['session_id']
+        comparison = compare_results(a, b)
+        self.assertEqual(comparison['support_comparison_status'], 'unavailable')
+        self.assertIsNone(comparison['correspondences'][0]['additional_support_count'])
+        self.assertEqual(comparison['new_capture_references'], [])
+        self.assertEqual(comparison['new_capture_ids'], [])
+        self.assertEqual(len(comparison['correspondences']), 1)
+
+    def test_capture_scope_contradictions_and_duplicates_are_rejected(self):
+        from echosight.evolution import compare_results
+        invalid = result()
+        invalid['acquisition']['session_id'] = 'contradicts-top-level'
+        with self.assertRaises(ValueError): compare_results(invalid, result())
+        invalid = result(); invalid['observations'].append(copy.deepcopy(invalid['observations'][0]))
+        with self.assertRaises(ValueError): compare_results(invalid, result())
+        for value in ('', True, 'x' * 161):
+            invalid = result(); invalid['session_id'] = value
+            with self.subTest(value=value), self.assertRaises(ValueError): compare_results(invalid, result())
+
     def test_tracks_carry_through_four_raw_revisions_without_mutation(self):
         from echosight.evolution import compare_results
         revisions=[]

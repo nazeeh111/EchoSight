@@ -1,0 +1,37 @@
+test_ambiguity_resolution_is_named_without_inventing_scene_change (tests.test_evolution.EvolutionTests.test_ambiguity_resolution_is_named_without_inventing_scene_change) ... ok
+test_birth_death_empty_intermediate_does_not_revive_a_track (tests.test_evolution.EvolutionTests.test_birth_death_empty_intermediate_does_not_revive_a_track) ... ok
+test_born_surface_track_continues_when_an_older_surface_is_missing (tests.test_evolution.EvolutionTests.test_born_surface_track_continues_when_an_older_surface_is_missing) ... ok
+test_capture_scope_contradictions_and_duplicates_are_rejected (tests.test_evolution.EvolutionTests.test_capture_scope_contradictions_and_duplicates_are_rejected) ... ok
+test_carry_is_bound_complete_unique_and_explicit (tests.test_evolution.EvolutionTests.test_carry_is_bound_complete_unique_and_explicit) ... ok
+test_cross_session_capture_names_do_not_erase_new_evidence (tests.test_evolution.EvolutionTests.test_cross_session_capture_names_do_not_erase_new_evidence) ... ok
+test_effective_speed_change_is_incomparable (tests.test_evolution.EvolutionTests.test_effective_speed_change_is_incomparable) ... ok
+test_extra_views_preserve_track_and_explain_support (tests.test_evolution.EvolutionTests.test_extra_views_preserve_track_and_explain_support) ... ok
+test_frame_or_probe_change_refuses_surface_comparison (tests.test_evolution.EvolutionTests.test_frame_or_probe_change_refuses_surface_comparison) ... ok
+test_malformed_geometry_is_rejected (tests.test_evolution.EvolutionTests.test_malformed_geometry_is_rejected) ... ok
+test_missing_session_scope_does_not_claim_evidence_identity (tests.test_evolution.EvolutionTests.test_missing_session_scope_does_not_claim_evidence_identity) ... ok
+test_missing_surface_does_not_claim_physical_removal (tests.test_evolution.EvolutionTests.test_missing_surface_does_not_claim_physical_removal) ... ok
+test_non_string_coordinate_frame_is_rejected (tests.test_evolution.EvolutionTests.test_non_string_coordinate_frame_is_rejected) ... ok
+test_result_identity_validation_and_collision_resolution (tests.test_evolution.EvolutionTests.test_result_identity_validation_and_collision_resolution) ... ok
+test_surface_tracking_is_invariant_to_coordinate_origin (tests.test_evolution.EvolutionTests.test_surface_tracking_is_invariant_to_coordinate_origin) ... ok
+test_tracks_carry_through_four_raw_revisions_without_mutation (tests.test_evolution.EvolutionTests.test_tracks_carry_through_four_raw_revisions_without_mutation) ... ok
+test_unidentified_or_changed_coordinate_frame_is_incomparable (tests.test_evolution.EvolutionTests.test_unidentified_or_changed_coordinate_frame_is_incomparable) ... ok
+test_cli_four_raw_revisions_and_malformed_carry (tests.test_tracking_integration.TrackingIntegrationTests.test_cli_four_raw_revisions_and_malformed_carry) ... ok
+test_http_three_comparisons_roundtrip_and_reject_stale_state (tests.test_tracking_integration.TrackingIntegrationTests.test_http_three_comparisons_roundtrip_and_reject_stale_state) ... ok
+test_published_schema_covers_current_tracks_births_and_incomparable (tests.test_tracking_integration.TrackingIntegrationTests.test_published_schema_covers_current_tracks_births_and_incomparable) ... ok
+test_compare_accepts_two_results_above_session_limit (tests.test_api.APITests.test_compare_accepts_two_results_above_session_limit) ... ok
+test_compare_endpoint_and_size_limit (tests.test_api.APITests.test_compare_endpoint_and_size_limit) ... ok
+test_concurrent_upload_and_calibration_do_not_change_running_input (tests.test_api.APITests.test_concurrent_upload_and_calibration_do_not_change_running_input) ... ok
+test_errors_and_host_guard (tests.test_api.APITests.test_errors_and_host_guard) ... ok
+test_http_cancellation_waits_for_worker_without_publishing (tests.test_api.APITests.test_http_cancellation_waits_for_worker_without_publishing) ... ok
+test_http_recording_to_result_and_export (tests.test_api.APITests.test_http_recording_to_result_and_export) ... ok
+test_interrupted_upload_does_not_publish_capture (tests.test_api.APITests.test_interrupted_upload_does_not_publish_capture) ... ok
+test_revision_update_uses_optimistic_concurrency (tests.test_api.APITests.test_revision_update_uses_optimistic_concurrency) ... ok
+test_actual_raw_pipeline_outputs_and_job_match_contract (tests.test_schemas.SchemaTests.test_actual_raw_pipeline_outputs_and_job_match_contract) ... ok
+test_capture_manifest_structural_boundaries (tests.test_schemas.SchemaTests.test_capture_manifest_structural_boundaries) ... ok
+test_controlled_frame_matches_session_bound (tests.test_schemas.SchemaTests.test_controlled_frame_matches_session_bound) ... ok
+test_published_schemas_and_frontend_examples (tests.test_schemas.SchemaTests.test_published_schemas_and_frontend_examples) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 8.479s
+
+OK

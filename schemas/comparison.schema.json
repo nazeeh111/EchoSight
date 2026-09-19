@@ -1,50 +1,328 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://echosight.local/schemas/comparison-1.0.json",
-  "title": "EchoSight declared display comparison v1",
+  "$id": "https://echosight.local/schemas/comparison-1.1.json",
+  "title": "EchoSight declared display comparison v1.1 (accepts legacy v1.0)",
   "type": "object",
-  "required": ["schema_version", "previous_result_id", "current_result_id", "status", "correspondences", "current_tracks", "newly_supported_surface_ids", "unconfirmed_previous_surface_ids", "new_capture_ids", "physical_scene_change_established", "interpretation", "tracking_semantics", "tracking_state_source", "association_gates"],
+  "required": [
+    "schema_version",
+    "previous_result_id",
+    "current_result_id",
+    "status",
+    "correspondences",
+    "current_tracks",
+    "newly_supported_surface_ids",
+    "unconfirmed_previous_surface_ids",
+    "new_capture_ids",
+    "physical_scene_change_established",
+    "interpretation",
+    "tracking_semantics",
+    "tracking_state_source",
+    "association_gates"
+  ],
   "properties": {
-    "schema_version": {"const": "1.0"},
-    "previous_result_id": {"anyOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
-    "current_result_id": {"anyOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
-    "status": {"enum": ["comparable", "incomparable"]},
-    "physical_scene_change_established": {"const": false},
-    "interpretation": {"type": "string"},
-    "tracking_semantics": {"type": "string"},
-    "tracking_state_source": {"enum": ["previous_comparison", "previous_surface_labels"]},
-    "current_tracks": {
-      "type": "array", "maxItems": 128, "uniqueItems": true,
-      "description": "Exactly one entry per current surface. Surface and track identities are each unique; complete coverage and cross-entry identity uniqueness are also validated by runtime.",
-      "items": {"type": "object", "required": ["surface_id", "track_id"], "properties": {"surface_id": {"$ref": "#/$defs/id"}, "track_id": {"$ref": "#/$defs/id"}}, "additionalProperties": false}
+    "schema_version": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
     },
-    "correspondences": {
-      "type": "array", "maxItems": 128,
+    "previous_result_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "current_result_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "enum": [
+        "comparable",
+        "incomparable"
+      ]
+    },
+    "physical_scene_change_established": {
+      "const": false
+    },
+    "interpretation": {
+      "type": "string"
+    },
+    "tracking_semantics": {
+      "type": "string"
+    },
+    "tracking_state_source": {
+      "enum": [
+        "previous_comparison",
+        "previous_surface_labels"
+      ]
+    },
+    "current_tracks": {
+      "type": "array",
+      "maxItems": 128,
+      "uniqueItems": true,
+      "description": "Exactly one entry per current surface. Surface and track identities are each unique; complete coverage and cross-entry identity uniqueness are also validated by runtime.",
       "items": {
         "type": "object",
-        "required": ["track_id", "previous_surface_id", "current_surface_id", "normal_change_deg", "offset_change_m", "offset_reference_point_m", "offset_semantics", "additional_support_count", "additional_support_capture_ids", "lost_support_capture_ids"],
+        "required": [
+          "surface_id",
+          "track_id"
+        ],
         "properties": {
-          "track_id": {"$ref": "#/$defs/id"}, "previous_surface_id": {"$ref": "#/$defs/id"}, "current_surface_id": {"$ref": "#/$defs/id"},
-          "normal_change_deg": {"type": "number", "minimum": 0, "maximum": 90}, "offset_change_m": {"type": "number"},
-          "offset_reference_point_m": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
-          "offset_semantics": {"const": "signed_plane_offset_change_at_shared_source_reference"},
-          "additional_support_count": {"type": "integer", "minimum": 0, "maximum": 32},
-          "additional_support_capture_ids": {"$ref": "#/$defs/captureIds"}, "lost_support_capture_ids": {"$ref": "#/$defs/captureIds"}
-        }, "additionalProperties": false
+          "surface_id": {
+            "$ref": "#/$defs/id"
+          },
+          "track_id": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "newly_supported_surface_ids": {"$ref": "#/$defs/surfaceIds"},
-    "unconfirmed_previous_surface_ids": {"$ref": "#/$defs/surfaceIds"},
-    "new_capture_ids": {"$ref": "#/$defs/captureIds"},
-    "association_gates": {"type": "object", "required": ["angle_deg", "offset_m"], "properties": {"angle_deg": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 90}, "offset_m": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 10}}, "additionalProperties": false},
-    "ambiguity_reduced": {"type": "boolean"},
-    "status_transition": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": ["string", "null"]}},
-    "diagnostics": {"type": "array", "items": {"type": "object", "required": ["code", "message"], "properties": {"code": {"type": "string"}, "message": {"type": "string"}}, "additionalProperties": false}}
+    "correspondences": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "required": [
+          "track_id",
+          "previous_surface_id",
+          "current_surface_id",
+          "normal_change_deg",
+          "offset_change_m",
+          "offset_reference_point_m",
+          "offset_semantics",
+          "additional_support_count",
+          "additional_support_capture_ids",
+          "lost_support_capture_ids"
+        ],
+        "properties": {
+          "track_id": {
+            "$ref": "#/$defs/id"
+          },
+          "previous_surface_id": {
+            "$ref": "#/$defs/id"
+          },
+          "current_surface_id": {
+            "$ref": "#/$defs/id"
+          },
+          "normal_change_deg": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 90
+          },
+          "offset_change_m": {
+            "type": "number"
+          },
+          "offset_reference_point_m": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "number"
+            }
+          },
+          "offset_semantics": {
+            "const": "signed_plane_offset_change_at_shared_source_reference"
+          },
+          "additional_support_count": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 32
+          },
+          "additional_support_capture_ids": {
+            "$ref": "#/$defs/captureIds"
+          },
+          "lost_support_capture_ids": {
+            "$ref": "#/$defs/captureIds"
+          },
+          "additional_support_references": {
+            "$ref": "#/$defs/captureReferences"
+          },
+          "lost_support_references": {
+            "$ref": "#/$defs/captureReferences"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "newly_supported_surface_ids": {
+      "$ref": "#/$defs/surfaceIds"
+    },
+    "unconfirmed_previous_surface_ids": {
+      "$ref": "#/$defs/surfaceIds"
+    },
+    "new_capture_ids": {
+      "$ref": "#/$defs/captureIds"
+    },
+    "association_gates": {
+      "type": "object",
+      "required": [
+        "angle_deg",
+        "offset_m"
+      ],
+      "properties": {
+        "angle_deg": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 90
+        },
+        "offset_m": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 10
+        }
+      },
+      "additionalProperties": false
+    },
+    "ambiguity_reduced": {
+      "type": "boolean"
+    },
+    "status_transition": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "previous_session_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "current_session_id": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "support_comparison_status": {
+      "enum": [
+        "available",
+        "unavailable"
+      ]
+    },
+    "new_capture_references": {
+      "$ref": "#/$defs/captureReferences"
+    }
   },
   "additionalProperties": false,
   "$defs": {
-    "id": {"type": "string", "minLength": 1, "maxLength": 160},
-    "surfaceIds": {"type": "array", "maxItems": 128, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
-    "captureIds": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"type": "string"}}
-  }
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "surfaceIds": {
+      "type": "array",
+      "maxItems": 128,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "captureIds": {
+      "type": "array",
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "captureReferences": {
+      "type": "array",
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "session_id",
+          "capture_id"
+        ],
+        "properties": {
+          "session_id": {
+            "$ref": "#/$defs/id"
+          },
+          "capture_id": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "previous_session_id",
+          "current_session_id",
+          "support_comparison_status",
+          "new_capture_references"
+        ],
+        "properties": {
+          "correspondences": {
+            "items": {
+              "required": [
+                "additional_support_references",
+                "lost_support_references"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
 }

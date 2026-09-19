@@ -85,3 +85,7 @@ The minimal iOS recorder is an acquisition harness, not a frontend viewer. Uploa
 For formal offline JSON Schema validation, register each bundled schema by its `$id`; cross-schema references resolve to those canonical versioned IDs. The `.local` IDs are identifiers, not hosted schema services. `tests/test_schemas.py` validates the shipped examples and actual pipeline/job outputs without fetching schemas from the network. Install `requirements-test.txt` for these checks; the processing runtime remains NumPy/SciPy only.
 
 Exact waveform reuse produces rejected observations and `duplicate_waveform_group` identities. Keep these recordings visible for diagnosis; they contribute no independent geometry. `waveform_sha256` is a content-equivalence check, distinct from byte-level provenance. Controlled native metadata contradictions produce `native_controls_contradict_protocol` and an inconclusive result while retaining epoch evidence.
+
+### Comparison support identity update
+
+Comparison outputs now use version `1.1`; scene outputs stay `1.0`, and previous comparison versions1.0/1.1 can carry display tracks. Use `(session_id, capture_id)` references for recording evidence, never a bare capture name across sessions. Read `support_comparison_status` before displaying counts: `unavailable` has null additional-support counts and empty delta arrays. [Tracking contract](TRACKING.md) and [schema](../schemas/comparison.schema.json) define the migration. This change does not authenticate measurements or imply their physical independence.

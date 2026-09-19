@@ -35,10 +35,14 @@ class TrackingIntegrationTests(unittest.TestCase):
                 except urllib.error.HTTPError as error:return error.code,json.loads(error.read())
             try:
                 values=revisions();carry=None
+                for value in values[1:]: value['session_id'] = 'session-b'
                 for a,b in zip(values,values[1:]):
                     code,carry=request({'previous':a,'current':b,'previous_comparison':carry})
                     self.assertEqual(code,200,carry)
                     self.assertEqual(carry['current_tracks'],[{'surface_id':b['surfaces'][0]['surface_id'],'track_id':'fit-0'}])
+                    self.assertEqual(carry['correspondences'][0]['additional_support_count'],
+                                     4 if a['session_id'] != b['session_id'] else 0)
+                    self.assertEqual(carry['schema_version'], '1.1')
                 stale=copy.deepcopy(carry);stale['current_result_id']='stale'
                 self.assertEqual(request({'previous':values[-1],'current':values[-1],'previous_comparison':stale})[0],400)
             finally:
@@ -47,6 +51,7 @@ class TrackingIntegrationTests(unittest.TestCase):
     def test_cli_four_raw_revisions_and_malformed_carry(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);values=revisions()
+            for value in values[1:]: value['session_id'] = 'session-b'
             for i,item in enumerate(values):(root/f'r{i}.json').write_text(json.dumps(item))
             prior=None
             for i in range(3):
@@ -56,6 +61,7 @@ class TrackingIntegrationTests(unittest.TestCase):
                 run=subprocess.run(cmd,cwd=ROOT,text=True,capture_output=True)
                 self.assertEqual(run.returncode,0,run.stderr)
                 comparison=json.loads(target.read_text());self.assertEqual(comparison['current_tracks'][0]['track_id'],'fit-0');prior=target
+                self.assertEqual(comparison['correspondences'][0]['additional_support_count'], 4 if i == 0 else 0)
             Path(cmd[cmd.index('--previous-comparison')+1]).write_text(json.dumps({'schema_version':'1.0','status':'comparable','current_result_id':'raw-2','current_tracks':[]}))
             saved=target.read_bytes()
             failed=subprocess.run(cmd,cwd=ROOT,text=True,capture_output=True)
@@ -71,7 +77,16 @@ class TrackingIntegrationTests(unittest.TestCase):
         different=copy.deepcopy(b);different['acquisition']['coordinate_frame_id']='another-frame'
         incomparable=compare_results(a,different)
         self.assertEqual(len(incomparable['current_tracks']),len(different['surfaces']))
-        for value in (ab,bc,birth,incomparable):validator.validate(value)
+        unscoped=copy.deepcopy(b);unscoped.pop('session_id')
+        unavailable=compare_results(a,unscoped)
+        for value in (ab,bc,birth,incomparable,unavailable):validator.validate(value)
+        legacy=copy.deepcopy(ab);legacy['schema_version']='1.0'
+        for key in ('previous_session_id','current_session_id','support_comparison_status','new_capture_references'):legacy.pop(key)
+        for match in legacy['correspondences']:
+            match.pop('additional_support_references');match.pop('lost_support_references')
+        validator.validate(legacy)
+        carried=compare_results(b,c,previous_comparison=legacy)
+        self.assertEqual(carried['current_tracks'], bc['current_tracks'])
         invalid=copy.deepcopy(ab);invalid['current_tracks'].append(invalid['current_tracks'][0])
         with self.assertRaises(ValidationError):validator.validate(invalid)
         invalid=copy.deepcopy(ab);invalid['current_tracks'][0]['track_id']=''
