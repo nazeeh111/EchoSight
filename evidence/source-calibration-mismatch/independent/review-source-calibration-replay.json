@@ -1,0 +1,176 @@
+[
+  {
+    "fresh_transfer_failure": {
+      "status": "unique_reference_transfer",
+      "residuals_s": [
+        -0.00021912119526186144,
+        -0.0002083402486399771,
+        -0.000281683800257654,
+        -0.00026272176378612424,
+        -0.0001911157284624843,
+        -0.00017890942945227592,
+        -0.00021998539572346595,
+        -0.00020955384833226502,
+        -0.0002426279316680019,
+        -0.00028267984208685,
+        -0.0002036840589196235,
+        -0.0002259132161083425
+      ],
+      "rms_s": 0.00022947923374169816,
+      "max_abs_s": 0.00028267984208685,
+      "passes_existing_absolute_gates": false,
+      "scope": "Fresh prediction from replayed x proposal using unchanged y-reference candidate rule; valid-control failure retained."
+    },
+    "case": "single-2833-x",
+    "status": "calibration_proposal",
+    "input_result_id": "result-165f1d2bb8698336ae01",
+    "diagnostics": [],
+    "validation_rms_s": 1.4974134521980802e-05,
+    "calibration": {
+      "source_position_m": [
+        1.5440914709596196,
+        1.3920247387599396,
+        1.3108389316687752
+      ],
+      "effective_speed_m_s": 346.8275009729813,
+      "source_effective_speed_covariance": [
+        [
+          0.001436654956385393,
+          0.002740766008456158,
+          -0.00018546004986447852,
+          0.3208486280434507
+        ],
+        [
+          0.002740766008456155,
+          0.048391840571361484,
+          0.0002860853677269617,
+          0.7365565303906625
+        ],
+        [
+          -0.00018546004986447846,
+          0.0002860853677269612,
+          0.0008607588870513652,
+          -0.0378734204011471
+        ],
+        [
+          0.3208486280434507,
+          0.7365565303906629,
+          -0.0378734204011471,
+          74.02726204229907
+        ]
+      ]
+    }
+  },
+  {
+    "fresh_transfer_failure": null,
+    "case": "dual_opposite_phase-2821-x",
+    "status": "calibration_proposal",
+    "input_result_id": "result-399a0697c039f9855589",
+    "diagnostics": [],
+    "validation_rms_s": 9.763830605606345e-06,
+    "calibration": {
+      "source_position_m": [
+        1.539304655591136,
+        1.5136863639117895,
+        1.310220365838767
+      ],
+      "effective_speed_m_s": 346.13992269714674,
+      "source_effective_speed_covariance": [
+        [
+          0.001276663271291819,
+          -0.000368002867641111,
+          -0.00020501632826360874,
+          0.27865280516307256
+        ],
+        [
+          -0.000368002867641111,
+          0.048314601548407714,
+          -9.404156397507295e-06,
+          -0.09845276025136536
+        ],
+        [
+          -0.0002050163282636088,
+          -9.404156397507265e-06,
+          0.0008537884705762663,
+          -0.04306542411360579
+        ],
+        [
+          0.2786528051630725,
+          -0.09845276025136539,
+          -0.04306542411360577,
+          62.84124875457588
+        ]
+      ]
+    }
+  },
+  {
+    "fresh_transfer_failure": null,
+    "case": "dual_opposite_phase-2821-y",
+    "status": "rejected",
+    "input_result_id": "result-632d9515b067290eee7c",
+    "diagnostics": [
+      {
+        "capture_id": "capture-00",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-01",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-02",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-03",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-04",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-05",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-06",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-07",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-08",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-09",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-10",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      },
+      {
+        "capture_id": "capture-11",
+        "code": "reference_path_unidentified",
+        "eligible_candidates": 2
+      }
+    ],
+    "validation_rms_s": null,
+    "calibration": null
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "commit": "e457e1488e43518d902e4adbb7aad5ed18f4d5ce",
+  "clean_tracked_worktree": true,
+  "source": "fetched from GitHub origin; clean detached checkout",
+  "setup": "existing pinned Python3.12.14 NumPy2.3.5 SciPy1.18.1 venv; pip check passed; unchanged dependencies, not fresh downloaded installation",
+  "tests_command": ".venv/bin/python -m unittest discover -s tests -v",
+  "test_tail": "t_but_keep_distinct_raw_hashes) ... ok\n\n----------------------------------------------------------------------\nRan 201 tests in 64.733s\n\nOK\n",
+  "demo_command": ".venv/bin/python -m echosight demo work/reproduction-e457e14/demo --seed 1 --captures 12",
+  "export_command": ".venv/bin/python -m echosight export work/reproduction-e457e14/demo/session.json --output work/reproduction-e457e14/session.zip",
+  "replay_command": ".venv/bin/python -m echosight replay work/reproduction-e457e14/session.zip --store work/reproduction-e457e14/replay-store --output work/reproduction-e457e14/replayed.json",
+  "demo": {
+    "status": "partial",
+    "surfaces": 6,
+    "horizontal_surfaces": 2,
+    "observations": 12,
+    "runtime_s": 1.2929249589942629,
+    "diagnostics": [
+      "refinement_budget_reached"
+    ]
+  },
+  "replay_runtime_s": 2.7319812909991015,
+  "exact_geometry_and_raw_hashes_after_replay": true,
+  "implementation_sha256": "81e6f8a226604a2762758769d297d3d0f73be80417615f44d56e1a2e3053ed79",
+  "export_sha256": "5cfae6a7951ede32a3eb38afb2e13e06ed060670ab8eed72bd7013f8a035f58e",
+  "evidence_class": "synthetic recordings; no new acceptance evaluation or physical validation"
+}

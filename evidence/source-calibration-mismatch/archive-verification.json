@@ -1,0 +1,9 @@
+{
+  "archive": "work/source-calibration-mismatch/source-calibration-mismatch-evidence.tar.gz",
+  "archive_sha256": "2da45a689274cd1375e074c2da81edbd8e09d814ac6a803af98e10a03eb4aa1d",
+  "bytes": 405834,
+  "content_sha256": "5f2a6b95c635c6679e00aff39f20cdef98a252598bd692e82a71ac8aaddd5120",
+  "members": 167,
+  "all_hashes_verified": true,
+  "scope": "Compact completed evidence; no raw audio/runtime checkout. No joint fit or main feature implemented."
+}

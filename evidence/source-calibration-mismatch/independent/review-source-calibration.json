@@ -1,0 +1,161 @@
+{
+  "archive_sha256": "2da45a689274cd1375e074c2da81edbd8e09d814ac6a803af98e10a03eb4aa1d",
+  "archive_files_verified": 166,
+  "archive_local_identical_after_declared_response_hash_transform": true,
+  "freeze_and_runtime_git_hashes_verified": true,
+  "raw": [
+    {
+      "version": "v1",
+      "outcomes": {
+        "rejected": 12
+      },
+      "raw_hashes_checked": 144,
+      "reused_x_y_clock_draws": 72
+    },
+    {
+      "version": "v2",
+      "outcomes": {
+        "calibration_proposal": 6,
+        "rejected": 6
+      },
+      "raw_hashes_checked": 144,
+      "reused_x_y_clock_draws": 72
+    }
+  ],
+  "information_checks": [
+    {
+      "seed": 2821,
+      "individual_worst_unknown_pair_timing_std": [
+        0.02147469613326312,
+        0.02952055296319961,
+        0.025064468195421085,
+        4.870017781305031
+      ],
+      "paired_timing_correlation_sensitivity_std": {
+        "-1.0": [
+          0.009140607708564442,
+          0.024988267620126656,
+          0.006945846246737642,
+          3.3139868300606126
+        ],
+        "1.0": [
+          0.021474696133262923,
+          0.02523447426960382,
+          0.02506446819541986,
+          4.323740896871468
+        ]
+      },
+      "derivative_max_abs_errors": {
+        "source_speed": 8.46761029349441e-13,
+        "receiver": 5.995770422035154e-13,
+        "reference": 1.2579347286045817e-12
+      },
+      "source_std_m": {
+        "x_only": [
+          0.03555043494732506,
+          0.2172853680457276,
+          0.029238559430092882
+        ],
+        "y_only": [
+          0.044237220346679075,
+          0.23464182981610043,
+          0.026056236871300403
+        ],
+        "joint_x_y": [
+          0.016503231248726144,
+          0.025111672687401526,
+          0.018391198248111182
+        ]
+      },
+      "speed_std_m_s": {
+        "x_only": 8.017872713625724,
+        "y_only": 41.69853278216294,
+        "joint_x_y": 3.852093200656888
+      },
+      "covariance_decrease_min_eigenvalues": {
+        "x_only": 3.1697240698478806e-08,
+        "y_only": 2.3886082690893495e-07
+      },
+      "schur_relative_error": 4.03012808108516e-15,
+      "linear_gaussian_mc_covariance_relative_error": 0.009758876651309744,
+      "receiver_cross_reference_max_s2": 7.615715908624188e-11,
+      "plane_shared_offdiagonal_max_s2": 3.272198489353575e-10
+    },
+    {
+      "seed": 2833,
+      "individual_worst_unknown_pair_timing_std": [
+        0.021462785820259764,
+        0.029512404486550327,
+        0.02504937624612524,
+        4.8714552207379285
+      ],
+      "paired_timing_correlation_sensitivity_std": {
+        "-1.0": [
+          0.009144846224320168,
+          0.024986402856831753,
+          0.0069203999643894475,
+          3.316958631620041
+        ],
+        "1.0": [
+          0.021462785820259563,
+          0.025207645177099034,
+          0.025049376246123987,
+          4.322697319810438
+        ]
+      },
+      "derivative_max_abs_errors": {
+        "source_speed": 7.608722679686153e-13,
+        "receiver": 5.515413971889094e-13,
+        "reference": 9.836706102439585e-13
+      },
+      "source_std_m": {
+        "x_only": [
+          0.03544609954078456,
+          0.21595032139126125,
+          0.02921094703420738
+        ],
+        "y_only": [
+          0.04445869666731083,
+          0.23697203901514638,
+          0.026050480787261215
+        ],
+        "joint_x_y": [
+          0.01649665704973003,
+          0.025097267810445124,
+          0.018376114741521503
+        ]
+      },
+      "speed_std_m_s": {
+        "x_only": 7.994257652868568,
+        "y_only": 42.13090309593081,
+        "joint_x_y": 3.852786438577606
+      },
+      "covariance_decrease_min_eigenvalues": {
+        "x_only": 3.116506038136674e-08,
+        "y_only": 2.4266673371880947e-07
+      },
+      "schur_relative_error": 5.729719430181584e-15,
+      "linear_gaussian_mc_covariance_relative_error": 0.009238103389291428,
+      "receiver_cross_reference_max_s2": 7.64005212179186e-11,
+      "plane_shared_offdiagonal_max_s2": 3.2721057536879173e-10
+    }
+  ],
+  "transfer": [
+    {
+      "seed": 2821,
+      "pattern": "single",
+      "rms_s": 5.089494404070373e-05,
+      "max_abs_s": 7.161291548332758e-05,
+      "pass_absolute": true
+    },
+    {
+      "seed": 2833,
+      "pattern": "single",
+      "rms_s": 0.00022947923374169816,
+      "max_abs_s": 0.00028267984208685,
+      "pass_absolute": false
+    }
+  ],
+  "reviewed_joint_information_sha256": "c85ba2dc494de93cdda86d405f9aa364a1e783f62d8d4c5dc231236579dd63dd",
+  "scope": "Checks conditional local information only; no new raw families and no executed joint fit. Paired renderer reuses clock/noise random draws across reference arrangements; diagonal timing covariance is prospective rather than empirically validated cross-reference timing coverage."
+}
