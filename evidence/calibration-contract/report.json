@@ -1,0 +1,88 @@
+{
+  "cases": {
+    "proposal": {
+      "artifact_sha256": "c774b0c87e1b9c1ca94f43e353f4c62741162c67ab259ffaaa0e51fbedf0be3b",
+      "canonical_replay": true,
+      "input_id": "calibration-input-7111ad6133e033ea0215ae2e8c0a39214ee69995d6940bdfe8f517a7d32509ae",
+      "schema_valid": true,
+      "status": "calibration_proposal",
+      "upstream_result_id_reproduced": true
+    },
+    "rejected-malformed-probe": {
+      "artifact_sha256": "535a4ee0dd220af298eb174074834ca9105e718294cb2e2ba2d9751da87f71f5",
+      "canonical_replay": true,
+      "input_id": "calibration-input-8fcd42cf80d9e445b92a897860b67e6897ebf49b122d84bba1660e24980c5e7d",
+      "schema_valid": true,
+      "status": "rejected",
+      "upstream_result_id_reproduced": false
+    },
+    "rejected-missing-probe": {
+      "artifact_sha256": "7298f1671e1093a360fb2fbc5d4433d2daa481b692793065bd954ea25ad34ac9",
+      "canonical_replay": true,
+      "input_id": "calibration-input-983bb01d7c5e4427cca47941aef9689d26ee8f24eadca159b557bc256a195cea",
+      "schema_valid": true,
+      "status": "rejected",
+      "upstream_result_id_reproduced": true
+    },
+    "rejected-planar": {
+      "artifact_sha256": "ad85915b2a74393c517a83fdfd3b3a3d20884e48ed1e91a278afee21feeda3c5",
+      "canonical_replay": true,
+      "input_id": "calibration-input-67d9f0a6041b8aceee882937243745eea64362fdcd74c451d7f8a223db15f62f",
+      "schema_valid": true,
+      "status": "rejected",
+      "upstream_result_id_reproduced": true
+    },
+    "rejected-validation": {
+      "artifact_sha256": "fa117142584714615e30f62b006c941168d29d506e67af12f5b9326e705ec863",
+      "canonical_replay": true,
+      "input_id": "calibration-input-67e15b3330f695099f74b6ea38932416656b7b548c21fa03d71fee4cefdf8970",
+      "schema_valid": true,
+      "status": "rejected",
+      "upstream_result_id_reproduced": true
+    }
+  },
+  "evidence_class": "development simulation; no hardware validation",
+  "fixture": "tests.test_calibration.CalibrationTests (seed 81, 20 good + 20 held-delay-shift raw PCM WAVs)",
+  "raw_sha256": {
+    "bad-0.wav": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf",
+    "bad-1.wav": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be",
+    "bad-10.wav": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123",
+    "bad-11.wav": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658",
+    "bad-12.wav": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4",
+    "bad-13.wav": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e",
+    "bad-14.wav": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa",
+    "bad-15.wav": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312",
+    "bad-16.wav": "652666db94b5c0096a2cfd022b6706041bc869895531cfc9cf1821f7de97cb30",
+    "bad-17.wav": "4705c1d18839eda7156930d26cf02707b11caa6e7e3f0bf2199fa5784b959614",
+    "bad-18.wav": "06740b4b3a5031c1166852857bac53ef687f3b61afb3f63a1c386a16507a143f",
+    "bad-19.wav": "f88e9a375bcac79dd8243e8c798e504cde029c76ec7d0e5be0f8675018877d3e",
+    "bad-2.wav": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142",
+    "bad-3.wav": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6",
+    "bad-4.wav": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c",
+    "bad-5.wav": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313",
+    "bad-6.wav": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7",
+    "bad-7.wav": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3",
+    "bad-8.wav": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0",
+    "bad-9.wav": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d",
+    "good-0.wav": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf",
+    "good-1.wav": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be",
+    "good-10.wav": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123",
+    "good-11.wav": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658",
+    "good-12.wav": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4",
+    "good-13.wav": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e",
+    "good-14.wav": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa",
+    "good-15.wav": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312",
+    "good-16.wav": "8a07e19a89eab462d3250cd71138e7143a3054f9ec09edaf7b6c00ec2cca20b5",
+    "good-17.wav": "dbf361895c76c21baa05b754a9d365732bb5fbbd38a2bc6290d0a43a2ad16bba",
+    "good-18.wav": "90e707be29829989bc73aff19554bc11913a8ae362725cd3d325b6bfa96dee60",
+    "good-19.wav": "fd25c8c463279cbc5c9b00df2809256f48a04563f8a5b6615d83be61276906c0",
+    "good-2.wav": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142",
+    "good-3.wav": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6",
+    "good-4.wav": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c",
+    "good-5.wav": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313",
+    "good-6.wav": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7",
+    "good-7.wav": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3",
+    "good-8.wav": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0",
+    "good-9.wav": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d"
+  }
+}

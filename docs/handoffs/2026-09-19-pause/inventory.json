@@ -1,0 +1,124 @@
+{
+  "recorded_utc": "2026-09-19T21:55:57.791677+00:00",
+  "repository": "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend",
+  "branch": "backend/implementation",
+  "local_head": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "remote_head_verified": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "upstream": "origin/backend/implementation",
+  "ahead": 0,
+  "behind": 0,
+  "staged_before_shutdown": [],
+  "modified_before_shutdown": [
+    "echosight/calibration.py"
+  ],
+  "untracked_before_shutdown": [
+    "schemas/calibration-reference.schema.json",
+    "schemas/calibration-result.schema.json",
+    "tests/test_calibration_contract.py"
+  ],
+  "files": {
+    "echosight/calibration.py": {
+      "sha256": "11f6aedd2fc161ba8cf4ee8acc442bc65394575f94a16dd7856377de762aa609",
+      "bytes": 16313,
+      "snapshot": "snapshots/echosight/calibration.py"
+    },
+    "schemas/calibration-reference.schema.json": {
+      "sha256": "7f8469b34bd9b2da80252034d9bbbc3dc5efd44cac63cb5cef244a2ca2b1f006",
+      "bytes": 2028,
+      "snapshot": "snapshots/schemas/calibration-reference.schema.json"
+    },
+    "schemas/calibration-result.schema.json": {
+      "sha256": "f7561d3240dc2bc137fd525c5f1eaa0d2e55c9ab08ce562b48ea66acd262df37",
+      "bytes": 17037,
+      "snapshot": "snapshots/schemas/calibration-result.schema.json"
+    },
+    "tests/test_calibration_contract.py": {
+      "sha256": "1615555624ea00d2403637f19ce4fd0a74696638507e2ce2bbe7c72d64db64c6",
+      "bytes": 6818,
+      "snapshot": "snapshots/tests/test_calibration_contract.py"
+    },
+    "work/calibration-boundary-audit/AUDIT.md": {
+      "sha256": "aab24af84581514cfe09104c1baaee4c656659ea2c67cddefd17c3c4361016a5",
+      "bytes": 6399,
+      "snapshot": "snapshots/work/calibration-boundary-audit/AUDIT.md"
+    },
+    "work/calibration-boundary-audit/report.json": {
+      "sha256": "263b03ab319aa138ed1103912cac71e973b2c2471dda37cf621d33d8de88b7b8",
+      "bytes": 2872,
+      "snapshot": "snapshots/work/calibration-boundary-audit/report.json"
+    },
+    "work/calibration-boundary-audit/probe.py": {
+      "sha256": "495a1407370963edb45c7627bab863240b6970e572ba87094dd645cb935d1588",
+      "bytes": 3744,
+      "snapshot": "snapshots/work/calibration-boundary-audit/probe.py"
+    },
+    "work/calibration-boundary-audit/probe.log": {
+      "sha256": "2a32f398a8f5e992209bfd22bf12e6f463a8643b0f887663de5f6c92d05371ca",
+      "bytes": 2745,
+      "snapshot": "snapshots/work/calibration-boundary-audit/probe.log"
+    },
+    "work/calibration-boundary-audit/admission.log": {
+      "sha256": "eb43a979859ffe08b63ef1f46c52f2edc61f05e722023f33c2e9fbeda03e63c5",
+      "bytes": 347,
+      "snapshot": "snapshots/work/calibration-boundary-audit/admission.log"
+    },
+    "work/calibration-boundary-audit/contract-before.txt": {
+      "sha256": "8b7283da91c0ff233da468e546b29d872f5623a662b64c82e3093fee9e44e9e3",
+      "bytes": 1015,
+      "snapshot": "snapshots/work/calibration-boundary-audit/contract-before.txt"
+    },
+    "work/calibration-boundary-audit/contract-first.txt": {
+      "sha256": "d7280c3ffb6839c87506f27258fa7f050c94ada3511ba8c0c82fb6678fa7d41e",
+      "bytes": 3361,
+      "snapshot": "snapshots/work/calibration-boundary-audit/contract-first.txt"
+    },
+    "work/calibration-boundary-audit/build_schema.py": {
+      "sha256": "38c7d0eaf94d2d4e892d13f6c9bcfba4c1c3f69168b7a9e87be3609d79a2c5aa",
+      "bytes": 7025,
+      "snapshot": "snapshots/work/calibration-boundary-audit/build_schema.py"
+    },
+    "evidence/source-calibration-mismatch/independent/review-source-calibration.log": {
+      "sha256": "eb8af48a6162c33fe4bb32e8eb4941a52a6c5f87b1fa36b855786150f3a80a4a",
+      "bytes": 4800,
+      "snapshot": "snapshots/evidence/source-calibration-mismatch/independent/review-source-calibration.log"
+    },
+    "evidence/source-calibration-mismatch/independent/review-source-calibration-replay.log": {
+      "sha256": "82d31233b7557ee86b6a80fe211cda0ce7371ff52b74b3e2118d9624f033f06d",
+      "bytes": 119,
+      "snapshot": "snapshots/evidence/source-calibration-mismatch/independent/review-source-calibration-replay.log"
+    },
+    "STATE.md": {
+      "sha256": "bfc553706d4debb45054d561b58b9adae9ab697aef980338affe964863ad57b5",
+      "bytes": 13677,
+      "snapshot": "snapshots/STATE.md"
+    }
+  },
+  "raw_development_files_preserved_in_place": {
+    "work/calibration-boundary-audit/raw/good-0.wav": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf",
+    "work/calibration-boundary-audit/raw/good-1.wav": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be",
+    "work/calibration-boundary-audit/raw/good-10.wav": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123",
+    "work/calibration-boundary-audit/raw/good-11.wav": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658",
+    "work/calibration-boundary-audit/raw/good-12.wav": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4",
+    "work/calibration-boundary-audit/raw/good-13.wav": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e",
+    "work/calibration-boundary-audit/raw/good-14.wav": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa",
+    "work/calibration-boundary-audit/raw/good-15.wav": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312",
+    "work/calibration-boundary-audit/raw/good-16.wav": "8a07e19a89eab462d3250cd71138e7143a3054f9ec09edaf7b6c00ec2cca20b5",
+    "work/calibration-boundary-audit/raw/good-17.wav": "dbf361895c76c21baa05b754a9d365732bb5fbbd38a2bc6290d0a43a2ad16bba",
+    "work/calibration-boundary-audit/raw/good-18.wav": "90e707be29829989bc73aff19554bc11913a8ae362725cd3d325b6bfa96dee60",
+    "work/calibration-boundary-audit/raw/good-19.wav": "fd25c8c463279cbc5c9b00df2809256f48a04563f8a5b6615d83be61276906c0",
+    "work/calibration-boundary-audit/raw/good-2.wav": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142",
+    "work/calibration-boundary-audit/raw/good-3.wav": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6",
+    "work/calibration-boundary-audit/raw/good-4.wav": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c",
+    "work/calibration-boundary-audit/raw/good-5.wav": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313",
+    "work/calibration-boundary-audit/raw/good-6.wav": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7",
+    "work/calibration-boundary-audit/raw/good-7.wav": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3",
+    "work/calibration-boundary-audit/raw/good-8.wav": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0",
+    "work/calibration-boundary-audit/raw/good-9.wav": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d"
+  },
+  "runtime_test_schema_git_diff_e457e14_to_head": false,
+  "ignored_manifest_logs_not_present_on_github": [
+    "evidence/source-calibration-mismatch/independent/review-source-calibration.log",
+    "evidence/source-calibration-mismatch/independent/review-source-calibration-replay.log"
+  ],
+  "scope": "Read-only inventory/copies only; no production edits or tests run during shutdown. STATE and handoff files are the only shutdown edits."
+}

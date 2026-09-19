@@ -1,0 +1,20 @@
+ M STATE.md
+ M echosight/calibration.py
+?? docs/handoffs/2026-09-19-pause/HANDOFF.md
+?? docs/handoffs/2026-09-19-pause/NEW_SESSION_PROMPT.md
+?? docs/handoffs/2026-09-19-pause/git-diff-production.patch
+?? docs/handoffs/2026-09-19-pause/git-index-before.txt
+?? docs/handoffs/2026-09-19-pause/git-status-before.txt
+?? docs/handoffs/2026-09-19-pause/git-status-final-before-pause.txt
+?? docs/handoffs/2026-09-19-pause/goal-pause.json
+?? docs/handoffs/2026-09-19-pause/inventory.json
+?? docs/handoffs/2026-09-19-pause/shutdown-preservation.json
+?? docs/handoffs/2026-09-19-pause/snapshots/STATE.md
+?? docs/handoffs/2026-09-19-pause/snapshots/echosight/calibration.py
+?? docs/handoffs/2026-09-19-pause/snapshots/schemas/calibration-reference.schema.json
+?? docs/handoffs/2026-09-19-pause/snapshots/schemas/calibration-result.schema.json
+?? docs/handoffs/2026-09-19-pause/snapshots/tests/test_calibration_contract.py
+?? docs/handoffs/2026-09-19-pause/workers-processes.json
+?? schemas/calibration-reference.schema.json
+?? schemas/calibration-result.schema.json
+?? tests/test_calibration_contract.py

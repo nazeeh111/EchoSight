@@ -1,0 +1,762 @@
+{
+  "acceptance": {
+    "maximum_normalized_rms": 2.5,
+    "maximum_validation_abs_residual_s": 0.0002,
+    "maximum_validation_abs_z": 3.5,
+    "maximum_validation_rms_s": 0.0001
+  },
+  "calibration": {
+    "effective_speed_m_s": 345.9044809857675,
+    "source_effective_speed_covariance": [
+      [
+        0.0018678800715963835,
+        -0.00044815312289284875,
+        -0.000610201827045141,
+        0.3813473260286517
+      ],
+      [
+        -0.0004481531228928489,
+        0.0003330937033503362,
+        0.00019661267889495082,
+        -0.09728278568498862
+      ],
+      [
+        -0.0006102018270451405,
+        0.00019661267889495063,
+        0.0015973952125843383,
+        -0.11184013962363532
+      ],
+      [
+        0.38134732602865173,
+        -0.09728278568498862,
+        -0.11184013962363544,
+        79.4388887760976
+      ]
+    ],
+    "source_position_m": [
+      1.569616191918636,
+      -0.03963174045402143,
+      1.3204840807243614
+    ]
+  },
+  "calibration_id": "calibration-d9b057c26643985d7864",
+  "calibration_input": {
+    "acquisition": {
+      "captures": [
+        {
+          "capture_id": "0",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            2.019396518869712,
+            -1.7302300622128224,
+            2.4976858341354107
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "1",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            2.6366248320400376,
+            -0.33272792746591584,
+            1.5570639870201666
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "2",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            2.1288024031850212,
+            -2.415761597241066,
+            1.0399301544512947
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "3",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            0.6577080430613185,
+            2.495944446073486,
+            2.0495797841869967
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "4",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            1.931049366834522,
+            2.9418498735671146,
+            1.15926135803838
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "5",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            2.93604307730184,
+            1.5810125420136614,
+            0.8764358965083953
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "6",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            2.0765109220767446,
+            -1.810591763229985,
+            1.3233859535129102
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "7",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            1.9960186551718222,
+            -1.8337670839223443,
+            2.428230697414407
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "8",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.684424613151848,
+            -2.7451371995677056,
+            2.654750107605672
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "9",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            0.6148815153311495,
+            2.5086388019061348,
+            0.8963188594505611
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "10",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.1410759701456907,
+            -2.330670842064144,
+            2.5232622607521744
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "11",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            1.4869781732854421,
+            -1.3567382260537428,
+            1.154299292789488
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "12",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.880717419418694,
+            -1.9997718141005119,
+            0.6790389041615448
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "13",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            1.5807658667774203,
+            -2.2621099590103046,
+            2.152762705056512
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "14",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.7777431181254237,
+            1.5973258195588815,
+            2.5576032263584514
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "15",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            0.9965326366109466,
+            -1.2661985494696126,
+            0.9817678597279174
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "16",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.1763750687225216,
+            -1.2301092839972128,
+            0.7287839163506257
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "17",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            0.5667897418719716,
+            -2.472258047624708,
+            2.106660670365277
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "18",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.0270602907003084,
+            -2.0264393805482577,
+            2.6816542726350807
+          ],
+          "receiver_position_std_m": 0.003
+        },
+        {
+          "capture_id": "19",
+          "provenance": "simulated",
+          "receiver_position_m": [
+            3.6280698112747136,
+            1.4304408614195416,
+            1.2351518083427488
+          ],
+          "receiver_position_std_m": 0.003
+        }
+      ],
+      "coordinate_frame_id": "session:calibration-test",
+      "probe": {
+        "duration_s": 0.04,
+        "high_hz": 15000.0,
+        "kind": "repeated_linear_chirp",
+        "lead_s": 0.1,
+        "low_hz": 2000.0,
+        "max_echo_delay_s": 0.08,
+        "period_s": 0.22,
+        "pilot_start_samples": [
+          4800,
+          15360,
+          25920,
+          36480,
+          47040,
+          57600,
+          68160
+        ],
+        "repetitions": 7,
+        "sample_count": 78720,
+        "sample_rate_hz": 48000,
+        "schema_version": "1.0",
+        "tail_s": 0.18,
+        "timing_unit": "source_buffer_seconds",
+        "waveform_sha256": "7c4bbea61648ebdc9dc6952c17143910a5a95440baa437f5a0baea931f740c4e"
+      },
+      "schema_version": "1.0",
+      "session_id": "calibration-test",
+      "sound_speed_m_s": 343.0,
+      "sound_speed_std_m_s": 0.6,
+      "source_clock_scale": 1.0,
+      "source_clock_std_ppm": 100.0,
+      "source_position_m": [
+        1.5,
+        0.0,
+        1.3
+      ],
+      "source_position_std_m": 0.01
+    },
+    "reference": {
+      "effective_speed_bounds_m_s": [
+        300.0,
+        380.0
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_std_rad": 0.0005,
+      "offset_m": 0.0,
+      "offset_std_m": 0.003,
+      "source_search_radius_m": 0.15,
+      "training_capture_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "validation_capture_ids": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ]
+    }
+  },
+  "clock_interpretation": "Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.",
+  "conditional_on": [
+    "stationary effective point source",
+    "correct isolated reference reflection",
+    "surveyed poses and reference plane",
+    "affine within-recording clocks",
+    "no path-dependent unmodeled delay"
+  ],
+  "diagnostics": [],
+  "evidence": [
+    {
+      "candidate_id": "0:echo:00",
+      "capture_id": "0",
+      "observed_delay_s": 0.005867934084730936,
+      "partition": "training",
+      "predicted_delay_s": 0.00586757547125901,
+      "residual_s": -3.5861347192581855e-07
+    },
+    {
+      "candidate_id": "1:echo:00",
+      "capture_id": "1",
+      "observed_delay_s": 0.008936882547255397,
+      "partition": "training",
+      "predicted_delay_s": 0.008937531454633234,
+      "residual_s": 6.489073778367244e-07
+    },
+    {
+      "candidate_id": "2:echo:00",
+      "capture_id": "2",
+      "observed_delay_s": 0.005630224094652801,
+      "partition": "training",
+      "predicted_delay_s": 0.005630957434941562,
+      "residual_s": 7.333402887608684e-07
+    },
+    {
+      "candidate_id": "3:echo:00",
+      "capture_id": "3",
+      "observed_delay_s": 0.0019120048667923785,
+      "partition": "training",
+      "predicted_delay_s": 0.0019118334269973927,
+      "residual_s": -1.7143979498578446e-07
+    },
+    {
+      "candidate_id": "4:echo:00",
+      "capture_id": "4",
+      "observed_delay_s": 0.004605700306026936,
+      "partition": "training",
+      "predicted_delay_s": 0.004606591939305526,
+      "residual_s": 8.9163327858955e-07
+    },
+    {
+      "candidate_id": "5:echo:00",
+      "capture_id": "5",
+      "observed_delay_s": 0.007640621271876704,
+      "partition": "training",
+      "predicted_delay_s": 0.007640793764929108,
+      "residual_s": 1.7249305240413237e-07
+    },
+    {
+      "candidate_id": "6:echo:00",
+      "capture_id": "6",
+      "observed_delay_s": 0.00639342623703248,
+      "partition": "training",
+      "predicted_delay_s": 0.006393047914641875,
+      "residual_s": -3.783223906051944e-07
+    },
+    {
+      "candidate_id": "7:echo:00",
+      "capture_id": "7",
+      "observed_delay_s": 0.0057552514827145795,
+      "partition": "training",
+      "predicted_delay_s": 0.005756484393063851,
+      "residual_s": 1.2329103492711088e-06
+    },
+    {
+      "candidate_id": "8:echo:00",
+      "capture_id": "8",
+      "observed_delay_s": 0.006865762693650645,
+      "partition": "training",
+      "predicted_delay_s": 0.006864274796435003,
+      "residual_s": -1.4878972156417286e-06
+    },
+    {
+      "candidate_id": "9:echo:00",
+      "capture_id": "9",
+      "observed_delay_s": 0.0018196193044572465,
+      "partition": "training",
+      "predicted_delay_s": 0.0018185072265377732,
+      "residual_s": -1.1120779194733355e-06
+    },
+    {
+      "candidate_id": "10:echo:00",
+      "capture_id": "10",
+      "observed_delay_s": 0.006785549147524373,
+      "partition": "training",
+      "predicted_delay_s": 0.006785704667636302,
+      "residual_s": 1.555201119291666e-07
+    },
+    {
+      "candidate_id": "11:echo:00",
+      "capture_id": "11",
+      "observed_delay_s": 0.005788781066758039,
+      "partition": "training",
+      "predicted_delay_s": 0.005788653498369098,
+      "residual_s": -1.2756838894088796e-07
+    },
+    {
+      "candidate_id": "12:echo:00",
+      "capture_id": "12",
+      "observed_delay_s": 0.007892327402461026,
+      "partition": "training",
+      "predicted_delay_s": 0.007892215202360614,
+      "residual_s": -1.1220010041196327e-07
+    },
+    {
+      "candidate_id": "13:echo:00",
+      "capture_id": "13",
+      "observed_delay_s": 0.004541786117650575,
+      "partition": "training",
+      "predicted_delay_s": 0.00454173551887874,
+      "residual_s": -5.059877183476863e-08
+    },
+    {
+      "candidate_id": "14:echo:00",
+      "capture_id": "14",
+      "observed_delay_s": 0.007844357149040542,
+      "partition": "training",
+      "predicted_delay_s": 0.007843847713744433,
+      "residual_s": -5.094352961091536e-07
+    },
+    {
+      "candidate_id": "15:echo:00",
+      "capture_id": "15",
+      "observed_delay_s": 0.004246237485390951,
+      "partition": "training",
+      "predicted_delay_s": 0.00424610302777242,
+      "residual_s": -1.344576185313348e-07
+    },
+    {
+      "candidate_id": "16:echo:00",
+      "capture_id": "16",
+      "observed_delay_s": 0.008219259308245706,
+      "partition": "validation",
+      "predicted_delay_s": 0.008219722025149565,
+      "residual_s": 4.6271690385887854e-07
+    },
+    {
+      "candidate_id": "17:echo:00",
+      "capture_id": "17",
+      "observed_delay_s": 0.0016919405528574363,
+      "partition": "validation",
+      "predicted_delay_s": 0.001692665369044388,
+      "residual_s": 7.248161869516986e-07
+    },
+    {
+      "candidate_id": "18:echo:00",
+      "capture_id": "18",
+      "observed_delay_s": 0.006864660026581588,
+      "partition": "validation",
+      "predicted_delay_s": 0.006864198415569005,
+      "residual_s": -4.616110125836223e-07
+    },
+    {
+      "candidate_id": "19:echo:00",
+      "capture_id": "19",
+      "observed_delay_s": 0.00830242806964726,
+      "partition": "validation",
+      "predicted_delay_s": 0.008300901040597532,
+      "residual_s": -1.5270290497290673e-06
+    }
+  ],
+  "information_singular_values": [
+    514.9710910919769,
+    69.40752956431703,
+    28.612041619200337,
+    18.591999673774072
+  ],
+  "input_id": "calibration-input-7111ad6133e033ea0215ae2e8c0a39214ee69995d6940bdfe8f517a7d32509ae",
+  "input_result_id": "result-6d9259f4697a85f39531",
+  "physical_validation": false,
+  "provenance": {
+    "calibration_implementation_sha256": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931",
+    "coordinates": "right-handed, metres, z up",
+    "evidence_classes": [
+      "simulated"
+    ],
+    "geometry": "inferred from recording-derived excess delays",
+    "implementation_sha256": "8c872543e49dae50355339bc37b64b342a95cdb6440f0c21c4e4cc4a2a006216",
+    "inference": [
+      "simulated"
+    ],
+    "method": "mapper",
+    "physical_validation": false,
+    "poses": "supplied acoustic-center positions",
+    "recordings": [
+      {
+        "capture_id": "0",
+        "sha256": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf"
+      },
+      {
+        "capture_id": "1",
+        "sha256": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be"
+      },
+      {
+        "capture_id": "2",
+        "sha256": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142"
+      },
+      {
+        "capture_id": "3",
+        "sha256": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6"
+      },
+      {
+        "capture_id": "4",
+        "sha256": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c"
+      },
+      {
+        "capture_id": "5",
+        "sha256": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313"
+      },
+      {
+        "capture_id": "6",
+        "sha256": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7"
+      },
+      {
+        "capture_id": "7",
+        "sha256": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3"
+      },
+      {
+        "capture_id": "8",
+        "sha256": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0"
+      },
+      {
+        "capture_id": "9",
+        "sha256": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d"
+      },
+      {
+        "capture_id": "10",
+        "sha256": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123"
+      },
+      {
+        "capture_id": "11",
+        "sha256": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658"
+      },
+      {
+        "capture_id": "12",
+        "sha256": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4"
+      },
+      {
+        "capture_id": "13",
+        "sha256": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e"
+      },
+      {
+        "capture_id": "14",
+        "sha256": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa"
+      },
+      {
+        "capture_id": "15",
+        "sha256": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312"
+      },
+      {
+        "capture_id": "16",
+        "sha256": "8a07e19a89eab462d3250cd71138e7143a3054f9ec09edaf7b6c00ec2cca20b5"
+      },
+      {
+        "capture_id": "17",
+        "sha256": "dbf361895c76c21baa05b754a9d365732bb5fbbd38a2bc6290d0a43a2ad16bba"
+      },
+      {
+        "capture_id": "18",
+        "sha256": "90e707be29829989bc73aff19554bc11913a8ae362725cd3d325b6bfa96dee60"
+      },
+      {
+        "capture_id": "19",
+        "sha256": "fd25c8c463279cbc5c9b00df2809256f48a04563f8a5b6615d83be61276906c0"
+      }
+    ],
+    "runtime_versions": {
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.18.1"
+    },
+    "software_version": "0.1.0"
+  },
+  "recording_inputs": [
+    {
+      "capture_id": "0",
+      "hash_status": "verified",
+      "sha256": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf"
+    },
+    {
+      "capture_id": "1",
+      "hash_status": "verified",
+      "sha256": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be"
+    },
+    {
+      "capture_id": "2",
+      "hash_status": "verified",
+      "sha256": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142"
+    },
+    {
+      "capture_id": "3",
+      "hash_status": "verified",
+      "sha256": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6"
+    },
+    {
+      "capture_id": "4",
+      "hash_status": "verified",
+      "sha256": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c"
+    },
+    {
+      "capture_id": "5",
+      "hash_status": "verified",
+      "sha256": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313"
+    },
+    {
+      "capture_id": "6",
+      "hash_status": "verified",
+      "sha256": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7"
+    },
+    {
+      "capture_id": "7",
+      "hash_status": "verified",
+      "sha256": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3"
+    },
+    {
+      "capture_id": "8",
+      "hash_status": "verified",
+      "sha256": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0"
+    },
+    {
+      "capture_id": "9",
+      "hash_status": "verified",
+      "sha256": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d"
+    },
+    {
+      "capture_id": "10",
+      "hash_status": "verified",
+      "sha256": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123"
+    },
+    {
+      "capture_id": "11",
+      "hash_status": "verified",
+      "sha256": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658"
+    },
+    {
+      "capture_id": "12",
+      "hash_status": "verified",
+      "sha256": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4"
+    },
+    {
+      "capture_id": "13",
+      "hash_status": "verified",
+      "sha256": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e"
+    },
+    {
+      "capture_id": "14",
+      "hash_status": "verified",
+      "sha256": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa"
+    },
+    {
+      "capture_id": "15",
+      "hash_status": "verified",
+      "sha256": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312"
+    },
+    {
+      "capture_id": "16",
+      "hash_status": "verified",
+      "sha256": "8a07e19a89eab462d3250cd71138e7143a3054f9ec09edaf7b6c00ec2cca20b5"
+    },
+    {
+      "capture_id": "17",
+      "hash_status": "verified",
+      "sha256": "dbf361895c76c21baa05b754a9d365732bb5fbbd38a2bc6290d0a43a2ad16bba"
+    },
+    {
+      "capture_id": "18",
+      "hash_status": "verified",
+      "sha256": "90e707be29829989bc73aff19554bc11913a8ae362725cd3d325b6bfa96dee60"
+    },
+    {
+      "capture_id": "19",
+      "hash_status": "verified",
+      "sha256": "fd25c8c463279cbc5c9b00df2809256f48a04563f8a5b6615d83be61276906c0"
+    }
+  ],
+  "reference_geometry": "independently supplied calibration only; never inferred room structure",
+  "schema_version": "1.1",
+  "source_declaration_consistency": {
+    "conflicting_fields": [],
+    "known_values": {
+      "configuration_id": [],
+      "probe_id": [],
+      "route_id": []
+    },
+    "missing_declaration_counts": {
+      "configuration_id": 20,
+      "probe_id": 20,
+      "route_id": 20
+    },
+    "native_evidence_count": 0,
+    "recording_count": 20,
+    "semantics": "Operator-declared source configuration, probe and playback route only; consistency does not authenticate hardware, acoustic center, source rate, or physical change.",
+    "status": "unknown"
+  },
+  "status": "calibration_proposal",
+  "training_capture_ids": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+  ],
+  "training_normalized_rms": 0.012413997964554621,
+  "uncertainty": "Linearized conditional covariance, including independent receiver/delay noise and shared supplied reference-plane survey uncertainty; not validated coverage under wrong models.",
+  "validation_capture_ids": [
+    "16",
+    "17",
+    "18",
+    "19"
+  ],
+  "validation_fitted_rms_s": 9.06141253287654e-07,
+  "validation_max_abs_residual_s": 1.5270290497290673e-06,
+  "validation_max_abs_z": 0.024160015127384835,
+  "validation_nominal_rms_s": 0.0002466935866401276,
+  "validation_normalized_rms": 0.014626004960918326
+}

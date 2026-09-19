@@ -1,0 +1,33 @@
+{
+  "base_commit": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "count": 210,
+    "seconds": 70.099,
+    "result": "passed",
+    "loopback_permission": true
+  },
+  "demo": {
+    "status": "partial",
+    "surfaces": 6,
+    "horizontal_surfaces": 2,
+    "observations": 12,
+    "runtime_s": 1.2163730830070563,
+    "diagnostics": [
+      "refinement_budget_reached"
+    ],
+    "exact_geometry_and_raw_hashes_after_replay": true,
+    "evidence_class": "simulated recordings; software only",
+    "scope": "Executed before final malformed-checksum guard; mapper geometry code unchanged. Final clean GitHub replay follows."
+  },
+  "frozen_criteria_protocol_files_unchanged": 16,
+  "source_hashes": {
+    "echosight/calibration.py": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931",
+    "schemas/calibration-result.schema.json": "c77b7f5404c60fecb338d887066a131414fa534e47ec9b92fa0258eae2bb69f0",
+    "schemas/calibration-patch.schema.json": "30217f8d5be1bd693a0e7a552da8a1a1856d81d79b010bbb1962beef31032609",
+    "schemas/calibration-reference.schema.json": "7f8469b34bd9b2da80252034d9bbbc3dc5efd44cac63cb5cef244a2ca2b1f006",
+    "tests/test_calibration_contract.py": "164936e6a14bfcad0085a0e1bfe3cd6f134c08e7ccf2a93385fdd831f39dac7c"
+  },
+  "setup": "Existing pinned local venv, pip check passed. Fresh checkout/environment verification follows.",
+  "scientific_acceptance": "Unchanged failures; this checkpoint changes artifact contracts only."
+}

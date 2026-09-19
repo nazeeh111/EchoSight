@@ -44,3 +44,26 @@ The utility does not alter a session. After inspecting its evidence and source-r
 A development raw-WAV experiment with a7cm source shift and actual combined speed346m/source-buffer-second reduced four held-out delay residual RMS from247µs to about0.91µs; the fitted source error was0.72mm. This is simulation, with surveyed reference truth explicitly supplied, not physical accuracy. Tests reject spatially degenerate or reused validation positions, missing uncertainty/invalid partitions, and a held-out path-delay shift. Shared survey uncertainty increases the output covariance. General multipath reference selection and actual hardware qualification remain open.
 
 Reproduce the development example with `python -m evaluation.calibration_development --output work/calibration-demo`, then run the CLI on its `session.json` and `reference.json`. Separate `truth.json` is evaluation-only.
+
+## Inspectable artifact contract
+
+The CLI emits the [calibration result v1.1 schema](../schemas/calibration-result.schema.json) for both proposals and processing/model rejections. The [reference input schema](../schemas/calibration-reference.schema.json) describes the supplied reference v1.0 contract. Structurally invalid sessions/reference geometry still raise an input error; they are not fitted or converted into a calibration proposal.
+
+`calibration_input.reference` preserves the supplied plane, survey uncertainties, partitions and materialized search defaults. `calibration_input.acquisition` preserves the consumed source/receiver poses and uncertainties, coordinate frame, clock/speed declaration and probe configuration. It excludes recording paths and unknown annotations. If supplied, each capture's `sha256` is the expected checksum used for admission, not a claim that the file was verified. It must be a lowercase 64-character hexadecimal digest or null (no assertion); malformed checksum declarations raise an input error without copying their contents. Missing and empty probe declarations remain distinguishable; malformed declared probe values remain inspectable on rejected outputs. The signal processor remains responsible for validating them.
+
+`recording_inputs` reports every declared capture, including failures:
+
+- `verified`: `sha256` is the original file-byte digest returned by recording processing. This establishes byte identity, not physical independence or measurement accuracy.
+- `not_processed`: no observation was produced, such as spatial rejection before decoding or a missing/empty probe. Its digest is null.
+- `not_available`: processing produced a rejected observation without an exposed verified digest, such as an unreadable file, checksum mismatch or malformed probe. Its digest is null. This does not assert that the file was never opened.
+
+`input_id` binds the canonical supplied inputs and these per-recording states/digests. Numeric spelling and signed zero are normalized. Different failed declarations have different identities, but an unavailable digest cannot bind unidentified raw bytes. `calibration_id`, present only on proposals, also binds the fitted calibration and implementation fingerprints. `input_result_id` identifies the underlying recording pipeline result when available; it is null for early rejection. That older pipeline identifier can change when omitted probe defaults are explicitly materialized, while the canonical calibration input identity and replayed fit remain equal.
+
+To replay, copy `calibration_input.acquisition`, restore each original local recording path by capture ID, verify any available digest, and call `calibrate_reference` with `calibration_input.reference`. A result artifact alone does not contain audio. Never invent a digest for an unavailable file. Error diagnostics retain upstream codes and capture IDs; raw exception messages are excluded because they can contain local file paths. Rejected outputs cannot contain an applicable `calibration` or `calibration_id`.
+
+[Executed proposal and rejection examples](../evidence/calibration-contract/README.md) cover a proposal, held-out model failure, planar receiver rejection, missing probe and malformed probe. They use the existing development simulation fixture, with exact raw-WAV hashes in the report. They provide software contract evidence only. Regenerate and validate them with:
+
+```sh
+.venv/bin/python evidence/calibration-contract/reproduce.py --output work/calibration-contract-replay
+.venv/bin/python -m unittest tests.test_calibration_contract tests.test_calibration tests.test_mapping_admission_cancellation.ReferenceCalibrationAdmissionTests -v
+```

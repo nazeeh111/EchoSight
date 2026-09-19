@@ -1,0 +1,21 @@
+{
+  "old_thread_id": "01a0b743-8a32-7070-8a81-910f5e2feaba",
+  "action": "update_goal",
+  "requested_status": "paused",
+  "reason": "Explicit user shutdown after artifact-backed handoff; no implementation continues.",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "native_response": {
+    "goal": {
+      "threadId": "01a0b743-8a32-7070-8a81-910f5e2feaba",
+      "objective": "Deliver EchoSight’s verified backend in nazeeh111/EchoSight, with working API/CLI, reproducible evaluation and frontend handoff; physical validation follows later.",
+      "status": "paused",
+      "tokensUsed": 7772829,
+      "timeUsedSeconds": 16372,
+      "createdAt": 1789781104,
+      "updatedAt": 1789855306
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  }
+}

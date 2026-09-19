@@ -1,0 +1,118 @@
+diff --git a/echosight/calibration.py b/echosight/calibration.py
+index b862b9f..cc45335 100644
+--- a/echosight/calibration.py
++++ b/echosight/calibration.py
+@@ -1,5 +1,6 @@
+ """Reference-reflector calibration; never infer a room from supplied reference truth."""
+ from __future__ import annotations
++import copy
+ import hashlib
+ import json
+ from pathlib import Path
+@@ -17,6 +18,65 @@ def _jacobian(function, point):
+     return np.column_stack(columns)
+ 
+ 
++def _input_snapshot(session, reference):
++    """Project already validated fit inputs; never retain file paths or annotations."""
++    from .signals import DEFAULT_PROBE
++    keys=('schema_version','session_id','source_position_m','source_position_std_m',
++          'sound_speed_m_s','sound_speed_std_m_s','source_clock_scale','source_clock_std_ppm',
++          'effective_speed_m_s','source_effective_speed_covariance')
++    acquisition={key:copy.deepcopy(session[key]) for key in keys if key in session}
++    acquisition['coordinate_frame_id']=session.get('coordinate_frame_id','session:'+session.get('session_id','unspecified'))
++    # The signal processor remains authoritative for probe validity. Preserve its
++    # configuration and verification fields, including a rejected declaration.
++    probe=session.get('probe',{})
++    if 'probe' in session:
++        acquisition['probe']={key:copy.deepcopy(probe.get(key,value)) for key,value in DEFAULT_PROBE.items()} if probe else {}
++        for key in ('schema_version','kind','sample_count','pilot_start_samples','waveform_sha256','timing_unit'):
++            if key in probe:acquisition['probe'][key]=copy.deepcopy(probe[key])
++    acquisition['captures']=[{key:copy.deepcopy(capture[key]) for key in
++        ('capture_id','receiver_position_m','receiver_position_std_m','provenance')}
++        for capture in session['captures']]
++    return dict(reference=copy.deepcopy(reference),acquisition=acquisition)
++
++
++def _input_identity(inputs, recordings):
++    # JSON distinguishes 1 and 1.0, but physical metadata does not. Canonicalize
++    # numeric spelling and signed zero for the digest, without changing fitting.
++    def canonical(value):
++        if isinstance(value,dict):return {k:canonical(v) for k,v in value.items()}
++        if isinstance(value,list):return [canonical(v) for v in value]
++        if isinstance(value,(int,float)) and not isinstance(value,bool):
++            return 0. if value==0 else float(value)
++        return value
++    encoded=json.dumps(canonical({'calibration_input':inputs,'recording_inputs':recordings}),
++                       sort_keys=True,separators=(',',':'),allow_nan=False)
++    return 'calibration-input-'+hashlib.sha256(encoded.encode()).hexdigest()
++
++
++def _result_envelope(inputs, result=None):
++    from . import __version__
++    observations={} if result is None else {o['capture_id']:o for o in result.get('observations',[])}
++    recordings=[]
++    for capture in inputs['acquisition']['captures']:
++        cid=capture['capture_id'];digest=observations.get(cid,{}).get('recording_sha256')
++        recordings.append(dict(capture_id=cid,sha256=digest,
++            hash_status='not_processed' if result is None else 'verified' if digest else 'not_available'))
++    provenance=copy.deepcopy(result.get('provenance',{})) if result is not None else dict(
++        software_version=__version__,physical_validation=False,recordings=[])
++    provenance.setdefault('recordings',[])
++    provenance['calibration_implementation_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
++    reference=inputs['reference']
++    return dict(schema_version='1.1',status='rejected',physical_validation=False,
++        calibration_input=inputs,recording_inputs=recordings,input_id=_input_identity(inputs,recordings),
++        reference_geometry='independently supplied calibration only; never inferred room structure',
++        input_result_id=None if result is None else result.get('result_id'),provenance=provenance,
++        training_capture_ids=list(reference['training_capture_ids']),
++        validation_capture_ids=list(reference['validation_capture_ids']),diagnostics=[],
++        clock_interpretation='Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.',
++        conditional_on=['stationary effective point source','correct isolated reference reflection',
++            'surveyed poses and reference plane','affine within-recording clocks','no path-dependent unmodeled delay'])
++
++
+ def calibrate_reference(session, reference):
+     """Propose source/effective-speed calibration from original recordings.
+ 
+@@ -60,10 +120,16 @@ def calibrate_reference(session, reference):
+     np.fill_diagonal(pairwise,np.inf)
+     if np.min(pairwise)<.001:
+         raise ValueError('training views must be distinct and validation poses held out spatially')
++    canonical_reference=dict(normal=normal.tolist(),offset_m=offset,offset_std_m=offset_std,
++        normal_std_rad=angle_std,source_search_radius_m=radius,effective_speed_bounds_m_s=bounds.tolist(),
++        training_capture_ids=list(train),validation_capture_ids=list(held))
++    inputs=_input_snapshot(session,canonical_reference)
+     # A receiver plane through the source cannot identify a source displacement
+     # normal to that plane. The Jacobian guard below covers less obvious cases.
+     if np.linalg.matrix_rank(points[:len(train)]-points[:len(train)].mean(axis=0),tol=1e-5)<3:
+-        return {'schema_version':'1.0','status':'rejected','diagnostics':['nonspatial_calibration_positions'], 'physical_validation':False}
++        out=_result_envelope(inputs)
++        out['diagnostics'].append('nonspatial_calibration_positions')
++        return out
+     result=process_session(session)
+     observations={o['capture_id']:o for o in result.get('observations',[])}
+     image=source+2*(offset-normal@source)*normal
+@@ -79,12 +145,8 @@ def calibrate_reference(session, reference):
+         if observation.get('status')!='ok' or len(candidates)!=1:
+             failures.append({'capture_id':cid,'code':'reference_path_unidentified','eligible_candidates':len(candidates)})
+         else: selected.append(candidates[0])
+-    out={'schema_version':'1.0','status':'rejected','physical_validation':False,
+-         'reference_geometry':'independently supplied calibration only; never inferred room structure',
+-         'input_result_id':result.get('result_id'),'provenance':result.get('provenance',{}),
+-         'training_capture_ids':train,'validation_capture_ids':held,'diagnostics':failures,
+-         'clock_interpretation':'Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.',
+-         'conditional_on':['stationary effective point source','correct isolated reference reflection','surveyed poses and reference plane','affine within-recording clocks','no path-dependent unmodeled delay']}
++    out=_result_envelope(inputs,result)
++    out['diagnostics']=failures
+     source_consistency=result.get('source_declaration_consistency')
+     if source_consistency is not None:out['source_declaration_consistency']=source_consistency
+     if source_consistency is not None and source_consistency.get('status')=='contradictory':
+@@ -155,6 +217,6 @@ def calibrate_reference(session, reference):
+     transform=np.diag([1.,1.,1.,np.exp(theta[3])]);joint=transform@covariance@transform
+     out.update(status='calibration_proposal',calibration={'source_position_m':theta[:3].tolist(),'effective_speed_m_s':float(np.exp(theta[3])),
+         'source_effective_speed_covariance':joint.tolist()},uncertainty='Linearized conditional covariance, including independent receiver/delay noise and shared supplied reference-plane survey uncertainty; not validated coverage under wrong models.')
+-    encoded=json.dumps({'input':out['input_result_id'],'reference':reference,'calibration':out['calibration']},sort_keys=True,allow_nan=False)
++    encoded=json.dumps({'input_id':out['input_id'],'implementation':out['provenance']['calibration_implementation_sha256'],'recording_implementation':out['provenance'].get('implementation_sha256'),'calibration':out['calibration']},sort_keys=True,allow_nan=False)
+     out['calibration_id']='calibration-'+hashlib.sha256(encoded.encode()).hexdigest()[:20]
+     return out

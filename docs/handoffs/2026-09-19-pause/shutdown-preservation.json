@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-09-19T22:01:06.974879+00:00",
+  "head": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "staged_files": [],
+  "all_four_dirty_implementation_files_unchanged_during_shutdown": true,
+  "all_fifteen_small_snapshots_match_original_recorded_hashes": true,
+  "new_tests_reviews_experiments_during_shutdown": false,
+  "commits_or_pushes_after_stop_request": false,
+  "latest_push_note": "Already running session20220 completed27bb6a4; polled its completion after stop request, then separate read-only ls-remote confirmed hash.",
+  "shutdown_edits_only": [
+    "STATE.md",
+    "docs/handoffs/2026-09-19-pause/"
+  ],
+  "state_at_head_before_shutdown_snapshot": "snapshots/STATE.md",
+  "exact_user_setting": "Astra (gpt-6-astra), high",
+  "native_pause_receipt": "goal-pause.json"
+}

@@ -1,0 +1,6 @@
+test_raw_native_source_conflict_blocks_reference_fit_but_no_result_alone_does_not (tests.test_mapping_admission_cancellation.ReferenceCalibrationAdmissionTests.test_raw_native_source_conflict_blocks_reference_fit_but_no_result_alone_does_not) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.382s
+
+OK

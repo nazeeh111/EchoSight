@@ -1,0 +1,15 @@
+test_exact_inputs_roundtrip_without_paths_or_unknown_annotations (tests.test_calibration_contract.CalibrationContractTests.test_exact_inputs_roundtrip_without_paths_or_unknown_annotations) ... ERROR
+
+======================================================================
+ERROR: test_exact_inputs_roundtrip_without_paths_or_unknown_annotations (tests.test_calibration_contract.CalibrationContractTests.test_exact_inputs_roundtrip_without_paths_or_unknown_annotations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_calibration_contract.py", line 38, in test_exact_inputs_roundtrip_without_paths_or_unknown_annotations
+    inputs=result['calibration_input']
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'calibration_input'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.424s
+
+FAILED (errors=1)

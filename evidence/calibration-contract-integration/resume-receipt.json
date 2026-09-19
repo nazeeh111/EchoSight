@@ -1,0 +1,19 @@
+{
+  "previous_goal": "paused per native goal-pause.json receipt",
+  "previous_task": "idle at live app query",
+  "previous_specialists": "stopped per shutdown accounting",
+  "current_process_check": "No EchoSight test/server/experiment; idle computer-use kernel processes remain, untouched.",
+  "remote_commit": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "current_goal": "active in new task 01a0bbb3-df4c-73c1-aa50-7010e1815200",
+  "review_manifest_files_verified": {
+    "README.md": true,
+    "review-source-calibration-replay.json": true,
+    "review-source-calibration-replay.log": true,
+    "review-source-calibration-replay.py": true,
+    "review-source-calibration.json": true,
+    "review-source-calibration.log": true,
+    "review-source-calibration.md": true,
+    "review-source-calibration.py": true
+  },
+  "scope": "Calibration artifact repair first; frozen scientific gates/failures retained."
+}

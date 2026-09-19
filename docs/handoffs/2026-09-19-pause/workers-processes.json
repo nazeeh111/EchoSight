@@ -1,0 +1,52 @@
+{
+  "old_thread_id": "01a0b743-8a32-7070-8a81-910f5e2feaba",
+  "goal_status": "paused; confirmed native receipt in goal-pause.json",
+  "workers": {
+    "inference": {
+      "state": "interrupted after explicit STOPPED report",
+      "owned": [
+        "echosight/calibration.py",
+        "schemas/calibration-reference.schema.json",
+        "schemas/calibration-result.schema.json",
+        "tests/test_calibration_contract.py",
+        "work/calibration-boundary-audit/build_schema.py",
+        "work/calibration-boundary-audit/contract-before.txt",
+        "work/calibration-boundary-audit/contract-first.txt"
+      ],
+      "last_session": 43988,
+      "last_session_result": "agent reports completed exit0; exact log retained",
+      "unfinished": "Two untested edits after 18-test run; missing-probe/rejected-envelope edge cases, exact examples/docs, final tests and review. No active command."
+    },
+    "evaluation": {
+      "state": "completed",
+      "artifact": "evidence/independent-review-5f778a8.md",
+      "checks": "12 independent cancellation cases; both P2 findings closed at5f778a8; no runtime edits"
+    },
+    "independent_review": {
+      "state": "completed",
+      "artifact": "evidence/source-calibration-mismatch/independent/review-source-calibration.md",
+      "checks": "166 archive payloads,288 raw hashes,3 raw replays, independent information mathematics; no P1/P2 in scope; no runtime edits"
+    },
+    "physics_audit": {
+      "state": "completed, then interrupt requested to prevent any queued work",
+      "artifact": "evidence/source-calibration-mismatch/",
+      "unfinished": "Prospective protocol-draft assignment has no artifact: work/joint-reference-trial does not exist. No joint fit, freeze or new cases executed."
+    }
+  },
+  "historical_worker_names": [
+    "acoustics",
+    "backend"
+  ],
+  "historical_worker_note": "Not present in current native live-agent inventory; do not revive from old summaries.",
+  "root_commands": {
+    "70512": "full repair suite completed exit0,201tests65.132s",
+    "97126": "e457 push completed exit0,remote hash verified",
+    "58378": "clean GitHub e457 full suite completed exit0,201tests64.733s",
+    "95919": "clean demo/export/replay completed exit0",
+    "20220": "27bb6a4 push completed exit0,remote hash verified"
+  },
+  "process_inventory": "Initial sandbox ps denied; approved read-only ps showed only its own shell/rg, no EchoSight test/server/experiment job. No unrelated process stopped.",
+  "shutdown_tests": "No new test/review/experiment run; existing outputs inspected only. No running test was interrupted. Worker implementation was interrupted between completed checks.",
+  "model": "Astra (gpt-6-astra), preserve selection",
+  "reasoning_effort": "high; explicitly confirmed by user during shutdown"
+}

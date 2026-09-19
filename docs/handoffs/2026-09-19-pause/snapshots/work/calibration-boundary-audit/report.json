@@ -1,0 +1,103 @@
+{
+  "commit": "5f778a887817761b9db0626256698c5f678b497f",
+  "contracts": {
+    "calibration_examples": [],
+    "request_schema_present": false,
+    "result_schema_present": false
+  },
+  "interrupts": [
+    {
+      "calls": 1,
+      "existing_output": false,
+      "existing_output_preserved": false,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "recording"
+    },
+    {
+      "calls": 1,
+      "existing_output": true,
+      "existing_output_preserved": true,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "recording"
+    },
+    {
+      "calls": 1,
+      "existing_output": false,
+      "existing_output_preserved": false,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "fit"
+    },
+    {
+      "calls": 1,
+      "existing_output": true,
+      "existing_output_preserved": true,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "fit"
+    },
+    {
+      "calls": 1,
+      "existing_output": false,
+      "existing_output_preserved": false,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "presave"
+    },
+    {
+      "calls": 1,
+      "existing_output": true,
+      "existing_output_preserved": true,
+      "exit_code": 130,
+      "new_output_written": false,
+      "stage": "presave"
+    }
+  ],
+  "proposal": {
+    "calibration_id": "calibration-8fc6010eb09731e0568b",
+    "contains_acquisition_input": false,
+    "contains_reference_input": false,
+    "input_result_id": "result-b0855fc20d0fc2afe799",
+    "keys": [
+      "acceptance",
+      "calibration",
+      "calibration_id",
+      "clock_interpretation",
+      "conditional_on",
+      "diagnostics",
+      "evidence",
+      "information_singular_values",
+      "input_result_id",
+      "physical_validation",
+      "provenance",
+      "reference_geometry",
+      "schema_version",
+      "source_declaration_consistency",
+      "status",
+      "training_capture_ids",
+      "training_normalized_rms",
+      "uncertainty",
+      "validation_capture_ids",
+      "validation_fitted_rms_s",
+      "validation_max_abs_residual_s",
+      "validation_max_abs_z",
+      "validation_nominal_rms_s",
+      "validation_normalized_rms"
+    ],
+    "partitioned_captures": 20,
+    "physical_validation": false,
+    "recordings_hashed": 20,
+    "selected_candidate_evidence": 20,
+    "status": "calibration_proposal"
+  },
+  "raw_hashes_unchanged": true,
+  "source_sha256": {
+    "echosight/calibration.py": "0d007c12b1f8ff026e4f9c6c8f4475b97bab4340a185819a36c71bf5d6f27618",
+    "echosight/cli.py": "94efd77383ec0ee43c770e078cf25bffdc7339ace7c8b353d5e26e719b49c4cb",
+    "echosight/pipeline.py": "cd78d4b9de5faa96d194f19cdcb9b2398af7760e5a90fe59e388043470572520"
+  },
+  "runtime_unchanged_since_probe": true,
+  "audit_sha256": "aab24af84581514cfe09104c1baaee4c656659ea2c67cddefd17c3c4361016a5"
+}

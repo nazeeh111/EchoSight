@@ -1,0 +1,613 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "status": {
+      "enum": [
+        "calibration_proposal",
+        "rejected"
+      ]
+    },
+    "physical_validation": {
+      "const": false
+    },
+    "calibration_input": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "object",
+          "properties": {
+            "normal": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              },
+              "description": "Supplied unit normal, not inferred geometry; unit length checked by runtime."
+            },
+            "offset_m": {
+              "type": "number",
+              "minimum": -1000,
+              "maximum": 1000
+            },
+            "offset_std_m": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 0.05
+            },
+            "normal_std_rad": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 0.03
+            },
+            "source_search_radius_m": {
+              "type": "number",
+              "minimum": 0.01,
+              "maximum": 0.5,
+              "default": 0.15
+            },
+            "effective_speed_bounds_m_s": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "number",
+                "minimum": 250,
+                "maximum": 460
+              },
+              "default": [
+                300.0,
+                380.0
+              ]
+            },
+            "training_capture_ids": {
+              "type": "array",
+              "minItems": 8,
+              "maxItems": 28,
+              "items": {
+                "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+              },
+              "uniqueItems": true
+            },
+            "validation_capture_ids": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 24,
+              "items": {
+                "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "normal",
+            "offset_m",
+            "offset_std_m",
+            "normal_std_rad",
+            "source_search_radius_m",
+            "effective_speed_bounds_m_s",
+            "training_capture_ids",
+            "validation_capture_ids"
+          ],
+          "additionalProperties": false
+        },
+        "acquisition": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/schema_version"
+            },
+            "session_id": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/session_id"
+            },
+            "coordinate_frame_id": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/coordinate_frame_id"
+            },
+            "source_position_m": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/source_position_m"
+            },
+            "source_position_std_m": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/source_position_std_m"
+            },
+            "sound_speed_m_s": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/sound_speed_m_s"
+            },
+            "sound_speed_std_m_s": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/sound_speed_std_m_s"
+            },
+            "source_clock_scale": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/source_clock_scale"
+            },
+            "source_clock_std_ppm": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/source_clock_std_ppm"
+            },
+            "effective_speed_m_s": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/effective_speed_m_s"
+            },
+            "source_effective_speed_covariance": {
+              "$ref": "https://echosight.local/schemas/session-1.0.json#/properties/source_effective_speed_covariance"
+            },
+            "probe": {
+              "type": "object",
+              "properties": {
+                "sample_rate_hz": {},
+                "duration_s": {},
+                "low_hz": {},
+                "high_hz": {},
+                "repetitions": {},
+                "period_s": {},
+                "lead_s": {},
+                "tail_s": {},
+                "max_echo_delay_s": {},
+                "schema_version": {},
+                "kind": {},
+                "sample_count": {},
+                "pilot_start_samples": {},
+                "waveform_sha256": {},
+                "timing_unit": {}
+              },
+              "required": [],
+              "additionalProperties": false,
+              "description": "Only processor-consumed configuration/verification fields; missing or malformed declarations are retained for rejected results. The signal processor remains the validator."
+            },
+            "captures": {
+              "type": "array",
+              "minItems": 12,
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "capture_id": {
+                    "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/capture/properties/capture_id"
+                  },
+                  "receiver_position_m": {
+                    "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/capture/properties/receiver_position_m"
+                  },
+                  "receiver_position_std_m": {
+                    "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/capture/properties/receiver_position_std_m"
+                  },
+                  "provenance": {
+                    "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/capture/properties/provenance"
+                  },
+                  "sha256": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "description": "Supplied expected checksum used by recording admission, or null for no assertion. Distinct from the verified raw-byte digest in recording_inputs."
+                  }
+                },
+                "required": [
+                  "capture_id",
+                  "receiver_position_m",
+                  "receiver_position_std_m",
+                  "provenance"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "schema_version",
+            "coordinate_frame_id",
+            "source_position_m",
+            "source_position_std_m",
+            "sound_speed_m_s",
+            "sound_speed_std_m_s",
+            "source_clock_scale",
+            "source_clock_std_ppm",
+            "captures"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "reference",
+        "acquisition"
+      ],
+      "additionalProperties": false
+    },
+    "recording_inputs": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "properties": {
+          "capture_id": {
+            "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+          },
+          "hash_status": {
+            "enum": [
+              "verified",
+              "not_available",
+              "not_processed"
+            ]
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "capture_id",
+          "hash_status",
+          "sha256"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "hash_status": {
+                  "const": "verified"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "sha256": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "input_id": {
+      "type": "string",
+      "pattern": "^calibration-input-[a-f0-9]{64}$"
+    },
+    "input_result_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^result-[a-f0-9]{20}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reference_geometry": {
+      "type": "string"
+    },
+    "training_capture_ids": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 28,
+      "items": {
+        "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+      }
+    },
+    "validation_capture_ids": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 24,
+      "items": {
+        "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 256,
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "code"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "capture_id": {
+                "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+              },
+              "eligible_candidates": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "clock_interpretation": {
+      "type": "string"
+    },
+    "conditional_on": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "allOf": [
+        {
+          "$ref": "https://echosight.local/schemas/result-1.0.json#/properties/provenance"
+        },
+        {
+          "type": "object",
+          "required": [
+            "software_version",
+            "physical_validation",
+            "recordings",
+            "calibration_implementation_sha256"
+          ],
+          "properties": {
+            "software_version": {
+              "type": "string"
+            },
+            "recordings": {
+              "type": "array",
+              "minItems": 0,
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "capture_id": {
+                    "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "capture_id",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "calibration_implementation_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        }
+      ]
+    },
+    "source_declaration_consistency": {
+      "$ref": "https://echosight.local/schemas/result-1.0.json#/properties/source_declaration_consistency"
+    },
+    "information_singular_values": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "training_normalized_rms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "validation_normalized_rms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "validation_max_abs_z": {
+      "type": "number",
+      "minimum": 0
+    },
+    "validation_nominal_rms_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "validation_fitted_rms_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "validation_max_abs_residual_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "properties": {
+          "capture_id": {
+            "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+          },
+          "candidate_id": {
+            "type": "string"
+          },
+          "observed_delay_s": {
+            "type": "number"
+          },
+          "predicted_delay_s": {
+            "type": "number"
+          },
+          "residual_s": {
+            "type": "number"
+          },
+          "partition": {
+            "enum": [
+              "training",
+              "validation"
+            ]
+          }
+        },
+        "required": [
+          "capture_id",
+          "candidate_id",
+          "observed_delay_s",
+          "predicted_delay_s",
+          "residual_s",
+          "partition"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "properties": {
+        "maximum_normalized_rms": {
+          "const": 2.5
+        },
+        "maximum_validation_abs_z": {
+          "const": 3.5
+        },
+        "maximum_validation_rms_s": {
+          "const": 0.0001
+        },
+        "maximum_validation_abs_residual_s": {
+          "const": 0.0002
+        }
+      },
+      "required": [
+        "maximum_normalized_rms",
+        "maximum_validation_abs_z",
+        "maximum_validation_rms_s",
+        "maximum_validation_abs_residual_s"
+      ],
+      "additionalProperties": false
+    },
+    "calibration": {
+      "type": "object",
+      "properties": {
+        "source_position_m": {
+          "$ref": "https://echosight.local/schemas/calibration-patch-1.0.json#/properties/calibration/properties/source_position_m"
+        },
+        "effective_speed_m_s": {
+          "$ref": "https://echosight.local/schemas/calibration-patch-1.0.json#/properties/calibration/properties/effective_speed_m_s"
+        },
+        "source_effective_speed_covariance": {
+          "$ref": "https://echosight.local/schemas/calibration-patch-1.0.json#/properties/calibration/properties/source_effective_speed_covariance"
+        }
+      },
+      "required": [
+        "source_position_m",
+        "effective_speed_m_s",
+        "source_effective_speed_covariance"
+      ],
+      "additionalProperties": false
+    },
+    "calibration_id": {
+      "type": "string",
+      "pattern": "^calibration-[a-f0-9]{20}$"
+    },
+    "uncertainty": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "physical_validation",
+    "calibration_input",
+    "recording_inputs",
+    "input_id",
+    "input_result_id",
+    "provenance",
+    "reference_geometry",
+    "training_capture_ids",
+    "validation_capture_ids",
+    "diagnostics",
+    "clock_interpretation",
+    "conditional_on"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/calibration-result-1.1.json",
+  "title": "EchoSight inspectable reference calibration result v1.1",
+  "description": "Original recordings plus explicitly supplied reference geometry. Structural contract; PSD, matched identities, canonical hashes and acceptance remain runtime checks. No physical validation.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "calibration_proposal"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "calibration",
+          "calibration_id",
+          "uncertainty",
+          "acceptance",
+          "evidence",
+          "information_singular_values",
+          "training_normalized_rms",
+          "validation_normalized_rms",
+          "validation_max_abs_z",
+          "validation_nominal_rms_s",
+          "validation_fitted_rms_s",
+          "validation_max_abs_residual_s"
+        ],
+        "properties": {
+          "input_result_id": {
+            "type": "string"
+          },
+          "recording_inputs": {
+            "items": {
+              "properties": {
+                "hash_status": {
+                  "const": "verified"
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "calibration"
+              ]
+            },
+            {
+              "required": [
+                "calibration_id"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

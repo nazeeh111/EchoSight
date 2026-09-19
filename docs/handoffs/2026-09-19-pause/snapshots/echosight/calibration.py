@@ -34,7 +34,7 @@ def _input_snapshot(session, reference):
         for key in ('schema_version','kind','sample_count','pilot_start_samples','waveform_sha256','timing_unit'):
             if key in probe:acquisition['probe'][key]=copy.deepcopy(probe[key])
     acquisition['captures']=[{key:copy.deepcopy(capture[key]) for key in
-        ('capture_id','receiver_position_m','receiver_position_std_m','provenance','sha256') if key in capture}
+        ('capture_id','receiver_position_m','receiver_position_std_m','provenance')}
         for capture in session['captures']]
     return dict(reference=copy.deepcopy(reference),acquisition=acquisition)
 
@@ -60,7 +60,7 @@ def _result_envelope(inputs, result=None):
     for capture in inputs['acquisition']['captures']:
         cid=capture['capture_id'];digest=observations.get(cid,{}).get('recording_sha256')
         recordings.append(dict(capture_id=cid,sha256=digest,
-            hash_status='not_processed' if cid not in observations else 'verified' if digest else 'not_available'))
+            hash_status='not_processed' if result is None else 'verified' if digest else 'not_available'))
     provenance=copy.deepcopy(result.get('provenance',{})) if result is not None else dict(
         software_version=__version__,physical_validation=False,recordings=[])
     provenance.setdefault('recordings',[])
@@ -88,11 +88,6 @@ def calibrate_reference(session, reference):
     from .pipeline import process_session
     from .storage import load_session, validate_session
     session = load_session(session) if isinstance(session, (str, Path)) else validate_session(session)
-    for capture in session['captures']:
-        expected=capture.get('sha256')
-        if expected is not None and (not isinstance(expected,str) or len(expected)!=64
-                                     or any(c not in '0123456789abcdef' for c in expected)):
-            raise ValueError('recording sha256 must be null or a lowercase 64-character hexadecimal digest')
     if not isinstance(reference, dict): raise ValueError('reference must be an object')
     normal = np.asarray(reference.get('normal'), float)
     if normal.shape != (3,) or not np.all(np.isfinite(normal)) or abs(np.linalg.norm(normal)-1) > 1e-6:
@@ -151,15 +146,7 @@ def calibrate_reference(session, reference):
             failures.append({'capture_id':cid,'code':'reference_path_unidentified','eligible_candidates':len(candidates)})
         else: selected.append(candidates[0])
     out=_result_envelope(inputs,result)
-    # Keep the reason processing failed without copying arbitrary annotations or
-    # exception messages, which can contain private local recording paths.
-    out['diagnostics']=[{'code':d['code']} for d in result.get('diagnostics',[])
-                        if isinstance(d,dict) and 'code' in d]
-    for cid,observation in observations.items():
-        if observation.get('status')!='ok':
-            out['diagnostics'].extend({'capture_id':cid,'code':d['code']}
-                for d in observation.get('diagnostics',[]) if isinstance(d,dict) and 'code' in d)
-    out['diagnostics'].extend(failures)
+    out['diagnostics']=failures
     source_consistency=result.get('source_declaration_consistency')
     if source_consistency is not None:out['source_declaration_consistency']=source_consistency
     if source_consistency is not None and source_consistency.get('status')=='contradictory':

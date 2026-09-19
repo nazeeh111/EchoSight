@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "properties": {
+    "normal": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      },
+      "description": "Supplied unit normal, not inferred geometry; unit length checked by runtime."
+    },
+    "offset_m": {
+      "type": "number",
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "offset_std_m": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 0.05
+    },
+    "normal_std_rad": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 0.03
+    },
+    "source_search_radius_m": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 0.5,
+      "default": 0.15
+    },
+    "effective_speed_bounds_m_s": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number",
+        "minimum": 250,
+        "maximum": 460
+      },
+      "default": [
+        300.0,
+        380.0
+      ]
+    },
+    "training_capture_ids": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 28,
+      "items": {
+        "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "validation_capture_ids": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 24,
+      "items": {
+        "$ref": "https://echosight.local/schemas/session-1.0.json#/$defs/id"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "normal",
+    "offset_m",
+    "offset_std_m",
+    "normal_std_rad",
+    "training_capture_ids",
+    "validation_capture_ids"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/calibration-reference-1.0.json",
+  "title": "EchoSight supplied reference calibration inputs v1",
+  "description": "Optional defaults are materialized in result snapshots. Runtime additionally checks unit normal, increasing speed bounds, disjoint full partition and source/receiver geometry."
+}

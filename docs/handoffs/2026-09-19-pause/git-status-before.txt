@@ -1,0 +1,9 @@
+ M echosight/calibration.py
+?? docs/handoffs/2026-09-19-pause/snapshots/STATE.md
+?? docs/handoffs/2026-09-19-pause/snapshots/echosight/calibration.py
+?? docs/handoffs/2026-09-19-pause/snapshots/schemas/calibration-reference.schema.json
+?? docs/handoffs/2026-09-19-pause/snapshots/schemas/calibration-result.schema.json
+?? docs/handoffs/2026-09-19-pause/snapshots/tests/test_calibration_contract.py
+?? schemas/calibration-reference.schema.json
+?? schemas/calibration-result.schema.json
+?? tests/test_calibration_contract.py
