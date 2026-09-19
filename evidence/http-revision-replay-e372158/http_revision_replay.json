@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "captures": 12,
+  "initial_surfaces": 6,
+  "replayed_surfaces": 6,
+  "original_revision": 12,
+  "replayed_revision": 13,
+  "archived_binding_issues": [
+    "revision_mismatch",
+    "acquisition_mismatch"
+  ],
+  "checks": [
+    "actual HTTP upload and job progress",
+    "six surfaces with raw evidence",
+    "calibration revision marks previous result stale",
+    "all raw archive bytes equal input",
+    "actual HTTP import quarantines stale computation",
+    "duplicate import cannot replace session",
+    "reprocessing consumes revised snapshot",
+    "original per-job result remains immutable"
+  ],
+  "physical_validation": false
+}

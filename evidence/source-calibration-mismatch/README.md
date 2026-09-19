@@ -2,6 +2,8 @@
 
 This is a completed development experiment, not a production feature or held-out scientific success. [V1](REPORT.md) preserves all twelve failures, including the four single-source controls. The separately frozen [V2 study](V2-REPORT.md) improves reference visibility analytically, preserves ambiguous dual-source cases, and records a failed cross-reference transfer for a valid single source. The prospective joint-information calculation is not an executed joint calibration.
 
+**Later evidence:** the separately frozen [two-reference trial](../joint-reference-trial/) has now executed both fixed single-source fits and retained all four dual-source rejections. Both single-source fits pass their original reference gates. Its [independent review](../independent-review-joint-reference.md) and [portable replay](../reproduction-e372158/) are complete. This does not establish calibration transfer to room mapping or replace the original failed transfer below. The remainder of this page describes the historical archive.
+
 The archive contains compact frozen protocols, runners, per-session metadata/observations, results, numerical diagnoses and a content manifest. It excludes WAV files, runtime checkouts and external datasets. Runtime is pinned to3745665352f59bc88e432b1f703054ab29398ce1. Keep this distinction when comparing with later clock/source-admission repairs.
 
 Archive SHA-256: `2da45a689274cd1375e074c2da81edbd8e09d814ac6a803af98e10a03eb4aa1d`; content manifest digest: `5f2a6b95c635c6679e00aff39f20cdef98a252598bd692e82a71ac8aaddd5120`. The original verification record is retained. Read the enclosed reproduction instructions before running scripts: use a fresh ignored work directory and restore the pinned runtime; the evidence is not a runtime dependency.

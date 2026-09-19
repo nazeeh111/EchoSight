@@ -1,0 +1,30 @@
+{
+  "commit": "e372158d9daa47891b0c5f7106b224b0aca75d05",
+  "committed_package_files_matched": 13,
+  "original_manifest_hashes_matched": 7,
+  "portable_manifest_hashes_matched": 9,
+  "original_projected_file_hashes_matched": 12,
+  "exact_projected_rows": 48,
+  "runtime_and_tests_unchanged_from": "38ce3ff",
+  "isolated_replay_exit_code": 0,
+  "isolated_replay": {
+    "scope": "Derived-observation mathematical replay; does not verify or process raw audio.",
+    "comparisons_passed": true,
+    "raw_verified": false,
+    "rows": [
+      {
+        "seed": 2821,
+        "passed": true,
+        "source_max_abs_difference_m": 0.0,
+        "speed_abs_difference_m_s": 0.0
+      },
+      {
+        "seed": 2833,
+        "passed": true,
+        "source_max_abs_difference_m": 0.0,
+        "speed_abs_difference_m_s": 0.0
+      }
+    ]
+  },
+  "original_tree_present": false
+}
