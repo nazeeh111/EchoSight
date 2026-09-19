@@ -12,6 +12,7 @@ import time
 import numpy as np
 from scipy.optimize import least_squares, linear_sum_assignment
 from . import inference as single
+from .receiver_covariance import validate as _receiver_calibration, project as _receiver_projection, marginal as _receiver_marginal, describe as _receiver_description
 from .geometry import plane_from_image, image_source, reflection_point, support_mesh, reflection_path
 
 MAX_SOURCES = 4
@@ -107,7 +108,7 @@ def _supported(links,rows,count):
     return True
 
 
-def _covariance(qs,reference,sources,receivers,v,rows,links,calibration_covariance):
+def _covariance(qs,reference,sources,receivers,v,rows,links,calibration_covariance,receiver_calibration=None):
     """Derivatives in seconds; all nuisance covariance added once before inversion."""
     m=len(links);J=np.zeros((m,3*len(qs)));A=np.zeros((m,len(calibration_covariance)))
     C=np.zeros((m,m));receiver_grad=[];res=[];pred=[]
@@ -123,10 +124,10 @@ def _covariance(qs,reference,sources,receivers,v,rows,links,calibration_covarian
         receiver_grad.append((u0-u)/v);pred.append(mu);res.append(row['t'][l]-mu)
         C[a,a]=max(float(row['peaks'][l].get('delay_std_s',1e-5)),1e-7)**2
     C+=A@calibration_covariance@A.T
+    C+=_receiver_projection([rows[i]['receiver_group'] for _,i,_ in links],receiver_grad,
+                            [rows[i]['o'].get('receiver_position_std_m',.01) for _,i,_ in links],receiver_calibration)
     for a,(_,i,l) in enumerate(links):
         for b,(_,j,ll) in enumerate(links):
-            if rows[i]['receiver_group']==rows[j]['receiver_group']:
-                C[a,b]+=np.dot(receiver_grad[a],receiver_grad[b])*rows[i]['o'].get('receiver_position_std_m',.01)**2
             if i==j:
                 o=rows[i]['o'];clock=o.get('clock',{})
                 C[a,b]+=o.get('direct_std_s',1e-5)**2
@@ -186,7 +187,7 @@ def _exclusive_physical_assignment(cost,groups,allowed,cancel=None,maximum_score
     return score,choices
 
 
-def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,calibration_covariance,parameter_covariance,cancel):
+def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,calibration_covariance,parameter_covariance,cancel,receiver_calibration=None):
     """Bounded physical explanations on fixed evidence, not model probabilities.
 
     The engineering rule was declared in work/multisource-discrimination/RULE.md:
@@ -222,9 +223,10 @@ def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,
         for row,a in enumerate(source_indices):A[row,3*a:3*a+3]=source_gradient[row]
         A[:,-1]=-mu/v
         variance=independent+np.einsum('ij,jk,ik->i',A,calibration_covariance,A)
+        variance+=_receiver_marginal([rows[i].get('receiver_group') for i in indices],receiver_gradient,
+                                    [rows[i]['o'].get('receiver_position_std_m',.01) for i in indices],receiver_calibration)
         for row,i in enumerate(indices):
             o=rows[i]['o'];clock=o.get('clock',{})
-            variance[row]+=np.dot(receiver_gradient[row],receiver_gradient[row])*o.get('receiver_position_std_m',.01)**2
             variance[row]+=mu[row]**2*(clock.get('alpha_std',0)/clock.get('alpha',1))**2
         J=np.zeros((len(links),3*count))
         for parent in path:
@@ -284,6 +286,8 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
         if not 2<=count<=MAX_SOURCES:raise ValueError('requires two to four source sessions')
         if bundle.get('scene_static') is not True or not bundle.get('coordinate_frame_id'):raise ValueError('static common coordinate frame must be declared')
         v,calcov=_calibration(bundle,count)
+        receiver_calibration=_receiver_calibration(bundle,processed_sessions,cancel)
+        out['receiver_pose_uncertainty']=_receiver_description(receiver_calibration)
         allrows=[];sources_list=[];prepared=[];groups={};session_ids=set()
         for a,item in enumerate(processed_sessions):
             session=item['session'];observations=item['observations']
@@ -301,8 +305,8 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
             for row in rows:
                 o=row['o'];capture=captures.get(o['capture_id'],{})
                 group=o.get('receiver_pose_group_id',capture.get('receiver_pose_group_id'))
-                if not group:raise ValueError('receiver_pose_group_id required to represent reused survey covariance')
-                stamp=(row['r'],o.get('receiver_position_std_m',.01))
+                if not isinstance(group,str) or not 1<=len(group)<=160:raise ValueError('receiver_pose_group_id must be a string of 1 to 160 characters')
+                stamp=(row['r'],o.get('receiver_position_std_m',.01) if receiver_calibration is None else None)
                 if group in groups and (not np.allclose(groups[group][0],stamp[0],atol=1e-8,rtol=0) or groups[group][1]!=stamp[1]):raise ValueError('reused receiver pose group has inconsistent survey')
                 groups[group]=stamp;row.update(source_index=a,receiver_group=group,session_id=session['session_id']);allrows.append(row)
         if len(allrows)>MAX_RECORDS:raise ValueError('joint capture resource limit exceeded')
@@ -349,7 +353,7 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
         score,links=_assign(qs,reference,sources,receivers,v,allrows)
         if not _supported(links,allrows,len(qs)):
             out['diagnostics'].append('joint_refit_lost_required_support');return out
-        pcov,rank,chi2=_covariance(qs,reference,sources,receivers,v,allrows,links,calcov)
+        pcov,rank,chi2=_covariance(qs,reference,sources,receivers,v,allrows,links,calcov,receiver_calibration)
         surfaces=[]
         for k,q in enumerate(qs):
             n,d=plane_from_image(reference,q);evidence=[];points=[]
@@ -375,10 +379,10 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
             out['surfaces']=[];out['status']='ambiguous';out['diagnostics'].append('insufficient_source_diversity_for_reflection_order_discrimination')
             out['guidance'].append(dict(action='Acquire source poses spanning three dimensions with recalibrated acoustic center; avoid source poses confined to one line or plane.'))
         if out['surfaces']:
-            _parent_subset_alternatives(out,qs,reference,sources,receivers,v,allrows,links,calcov,pcov,cancel)
+            _parent_subset_alternatives(out,qs,reference,sources,receivers,v,allrows,links,calcov,pcov,cancel,receiver_calibration)
         if out['surfaces']:
             from .path_alternatives import apply_path_alternatives
-            apply_path_alternatives(out,processed_sessions,v,calcov,cancel)
+            apply_path_alternatives(out,processed_sessions,v,calcov,cancel,receiver_calibration=receiver_calibration)
         if progress:progress(1.,'Joint inference complete')
         return out
     except single._Cancelled:
@@ -423,6 +427,7 @@ def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
             session_ids.add(session['session_id']);sessions.append(session)
             total_records+=len(session['captures'])
             if total_records>MAX_RECORDS:raise ValueError('joint capture resource limit exceeded')
+        _receiver_calibration(bundle,[dict(session=session) for session in sessions],cancel)
         for a,session in enumerate(sessions):
             single._check(cancel);observations=[]
             for capture in session['captures']:

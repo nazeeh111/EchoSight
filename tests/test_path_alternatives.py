@@ -127,12 +127,12 @@ class PathAlternativeTests(unittest.TestCase):
     def test_postfit_error_clears_geometry_and_marks_retained_hypotheses(self):
         from unittest.mock import patch
         case=fixture('point_scatterer-1001')
-        def malformed_group(out,processed,*args):
+        def malformed_group(out,processed,*args,**kwargs):
             out['hypotheses'].append(dict(hypothesis_id='partial-check',surfaces=out['surfaces']))
             corrupt=copy.deepcopy(processed)
             for item in corrupt:
                 for observation in item['observations']:observation.pop('receiver_pose_group_id',None)
-            apply_path_alternatives(out,corrupt,*args)
+            apply_path_alternatives(out,corrupt,*args,**kwargs)
         with patch('echosight.path_alternatives.apply_path_alternatives',side_effect=malformed_group):
             out=infer_scene_bundle(case['processed_sessions'],case['bundle'])
         self.assertEqual(out['status'],'calibration_needed');self.assertEqual(out['surfaces'],[])

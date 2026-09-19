@@ -10,13 +10,14 @@ from scipy.optimize import least_squares
 from scipy.spatial.transform import Rotation
 from .geometry import reflection_path
 from .inference import _check
+from .receiver_covariance import project as _receiver_projection
 
 MAX_STARTS = 32
 MAX_RECORDS = 64
 MAX_SURFACES = 10
 MAX_PARENT_ANGLES = 180
 
-def _evidence(surface,processed,speed,calcov):
+def _evidence(surface,processed,speed,calcov,receiver_calibration=None):
     session_index={p['session']['session_id']:i for i,p in enumerate(processed)}
     lookup={(p['session']['session_id'],o['capture_id']):(p['session'],o) for p in processed for o in p['observations']}
     rows=[];keys=[]
@@ -41,10 +42,8 @@ def _evidence(surface,processed,speed,calcov):
         observation=row['observation'];clock=observation.get('clock',{})
         C[i,i]=max(float(row['peak'].get('delay_std_s',1e-5)),1e-7)**2+observation.get('direct_std_s',1e-5)**2+mu[i]**2*(clock.get('alpha_std',0)/clock.get('alpha',1))**2
     C+=A@calcov@A.T
-    for i,left in enumerate(rows):
-        for j,right in enumerate(rows):
-            if left['group']==right['group']:
-                C[i,j]+=receiver_gradient[i]@receiver_gradient[j]*left['observation'].get('receiver_position_std_m',.01)**2
+    C+=_receiver_projection([row['group'] for row in rows],receiver_gradient,
+                            [row['observation'].get('receiver_position_std_m',.01) for row in rows],receiver_calibration)
     return rows,s,r,y,speed,C,mu,q
 
 
@@ -178,7 +177,7 @@ def _admissible(score,plane_Q):
     return score['Q']<=plane_Q+1e-8*(1+plane_Q) and score['rms_s']<=100e-6 and score['max_error_s']<=200e-6 and score['max_marginal_standardized_residual']<=3
 
 
-def _point_nuisance_covariance(p,rows,s,r,v,calibration_covariance):
+def _point_nuisance_covariance(p,rows,s,r,v,calibration_covariance,receiver_calibration=None):
     """Actual compact-path nuisance propagation, separately from score weights."""
     mu=prediction(p,s,r,v);_,source_gradient,receiver_gradient=derivatives(p,s,r,v)
     A=np.zeros((len(rows),len(calibration_covariance)));C=np.zeros((len(rows),len(rows)))
@@ -189,10 +188,8 @@ def _point_nuisance_covariance(p,rows,s,r,v,calibration_covariance):
         C[i,i]+=mu[i]**2*(clock.get('alpha_std',0)/clock.get('alpha',1))**2
     # Keep the full matrix, including source/source and source/speed cross terms.
     C+=A@calibration_covariance@A.T
-    for i,left in enumerate(rows):
-        for j,right in enumerate(rows):
-            if left['group']==right['group']:
-                C[i,j]+=receiver_gradient[i]@receiver_gradient[j]*left['observation'].get('receiver_position_std_m',.01)**2
+    C+=_receiver_projection([row['group'] for row in rows],receiver_gradient,
+                            [row['observation'].get('receiver_position_std_m',.01) for row in rows],receiver_calibration)
     return C
 
 
@@ -208,7 +205,7 @@ def _fixed_weight_covariance(J,fixed_covariance,actual_covariance):
     return (covariance+covariance.T)/2
 
 
-def _point_modes(point,s,r,y,v,C,plane_Q,rows,calibration_covariance):
+def _point_modes(point,s,r,y,v,C,plane_Q,rows,calibration_covariance,receiver_calibration=None):
     modes=[];L=np.linalg.cholesky(C)
     for candidate in point['minima']:
         if not candidate['converged']:continue
@@ -216,13 +213,13 @@ def _point_modes(point,s,r,y,v,C,plane_Q,rows,calibration_covariance):
         score=dict(Q=float(z@z),rms_s=float(np.sqrt(np.mean(error**2))),max_error_s=float(np.max(abs(error))),max_marginal_standardized_residual=float(np.max(abs(error)/np.sqrt(np.diag(C)))))
         if not _admissible(score,plane_Q):continue
         raw_J=derivatives(p,s,r,v)[0];J=solve_triangular(L,raw_J,lower=True);singular=np.linalg.svd(J,compute_uv=False);rank=int(np.count_nonzero(singular>singular[0]*1e-8))
-        actual_C=_point_nuisance_covariance(p,rows,s,r,v,calibration_covariance)
+        actual_C=_point_nuisance_covariance(p,rows,s,r,v,calibration_covariance,receiver_calibration)
         cov=_fixed_weight_covariance(raw_J,C,actual_C)
         modes.append(dict(position_m=p.tolist(),local_rank=rank,conditional_covariance_m2=cov.tolist() if rank==3 and not candidate['search_boundary_limited'] else None,search_boundary_limited=candidate['search_boundary_limited'],covariance_semantics='Mode-specific local sandwich propagation of actual compact-path source/speed/receiver/timing covariance through the executed fixed-weight estimator; conditional on selected paths and the compact scattering model.',score=score))
     return modes
 
 
-def apply_path_alternatives(out,processed,speed,calibration_covariance,cancel=None):
+def apply_path_alternatives(out,processed,speed,calibration_covariance,cancel=None,*,receiver_calibration=None):
     """Post-fit interpretation only. Existing ambiguity and hypotheses survive."""
     _check(cancel)
     surfaces=list(out['surfaces'])
@@ -232,11 +229,11 @@ def apply_path_alternatives(out,processed,speed,calibration_covariance,cancel=No
     for surface in surfaces:
         _check(cancel)
         if not 1<=len(surface['support'])<=MAX_RECORDS:raise ValueError('path alternative record budget exceeded')
-        rows,s,r,y,v,C,mu,images=_evidence(surface,processed,speed,calibration_covariance)
+        rows,s,r,y,v,C,mu,images=_evidence(surface,processed,speed,calibration_covariance,receiver_calibration)
         counts=[len({tuple(row['receiver']) for row in rows if row['source_index']==k}) for k in range(len(processed))]
         if min(counts)<4:continue
         plane=fit_plane(surface,s,r,y,v,C,cancel);plane_Q=plane['comparison_Q'];point=fit_point(s,r,y,v,C,cancel)
-        modes=_point_modes(point,s,r,y,v,C,plane_Q,rows,calibration_covariance);keys=[list(row['key']) for row in rows]
+        modes=_point_modes(point,s,r,y,v,C,plane_Q,rows,calibration_covariance,receiver_calibration);keys=[list(row['key']) for row in rows]
         identity=hashlib.sha256(surface['surface_id'].encode()).hexdigest()[:16];alternatives=[]
         if modes:
             alternatives.append(dict(hypothesis_id='compact-location-'+identity,kind='compact_scattering_location',surfaces=[],challenged_surface_id=surface['surface_id'],selected_candidate_keys=keys,location_status='unique_conditional_mode' if len(modes)==1 and modes[0]['local_rank']==3 and not modes[0]['search_boundary_limited'] else 'ambiguous',location_modes=modes,reason='The same selected delays fit a compact scattering-location model at least as well as a refitted plane. Material phase, size, directivity and object identity are not established.'))

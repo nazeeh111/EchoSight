@@ -1,0 +1,15 @@
+{
+  "base_commit": "3beffb5a6bfaeec19c60faa9bc95523a9984734d",
+  "files": {
+    "echosight/receiver_covariance.py": "31bb616f55b6951874a1a72d28655c1c6ab4ae15706d3d9f786a1006fa9ef97b",
+    "echosight/multisource.py": "581799b2971877719b0c07530cdc8111b1ca9f07073d363871d66ae05d8e43cd",
+    "echosight/path_alternatives.py": "7391ac4713905166e5d1ac5601d77b1e3de41eb851fc8adcae2ec3530b278b50",
+    "tests/test_receiver_covariance.py": "ef70e288e65ae60586a713b5623463ca56b2161a8595bd918db059cb48d6f093",
+    "tests/test_path_alternatives.py": "afe464cd0675d3b216eed859531df31594ec40dbe1228fa803ba8080a2c21456",
+    "docs/RECEIVER_COVARIANCE.md": "ee632fc29bc323e1df9990c2966b3d6ad9ea8748e3a33bc9e8b7a6c2f3d524ee",
+    "work/multisource-candidate-design.md": "3322b796f9c8aad6ca1c2f0db8908809971ac2ef81dbe3739c53f223eaeee61a"
+  },
+  "command": ".venv/bin/python -m unittest tests.test_receiver_covariance tests.test_multisource tests.test_path_alternatives -q",
+  "log": "work/receiver-covariance-tests-final.txt",
+  "claims": "Software-only conditional covariance propagation; no new measured fit or prior widening."
+}
