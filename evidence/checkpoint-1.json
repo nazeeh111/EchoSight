@@ -1,0 +1,66 @@
+{
+  "checkpoint": "first integrated backend",
+  "evidence_class": "synthetic recordings",
+  "status": "partial",
+  "runtime_s": 0.8307872920013324,
+  "geometry": {
+    "predicted_count": 4,
+    "truth_count": 6,
+    "matched_count": 4,
+    "false_surfaces": 0,
+    "missed_surfaces": 2,
+    "horizontal_matched": 1,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "matches": [
+      {
+        "predicted_id": "reflector-cc3d1ed2da4a",
+        "truth_id": "truth-0-1",
+        "normal_error_deg": 0.18425613234302687,
+        "offset_error_m": 0.007521582755308565,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-c1db18b12293",
+        "truth_id": "truth-2-1",
+        "normal_error_deg": 0.27996661991868393,
+        "offset_error_m": 0.016306126043792446,
+        "horizontal": true,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-d79c46db028a",
+        "truth_id": "truth-1-1",
+        "normal_error_deg": 0.08745441393403212,
+        "offset_error_m": 0.0007085591694178106,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-521939c92323",
+        "truth_id": "truth-1-0",
+        "normal_error_deg": 0.14597201896815323,
+        "offset_error_m": 0.0021311368744243845,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      }
+    ]
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 42,
+    "failed": 0,
+    "includes": "real localhost HTTP, physics, recording import, cancellation and export/reload"
+  },
+  "limits": [
+    "Frozen held-out evaluation pending",
+    "Own-device physical validation absent",
+    "Conservative seven-view confirmation misses some true surfaces; investigating added independent views",
+    "Global search is bounded and not exhaustive"
+  ]
+}

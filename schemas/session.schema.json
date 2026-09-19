@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/session-1.0.json",
+  "title": "EchoSight session v1",
+  "type": "object",
+  "properties": {
+    "schema_version": {"const": "1.0", "default": "1.0"},
+    "session_id": {"$ref": "#/$defs/id"},
+    "source_position_m": {"$ref": "#/$defs/position"},
+    "source_position_std_m": {"type": "number", "minimum": 0, "maximum": 10, "default": 0.01},
+    "sound_speed_m_s": {"type": "number", "minimum": 250, "maximum": 450, "default": 343},
+    "sound_speed_std_m_s": {"type": "number", "minimum": 0, "maximum": 30, "default": 0.6},
+    "source_clock_scale": {"type": "number", "minimum": 0.98, "maximum": 1.02, "default": 1},
+    "source_clock_std_ppm": {"type": "number", "minimum": 0, "maximum": 20000, "default": 100},
+    "probe": {"type": "object", "description": "Generated probe metadata; signal module validates acquisition-specific fields."},
+    "captures": {"type": "array", "maxItems": 32, "items": {"$ref": "#/$defs/capture"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+    "position": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "minimum": -1000, "maximum": 1000}, "description": "Right handed coordinates in metres, z up; acoustic center."},
+    "capture": {
+      "type": "object", "required": ["capture_id"],
+      "properties": {
+        "capture_id": {"$ref": "#/$defs/id"},
+        "receiver_position_m": {"$ref": "#/$defs/position"},
+        "receiver_position_std_m": {"type": "number", "minimum": 0, "maximum": 10, "default": 0.01},
+        "recording_path": {"type": "string", "description": "Store-managed; forbidden in session creation/upload metadata."},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "sample_rate_hz": {"type": "number", "minimum": 8000, "maximum": 192000},
+        "provenance": {"enum": ["measured", "simulated", "replayed", "supplied"], "default": "measured"}
+      }
+    }
+  }
+}

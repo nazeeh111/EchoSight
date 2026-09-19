@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/job-1.0.json",
+  "title": "EchoSight processing job v1",
+  "type": "object",
+  "required": ["schema_version", "job_id", "session_id", "session_revision", "status", "progress"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "job_id": {"type": "string"},
+    "session_id": {"type": "string"},
+    "session_revision": {"type": "integer", "minimum": 0},
+    "status": {"enum": ["queued", "running", "completed", "failed", "cancelled", "interrupted"]},
+    "progress": {"type": "number", "minimum": 0, "maximum": 1},
+    "message": {"type": "string"},
+    "cancellation_requested": {"type": "boolean"},
+    "error": {"type": "object", "required": ["code", "message"], "properties": {"code": {"type": "string"}, "message": {"type": "string"}}}
+  }
+}

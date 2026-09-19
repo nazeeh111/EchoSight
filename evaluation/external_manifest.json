@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "license": "MIT, Copyright (c) 2019 Diego Di Carlo, embedded in each SOFA file",
+  "files": [
+    {
+      "filename": "dEchorate_room000000_src1_arr1_mics1-5.sofa",
+      "bytes": 1758263,
+      "sha256": "26a76bbafb80af0dc29a6838ae9d8fdc4846249c8a4e60a2ef87d13b87496b07",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000000_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18"
+    },
+    {
+      "filename": "dEchorate_room000000_src5_arr1_mics1-5.sofa",
+      "bytes": 1760690,
+      "sha256": "5feaf10343abfd6d251f7133560688a7def7f6c989e95a56f1244c8aecd6277c",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000000_src5_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18"
+    },
+    {
+      "filename": "dEchorate_room000001_src1_arr1_mics1-5.sofa",
+      "bytes": 1761123,
+      "sha256": "53b0807a35cce74ea589e4dd1fe55310c9b13ecd9317ecc78d176119385a3c0d",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000001_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18"
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr1_mics1-5.sofa",
+      "bytes": 1767577,
+      "sha256": "ec8a4f2305b4b170e7ec9b5dab4f51695d861b462125e3119e2a33fd20813fa1",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18"
+    },
+    {
+      "filename": "dEchorate_room011111_src5_arr1_mics1-5.sofa",
+      "bytes": 1767752,
+      "sha256": "d3657b7d88a9af4905a9263f047ac566eacfa7c9fabc151b590e8c682e51422f",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src5_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18"
+    }
+  ]
+}

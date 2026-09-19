@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "frozen_before_execution": "2026-09-18",
+  "development_seeds": [1, 2, 3, 4, 5],
+  "held_out_cases": [
+    {"scenario": "room", "seed": 101, "required": true},
+    {"scenario": "room", "seed": 107, "required": true},
+    {"scenario": "room", "seed": 113, "required": true},
+    {"scenario": "partial", "seed": 127, "required": true},
+    {"scenario": "coplanar", "seed": 131, "required": true},
+    {"scenario": "null", "seed": 137, "required": true},
+    {"scenario": "clutter", "seed": 139, "required": true},
+    {"scenario": "mismatch", "seed": 149, "required": true},
+    {"scenario": "reflector", "seed": 151, "required": false},
+    {"scenario": "warp", "seed": 157, "required": true}
+  ],
+  "matching": {"maximum_normal_error_deg": 5.0, "maximum_offset_error_m": 0.15, "one_to_one": true},
+  "requirements": {
+    "room": {"minimum_matched_surfaces": 4, "minimum_horizontal_surfaces": 1, "maximum_false_surfaces": 0, "maximum_runtime_seconds": 60},
+    "partial": {"minimum_matched_surfaces": 2, "maximum_false_surfaces": 0, "forbid_closed_room_claim": true},
+    "coplanar": {"allowed_status": ["ambiguous", "no_result"], "maximum_definitive_surfaces": 0},
+    "null": {"allowed_status": ["no_result"], "maximum_false_surfaces": 0},
+    "clutter": {"allowed_status": ["no_result", "ambiguous"], "maximum_false_surfaces": 0},
+    "mismatch": {"minimum_matched_surfaces": 3, "minimum_horizontal_surfaces": 1, "maximum_false_surfaces": 0},
+    "warp": {"allowed_status": ["no_result", "partial", "ambiguous"], "maximum_definitive_surfaces": 0, "require_diagnostics": true},
+    "reflector": {"minimum_matched_surfaces": 4, "maximum_false_surfaces": 0}
+  },
+  "comparison": {"report_all_cases_and_methods": true, "require_mapper_recall_above_baseline_on_room_aggregate": true, "serious_competitor": "direct_plane_grid_initializer_with_shared_physical_scorer"},
+  "external": {"data": "dEchorate SOFA five files, five channels each", "expectation": "finite diagnostics, preserved provenance, abstain from unique 3D surfaces on collinear array", "not_a_geometry_accuracy_benchmark": true},
+  "interpretation": "Synthetic criteria establish software performance only under declared generator assumptions. Uncertainty interval coverage is reported, not presumed calibrated; model mismatch and external measured failures remain visible. Held-out cases are never used to select thresholds."
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phyphox version="1.17">
+  <title>ASTRA short audio capture</title>
+  <category>ASTRA research</category>
+  <icon format="string">RIR</icon>
+  <description>Short audio samples for offline acoustic qualification.
+    Research fixture, not yet verified on an iPhone.
+    Keep the phone still and the screen active. Verify timed run is enabled:
+    3 seconds start delay, then 20 seconds recording. Stop manually if needed.
+    Export CSV before clearing or starting another shot. The source is played
+    separately by the MacBook. This experiment never plays sound.
+  </description>
+  <data-containers>
+    <container size="0">audio_samples</container>
+    <container size="0">actual_rate_hz</container>
+  </data-containers>
+  <input>
+    <audio rate="48000" append="true">
+      <output component="out">audio_samples</output>
+      <output component="rate">actual_rate_hz</output>
+    </audio>
+  </input>
+  <analysis sleep="0.1" timedRun="true" timedRunStartDelay="3" timedRunStopDelay="20" />
+  <views>
+    <view label="Capture">
+      <info label="Keep still. Record one short shot, then export CSV." />
+      <info label="Timed-run preset: 3-second delay, 20-second recording. Confirm it is enabled before starting." />
+      <value label="Reported recording rate" unit="Hz" precision="0">
+        <input>actual_rate_hz</input>
+      </value>
+      <info label="No sound is played by this fixture. Audio processing and continuity still need device qualification." />
+    </view>
+  </views>
+  <export>
+    <set name="Audio samples">
+      <data name="sample_value">audio_samples</data>
+    </set>
+    <set name="Recording rate">
+      <data name="reported_rate_Hz">actual_rate_hz</data>
+    </set>
+  </export>
+</phyphox>
