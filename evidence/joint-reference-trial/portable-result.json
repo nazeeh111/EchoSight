@@ -1,0 +1,19 @@
+{
+  "scope": "Derived-observation mathematical replay; does not verify or process raw audio.",
+  "comparisons_passed": true,
+  "raw_verified": false,
+  "rows": [
+    {
+      "seed": 2821,
+      "passed": true,
+      "source_max_abs_difference_m": 0.0,
+      "speed_abs_difference_m_s": 0.0
+    },
+    {
+      "seed": 2833,
+      "passed": true,
+      "source_max_abs_difference_m": 0.0,
+      "speed_abs_difference_m_s": 0.0
+    }
+  ]
+}

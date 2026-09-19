@@ -1,0 +1,1916 @@
+[
+  {
+    "pattern": "single",
+    "seed": 2821,
+    "admitted": true,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001624159002844722,
+          0.004057268070269982
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012459039172935638,
+          0.0035781449619051806
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001611027056184862,
+          0.0040406342711674925
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012450025286823655,
+          0.003577003202997663
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006827596657858741,
+          0.010648289099954404
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0065086003994243215,
+          0.01024422717260414
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006822661372214761,
+          0.010642037738138696
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514502191288177,
+          0.01025170277563169
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024245049039020015,
+          0.005071039544942536
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.002455131336014928,
+          0.005109833025618909
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877161770631104,
+          0.01071107157613273
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006524132025946139,
+          0.01026390056619844
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0039469268817816155,
+          0.00699944071692338
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.00341697374254402,
+          0.00632816674055576
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0046602249194789645,
+          0.007902951564673355
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004090396420669949,
+          0.00718116879951527
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0026080373218485362,
+          0.005303513941008146
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024005740444562437,
+          0.005040727122977909
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0032049784266582155,
+          0.00605963934043374
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0029967159482968,
+          0.0057958402011759474
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004389965586229509,
+          0.007560623075890713
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004456735254591702,
+          0.00764519798914949
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.002919271274732678,
+          0.005697743614661393
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0032423276910585577,
+          0.0061069484086741736
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      }
+    ]
+  },
+  {
+    "pattern": "single",
+    "seed": 2833,
+    "admitted": true,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0015999944083509962,
+          0.004026659583911262
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012558581250496003,
+          0.0035907536250628274
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0016415532001440064,
+          0.004079300720182409
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012547268724407527,
+          0.00358932070509162
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0068241376766916,
+          0.010643907723809359
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006509607027050586,
+          0.010245502234264075
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006828339610979385,
+          0.010649230173907221
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514115200777554,
+          0.010251212587651569
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024375590316824147,
+          0.0050875747734643924
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024370483825834617,
+          0.005086927951272385
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877371384235864,
+          0.010711337086698759
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006523554921987952,
+          0.010263169567851404
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.003954849454368982,
+          0.007009475975534044
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0034172748143698767,
+          0.006328548098201844
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004673931374589975,
+          0.007920313074480635
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004097943516604695,
+          0.007190728454365948
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0026034133969744444,
+          0.005297656969500963
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.00241206639461979,
+          0.005055284099851734
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0032201078925312787,
+          0.00607880333053962
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0030027858519534817,
+          0.005803528745807743
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004388110922556726,
+          0.00755827383523852
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004447364556223373,
+          0.007633328437882939
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.002921283263926093,
+          0.005700292134306385
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0032406450458416437,
+          0.0061048170580660826
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      }
+    ]
+  },
+  {
+    "pattern": "dual_same_phase",
+    "seed": 2821,
+    "admitted": false,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001624159002844722,
+          0.004057268070269982
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012459039172935638,
+          0.0035781449619051806
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001611027056184862,
+          0.0040406342711674925
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012450025286823655,
+          0.003577003202997663
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "rejected",
+        "eligible_candidates": 0,
+        "window_s": [
+          0.006827596657858741,
+          0.010648289099954404
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0065086003994243215,
+          0.01024422717260414
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006822661372214761,
+          0.010642037738138696
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514502191288177,
+          0.01025170277563169
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024245049039020015,
+          0.005071039544942536
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.002455131336014928,
+          0.005109833025618909
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877161770631104,
+          0.01071107157613273
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006524132025946139,
+          0.01026390056619844
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0039469268817816155,
+          0.00699944071692338
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.00341697374254402,
+          0.00632816674055576
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0046602249194789645,
+          0.007902951564673355
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004090396420669949,
+          0.00718116879951527
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "rejected",
+        "eligible_candidates": 0,
+        "window_s": [
+          0.0026080373218485362,
+          0.005303513941008146
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0024005740444562437,
+          0.005040727122977909
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032049784266582155,
+          0.00605963934043374
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0029967159482968,
+          0.0057958402011759474
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004389965586229509,
+          0.007560623075890713
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004456735254591702,
+          0.00764519798914949
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.002919271274732678,
+          0.005697743614661393
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032423276910585577,
+          0.0061069484086741736
+        ],
+        "accepted": false,
+        "candidate_id": null
+      }
+    ]
+  },
+  {
+    "pattern": "dual_same_phase",
+    "seed": 2833,
+    "admitted": false,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0015999944083509962,
+          0.004026659583911262
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012558581250496003,
+          0.0035907536250628274
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0016415532001440064,
+          0.004079300720182409
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012547268724407527,
+          0.00358932070509162
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "rejected",
+        "eligible_candidates": 0,
+        "window_s": [
+          0.0068241376766916,
+          0.010643907723809359
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006509607027050586,
+          0.010245502234264075
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006828339610979385,
+          0.010649230173907221
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514115200777554,
+          0.010251212587651569
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024375590316824147,
+          0.0050875747734643924
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024370483825834617,
+          0.005086927951272385
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877371384235864,
+          0.010711337086698759
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006523554921987952,
+          0.010263169567851404
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.003954849454368982,
+          0.007009475975534044
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0034172748143698767,
+          0.006328548098201844
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004673931374589975,
+          0.007920313074480635
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004097943516604695,
+          0.007190728454365948
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "rejected",
+        "eligible_candidates": 0,
+        "window_s": [
+          0.0026034133969744444,
+          0.005297656969500963
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.00241206639461979,
+          0.005055284099851734
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032201078925312787,
+          0.00607880333053962
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0030027858519534817,
+          0.005803528745807743
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004388110922556726,
+          0.00755827383523852
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.004447364556223373,
+          0.007633328437882939
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.002921283263926093,
+          0.005700292134306385
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032406450458416437,
+          0.0061048170580660826
+        ],
+        "accepted": false,
+        "candidate_id": null
+      }
+    ]
+  },
+  {
+    "pattern": "dual_opposite_phase",
+    "seed": 2821,
+    "admitted": false,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001624159002844722,
+          0.004057268070269982
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012459039172935638,
+          0.0035781449619051806
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.001611027056184862,
+          0.0040406342711674925
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012450025286823655,
+          0.003577003202997663
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006827596657858741,
+          0.010648289099954404
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0065086003994243215,
+          0.01024422717260414
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006822661372214761,
+          0.010642037738138696
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514502191288177,
+          0.01025170277563169
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024245049039020015,
+          0.005071039544942536
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.002455131336014928,
+          0.005109833025618909
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877161770631104,
+          0.01071107157613273
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006524132025946139,
+          0.01026390056619844
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0039469268817816155,
+          0.00699944071692338
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.00341697374254402,
+          0.00632816674055576
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0046602249194789645,
+          0.007902951564673355
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004090396420669949,
+          0.00718116879951527
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0026080373218485362,
+          0.005303513941008146
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0024005740444562437,
+          0.005040727122977909
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032049784266582155,
+          0.00605963934043374
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0029967159482968,
+          0.0057958402011759474
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004389965586229509,
+          0.007560623075890713
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004456735254591702,
+          0.00764519798914949
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.002919271274732678,
+          0.005697743614661393
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032423276910585577,
+          0.0061069484086741736
+        ],
+        "accepted": false,
+        "candidate_id": null
+      }
+    ]
+  },
+  {
+    "pattern": "dual_opposite_phase",
+    "seed": 2833,
+    "admitted": false,
+    "records": [
+      {
+        "reference": "x",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0015999944083509962,
+          0.004026659583911262
+        ],
+        "accepted": true,
+        "candidate_id": "capture-00:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012558581250496003,
+          0.0035907536250628274
+        ],
+        "accepted": true,
+        "candidate_id": "capture-01:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0016415532001440064,
+          0.004079300720182409
+        ],
+        "accepted": true,
+        "candidate_id": "capture-02:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0012547268724407527,
+          0.00358932070509162
+        ],
+        "accepted": true,
+        "candidate_id": "capture-03:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0068241376766916,
+          0.010643907723809359
+        ],
+        "accepted": true,
+        "candidate_id": "capture-04:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006509607027050586,
+          0.010245502234264075
+        ],
+        "accepted": true,
+        "candidate_id": "capture-05:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006828339610979385,
+          0.010649230173907221
+        ],
+        "accepted": true,
+        "candidate_id": "capture-06:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006514115200777554,
+          0.010251212587651569
+        ],
+        "accepted": true,
+        "candidate_id": "capture-07:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024375590316824147,
+          0.0050875747734643924
+        ],
+        "accepted": true,
+        "candidate_id": "capture-08:echo:01"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.0024370483825834617,
+          0.005086927951272385
+        ],
+        "accepted": true,
+        "candidate_id": "capture-09:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006877371384235864,
+          0.010711337086698759
+        ],
+        "accepted": true,
+        "candidate_id": "capture-10:echo:00"
+      },
+      {
+        "reference": "x",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 1,
+        "window_s": [
+          0.006523554921987952,
+          0.010263169567851404
+        ],
+        "accepted": true,
+        "candidate_id": "capture-11:echo:00"
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-00",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.003954849454368982,
+          0.007009475975534044
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-01",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0034172748143698767,
+          0.006328548098201844
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-02",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004673931374589975,
+          0.007920313074480635
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-03",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004097943516604695,
+          0.007190728454365948
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-04",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0026034133969744444,
+          0.005297656969500963
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-05",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.00241206639461979,
+          0.005055284099851734
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-06",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032201078925312787,
+          0.00607880333053962
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-07",
+        "partition": "training",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0030027858519534817,
+          0.005803528745807743
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-08",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004388110922556726,
+          0.00755827383523852
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-09",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.004447364556223373,
+          0.007633328437882939
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-10",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.002921283263926093,
+          0.005700292134306385
+        ],
+        "accepted": false,
+        "candidate_id": null
+      },
+      {
+        "reference": "y",
+        "capture_id": "capture-11",
+        "partition": "validation",
+        "observation_status": "ok",
+        "eligible_candidates": 2,
+        "window_s": [
+          0.0032406450458416437,
+          0.0061048170580660826
+        ],
+        "accepted": false,
+        "candidate_id": null
+      }
+    ]
+  }
+]

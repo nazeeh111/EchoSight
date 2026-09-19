@@ -1,0 +1,1543 @@
+{
+  "scope": "Exact necessary supplied geometry and selected recording-derived observation fields. No raw bytes, signed responses or generating truth.",
+  "original_input_sha256": {
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-x/session.json": "440868da7be438265a8bd987cd70dfd346daf744e05f4eccfe1d4b7ac2f17d8b",
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-x/reference.json": "14dda3733028c18f01507e2c965262502aef86105522530bfddef5c58ca2a85f",
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-x/observations.json": "341ffad5c2d54a52e4e2eea08c3cec9cf331b38ef8a4fc766db72004d06e3832",
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-y/session.json": "de1cf91991857fd1f3a2a19e11949c8c5de224a4496e0608d4144070e99bf7fc",
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-y/reference.json": "cd11e6e6ee81d4e8a5456df35289b9937c52dc1537e8278ef3ea3ba167fe46ae",
+    "work/source-calibration-mismatch/run-v2/raw/single-2821-y/observations.json": "6ee1d1931f85e2e857240b30153ebe05c768560f6109601cbd3012f0a2ff4e9b",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-x/session.json": "b48e44b0d9fba3276a7b7956a0de2915247fd9b704ec2b77e617afbfec193fbe",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-x/reference.json": "14dda3733028c18f01507e2c965262502aef86105522530bfddef5c58ca2a85f",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-x/observations.json": "97695a4acf044cd2dcc10021e2d5ded11de27066eb50b264b433036f52b71d84",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-y/session.json": "821a847bd1d24b920ec6c3921aaa8521f5d0c4dce00e0abed8d5f9d599382b0c",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-y/reference.json": "cd11e6e6ee81d4e8a5456df35289b9937c52dc1537e8278ef3ea3ba167fe46ae",
+    "work/source-calibration-mismatch/run-v2/raw/single-2833-y/observations.json": "95127d3dd9a419ea0c73141442d6366916bd66d7f808d84ca68c9de1ad6d6a1f"
+  },
+  "pairs": [
+    {
+      "pattern": "single",
+      "seed": 2821,
+      "sessions": [
+        {
+          "source_position_m": [
+            1.5,
+            1.5,
+            1.3
+          ],
+          "sound_speed_m_s": 343.0,
+          "source_clock_scale": 1.0
+        },
+        {
+          "source_position_m": [
+            1.5,
+            1.5,
+            1.3
+          ],
+          "sound_speed_m_s": 343.0,
+          "source_clock_scale": 1.0
+        }
+      ],
+      "references": [
+        {
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset_m": 0.0,
+          "offset_std_m": 0.003,
+          "normal_std_rad": 0.0005,
+          "source_search_radius_m": 0.15,
+          "effective_speed_bounds_m_s": [
+            300.0,
+            380.0
+          ],
+          "training_capture_ids": [
+            "capture-00",
+            "capture-01",
+            "capture-02",
+            "capture-03",
+            "capture-04",
+            "capture-05",
+            "capture-06",
+            "capture-07"
+          ],
+          "validation_capture_ids": [
+            "capture-08",
+            "capture-09",
+            "capture-10",
+            "capture-11"
+          ]
+        },
+        {
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "offset_m": 0.0,
+          "offset_std_m": 0.003,
+          "normal_std_rad": 0.0005,
+          "source_search_radius_m": 0.15,
+          "effective_speed_bounds_m_s": [
+            300.0,
+            380.0
+          ],
+          "training_capture_ids": [
+            "capture-00",
+            "capture-01",
+            "capture-02",
+            "capture-03",
+            "capture-04",
+            "capture-05",
+            "capture-06",
+            "capture-07"
+          ],
+          "validation_capture_ids": [
+            "capture-08",
+            "capture-09",
+            "capture-10",
+            "capture-11"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          {
+            "capture_id": "capture-00",
+            "receiver_position_m": [
+              0.5530321550314339,
+              1.3500154440258283,
+              0.34914828878650894
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-0"
+          },
+          {
+            "capture_id": "capture-00",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "d1f1c8df0277cb77ea68b8f1851d2a9eace1114d65ac5ad591a58a176a4eb21b",
+            "waveform_sha256": "9135475a00de27e4c22507137e0250358588dadc54570d8a049bb8ba2bbb502c",
+            "clock": {
+              "alpha": 0.9999096215427256,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-00:echo:00",
+            "delay_s": 0.00265488409088593,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-01",
+            "receiver_position_m": [
+              0.5485987863954509,
+              1.3535595472742,
+              2.7508719545939018
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-1"
+          },
+          {
+            "capture_id": "capture-01",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "e1d09c0c4ad1a7ae5c1eaf99b7c6a917db772e657bc706dc5586c770f94b6db4",
+            "waveform_sha256": "77e1a22cba8374265fa84a4a020ad342979c7a162d7078fbe730f2bc5be8cc9d",
+            "clock": {
+              "alpha": 0.999752889155679,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-01:echo:00",
+            "delay_s": 0.002281225762208592,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-02",
+            "receiver_position_m": [
+              0.550472841764878,
+              1.649623046715804,
+              0.34599747304565837
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-2"
+          },
+          {
+            "capture_id": "capture-02",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "127bf773e2f050f8eac99d367057865874dae972beadcb345aca25631591f40a",
+            "waveform_sha256": "693ed7ef9734dca04638fd6e808a98665145786d63c647ca1a2ca7e79ead3d4b",
+            "clock": {
+              "alpha": 1.0000687999159197,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-02:echo:00",
+            "delay_s": 0.002648950498425108,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-03",
+            "receiver_position_m": [
+              0.5474752482244544,
+              1.6473368658781762,
+              2.7461446940838825
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-3"
+          },
+          {
+            "capture_id": "capture-03",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "4f771a29d3bbb74887d153252facd650856f9a09e25004a3c7b98c80bc1ea64d",
+            "waveform_sha256": "1fb9c51920aa233304e89480e6c944f7b671c53d9e596dae1f3e73b3f437a4d7",
+            "clock": {
+              "alpha": 0.9999431450834796,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-03:echo:00",
+            "delay_s": 0.0022769724594777553,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-04",
+            "receiver_position_m": [
+              3.8076341761961983,
+              1.3533339080044442,
+              0.35170136250642076
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-4"
+          },
+          {
+            "capture_id": "capture-04",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "a13238ebfac534efa93bc53e09bb4a83f31bbe774c2724e3bbe8e216996fd483",
+            "waveform_sha256": "b985eaf8f5d72ffc167d75f4c731137308e411a3b6cc5fed3dcd2c58c23fa9c5",
+            "clock": {
+              "alpha": 0.9999018895439965,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-04:echo:00",
+            "delay_s": 0.008579362523635805,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-05",
+            "receiver_position_m": [
+              3.8011454208774316,
+              1.3461228211345777,
+              2.7519623314146213
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-5"
+          },
+          {
+            "capture_id": "capture-05",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "ca226683f313edce7b2b97d2285ad648ed7de270bd13bfbb562d1b3a4675d125",
+            "waveform_sha256": "d21632ffd6c8c515493a18317792c71c7f815ed0fc9cd0b464472ef8e40cd7f4",
+            "clock": {
+              "alpha": 1.000232055980592,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-05:echo:00",
+            "delay_s": 0.008234495403983405,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-06",
+            "receiver_position_m": [
+              3.805269570370685,
+              1.6490280806103488,
+              0.3436011369309834
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-6"
+          },
+          {
+            "capture_id": "capture-06",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "5642af9364a040d662fe475b6f3ea61670c314b9c5909d657ba4943a4af4bd3a",
+            "waveform_sha256": "3e0c564b2e382af4a8805d3ef19913282154de7d407f94c71d7971c7703a3871",
+            "clock": {
+              "alpha": 0.9999963703605299,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-06:echo:00",
+            "delay_s": 0.008575319452649015,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-07",
+            "receiver_position_m": [
+              3.7988716033630516,
+              1.6486913852190481,
+              2.743140104555697
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-7"
+          },
+          {
+            "capture_id": "capture-07",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "99411e15a507b81152d7728ba9c9b83cdee6bbc4041208b4f49453807a4eaece",
+            "waveform_sha256": "c134118e2bd5773366fc5457cf29f3ebd64faf676fa9ef434bc21bc63a929cab",
+            "clock": {
+              "alpha": 1.0001823629143223,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-07:echo:00",
+            "delay_s": 0.00823165526778342,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-08",
+            "receiver_position_m": [
+              0.6984130710679715,
+              1.3705154581670884,
+              0.5506569686576956
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-8"
+          },
+          {
+            "capture_id": "capture-08",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "135e09d7104a92b9c27dd36e012eed00168f7620f158c5f001680499186ca380",
+            "waveform_sha256": "16dc1dab14b9bc3098bedd7fe166a289c78dd9bb42f2d6d8b1c5dad67049fcd3",
+            "clock": {
+              "alpha": 1.0002284085013657,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-08:echo:00",
+            "delay_s": 0.0035532618197354243,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-09",
+            "receiver_position_m": [
+              0.8525794581483015,
+              1.6312576190613493,
+              2.5997756647960033
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-9"
+          },
+          {
+            "capture_id": "capture-09",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "0e281f7e1f096da461e7365dcd6471f007cf7d3d852f8e819c276cf9b0b8126c",
+            "waveform_sha256": "b72417b9e0b5630550a0d8ab7da49fdce09d123bb9e58fab9ba565e8cef19480",
+            "clock": {
+              "alpha": 1.000241674905847,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-09:echo:00",
+            "delay_s": 0.0036102125658199185,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-10",
+            "receiver_position_m": [
+              3.5998156444411626,
+              1.3881455992166865,
+              0.4987975077811292
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-10"
+          },
+          {
+            "capture_id": "capture-10",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "d491f65b46d8fc491a9d45c1906bbb7ae392dd5b120d11b5c94cb6d0eb80f14a",
+            "waveform_sha256": "f2dc2e5dbdcc07d2fbc17e5148ed653005f8b47b490d741edbb39e48fe455ca7",
+            "clock": {
+              "alpha": 0.9998231202676741,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-10:echo:00",
+            "delay_s": 0.008638942441945727,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-11",
+            "receiver_position_m": [
+              3.4977170375111117,
+              1.609760694305587,
+              2.600133055204739
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-11"
+          },
+          {
+            "capture_id": "capture-11",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "1f559d73807305766b6135a3f5c43fa0fe42b995fe1f96d4d646c8d8bcfb0918",
+            "waveform_sha256": "ad2cc2ccae7701ac54d14509cda327ae64bf161285ede20e9356844c3b280a85",
+            "clock": {
+              "alpha": 1.000172336014698,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-11:echo:00",
+            "delay_s": 0.008248917580767755,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-00",
+            "receiver_position_m": [
+              0.5530321550314339,
+              1.3500154440258283,
+              0.34914828878650894
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-0"
+          },
+          {
+            "capture_id": "capture-00",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "5515508c936ecec16e234cd291beadb59e614d48d28f27f1b95a8ec300842cb7",
+            "waveform_sha256": "18e3af0ba63f19bef39fc7671d44b7c7bc8fe4fa4a212ac0d84418b7307d6e95",
+            "clock": {
+              "alpha": 0.9999096215845362,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-00:echo:00",
+            "delay_s": 0.0050960347594214825,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-01",
+            "receiver_position_m": [
+              0.5485987863954509,
+              1.3535595472742,
+              2.7508719545939018
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-1"
+          },
+          {
+            "capture_id": "capture-01",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "5895f70845d43366597f891571eb8b2b9bd5845615d9b71b1e7c80fc4976cc5c",
+            "waveform_sha256": "1a82b240166fce9c670e69990016f12933d015ceb736a24c8707a1e3e151ed6a",
+            "clock": {
+              "alpha": 0.9997528891722952,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-01:echo:00",
+            "delay_s": 0.004548739516992782,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-02",
+            "receiver_position_m": [
+              0.550472841764878,
+              1.649623046715804,
+              0.34599747304565837
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-2"
+          },
+          {
+            "capture_id": "capture-02",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "e74d90ca71f20b47f4bb1dba218c6dd0a86dff3ebe05de84474efdf7d84f3faa",
+            "waveform_sha256": "c54a461fb23aa79503b9921522e6db9ce16fc007424d521a5ffa0e8cd216d614",
+            "clock": {
+              "alpha": 1.000068799872936,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-02:echo:00",
+            "delay_s": 0.00586999031609304,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-03",
+            "receiver_position_m": [
+              0.5474752482244544,
+              1.6473368658781762,
+              2.7461446940838825
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-3"
+          },
+          {
+            "capture_id": "capture-03",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "194ea7fec0afce1ef8fa15f068089935da52c00642ad1bb271d1512a0960f866",
+            "waveform_sha256": "71af9808c35932d73388bdae48e67fc5d1801b8b1df2d2b699167e7d4987f38b",
+            "clock": {
+              "alpha": 0.9999431451382762,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-03:echo:00",
+            "delay_s": 0.005286848539241141,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-04",
+            "receiver_position_m": [
+              3.8076341761961983,
+              1.3533339080044442,
+              0.35170136250642076
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-4"
+          },
+          {
+            "capture_id": "capture-04",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "ed6f4985d15e9d685d71c1b8183dda11d60cad01c668d39cb5ee3cd0ea8d2acd",
+            "waveform_sha256": "1db9f8d00ff632f5cdb84b089a60c329e751c33e0da597c264eff2d11d841c70",
+            "clock": {
+              "alpha": 0.9999018895168609,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-04:echo:00",
+            "delay_s": 0.0037228413137076915,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-05",
+            "receiver_position_m": [
+              3.8011454208774316,
+              1.3461228211345777,
+              2.7519623314146213
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-5"
+          },
+          {
+            "capture_id": "capture-05",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "6bb600f4d9e96a33c9d7cd962fef5418108fe069f514cd33b4caa478f972e5f9",
+            "waveform_sha256": "1042ed244e950e5ef0eff4e60e3332a7c3d455a1db816b80eb0409ea987d2e54",
+            "clock": {
+              "alpha": 1.000232056013161,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-05:echo:00",
+            "delay_s": 0.003509200241545732,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-06",
+            "receiver_position_m": [
+              3.805269570370685,
+              1.6490280806103488,
+              0.3436011369309834
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-6"
+          },
+          {
+            "capture_id": "capture-06",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "86d41802b1d2ab023f00a4e597652e23e6218416b764949ff3047989af6cfb48",
+            "waveform_sha256": "e131940791d63f7c5f13633b20f0f4b3d0cff6b9b99fe5bf2a564db78565f72f",
+            "clock": {
+              "alpha": 0.9999963703933896,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-06:echo:00",
+            "delay_s": 0.0043836871351085206,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-07",
+            "receiver_position_m": [
+              3.7988716033630516,
+              1.6486913852190481,
+              2.743140104555697
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-7"
+          },
+          {
+            "capture_id": "capture-07",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "4a933ef00130694b776a11216198c546622248a3157a4e1e02c74cb74dda0ec3",
+            "waveform_sha256": "ca0523921a502ee348147b3ee3684fe5994fce445ac3974a5cef67b5cef38e15",
+            "clock": {
+              "alpha": 1.0001823629122926,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-07:echo:00",
+            "delay_s": 0.004148033188713958,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-08",
+            "receiver_position_m": [
+              0.6984130710679715,
+              1.3705154581670884,
+              0.5506569686576956
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-8"
+          },
+          {
+            "capture_id": "capture-08",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "5e7304aa1254f4a9e9d1ac922027c865518da95551692421aff134b709df15df",
+            "waveform_sha256": "77483ff1d1e72961ca71ee28015c142a51056546fcd8ca305f2b8ecfafe9e80a",
+            "clock": {
+              "alpha": 1.0002284084926552,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-08:echo:00",
+            "delay_s": 0.005573115720871154,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-09",
+            "receiver_position_m": [
+              0.8525794581483015,
+              1.6312576190613493,
+              2.5997756647960033
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-9"
+          },
+          {
+            "capture_id": "capture-09",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "f1fb0736b63d8998bbe6c76f4433807e34d0e21bb7a8dc8f80bd86b757259d4c",
+            "waveform_sha256": "47c8dff5845c3fbf87eec94a5588a5d11ff359f4526596a03038a885a0150654",
+            "clock": {
+              "alpha": 1.0002416748183016,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-09:echo:00",
+            "delay_s": 0.005681957068370063,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-10",
+            "receiver_position_m": [
+              3.5998156444411626,
+              1.3881455992166865,
+              0.4987975077811292
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-10"
+          },
+          {
+            "capture_id": "capture-10",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "5c9da77085e5301b995d191c4bc9b19a6460adaf0cf18703c2d304f5e92ceff3",
+            "waveform_sha256": "02c5424d42983eb5e0567d40f49cbea0693305f8d59995b9a21fe5e6e730dc25",
+            "clock": {
+              "alpha": 0.9998231202500745,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-10:echo:00",
+            "delay_s": 0.00407348576747997,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-11",
+            "receiver_position_m": [
+              3.4977170375111117,
+              1.609760694305587,
+              2.600133055204739
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-11"
+          },
+          {
+            "capture_id": "capture-11",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "d0234d799e65cec4fbfc12b9a50d0a5bd37dff3c465e1542879a240ab685372f",
+            "waveform_sha256": "19b610147c4599e7df46155661f174d05c77c6b524aed17486028a69aae909f1",
+            "clock": {
+              "alpha": 1.00017233602976,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-11:echo:00",
+            "delay_s": 0.004421002276393835,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ]
+      ]
+    },
+    {
+      "pattern": "single",
+      "seed": 2833,
+      "sessions": [
+        {
+          "source_position_m": [
+            1.5,
+            1.5,
+            1.3
+          ],
+          "sound_speed_m_s": 343.0,
+          "source_clock_scale": 1.0
+        },
+        {
+          "source_position_m": [
+            1.5,
+            1.5,
+            1.3
+          ],
+          "sound_speed_m_s": 343.0,
+          "source_clock_scale": 1.0
+        }
+      ],
+      "references": [
+        {
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset_m": 0.0,
+          "offset_std_m": 0.003,
+          "normal_std_rad": 0.0005,
+          "source_search_radius_m": 0.15,
+          "effective_speed_bounds_m_s": [
+            300.0,
+            380.0
+          ],
+          "training_capture_ids": [
+            "capture-00",
+            "capture-01",
+            "capture-02",
+            "capture-03",
+            "capture-04",
+            "capture-05",
+            "capture-06",
+            "capture-07"
+          ],
+          "validation_capture_ids": [
+            "capture-08",
+            "capture-09",
+            "capture-10",
+            "capture-11"
+          ]
+        },
+        {
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "offset_m": 0.0,
+          "offset_std_m": 0.003,
+          "normal_std_rad": 0.0005,
+          "source_search_radius_m": 0.15,
+          "effective_speed_bounds_m_s": [
+            300.0,
+            380.0
+          ],
+          "training_capture_ids": [
+            "capture-00",
+            "capture-01",
+            "capture-02",
+            "capture-03",
+            "capture-04",
+            "capture-05",
+            "capture-06",
+            "capture-07"
+          ],
+          "validation_capture_ids": [
+            "capture-08",
+            "capture-09",
+            "capture-10",
+            "capture-11"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          {
+            "capture_id": "capture-00",
+            "receiver_position_m": [
+              0.5467966198644887,
+              1.3545499759459168,
+              0.35143270298396284
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-0"
+          },
+          {
+            "capture_id": "capture-00",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "cc488139e2bfd6adc879bb6590f03e1f60bfaf9cb7d8e135ff743c142e855690",
+            "waveform_sha256": "5799261082fa24023806674e48e88c109e9244f286680b337fccd0da36370e22",
+            "clock": {
+              "alpha": 1.0000066112995238,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-00:echo:00",
+            "delay_s": 0.0026537818928174125,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-01",
+            "receiver_position_m": [
+              0.5514810194699581,
+              1.3530889461986149,
+              2.7513651644631585
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-1"
+          },
+          {
+            "capture_id": "capture-01",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "4cdc057042c64a8d85935f82f66ae2985bd479220529a47e3ff75e2918647f8e",
+            "waveform_sha256": "5533bbf01aae3f5ad6c09e8908fb94db2d13309e32bf80e1421a7e72658cbf27",
+            "clock": {
+              "alpha": 0.999830286006304,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-01:echo:00",
+            "delay_s": 0.0022813868787989926,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-02",
+            "receiver_position_m": [
+              0.5571385850892501,
+              1.6508089509464587,
+              0.34932911472813766
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-2"
+          },
+          {
+            "capture_id": "capture-02",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "47eb1358ab2b9f1185804ad7fb0bb7163448d9a7bd56cf09beda7f573bc1acb8",
+            "waveform_sha256": "bb7073d5689b2fe96c81f1adfe1b8c4a3ad2b56383ad24a80312974eb73aa554",
+            "clock": {
+              "alpha": 0.9999260335095121,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-02:echo:00",
+            "delay_s": 0.0026492475154280596,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-03",
+            "receiver_position_m": [
+              0.5510032612385851,
+              1.6518070712038497,
+              2.750006318432622
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-3"
+          },
+          {
+            "capture_id": "capture-03",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "17c41e787e0806fff59ad6075610dbdb49baeb58deaf630336d725d72f03d359",
+            "waveform_sha256": "eec134e1c48fb2f07de4b54c7db3d07de3c1eb94a440dced214ee862c285fabd",
+            "clock": {
+              "alpha": 0.9998426475460126,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-03:echo:00",
+            "delay_s": 0.002278054345822963,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-04",
+            "receiver_position_m": [
+              3.8026028908377354,
+              1.3499253557678297,
+              0.3473029033691038
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-4"
+          },
+          {
+            "capture_id": "capture-04",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "ed1c1dd803a6f7b5791617419f34cd29c809dbfc900ec40f8403444ea819e6a7",
+            "waveform_sha256": "19db53a83ed3567cf9faaf5f510775acfc0e58c1ce37488a5c8564e2cdb112a9",
+            "clock": {
+              "alpha": 0.9999491754241019,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-04:echo:00",
+            "delay_s": 0.008579374401112913,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-05",
+            "receiver_position_m": [
+              3.802215774854548,
+              1.3520197574745403,
+              2.751628164926961
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-5"
+          },
+          {
+            "capture_id": "capture-05",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "1ba1e9b260232aa4a50a204c8bfd815335e5c056b91eb30db0cc7e3ca6941b2b",
+            "waveform_sha256": "45772a8f3dbb40daa3523f9c55fbaef35fea3cb2f1de6865296594f8185e0bba",
+            "clock": {
+              "alpha": 0.9997614234338559,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-05:echo:00",
+            "delay_s": 0.008236229413516805,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-06",
+            "receiver_position_m": [
+              3.8034766720511937,
+              1.6537482734449875,
+              0.3554518644264171
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-6"
+          },
+          {
+            "capture_id": "capture-06",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "1f07c67d5de8e9be76d9b2a6c2ca446ecf55ac1970c47754b8a4958cfeaa5065",
+            "waveform_sha256": "47fafff0e5bbcd6654ad502176142832ec5f95312a67288f1d5a207c9bb4449f",
+            "clock": {
+              "alpha": 1.000124868469596,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-06:echo:00",
+            "delay_s": 0.008573802050210334,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-07",
+            "receiver_position_m": [
+              3.8027854435848374,
+              1.6540605208717736,
+              2.744860417462394
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-7"
+          },
+          {
+            "capture_id": "capture-07",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "3957dfc685877dda07aed7d3909bdefc071ca6e1a6f044d9f961225f15c5f81e",
+            "waveform_sha256": "cfe2c1ad74828e0927dbadc2af6c27dd3d9abdda5e7294245c5fc19094d080f3",
+            "clock": {
+              "alpha": 0.9998152898694933,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-07:echo:00",
+            "delay_s": 0.008231659827770157,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-08",
+            "receiver_position_m": [
+              0.7009419068949564,
+              1.3676729683887472,
+              0.5532178853488208
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-8"
+          },
+          {
+            "capture_id": "capture-08",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "6f647bdd3496d31287598dbdc85338d08b06167f3e1a459c9f8acbcb902a7505",
+            "waveform_sha256": "a6bdf9d844b8954886081d946b06e405ea96ff088a8268f635d0ff64f3dd6869",
+            "clock": {
+              "alpha": 0.9999071466668527,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-08:echo:00",
+            "delay_s": 0.0035556709746825867,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-09",
+            "receiver_position_m": [
+              0.847408024665375,
+              1.6287605552121176,
+              2.6001432148167374
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-9"
+          },
+          {
+            "capture_id": "capture-09",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "acecde7e1591f2681b568df6b34584e9a4948d7366de01983a592cb2e69b2889",
+            "waveform_sha256": "d7dc7af42d76f12494d74faac572878f4614d71997607bf0bb97691490c0f8ce",
+            "clock": {
+              "alpha": 1.0000877386271252,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-09:echo:00",
+            "delay_s": 0.0036102158428394813,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-10",
+            "receiver_position_m": [
+              3.5970851283177883,
+              1.3876904206941247,
+              0.49999846465052644
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-10"
+          },
+          {
+            "capture_id": "capture-10",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "1a8220bc2a5a978ea5b2fbf885f4ea11ebb9a4cf396d4e3c9065352b23423852",
+            "waveform_sha256": "91e402b1bff85bcc9760c8c4de6601dd8d6db58effbf35b9122533b73c7f7920",
+            "clock": {
+              "alpha": 0.9999082480082577,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-10:echo:00",
+            "delay_s": 0.00863934395270759,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-11",
+            "receiver_position_m": [
+              3.4977556127672433,
+              1.6091550011926543,
+              2.6009490715496866
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-11"
+          },
+          {
+            "capture_id": "capture-11",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "9d488c21c6137d35bf29ff48a0789d01f3d99244b1d94e8d7719d3842b63c346",
+            "waveform_sha256": "4020e1f395496bb537ac7032364ac1dceffee1a9b209de22e76a79b4a71933fc",
+            "clock": {
+              "alpha": 0.9999313365414412,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-11:echo:00",
+            "delay_s": 0.008249022334081422,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-00",
+            "receiver_position_m": [
+              0.5467966198644887,
+              1.3545499759459168,
+              0.35143270298396284
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-0"
+          },
+          {
+            "capture_id": "capture-00",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "e28d1b4d4782d9c5b77911a1f00981fe807b504e73df4f037dc9cfdcfa812cd8",
+            "waveform_sha256": "dd4d2b170e9df262fd462db072e179ddc6f830c0eddbccf5a2b19c9078cc40c4",
+            "clock": {
+              "alpha": 1.0000066112472785,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-00:echo:00",
+            "delay_s": 0.0050951519356560535,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-01",
+            "receiver_position_m": [
+              0.5514810194699581,
+              1.3530889461986149,
+              2.7513651644631585
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-1"
+          },
+          {
+            "capture_id": "capture-01",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "57a4e38df17b3bc2e23b24868605247deb84bc8f7cea5810017719d6f7572e82",
+            "waveform_sha256": "5858934167c84e1f1b028f0b3d17e2566bfee901eaf3ab4567845cceb65cf8db",
+            "clock": {
+              "alpha": 0.999830286041956,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-01:echo:00",
+            "delay_s": 0.00454861119487166,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-02",
+            "receiver_position_m": [
+              0.5571385850892501,
+              1.6508089509464587,
+              0.34932911472813766
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-2"
+          },
+          {
+            "capture_id": "capture-02",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "968acea2704187e575067391ed81d3a32fc054e0f6c54cc28bfe2a1cccefd132",
+            "waveform_sha256": "ba143eda322c8b9517158f0e4b052b4b0e39e995a7c8414ffe2668dc035ae9a7",
+            "clock": {
+              "alpha": 0.9999260335534707,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-02:echo:00",
+            "delay_s": 0.005870318158234089,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-03",
+            "receiver_position_m": [
+              0.5510032612385851,
+              1.6518070712038497,
+              2.750006318432622
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-3"
+          },
+          {
+            "capture_id": "capture-03",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "390ae5eefc264632ad5ebf9f2d331ed26d1a9894b9375f67208e7ad1e2da7c1c",
+            "waveform_sha256": "881246eb429a69df04e40ec757951f5f967cd676ca60f5badd03c9a636bdad5f",
+            "clock": {
+              "alpha": 0.999842647507071,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-03:echo:00",
+            "delay_s": 0.0052870533287090946,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-04",
+            "receiver_position_m": [
+              3.8026028908377354,
+              1.3499253557678297,
+              0.3473029033691038
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-4"
+          },
+          {
+            "capture_id": "capture-04",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "00655f4d07f6ed82908689b0d05305f2c192f3628d5526f95c621b0eb5c2754a",
+            "waveform_sha256": "e592d07a29765ef5c246baa1515076cf1d9d49c58e2e18d9603a7a32fa2b4a72",
+            "clock": {
+              "alpha": 0.999949175402768,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-04:echo:00",
+            "delay_s": 0.0037227924957638184,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-05",
+            "receiver_position_m": [
+              3.802215774854548,
+              1.3520197574745403,
+              2.751628164926961
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-5"
+          },
+          {
+            "capture_id": "capture-05",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "2cf7c627b8d1c3a3814ff81a4a7229286085e96ba9b30676ed8212528981aa66",
+            "waveform_sha256": "65e6c43d273d310cf70caa266e6632386851329c933bf86a435eee1e4bb9b280",
+            "clock": {
+              "alpha": 0.9997614233978092,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-05:echo:00",
+            "delay_s": 0.0035112966407172797,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-06",
+            "receiver_position_m": [
+              3.8034766720511937,
+              1.6537482734449875,
+              0.3554518644264171
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-6"
+          },
+          {
+            "capture_id": "capture-06",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "2eeed2e6d3d1002dffcb6cbb146f5339902c75aff10a5dee356e88645b52ab9b",
+            "waveform_sha256": "307ccccd3f957bd6cd6d74e8d000842dcc2f370d9cf16e303704caeefbc263ca",
+            "clock": {
+              "alpha": 1.0001248684685893,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-06:echo:00",
+            "delay_s": 0.004382850185363911,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-07",
+            "receiver_position_m": [
+              3.8027854435848374,
+              1.6540605208717736,
+              2.744860417462394
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-7"
+          },
+          {
+            "capture_id": "capture-07",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "0c564f7eb4e18db3f5ae09f22410b9edc11a9bb2e8127876751ff0f5ed4e1685",
+            "waveform_sha256": "557bbd4aa81976496d617f0e605363b3e02277cc41ba97085447494dba8df46f",
+            "clock": {
+              "alpha": 0.9998152898896382,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-07:echo:00",
+            "delay_s": 0.004147994390637644,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-08",
+            "receiver_position_m": [
+              0.7009419068949564,
+              1.3676729683887472,
+              0.5532178853488208
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-8"
+          },
+          {
+            "capture_id": "capture-08",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "9fe126ae958ea674a8d081a761b90a59e81768ff56ffeb2932486d8c80bc781f",
+            "waveform_sha256": "b1770f53027c8adcb841009428f25e9def1ef4b74b9dbaa9034fd51dd281df81",
+            "clock": {
+              "alpha": 0.9999071467205576,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-08:echo:00",
+            "delay_s": 0.005575632905875097,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-09",
+            "receiver_position_m": [
+              0.847408024665375,
+              1.6287605552121176,
+              2.6001432148167374
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-9"
+          },
+          {
+            "capture_id": "capture-09",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "b563469bc7f07a7964044cf7b510bf0b0083ac46c61568d7a461602240ef70e2",
+            "waveform_sha256": "3d5eb2152751930bfbbb075eed42ff992512a5055dd777b0f8de9c4b48e88a56",
+            "clock": {
+              "alpha": 1.0000877387321145,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-09:echo:00",
+            "delay_s": 0.005683086037717875,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-10",
+            "receiver_position_m": [
+              3.5970851283177883,
+              1.3876904206941247,
+              0.49999846465052644
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-10"
+          },
+          {
+            "capture_id": "capture-10",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "55bef848f418dc6138998940d177d36cfa4fea2448723ce805a819b88bff463f",
+            "waveform_sha256": "8a5c002a4fc3e411e63d45f15ae7f024c822e9f1d1567a00f3ef2aec5243262c",
+            "clock": {
+              "alpha": 0.9999082480482442,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-10:echo:00",
+            "delay_s": 0.004073605361882585,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ],
+        [
+          {
+            "capture_id": "capture-11",
+            "receiver_position_m": [
+              3.4977556127672433,
+              1.6091550011926543,
+              2.6009490715496866
+            ],
+            "receiver_position_std_m": 0.003,
+            "receiver_pose_group_id": "receiver-11"
+          },
+          {
+            "capture_id": "capture-11",
+            "status": "ok",
+            "direct_std_s": 4.1666666666666665e-05,
+            "recording_sha256": "7f58e29367064d7fd5fada9a5fdec6aa6d750fb9caf3933277895fa3c17237c6",
+            "waveform_sha256": "eadca9c59d2dd82b017612b7d4cb971560b602866c92266308aebaade7614ff1",
+            "clock": {
+              "alpha": 0.9999313364910909,
+              "alpha_std": 1.1248942649084144e-06
+            }
+          },
+          {
+            "candidate_id": "capture-11:echo:00",
+            "delay_s": 0.004421384724685264,
+            "delay_std_s": 4.1666666666666665e-05
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Optional mathematical replay additions; original MANIFEST and frozen artifacts unchanged.",
+  "required_sha256": {
+    "portable-inputs.json": "c3ab4c2240a661b8c7b32a6fb0684f1aa2c7cf5cdf048379259117baecb49a41",
+    "portable-replay.py": "e2987752e442d53144fbe207d04491b99671885b8cbb3d3faac144b5d5ef9006",
+    "run.py": "d8a045d8eb5c0292d9c9c369e5c77871541874ea8691fe68bc1112b7c6c41dc6",
+    "PROTOCOL.md": "2ecede2581413e8a7bd032abc10032366762aa95e5659833c33e3ab476036c95",
+    "freeze.json": "1b59eb563ba72e29eebf1244a3eb59272e9d8c97f42eaa147d5bac5970e2b941",
+    "admission.json": "b5602ecf6af39e66c357ad7f3465769fbaf373fbd111eecd7150bc53865c4ec7",
+    "results.json": "f06eac4f7dffab08b36d87291513228fc7403dd32bbf0a696d77a4a39b526d75"
+  },
+  "supplementary_sha256": {
+    "portable-README.md": "babeb6bdf5a97bedb94ea9d28647a220f8b7ccf026ec02863eb71f8a0da3893d",
+    "portable-result.json": "e8df3a6d9d8652650313482cf59a4005918b00ae8651b9c914273c997ee3ea0e"
+  }
+}

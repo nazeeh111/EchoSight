@@ -1,0 +1,25 @@
+{
+  "no_optimizer_executed": true,
+  "rows": [
+    {
+      "seed": 2821,
+      "jacobian_max_abs_errors": {
+        "source_log_speed": 4.774472484037062e-12,
+        "receiver": 2.653337076961859e-13,
+        "reference": 1.1486523537884707e-12
+      },
+      "held_covariance_expansion_max_abs_error": 1.7577588016751838e-24,
+      "covariance_min_eigenvalue": 3.4755608458253057e-09
+    },
+    {
+      "seed": 2833,
+      "jacobian_max_abs_errors": {
+        "source_log_speed": 4.7772289596403894e-12,
+        "receiver": 2.2739625395347407e-13,
+        "reference": 1.1008780692600695e-12
+      },
+      "held_covariance_expansion_max_abs_error": 2.481541837659083e-24,
+      "covariance_min_eigenvalue": 3.475573299185126e-09
+    }
+  ]
+}
