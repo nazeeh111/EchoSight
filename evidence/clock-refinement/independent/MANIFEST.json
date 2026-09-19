@@ -1,0 +1,8 @@
+{
+  "README.md": "87c70000848774453d35c4453117a408a08967d01035a29d891f6efd1e7f5ef1",
+  "clock-refinement-independent-candidate.diff": "f9d7764ad65b330c613d2bb286ffa2b24b3b7c5ebc63a8767e51cebd29502bf2",
+  "clock-refinement-independent-outcome.json": "9ec735b025044dd9938f8695caf70c193faf36ca9507f2b2fd1a6e351ac42621",
+  "clock-refinement-independent-outcome.py": "02d5949dfd554d909f6332f0394d5cda5cb40be18b74d0f99d50c5046e3b4167",
+  "clock-refinement-independent-spatial-check.json": "42a5fd068551bb215244da9cf9eaefe5e437e7fe1461719842a18db0c35636e7",
+  "clock-refinement-independent-spatial-check.py": "51050d979929da8255b11224ae5689c8e259cc69ca71e6af9937c0739bfac74a"
+}

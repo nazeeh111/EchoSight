@@ -1,0 +1,208 @@
+{
+  "commit": "3745665352f59bc88e432b1f703054ab29398ce1",
+  "parent": "0f05dd1ca058522a6dbdb1e57d32ca0f3d0bb629",
+  "checks": [
+    {
+      "name": "cross-session local-name reuse",
+      "support_status": "available",
+      "count": 2,
+      "new": [
+        {
+          "session_id": "B",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "B",
+          "capture_id": "1"
+        }
+      ],
+      "lost": [
+        {
+          "session_id": "A",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "A",
+          "capture_id": "1"
+        }
+      ]
+    },
+    {
+      "name": "same-session reprocessing",
+      "support_status": "available",
+      "count": 0,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "same-session append",
+      "support_status": "available",
+      "count": 1,
+      "new": [
+        {
+          "session_id": "A",
+          "capture_id": "2"
+        }
+      ],
+      "lost": []
+    },
+    {
+      "name": "missing previous",
+      "support_status": "unavailable",
+      "count": null,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "missing current",
+      "support_status": "unavailable",
+      "count": null,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "missing both",
+      "support_status": "unavailable",
+      "count": null,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "nested scope absent",
+      "support_status": "available",
+      "count": 0,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "nested scope null",
+      "support_status": "available",
+      "count": 0,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "nested scope matching",
+      "support_status": "available",
+      "count": 0,
+      "new": [],
+      "lost": []
+    },
+    {
+      "name": "legacy track carry",
+      "support_status": "available",
+      "count": 1,
+      "new": [
+        {
+          "session_id": "B",
+          "capture_id": "2"
+        }
+      ],
+      "lost": []
+    },
+    {
+      "name": "legacy subsequent new carry",
+      "support_status": "available",
+      "count": 2,
+      "new": [
+        {
+          "session_id": "C",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "C",
+          "capture_id": "1"
+        }
+      ],
+      "lost": [
+        {
+          "session_id": "B",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "B",
+          "capture_id": "1"
+        },
+        {
+          "session_id": "B",
+          "capture_id": "2"
+        }
+      ]
+    },
+    {
+      "name": "new track carry",
+      "support_status": "available",
+      "count": 1,
+      "new": [
+        {
+          "session_id": "B",
+          "capture_id": "2"
+        }
+      ],
+      "lost": []
+    },
+    {
+      "name": "new subsequent new carry",
+      "support_status": "available",
+      "count": 2,
+      "new": [
+        {
+          "session_id": "C",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "C",
+          "capture_id": "1"
+        }
+      ],
+      "lost": [
+        {
+          "session_id": "B",
+          "capture_id": "0"
+        },
+        {
+          "session_id": "B",
+          "capture_id": "1"
+        },
+        {
+          "session_id": "B",
+          "capture_id": "2"
+        }
+      ]
+    }
+  ],
+  "rejected_cases": [
+    "top:''",
+    "top:False",
+    "top:3",
+    "top:[]",
+    "top:{}",
+    "top:'sssssssssssssssssssssssssssss",
+    "nested:''",
+    "nested:False",
+    "nested:3",
+    "nested:[]",
+    "nested:{}",
+    "nested:'sssssssssssssssssssssssssssss",
+    "scope conflict",
+    "duplicate observations",
+    "duplicate support"
+  ],
+  "parent_cross_session_additional_count": 0,
+  "current_cross_session_additional_count": 2,
+  "cli_legacy_to_new_and_conflict_preservation": "passed",
+  "no_input_mutation": "all successful probe calls",
+  "scope": "declared result/acquisition session identity; no physical independence inference",
+  "source_sha256": {
+    "echosight/evolution.py": "9cc5bfdb1450aed7df36e625aec9c4767d82465f01b20f5b3bd11381ad5b1925",
+    "echosight/api.py": "734c309b59ad19a3cf9c44a33d9365f1b6062408c8945a816e9cfc6f33cae1e3",
+    "echosight/cli.py": "94efd77383ec0ee43c770e078cf25bffdc7339ace7c8b353d5e26e719b49c4cb",
+    "schemas/comparison.schema.json": "f22e7335dc28a6f2d7fd841c8a57c90e7dbdabf1067366ab7ace56b13413ff7c",
+    "schemas/result.schema.json": "a17cd153e87df39aa567f1fb5784ce98acdd01f552de3b9b5324d2b6ad0909be",
+    "docs/TRACKING.md": "39f4b9d892fa32f3f9b90a49e84cbf3f282aa0ef95c0da76c302acbf7368678f",
+    "docs/FRONTEND_HANDOFF.md": "4a9ffa434991fc95578f68a86ccb3ea22df86488e7b33873ecdf826501386e58",
+    "docs/CHARTER.md": "6689e624270b44bb1ca14f4cf148c83911505762a3f73f63bc8c590d9b4d7ddf",
+    "tests/test_evolution.py": "becb7789cb72926d5a393bc40a66b51cd438a77cbaa35292af4aed4cf5ea814d",
+    "tests/test_tracking_integration.py": "7565db99c681b57a6e43986eb9c44b026e0895dec4881c33c95ffceb0816d8fd"
+  }
+}

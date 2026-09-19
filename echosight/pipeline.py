@@ -112,6 +112,8 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
 
     from .storage import reject_reused_waveforms
     reject_reused_waveforms(observations)
+    from .acquisition import source_declaration_consistency
+    source_consistency=source_declaration_consistency(o.get('acquisition_evidence') for o in observations)
 
     # Only calibrated acquisition information enters inference. Unknown keys,
     # annotations and scene truth are deliberately excluded from this boundary.
@@ -125,14 +127,19 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         if key in capture} for capture in captures]
     if cancel():
         result = _empty(session, "cancelled", [])
+    elif source_consistency['status']=='contradictory':
+        result = _empty(session, "no_result", [{"code":"native_source_declarations_conflict",
+            "message":"Known native source declarations disagree across recordings: " + ", ".join(source_consistency['conflicting_fields']) + ". A common source calibration cannot be assumed; preserve and reconcile the declarations or acquire a supported calibrated configuration. This does not establish actual hardware change."}])
     elif method == "baseline":
-        result = infer_baseline(fitting_session, observations)
+        result = infer_baseline(fitting_session, observations, cancel=cancel,
+                                progress=lambda value, message="": progress(0.65 + 0.35 * value, message))
     else:
         result = infer_scene(fitting_session, observations, cancel=cancel,
                              progress=lambda value, message="": progress(0.65 + 0.35 * value, message))
     result["schema_version"] = "1.0"
     result["session_id"] = session["session_id"]
     result["observations"] = observations
+    result["source_declaration_consistency"] = source_consistency
     result["acquisition"] = fitting_session
     provenance = result.setdefault("provenance", {})
     if not isinstance(provenance, dict):

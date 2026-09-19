@@ -45,6 +45,11 @@ class TrackingIntegrationTests(unittest.TestCase):
                     self.assertEqual(carry['schema_version'], '1.1')
                 stale=copy.deepcopy(carry);stale['current_result_id']='stale'
                 self.assertEqual(request({'previous':values[-1],'current':values[-1],'previous_comparison':stale})[0],400)
+                cancelled=copy.deepcopy(values[-1]);cancelled['status']='cancelled'
+                code,comparison=request({'previous':values[-2],'current':cancelled})
+                self.assertEqual(code,200)
+                self.assertEqual(comparison['status'],'incomparable')
+                self.assertEqual(comparison['current_tracks'],[])
             finally:
                 server.shutdown();server.server_close();thread.join()
 
@@ -67,6 +72,13 @@ class TrackingIntegrationTests(unittest.TestCase):
             failed=subprocess.run(cmd,cwd=ROOT,text=True,capture_output=True)
             self.assertNotEqual(failed.returncode,0)
             self.assertEqual(target.read_bytes(),saved)
+            cancelled=copy.deepcopy(values[-1]);cancelled['status']='cancelled'
+            (root/'r3.json').write_text(json.dumps(cancelled))
+            run=subprocess.run(cmd[:cmd.index('--previous-comparison')],cwd=ROOT,text=True,capture_output=True)
+            self.assertEqual(run.returncode,0,run.stderr)
+            comparison=json.loads(target.read_text())
+            self.assertEqual(comparison['status'],'incomparable')
+            self.assertEqual(comparison['current_tracks'],[])
 
     def test_published_schema_covers_current_tracks_births_and_incomparable(self):
         schema=json.loads((ROOT/'schemas/comparison.schema.json').read_text());Draft202012Validator.check_schema(schema);validator=Draft202012Validator(schema)
@@ -79,7 +91,8 @@ class TrackingIntegrationTests(unittest.TestCase):
         self.assertEqual(len(incomparable['current_tracks']),len(different['surfaces']))
         unscoped=copy.deepcopy(b);unscoped.pop('session_id')
         unavailable=compare_results(a,unscoped)
-        for value in (ab,bc,birth,incomparable,unavailable):validator.validate(value)
+        cancelled=copy.deepcopy(b);cancelled['status']='cancelled'
+        for value in (ab,bc,birth,incomparable,unavailable,compare_results(a,cancelled)):validator.validate(value)
         legacy=copy.deepcopy(ab);legacy['schema_version']='1.0'
         for key in ('previous_session_id','current_session_id','support_comparison_status','new_capture_references'):legacy.pop(key)
         for match in legacy['correspondences']:

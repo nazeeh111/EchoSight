@@ -1,0 +1,61 @@
+{
+  "all_stored_scene_scores_independently_recomputed": 24,
+  "changed_case_counts": [],
+  "totals": {
+    "original": {
+      "matched_count": 124,
+      "false_surfaces": 25,
+      "missed_surfaces": 0
+    },
+    "candidate": {
+      "matched_count": 124,
+      "false_surfaces": 25,
+      "missed_surfaces": 0
+    }
+  },
+  "conditional_coverage_counts_not_empirical_calibration": {
+    "original": {
+      "offset": 124,
+      "normal": 123,
+      "total": 124
+    },
+    "candidate": {
+      "offset": 124,
+      "normal": 123,
+      "total": 124
+    }
+  },
+  "two_scoped_same_mapper_reruns": [
+    {
+      "case": "single_room-2441",
+      "scores": {
+        "original": {
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0
+        },
+        "candidate": {
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0
+        }
+      }
+    },
+    {
+      "case": "near_reflector-2441",
+      "scores": {
+        "original": {
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0
+        },
+        "candidate": {
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0
+        }
+      }
+    }
+  ],
+  "scene_report_sha256": "4f2a9466566bf96332709b6a55b8037fef2943b786222423c6e8abbcd88b965b"
+}

@@ -1,6 +1,6 @@
 # Local backend API v1
 
-Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help for current command options). The service binds only loopback, has no account system, and is intended for one trusted local user. One running process owns a store, enforced by a POSIX file lock on macOS/Linux; a second opener fails before recovering jobs. The operating system releases ownership after a process crash. Do not expose it through a public proxy. JSON uses schema version `1.0`; positions are right-handed metres, z up; durations are seconds; sample rates are Hz. See CONTRACT.md and schemas/.
+Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help for current command options). The service binds only loopback, has no account system, and is intended for one trusted local user. One running process owns a store, enforced by a POSIX file lock on macOS/Linux; a second opener fails before recovering jobs. The operating system releases ownership after a process crash. Do not expose it through a public proxy. Session/job/scene JSON uses schema version `1.0`; new comparisons use `1.1` (see [tracking migration](TRACKING.md)); positions are right-handed metres, z up; durations are seconds; sample rates are Hz. See CONTRACT.md and schemas/.
 
 ## HTTP routes
 

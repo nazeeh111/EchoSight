@@ -148,9 +148,10 @@ def process_recording(samples, sample_rate_hz, probe, capture_id, sound_speed_m_
     residual=train-design@np.array([alpha,intercept])
     acquisition_refined=False
     # A rate-mismatched chirp can split one correlation maximum into sidelobes.
-    # Only retry a failed affine fit, using its bounded coarse rate to match
-    # the pulse duration. The corrected train must pass the same residual gate.
-    if np.max(np.abs(residual))>max(2/fs,.00010) and abs(alpha-1)<=.005:
+    # Also retry an accepted train when observed within-pulse drift exceeds
+    # half inverse bandwidth. This is an engineering resolution trigger, not
+    # proof of lobe identity; the same residual and rate gates still apply.
+    if (np.max(np.abs(residual))>max(2/fs,.00010) or abs(alpha-1)*p['duration_s']>.5/(p['high_hz']-p['low_hz'])) and abs(alpha-1)<=.005:
         stretched=np.interp(np.arange(round(p['duration_s']*fs*alpha))/(fs*alpha),
                             np.arange(len(pulse))/src_fs,pulse)
         refined_corr=correlate(y,stretched,mode='valid',method='fft')

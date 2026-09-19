@@ -1,0 +1,194 @@
+{
+  "parent_also_continues_cancelled_track": true,
+  "cancelled_previous_also_continues_track": true,
+  "commit": "3745665352f59bc88e432b1f703054ab29398ce1",
+  "uncancelled_coplanar_status": "ambiguous",
+  "uncancelled_surfaces": 0,
+  "late_cancelled_status": "cancelled",
+  "late_cancelled_surfaces": 1,
+  "comparison": {
+    "schema_version": "1.1",
+    "previous_result_id": "prior",
+    "current_result_id": "cancelled",
+    "status": "comparable",
+    "previous_session_id": "A",
+    "current_session_id": "B",
+    "support_comparison_status": "available",
+    "new_capture_references": [
+      {
+        "session_id": "B",
+        "capture_id": "0"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "1"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "2"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "3"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "4"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "5"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "6"
+      },
+      {
+        "session_id": "B",
+        "capture_id": "7"
+      }
+    ],
+    "correspondences": [
+      {
+        "track_id": "reflector-40803a5865c3",
+        "previous_surface_id": "reflector-40803a5865c3",
+        "current_surface_id": "reflector-8631cc06c1b4",
+        "normal_change_deg": 0.0,
+        "offset_change_m": 0.0,
+        "offset_reference_point_m": [
+          2.0,
+          2.0,
+          1.1
+        ],
+        "offset_semantics": "signed_plane_offset_change_at_shared_source_reference",
+        "additional_support_count": 8,
+        "additional_support_capture_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "lost_support_capture_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "additional_support_references": [
+          {
+            "session_id": "B",
+            "capture_id": "0"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "1"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "2"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "3"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "4"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "5"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "6"
+          },
+          {
+            "session_id": "B",
+            "capture_id": "7"
+          }
+        ],
+        "lost_support_references": [
+          {
+            "session_id": "A",
+            "capture_id": "0"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "1"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "2"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "3"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "4"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "5"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "6"
+          },
+          {
+            "session_id": "A",
+            "capture_id": "7"
+          }
+        ]
+      }
+    ],
+    "newly_supported_surface_ids": [],
+    "current_tracks": [
+      {
+        "surface_id": "reflector-8631cc06c1b4",
+        "track_id": "reflector-40803a5865c3"
+      }
+    ],
+    "unconfirmed_previous_surface_ids": [
+      "reflector-4542bab9d8c2",
+      "reflector-8631cc06c1b4",
+      "reflector-2879cd969838",
+      "reflector-aefe646a4dcd",
+      "reflector-a79ecc5e32ef"
+    ],
+    "new_capture_ids": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "physical_scene_change_established": false,
+    "interpretation": "Changes describe inference and acoustic support; missing echoes do not establish absence.",
+    "tracking_semantics": "Declared display continuity, not authenticated acquisition evidence or persistent physical object identity; missing surfaces end continuity.",
+    "tracking_state_source": "previous_surface_labels",
+    "association_gates": {
+      "angle_deg": 10.0,
+      "offset_m": 0.3
+    },
+    "ambiguity_reduced": false,
+    "status_transition": [
+      "partial",
+      "cancelled"
+    ]
+  },
+  "method": "Public cancellation predicate observes whether the local inference result has acquired selected surfaces; it changes no fit data or implementation. Comparison metadata mirrors pipeline decoration with explicit compatible frame/probe."
+}

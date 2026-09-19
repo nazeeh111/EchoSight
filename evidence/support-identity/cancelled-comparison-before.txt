@@ -1,0 +1,18 @@
+test_legacy_cancelled_geometry_cannot_continue_display_tracks (tests.test_evolution.EvolutionTests.test_legacy_cancelled_geometry_cannot_continue_display_tracks) ... FAIL
+
+======================================================================
+FAIL: test_legacy_cancelled_geometry_cannot_continue_display_tracks (tests.test_evolution.EvolutionTests.test_legacy_cancelled_geometry_cannot_continue_display_tracks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_evolution.py", line 20, in test_legacy_cancelled_geometry_cannot_continue_display_tracks
+    self.assertEqual(comparison['status'], 'incomparable')
+AssertionError: 'comparable' != 'incomparable'
+- comparable
++ incomparable
+? ++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.329s
+
+FAILED (failures=1)

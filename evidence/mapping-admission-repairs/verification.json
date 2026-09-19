@@ -1,0 +1,50 @@
+{
+  "audit_commit": "57e25b2e5db31b93713f6c7c657caceab153839e",
+  "checkout_head_at_freeze": "3745665352f59bc88e432b1f703054ab29398ce1",
+  "files": {
+    "echosight/acquisition.py": "ca2effe95ae170b25a7eb8944a3bf16a255263668aca9c7b0da63b14b7503279",
+    "echosight/controlled.py": "0b2e14c3b61245ed475434486e619a744152cae77c1ab89f4fe68ec2b9d59a9b",
+    "echosight/calibration.py": "0d007c12b1f8ff026e4f9c6c8f4475b97bab4340a185819a36c71bf5d6f27618",
+    "echosight/pipeline.py": "8ef6a86b12ecadecf7c2065534b5194f4c5a0adbbfa1a7c7145321f708d7ece0",
+    "echosight/inference.py": "f2dd54fad0a31ee062918a2a594bb0c397ac97699113a7d78b3578312393c03a",
+    "echosight/multisource.py": "fe0b0df716447eb0088b131f0341136dfd9677fe3f5a5fc515c5869a21ced93b",
+    "tests/test_mapping_admission_cancellation.py": "453a438c290d881520b0bde83e0cd30d140878305f8a223423a9870adb5235c1"
+  },
+  "integration_dependencies_at_check": {
+    "echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816",
+    "schemas/result.schema.json": "ecca616fb3986db7433b23004c623afbaeac1b70fc6a05e95e45dd2ae4e8eb41"
+  },
+  "checks": [
+    {
+      "command": ".venv/bin/python -m unittest tests.test_mapping_admission_cancellation tests.test_calibration tests.test_multisource tests.test_path_alternatives tests.test_receiver_covariance tests.test_controlled tests.test_controlled_native -q",
+      "result": "62 passed in 34.260s",
+      "log": "work/mapping-admission-final-regressions.txt"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.test_acquisition.AcquisitionHTTPTests -q",
+      "result": "Earlier public-pipeline patch: 1 passed in 1.978s with scoped loopback approval; coordinator full-suite integration follows final multi-source/calibration additions",
+      "log": "work/mapping-admission-http.txt"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "coverage": [
+    "actual native contradiction/unknown/mixed result schemas",
+    "raw bytes, native hashes, store job and archive replay preserved",
+    "contradictions in previously rejected captures remain explicit",
+    "consistent source sessions may differ from other separately calibrated source sessions",
+    "prepared multi-source evidence cannot bypass carried contradiction",
+    "raw reference calibration rejects conflicting source declarations but ordinary geometry no_result does not block valid calibration",
+    "late public and multi-source cancellation discards geometry and derived hypotheses/covariance/score",
+    "real SIGINT CLI saves cancelled evidence and exits130 for mapper/baseline",
+    "all three single-source wrappers forward cancellation/progress"
+  ],
+  "limitations": [
+    "source declarations remain unauthenticated; unknown/incomplete declarations are not contradictions",
+    "no detection of undeclared hardware/source change",
+    "scientific thresholds/forward model and frozen failures unchanged",
+    "requires coordinator immutable full-suite integration and fresh review"
+  ]
+}

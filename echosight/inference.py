@@ -383,7 +383,8 @@ def _run(session,observations,cancel,progress,method):
     start=time.perf_counter();out=_empty(session,method)
     try:
         _check(cancel);prepared=_prepare(session,observations,out)
-        if prepared is None:return out
+        if prepared is None:
+            _check(cancel);return out
         s,v,rows,r=prepared
         if progress:progress(.1,'Generating image-source hypotheses')
         proposals=_proposals(s,r,v,rows,method,cancel,out);out['search']['proposals']=len(proposals)
@@ -420,7 +421,7 @@ def _run(session,observations,cancel,progress,method):
                 out['status']='ambiguous'
                 out['hypotheses'].append(dict(hypothesis_id='unconfirmed_candidates',surfaces=candidates,reason='Fewer than seven independent confirmations; potentially accidental echo correspondence.'))
                 out['guidance'].append(dict(action='Acquire more independent surveyed receiver placements, including height variation.',suggested_position_m=(r.mean(axis=0)+np.array([.35,-.25,.6])).tolist()))
-            return out
+            _check(cancel);return out
         score,assign,meta=_score(qs,s,r,v,rows,session);pcov,e,cov,J=meta
         out['surfaces']=[_surface(q,k,assign,pcov,s,r,v,rows,session) for k,q in enumerate(qs)]
         out['score']=dict(null=null,selected=score,kind='dimensionless_full_covariance_ranking_not_posterior',clutter_cost=CLUTTER_COST,miss_cost=MISS_COST,plane_cost=PLANE_COST)
@@ -516,8 +517,14 @@ def _run(session,observations,cancel,progress,method):
         out['search']['global_optimality_proven']=False
         if not out['search']['complete'] and out['status']=='ok':out['status']='partial'
         if progress:progress(1.,'Inference complete')
+        _check(cancel)
         return out
     except _Cancelled:
+        # A fit is assembled before its ambiguity checks finish. Never publish
+        # those intermediate objects as definitive or qualified hypotheses.
+        for key in ('surfaces','hypotheses','dimensions','guidance'):out[key]=[]
+        for key in ('shared_image_source_covariance_m2','higher_order_explanations','score'):out.pop(key,None)
+        out['search']['complete']=False
         out['status']='cancelled';out['diagnostics'].append('cancelled_by_caller');return out
     finally:
         out['runtime_s']=time.perf_counter()-start
@@ -527,19 +534,19 @@ def infer_scene(session, observations, cancel=None, progress=None):
     return _run(session,observations,cancel,progress,'image_source_consensus')
 
 
-def infer_baseline(session, observations):
+def infer_baseline(session, observations, cancel=None, progress=None):
     """Independent direct-plane grid initializer, identical observations/scoring."""
-    return _run(session,observations,None,None,'direct_plane_grid_baseline')
+    return _run(session,observations,cancel,progress,'direct_plane_grid_baseline')
 
 
-def infer_first_echo(session, observations):
+def infer_first_echo(session, observations, cancel=None, progress=None):
     """Simple earliest-echo baseline with the correct bistatic forward model.
 
     One candidate per receiver assumes the first returned echo belongs to the
     same reflector across views. That assumption frequently fails in rooms.
     """
     filtered=[dict(o,candidates=sorted(o.get('candidates',[]),key=lambda p:p['delay_s'])[:1]) for o in observations]
-    out=_run(session,filtered,None,None,'image_source_consensus')
+    out=_run(session,filtered,cancel,progress,'image_source_consensus')
     out['method']='earliest_echo_bistatic_baseline'
     out['assumptions'].append('earliest detected echo correspondence across receivers')
     return out

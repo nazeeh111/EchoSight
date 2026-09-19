@@ -1,0 +1,6 @@
+test_http_three_comparisons_roundtrip_and_reject_stale_state (tests.test_tracking_integration.TrackingIntegrationTests.test_http_three_comparisons_roundtrip_and_reject_stale_state) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.519s
+
+OK

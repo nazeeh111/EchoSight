@@ -85,6 +85,14 @@ def calibrate_reference(session, reference):
          'training_capture_ids':train,'validation_capture_ids':held,'diagnostics':failures,
          'clock_interpretation':'Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.',
          'conditional_on':['stationary effective point source','correct isolated reference reflection','surveyed poses and reference plane','affine within-recording clocks','no path-dependent unmodeled delay']}
+    source_consistency=result.get('source_declaration_consistency')
+    if source_consistency is not None:out['source_declaration_consistency']=source_consistency
+    if source_consistency is not None and source_consistency.get('status')=='contradictory':
+        out['diagnostics'].insert(0,{'code':'native_source_declarations_conflict',
+            'message':'Known native source declarations disagree within this reference-calibration session. A single acoustic-center calibration is unsupported; original recordings and the declared partition are retained.'})
+        return out
+    # Ordinary no_result geometry does not disqualify reference calibration:
+    # its isolated, supplied reflector is a different fitting problem.
     if failures:return out
     hashes=[observations[cid].get('recording_sha256') for cid in train+held]
     if None in hashes or len(set(hashes)) != len(hashes):

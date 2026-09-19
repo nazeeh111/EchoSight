@@ -17,6 +17,41 @@ MAX_MANIFEST_BYTES=1024*1024
 MAX_BLOCKS=16384
 
 
+def source_declaration_consistency(evidences):
+    """Summarize decoded native source declarations, never authenticate them.
+
+    Only source configuration/probe/playback-route namespaces are compared.
+    Receiver route changes and outer protocol controls have separate checks.
+    Missing legacy/native declarations cannot establish consistency, but are
+    not by themselves contradictory. Callers preserve all original evidence.
+    """
+    fields=('configuration_id','probe_id','route_id')
+    known={key:set() for key in fields};missing={key:0 for key in fields};count=0;native_count=0
+    for evidence in evidences:
+        count+=1
+        if evidence is not None:
+            if not isinstance(evidence,dict):raise ValueError('native acquisition evidence must be an object or absent')
+            native_count+=1
+        declaration=evidence.get('source_declaration',{}) if evidence is not None else {}
+        if not isinstance(declaration,dict):raise ValueError('native source declaration must be an object')
+        for key in fields:
+            value=declaration.get(key)
+            if value is None:missing[key]+=1
+            else:
+                _text(value,'native source '+key)
+                if value.strip().lower()=='unknown':missing[key]+=1
+                else:known[key].add(value)
+    conflicts=[key for key in fields if len(known[key])>1]
+    if conflicts:status='contradictory'
+    elif not any(known.values()):status='unknown'
+    elif any(missing.values()):status='incomplete'
+    else:status='consistent_declarations'
+    return dict(status=status,known_values={key:sorted(values) for key,values in known.items()},
+                conflicting_fields=conflicts,missing_declaration_counts=missing,
+                recording_count=count,native_evidence_count=native_count,
+                semantics='Operator-declared source configuration, probe and playback route only; consistency does not authenticate hardware, acoustic center, source rate, or physical change.')
+
+
 def read_float_wav(raw):
     """Return Float32 widened exactly to Float64, or None for other WAV codecs."""
     if len(raw)<12 or raw[:4]!=b'RIFF' or raw[8:12]!=b'WAVE':return None

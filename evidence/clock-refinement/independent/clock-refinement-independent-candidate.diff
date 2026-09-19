@@ -1,0 +1,16 @@
+--- frozen_baseline_signals.py
++++ frozen_candidate_signals.py
+@@ -146,11 +146,12 @@
+     design=np.column_stack([starts,np.ones(len(starts))])
+     alpha,intercept=np.linalg.lstsq(design,train,rcond=None)[0]
+     residual=train-design@np.array([alpha,intercept])
++    result['development_initial_clock']=dict(alpha=float(alpha),intercept_s=float(intercept),residual_max_s=float(np.max(np.abs(residual))))
+     acquisition_refined=False
+     # A rate-mismatched chirp can split one correlation maximum into sidelobes.
+     # Only retry a failed affine fit, using its bounded coarse rate to match
+     # the pulse duration. The corrected train must pass the same residual gate.
+-    if np.max(np.abs(residual))>max(2/fs,.00010) and abs(alpha-1)<=.005:
++    if (np.max(np.abs(residual))>max(2/fs,.00010) or abs(alpha-1)*p['duration_s']>.5/(p['high_hz']-p['low_hz'])) and abs(alpha-1)<=.005:
+         stretched=np.interp(np.arange(round(p['duration_s']*fs*alpha))/(fs*alpha),
+                             np.arange(len(pulse))/src_fs,pulse)
+         refined_corr=correlate(y,stretched,mode='valid',method='fft')

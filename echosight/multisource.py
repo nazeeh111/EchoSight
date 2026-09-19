@@ -286,15 +286,31 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
         if not 2<=count<=MAX_SOURCES:raise ValueError('requires two to four source sessions')
         if bundle.get('scene_static') is not True or not bundle.get('coordinate_frame_id'):raise ValueError('static common coordinate frame must be declared')
         v,calcov=_calibration(bundle,count)
-        receiver_calibration=_receiver_calibration(bundle,processed_sessions,cancel)
-        out['receiver_pose_uncertainty']=_receiver_description(receiver_calibration)
-        allrows=[];sources_list=[];prepared=[];groups={};session_ids=set()
-        for a,item in enumerate(processed_sessions):
-            session=item['session'];observations=item['observations']
+        from .acquisition import source_declaration_consistency
+        out['source_declaration_consistency_by_session']={}
+        session_ids=set();declared_records=0
+        for item in processed_sessions:
+            single._check(cancel)
+            if not isinstance(item,dict) or not isinstance(item.get('session'),dict):raise ValueError('processed source session must be an object')
+            session=item['session'];observations=item.get('observations')
+            if not isinstance(observations,list) or any(not isinstance(o,dict) for o in observations):raise ValueError('observations must be a bounded array of objects')
+            declared_records+=len(observations)
+            if len(observations)>single.MAX_VIEWS or declared_records>MAX_RECORDS:raise ValueError('joint capture resource limit exceeded')
             sid=session.get('session_id')
-            if not isinstance(sid,str) or not sid:raise ValueError('source session_id must be a nonempty string')
+            if not isinstance(sid,str) or not 1<=len(sid)<=160:raise ValueError('source session_id must be a string of 1 to 160 characters')
             if sid in session_ids:raise ValueError('duplicate source session_id')
             session_ids.add(sid)
+            summary=source_declaration_consistency(o.get('acquisition_evidence') for o in observations)
+            out['source_declaration_consistency_by_session'][sid]=summary
+            if summary['status']=='contradictory':
+                raise ValueError('native_source_declarations_conflict within source session '+sid+': '+', '.join(summary['conflicting_fields']))
+        # Different source sessions have separately declared acoustic centers and
+        # joint calibration. Only contradictions WITHIN a session are withheld.
+        receiver_calibration=_receiver_calibration(bundle,processed_sessions,cancel)
+        out['receiver_pose_uncertainty']=_receiver_description(receiver_calibration)
+        allrows=[];sources_list=[];prepared=[];groups={}
+        for a,item in enumerate(processed_sessions):
+            session=item['session'];observations=item['observations']
             if session.get('coordinate_frame_id')!=bundle['coordinate_frame_id']:raise ValueError('coordinate_frame_mismatch')
             cov=calcov[np.ix_([3*a,3*a+1,3*a+2,3*count],[3*a,3*a+1,3*a+2,3*count])]
             session=dict(session,effective_speed_m_s=v,source_effective_speed_covariance=cov.tolist())
@@ -384,9 +400,12 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
             from .path_alternatives import apply_path_alternatives
             apply_path_alternatives(out,processed_sessions,v,calcov,cancel,receiver_calibration=receiver_calibration)
         if progress:progress(1.,'Joint inference complete')
+        single._check(cancel)
         return out
     except single._Cancelled:
-        out['status']='cancelled';out['surfaces']=[];out['diagnostics'].append('cancelled_by_caller');return out
+        for key in ('surfaces','hypotheses','dimensions','guidance'):out[key]=[]
+        for key in ('shared_plane_parameter_covariance_m2','score','parent_model_comparison','path_model_comparison'):out.pop(key,None)
+        out['status']='cancelled';out['diagnostics'].append('cancelled_by_caller');return out
     except (ValueError,KeyError,TypeError,np.linalg.LinAlgError) as exc:
         out['diagnostics'].append(str(exc));out['status']='calibration_needed';out['surfaces']=[]
         for hypothesis in out['hypotheses']:

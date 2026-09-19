@@ -72,7 +72,7 @@ A newly supported surface receives a deterministic `track-birth-…` label bound
 
 An unmatched previous surface ends continuity. Only current surfaces appear in the next carry map. After an empty intermediate result, a later surface is a birth, even if its geometry or raw surface ID resembles a much earlier one. There is no hidden-history lookup, split/merge tracking, missed-detection bridging or global reidentification. Deterministic labels are scoped to the declared comparison sequence, not guaranteed unique across independently constructed histories or deliberately reused revision identifiers.
 
-An incomparable result receives fresh local labels covering its current surfaces but makes no correspondences. Its comparison must not be carried as continuity state; an attempted carry is rejected. A caller can begin a new two-result comparison when it has compatible calibrated results.
+An incomparable result receives fresh local labels covering its current completed surfaces but makes no correspondences. If either input is cancelled, comparison is always incomparable; a cancelled current result receives no tracks, even if an old export contains unfinished surfaces. A completed current result after a cancelled prior result receives fresh labels without continuity. Its comparison must not be carried as continuity state; an attempted carry is rejected. A caller can begin a new two-result comparison when it has compatible calibrated results.
 
 ## Verification
 

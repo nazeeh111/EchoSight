@@ -1,0 +1,5 @@
+{
+  "echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+  "echosight/pipeline.py": "989423595700d7c604fb40b2154c2f937082ee80ac768693ece95e2ca3a774ff",
+  "tests/test_inference.py": "08e47194939efcc22bf59460d8a4ffe207aa8bf0653fbcfbd7f3b2c892e504bc"
+}

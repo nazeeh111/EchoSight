@@ -216,6 +216,121 @@
     "stale": {
       "type": "boolean",
       "description": "HTTP store adds this when later captures have changed the session revision."
+    },
+    "source_declaration_consistency": {
+      "type": "object",
+      "required": [
+        "status",
+        "known_values",
+        "conflicting_fields",
+        "missing_declaration_counts",
+        "recording_count",
+        "native_evidence_count",
+        "semantics"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "contradictory",
+            "unknown",
+            "incomplete",
+            "consistent_declarations"
+          ]
+        },
+        "known_values": {
+          "type": "object",
+          "required": [
+            "configuration_id",
+            "probe_id",
+            "route_id"
+          ],
+          "properties": {
+            "configuration_id": {
+              "type": "array",
+              "maxItems": 32,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            },
+            "probe_id": {
+              "type": "array",
+              "maxItems": 32,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            },
+            "route_id": {
+              "type": "array",
+              "maxItems": 32,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "conflicting_fields": {
+          "type": "array",
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "configuration_id",
+              "probe_id",
+              "route_id"
+            ]
+          }
+        },
+        "missing_declaration_counts": {
+          "type": "object",
+          "required": [
+            "configuration_id",
+            "probe_id",
+            "route_id"
+          ],
+          "properties": {
+            "configuration_id": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 32
+            },
+            "probe_id": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 32
+            },
+            "route_id": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 32
+            }
+          },
+          "additionalProperties": false
+        },
+        "recording_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        },
+        "native_evidence_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        },
+        "semantics": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "$defs": {

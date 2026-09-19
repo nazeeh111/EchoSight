@@ -12,6 +12,21 @@ def result(surface_offset=2., count=4):
 
 
 class EvolutionTests(unittest.TestCase):
+    def test_legacy_cancelled_geometry_cannot_continue_display_tracks(self):
+        from echosight.evolution import compare_results
+        prior, unfinished = result(), result()
+        unfinished['status'] = 'cancelled'
+        comparison = compare_results(prior, unfinished)
+        self.assertEqual(comparison['status'], 'incomparable')
+        self.assertEqual(comparison['correspondences'], [])
+        self.assertEqual(comparison['current_tracks'], [])
+        self.assertEqual(comparison['new_capture_references'], [])
+        recovered = compare_results(unfinished, prior)
+        self.assertEqual(recovered['status'], 'incomparable')
+        self.assertEqual(recovered['correspondences'], [])
+        self.assertEqual(len(recovered['current_tracks']), 1)
+        self.assertNotEqual(recovered['current_tracks'][0]['track_id'], 's')
+
     def test_cross_session_capture_names_do_not_erase_new_evidence(self):
         from echosight.evolution import compare_results
         a, b = result(), result()

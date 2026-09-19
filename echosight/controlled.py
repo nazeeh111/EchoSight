@@ -214,7 +214,9 @@ def _native_control_conflicts(protocol,observations,ids):
     Manifests remain unauthenticated declarations. Legacy WAV controls still
     rely on operator declarations; absence is never promoted to observed proof.
     """
-    conflicts=[];source_values={key:set() for key in ('configuration_id','probe_id','route_id')}
+    from .acquisition import source_declaration_consistency
+    conflicts=[]
+    source_consistency=source_declaration_consistency(epoch[cid].get('acquisition_evidence') for epoch in observations for cid in sorted(ids))
     for cid in sorted(ids):
         evidence=[epoch[cid].get('acquisition_evidence') for epoch in observations]
         if not any(e is not None for e in evidence):continue
@@ -226,15 +228,13 @@ def _native_control_conflicts(protocol,observations,ids):
             signatures.append({key:e[key] for key in ('device','recorder','route_initial','route_final')})
             signatures[-1]['session']={key:e['session'][key] for key in ('category','mode','activated_sample_rate_hz')}
             declaration=e['source_declaration']
-            for key,values in source_values.items():
-                if declaration[key].strip().lower()!='unknown':values.add(declaration[key])
             native=declaration['configuration_id'];outer=protocol['epochs'][index]['source_configuration_id']
             if native.strip().lower()!='unknown' and outer.strip().lower()!='unknown' and native!=outer:
                 conflicts.append(cid+': native source configuration contradicts epoch '+EPOCHS[index])
         if any(signature!=signatures[0] for signature in signatures[1:]):
             conflicts.append(cid+': observed recorder, device, input route or active format changed across epochs')
-    for key,values in source_values.items():
-        if len(values)>1:conflicts.append('native source '+key+' differs across captures/epochs')
+    for key in source_consistency['conflicting_fields']:
+        conflicts.append('native source '+key+' differs across captures/epochs')
     return conflicts
 
 

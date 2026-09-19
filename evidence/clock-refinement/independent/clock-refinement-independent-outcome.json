@@ -1,0 +1,261 @@
+{
+  "records": 1248,
+  "common_accepted_valid_affine": 1180,
+  "changed_common_accepted_clocks": 111,
+  "hashes_verified": true,
+  "candidate_source_sha256": "6650fe627a8b18748eac2bb200e25c3058630676231fb67e1f4ebf2e6683d6a7",
+  "raw_records_independently_reexecuted": 63,
+  "large_accepted_affine_rate_errors": {
+    "original": 3,
+    "candidate": 0
+  },
+  "null_false_candidates": {
+    "original": 1,
+    "candidate": 0
+  },
+  "common_false_and_missed": {
+    "original": [
+      813,
+      2989
+    ],
+    "candidate": [
+      799,
+      2985
+    ]
+  },
+  "lost_valid_admission": [],
+  "negative_admissions": {
+    "original": 0,
+    "candidate": 0
+  },
+  "new_negative_admissions": [],
+  "changed_clock_worst_error_over_sd": 0.8802048704627077,
+  "changed_clock_worsening_count": 12,
+  "max_changed_clock_worsening_ppm": 0.5891268872737498,
+  "miss_worsening": [
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2441",
+        3,
+        "capture-01"
+      ],
+      "old": [
+        2,
+        6
+      ],
+      "new": [
+        3,
+        7
+      ],
+      "old_rate_error_ppm": 0.21678666961566506,
+      "new_rate_error_ppm": 0.16348159503909443
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2459",
+        1,
+        "capture-11"
+      ],
+      "old": [
+        0,
+        2
+      ],
+      "new": [
+        0,
+        3
+      ],
+      "old_rate_error_ppm": 18.045012448064668,
+      "new_rate_error_ppm": -0.21887481327365066
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2459",
+        2,
+        "capture-01"
+      ],
+      "old": [
+        1,
+        4
+      ],
+      "new": [
+        1,
+        5
+      ],
+      "old_rate_error_ppm": 0.24476570881226678,
+      "new_rate_error_ppm": 0.03278300542142176
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_room-2441",
+        3,
+        "capture-01"
+      ],
+      "old": [
+        0,
+        6
+      ],
+      "new": [
+        0,
+        7
+      ],
+      "old_rate_error_ppm": 0.2149627880143612,
+      "new_rate_error_ppm": 0.17491167580985234
+    },
+    {
+      "key": [
+        "run-v4",
+        "near_reflector-2441",
+        2,
+        "capture-00"
+      ],
+      "old": [
+        1,
+        1
+      ],
+      "new": [
+        0,
+        2
+      ],
+      "old_rate_error_ppm": -0.2346370410188925,
+      "new_rate_error_ppm": 0.23026640949552757
+    },
+    {
+      "key": [
+        "run-v4",
+        "near_reflector-2441",
+        3,
+        "capture-11"
+      ],
+      "old": [
+        0,
+        1
+      ],
+      "new": [
+        0,
+        2
+      ],
+      "old_rate_error_ppm": 17.49307426912594,
+      "new_rate_error_ppm": 0.4468240466515283
+    },
+    {
+      "key": [
+        "run-v4",
+        "single_room-2441",
+        3,
+        "capture-11"
+      ],
+      "old": [
+        0,
+        1
+      ],
+      "new": [
+        0,
+        2
+      ],
+      "old_rate_error_ppm": 17.489302854833966,
+      "new_rate_error_ppm": 0.44529452103425626
+    }
+  ],
+  "false_worsening": [
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2441",
+        2,
+        "capture-06"
+      ],
+      "old": [
+        2,
+        5
+      ],
+      "new": [
+        3,
+        5
+      ]
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2441",
+        3,
+        "capture-01"
+      ],
+      "old": [
+        2,
+        6
+      ],
+      "new": [
+        3,
+        7
+      ]
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_phase-2459",
+        2,
+        "capture-02"
+      ],
+      "old": [
+        0,
+        5
+      ],
+      "new": [
+        1,
+        5
+      ]
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_room-2459",
+        0,
+        "capture-07"
+      ],
+      "old": [
+        5,
+        9
+      ],
+      "new": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": [
+        "run-v4",
+        "dual_room-2459",
+        3,
+        "capture-07"
+      ],
+      "old": [
+        5,
+        11
+      ],
+      "new": [
+        7,
+        11
+      ]
+    }
+  ],
+  "worst_standardized_rate": {
+    "key": [
+      "run-v4",
+      "dual_phase-2441",
+      3,
+      "capture-09"
+    ],
+    "old": 4.432815692583984,
+    "new": 4.432815692583984
+  },
+  "max_candidate_runtime_s": 0.03758929199830163,
+  "valid_affine_admissions": {
+    "original": 1180,
+    "candidate": 1180
+  },
+  "result_file_sha256": "2ea5270d63c19aa3fd13f77975d23ee0799eb49a29d3c35b8642318852e68b28"
+}
