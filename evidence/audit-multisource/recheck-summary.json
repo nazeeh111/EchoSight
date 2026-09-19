@@ -1,0 +1,1782 @@
+{
+  "source_sha256": {
+    "multisource.py": "863b302ff4cba819ee6035cffa05aab261d1163299997f6517d4541808c7aaba",
+    "inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+    "geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce"
+  },
+  "source_unchanged": true,
+  "split": "development",
+  "observations": "Identical previously extracted recordings, inference-only rerun",
+  "cases": [
+    {
+      "case": "coordinate_frame_mismatch-1001",
+      "method": "mapper",
+      "status": "calibration_needed",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "status calibration_needed is outside ['no_result', 'invalid_input', 'rejected']"
+      ],
+      "runtime_s": 1.0666997695807368e-05,
+      "source_input_unchanged": true,
+      "input_sha256": "2c4cafaaf499602ef1ad38a17b3d7ec155d23b4dcfc6442f115c3bcf1742d5f6",
+      "comparison": null
+    },
+    {
+      "case": "coordinate_frame_mismatch-1001",
+      "method": "plane_grid",
+      "status": "calibration_needed",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "status calibration_needed is outside ['no_result', 'invalid_input', 'rejected']"
+      ],
+      "runtime_s": 9.458002750761807e-06,
+      "source_input_unchanged": true,
+      "input_sha256": "2c4cafaaf499602ef1ad38a17b3d7ec155d23b4dcfc6442f115c3bcf1742d5f6",
+      "comparison": null
+    },
+    {
+      "case": "coordinate_frame_mismatch-1003",
+      "method": "mapper",
+      "status": "calibration_needed",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "status calibration_needed is outside ['no_result', 'invalid_input', 'rejected']"
+      ],
+      "runtime_s": 0.0001988340009120293,
+      "source_input_unchanged": true,
+      "input_sha256": "5b0072fd9448d81685409e349970eff99bb97b9c888150e0f9ddc75dbde371f5",
+      "comparison": null
+    },
+    {
+      "case": "coordinate_frame_mismatch-1003",
+      "method": "plane_grid",
+      "status": "calibration_needed",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "status calibration_needed is outside ['no_result', 'invalid_input', 'rejected']"
+      ],
+      "runtime_s": 7.707996701356024e-06,
+      "source_input_unchanged": true,
+      "input_sha256": "5b0072fd9448d81685409e349970eff99bb97b9c888150e0f9ddc75dbde371f5",
+      "comparison": null
+    },
+    {
+      "case": "finite_panel_four_sources-1001",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-01e80f1cddffbddb",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.07901201657816553,
+            "offset_error_m": 0.006221533102733323,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-267a8b0c43b92ceb",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.04532138622283501,
+            "offset_error_m": 0.0006184299029097229,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6899ab24ce4cb482",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.14270969303999798,
+            "offset_error_m": 0.007559658268073477,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d90f5ad731904d44",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.11967047031402343,
+            "offset_error_m": 0.005364661479033472,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b804a0d7b5726aa6",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.145232503837843,
+            "offset_error_m": 0.00013798234258155517,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-27bd7ca22d2b9aad",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.24975302945224281,
+            "offset_error_m": 0.011921060769340186,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ceff7147c294c9fc",
+            "truth_id": "finite-panel",
+            "normal_error_deg": 0.10022043580239566,
+            "offset_error_m": 0.003574966632118759,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 1.1080998339966754,
+      "source_input_unchanged": true,
+      "input_sha256": "84b2e5ce0436e3bee3dc2ff84a90916a7c6862cf825942cd647034192ed39838",
+      "comparison": null
+    },
+    {
+      "case": "finite_panel_four_sources-1001",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-b429bd505cb74d65",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.07901201658739108,
+            "offset_error_m": 0.0062215331079322755,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6ac51cef54f27505",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.04532138922242001,
+            "offset_error_m": 0.000618429543875143,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-c9ed4a43b1917f9b",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.14270975708137115,
+            "offset_error_m": 0.00755965952335913,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7e1a1f15860f2508",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.11967050077887215,
+            "offset_error_m": 0.005364659498363622,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-15a02c3a3a86f300",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.14523245548172997,
+            "offset_error_m": 0.0001379836975239357,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dd4c850f322ffb21",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.2497530241068081,
+            "offset_error_m": 0.011921060655713855,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-5c5c220dc6f18660",
+            "truth_id": "finite-panel",
+            "normal_error_deg": 0.10022061652832706,
+            "offset_error_m": 0.003574975386683832,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 1.2249918329980574,
+      "source_input_unchanged": true,
+      "input_sha256": "84b2e5ce0436e3bee3dc2ff84a90916a7c6862cf825942cd647034192ed39838",
+      "comparison": null
+    },
+    {
+      "case": "finite_panel_four_sources-1003",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-f4d5526dc7045ebd",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.1251183874150291,
+            "offset_error_m": 0.004466536994291115,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6b3163d991cec770",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.07810923209799814,
+            "offset_error_m": 0.001101415345629464,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-f64ad930b07a75af",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.08607146909288542,
+            "offset_error_m": 0.004752949509460258,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-3e089bb5085aac10",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.43131957682492056,
+            "offset_error_m": 0.011933102993816114,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8aa1fc64cc72d7f8",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.13167353238284357,
+            "offset_error_m": 0.004558822915750493,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6eb734ca08ab703c",
+            "truth_id": "finite-panel",
+            "normal_error_deg": 0.24692681871076516,
+            "offset_error_m": 0.006415677880426518,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7a1c4e76897a3cab",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.1566584820194407,
+            "offset_error_m": 0.005295728998166271,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 1.1504994589995476,
+      "source_input_unchanged": true,
+      "input_sha256": "b2504cc6a1a53e4b6935163c7031e73702447c303681cae93d022a0ab877044d",
+      "comparison": null
+    },
+    {
+      "case": "finite_panel_four_sources-1003",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 7,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 2,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "matches": [
+          {
+            "predicted_id": "reflector-a4ac7cffbead49d9",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.1251183872955977,
+            "offset_error_m": 0.004466538078373938,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ad3899f3b93aa806",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.08607147118046651,
+            "offset_error_m": 0.004752949545427043,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-79d77c756dc611f9",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.13167353221399897,
+            "offset_error_m": 0.004558822540627894,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-be1976991ed4ad6d",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.15665848411793917,
+            "offset_error_m": 0.005295729076510977,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-f08e1b3d3ea9fa48",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.07810922595275525,
+            "offset_error_m": 0.0011014143072056726,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 5, required 7",
+        "required finite-panel match absent"
+      ],
+      "runtime_s": 0.8337649159948342,
+      "source_input_unchanged": true,
+      "input_sha256": "b2504cc6a1a53e4b6935163c7031e73702447c303681cae93d022a0ab877044d",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_fixed_sources-1001",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.10163558299973374,
+      "source_input_unchanged": true,
+      "input_sha256": "763334735186bb7c2edaa0ff1075a0a1df57f87cfc409c14ebc69973b1461301",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_fixed_sources-1001",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.3041274159986642,
+      "source_input_unchanged": true,
+      "input_sha256": "763334735186bb7c2edaa0ff1075a0a1df57f87cfc409c14ebc69973b1461301",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_fixed_sources-1003",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.15335904100356856,
+      "source_input_unchanged": true,
+      "input_sha256": "18e36cbb61299d924e1cd2ce0dae4a3cb30f9b0f6a28b423d21a0fccf017ea55",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_fixed_sources-1003",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.30053316699923016,
+      "source_input_unchanged": true,
+      "input_sha256": "18e36cbb61299d924e1cd2ce0dae4a3cb30f9b0f6a28b423d21a0fccf017ea55",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_four_sources-1001",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 1,
+        "truth_count": 6,
+        "matched_count": 1,
+        "false_surfaces": 0,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "matches": [
+          {
+            "predicted_id": "reflector-1bb65853ac24a3d8",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.08759356992392096,
+            "offset_error_m": 0.0012997607609677164,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 0.15403308399982052,
+      "source_input_unchanged": true,
+      "input_sha256": "84a1181f4c7c43438d8a04d05390fcf579496c37787293386eb10d0c11e0e167",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_four_sources-1001",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 1,
+        "truth_count": 6,
+        "matched_count": 1,
+        "false_surfaces": 0,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "matches": [
+          {
+            "predicted_id": "reflector-381dfa0100cc646a",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.08759356797663696,
+            "offset_error_m": 0.001299761071385186,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 0.3000067500033765,
+      "source_input_unchanged": true,
+      "input_sha256": "84a1181f4c7c43438d8a04d05390fcf579496c37787293386eb10d0c11e0e167",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_four_sources-1003",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 2,
+        "truth_count": 6,
+        "matched_count": 1,
+        "false_surfaces": 1,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1,
+        "precision": 0.5,
+        "recall": 0.16666666666666666,
+        "matches": [
+          {
+            "predicted_id": "reflector-49169db0ed6d7311",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.12378060430250416,
+            "offset_error_m": 0.004355102971719038,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "maximum_false_surfaces: observed 1, required 0"
+      ],
+      "runtime_s": 0.22557624999899417,
+      "source_input_unchanged": true,
+      "input_sha256": "950e47215d1d209b64fb578c610c4435f881ae38d8d716712cac6d939d5e1ef6",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_four_sources-1003",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 2,
+        "truth_count": 6,
+        "matched_count": 1,
+        "false_surfaces": 1,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1,
+        "precision": 0.5,
+        "recall": 0.16666666666666666,
+        "matches": [
+          {
+            "predicted_id": "reflector-65581704cd2f0436",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.12378058654456381,
+            "offset_error_m": 0.0043551025592361015,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "maximum_false_surfaces: observed 1, required 0"
+      ],
+      "runtime_s": 0.29004091700335266,
+      "source_input_unchanged": true,
+      "input_sha256": "950e47215d1d209b64fb578c610c4435f881ae38d8d716712cac6d939d5e1ef6",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_tangential_sources-1001",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.2463283750039409,
+      "source_input_unchanged": true,
+      "input_sha256": "869387b8dc3ce179bdd81524b5b128513e54ada46e9420670c5db316b10c137d",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_tangential_sources-1001",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.39127237500360934,
+      "source_input_unchanged": true,
+      "input_sha256": "869387b8dc3ce179bdd81524b5b128513e54ada46e9420670c5db316b10c137d",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_tangential_sources-1003",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.2919088330017985,
+      "source_input_unchanged": true,
+      "input_sha256": "4951ee39e7097e2a830d29c14602251dd5c84644545c71767952ec6476f9bc13",
+      "comparison": null
+    },
+    {
+      "case": "hidden_corner_tangential_sources-1003",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "runtime_s": 0.3783060830028262,
+      "source_input_unchanged": true,
+      "input_sha256": "4951ee39e7097e2a830d29c14602251dd5c84644545c71767952ec6476f9bc13",
+      "comparison": null
+    },
+    {
+      "case": "higher_order_four_sources-1001",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-28ad9e2811b4ec58",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.11635882346665415,
+            "offset_error_m": 0.0021362055867770735,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0241da4c436cf2e2",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.0551932071166436,
+            "offset_error_m": 0.004600661795579386,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1551c9c29d9fc8d8",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.12177057928607238,
+            "offset_error_m": 0.007201689393780519,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-3b42821b526219ee",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.1074965473663033,
+            "offset_error_m": 0.0009951392359828226,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1b489651adce7022",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.16792672959833493,
+            "offset_error_m": 0.0027147202629356215,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9699863735932775",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.1961108185991961,
+            "offset_error_m": 0.009669403974642887,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 4.608314332996088,
+      "source_input_unchanged": true,
+      "input_sha256": "48956a61d3f07d6fc60e2b85343f2a4a7a3a98bf84895af86d95a8dc6b1cb483",
+      "comparison": {
+        "original_score": 253.5585492931803,
+        "score_semantics": "Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.",
+        "compatibility_semantics": "Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.",
+        "enumerated_subsets": 1023,
+        "sufficient_alternatives": [
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "score": 58.87504303510522
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "score": 57.78115920034669
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8
+            ],
+            "score": 57.895043773568645
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              9
+            ],
+            "score": 58.03110303645856
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "score": 58.09347910692952
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            "score": 56.801159938810116
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              9
+            ],
+            "score": 56.93721920170003
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "score": 56.99959527217099
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              9
+            ],
+            "score": 57.051103774921984
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            "score": 57.113479845392945
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              9
+            ],
+            "score": 57.24953910828286
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9
+            ],
+            "score": 55.957219940163455
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "score": 56.019596010634416
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "score": 56.15565527352433
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              8,
+              9
+            ],
+            "score": 56.269539846746284
+          }
+        ],
+        "invariant_parent_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "parent_surface_ids": [
+          "reflector-28ad9e2811b4ec58",
+          "reflector-0241da4c436cf2e2",
+          "reflector-1551c9c29d9fc8d8",
+          "reflector-3b42821b526219ee",
+          "reflector-1b489651adce7022",
+          "reflector-9699863735932775",
+          "reflector-db4cd34d1115add4",
+          "reflector-09b2f2068b0ba2a0",
+          "reflector-d663f821eff75f26",
+          "reflector-ff609c528a2feaed"
+        ],
+        "extent_and_occlusion_status": "unknown",
+        "absence_established": false
+      }
+    },
+    {
+      "case": "higher_order_four_sources-1001",
+      "method": "plane_grid",
+      "status": "no_result",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 6",
+        "minimum_horizontal_surfaces: observed 0, required 2"
+      ],
+      "runtime_s": 1.689562332998321,
+      "source_input_unchanged": true,
+      "input_sha256": "48956a61d3f07d6fc60e2b85343f2a4a7a3a98bf84895af86d95a8dc6b1cb483",
+      "comparison": null
+    },
+    {
+      "case": "higher_order_four_sources-1003",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-9326b4f8901312e5",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.13477942900874978,
+            "offset_error_m": 0.004758993979295023,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2c13026a031779b6",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.035088248057720275,
+            "offset_error_m": 7.646077350176306e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-51925080c783d287",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.4418177326252321,
+            "offset_error_m": 0.012048919105701827,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2f4845f6730bfcc6",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.08063158858749928,
+            "offset_error_m": 0.0044833418780942935,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-28312be9c58d38e8",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.2911092947162503,
+            "offset_error_m": 0.009587752988985176,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6beea72981eabf34",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.16848594186210233,
+            "offset_error_m": 0.005233455958146713,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 3.971616750000976,
+      "source_input_unchanged": true,
+      "input_sha256": "15e97f05cfc0f38ad6fc4df5bdb815e01bf3e8ee85f6441bfb5a733c186caa59",
+      "comparison": {
+        "original_score": 304.5644300196822,
+        "score_semantics": "Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.",
+        "compatibility_semantics": "Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.",
+        "enumerated_subsets": 1023,
+        "sufficient_alternatives": [
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "score": 77.5145096268575
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "score": 70.65316392110466
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              9
+            ],
+            "score": 70.98698817945701
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8
+            ],
+            "score": 72.84476856543998
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "score": 75.38703413166043
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              9
+            ],
+            "score": 65.18299337369338
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            "score": 65.98342285968712
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              9
+            ],
+            "score": 66.31724711803949
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "score": 69.65062759916869
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              9
+            ],
+            "score": 69.91686358424914
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            "score": 70.7172930702429
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9
+            ],
+            "score": 60.51325231227585
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "score": 64.1804570517574
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "score": 64.98088653775115
+          },
+          {
+            "parent_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              8,
+              9
+            ],
+            "score": 65.24712252283163
+          }
+        ],
+        "invariant_parent_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "parent_surface_ids": [
+          "reflector-9326b4f8901312e5",
+          "reflector-2c13026a031779b6",
+          "reflector-51925080c783d287",
+          "reflector-2f4845f6730bfcc6",
+          "reflector-28312be9c58d38e8",
+          "reflector-6beea72981eabf34",
+          "reflector-2cdb221298d4865e",
+          "reflector-a983b72c1f934ef5",
+          "reflector-21497193666b6c39",
+          "reflector-32abfbfac6a920ed"
+        ],
+        "extent_and_occlusion_status": "unknown",
+        "absence_established": false
+      }
+    },
+    {
+      "case": "higher_order_four_sources-1003",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 9,
+        "truth_count": 6,
+        "matched_count": 2,
+        "false_surfaces": 7,
+        "missed_surfaces": 4,
+        "horizontal_matched": 2,
+        "precision": 0.2222222222222222,
+        "recall": 0.3333333333333333,
+        "matches": [
+          {
+            "predicted_id": "reflector-534d03d0280f30f9",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.15258158911727254,
+            "offset_error_m": 0.003374322159277132,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-73144f238e79f7fb",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.3482574355285626,
+            "offset_error_m": 0.012129078090812317,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "maximum_false_surfaces: observed 7, required 0",
+        "minimum_matched_surfaces: observed 2, required 6"
+      ],
+      "runtime_s": 1.7777369159957743,
+      "source_input_unchanged": true,
+      "input_sha256": "15e97f05cfc0f38ad6fc4df5bdb815e01bf3e8ee85f6441bfb5a733c186caa59",
+      "comparison": null
+    },
+    {
+      "case": "room_four_sources-1001",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-b501ab29f1733618",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.07849738349687485,
+            "offset_error_m": 0.006201990645796851,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1d23de3c1bd9163e",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.04532160639827953,
+            "offset_error_m": 0.0006184204709407393,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2b50d01183327116",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.1421657479046372,
+            "offset_error_m": 0.007739676239599369,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aefefc018389e591",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.11967234986463314,
+            "offset_error_m": 0.005364653898077165,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-5745ffdd2fcd22b1",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.14524362239027608,
+            "offset_error_m": 0.0001381843974535002,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-c1d7a1d61d206b42",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.23210105035939108,
+            "offset_error_m": 0.01153075244755064,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 0.8571911249964614,
+      "source_input_unchanged": true,
+      "input_sha256": "2882f17e2c701dbac7417e017d4827ec5b98f475f89fbf6b0b80b65b09a3c899",
+      "comparison": null
+    },
+    {
+      "case": "room_four_sources-1001",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-ef767389281c5051",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.0784973954897917,
+            "offset_error_m": 0.006201991527758244,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dc1a05e5e207e181",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.04532160030263715,
+            "offset_error_m": 0.0006184209062394252,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0ca9c57433e65c94",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.1421657568543851,
+            "offset_error_m": 0.007739676329857836,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-321bf6a06440cb40",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.11967222929837792,
+            "offset_error_m": 0.005364651833358103,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-3da2d63385ecee47",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.14524361536413394,
+            "offset_error_m": 0.0001381846558017319,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-e2c80affdd6e1ec6",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.2321009531820386,
+            "offset_error_m": 0.011530747169438915,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 0.9724151670015999,
+      "source_input_unchanged": true,
+      "input_sha256": "2882f17e2c701dbac7417e017d4827ec5b98f475f89fbf6b0b80b65b09a3c899",
+      "comparison": null
+    },
+    {
+      "case": "room_four_sources-1003",
+      "method": "mapper",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-6725e2f2799bdaa4",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.13509711181665954,
+            "offset_error_m": 0.004761708432863387,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6a07db505c679682",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.07634299670254639,
+            "offset_error_m": 0.0010703711701076646,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-601762f43babfe60",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.08640703750975398,
+            "offset_error_m": 0.004755909269268166,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6ed9f6a2b792e46e",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.4313220817114566,
+            "offset_error_m": 0.01193318317839509,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-79cd8af9ab7d4f7a",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.13519006595872946,
+            "offset_error_m": 0.004657808017556775,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-296e291f462ee8a6",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.15728426872218,
+            "offset_error_m": 0.005314444700241797,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "runtime_s": 0.89420437499939,
+      "source_input_unchanged": true,
+      "input_sha256": "f593df5449bf3423be373358f3d3ef48850f8276f1e01c9526e9d02ab6f6aa42",
+      "comparison": null
+    },
+    {
+      "case": "room_four_sources-1003",
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-c13abc4d747ea374",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.13509710318099985,
+            "offset_error_m": 0.00476170574011936,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-73e9f84cc00ebf8d",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.07634299641610374,
+            "offset_error_m": 0.0010703724127940628,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b0ac60eb3abb7abb",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.0864070990334756,
+            "offset_error_m": 0.004755910339846459,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-db6e2718333acaf6",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.13519006390172297,
+            "offset_error_m": 0.004657807845713791,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2fad839098f2b7f2",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.15728427983333865,
+            "offset_error_m": 0.005314444699670559,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 5, required 6"
+      ],
+      "runtime_s": 0.8225709580001421,
+      "source_input_unchanged": true,
+      "input_sha256": "f593df5449bf3423be373358f3d3ef48850f8276f1e01c9526e9d02ab6f6aa42",
+      "comparison": null
+    },
+    {
+      "case": "room_two_sources-1001",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "runtime_s": 0.3530512919969624,
+      "source_input_unchanged": true,
+      "input_sha256": "b654355ba1082d4a14afb394ad60dede1a67b47e42669ec2034fba1919f85fe2",
+      "comparison": null
+    },
+    {
+      "case": "room_two_sources-1001",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "runtime_s": 0.2847188749947236,
+      "source_input_unchanged": true,
+      "input_sha256": "b654355ba1082d4a14afb394ad60dede1a67b47e42669ec2034fba1919f85fe2",
+      "comparison": null
+    },
+    {
+      "case": "room_two_sources-1003",
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "runtime_s": 0.40019691699853865,
+      "source_input_unchanged": true,
+      "input_sha256": "6d8d10a4cab4cbdf425dcb9b10fd3530a6403693d15e8cfa37e1c505975da6f2",
+      "comparison": null
+    },
+    {
+      "case": "room_two_sources-1003",
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "runtime_s": 0.3224491249929997,
+      "source_input_unchanged": true,
+      "input_sha256": "6d8d10a4cab4cbdf425dcb9b10fd3530a6403693d15e8cfa37e1c505975da6f2",
+      "comparison": null
+    }
+  ],
+  "passed": false
+}

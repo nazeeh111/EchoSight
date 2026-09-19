@@ -65,3 +65,23 @@ python -m evaluation.stress --output work/stress-evaluation
 Freeze a corrected code checkpoint before comparison. The tractable problem is distinguishing physical higher-order paths and validating associations. Source qualification is a separate requirement because a distributed speaker or weak direct path can shift apparent reflectors. Develop fixes on independent development cases, then rerun preserved failures. Do not relax criteria to manufacture a pass or feed optical reference geometry into acoustic inference.
 
 A further diagnostic checks all returned baseline planes against the retained laser points without feeding results back into fitting. Two unmatched planes are at least 3.16 m and 3.30 m from every retained point. Thus the failure is not explained solely by omitted small surface annotations. Other unmatched estimates include tilted ceiling-like planes and sparse intersections; the report does not claim that all seven represent nonexistent physical surfaces. Direct-reference timing residuals against supplied poses range from −0.060 to +0.118 ms, with a 0.047 ms median. Grossly wrong direct timing is therefore not the sole explanation. These diagnostics are in `evaluation/reports/flair-point-compatibility.json` and `flair-direct-diagnostic.json`.
+
+## New experiment: calibrated source relocation (frozen, not yet evaluated)
+
+`evaluation/source_relocation_acceptance.json` freezes twelve new cases before their recordings are rendered or the joint mapper is run. Development uses only seeds 1001 and 1003; new held-out seeds begin at 1103. Existing stress and FLAIR cases and criteria stay unchanged. Room, second-order, finite-panel, hidden-parent corner, fixed-source, tangential-source and frame-mismatch cases test whether moving the emitter adds information that repeated receiver recordings cannot supply.
+
+The hidden-parent fixture keeps a true ceiling echo plus a two-wall reflection, while omitting those walls' first-order echoes. A corner image `(-sx,-sy,sz)` can look exactly like reflection in a diagonal plane for one source. Changing x/y source position changes that equivalent plane. Moving only along the corner intersection or repeating the source leaves it invariant. Unit checks establish this identity independently of fitting. Generic motion can reject this particular alias; it does not prove universal uniqueness against every higher-order or distributed-source model.
+
+The default frozen design has twelve receiver poses reused at four source positions, with an additional two-source case. The generator preserves shared receiver survey errors, correlated source survey error, and a single common effective speed. Sessions contain no room geometry, image sources or echo labels. `truth.json` is evaluation-only. The proposed bundle interface is documented in `evaluation/source_relocation_contract.md`.
+
+Acquisition burden is material. A separate development-only `--receiver-count 4` option uses four fixed noncoplanar phones at four source placements, giving sixteen recordings. It does not alter the frozen twelve-receiver cases. Seed 1001's four-phone geometry has centered singular values 2.022, 0.683 and 0.280 m. This confirms three-dimensional arrangement, not successful reconstruction.
+
+A simple comparator, `evaluation/source_relocation_baseline.py`, fits each source independently from identical observations and retains planes agreeing within 5 degrees and 0.15 m in at least 75% of source sessions (minimum two). It keeps one medoid plane's uncertainty rather than incorrectly reducing shared survey uncertainty. It can preserve an invariant phantom or fail when individual sessions remain ambiguous. The serious competitor is the joint plane-grid initializer, using the same observations and physical scorer as the joint mapper.
+
+At fixture freeze, two independent numerical/import tests pass. No new held-out source-relocation results exist yet. Example development commands:
+
+```sh
+python -m unittest evaluation.test_source_relocation
+python -m evaluation.source_relocation_simulation --output work/relocation-dev --family room_four_sources --seed 1001
+python -m evaluation.source_relocation_simulation --output work/four-phones-dev --family room_four_sources --seed 1001 --receiver-count 4
+```

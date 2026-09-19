@@ -1,0 +1,15 @@
+# Proposed source-relocation evaluation contract
+
+This file defines fixture interfaces, not a claim that the joint mapper exists.
+
+A bundle contains `schema_version`, `scene_id`, `coordinate_frame_id`, `scene_static: true`, `sessions` (relative session JSON paths), and `shared_calibration`. Each ordinary session keeps its own source position, capture metadata and raw recordings. All sessions describe the same static room in the same right-handed, metre-based frame, with z up. The source is stationary within each session and moves between sessions. Every session also declares the identical top-level `coordinate_frame_id`.
+
+Proposed shared calibration fields are `effective_speed_m_s`, `effective_speed_std_m_s`, `covariance_assumption: explicit_source_pose_covariance_independent_speed`, and `source_pose_joint_covariance_m2` with shape `(3N,3N)` for N source poses in session order. A common source-clock scale is already absorbed in effective speed. Shared source survey error creates off-diagonal covariance blocks. Reused receiver poses carry the same `receiver_pose_group_id`; a joint fitter should retain that shared survey uncertainty instead of treating every repeated recording as a new independent survey. Every capture also identifies its `device_id`.
+
+Numerical input should be a list of `{session, observations}` pairs produced by the ordinary recording pipeline, not a list of already accepted single-source planes. This allows joint cross-source evidence to recover structure that single-source output legitimately withholds. Results should retain source/session IDs in each surface's support, per-source physical path residuals, covariance semantics, rejected alternatives, and explicit frame/diversity diagnostics.
+
+The simplest comparison baseline fits each source separately using identical observations and retains geometrically agreeing planes across sources. It can fail when a parent single-source result is ambiguous or a phantom plane is invariant under degenerate motion. A serious joint plane-grid alternative should use the same raw input and scorer as the main method, changing only initialization. If that alternative is unavailable, record it as unavailable rather than inventing outputs.
+
+Fixture output is `bundle.json`, `source-00/session.json` etc., and a separate `truth.json`. Ground truth includes visibility/path labels only for evaluation. No truth fields are placed in sessions or bundles. Hidden-corner cases deliberately omit first-order echoes from two real parent walls, retaining their double-bounce path and a true ceiling echo. The fixed and tangential controls preserve the diagonal alias, while four noncoplanar source poses change it.
+
+Source relocation tests a genuine information gain, not universal uniqueness. Two reflections compose a rotation, whereas one plane reflection has a different source-to-image transformation. Generic source movement distinguishes some alternatives; moving along their invariant direction does not. Physical source directivity and changing acoustic center still require hardware qualification.

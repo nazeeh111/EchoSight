@@ -17,3 +17,6 @@ Known SOFA metadata defects: all selected `RoomDescription` fields name `020002`
 Existing research considered measured-array learned geometry, smartphone acoustic SLAM and audiovisual twins. They require different hardware, training or optical information. This release claims an inspectable acoustic measurement-to-surface loop, not invention of acoustic room mapping or dense object recognition. There is no optical reconstruction substitute.
 
 No current event was supplied in the implementation charter. Historical event dates are intentionally not treated as a present deadline. Submission, eligibility interpretation and public publication remain separate from backend delivery.
+
+
+FLAIR measured impulse responses plus laser geometry: see [bounded retrieval/license manifest](../evaluation/flair_manifest.json) and [access-depth/evaluation record](audit/EVALUATION.md). Zenodo record17037517, version1, CC-BY4.0; bounded range retrieval and subset checksums are distinguished from an unverified whole-file checksum. Measured responses are convolved with a probe for hybrid replay, not recordings from our phones. Spatial acceptance currently fails; the laser subset is incomplete reference coverage.

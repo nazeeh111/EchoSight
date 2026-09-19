@@ -1,0 +1,35 @@
+{
+  "schema_version":"1.0",
+  "frozen_before_execution":"2026-09-19, before rendering source-relocation cases or running the proposed joint mapper",
+  "development_seeds":[1001,1003],
+  "cases":[
+    {"family":"room_two_sources","seed":1103},
+    {"family":"room_four_sources","seed":1109},
+    {"family":"room_four_sources","seed":1117},
+    {"family":"higher_order_four_sources","seed":1123},
+    {"family":"higher_order_four_sources","seed":1129},
+    {"family":"hidden_corner_four_sources","seed":1151},
+    {"family":"hidden_corner_four_sources","seed":1153},
+    {"family":"hidden_corner_fixed_sources","seed":1163},
+    {"family":"hidden_corner_tangential_sources","seed":1171},
+    {"family":"finite_panel_four_sources","seed":1181},
+    {"family":"finite_panel_four_sources","seed":1187},
+    {"family":"coordinate_frame_mismatch","seed":1193}
+  ],
+  "matching":{"maximum_normal_error_deg":5.0,"maximum_offset_error_m":0.15},
+  "common":{"maximum_false_surfaces":0,"maximum_pipeline_runtime_seconds":60},
+  "requirements":{
+    "room_two_sources":{"minimum_matched_surfaces":4,"minimum_horizontal_surfaces":1},
+    "room_four_sources":{"minimum_matched_surfaces":6,"minimum_horizontal_surfaces":2},
+    "higher_order_four_sources":{"minimum_matched_surfaces":6,"minimum_horizontal_surfaces":2},
+    "hidden_corner_four_sources":{"minimum_matched_surfaces":1,"minimum_horizontal_surfaces":1,"description":"Only the true ceiling has a first-order echo; unobserved corner parent planes are not required. No equivalent diagonal phantom plane may be definitive."},
+    "hidden_corner_fixed_sources":{"maximum_definitive_surfaces":0,"allowed_status":["ambiguous","no_result"],"require_diagnostics":true},
+    "hidden_corner_tangential_sources":{"maximum_definitive_surfaces":0,"allowed_status":["ambiguous","no_result"],"require_diagnostics":true},
+    "finite_panel_four_sources":{"minimum_matched_surfaces":7,"minimum_horizontal_surfaces":2,"require_matched_truth_id":"finite-panel","maximum_claimed_physical_edges":0},
+    "coordinate_frame_mismatch":{"maximum_definitive_surfaces":0,"allowed_status":["no_result","invalid_input","rejected"],"require_diagnostics":true}
+  },
+  "comparison":"Equal raw recordings and extracted observations for the joint mapper, a joint direct-plane-grid competitor if implemented, and independent single-source consensus baseline. No truth, parent path labels, image sources or laser answers enter any fitting method.",
+  "shared_uncertainty":"One common speed/source-clock scale and shared receiver survey errors across source placements; repeated captures cannot be treated as independent new receiver calibrations. Report covariance behavior and fit sensitivity.",
+  "physical_limit":"Moving source along the corner intersection line leaves the equivalent diagonal reflector invariant. Repeating a source pose adds no discrimination. General higher-order uniqueness is not established by these finite examples.",
+  "policy":"Preserve every failure. Do not run these held-out seeds until the new joint mapper is ready at an immutable checkpoint. Use only development seeds for implementation tuning. Existing frozen stress/FLAIR criteria are unchanged."
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Source-relocation criteria and forward-model freeze before any new held-out rendering or fit",
+  "frozen_at_utc": "2026-09-19T02:40:10.979106+00:00",
+  "files": {
+    "source_relocation_acceptance.json": "626166532905ca48a53639f6521df93aecc6f2bcf8dd77618bd20b8272fd35f7",
+    "source_relocation_simulation.py": "7aa08c326ed130f233bb8511172a7a14894884c5ec8bbb25f7a10ac5e04f22a3",
+    "source_relocation_baseline.py": "0ece7d73946ec5bf6921d4a981ad14ebf9263d29f159a8b3041248af24a50293",
+    "source_relocation.py": "0433e1823811055e197e79ab8281cc43da7adbe2dcad56558d096e3545bb1c06",
+    "stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7"
+  },
+  "rendered_development_seeds": [
+    1001
+  ],
+  "heldout_rendered": false,
+  "remaining": "Validate new joint mapper on development inputs, select immutable code checkpoint, then run exactly frozen held-out cases.",
+  "selected_preheldout_files": {
+    "source_relocation_acceptance.json": "626166532905ca48a53639f6521df93aecc6f2bcf8dd77618bd20b8272fd35f7",
+    "source_relocation_simulation.py": "7aa08c326ed130f233bb8511172a7a14894884c5ec8bbb25f7a10ac5e04f22a3",
+    "source_relocation_baseline.py": "0ece7d73946ec5bf6921d4a981ad14ebf9263d29f159a8b3041248af24a50293",
+    "source_relocation.py": "0433e1823811055e197e79ab8281cc43da7adbe2dcad56558d096e3545bb1c06",
+    "stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7"
+  },
+  "freeze_note": "Original acceptance hash unchanged. A development-only four-receiver option and runner checks were added before held-out execution; original manifest hashes retained. This checkpoint freezes actual files used for the first held-out run."
+}
