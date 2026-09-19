@@ -1,0 +1,38 @@
+{
+  "commit": "659099fed613f3ed26545b0a4631a05cbb97de74",
+  "checks": [
+    {
+      "check": "original-eight",
+      "exit_code": 0,
+      "wall_s": 6.917718041993794
+    },
+    {
+      "check": "original-twelve",
+      "exit_code": 0,
+      "wall_s": 7.687302207996254
+    },
+    {
+      "check": "harder-stress",
+      "exit_code": 1,
+      "wall_s": 47.21933658300259
+    },
+    {
+      "check": "measured-flair",
+      "exit_code": 1,
+      "wall_s": 0.6649272499998915,
+      "interpretation": "Initial invocation failed before evaluation because subset path was wrong; preserved orchestration exit, not scientific evidence."
+    },
+    {
+      "check": "calibration",
+      "exit_code": 0,
+      "wall_s": 0.9596730410048622
+    },
+    {
+      "check": "measured-flair-corrected-path",
+      "exit_code": 1,
+      "report": "flair.json",
+      "interpretation": "Actual evaluated acceptance failure; main mapper ambiguous with no definitive planes."
+    }
+  ],
+  "evidence_scope": "Clean private GitHub clone; synthetic and hybrid external measured-RIR replay, no own-device validation."
+}

@@ -13,6 +13,11 @@ def _validate_result(result):
     if result.get("acquisition") is not None and not isinstance(result["acquisition"], dict):
         raise ValueError("acquisition must be an object")
     acquisition = result.get("acquisition") or {}
+    if "source_position_m" in acquisition:
+        position = acquisition["source_position_m"]
+        if not isinstance(position, list) or len(position) != 3 or any(
+            isinstance(x, bool) or not isinstance(x, (int, float)) or not np.isfinite(x) for x in position):
+            raise ValueError("source_position_m must be three finite numbers")
     if "coordinate_frame_id" in acquisition:
         frame = acquisition["coordinate_frame_id"]
         if not isinstance(frame, str) or not 1 <= len(frame) <= 160:
@@ -57,13 +62,15 @@ def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_
            "interpretation": "Changes describe inference and acoustic support; missing echoes do not establish absence.",
            "association_gates": {"angle_deg": maximum_angle_deg, "offset_m": maximum_offset_m}}
     a, b = previous.get("acquisition"), current.get("acquisition")
-    calibration_keys = ("coordinate_frame_id", "source_position_m", "sound_speed_m_s", "source_clock_scale", "probe")
-    if not a or not b or not a.get("coordinate_frame_id") or any(a.get(k) != b.get(k) for k in calibration_keys):
+    required_calibration = ("coordinate_frame_id", "source_position_m", "sound_speed_m_s", "source_clock_scale", "probe")
+    calibration_keys = required_calibration + ("effective_speed_m_s",)
+    if not a or not b or any(a.get(k) is None for k in required_calibration) or not a.get("coordinate_frame_id") or any(a.get(k) != b.get(k) for k in calibration_keys):
         out.update(status="incomparable", diagnostics=[{"code": "calibration_changed_or_missing",
             "message": "Use the same surveyed coordinate frame, source and probe, or reprocess both sessions."}])
         return out
     before = previous.get("surfaces", [])
     after = current.get("surfaces", [])
+    reference = np.asarray(a["source_position_m"], float)
     cost = np.full((len(before), len(after)), 1e6)
     differences = {}
     for i, left in enumerate(before):
@@ -71,7 +78,11 @@ def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_
             n1, n2 = np.asarray(left["normal"], float), np.asarray(right["normal"], float)
             dot = np.dot(n1, n2) / (np.linalg.norm(n1) * np.linalg.norm(n2))
             angle = float(np.degrees(np.arccos(np.clip(abs(dot), 0, 1))))
-            offset = float(right["offset_m"] * (1 if dot >= 0 else -1) - left["offset_m"])
+            sign = 1 if dot >= 0 else -1
+            # Compare signed plane offsets at a physical reference, not at the
+            # arbitrary coordinate origin when normals differ between fits.
+            offset = float(sign * (right["offset_m"] - n2 @ reference)
+                           - (left["offset_m"] - n1 @ reference))
             differences[i, j] = (angle, offset)
             if angle <= maximum_angle_deg and abs(offset) <= maximum_offset_m:
                 cost[i, j] = angle / maximum_angle_deg + abs(offset) / maximum_offset_m
@@ -88,6 +99,8 @@ def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_
             out["correspondences"].append({"track_id": left.get("track_id", left["surface_id"]),
                 "previous_surface_id": left["surface_id"], "current_surface_id": right["surface_id"],
                 "normal_change_deg": angle, "offset_change_m": offset,
+                "offset_reference_point_m": reference.tolist(),
+                "offset_semantics": "signed_plane_offset_change_at_shared_source_reference",
                 "additional_support_count": len(new_support - old_support),
                 "additional_support_capture_ids": sorted(new_support - old_support),
                 "lost_support_capture_ids": sorted(old_support - new_support)})

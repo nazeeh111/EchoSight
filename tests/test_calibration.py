@@ -76,5 +76,38 @@ class CalibrationTests(unittest.TestCase):
         session=copy.deepcopy(self.session);session['captures'][16]['receiver_position_m']=session['captures'][0]['receiver_position_m']
         with self.assertRaises(ValueError):calibrate_reference(session,self.reference)
 
+    def test_reference_and_relative_clock_timing_uncertainty_is_propagated(self):
+        from unittest.mock import patch
+        from echosight.calibration import calibrate_reference
+        from echosight.pipeline import process_session
+        observations=process_session(self.session)
+        covariances=[]
+        for direct,rate in [(0.,0.),(.00008,.0001)]:
+            data=copy.deepcopy(observations)
+            for observation in data['observations']:
+                observation['direct_std_s']=direct
+                observation['clock']['alpha_std']=rate
+            with patch('echosight.pipeline.process_session',return_value=data):
+                out=calibrate_reference(self.session,self.reference)
+            self.assertEqual(out['status'],'calibration_proposal')
+            covariances.append(np.array(out['calibration']['source_effective_speed_covariance']))
+        self.assertGreater(np.trace(covariances[1]),np.trace(covariances[0])*2)
+
+    def test_validation_cannot_reuse_one_pose_or_raw_recording(self):
+        from echosight.calibration import calibrate_reference
+        same=copy.deepcopy(self.session)
+        for capture in same['captures'][17:]:
+            capture['receiver_position_m']=same['captures'][16]['receiver_position_m']
+            capture['recording_path']=same['captures'][16]['recording_path']
+        with self.assertRaises(ValueError):calibrate_reference(same,self.reference)
+        from unittest.mock import patch
+        from echosight.pipeline import process_session
+        data=process_session(self.session)
+        data['observations'][-1]['recording_sha256']=data['observations'][-2]['recording_sha256']
+        with patch('echosight.pipeline.process_session',return_value=data):
+            out=calibrate_reference(self.session,self.reference)
+        self.assertEqual(out['status'],'rejected')
+        self.assertEqual(out['diagnostics'][-1]['code'],'reference_recordings_reused')
+
 
 if __name__=='__main__':unittest.main()

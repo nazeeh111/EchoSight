@@ -63,3 +63,5 @@ Use the held-out reports for performance claims. A useful narrative is: start wi
 ### Correcting calibration in an evolving session
 
 Use revision-checked `PATCH /v1/sessions/{id}` with `expected_revision`, `calibration` and/or capture pose updates. Raw files, hashes and evidence provenance remain immutable. Active jobs keep their old calibration snapshot and their outputs become stale; a new job processes the revised session. A shared source/effective-speed covariance must remain a complete pair with its effective speed. `calibrate-reference` creates an inspectable proposal with held-out recording evidence, not a physical-validation certificate.
+
+Comparison offsets use the shared source position as their physical reference: `offset_change_m` is the signed plane-offset change there, with `offset_reference_point_m` and `offset_semantics` explicit. This avoids changing associations when the coordinate origin moves and fitted normals differ slightly. Effective propagation speed must also match; missing calibration metadata returns `incomparable`. This display comparison does not establish a controlled physical scene change.

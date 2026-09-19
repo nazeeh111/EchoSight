@@ -56,7 +56,9 @@ def calibrate_reference(session, reference):
     points = np.asarray([captures[c]['receiver_position_m'] for c in train+held],float)
     if np.any((points@normal-offset)*(source@normal-offset)<=0):
         raise ValueError('source and receivers must be on one side of reference plane')
-    if len(np.unique(points[:len(train)],axis=0)) != len(train) or any(np.min(np.linalg.norm(points[:len(train)]-p,axis=1))<.001 for p in points[len(train):]):
+    pairwise=np.linalg.norm(points[:,None,:]-points[None,:,:],axis=2)
+    np.fill_diagonal(pairwise,np.inf)
+    if np.min(pairwise)<.001:
         raise ValueError('training views must be distinct and validation poses held out spatially')
     # A receiver plane through the source cannot identify a source displacement
     # normal to that plane. The Jacobian guard below covers less obvious cases.
@@ -84,7 +86,20 @@ def calibrate_reference(session, reference):
          'clock_interpretation':'Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.',
          'conditional_on':['stationary effective point source','correct isolated reference reflection','surveyed poses and reference plane','affine within-recording clocks','no path-dependent unmodeled delay']}
     if failures:return out
-    delay=np.asarray([c['delay_s'] for c in selected]);sigma=np.asarray([c['delay_std_s'] for c in selected])
+    hashes=[observations[cid].get('recording_sha256') for cid in train+held]
+    if None in hashes or len(set(hashes)) != len(hashes):
+        out['diagnostics'].append({'code':'reference_recordings_reused','message':'Independent calibration and validation recordings require distinct preserved raw bytes.'})
+        return out
+    delay=np.asarray([c['delay_s'] for c in selected])
+    timing_variance=[]
+    for cid,candidate in zip(train+held,selected):
+        observation=observations[cid];clock=observation.get('clock',{})
+        relative_rate_std=clock.get('alpha_std',0.)/clock.get('alpha',1.)
+        # One selected path per capture: direct-reference and clock terms are
+        # diagonal here. They are separate from candidate-local scatter.
+        timing_variance.append(candidate['delay_std_s']**2+observation.get('direct_std_s',1e-5)**2
+                               +(candidate['delay_s']*relative_rate_std)**2)
+    sigma=np.sqrt(timing_variance)
     pose_std=np.asarray([captures[c].get('receiver_position_std_m',.01) for c in train+held])
     axis=np.eye(3)[np.argmin(np.abs(normal))];u=np.cross(normal,axis);u/=np.linalg.norm(u);w=np.cross(normal,u)
     def predict(theta, ref=np.zeros(3)):

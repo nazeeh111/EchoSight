@@ -1,0 +1,46 @@
+test_missing_uncertainty_invalid_partition_and_degenerate_poses (tests.test_calibration.CalibrationTests.test_missing_uncertainty_invalid_partition_and_degenerate_poses) ... ok
+test_raw_calibration_improves_independent_pose_predictions (tests.test_calibration.CalibrationTests.test_raw_calibration_improves_independent_pose_predictions) ... ok
+test_reference_and_relative_clock_timing_uncertainty_is_propagated (tests.test_calibration.CalibrationTests.test_reference_and_relative_clock_timing_uncertainty_is_propagated) ... ok
+test_shared_reference_uncertainty_is_not_divided_by_capture_count (tests.test_calibration.CalibrationTests.test_shared_reference_uncertainty_is_not_divided_by_capture_count) ... ok
+test_validation_cannot_reuse_one_pose_or_raw_recording (tests.test_calibration.CalibrationTests.test_validation_cannot_reuse_one_pose_or_raw_recording) ... ok
+test_validation_model_shift_is_not_silently_refitted (tests.test_calibration.CalibrationTests.test_validation_model_shift_is_not_silently_refitted) ... ok
+test_active_view_separates_mirror (tests.test_inference.InferenceTests.test_active_view_separates_mirror) ... ok
+test_baseline_same_shape (tests.test_inference.InferenceTests.test_baseline_same_shape) ... ok
+test_bistatic_forward_and_point (tests.test_inference.InferenceTests.test_bistatic_forward_and_point) ... ok
+test_candidate_clutter_no_definitive_surfaces (tests.test_inference.InferenceTests.test_candidate_clutter_no_definitive_surfaces) ... ok
+test_double_bounce_not_a_definitive_diagonal_wall (tests.test_inference.InferenceTests.test_double_bounce_not_a_definitive_diagonal_wall)
+Coherent higher-order paths can fit a nonexistent plane exactly. ... ok
+test_effective_speed_is_not_relabelled_physical_sound_speed (tests.test_inference.InferenceTests.test_effective_speed_is_not_relabelled_physical_sound_speed) ... ok
+test_higher_order_does_not_hide_receiver_mirror (tests.test_inference.InferenceTests.test_higher_order_does_not_hide_receiver_mirror) ... ok
+test_joint_calibration_covariance_matches_numerical_derivative (tests.test_inference.InferenceTests.test_joint_calibration_covariance_matches_numerical_derivative) ... ok
+test_mirror_ambiguity (tests.test_inference.InferenceTests.test_mirror_ambiguity) ... ok
+test_near_parallel_dimension_translation_invariant (tests.test_inference.InferenceTests.test_near_parallel_dimension_translation_invariant)
+A two-degree pair has no unique global distance; use a stated line. ... ok
+test_nearly_symmetric_indefinite_calibration_is_rejected (tests.test_inference.InferenceTests.test_nearly_symmetric_indefinite_calibration_is_rejected) ... ok
+test_null_cancel_and_insufficient (tests.test_inference.InferenceTests.test_null_cancel_and_insufficient) ... ok
+test_off_receiver_plane_source_still_mirrored (tests.test_inference.InferenceTests.test_off_receiver_plane_source_still_mirrored) ... ok
+test_parallel_dimension_has_no_reference_location_term (tests.test_inference.InferenceTests.test_parallel_dimension_has_no_reference_location_term) ... ok
+test_repeated_poses_do_not_confirm_geometry (tests.test_inference.InferenceTests.test_repeated_poses_do_not_confirm_geometry) ... ok
+test_room_unlabeled (tests.test_inference.InferenceTests.test_room_unlabeled) ... ok
+test_two_bounce_path_obeys_reflection_law (tests.test_inference.InferenceTests.test_two_bounce_path_obeys_reflection_law) ... ok
+test_uncertainty_shared_and_residual (tests.test_inference.InferenceTests.test_uncertainty_shared_and_residual) ... ok
+test_unmatched_elevated_view_does_not_remove_mirror (tests.test_inference.InferenceTests.test_unmatched_elevated_view_does_not_remove_mirror) ... ok
+test_unobserved_parent_planes_leave_order_unresolved (tests.test_inference.InferenceTests.test_unobserved_parent_planes_leave_order_unresolved) ... ok
+test_ambiguity_resolution_is_named_without_inventing_scene_change (tests.test_evolution.EvolutionTests.test_ambiguity_resolution_is_named_without_inventing_scene_change) ... ok
+test_effective_speed_change_is_incomparable (tests.test_evolution.EvolutionTests.test_effective_speed_change_is_incomparable) ... ok
+test_extra_views_preserve_track_and_explain_support (tests.test_evolution.EvolutionTests.test_extra_views_preserve_track_and_explain_support) ... ok
+test_frame_or_probe_change_refuses_surface_comparison (tests.test_evolution.EvolutionTests.test_frame_or_probe_change_refuses_surface_comparison) ... ok
+test_malformed_geometry_is_rejected (tests.test_evolution.EvolutionTests.test_malformed_geometry_is_rejected) ... ok
+test_missing_surface_does_not_claim_physical_removal (tests.test_evolution.EvolutionTests.test_missing_surface_does_not_claim_physical_removal) ... ok
+test_non_string_coordinate_frame_is_rejected (tests.test_evolution.EvolutionTests.test_non_string_coordinate_frame_is_rejected) ... ok
+test_surface_tracking_is_invariant_to_coordinate_origin (tests.test_evolution.EvolutionTests.test_surface_tracking_is_invariant_to_coordinate_origin) ... ok
+test_unidentified_or_changed_coordinate_frame_is_incomparable (tests.test_evolution.EvolutionTests.test_unidentified_or_changed_coordinate_frame_is_incomparable) ... ok
+test_bad_input_has_nonzero_exit_without_traceback (tests.test_cli.CLITests.test_bad_input_has_nonzero_exit_without_traceback) ... ok
+test_export_and_replay_are_real_processing_commands (tests.test_cli.CLITests.test_export_and_replay_are_real_processing_commands) ... ok
+test_inspect_prints_result_evidence_summary (tests.test_cli.CLITests.test_inspect_prints_result_evidence_summary) ... ok
+test_probe_has_explicit_channel_and_file_hash (tests.test_cli.CLITests.test_probe_has_explicit_channel_and_file_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 16.586s
+
+OK

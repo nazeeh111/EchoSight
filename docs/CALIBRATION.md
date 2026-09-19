@@ -23,7 +23,7 @@ A reference file contains:
 }
 ```
 
-The unit normal n and offset d mean n·x=d in the session frame. Every capture must belong to exactly one partition; rejected observations are reported, never silently dropped. There must be exactly one detected echo in the physically allowed reference window at every stop. Multiple or missing candidates reject the calibration instead of choosing the one closest to the desired answer. A room with several nearby echoes may need a simpler reference arrangement. This is deliberately an isolated-reference calibration procedure, not a general echo-label oracle.
+The unit normal n and offset d mean n·x=d in the session frame. All training and validation positions must be mutually distinct by at least1mm, and preserved recording hashes must be distinct. Unique capture IDs alone do not establish independent measurements. Every capture must belong to exactly one partition; rejected observations are reported, never silently dropped. There must be exactly one detected echo in the physically allowed reference window at every stop. Multiple or missing candidates reject the calibration instead of choosing the one closest to the desired answer. A room with several nearby echoes may need a simpler reference arrangement. This is deliberately an isolated-reference calibration procedure, not a general echo-label oracle.
 
 ## Model, uncertainty and acceptance
 
@@ -31,7 +31,7 @@ For source s, reference normal n/offset d, receiver r and effective speed v=c/ka
 
 `q=s+2(d−n·s)n`, `delay=(||r−q||−||r−s||)/v`.
 
-Four unknowns are source x/y/z and log(v). Weighted least squares uses only training delays extracted from recordings. The Jacobian must have adequate rank, the fit must stay inside the declared search bounds, and the held-out stops are never refitted. The prediction variance includes recording timing and receiver survey noise. A separate shared reference-plane offset/orientation sensitivity propagates into source/speed covariance without dividing the survey uncertainty by the number of recordings. The covariance is conditional and linearized; wrong path identity or dispersive hardware can invalidate it.
+Four unknowns are source x/y/z and log(v). Weighted least squares uses only training delays extracted from recordings. The Jacobian must have adequate rank, the fit must stay inside the declared search bounds, and the held-out stops are never refitted. The prediction variance includes candidate-local timing, direct-reference timing, relative clock-rate uncertainty and receiver survey noise. For one selected echo per recording, the timing variance is `candidate_std² + direct_std² + (delay × alpha_std/alpha)²`. A separate shared reference-plane offset/orientation sensitivity propagates into source/speed covariance without dividing the survey uncertainty by the number of recordings. The covariance is conditional and linearized; wrong path identity or dispersive hardware can invalidate it.
 
 A proposal requires training and held-out normalized RMS≤2.5, held-out maximum normalized residual≤3.5, held-out absolute RMS≤100µs and maximum absolute residual≤200µs. These gates implement an initial calibration requirement, not measured hardware performance. Failure means preserve inputs and investigate source route/band, receiver processing, reference ambiguity or survey precision. Do not enlarge the uncertainty simply to pass.
 

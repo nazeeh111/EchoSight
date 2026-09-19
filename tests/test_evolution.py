@@ -70,5 +70,27 @@ class EvolutionTests(unittest.TestCase):
         b["acquisition"]["coordinate_frame_id"]={"frame":"room"}
         with self.assertRaises(ValueError): compare_results(a,b)
 
+    def test_surface_tracking_is_invariant_to_coordinate_origin(self):
+        import math
+        from echosight.evolution import compare_results
+        a,b=result(),result(2.01)
+        b['surfaces'][0]['normal']=[math.cos(.035),math.sin(.035),0.]
+        before=compare_results(a,b)
+        self.assertEqual(len(before['correspondences']),1)
+        for scene in (a,b):
+            scene['acquisition']['source_position_m'][1]+=100
+            for surface in scene['surfaces']:
+                surface['offset_m']+=100*surface['normal'][1]
+        after=compare_results(a,b)
+        self.assertEqual(len(after['correspondences']),1)
+        self.assertAlmostEqual(before['correspondences'][0]['offset_change_m'],after['correspondences'][0]['offset_change_m'])
+
+    def test_effective_speed_change_is_incomparable(self):
+        from echosight.evolution import compare_results
+        a,b=result(),result()
+        a['acquisition']['effective_speed_m_s']=343.
+        b['acquisition']['effective_speed_m_s']=346.
+        self.assertEqual(compare_results(a,b)['status'],'incomparable')
+
 
 if __name__ == "__main__": unittest.main()

@@ -152,6 +152,20 @@ class InferenceTests(unittest.TestCase):
         self.assertGreater(guidance['predicted_median_delay_separation_s'],1e-5)
         self.assertEqual(guidance['receiver_only_discrimination_possible'],False)
 
+    def test_higher_order_does_not_hide_receiver_mirror(self):
+        rng=np.random.default_rng(9021);source=np.array([1.7,1.2,1.1])
+        positions=rng.uniform([.6,.5,.3],[3.8,3.4,2.7],(12,3));positions[:,2]=1.1
+        session=dict(session_id='combined',source_position_m=source.tolist(),source_position_std_m=.003,sound_speed_m_s=343.,sound_speed_std_m_s=.2)
+        images=[image_source(source,[1,0,0],0),image_source(source,[0,1,0],0),image_source(source,[0,0,1],3.4),np.array([-1.7,-1.2,1.1])]
+        observations=[dict(capture_id=str(i),status='ok',receiver_position_m=r.tolist(),receiver_position_std_m=.003,direct_std_s=2e-5,candidates=[dict(candidate_id=f'{i}-{j}',delay_s=float(excess_delay(source,r,q,343)),delay_std_s=2e-5,amplitude=1) for j,q in enumerate(images)]) for i,r in enumerate(positions)]
+        out=infer_scene(session,observations)
+        self.assertEqual(out['surfaces'],[])
+        self.assertIn('first_order_vs_higher_order_ambiguity',out['diagnostics'])
+        self.assertIn('support_coplanar_mirror_ambiguity',out['diagnostics'])
+        self.assertIn('coplanar_mirror',[h['hypothesis_id'] for h in out['hypotheses']])
+        self.assertTrue(any(g.get('action')=='move_source_for_reflection_order_discrimination' for g in out['guidance']))
+        self.assertTrue(any('height' in g.get('action','') for g in out['guidance']))
+
     def test_two_bounce_path_obeys_reflection_law(self):
         from echosight.geometry import reflection_path
         source=np.array([1.7,1.2,1.1]);receiver=np.array([2.6,.8,2.])

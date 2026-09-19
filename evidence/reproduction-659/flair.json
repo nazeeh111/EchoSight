@@ -1,0 +1,1405 @@
+{
+  "schema_version": "1.0",
+  "source_sha256": {
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/signals.py": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+    "echosight/evolution.py": "8b05097619beb38859c3e573e0ea20c59daa7a876df0438d1375b6037eb5eeba",
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/api.py": "b37ec722b98666c819b1131bdab2083267678930eeb6691f2e360f5a1409c7ae",
+    "echosight/cli.py": "4b29a2f423e15b287abb11cc617e64ff41294089491497271873b0d4ee8bdb5d",
+    "echosight/pipeline.py": "3c12f74d8579f1fecbe177bf3bf967adb5ac684a7e55002c1e816c8c1dfb1ab2",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "echosight/storage.py": "be1b66fd645929c49d4a5dc4163335a51d550449758af60013f20ea338cfb42a",
+    "echosight/inference.py": "ee1867b46a0c4403ceb109a91c1d8c61de5bf53ea5f38ea9d73d6c0164126e34",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "echosight/calibration.py": "45b2224ddaf8b1da4b0e530a3bdeaf1ef8f44df30ed52a135db1d61a5673648a",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "evaluation/run.py": "ef32222b5bdf1ee1ca9f4190c7f27f4298b3559df6b00f514ac3d2d6d2b17454",
+    "evaluation/calibration_development.py": "94a7586c989dada47abb76cbca44ce65f61794772ff901e5c1be2745aadc3eba",
+    "evaluation/stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7",
+    "evaluation/flair_subset.py": "b5132ff1266eff524f74b05d9173d7f346310a00a7bc5e32cbf64b80f4343407",
+    "evaluation/__init__.py": "27112db071291f12c1b8138daab004ff7b003512a093a3382aa42555cf7a6478",
+    "evaluation/physics_development.py": "bae2f2872aebbae6431680ff4874c15a8ac6e9916b6c0a7b606c376c7e3080b4",
+    "evaluation/stress.py": "0bbd84f9fb980990fbd52ef196221364421b356bc791bf897a6e4cbf2f156249",
+    "evaluation/flair.py": "67c4381a213771f384247f8bcc3432aac96ed98315d7c04c623d17d87f72fe6c",
+    "evaluation/test_audit_harness.py": "a363a42e40e45fe1f83032e281d209556f8b0c8d5a311e6f691395e1134991e4",
+    "evaluation/external.py": "962ae38ba5e51177ae56875e5585bd3d96c85bb48c3fc1d8f585c4dd3b5aff4e",
+    "evaluation/guidance.py": "02f712b676e36c2089a38a167f13b16e9c8a4756c16180e745a80a24904023d9"
+  },
+  "source_unchanged_during_run": true,
+  "input_subset_sha256": "0e9767b0dc351fb7c9bd5e6ed4dde09f9cc3252805e143cd52f2a5da0efb86d8",
+  "git_commit": "659099fed613f3ed26545b0a4631a05cbb97de74",
+  "dataset": "FLAIR measuredRIRhybridreplay with independentlaserreference",
+  "laser_annotations": {
+    "schema_version": "1.0",
+    "surfaces": [
+      {
+        "surface_id": "laser-plane-0",
+        "normal": [
+          -0.0004354092288840935,
+          -0.003380125667141891,
+          -0.9999941925677758
+        ],
+        "offset_m": 1.5591747947744388,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 1035,
+        "rms_point_residual_m": 0.004868210683481248,
+        "support_bbox_m": [
+          [
+            -3.3787872791290283,
+            -2.2660717964172363,
+            -1.575181007385254
+          ],
+          [
+            2.295079469680786,
+            3.2440526485443115,
+            -1.5258874893188477
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-1",
+        "normal": [
+          0.0005892496764615539,
+          -0.000690983861536159,
+          0.999999587662976
+        ],
+        "offset_m": 1.1497596275170652,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 971,
+        "rms_point_residual_m": 0.006264206114422611,
+        "support_bbox_m": [
+          [
+            -3.414964437484741,
+            -2.175942897796631,
+            1.1099863052368164
+          ],
+          [
+            2.238884449005127,
+            3.1563425064086914,
+            1.176377296447754
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-2",
+        "normal": [
+          0.1466896310413114,
+          0.9891802479555034,
+          0.0021422417354123153
+        ],
+        "offset_m": 2.782529040012934,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 354,
+        "rms_point_residual_m": 0.00651421383850337,
+        "support_bbox_m": [
+          [
+            -2.7155210971832275,
+            2.4941248893737793,
+            -1.526625633239746
+          ],
+          [
+            2.1880993843078613,
+            3.2243494987487793,
+            0.7564945220947266
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-3",
+        "normal": [
+          -0.986194858509715,
+          0.16315645414421795,
+          -0.0282784815732581
+        ],
+        "offset_m": 3.1183491160348256,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 366,
+        "rms_point_residual_m": 0.012592679002637237,
+        "support_bbox_m": [
+          [
+            -3.4334909915924072,
+            -1.5888872146606445,
+            -1.4868497848510742
+          ],
+          [
+            -2.5913212299346924,
+            3.260056495666504,
+            1.1031970977783203
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-4",
+        "normal": [
+          0.9893121749189404,
+          -0.14578908748842562,
+          0.002638659972003856
+        ],
+        "offset_m": 1.887547777254649,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 338,
+        "rms_point_residual_m": 0.008567913949527429,
+        "support_bbox_m": [
+          [
+            1.613334059715271,
+            -2.1316192150115967,
+            -1.519021987915039
+          ],
+          [
+            2.2620201110839844,
+            2.5386078357696533,
+            0.736231803894043
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-5",
+        "normal": [
+          -0.14916146589884982,
+          -0.9888095844911653,
+          -0.0025421859324685904
+        ],
+        "offset_m": 2.080101646029634,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 290,
+        "rms_point_residual_m": 0.006419391466983857,
+        "support_bbox_m": [
+          [
+            -3.408200979232788,
+            -2.3243093490600586,
+            -1.6305456161499023
+          ],
+          [
+            1.619969129562378,
+            -1.5883619785308838,
+            1.1281166076660156
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-6",
+        "normal": [
+          -0.003074765280226202,
+          -0.0005461666536228179,
+          0.9999951237483401
+        ],
+        "offset_m": 1.0729394583891765,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 166,
+        "rms_point_residual_m": 0.009934525855289663,
+        "support_bbox_m": [
+          [
+            -3.411870241165161,
+            -2.0762393474578857,
+            1.0317115783691406
+          ],
+          [
+            2.177295684814453,
+            3.1225175857543945,
+            1.1032304763793945
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-7",
+        "normal": [
+          -0.09729517328638412,
+          -0.9952427502393004,
+          -0.005051470210356422
+        ],
+        "offset_m": 1.8795135225492223,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 203,
+        "rms_point_residual_m": 0.012832424196670595,
+        "support_bbox_m": [
+          [
+            -3.423628568649292,
+            -2.0503997802734375,
+            -1.2615938186645508
+          ],
+          [
+            1.5876959562301636,
+            -1.5251593589782715,
+            0.9607009887695312
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-8",
+        "normal": [
+          0.14700841106348567,
+          0.9891349974974206,
+          -0.0006955590321363954
+        ],
+        "offset_m": 2.836843258251853,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 169,
+        "rms_point_residual_m": 0.004634976151586607,
+        "support_bbox_m": [
+          [
+            -2.7064743041992188,
+            2.52311635017395,
+            -1.522414207458496
+          ],
+          [
+            2.2240285873413086,
+            3.269862413406372,
+            1.051544189453125
+          ]
+        ]
+      },
+      {
+        "surface_id": "laser-plane-9",
+        "normal": [
+          -0.1533827042430874,
+          -0.9881555176852054,
+          -0.004734860859754157
+        ],
+        "offset_m": 2.1972689177447173,
+        "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+        "point_count": 162,
+        "rms_point_residual_m": 0.004819714130825326,
+        "support_bbox_m": [
+          [
+            -2.6337006092071533,
+            -1.9554414749145508,
+            -1.5217399597167969
+          ],
+          [
+            -1.7349927425384521,
+            -1.779205322265625,
+            0.48636436462402344
+          ]
+        ]
+      }
+    ],
+    "reference": "Independently measured laser scan prefix",
+    "remaining_points": 928
+  },
+  "acceptance_sha256": "e2725839aec510272f6787a4f968f39048f8cd8ac53d4b4eae9d496d9d705f12",
+  "pose_singular_values_m": [
+    4.537415953562139,
+    1.6351789796953253,
+    0.9123641030954951
+  ],
+  "cases": [
+    {
+      "method": "mapper",
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "runtime_seconds": 5.501168041999335,
+      "failures": [
+        "minimum_matched_surfaces: observed0, required3",
+        "minimum_horizontal_surfaces: observed0, required1"
+      ],
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "flair-00",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-01",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-02",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-03",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-04",
+          "status": "ok",
+          "candidates": 16,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-05",
+          "status": "ok",
+          "candidates": 9,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-06",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-07",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-08",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-09",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-10",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-11",
+          "status": "ok",
+          "candidates": 11,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-12",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-13",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-14",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-15",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-16",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-17",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-18",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-19",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-20",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-21",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-22",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-23",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "plane_grid",
+      "status": "partial",
+      "metrics": {
+        "predicted_count": 10,
+        "truth_count": 10,
+        "matched_count": 2,
+        "false_surfaces": 8,
+        "missed_surfaces": 8,
+        "horizontal_matched": 1,
+        "precision": 0.2,
+        "recall": 0.2,
+        "matches": [
+          {
+            "predicted_id": "reflector-4d0e24126440",
+            "truth_id": "laser-plane-4",
+            "normal_error_deg": 2.295376682099771,
+            "offset_error_m": 0.010194473880989152,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-e38804ac3293",
+            "truth_id": "laser-plane-0",
+            "normal_error_deg": 3.078691313507507,
+            "offset_error_m": 0.05825283149788629,
+            "horizontal": true,
+            "offset_95pct_covered": false,
+            "normal_95pct_covered": false
+          }
+        ]
+      },
+      "runtime_seconds": 4.271608750001178,
+      "failures": [
+        "minimum_matched_surfaces: observed2, required3",
+        "maximum_false_surfaces: observed8, required0"
+      ],
+      "diagnostics": [
+        "proposal_budget_reached",
+        "refinement_budget_reached"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "flair-00",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-01",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-02",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-03",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-04",
+          "status": "ok",
+          "candidates": 16,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-05",
+          "status": "ok",
+          "candidates": 9,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-06",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-07",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-08",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-09",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-10",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-11",
+          "status": "ok",
+          "candidates": 11,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-12",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-13",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-14",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-15",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-16",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-17",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-18",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-19",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-20",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-21",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-22",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-23",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "first_echo",
+      "status": "ok",
+      "metrics": {
+        "predicted_count": 2,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 2,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": []
+      },
+      "runtime_seconds": 0.09448724999674596,
+      "failures": [
+        "minimum_matched_surfaces: observed0, required3",
+        "minimum_horizontal_surfaces: observed0, required1",
+        "maximum_false_surfaces: observed2, required0"
+      ],
+      "diagnostics": [],
+      "recording_status": [
+        {
+          "capture_id": "flair-00",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-01",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-02",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-03",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-04",
+          "status": "ok",
+          "candidates": 16,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-05",
+          "status": "ok",
+          "candidates": 9,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-06",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-07",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-08",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-09",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-10",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-11",
+          "status": "ok",
+          "candidates": 11,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-12",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-13",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-14",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-15",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-16",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-17",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-18",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-19",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-20",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-21",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-22",
+          "status": "ok",
+          "candidates": 18,
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "flair-23",
+          "status": "ok",
+          "candidates": 13,
+          "diagnostics": [
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "passed": false,
+  "limits": "Measured laboratory RIRs replayed through generatedprobe convolution, not ourphone recordings. Laserprefix incompleteness limits referencecoverage. Unmatched returnedplanes need spatial pointcloudinspection beforecalling them trulyfalse; rawunmatchedcount remainsreported. No-result is honestbutdoesnotpassspatialvalidation."
+}

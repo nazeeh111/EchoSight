@@ -1,41 +1,37 @@
 # EchoSight active implementation state
 
-**Status: baseline research prototype; charter objective unmet and native goal active.** User explicitly rejected the near-completion framing and requested full requirement audit plus continued specialist implementation. [Original charter](docs/CHARTER.md), [continued-work instruction](docs/CHARTER_ADDENDUM.md), [coverage matrix](docs/audit/COVERAGE.md).
+**Baseline research prototype. Charter objective unmet; native goal active.** Scope: [charter](docs/CHARTER.md), [continued-work instruction](docs/CHARTER_ADDENDUM.md), [coverage matrix](docs/audit/COVERAGE.md). Preserve selected Astra model/effort. No software evidence establishes our iPhone accuracy.
 
-Authority: private repo branches/ordinary commits/push/default-branch integration and missing write invitations authorized. No deployment, public publication, paid services, global configuration or credential changes. One existing EchoSight vault index note authorized. Current model/effort unchanged.
+Authority: private project branches, ordinary commits/push/default-branch integration and missing collaborator invitations authorized. No paid services, public deployment, ownership changes or global installs. One existing EchoSight vault index authorized. Checkout is this directory; branch/default `backend/implementation`. Last verified remote commit **659099fed613f3ed26545b0a4631a05cbb97de74**. Teammate `Oltans_UI/UX` untouched. GitHub access: nazeeh111 owner/admin, sinha-ritwik accepted write, littleapple08 pending write invitation333732214; no duplicate invitations.
 
-Checkout: this directory, branch `backend/implementation`, GitHub's current default. Last pushed/verified code: `1c773367f787a551aec0f15fc244b5fe9290dee3`. Collaborator `Oltans_UI/UX` branch untouched. Prior access check: nazeeh111 owner/admin, sinha-ritwik accepted write, littleapple08 pending write invitation333732214; no duplicates sent.
+## Load-bearing conventions
 
-Verified baseline: 69 tests in a clean GitHub clone; original/extended frozen suites and external-response replay reproduced; independent assembled review at565769a plus bounded review at1c77336. [Reproduction](evidence/final-reproduction.json), [review](evidence/independent-review-565769a.md), [baseline history](evidence/BASELINE_STATE_HISTORY.md). “Final” in historical filenames refers to the earlier verification pass, **not charter completion**.
+Plane n·x=d; reflected source q=s+2(d−n·s)n; excess source-buffer delay=(|r−q|−|r−s|)/(c/kappa). Never halve bistatic delays. Surveyed acoustic centers are supplied. Relative source/receiver clocks do not identify physical source clock. Optional joint source/effective-speed covariance replaces separate source/speed/rate budgets. Support meshes are not physical edges, enclosure or empty space. Local covariance is conditional on model and path identity. Truth stays outside fitting.
 
-Physics conventions: n·x=d; reflected source q=s+2(d−n·s)n; excess source-buffer delay=(|r−q|−|r−s|)/(c/kappa). Never halve a bistatic delay. Surveyed acoustic-center poses are supplied. Source physical rate is not established by relative clock correction. Support meshes are not physical edges/enclosure/empty space. Local covariance is conditional on model/path identity. Ground truth stays outside fitting.
+## Executed evidence and current limits
 
-Separate evidence: synthetic twelve-view cases6/6 room planes and designated tilted case7/7, zero false in those narrow suites; eight-view misses remain. External data are measured RIRs convolved with probes,20/25accepted5rejected; no measured spatial accuracy. No own-device recordings. Unresolved coherent multipath, source/direct-reference assumptions and wrong-model reliability materially limit the demonstration.
+- Software:659099f reproduced95tests in clean GitHub clone; raw recording core/API/CLI, bounded import, immutable provenance, revisions, cancellation/recovery/export, empirical reference-calibration proposal and higher-order alternatives. [Reproduction](evidence/reproduction-659/checks.json).
+- Synthetic: original8/12-view regressions pass. New13-case stress acceptance **fails**: conservative higher-order abstention removes false planes but also necessary recovery; overlapping/finite-panel structure still missed. [Stress](evidence/reproduction-659/stress.json).
+- External measured: FLAIR24 measuredRIR hybrid replay with independent laser reference **fails** spatial acceptance. Main mapper ambiguous/no definitive planes. Matched grid baseline2, unmatched8. This is not own-device acquisition. [FLAIR](evidence/reproduction-659/flair.json). dEchorate affine retry accepts21/25 but retains one suspect direct path; source/direct-model discrepancy unresolved.
+- Own devices: none measured. No hardware accuracy established.
+- Scientific: higher-order/source aliasing, chance associations, finite reflectors/diffraction, waveform model bias and wrong-model uncertainty remain material.
 
-Active specialists and exclusive ownership: physics_audit(signals/simulation/test_signals), inference(inference/geometry/test_inference), backend(storage/API and their tests), evaluation(evaluation modules/new frozen families/measured-data search). Coordinator owns pipeline/evolution/CLI/architecture/matrix/state/commits. Independent reviewer idle until a new assembled milestone; no implementation ownership. No daemon/automation is running.
+[Independent review659](evidence/independent-review-659099f.md) verified prior persistence repairs and found3P2 issues. Current review-fix checkpoint includes missing calibration direct/rate variance, duplicated held-out pose/raw rejection and composed higher-order/mirror/rank diagnostics. Coordinator also repaired origin-dependent comparison and effective-speed mismatch handling. Targeted evidence linked in matrix after execution. Prior state history: [audit](evidence/AUDIT_STATE_HISTORY.md), [baseline](evidence/BASELINE_STATE_HISTORY.md).
 
-Prioritized work:
-1. Reproduce higher-order phantom planes and wrong-model confidence; implement justified competing interpretations/guards.
-2. Stress signal extraction with source distortion, overlapping paths and clock/discontinuity effects.
-3. Fix immutable raw decode/hash/store snapshot; verify cancellation publication; implement safe calibration revisions.
-4. Find external measured geometry and independently freeze harder simulation families without editing old acceptance.
-5. Add controlled repeat-acquisition scene comparison and exact hardware qualification thresholds.
-6. Integrate/review/reproduce and push coherent verified checkpoints continuously.
+## Active work and ownership
 
-Next coordinator action: finish coverage matrix against specialist evidence; adopt immutable read snapshot into pipeline after backend interface lands; develop controlled-comparison contract after physical priorities are grounded. Preserve runnable baseline and all failure reports. Do not report completion while these tractable gaps remain.
+- Coordinator: integration, calibration/evolution/CLI/API, state, frequent verified commits; isolated density-aware clutter alternative in `work/density-trial.py` (analytic development only).
+- physics_audit: isolated empirical direct-kernel joint waveform estimator/covariance; main signals frozen. More paths recovered, but one new diffuse-null false plane blocks promotion. Source-dependent filter bias remains.
+- inference: new `multisource.py` experimental joint moved-source solver. Development rooms6/6 and panels7/7, but higher-order scenes each4false;4phones×4sources only1plane. Studying explicit higher-order alternative; frozen held-out evaluation not run.
+- evaluation: new controlled A–B–B–A core/tests frozen for coordinator integration. Four fixed phones yield repeated acoustic change without localization;12static receivers support one conditional plane change in simulation. Preparing exact hardware acceptance only, no hardware request.
+- independent_review: read-only, finished659 review; next bounded review after fixes committed. No separate backend writer active. No daemon/automation.
 
-## Audit milestone in progress
+## Prioritized next actions
 
-Published coverage/evidence checkpoint: `6f50be0` (baseline remains1c77336). Backend fixes now passed36 targeted storage/API/pipeline tests: immutable raw snapshot, cancellation-publication lock, CSV sample-gap rejection, failed creation rollback and revision-checked calibration PATCH. Clock retry independently improved development15/27→27/27 with0/30invalid controls accepted; its frozen suites preserved prior counts. Inference reproduced coherent double-bounce phantom planes; competing explanations/joint calibrated source-speed covariance are being integrated.
+1. Commit/push verified review fixes and immutable failure evidence, then narrow fresh follow-up.
+2. Address chance associations and higher-order moved-source false planes with equal-input alternatives; retain failures, no held-out tuning.
+3. Integrate controlled recording comparison into bounded API/CLI with cancellation, recovery and versioned schemas; verify realistic4-phone limitation.
+4. Resolve timing covariance/overlap branch only if measurable gain survives null controls; retain baseline while experimental.
+5. Tighten operational acquisition/hardware acceptance and finish remaining charter matrix gaps; repeat clean reproduction/review at coherent milestones.
 
-Correction: baseline20/25 external acceptance at defaultspacing included one difficultsource5 channel with5.58ms model discrepancy; only1s spacing rejected allfive. Prior blanketstatement was wrong. `docs/SIGNAL_MODEL.md` and `docs/EVALUATION.md` now distinguish channel outcomes.
-
-Evaluation retrieved a bounded8.46MB FLAIR subset (24 measuredRIR,4982 independentlaserpoints,CC-BY4.0). New harder13case criteria and measuredspatialcriteria frozen before execution; live-treeexploration fails multiple recoverygates, so immutablebaseline comparison runs next. No measuredspatialaccuracy established.
-
-Coordinator sourcecalibration experiment: independentlysurveyed referenceplane,16training+4heldout rawsynthetic recordings; effective sourceposition/combinedc-kappa fit reduces heldoutRMS247us→0.91us. Newcalibration.py is EXPERIMENTAL/uncommitted, needs malformed/degenerate/wrongmodel tests and correlatedcovariance integration before any usableclaim. Knownreferenceplane is suppliedcalibration, never inferredroomtruth.
-
-## Integrated audit checkpoint ready
-
-95assembled tests pass, including new rawreference calibration, jointcalibration propagation and repaired reviewerP2job-publication/archivehash races. Portable reports: `evidence/audit-integrated-tests.txt`, `evidence/audit-calibration/`, `evidence/audit-inference/`, `evidence/audit-physics/`; [updated matrix](docs/audit/COVERAGE.md). New stress/FLAIR baseline failures are in `evaluation/reports/`; spatialacceptance is unmet.
-
-Next: commit/push this coherent implementation, run immutable original+harder+FLAIR regressions, independent review of repaired persistence and new calibration/model math. Physics specialist is testing empiricaldirect-kernel jointwaveformfit in isolatedwork: development83/84overlap paths vs60/84baseline, false1vs9; notintegrated orqualified. Inference/evaluation specialists are designing source-relocation disambiguation (newmodules, no edits to this frozen core). Controlledscenecomparison remains missing. Backendcodewriter finished; reviewerawaitsidentifiednewcommit.
+Do not declare completion or request device experiments while independent software work remains. Save consequential findings before compaction; inspect active workers and authoritative files after recovery. No claim execution survives runtime termination.

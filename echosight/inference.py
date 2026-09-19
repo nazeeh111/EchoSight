@@ -452,7 +452,9 @@ def _run(session,observations,cancel,progress,method):
             out['higher_order_explanations']=higher_order
             out['hypotheses'].append(dict(hypothesis_id='first_order_reflector_interpretation',surfaces=all_surfaces,reason='A genuine reflector remains possible, including one coincident with a double-bounce image.'))
             out['hypotheses'].append(dict(hypothesis_id='fewer_surfaces_with_second_order_paths',surfaces=[surface for k,surface in enumerate(all_surfaces) if k not in uncertain],higher_order_explanations=higher_order,reason='Physically admissible double-bounce paths explain these additional images without asserting extra physical planes. Unknown finite extents and occlusion remain.'))
-            out['surfaces']=[];out['status']='ambiguous'
+            # Retain selected surfaces until all independent ambiguity checks
+            # have run; higher-order ambiguity must not hide mirror/rank evidence.
+            out['status']='ambiguous'
             out['diagnostics'].append('first_order_vs_higher_order_ambiguity')
             out['guidance'].append(_source_discrimination_guidance(higher_order[0],qs,s,r,v))
         # Receiver-only coplanarity is sufficient for fixed-source image mirror
@@ -489,6 +491,8 @@ def _run(session,observations,cancel,progress,method):
             pose_candidates=[(r[0]+sign*.8*np.eye(3)[axis]).tolist() for axis in range(3) for sign in (-1,1)]
             recommendation=recommend_next_view(session,out,pose_candidates)
             out['guidance'].append(dict(action='Change receiver height or move out of the support plane and survey its new position.',**recommendation,reason='Same-plane additional captures cannot remove a global mirror ambiguity. Missing echoes do not resolve it.'))
+        if higher_order:
+            out['surfaces']=[]
         for a,b in combinations(range(len(out['surfaces'])),2):
             pa,pb=out['surfaces'][a],out['surfaces'][b];ia,ib=origins[pa['surface_id']],origins[pb['surface_id']];na=np.array(pa['normal']);nb=np.array(pb['normal']);dot=float(na@nb)
             if abs(dot)>np.cos(np.deg2rad(3)) and out['status']!='ambiguous':
