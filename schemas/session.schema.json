@@ -6,6 +6,7 @@
   "properties": {
     "schema_version": {"const": "1.0", "default": "1.0"},
     "session_id": {"$ref": "#/$defs/id"},
+    "coordinate_frame_id": {"type": "string", "minLength": 1, "maxLength": 160},
     "source_position_m": {"$ref": "#/$defs/position"},
     "source_position_std_m": {"type": "number", "minimum": 0, "maximum": 10, "default": 0.01},
     "sound_speed_m_s": {"type": "number", "minimum": 250, "maximum": 450, "default": 343},

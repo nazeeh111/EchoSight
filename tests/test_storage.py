@@ -19,6 +19,11 @@ def wav_bytes():
 
 
 class StorageTests(unittest.TestCase):
+    def test_coordinate_frame_identity_is_a_bounded_string(self):
+        for frame in [{"frame": "room"}, [], "", "x" * 161]:
+            with self.subTest(frame=frame), self.assertRaises(ValueError):
+                validate_session({"coordinate_frame_id": frame})
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory(); self.root = Path(self.tmp.name)
         self.wav = self.root / 'input.wav'; self.wav.write_bytes(wav_bytes())

@@ -12,6 +12,11 @@ def _validate_result(result):
         raise ValueError("unsupported result schema version")
     if result.get("acquisition") is not None and not isinstance(result["acquisition"], dict):
         raise ValueError("acquisition must be an object")
+    acquisition = result.get("acquisition") or {}
+    if "coordinate_frame_id" in acquisition:
+        frame = acquisition["coordinate_frame_id"]
+        if not isinstance(frame, str) or not 1 <= len(frame) <= 160:
+            raise ValueError("coordinate_frame_id must be a string of 1 to 160 characters")
     for key, limit in (("surfaces", 128), ("observations", 32)):
         items = result.get(key, [])
         if not isinstance(items, list) or len(items) > limit or any(not isinstance(x, dict) for x in items):

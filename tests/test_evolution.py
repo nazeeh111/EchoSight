@@ -63,5 +63,12 @@ class EvolutionTests(unittest.TestCase):
         del a["acquisition"]["coordinate_frame_id"];del b["acquisition"]["coordinate_frame_id"]
         self.assertEqual(compare_results(a,b)["status"],"incomparable")
 
+    def test_non_string_coordinate_frame_is_rejected(self):
+        from echosight.evolution import compare_results
+        a,b=result(),result()
+        a["acquisition"]["coordinate_frame_id"]={"frame":"room"}
+        b["acquisition"]["coordinate_frame_id"]={"frame":"room"}
+        with self.assertRaises(ValueError): compare_results(a,b)
+
 
 if __name__ == "__main__": unittest.main()

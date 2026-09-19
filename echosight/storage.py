@@ -68,6 +68,10 @@ def validate_session(spec):
     if s.get('schema_version', SCHEMA_VERSION) != SCHEMA_VERSION: raise ValueError('unsupported schema_version')
     s.setdefault('schema_version', SCHEMA_VERSION)
     if 'session_id' in s: _id(s['session_id'])
+    if 'coordinate_frame_id' in s:
+        frame = s['coordinate_frame_id']
+        if not isinstance(frame, str) or not 1 <= len(frame) <= 160:
+            raise ValueError('coordinate_frame_id must be a string of 1 to 160 characters')
     for key, default, low, high in (
         ('sound_speed_m_s',343.,250,450), ('sound_speed_std_m_s',.6,0,30),
         ('source_clock_scale',1.,.98,1.02), ('source_clock_std_ppm',100.,0,20000),
