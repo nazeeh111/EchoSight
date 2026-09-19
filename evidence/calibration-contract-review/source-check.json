@@ -1,0 +1,14 @@
+{
+  "base": "27bb6a42f06924b66711360ddb24bc3bfc24a6b3",
+  "candidate": "38ce3ffcbca671fa00134284d53cdf9aef82dc90",
+  "optimizer_noise_uncertainty_acceptance_block_byte_identical": true,
+  "block_sha256": "4caf18c0fc5c10a1dcbf9cb909c7d43dab576672def9464a9b2212c7f9ed27d8",
+  "source_hashes": {
+    "echosight/calibration.py": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931",
+    "schemas/calibration-result.schema.json": "c77b7f5404c60fecb338d887066a131414fa534e47ec9b92fa0258eae2bb69f0",
+    "schemas/calibration-reference.schema.json": "7f8469b34bd9b2da80252034d9bbbc3dc5efd44cac63cb5cef244a2ca2b1f006"
+  },
+  "runtime_changed_paths": [
+    "echosight/calibration.py"
+  ]
+}

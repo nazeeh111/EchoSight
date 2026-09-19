@@ -15,5 +15,7 @@
     "review-source-calibration.md": true,
     "review-source-calibration.py": true
   },
-  "scope": "Calibration artifact repair first; frozen scientific gates/failures retained."
+  "scope": "Calibration artifact repair first; frozen scientific gates/failures retained.",
+  "historical_handoff_payloads_preserved": 26,
+  "archive_diff_check": "Archived patch has three original whitespace-only context lines; preserved verbatim to retain hash. Active source/schema/test diff check passes."
 }

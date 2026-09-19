@@ -15,13 +15,10 @@ python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m echosight demo work/demo --seed 1 --captures 12
-python -m echosight process work/demo/session.json --output work/demo/reprocessed.json
 python -m echosight inspect work/demo/result.json
-python -m echosight refine-demo work/refinement --seed 1
-python -m echosight export work/demo/session.json --output work/survey.zip
-python -m echosight replay work/survey.zip --store work/replay-store --output work/replayed.json
-python -m echosight serve --root work/store --port 8765
 ```
+
+The demo generates twelve simulated recordings and processes them into `work/demo/result.json`; it already includes the mapping step. To process your own session, run `python -m echosight process session.json --output result.json`. To start the local API, run `python -m echosight serve --root work/store --port 8765`.
 
 Run from the repository root. Installation of the package itself is optional; `python -m echosight` works directly. For an installed command, run `python -m pip install -e .` then use `echosight`.
 
@@ -46,14 +43,7 @@ For later physical acquisition, `python -m echosight probe work/playback --chann
 
 Imported archive computations are quarantined as unverified artifacts. Replay recomputes from original recordings instead of trusting stored geometry. Session IDs are immutable within a store; use a new replay-store directory when importing the same archive again.
 
-For repeatable acoustic-change controls:
-
-```sh
-python -m evaluation.controlled_development --output work/controlled-demo --receivers 4 --scenario moved
-python -m echosight controlled work/controlled-demo/protocol.json --output work/controlled-demo/result.json
-```
-
-Four fixed phones support unlocalized repeatable change in this synthetic example. A separate twelve-static-receiver development case supports conditional reflector displacement. See [controlled protocol](docs/audit/CONTROLLED.md), [API](docs/API.md) and [fixed later hardware acceptance](docs/HARDWARE_ACCEPTANCE.md). These are bounded software capabilities, not physical validation.
+Optional [refinement, comparison and export/replay workflows](docs/FRONTEND_HANDOFF.md) use the same recordings and contracts. [Controlled acoustic-change experiments](docs/audit/CONTROLLED.md) are secondary to room mapping; their four-phone synthetic case detects repeatable unlocalized change, not a reconstructed object.
 
 ## Project evidence
 

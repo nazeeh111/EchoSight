@@ -1,0 +1,45 @@
+{
+  "mixed_read_signal_rejection": {
+    "status": "rejected",
+    "hash_states": [
+      "not_available",
+      "verified",
+      "not_available",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified",
+      "verified"
+    ],
+    "schema_valid": true
+  },
+  "numeric_and_assertion_identity": {
+    "equal_numeric_identity": true,
+    "removed_assertions_change_identity": true,
+    "fit_unchanged": true
+  },
+  "mixed_rejection_replay": {
+    "identity_equal": true,
+    "diagnostics_equal": true
+  },
+  "real_cli_sigint": {
+    "exit_code": 130,
+    "prior_output_unchanged": true,
+    "stderr": "EchoSight cancelled"
+  },
+  "checked_examples": {
+    "proposal_and_four_rejections_schema_valid": true
+  }
+}

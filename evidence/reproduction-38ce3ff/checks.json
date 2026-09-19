@@ -1,0 +1,53 @@
+{
+  "commit": "38ce3ffcbca671fa00134284d53cdf9aef82dc90",
+  "source": "fresh GitHub clone",
+  "setup": "new venv and newly downloaded pinned requirements-test.txt; pip check passed",
+  "clean_worktree": true,
+  "demo": {
+    "status": "partial",
+    "surfaces": 6,
+    "horizontal_surfaces": 2,
+    "observations": 12,
+    "runtime_s": 0.4824970409972593,
+    "diagnostics": [
+      "refinement_budget_reached"
+    ]
+  },
+  "exact_geometry_and_raw_hashes_after_replay": true,
+  "calibration_examples": {
+    "proposal": {
+      "status_input_id_and_raw_bindings_equal": true,
+      "artifact_byte_identical": false,
+      "source_max_delta_m": 1.7632473259254766e-10,
+      "speed_delta_m_s": 3.5060509162576636e-08,
+      "covariance_max_abs_delta": 1.6838725969137158e-08,
+      "predicted_delay_max_delta_s": 1.6200929486842597e-13
+    },
+    "rejected-malformed-probe": {
+      "status_input_id_and_raw_bindings_equal": true,
+      "artifact_byte_identical": true
+    },
+    "rejected-missing-probe": {
+      "status_input_id_and_raw_bindings_equal": true,
+      "artifact_byte_identical": true
+    },
+    "rejected-planar": {
+      "status_input_id_and_raw_bindings_equal": true,
+      "artifact_byte_identical": true
+    },
+    "rejected-validation": {
+      "status_input_id_and_raw_bindings_equal": true,
+      "artifact_byte_identical": false,
+      "predicted_delay_max_delta_s": 1.6200929486842597e-13
+    }
+  },
+  "cross_installation_comparison": "Input/status/raw bytes exact; fitted floats agree numerically, not bitwise. Output calibration hash can differ. Tolerances are software reproducibility checks, not frozen scientific acceptance changes.",
+  "all_eight_historical_review_manifest_hashes_pass": true,
+  "evidence_class": "software/simulation, not physical accuracy",
+  "tests": {
+    "count": 210,
+    "seconds": 59.184,
+    "result": "passed",
+    "command": "python -m unittest discover -s tests -v"
+  }
+}
