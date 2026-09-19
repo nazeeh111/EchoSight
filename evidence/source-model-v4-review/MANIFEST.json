@@ -1,0 +1,12 @@
+{
+  "scope": "Exact original independent review plus portable path-only adaptation; no new classifier fits or recordings",
+  "reviewed_snapshot_sha256": "587df54570155117f92df5a970e47e335a371ecaef31cc16d38f2e6a95108187",
+  "files": {
+    "README.md": "5c3016ef345893109da8d3e28e439e36b9d38b28c3e38ea20fa12d4c7bf76c52",
+    "checks.json": "846f2bcd85a41b8ced18a9359c48ec6b38ae50ddf85b42c65f1e6589cf623f15",
+    "original-check.py": "ab9b625e33520130f5893bb6639690af56c65eed10e297c30a7673eae18a38f8",
+    "original-review.md": "2772a285373566681d1a345ba702dba9b3523b2dea7c71ec1d4027cf197f1a52",
+    "reproduce.py": "6306edae0a1f9c887c948893f6481f076ea76a781c26c5f7d6e6b97f5160f691",
+    "archival-verification.json": "aa1551cd4a12cbeef79d641f099f38b895f38bd162c6a3b53eae0f4fffc1452a"
+  }
+}

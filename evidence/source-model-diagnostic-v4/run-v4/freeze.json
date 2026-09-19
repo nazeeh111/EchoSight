@@ -1,0 +1,26 @@
+{
+  "hashes": {
+    "work/source-model-diagnostic/V4-DESIGN.md": "fd6997f582afa60ce30fc0550da77826e647d3abe1b8299a358451eb88cde542",
+    "work/source-model-diagnostic/gain_v4.py": "0581f9e312232e67a4576d1d1421bcb66d565111750436fbc384d472174cb36c",
+    "work/source-model-diagnostic/check_v4.py": "3d72faa3ba9a3bee9887e5f92e8eb865238c74d9a2b3d1384928676f70c62b14",
+    "work/source-model-diagnostic/run_v4.py": "9f121f1aa778a3b1b33d1e14ca692f5b1fb3d8684aa00e14b76c7edb6d865cc5",
+    "work/source-model-diagnostic/diagnostic_v4.py": "d64cc279c48c4d9890296e76b929236740dac6b067bbba351491bf1114b1de34",
+    "work/source-model-diagnostic/waveform_v4.py": "fc3fbaf571fd5aff2cc3f376e23703cc7d60fe8f87a561e8b9f5a014d1c3a92b",
+    "work/source-model-diagnostic/render_v4.py": "e7bb148c4200a6f02073628e9f827cb59c63e5ea4678165e2d80fb30eecd77a7",
+    "work/source-model-diagnostic/diagnostic_v3.py": "81ad33f98ff9bd901cad12cc0a17961658a78765d637d56c21b871873d038612",
+    "work/source-model-diagnostic/waveform_v3.py": "199d0e031b2b24637a95343d7a4d8a1caccb522473df8c2c5e7d77c2ffdaf69e",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c"
+  },
+  "core_commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "prior_snapshot": "b5de1137125e098c6e546463abb18495585fdbcc48b2c3ed5b7fe3b2c896e417",
+  "v3_results_sha256": "5debb3dcc9f52b836bb56c821cd840d696b854a2354dd477164c22757c48032d",
+  "math_checks_sha256": "eca9f619942d0d45c51c9448a612e09c6458dcc627cce4ca9927b59391c89bcf",
+  "fresh_seeds": [
+    2441,
+    2459
+  ],
+  "before_new_generation": true,
+  "frozen_unix_time": 1789793400.351336
+}

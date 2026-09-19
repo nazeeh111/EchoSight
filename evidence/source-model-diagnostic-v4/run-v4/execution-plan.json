@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "family": "single_room",
+      "seed": 2441,
+      "manifest_sha256": "80c7c53c128b989a5857eef2a17fe0cb01b688e67a86455c0734cb08efa63a59"
+    },
+    {
+      "family": "single_room",
+      "seed": 2459,
+      "manifest_sha256": "a887ddd971e7d3c96bdfe84bfc30af4f8b450fa9ce3fb8ca54d4ff3bf73edd67"
+    },
+    {
+      "family": "dual_room",
+      "seed": 2441,
+      "manifest_sha256": "c610c551d0d039d357161df0943722d09f65915030cd5c8b1196ca8c895ead77"
+    },
+    {
+      "family": "dual_room",
+      "seed": 2459,
+      "manifest_sha256": "dc4bbd8d533dba763def5ca23306ef4b60bbf46603cf97aa63d06e50715dc7c5"
+    },
+    {
+      "family": "near_reflector",
+      "seed": 2441,
+      "manifest_sha256": "f6eaa95c50a9cb8a00c1e9694269ad1882b092a765187501bbe324c796d7cc29"
+    },
+    {
+      "family": "near_reflector",
+      "seed": 2459,
+      "manifest_sha256": "035bf973a71f66116f81fa521714f5dd67c874768a1eb1fe29ba620b022425ea"
+    },
+    {
+      "family": "direct_null",
+      "seed": 2441,
+      "manifest_sha256": "16a7fe36cecc75567ccccd41db66d93298bfa711a79646da6b2abb16865e3fa4"
+    },
+    {
+      "family": "direct_null",
+      "seed": 2459,
+      "manifest_sha256": "183dcb443f3a3a110cef7ee50a7d1dc1a40b1a49013ceccf7e1efd9efeb1ac3e"
+    },
+    {
+      "family": "receiver_filter",
+      "seed": 2441,
+      "manifest_sha256": "c78b472fe7ecc0a3b1f5a7fdccff32b5e505d1419378d967a37405ba361d3274"
+    },
+    {
+      "family": "receiver_filter",
+      "seed": 2459,
+      "manifest_sha256": "97a9df8251e28de9ea5f0a49422490a02e277793f70a7e1e9b8661f7f13ec5a4"
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2441,
+      "manifest_sha256": "df375d5bf1fb87059b38c4e380cd2ac8b6997bfbe55c11be917afafe19d27ab2"
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2459,
+      "manifest_sha256": "5f18bc276646c7355f2229fcf3ee818b7f7edf84b23f7b3f36706c5da49714f7"
+    }
+  ],
+  "hashes": {
+    "work/source-model-diagnostic/V4-DESIGN.md": "fd6997f582afa60ce30fc0550da77826e647d3abe1b8299a358451eb88cde542",
+    "work/source-model-diagnostic/gain_v4.py": "0581f9e312232e67a4576d1d1421bcb66d565111750436fbc384d472174cb36c",
+    "work/source-model-diagnostic/check_v4.py": "3d72faa3ba9a3bee9887e5f92e8eb865238c74d9a2b3d1384928676f70c62b14",
+    "work/source-model-diagnostic/run_v4.py": "9f121f1aa778a3b1b33d1e14ca692f5b1fb3d8684aa00e14b76c7edb6d865cc5",
+    "work/source-model-diagnostic/diagnostic_v4.py": "d64cc279c48c4d9890296e76b929236740dac6b067bbba351491bf1114b1de34",
+    "work/source-model-diagnostic/waveform_v4.py": "fc3fbaf571fd5aff2cc3f376e23703cc7d60fe8f87a561e8b9f5a014d1c3a92b",
+    "work/source-model-diagnostic/render_v4.py": "e7bb148c4200a6f02073628e9f827cb59c63e5ea4678165e2d80fb30eecd77a7",
+    "work/source-model-diagnostic/diagnostic_v3.py": "81ad33f98ff9bd901cad12cc0a17961658a78765d637d56c21b871873d038612",
+    "work/source-model-diagnostic/waveform_v3.py": "199d0e031b2b24637a95343d7a4d8a1caccb522473df8c2c5e7d77c2ffdaf69e",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c"
+  }
+}

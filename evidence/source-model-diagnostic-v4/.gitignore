@@ -1,0 +1,2 @@
+# Preserve the exact manifest-listed execution log despite parent/global rules.
+!run-v4/execution.log

@@ -1,0 +1,51 @@
+{
+  "family": "direct_null",
+  "seed": 2459,
+  "source_index": 2,
+  "capture_id": "capture-01",
+  "actual_alpha": 1.0014913832594845,
+  "actual_offset_s": 0.034994865040894337,
+  "estimated_clock": {
+    "alpha": 1.0013484353454214,
+    "alpha_std": 3.083794481696286e-05,
+    "relative_rate_ppm": 1348.435345421395,
+    "intercept_s": 0.038826469392755636,
+    "intercept_includes_propagation": true,
+    "pilot_residual_rms_s": 5.7112673051011894e-05,
+    "pilot_residual_max_s": 9.965073524509371e-05,
+    "pilot_arrivals_receiver_s": [
+      0.13891114029663837,
+      0.48943301245540005,
+      0.8399549055414591,
+      1.1904768207752352,
+      1.540767870223838,
+      1.8912881754586284,
+      2.241808265528736
+    ],
+    "pilot_residuals_s": [
+      -5.017263065942856e-05,
+      -2.528427952008805e-07,
+      4.968787236625527e-05,
+      9.965073524509371e-05,
+      -8.125218704968518e-05,
+      -3.289932315686528e-05,
+      1.523837605343914e-05
+    ],
+    "correction": "affine_waveform_resampling",
+    "absolute_source_rate_calibrated": false,
+    "acquisition_template_rate_refined": false
+  },
+  "physical_pilot_start_errors_s": [
+    3.863087794728215e-05,
+    3.851889588935009e-05,
+    3.842784112895181e-05,
+    3.83589340853252e-05,
+    -0.00019257575813136363,
+    -0.00019425466416089776,
+    -0.00019614873487272533
+  ],
+  "rate_error_ppm": -142.94791406310736,
+  "direct_std_s": 0.00010796033172954,
+  "inference": "Step across pilot errors is consistent with selected acquisition-correlation lobe switching. No new template fit or core change performed.",
+  "diagnostic_not_fit_input": true
+}

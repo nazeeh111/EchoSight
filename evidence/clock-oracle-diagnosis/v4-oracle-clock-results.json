@@ -1,0 +1,556 @@
+{
+  "core_signals_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "oracle_code_sha256": "8fdffc0bc82c7575c8d08b0181670d9ca4566d901517593ea77df5252d1624f7",
+  "true_clock_convention": "raw y(t_receiver)=x((t_receiver-offset)/alpha); alpha includes receiver relative to source-buffer seconds, so equal to fitted alpha target",
+  "scope": "Evaluation-only true-rate template diagnosis on three exposed development cases. No new mapping/guard runs, no production/source-prototype changes, no operational recommendation.",
+  "cases": [
+    {
+      "family": "direct_null",
+      "seed": 2459,
+      "source_index": 2,
+      "capture_id": "capture-01",
+      "raw_sha256": "53ac97e08710f8b5b404d41ea022456ed9f101fbe90ffc57597a47d132a10920",
+      "actual_alpha": 1.0014913832594845,
+      "original": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.0013484353454214,
+          "alpha_std": 3.083794481696286e-05,
+          "relative_rate_ppm": 1348.435345421395,
+          "intercept_s": 0.038826469392755636,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 5.7112673051011894e-05,
+          "pilot_residual_max_s": 9.965073524509371e-05,
+          "pilot_arrivals_receiver_s": [
+            0.13891114029663837,
+            0.48943301245540005,
+            0.8399549055414591,
+            1.1904768207752352,
+            1.540767870223838,
+            1.8912881754586284,
+            2.241808265528736
+          ],
+          "pilot_residuals_s": [
+            -5.017263065942856e-05,
+            -2.528427952008805e-07,
+            4.968787236625527e-05,
+            9.965073524509371e-05,
+            -8.125218704968518e-05,
+            -3.289932315686528e-05,
+            1.523837605343914e-05
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": false
+        },
+        "rate_error_ppm": -142.94791406310736,
+        "rate_standardized_error": -4.635455277956032,
+        "direct_std_s": 0.00010796033172954,
+        "candidate_count": 1,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "direct_response_amplitude": 0.028497887862770303,
+        "noise_response_amplitude": 1.57685464655776e-06,
+        "normalizer_at_zero": -0.02787064082387731,
+        "geometric_excess_timing_errors": []
+      },
+      "oracle_template_retry": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.0014911086410445,
+          "alpha_std": 1.1248942649084144e-06,
+          "relative_rate_ppm": 1491.1086410445141,
+          "intercept_s": 0.038725636280595846,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 4.1856573848700644e-08,
+          "pilot_residual_max_s": 7.026086112915664e-08,
+          "pilot_arrivals_receiver_s": [
+            0.13887479516311763,
+            0.4893966450247872,
+            0.8399184991159067,
+            1.1904403657061555,
+            1.5409622532439178,
+            1.8914841747189426,
+            2.242006145551755
+          ],
+          "pilot_residuals_s": [
+            4.801841732571255e-08,
+            9.855721294638187e-09,
+            -2.407752486277559e-08,
+            -4.551164156652021e-08,
+            -4.5998244990741455e-08,
+            -1.2547585637179282e-08,
+            7.026086112915664e-08
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": true
+        },
+        "rate_error_ppm": -0.2746184399882168,
+        "rate_standardized_error": -0.24412822480748927,
+        "direct_std_s": 4.1666666666666665e-05,
+        "candidate_count": 0,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "direct_response_amplitude": 0.1728938410022153,
+        "noise_response_amplitude": 1.5770712095599982e-06,
+        "normalizer_at_zero": 0.17194639120503433,
+        "geometric_excess_timing_errors": []
+      }
+    },
+    {
+      "family": "single_room",
+      "seed": 2459,
+      "source_index": 2,
+      "capture_id": "capture-01",
+      "raw_sha256": "253391190d08cbc12843f2e29e6890b1c2aeeb9ea4775327eb43ba66383b07d3",
+      "actual_alpha": 1.0014913832594845,
+      "original": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.0013484346244255,
+          "alpha_std": 3.083861442721222e-05,
+          "relative_rate_ppm": 1348.4346244254652,
+          "intercept_s": 0.03882646937632205,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 5.711391318654849e-05,
+          "pilot_residual_max_s": 9.965179647775102e-05,
+          "pilot_arrivals_receiver_s": [
+            0.138911140553547,
+            0.4894330122990538,
+            0.8399549055365811,
+            1.190476820990889,
+            1.54076786607311,
+            1.8912881716815224,
+            2.2418082672261814
+          ],
+          "pilot_residuals_s": [
+            -5.017228521761452e-05,
+            -2.526582597583982e-07,
+            4.9688460718622096e-05,
+            9.965179647775102e-05,
+            -8.125523985036409e-05,
+            -3.2901749986935513e-05,
+            1.52416761229901e-05
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": false
+        },
+        "rate_error_ppm": -142.94863505903697,
+        "rate_standardized_error": -4.635378006247196,
+        "direct_std_s": 0.00010796081178368113,
+        "candidate_count": 6,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "direct_response_amplitude": 0.028494680556845363,
+        "noise_response_amplitude": 1.9197459673315334e-06,
+        "normalizer_at_zero": -0.027868163740826762,
+        "geometric_excess_timing_errors": [
+          {
+            "path_kind": "wall-0-0-emitter-0",
+            "actual_excess_s": 0.004369936799764568,
+            "nearest_candidate_id": "capture-01:echo:01",
+            "error_s": 2.5333442020348054e-06,
+            "path_error_m": 0.0008697726457628369,
+            "conditional_standardized_error": 0.017559973893004906,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-0-1-emitter-0",
+            "actual_excess_s": 0.021828279122886617,
+            "nearest_candidate_id": "capture-01:echo:05",
+            "error_s": 3.1005840663497763e-06,
+            "path_error_m": 0.001064523014532744,
+            "conditional_standardized_error": 0.021441383322391802,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-0-emitter-0",
+            "actual_excess_s": 0.009436408982792856,
+            "nearest_candidate_id": "capture-01:echo:03",
+            "error_s": -1.1894176418086877e-07,
+            "path_error_m": -4.0836256218242986e-05,
+            "conditional_standardized_error": -0.0008210706184735626,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-1-emitter-0",
+            "actual_excess_s": 0.011526367120011061,
+            "nearest_candidate_id": "capture-01:echo:04",
+            "error_s": 5.209756114938832e-05,
+            "path_error_m": 0.017886647050289816,
+            "conditional_standardized_error": 0.3605490607495007,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-0-emitter-0",
+            "actual_excess_s": 0.005438472763422375,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": -8.31585812558315e-05,
+            "path_error_m": -0.028550821944634704,
+            "conditional_standardized_error": -0.6410956464657072,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-1-emitter-0",
+            "actual_excess_s": 0.005338291665730938,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": 1.7022516435606302e-05,
+            "path_error_m": 0.005844337751595925,
+            "conditional_standardized_error": 0.13123193476887254,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          }
+        ]
+      },
+      "oracle_template_retry": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.00149110875234,
+          "alpha_std": 1.1248942649084144e-06,
+          "relative_rate_ppm": 1491.1087523399312,
+          "intercept_s": 0.038725636516685764,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 4.1969834907408885e-08,
+          "pilot_residual_max_s": 7.04254010663874e-08,
+          "pilot_arrivals_receiver_s": [
+            0.13887479558580024,
+            0.4893966452528182,
+            0.8399184993873563,
+            1.1904403660383434,
+            1.5409622533915583,
+            1.8914841752200298,
+            2.242006146197235
+          ],
+          "pilot_residuals_s": [
+            4.8193880469726835e-08,
+            9.797579414438928e-09,
+            -2.4131201481480957e-08,
+            -4.554353316699178e-08,
+            -4.625363714261255e-08,
+            -1.2488484912864806e-08,
+            7.04254010663874e-08
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": true
+        },
+        "rate_error_ppm": -0.2745071445708902,
+        "rate_standardized_error": -0.24402928624873002,
+        "direct_std_s": 4.1666666666666665e-05,
+        "candidate_count": 5,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "direct_response_amplitude": 0.17289692082728214,
+        "noise_response_amplitude": 1.9391407290003537e-06,
+        "normalizer_at_zero": 0.17195119199862893,
+        "geometric_excess_timing_errors": [
+          {
+            "path_kind": "wall-0-0-emitter-0",
+            "actual_excess_s": 0.004369936799764568,
+            "nearest_candidate_id": "capture-01:echo:00",
+            "error_s": 4.7539916196107784e-07,
+            "path_error_m": 0.00016321871562506338,
+            "conditional_standardized_error": 0.00806779128064432,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-0-1-emitter-0",
+            "actual_excess_s": 0.021828279122886617,
+            "nearest_candidate_id": "capture-01:echo:04",
+            "error_s": 4.789789995671145e-07,
+            "path_error_m": 0.00016444778067808814,
+            "conditional_standardized_error": 0.008128542463728124,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-0-emitter-0",
+            "actual_excess_s": 0.009436408982792856,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": 1.0967581148997596e-07,
+            "path_error_m": 3.765497821385739e-05,
+            "conditional_standardized_error": 0.00186126021077068,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-1-emitter-0",
+            "actual_excess_s": 0.011526367120011061,
+            "nearest_candidate_id": "capture-01:echo:03",
+            "error_s": -4.7297684709415866e-07,
+            "path_error_m": -0.00016238706266255687,
+            "conditional_standardized_error": -0.008026683068451236,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-0-emitter-0",
+            "actual_excess_s": 0.005438472763422375,
+            "nearest_candidate_id": "capture-01:echo:01",
+            "error_s": -1.3118389122386553e-08,
+            "path_error_m": -4.503934367055192e-06,
+            "conditional_standardized_error": -0.00022262644456414984,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-1-emitter-0",
+            "actual_excess_s": 0.005338291665730938,
+            "nearest_candidate_id": "capture-01:echo:01",
+            "error_s": 0.00010016797930231542,
+            "path_error_m": 0.03439065576186357,
+            "conditional_standardized_error": 1.6999069693373174,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          }
+        ]
+      }
+    },
+    {
+      "family": "near_reflector",
+      "seed": 2459,
+      "source_index": 2,
+      "capture_id": "capture-01",
+      "raw_sha256": "0fe30897d30d4e8c8e3ecf73d40b65e965dc776251e893fc70258184077785c0",
+      "actual_alpha": 1.0014913832594845,
+      "original": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.0013484261789931,
+          "alpha_std": 3.0828029032292734e-05,
+          "relative_rate_ppm": 1348.4261789931118,
+          "intercept_s": 0.038826492367506425,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 5.709430876080803e-05,
+          "pilot_residual_max_s": 9.966127028615546e-05,
+          "pilot_arrivals_receiver_s": [
+            0.1389111570204657,
+            0.48943301034510894,
+            0.8399549043110226,
+            1.1904768437436344,
+            1.5407679503945944,
+            1.891288212273678,
+            2.241808199224939
+          ],
+          "pilot_residuals_s": [
+            -5.0177964940056885e-05,
+            -2.7380294437273633e-07,
+            4.9671000321604986e-05,
+            9.966127028615546e-05,
+            -8.118124140166216e-05,
+            -3.286852496575676e-05,
+            1.5169263647418774e-05
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": false
+        },
+        "rate_error_ppm": -142.95708049139046,
+        "rate_standardized_error": -4.637243605215279,
+        "direct_std_s": 0.00010796352998389871,
+        "candidate_count": 7,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "direct_response_amplitude": 0.02880896387982404,
+        "noise_response_amplitude": 1.92309820612389e-06,
+        "normalizer_at_zero": -0.02811512548951427,
+        "geometric_excess_timing_errors": [
+          {
+            "path_kind": "wall-0-0-emitter-0",
+            "actual_excess_s": 0.004369936799764568,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": 2.3537590442416004e-06,
+            "path_error_m": 0.0008081157032486405,
+            "conditional_standardized_error": 0.016314553224458055,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-0-1-emitter-0",
+            "actual_excess_s": 0.021828279122886617,
+            "nearest_candidate_id": "capture-01:echo:06",
+            "error_s": 2.912818234057646e-06,
+            "path_error_m": 0.0010000574023962597,
+            "conditional_standardized_error": 0.02014234395857988,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-0-emitter-0",
+            "actual_excess_s": 0.009436408982792856,
+            "nearest_candidate_id": "capture-01:echo:04",
+            "error_s": -2.850573988660843e-07,
+            "path_error_m": -9.786870959219936e-05,
+            "conditional_standardized_error": -0.001967706824894572,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-1-emitter-0",
+            "actual_excess_s": 0.011526367120011061,
+            "nearest_candidate_id": "capture-01:echo:05",
+            "error_s": 5.19155580803992e-05,
+            "path_error_m": 0.01782415996672475,
+            "conditional_standardized_error": 0.35927573844893773,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-0-emitter-0",
+            "actual_excess_s": 0.005438472763422375,
+            "nearest_candidate_id": "capture-01:echo:03",
+            "error_s": -8.328473087128741e-05,
+            "path_error_m": -0.028594132871238725,
+            "conditional_standardized_error": -0.6420398160762668,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-1-emitter-0",
+            "actual_excess_s": 0.005338291665730938,
+            "nearest_candidate_id": "capture-01:echo:03",
+            "error_s": 1.6896366820150395e-05,
+            "path_error_m": 0.0058010268249919054,
+            "conditional_standardized_error": 0.13025365468467057,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "near-reflector-emitter-0",
+            "actual_excess_s": 0.0009562886172432305,
+            "nearest_candidate_id": "capture-01:echo:01",
+            "error_s": 1.0441085504726052e-07,
+            "path_error_m": 3.5847361589425324e-05,
+            "conditional_standardized_error": 0.0007198330175486056,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          }
+        ]
+      },
+      "oracle_template_retry": {
+        "status": "ok",
+        "clock": {
+          "alpha": 1.0014911023816764,
+          "alpha_std": 1.1248942649084144e-06,
+          "relative_rate_ppm": 1491.102381676379,
+          "intercept_s": 0.038725672048153914,
+          "intercept_includes_propagation": true,
+          "pilot_residual_rms_s": 2.997756935146417e-08,
+          "pilot_residual_max_s": 4.729344693643611e-08,
+          "pilot_arrivals_receiver_s": [
+            0.13887482680413132,
+            0.4893966637354929,
+            0.8399185243816624,
+            1.1904404148192358,
+            1.540962306513929,
+            1.8914841976738368,
+            2.242006144581289
+          ],
+          "pilot_residuals_s": [
+            4.4517809771882355e-08,
+            -4.384415386304852e-09,
+            -2.9571832649288865e-08,
+            -2.4967845790868637e-08,
+            -1.9106739523877536e-08,
+            -1.3780418584019571e-08,
+            4.729344693643611e-08
+          ],
+          "correction": "affine_waveform_resampling",
+          "absolute_source_rate_calibrated": false,
+          "acquisition_template_rate_refined": true
+        },
+        "rate_error_ppm": -0.2808778081231367,
+        "rate_standardized_error": -0.24969263057448773,
+        "direct_std_s": 4.1666666666666665e-05,
+        "candidate_count": 6,
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "direct_response_amplitude": 0.17315363037706455,
+        "noise_response_amplitude": 1.934931857274181e-06,
+        "normalizer_at_zero": 0.17202298216058545,
+        "geometric_excess_timing_errors": [
+          {
+            "path_kind": "wall-0-0-emitter-0",
+            "actual_excess_s": 0.004369936799764568,
+            "nearest_candidate_id": "capture-01:echo:01",
+            "error_s": 3.9634111833296293e-07,
+            "path_error_m": 0.0001360757305857511,
+            "conditional_standardized_error": 0.006726131795136173,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-0-1-emitter-0",
+            "actual_excess_s": 0.021828279122886617,
+            "nearest_candidate_id": "capture-01:echo:05",
+            "error_s": 4.04132022450987e-07,
+            "path_error_m": 0.0001387505804076488,
+            "conditional_standardized_error": 0.006858347251996541,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-0-emitter-0",
+            "actual_excess_s": 0.009436408982792856,
+            "nearest_candidate_id": "capture-01:echo:03",
+            "error_s": 3.77855417423717e-08,
+            "path_error_m": 1.2972903795089278e-05,
+            "conditional_standardized_error": 0.0006412418967505784,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-1-1-emitter-0",
+            "actual_excess_s": 0.011526367120011061,
+            "nearest_candidate_id": "capture-01:echo:04",
+            "error_s": -5.475261134375853e-07,
+            "path_error_m": -0.0001879820499426587,
+            "conditional_standardized_error": -0.009291826040249005,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-0-emitter-0",
+            "actual_excess_s": 0.005438472763422375,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": -8.39859439077939e-08,
+            "path_error_m": -2.8834880227052344e-05,
+            "conditional_standardized_error": -0.001425288723418714,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "wall-2-1-emitter-0",
+            "actual_excess_s": 0.005338291665730938,
+            "nearest_candidate_id": "capture-01:echo:02",
+            "error_s": 0.00010009711174753001,
+            "path_error_m": 0.034366324816003574,
+            "conditional_standardized_error": 1.698704307058227,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          },
+          {
+            "path_kind": "near-reflector-emitter-0",
+            "actual_excess_s": 0.0009562886172432305,
+            "nearest_candidate_id": "capture-01:echo:00",
+            "error_s": -2.0242544929442892e-08,
+            "path_error_m": -6.9498696016565804e-06,
+            "conditional_standardized_error": -0.0003435273788569053,
+            "semantics": "Evaluation nearest compatibility only; no labels supplied to extraction, no one-to-one association claim"
+          }
+        ]
+      }
+    }
+  ]
+}

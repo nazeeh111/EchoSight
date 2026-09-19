@@ -1,0 +1,608 @@
+{
+  "reused_v3": {
+    "cases": 12,
+    "classification_changes": 0,
+    "dual_flags": 4,
+    "false_control_flags": 0,
+    "accepted_recordings": 572,
+    "total_recordings": 576,
+    "clock_max_abs_rate_error_ppm": 114.53102099601153,
+    "clock_median_abs_rate_error_ppm": 0.13805859783166952,
+    "minimum_abs_zero_to_local_peak_ratio": 0.9194094417634334,
+    "runtime_median_s": 0.8747496664982464,
+    "runtime_max_s": 0.9902258750007604,
+    "baseline": {
+      "matched_count": 62,
+      "false_surfaces": 13,
+      "missed_surfaces": 0
+    },
+    "guarded": {
+      "matched_count": 38,
+      "false_surfaces": 0,
+      "missed_surfaces": 24
+    },
+    "cases_detail": [
+      {
+        "family": "single_room",
+        "seed": 2423,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary_held_ratio": 0.9982252025799793,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 5.1906179007743525e-18,
+          "plane": 7.182839392716467e-19
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -7.453889935837843e-19,
+          "plane": -3.9302328752599536e-19
+        }
+      },
+      {
+        "family": "single_room",
+        "seed": 2437,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "secondary_held_ratio": 0.6229740041872781,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -1.1177883411827758e-09,
+          "plane": -1.9541137738393372e-08
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -0.0004719877181521983,
+          "plane": 4.820691603356613e-08
+        }
+      },
+      {
+        "family": "dual_room",
+        "seed": 2423,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "secondary_held_ratio": 0.045685771117232286,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 9.215718466126788e-19,
+          "plane": 9.349292173777002e-15
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 8.163500257729606e-16,
+          "plane": -1.3425198452932108e-13
+        }
+      },
+      {
+        "family": "dual_room",
+        "seed": 2437,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "secondary_held_ratio": 0.058939572825538245,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -3.897528241008762e-06,
+          "plane": -6.071532165918825e-17
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -6.134407304429854e-06,
+          "plane": 2.9368868448287344e-15
+        }
+      },
+      {
+        "family": "near_reflector",
+        "seed": 2423,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          2,
+          3,
+          4,
+          1
+        ],
+        "secondary_held_ratio": 0.48107628482224124,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 1.951563910473908e-17,
+          "plane": -3.591311276140985e-15
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -1.2728837081588118e-13,
+          "plane": 8.350351660135757e-14
+        }
+      },
+      {
+        "family": "near_reflector",
+        "seed": 2437,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          4,
+          4,
+          3,
+          0
+        ],
+        "secondary_held_ratio": 1.1105836276769216,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -8.246441723924747e-16,
+          "plane": 1.272976128804601e-10
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -8.193620911964294e-12,
+          "plane": -1.2048004718445e-09
+        }
+      },
+      {
+        "family": "direct_null",
+        "seed": 2423,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "secondary_held_ratio": 0.6379883023642973,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.305523034583281e-12,
+          "plane": -1.9131055319429732e-10
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -3.0496542707732785e-09,
+          "plane": -4.335170224298475e-08
+        }
+      },
+      {
+        "family": "direct_null",
+        "seed": 2437,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "secondary_held_ratio": 0.6229653272930177,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.229108319129025e-08,
+          "plane": -3.090618961829625e-08
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -0.0017410779730556206,
+          "plane": 1.0481259187328999e-07
+        }
+      },
+      {
+        "family": "receiver_filter",
+        "seed": 2423,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "secondary_held_ratio": 0.6414401053785064,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -9.069198258821907e-07,
+          "plane": -3.7377869896437765e-16
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 5.832108770183935e-07,
+          "plane": 1.6967763999398144e-17
+        }
+      },
+      {
+        "family": "receiver_filter",
+        "seed": 2437,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "secondary_held_ratio": 0.4021455575019266,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 5.163512846462215e-18,
+          "plane": -1.0330788687614584e-11
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 6.521408304864529e-15,
+          "plane": -1.1813182868979782e-09
+        }
+      },
+      {
+        "family": "dual_phase",
+        "seed": 2423,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "secondary_held_ratio": 0.15411105197787467,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -9.339317513790135e-16,
+          "plane": 1.0408340855860843e-17
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -0.0012874680425936417,
+          "plane": -3.2959746043559335e-17
+        }
+      },
+      {
+        "family": "dual_phase",
+        "seed": 2437,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "secondary_held_ratio": 0.13775896743636415,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 3.2526065174565133e-18,
+          "plane": -1.214306433183765e-17
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -4.163986863647828e-15,
+          "plane": 7.112366251504909e-17
+        }
+      }
+    ]
+  },
+  "fresh_raw_clock": {
+    "cases": 12,
+    "classification_changes": 0,
+    "dual_flags": 4,
+    "false_control_flags": 0,
+    "accepted_recordings": 576,
+    "total_recordings": 576,
+    "clock_max_abs_rate_error_ppm": 142.95708049139046,
+    "clock_median_abs_rate_error_ppm": 0.21424319290863636,
+    "minimum_abs_zero_to_local_peak_ratio": 0.9305811454712651,
+    "runtime_median_s": 1.125473937499919,
+    "runtime_max_s": 1.876716958002362,
+    "baseline": {
+      "matched_count": 62,
+      "false_surfaces": 12,
+      "missed_surfaces": 0
+    },
+    "guarded": {
+      "matched_count": 38,
+      "false_surfaces": 0,
+      "missed_surfaces": 24
+    },
+    "cases_detail": [
+      {
+        "family": "single_room",
+        "seed": 2441,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "secondary_held_ratio": 0.5423270695850712,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 1.338989683019598e-17,
+          "plane": 1.1291452053222083e-06
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 3.901303650792609e-13,
+          "plane": -3.4121766382418214e-06
+        }
+      },
+      {
+        "family": "single_room",
+        "seed": 2459,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_held_ratio": 0.9323460925533138,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -1.95677702990657e-10,
+          "plane": 1.9855213215756728e-07
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.402005760092363e-10,
+          "plane": 4.5714301926979325e-07
+        }
+      },
+      {
+        "family": "dual_room",
+        "seed": 2441,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "secondary_held_ratio": 0.12959002938551842,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -5.637851296924623e-18,
+          "plane": -1.6479873021779667e-17
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -4.228388472693467e-17,
+          "plane": 1.2732870313669764e-15
+        }
+      },
+      {
+        "family": "dual_room",
+        "seed": 2459,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          3
+        ],
+        "secondary_held_ratio": 0.05730968919930076,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.8189256484623115e-18,
+          "plane": 0.0
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 2.680147770384167e-16,
+          "plane": 0.0
+        }
+      },
+      {
+        "family": "near_reflector",
+        "seed": 2441,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "secondary_held_ratio": 1.3947820947373615,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -8.226058723082019e-14,
+          "plane": -5.458957938464515e-16
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 3.4326283460638096e-11,
+          "plane": -2.333425336634165e-13
+        }
+      },
+      {
+        "family": "near_reflector",
+        "seed": 2459,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "secondary_held_ratio": 0.970565263681848,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 1.5985476831126277e-15,
+          "plane": -4.153856295388558e-12
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 1.2350146946782381e-14,
+          "plane": 2.22212018878825e-08
+        }
+      },
+      {
+        "family": "direct_null",
+        "seed": 2441,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          2,
+          1,
+          1,
+          0
+        ],
+        "secondary_held_ratio": 0.5799793231787743,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 6.856731843548833e-11,
+          "plane": -7.571257124939015e-13
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -3.665156671285347e-09,
+          "plane": -4.021476077489816e-13
+        }
+      },
+      {
+        "family": "direct_null",
+        "seed": 2459,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_held_ratio": 0.9441210833562492,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -3.0199901867450363e-10,
+          "plane": -9.967641411649103e-08
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 1.0620232087689158e-10,
+          "plane": 4.0065244033386533e-07
+        }
+      },
+      {
+        "family": "receiver_filter",
+        "seed": 2441,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          3,
+          3,
+          4,
+          2
+        ],
+        "secondary_held_ratio": 0.6995802158675528,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": 3.673819061467132e-16,
+          "plane": -1.4498845917268466e-14
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 3.766860955101148e-13,
+          "plane": 6.906367838732663e-17
+        }
+      },
+      {
+        "family": "receiver_filter",
+        "seed": 2459,
+        "old_flag": false,
+        "new_flag": false,
+        "support": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "secondary_held_ratio": 0.615255291224268,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -6.710006190572626e-09,
+          "plane": -2.5424269894241958e-15
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.4690254225628785e-08,
+          "plane": -4.553649124439119e-18
+        }
+      },
+      {
+        "family": "dual_phase",
+        "seed": 2441,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "secondary_held_ratio": 0.1726720134671181,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.1467203015212988e-17,
+          "plane": -1.3877787807814457e-17
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 4.9117177339241813e-14,
+          "plane": -1.4016565685892601e-15
+        }
+      },
+      {
+        "family": "dual_phase",
+        "seed": 2459,
+        "old_flag": true,
+        "new_flag": true,
+        "support": [
+          4,
+          4,
+          4,
+          3
+        ],
+        "secondary_held_ratio": 0.14857643516065205,
+        "training_cost_changes": {
+          "single": 0.0,
+          "secondary": -2.190088388420719e-17,
+          "plane": 3.469446951953614e-18
+        },
+        "held_cost_changes": {
+          "single": 0.0,
+          "secondary": 2.6168303635110135e-14,
+          "plane": 0.0
+        }
+      }
+    ]
+  },
+  "engineering_gates_passed": true,
+  "failed_gates": [],
+  "original_snapshot_unchanged": true,
+  "original_snapshot_files_checked": 50
+}

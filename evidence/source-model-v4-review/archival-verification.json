@@ -1,0 +1,33 @@
+{
+  "archives": [
+    {
+      "archive": "source-model-diagnostic-v4",
+      "verified_files": 30,
+      "ignored_files": [],
+      "total_bytes": 1844217
+    },
+    {
+      "archive": "clock-oracle-diagnosis",
+      "verified_files": 3,
+      "ignored_files": [],
+      "total_bytes": 36898
+    },
+    {
+      "archive": "source-model-v4-review",
+      "verified_files": 5,
+      "ignored_files": [],
+      "total_bytes": 25602
+    }
+  ],
+  "review_reproduction_exact": true,
+  "new_classifier_fits": 0,
+  "new_raw_cases": 0,
+  "oracle_rerun": false,
+  "restoration": {
+    "v1_v3_files": 50,
+    "v4_files": 30,
+    "idempotent": true,
+    "differing_work_preserved": true,
+    "fixture": "temporary git init repository for byte restoration only; historical science not executed"
+  }
+}

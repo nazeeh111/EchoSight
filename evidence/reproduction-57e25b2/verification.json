@@ -1,0 +1,11 @@
+{
+  "commit": "57e25b2e5db31b93713f6c7c657caceab153839e",
+  "source": "fresh git fetch from private GitHub, isolated existing clean checkout detached at exact commit",
+  "command": ".venv/bin/python -m unittest tests.test_receiver_covariance tests.test_path_alternatives tests.test_multisource -v",
+  "tests": 36,
+  "seconds": 17.101,
+  "result": "passed",
+  "working_tree_after": "clean",
+  "test_log_sha256": "906c3cdd74315c50c4177d150b23b7dc7b812637af3c71cebd57ebdcada57738",
+  "scope": "Changed covariance and affected multi-source/path models. Existing pinned environment reused. Not another fresh dependency install, full suite, scientific acceptance or physical qualification."
+}

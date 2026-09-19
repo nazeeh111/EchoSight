@@ -1,0 +1,38 @@
+# V4 source-model diagnostic: objective corrected, raw-clock development gates pass
+
+**This remains an isolated source-model warning, with a substantial loss of useful geometry.** On12new development cases, clearing geometry after its warning changes62matched/12false/0missed planes into38matched/0false/24missed. Four dual-source cases are flagged, eight qualified single-source/near-reflector/direct-null/filter controls are not. Both near-reflector cases retain all7true surfaces. This is not a corrected mapper, physical source calibration or uniformly better spatial accuracy. No API/core promotion occurred.
+
+## Fixed objective and preserved history
+
+Independent review correctly identified independent clipping of two correlated gains as an incorrect bounded least-squares solution. `gain_v4.py` evaluates the feasible interior optimum and all four box-edge minima, with feasible single-column candidates handling absent columns without inventing secondary gain. Singular directions are handled with an explicit floating-point threshold; actual residuals select the result. Both coarse delay profiles and final waveform profiles use the same helper.
+
+`v4-gain-checks.json` records360independent comparisons against SciPy's BVLS bounded linear solver, including correlated, nearly singular, identical and zero columns and active gain bounds. Maximum absolute objective difference was9.1e-13. The review's algebraic counterexample changes squared error1.0 to0.36. Twelve reused v3 cases and twelve new cases show no warning classification change between the original and corrected objective. This does not show the old shortcut was mathematically acceptable or prove the bounded nonlinear search globally optimal; it bounds the observed classification impact in these cases. V1–v3 and the50-file b5de1137125e review snapshot remain byte unchanged.
+
+## Coherent recording experiment
+
+The pre-generation freeze hash is `f899e23a7cc3600336c4ff9d4b3f5608047a531331f10e043f38848dedf8e188` (`run-v4/freeze.json`). New development seeds2441/2459 were rendered across the same six families. Alpha was sampled per recording within±1800ppm and recording offset20–100ms, before independent noise and quantization. The immutable `de8442b2dd088c036d2b92eaeaf29a1273785795` raw pipeline re-estimated pilots, applied affine waveform correction, re-estimated the direct anchor and supplied a newly learned training kernel. Original versus exact-gain diagnostics receive identical extracted observations. Geometry and calibration draws preserve the common3mm source translation, independent4mm source placement and6mm reused-receiver errors. Full shared source covariance and effective-speed budget remain supplied to baseline mapping.
+
+No extracted-response coordinate shift was used. The earlier axis-only0/32failure remains preserved as an invalid representation stress, not evidence of actual clock robustness or failure. The new result is a bounded affine-clock simulation, not uncertainty calibration, non-affine drift, interruption testing or own-device validation. All existing v3 gates, normalization, nuisance ranges and search budgets remain unchanged. Seeds2609/2621 remain unused.
+
+| Group | Cases | Accepted recordings | Baseline matched/false/missed | After warning matched/false/missed | Control false flags |
+|---|---:|---:|---:|---:|---:|
+| Reused v3 |12|572/576|62/13/0|38/0/24|0/8|
+| New raw-clock development |12|576/576|62/12/0|38/0/24|0/8|
+
+All four previous rejected recordings remain in the report; the diagnostic can operate with remaining accepted records under its unchanged minimum support requirements. No unavailable outcome or operational exception occurred. New diagnostic runtime median1.125s, maximum1.877s; reused median0.875s, maximum0.990s. These are local observed diagnostic times, not a hardware/device latency guarantee; baseline runtime and memory are also recorded per case.
+
+## Consequential residual timing weakness
+
+Median absolute clock-rate error on576new recordings is0.214ppm, but the maximum is142.957ppm. Three family-matched controls at seed2459/source2/receiver1 have approximately143ppm accepted errors, including the direct-only null. Thus this cannot be attributed only to multipath. The generated true alpha is1.0014913833; null extraction returns1.0013484353 with estimated alpha SD30.838ppm. Its pilot residual maximum99.651µs narrowly passes the100µs gate, so the existing conditional template-rate refinement does not run. Compared with physical pilot starts, the first four selected pilot errors are approximately+38.4µs and the last three approximately−192.6to−196.1µs. This step is consistent with a change of selected correlation lobe in a rate-mismatched chirp. Code inspection confirms that stretching the acquisition template is attempted only after the affine residual fails, not when a biased coherent-looking train passes. `v4-clock-diagnosis.json` preserves the concrete observations and inference distinction.
+
+No thresholds or clock code were changed after observing this case. The source-warning gates pass despite this weakness, which is not proof that clock uncertainty is calibrated. A separate, justified next experiment would test whether always comparing the nominal and fitted-rate templates on independently generated clock/noise controls can reject lobe-switching without accepting spurious multipath or losing valid recordings. It must use fresh development inputs and preserve raw-path rejections, not tune this specific100µs boundary.
+
+## Normalization and remaining limits
+
+No physical signed-zero normalizer failure was observed in this suite: minimum absolute interpolated zero value divided by local absolute response peak is0.931on new inputs and0.919on reused accepted inputs. This is evidence only for these filters/anchors. It does not refute the phase-sensitive counterexample concern, validate arbitrary dispersive waveforms or establish that the selected direct component is the primary emitter. The signed normalization is unchanged.
+
+The prototype still assumes four source poses of one constant-orientation source, parses fixture receiver IDs, uses a common empirical kernel that can contain early reflected energy, and profiles gains/alignment on held records. Its support/rank gates are engineering heuristics, not model probabilities. Unknown orientation, direction-dependent acoustic centers, real speaker routing, complex source filters, finite/occluded reflector competition, resource/cancellation integration and measured single-emitter qualification remain unsupported. The current positive controls use one fixed displacement/driver delay and one phase-filter surrogate. Current dEchorate/FLAIR hardware provenance does not establish the required one-center or same-device/constant-orientation controls.
+
+The bounded study passes its predeclared engineering gates and preserves all costs, but cannot justify public mapping promotion. Its narrow potential use is an experimental source-calibration-needed diagnostic whose false-geometry reduction must always be reported alongside the24true-plane misses. The separate accepted clock-lobe bias is a consequential physical correctness issue for future work.
+
+Reproduce from the repository with `.venv/bin/python work/source-model-diagnostic/check_v4.py`; execute the frozen runner in a fresh preserved-output copy using `run_v4.py freeze` then `run_v4.py run`. Existing outputs intentionally refuse overwrite. Full code/criterion/raw manifests, paired results, clock observations and hashes are in `run-v4/`. `summarize_v4.py` independently checks the prior snapshot hashes and creates `run-v4/summary.json` without fitting.

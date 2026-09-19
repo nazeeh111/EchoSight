@@ -1,0 +1,2175 @@
+{
+  "cases": 360,
+  "maximum_absolute_cost_difference": 9.094947017729282e-13,
+  "algebraic_counterexample": {
+    "exact_gains": [
+      2.0,
+      -0.19999999999999973
+    ],
+    "exact_cost": 0.36000000000000015,
+    "old_clipped_cost": 1.0
+  },
+  "all_passed": true,
+  "details": [
+    {
+      "kind": "random",
+      "cost": 712.728168967942,
+      "reference_cost": 712.728168967942,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 1055.2637070528683,
+      "reference_cost": 1055.263707052868,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "random",
+      "cost": 0.3368356134272878,
+      "reference_cost": 0.3368356134272877,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "random",
+      "cost": 369.7650550926803,
+      "reference_cost": 369.76505509268026,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "random",
+      "cost": 451.1922040364931,
+      "reference_cost": 451.192204036493,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "random",
+      "cost": 281.8608827207708,
+      "reference_cost": 281.8608827207707,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 0.316057565366174,
+      "reference_cost": 0.3160575653661742,
+      "difference": -1.6653345369377348e-16
+    },
+    {
+      "kind": "random",
+      "cost": 59.895260699875365,
+      "reference_cost": 59.89526069987536,
+      "difference": 7.105427357601002e-15
+    },
+    {
+      "kind": "random",
+      "cost": 843.8479410035466,
+      "reference_cost": 843.8479410035466,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 360.11040303673974,
+      "reference_cost": 360.11040303673974,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 218.7555363106302,
+      "reference_cost": 218.75553631063016,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "random",
+      "cost": 1374.8426072731863,
+      "reference_cost": 1374.842607273186,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "random",
+      "cost": 735.9904259549157,
+      "reference_cost": 735.9904259549157,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 932.5304392344685,
+      "reference_cost": 932.5304392344686,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 786.5005083221438,
+      "reference_cost": 786.5005083221437,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 667.2026993868895,
+      "reference_cost": 667.2026993868897,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 387.4537853322165,
+      "reference_cost": 387.4537853322165,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 339.8185350813787,
+      "reference_cost": 339.8185350813788,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 523.0702400908372,
+      "reference_cost": 523.0702400908372,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 969.1557688489554,
+      "reference_cost": 969.1557688489553,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 0.29491023658639903,
+      "reference_cost": 0.29491023658639953,
+      "difference": -4.996003610813204e-16
+    },
+    {
+      "kind": "random",
+      "cost": 443.2554788049251,
+      "reference_cost": 443.25547880492513,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "random",
+      "cost": 1710.6265548584606,
+      "reference_cost": 1710.6265548584602,
+      "difference": 4.547473508864641e-13
+    },
+    {
+      "kind": "random",
+      "cost": 723.1112651858643,
+      "reference_cost": 723.1112651858642,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 0.2733671864470354,
+      "reference_cost": 0.2733671864470354,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 405.2439393095592,
+      "reference_cost": 405.2439393095592,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 597.9913831694831,
+      "reference_cost": 597.991383169483,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 552.2167512487474,
+      "reference_cost": 552.2167512487473,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 1347.283946968762,
+      "reference_cost": 1347.2839469687622,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "random",
+      "cost": 670.4596960947988,
+      "reference_cost": 670.4596960947988,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 1356.6137711215838,
+      "reference_cost": 1356.6137711215833,
+      "difference": 4.547473508864641e-13
+    },
+    {
+      "kind": "random",
+      "cost": 1331.968061414328,
+      "reference_cost": 1331.9680614143278,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "random",
+      "cost": 579.3927131746515,
+      "reference_cost": 579.3927131746515,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 365.21735624998666,
+      "reference_cost": 365.21735624998666,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 462.2819953695895,
+      "reference_cost": 462.2819953695896,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 718.6284215488465,
+      "reference_cost": 718.6284215488465,
+      "difference": 0.0
+    },
+    {
+      "kind": "random",
+      "cost": 404.1075778270529,
+      "reference_cost": 404.107577827053,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "random",
+      "cost": 665.433383354742,
+      "reference_cost": 665.4333833547419,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "random",
+      "cost": 894.6399708080161,
+      "reference_cost": 894.6399708080158,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "random",
+      "cost": 1139.3166744739058,
+      "reference_cost": 1139.3166744739058,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 1478.5145263382547,
+      "reference_cost": 1478.5145263382544,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.3592962319259035,
+      "reference_cost": 0.3592962319259036,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.30039665428797924,
+      "reference_cost": 0.30039665428797935,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 512.4070171529428,
+      "reference_cost": 512.4070171529428,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.29834535528599104,
+      "reference_cost": 0.29834535528599126,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.5306994532751836,
+      "reference_cost": 0.5306994532751836,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.31981071313122594,
+      "reference_cost": 0.31981071313122605,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.4942170789862918,
+      "reference_cost": 0.4942170789862915,
+      "difference": 2.7755575615628914e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.4826125560873474,
+      "reference_cost": 0.4826125560873474,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 2249.3836822820845,
+      "reference_cost": 2249.3836822820845,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 9.888581443610862,
+      "reference_cost": 9.888581443610864,
+      "difference": -1.7763568394002505e-15
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.5756249713275222,
+      "reference_cost": 0.5756249713275224,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.2784613720973468,
+      "reference_cost": 0.2784613720973468,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 494.58593097988927,
+      "reference_cost": 494.5859309798893,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.21221260764018984,
+      "reference_cost": 0.2122126076401899,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "correlated",
+      "cost": 3588.762932629147,
+      "reference_cost": 3588.7629326291476,
+      "difference": -4.547473508864641e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 34.87697295516163,
+      "reference_cost": 34.87697295516163,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.4047242374819119,
+      "reference_cost": 0.40472423748191194,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "correlated",
+      "cost": 35.776914860258415,
+      "reference_cost": 35.776914860258415,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.6097349609247695,
+      "reference_cost": 0.6097349609247694,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 1543.8286686057593,
+      "reference_cost": 1543.828668605759,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.3270242140260487,
+      "reference_cost": 0.3270242140260487,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.8076257141109471,
+      "reference_cost": 0.807625714110947,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 86.54975904698205,
+      "reference_cost": 86.54975904698203,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "correlated",
+      "cost": 1402.3705535976312,
+      "reference_cost": 1402.3705535976314,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.45190097257077394,
+      "reference_cost": 0.45190097257077394,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 1399.1683549354264,
+      "reference_cost": 1399.1683549354266,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 479.1735658836171,
+      "reference_cost": 479.1735658836172,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 562.0647550405993,
+      "reference_cost": 562.0647550405993,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 259.25623227211423,
+      "reference_cost": 259.25623227211423,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 2831.343508442843,
+      "reference_cost": 2831.3435084428434,
+      "difference": -4.547473508864641e-13
+    },
+    {
+      "kind": "correlated",
+      "cost": 177.856151270397,
+      "reference_cost": 177.85615127039696,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.8863947658165322,
+      "reference_cost": 0.8863947658165322,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.2332185276110949,
+      "reference_cost": 0.233218527611095,
+      "difference": -8.326672684688674e-17
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.2583707701305846,
+      "reference_cost": 0.2583707701305847,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "correlated",
+      "cost": 1.6097549624338798,
+      "reference_cost": 1.6097549624338796,
+      "difference": 2.220446049250313e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.2775473031498056,
+      "reference_cost": 0.2775473031498053,
+      "difference": 2.7755575615628914e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 204.39028243912801,
+      "reference_cost": 204.39028243912801,
+      "difference": 0.0
+    },
+    {
+      "kind": "correlated",
+      "cost": 0.2854166173347751,
+      "reference_cost": 0.2854166173347749,
+      "difference": 1.6653345369377348e-16
+    },
+    {
+      "kind": "correlated",
+      "cost": 42.98374907978094,
+      "reference_cost": 42.98374907978095,
+      "difference": -7.105427357601002e-15
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.24538154172940793,
+      "reference_cost": 0.24538154172940785,
+      "difference": 8.326672684688674e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 183.9801426538965,
+      "reference_cost": 183.98014265389648,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 1083.8644535433018,
+      "reference_cost": 1083.864453543302,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.283009128256481,
+      "reference_cost": 0.283009128256481,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.24159426113922008,
+      "reference_cost": 0.24159426113921964,
+      "difference": 4.440892098500626e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2574375948049822,
+      "reference_cost": 0.2574375948049823,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 694.0141007956944,
+      "reference_cost": 694.0141007956945,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2736974581096138,
+      "reference_cost": 0.2736974581096138,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2629127328836835,
+      "reference_cost": 0.2629127328836835,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 128.06362852133765,
+      "reference_cost": 128.06362852133756,
+      "difference": 8.526512829121202e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2337134336824433,
+      "reference_cost": 0.23371343368244327,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2757434191503371,
+      "reference_cost": 0.27574341915033707,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2471956893968957,
+      "reference_cost": 0.2471956893968956,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 2779.0461024714173,
+      "reference_cost": 2779.0461024714164,
+      "difference": 9.094947017729282e-13
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.298713663716679,
+      "reference_cost": 0.29871366371667907,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 5.207227016008499,
+      "reference_cost": 5.207227016008478,
+      "difference": 2.1316282072803006e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 3.5722790013153967,
+      "reference_cost": 3.5722790013153953,
+      "difference": 1.3322676295501878e-15
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.19437934755917632,
+      "reference_cost": 0.19437934755917632,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 128.22706328555313,
+      "reference_cost": 128.22706328555304,
+      "difference": 8.526512829121202e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2524902058077658,
+      "reference_cost": 0.25249020580776593,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.22036031961996036,
+      "reference_cost": 0.22036031961996036,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.21089698643520866,
+      "reference_cost": 0.21089698643520877,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 74.24586860387379,
+      "reference_cost": 74.24586860387379,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 76.1515402923189,
+      "reference_cost": 76.15154029231891,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 12.988117660282791,
+      "reference_cost": 12.988117660282787,
+      "difference": 3.552713678800501e-15
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 291.66528272539784,
+      "reference_cost": 291.66528272539773,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.24775394122113606,
+      "reference_cost": 0.24775394122113598,
+      "difference": 8.326672684688674e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2903827778431727,
+      "reference_cost": 0.2903827778431725,
+      "difference": 1.6653345369377348e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2535101884701112,
+      "reference_cost": 0.2535101884701112,
+      "difference": 0.0
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.29759497234862137,
+      "reference_cost": 0.2975949723486215,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2649632009023642,
+      "reference_cost": 0.26496320090236414,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2958018074844864,
+      "reference_cost": 0.29580180748448653,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 218.94130735606333,
+      "reference_cost": 218.94130735606322,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.22673204588277765,
+      "reference_cost": 0.22673204588277754,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 207.71757365824104,
+      "reference_cost": 207.71757365824112,
+      "difference": -8.526512829121202e-14
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2772458768347214,
+      "reference_cost": 0.27724587683472113,
+      "difference": 2.7755575615628914e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.27248314545244334,
+      "reference_cost": 0.2724831454524434,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2974773561640393,
+      "reference_cost": 0.29747735616403936,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 0.2299619108605515,
+      "reference_cost": 0.22996191086055165,
+      "difference": -1.3877787807814457e-16
+    },
+    {
+      "kind": "near_degenerate",
+      "cost": 11.567328057901003,
+      "reference_cost": 11.567328057901001,
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2978192298418596,
+      "reference_cost": 0.2978192298418597,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2546674480552894,
+      "reference_cost": 0.2546674480552899,
+      "difference": -4.996003610813204e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.29839506201493093,
+      "reference_cost": 0.29839506201493093,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 210.2510194565739,
+      "reference_cost": 210.25101945657383,
+      "difference": 8.526512829121202e-14
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2918407104665852,
+      "reference_cost": 0.2918407104665853,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.31937908356343503,
+      "reference_cost": 0.31937908356343525,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2881898160931844,
+      "reference_cost": 0.2881898160931845,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.26010370802891203,
+      "reference_cost": 0.2601037080289118,
+      "difference": 2.220446049250313e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.24809764178955374,
+      "reference_cost": 0.24809764178955357,
+      "difference": 1.6653345369377348e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.30895071418546277,
+      "reference_cost": 0.30895071418546266,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.27512240857990045,
+      "reference_cost": 0.27512240857990067,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.3349626962771894,
+      "reference_cost": 0.3349626962771892,
+      "difference": 1.6653345369377348e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 1.337505219020738,
+      "reference_cost": 1.337505219020738,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 0.33555523447391084,
+      "reference_cost": 0.3355552344739107,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2083363666544988,
+      "reference_cost": 0.20833636665449876,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.7114249789477909,
+      "reference_cost": 0.7114249789477908,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 1923.901719599478,
+      "reference_cost": 1923.9017195994782,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "identical",
+      "cost": 0.30109305068887676,
+      "reference_cost": 0.301093050688877,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 816.4857434122737,
+      "reference_cost": 816.4857434122737,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 390.55381929402733,
+      "reference_cost": 390.5538192940273,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "identical",
+      "cost": 45.85032658410274,
+      "reference_cost": 45.85032658410268,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "identical",
+      "cost": 0.277481449373756,
+      "reference_cost": 0.27748144937375596,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.23787011098023594,
+      "reference_cost": 0.23787011098023597,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.297927268276148,
+      "reference_cost": 0.29792726827614774,
+      "difference": 2.7755575615628914e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.32543797533444063,
+      "reference_cost": 0.32543797533444063,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 0.3158761039193359,
+      "reference_cost": 0.315876103919336,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 1394.1478517828768,
+      "reference_cost": 1394.1478517828768,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 0.26886003116418195,
+      "reference_cost": 0.26886003116418195,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2494852129922682,
+      "reference_cost": 0.24948521299226817,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.24731400565317982,
+      "reference_cost": 0.24731400565317985,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 318.70349015950404,
+      "reference_cost": 318.703490159504,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "identical",
+      "cost": 9.080323166795079,
+      "reference_cost": 9.080323166795077,
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2985115537982567,
+      "reference_cost": 0.29851155379825717,
+      "difference": -4.440892098500626e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 0.35928938957311013,
+      "reference_cost": 0.35928938957311013,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 114.07013341384572,
+      "reference_cost": 114.07013341384572,
+      "difference": 0.0
+    },
+    {
+      "kind": "identical",
+      "cost": 46.25913177096194,
+      "reference_cost": 46.259131770961936,
+      "difference": 7.105427357601002e-15
+    },
+    {
+      "kind": "identical",
+      "cost": 0.23097893509857265,
+      "reference_cost": 0.23097893509857262,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "identical",
+      "cost": 0.2555151093722955,
+      "reference_cost": 0.2555151093722949,
+      "difference": 6.106226635438361e-16
+    },
+    {
+      "kind": "identical",
+      "cost": 52.894096317069916,
+      "reference_cost": 52.89409631706992,
+      "difference": -7.105427357601002e-15
+    },
+    {
+      "kind": "identical",
+      "cost": 0.22970172172730405,
+      "reference_cost": 0.22970172172730408,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 581.6475608145621,
+      "reference_cost": 581.6475608145622,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 668.4704462698624,
+      "reference_cost": 668.4704462698624,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 75.21317762343003,
+      "reference_cost": 75.21317762343001,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.27437696358539626,
+      "reference_cost": 0.27437696358539626,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 145.9644829880539,
+      "reference_cost": 145.9644829880539,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.23617545730197612,
+      "reference_cost": 0.2361754573019761,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2644355317596262,
+      "reference_cost": 0.2644355317596261,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2957666294790826,
+      "reference_cost": 0.29576662947908283,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2553576891751075,
+      "reference_cost": 0.2553576891751075,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.3201504706205641,
+      "reference_cost": 0.32015047062056423,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 483.1572080925275,
+      "reference_cost": 483.15720809252747,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 308.867767392355,
+      "reference_cost": 308.867767392355,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 266.10789822434947,
+      "reference_cost": 266.10789822434947,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.30690923744716647,
+      "reference_cost": 0.3069092374471666,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.3558169261479887,
+      "reference_cost": 0.3558169261479887,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 190.9744041873844,
+      "reference_cost": 190.97440418738444,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2159656590798997,
+      "reference_cost": 0.21596565907989976,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.3232909472050081,
+      "reference_cost": 0.3232909472050082,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.18998020104957675,
+      "reference_cost": 0.18998020104957677,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 1054.9733121007298,
+      "reference_cost": 1054.9733121007298,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 4.969820611404264,
+      "reference_cost": 4.969820611404263,
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 844.7477083653539,
+      "reference_cost": 844.7477083653538,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2567226301299501,
+      "reference_cost": 0.25672263012995,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 557.0893537373861,
+      "reference_cost": 557.089353737386,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 146.49980440285398,
+      "reference_cost": 146.499804402854,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 66.88183212816918,
+      "reference_cost": 66.88183212816917,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 12.639639965746436,
+      "reference_cost": 12.639639965746438,
+      "difference": -1.7763568394002505e-15
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 2.5457346361670936,
+      "reference_cost": 2.5457346361670936,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.26168835599261386,
+      "reference_cost": 0.26168835599261386,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.24789743930826347,
+      "reference_cost": 0.24789743930826344,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 514.311163457087,
+      "reference_cost": 514.3111634570869,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.2729914667410305,
+      "reference_cost": 0.2729914667410307,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 3.149151556056061,
+      "reference_cost": 3.1491515560560615,
+      "difference": -4.440892098500626e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 784.0678599186504,
+      "reference_cost": 784.0678599186502,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 90.09927260570174,
+      "reference_cost": 90.09927260570177,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.26958167157172186,
+      "reference_cost": 0.26958167157172197,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 387.2946212537085,
+      "reference_cost": 387.2946212537085,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 126.7452205578751,
+      "reference_cost": 126.7452205578751,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 0.255507374011068,
+      "reference_cost": 0.25550737401106793,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "zero_primary",
+      "cost": 146.89449714461398,
+      "reference_cost": 146.89449714461398,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 492.3170604551408,
+      "reference_cost": 492.3170604551408,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 278.1533158425112,
+      "reference_cost": 278.1533158425112,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 605.7495704686891,
+      "reference_cost": 605.7495704686888,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 872.1727909175522,
+      "reference_cost": 872.1727909175522,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.2296060055052789,
+      "reference_cost": 0.22960600550527896,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1624.2308141711474,
+      "reference_cost": 1624.2308141711476,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1196.3447225534476,
+      "reference_cost": 1196.344722553448,
+      "difference": -4.547473508864641e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 302.35033262370877,
+      "reference_cost": 302.35033262370877,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.30416799969968644,
+      "reference_cost": 0.3041679996996865,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.21945193748789912,
+      "reference_cost": 0.2194519374878991,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 269.23111204919996,
+      "reference_cost": 269.2311120491999,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.2340782065856163,
+      "reference_cost": 0.23407820658561632,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.33535393583332074,
+      "reference_cost": 0.3353539358333207,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.23575852551572588,
+      "reference_cost": 0.2357585255157259,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 408.16313454156375,
+      "reference_cost": 408.1631345415637,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.28757507027900386,
+      "reference_cost": 0.2875750702790038,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 326.87535571236253,
+      "reference_cost": 326.8753557123625,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 79.44208636542646,
+      "reference_cost": 79.44208636542645,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 55.36677830418233,
+      "reference_cost": 55.36677830418234,
+      "difference": -7.105427357601002e-15
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 732.8769066972731,
+      "reference_cost": 732.8769066972732,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 527.6948244114517,
+      "reference_cost": 527.6948244114516,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1258.5661695697675,
+      "reference_cost": 1258.5661695697677,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1.173153079982383,
+      "reference_cost": 1.1731530799823833,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1060.5077224414963,
+      "reference_cost": 1060.5077224414963,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 20.61066923573927,
+      "reference_cost": 20.61066923573927,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.25724671323529835,
+      "reference_cost": 0.2572467132352983,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1.156889701407427,
+      "reference_cost": 1.1568897014074273,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.27252955011592056,
+      "reference_cost": 0.2725295501159206,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 531.3020639558688,
+      "reference_cost": 531.3020639558688,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 330.5073942985667,
+      "reference_cost": 330.50739429856674,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1874.961742184408,
+      "reference_cost": 1874.9617421844077,
+      "difference": 2.2737367544323206e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 1575.432000447943,
+      "reference_cost": 1575.432000447943,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 68.71039604259558,
+      "reference_cost": 68.71039604259558,
+      "difference": 0.0
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.3186240971091475,
+      "reference_cost": 0.31862409710914774,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 682.6732306765746,
+      "reference_cost": 682.6732306765747,
+      "difference": -1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.27856209760847483,
+      "reference_cost": 0.2785620976084747,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 813.5647140676832,
+      "reference_cost": 813.5647140676834,
+      "difference": -2.2737367544323206e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 668.1770523387114,
+      "reference_cost": 668.1770523387113,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 9.437928119356341,
+      "reference_cost": 9.43792811935634,
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "kind": "zero_secondary",
+      "cost": 0.21997284923367189,
+      "reference_cost": 0.21997284923367205,
+      "difference": -1.6653345369377348e-16
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2712077938155249,
+      "reference_cost": 0.2712077938155249,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.24412017731702138,
+      "reference_cost": 0.24412017731702135,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2634671979251357,
+      "reference_cost": 0.2634671979251356,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.29861630015938184,
+      "reference_cost": 0.29861630015938184,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2497623812867063,
+      "reference_cost": 0.24976238128670628,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.35246327161110064,
+      "reference_cost": 0.3524632716111006,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.22556913295151007,
+      "reference_cost": 0.22556913295151007,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26179285294340315,
+      "reference_cost": 0.26179285294340315,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.29075557905600485,
+      "reference_cost": 0.29075557905600485,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2527776869539533,
+      "reference_cost": 0.2527776869539533,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26167384754738393,
+      "reference_cost": 0.26167384754738393,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2172428250499896,
+      "reference_cost": 0.21724282504998962,
+      "difference": -2.7755575615628914e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.3391202687834711,
+      "reference_cost": 0.33912026878347107,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.25692190587559166,
+      "reference_cost": 0.2569219058755917,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2587737788917039,
+      "reference_cost": 0.25877377889170383,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2931772955062298,
+      "reference_cost": 0.29317729550622973,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.25015711928804557,
+      "reference_cost": 0.25015711928804557,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26557476301285216,
+      "reference_cost": 0.2655747630128521,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.3133899979560344,
+      "reference_cost": 0.3133899979560344,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.20721785054078914,
+      "reference_cost": 0.20721785054078914,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.23172259895574665,
+      "reference_cost": 0.2317225989557467,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.27048949089693053,
+      "reference_cost": 0.27048949089693053,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2363327708678769,
+      "reference_cost": 0.23633277086787688,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.251146356624227,
+      "reference_cost": 0.251146356624227,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.3260035005932101,
+      "reference_cost": 0.32600350059321015,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.3115169332762877,
+      "reference_cost": 0.31151693327628766,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.28258727281418905,
+      "reference_cost": 0.282587272814189,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2891544693440023,
+      "reference_cost": 0.2891544693440023,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2234676933026951,
+      "reference_cost": 0.22346769330269506,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2660613048487219,
+      "reference_cost": 0.2660613048487219,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26370282889956276,
+      "reference_cost": 0.26370282889956276,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.247917771603141,
+      "reference_cost": 0.247917771603141,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26161612882046575,
+      "reference_cost": 0.2616161288204657,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.23295714631759082,
+      "reference_cost": 0.23295714631759076,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2739275620982152,
+      "reference_cost": 0.27392756209821534,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.32142193930550667,
+      "reference_cost": 0.3214219393055067,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2568350006773027,
+      "reference_cost": 0.25683500067730264,
+      "difference": 5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.26423064210163705,
+      "reference_cost": 0.2642306421016371,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.275203448309512,
+      "reference_cost": 0.275203448309512,
+      "difference": 0.0
+    },
+    {
+      "kind": "both_zero",
+      "cost": 0.2691748922373799,
+      "reference_cost": 0.2691748922373799,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 106.60166921584617,
+      "reference_cost": 106.60166921584616,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 129.29368466599314,
+      "reference_cost": 129.2936846659931,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 128.18319297952968,
+      "reference_cost": 128.1831929795297,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 110.00631170212661,
+      "reference_cost": 110.00631170212662,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 95.48721015532453,
+      "reference_cost": 95.48721015532452,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 112.40424513724118,
+      "reference_cost": 112.40424513724118,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 92.00810032806383,
+      "reference_cost": 92.00810032806382,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 85.7263823550825,
+      "reference_cost": 85.72638235508252,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 86.2519181658156,
+      "reference_cost": 86.2519181658156,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 93.89787350994433,
+      "reference_cost": 93.89787350994429,
+      "difference": 4.263256414560601e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 108.9986668930821,
+      "reference_cost": 108.9986668930821,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 119.55450717895516,
+      "reference_cost": 119.55450717895515,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 115.86357098906626,
+      "reference_cost": 115.86357098906626,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 107.12946298420027,
+      "reference_cost": 107.12946298420025,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 108.69352757750934,
+      "reference_cost": 108.69352757750933,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 68.0414084502338,
+      "reference_cost": 68.04140845023379,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 112.51016034410948,
+      "reference_cost": 112.51016034410948,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 87.10734200808493,
+      "reference_cost": 87.10734200808493,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 87.50769776770727,
+      "reference_cost": 87.50769776770727,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 93.16970843307057,
+      "reference_cost": 93.16970843307054,
+      "difference": 2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 124.12764872975674,
+      "reference_cost": 124.12764872975673,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 84.3378619024124,
+      "reference_cost": 84.33786190241241,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 120.12888523951261,
+      "reference_cost": 120.12888523951261,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 122.73302485212605,
+      "reference_cost": 122.73302485212606,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 80.4787136654385,
+      "reference_cost": 80.47871366543849,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 115.87132919926063,
+      "reference_cost": 115.87132919926064,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 113.80770471722808,
+      "reference_cost": 113.80770471722808,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 94.01407635240405,
+      "reference_cost": 94.01407635240405,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 110.52649858375233,
+      "reference_cost": 110.52649858375231,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 104.22944452836268,
+      "reference_cost": 104.22944452836269,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 100.04999118997928,
+      "reference_cost": 100.04999118997931,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 122.14481968868567,
+      "reference_cost": 122.14481968868569,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 94.6170030341287,
+      "reference_cost": 94.61700303412873,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 137.85196485316035,
+      "reference_cost": 137.85196485316038,
+      "difference": -2.842170943040401e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 114.14753515763772,
+      "reference_cost": 114.14753515763773,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 102.53816209865926,
+      "reference_cost": 102.53816209865927,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 108.1445655937778,
+      "reference_cost": 108.14456559377781,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 102.740866911084,
+      "reference_cost": 102.74086691108398,
+      "difference": 1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 91.09762729350781,
+      "reference_cost": 91.09762729350783,
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "kind": "bound_primary",
+      "cost": 120.17134944203875,
+      "reference_cost": 120.17134944203875,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 486.7264414086991,
+      "reference_cost": 486.7264414086991,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 427.78620767731104,
+      "reference_cost": 427.78620767731104,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 370.2356424767003,
+      "reference_cost": 370.2356424767003,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 392.18392860629217,
+      "reference_cost": 392.18392860629206,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 481.9520463136366,
+      "reference_cost": 481.9520463136365,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 419.8718336082465,
+      "reference_cost": 419.8718336082465,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 510.1189161264483,
+      "reference_cost": 510.11891612644825,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 366.65504383246383,
+      "reference_cost": 366.65504383246366,
+      "difference": 1.7053025658242404e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 448.73598378890847,
+      "reference_cost": 448.7359837889085,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 427.0507523466901,
+      "reference_cost": 427.0507523466901,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 426.0947864566392,
+      "reference_cost": 426.09478645663927,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 492.4546463449389,
+      "reference_cost": 492.4546463449391,
+      "difference": -1.7053025658242404e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 390.4286268305233,
+      "reference_cost": 390.4286268305233,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 423.0865689895153,
+      "reference_cost": 423.0865689895153,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 411.50537256925026,
+      "reference_cost": 411.50537256925026,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 417.95366654470314,
+      "reference_cost": 417.95366654470314,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 303.33624133524546,
+      "reference_cost": 303.33624133524546,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 459.0116583276631,
+      "reference_cost": 459.0116583276631,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 363.09881646977163,
+      "reference_cost": 363.0988164697717,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 504.069370609343,
+      "reference_cost": 504.069370609343,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 359.6910833362936,
+      "reference_cost": 359.6910833362936,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 415.49128149134106,
+      "reference_cost": 415.491281491341,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 454.68776054305863,
+      "reference_cost": 454.68776054305863,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 366.61088039599593,
+      "reference_cost": 366.61088039599593,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 560.346586755105,
+      "reference_cost": 560.3465867551049,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 355.83820421080776,
+      "reference_cost": 355.83820421080765,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 468.1748349588359,
+      "reference_cost": 468.17483495883585,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 419.12042681534297,
+      "reference_cost": 419.12042681534285,
+      "difference": 1.1368683772161603e-13
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 443.1393050689158,
+      "reference_cost": 443.1393050689158,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 503.94695823253727,
+      "reference_cost": 503.9469582325372,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 417.2416530725529,
+      "reference_cost": 417.2416530725529,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 340.67920694760704,
+      "reference_cost": 340.67920694760704,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 429.2815803763512,
+      "reference_cost": 429.2815803763512,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 431.1255681669612,
+      "reference_cost": 431.12556816696116,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 364.76533829202225,
+      "reference_cost": 364.7653382920223,
+      "difference": -5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 547.2387383278732,
+      "reference_cost": 547.2387383278732,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 354.8230361654792,
+      "reference_cost": 354.82303616547915,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 363.6800747132948,
+      "reference_cost": 363.6800747132948,
+      "difference": 0.0
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 370.30654058995844,
+      "reference_cost": 370.3065405899584,
+      "difference": 5.684341886080802e-14
+    },
+    {
+      "kind": "bound_secondary",
+      "cost": 357.10405994560483,
+      "reference_cost": 357.10405994560494,
+      "difference": -1.1368683772161603e-13
+    }
+  ]
+}

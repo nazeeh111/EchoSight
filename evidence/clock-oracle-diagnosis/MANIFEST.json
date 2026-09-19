@@ -1,0 +1,10 @@
+{
+  "files": {
+    "V4-CLOCK-ADDENDUM.md": "9728fbb1cd3247ee75a88679ce819175b7b02345a4a57a86dfd49abbb0b676c8",
+    "oracle_clock_v4.py": "1ea200b576d18b3fca4ba7700dd07fe91bdc8b4d1a3933c623991e6d021b4087",
+    "v4-oracle-clock-results.json": "cbe6b76888095fba37dd30fd9cb61949ce2ba9b2acb2cb8ab8d98eb580e12c48"
+  },
+  "content_sha256": "5347fc5f87c4d79c51d41943d70e1f49746fff1e0b577b3d43628a75a747516d",
+  "original_v4_snapshot": "587df54570155117f92df5a970e47e335a371ecaef31cc16d38f2e6a95108187",
+  "no_mapping_or_classifier_runs": true
+}

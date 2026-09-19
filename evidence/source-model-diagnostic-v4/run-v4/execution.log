@@ -1,0 +1,25 @@
+reused_v3 single_room 2423 not_qualified -> not_qualified 6 0 => 6 0 0
+reused_v3 single_room 2437 not_qualified -> not_qualified 6 0 => 6 0 0
+reused_v3 dual_room 2423 source_model_ambiguous -> source_model_ambiguous 6 3 => 0 0 6
+reused_v3 dual_room 2437 source_model_ambiguous -> source_model_ambiguous 6 3 => 0 0 6
+reused_v3 near_reflector 2423 not_qualified -> not_qualified 7 0 => 7 0 0
+reused_v3 near_reflector 2437 not_qualified -> not_qualified 7 0 => 7 0 0
+reused_v3 direct_null 2423 not_qualified -> not_qualified 0 0 => 0 0 0
+reused_v3 direct_null 2437 not_qualified -> not_qualified 0 0 => 0 0 0
+reused_v3 receiver_filter 2423 not_qualified -> not_qualified 6 0 => 6 0 0
+reused_v3 receiver_filter 2437 not_qualified -> not_qualified 6 0 => 6 0 0
+reused_v3 dual_phase 2423 source_model_ambiguous -> source_model_ambiguous 6 3 => 0 0 6
+reused_v3 dual_phase 2437 source_model_ambiguous -> source_model_ambiguous 6 4 => 0 0 6
+fresh_raw_clock single_room 2441 not_qualified -> not_qualified 6 0 => 6 0 0
+fresh_raw_clock single_room 2459 not_qualified -> not_qualified 6 0 => 6 0 0
+fresh_raw_clock dual_room 2441 source_model_ambiguous -> source_model_ambiguous 6 2 => 0 0 6
+fresh_raw_clock dual_room 2459 source_model_ambiguous -> source_model_ambiguous 6 3 => 0 0 6
+fresh_raw_clock near_reflector 2441 not_qualified -> not_qualified 7 0 => 7 0 0
+fresh_raw_clock near_reflector 2459 not_qualified -> not_qualified 7 0 => 7 0 0
+fresh_raw_clock direct_null 2441 not_qualified -> not_qualified 0 0 => 0 0 0
+fresh_raw_clock direct_null 2459 not_qualified -> not_qualified 0 0 => 0 0 0
+fresh_raw_clock receiver_filter 2441 not_qualified -> not_qualified 6 0 => 6 0 0
+fresh_raw_clock receiver_filter 2459 not_qualified -> not_qualified 6 0 => 6 0 0
+fresh_raw_clock dual_phase 2441 source_model_ambiguous -> source_model_ambiguous 6 4 => 0 0 6
+fresh_raw_clock dual_phase 2459 source_model_ambiguous -> source_model_ambiguous 6 3 => 0 0 6
+{"hashes_unchanged": true, "engineering_gates_passed": true, "failed_gates": [], "has_fresh_dual_false_surface_suppression": true, "groups": {"reused_v3": {"baseline": {"matched_count": 62, "false_surfaces": 13, "missed_surfaces": 0}, "guarded": {"matched_count": 38, "false_surfaces": 0, "missed_surfaces": 24}}, "fresh_raw_clock": {"baseline": {"matched_count": 62, "false_surfaces": 12, "missed_surfaces": 0}, "guarded": {"matched_count": 38, "false_surfaces": 0, "missed_surfaces": 24}}}, "peak_process_rss_bytes": 203423744, "scope": "Development-only; warning withholds all geometry, including every true surface counted as missed."}
