@@ -1,0 +1,146 @@
+{
+  "protocol_sha256": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f",
+  "files": [
+    {
+      "filename": "positions.csv",
+      "source_url": "https://raw.githubusercontent.com/Chutlhu/dEchorate/d3e664f1e7a7d46241d7f7b3b3761448686b9537/data/dEchorate_positions_marvel.csv",
+      "bytes": 549,
+      "expected_sha256": "6b310793ab6038dfbe2525e297ceaead0bde42c76d8a2f847460cb2b8332b7fd",
+      "sha256": "6b310793ab6038dfbe2525e297ceaead0bde42c76d8a2f847460cb2b8332b7fd",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "geometry_source.py",
+      "source_url": "https://raw.githubusercontent.com/Chutlhu/dEchorate/d3e664f1e7a7d46241d7f7b3b3761448686b9537/dechorate/main_geometry_from_measurements.py",
+      "bytes": 7440,
+      "expected_sha256": "fd8424a74c8b9c3d8924cb9015159e1cf480854978673b26bad1f0684379e10a",
+      "sha256": "fd8424a74c8b9c3d8924cb9015159e1cf480854978673b26bad1f0684379e10a",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "bytes": 1763703,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "e52967696dd74710f452697d5771e044e8b0d2c6ebe89767bd43983a1a18d62a",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "bytes": 1763789,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "a6298fad1510ed7bd13ac19773a3e0ebf85d1334f7a3df6679e13fa44c93f109",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "bytes": 1761801,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "5f8d937ca344a2de8b90ac1cad4c2e70e3758e7865d385794fad9830ac4a3a62",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "bytes": 1760208,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "4c273f7e2373cc751a5c8e337c53f11ac1babeb7d8d55934eac424ec436691e6",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "bytes": 1763688,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "6ce0cd1c1406599541863b503d35a71594b212de198fbb21833f12e3b1e2850b",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "bytes": 1765105,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "eb689b78e421cd7c47d52e09321c7e68ce0356ef453110bff438088264bf7864",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "bytes": 1763564,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "c621cca5739de1baede50cdaa328b071bfc0e6d0b7b7f48f6683fcd8f5ff4e90",
+      "retrieved_date": "2026-09-19"
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "bytes": 1764829,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04",
+      "sha256": "bdb9f18de08092e1c0467d8d96c018be738d9c4bc3adcab5c73e74f10e6d2d28",
+      "retrieved_date": "2026-09-19"
+    }
+  ],
+  "core_sha256": {
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "echosight/acquisition.py": "f6c1e1cd1c00e09edd14eb1163c221bd96c84fc4c71a229723c1203c2a8b5765",
+    "echosight/api.py": "f785387ade6370a633b23b00b88f9ac4cc4514bf34cb6fabbb27477d540b3828",
+    "echosight/calibration.py": "fc587cf1496a4cc3ad9d3345378d76726d70d49a92be3a57eb2b37b3e455339e",
+    "echosight/cli.py": "8d9b7ecbd693e99313e34002eaf16e2ba821c6a252c28094586581473ef1f584",
+    "echosight/controlled.py": "0ccd5448cded25f4fd635a20ee060de6eab51f513768816a52eca98ac1087022",
+    "echosight/evolution.py": "ec3afa7a4526ee3b319de6c6cd9cf9c0f65c03a73bfc04ebe81b4b9bfecba01a",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+    "echosight/multisource.py": "104478b5519d5e15ab80b723d9e0ddf904276c339f453646d67ece0a0d845f43",
+    "echosight/path_alternatives.py": "e54f653edab911da213583282e002d38a0545f6f5f98d2bd8e0fd33b74081e9e",
+    "echosight/pipeline.py": "989423595700d7c604fb40b2154c2f937082ee80ac768693ece95e2ca3a774ff",
+    "echosight/signals.py": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/storage.py": "df884e5a1c8746934ef752dd6e4d90dcdf0654becf5dad6581c4b58911fcae63",
+    "evaluation/__init__.py": "27112db071291f12c1b8138daab004ff7b003512a093a3382aa42555cf7a6478",
+    "evaluation/calibration_development.py": "94a7586c989dada47abb76cbca44ce65f61794772ff901e5c1be2745aadc3eba",
+    "evaluation/controlled_development.py": "713bb98a80b35849d7f81925ed6bc4d83fb382a0f9794f99c94a5e374926f0d7",
+    "evaluation/external.py": "962ae38ba5e51177ae56875e5585bd3d96c85bb48c3fc1d8f585c4dd3b5aff4e",
+    "evaluation/flair.py": "67c4381a213771f384247f8bcc3432aac96ed98315d7c04c623d17d87f72fe6c",
+    "evaluation/flair_subset.py": "b5132ff1266eff524f74b05d9173d7f346310a00a7bc5e32cbf64b80f4343407",
+    "evaluation/guidance.py": "02f712b676e36c2089a38a167f13b16e9c8a4756c16180e745a80a24904023d9",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/physics_development.py": "bae2f2872aebbae6431680ff4874c15a8ac6e9916b6c0a7b606c376c7e3080b4",
+    "evaluation/run.py": "ef32222b5bdf1ee1ca9f4190c7f27f4298b3559df6b00f514ac3d2d6d2b17454",
+    "evaluation/source_relocation.py": "0433e1823811055e197e79ab8281cc43da7adbe2dcad56558d096e3545bb1c06",
+    "evaluation/source_relocation_baseline.py": "0ece7d73946ec5bf6921d4a981ad14ebf9263d29f159a8b3041248af24a50293",
+    "evaluation/source_relocation_simulation.py": "7aa08c326ed130f233bb8511172a7a14894884c5ec8bbb25f7a10ac5e04f22a3",
+    "evaluation/stress.py": "0bbd84f9fb980990fbd52ef196221364421b356bc791bf897a6e4cbf2f156249",
+    "evaluation/stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7",
+    "evaluation/test_audit_harness.py": "a363a42e40e45fe1f83032e281d209556f8b0c8d5a311e6f691395e1134991e4",
+    "evaluation/test_source_relocation.py": "e2054bc9533e137c2ad6bd785818559cc129244dd6d408d0a2aaec6f3f09f369"
+  },
+  "reference": {
+    "room_size_m": [
+      5.705,
+      5.965,
+      2.355
+    ],
+    "source": "dEchorate_annotations.h5 room_size; supplied structuralreference only; no echoannotations",
+    "source_sha256": "1c2810a2dc3870c75276a4b954c36b884e31b291483190634b2030040061317e"
+  }
+}

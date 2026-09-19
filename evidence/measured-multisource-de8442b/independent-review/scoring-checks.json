@@ -1,0 +1,257 @@
+{
+  "independently_scored_rows": [
+    {
+      "arm": "joint_mapper",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 2,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "joint_plane_grid",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 2,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "independent_source_consensus",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_mapper_1",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 8,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_first_echo_1",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 1,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_mapper_2",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 7,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_first_echo_2",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_mapper_3",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 7,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_first_echo_3",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 1,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_mapper_4",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 5,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "single_source_first_echo_4",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 1,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "null",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "shuffled_geometry",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 4,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_x_plus",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 3,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_x_minus",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 2,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_y_plus",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 1,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_y_minus",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 2,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_z_plus",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 3,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_z_minus",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 1,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_yaw_plus",
+      "independent_matching_counts": {
+        "matched_count": 0,
+        "false_surfaces": 3,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    },
+    {
+      "arm": "array_yaw_minus",
+      "independent_matching_counts": {
+        "matched_count": 1,
+        "false_surfaces": 2,
+        "missed_surfaces": 5,
+        "horizontal_matched": 1
+      },
+      "geometry_semantics_valid": true,
+      "suppressed_confidence_coverage": true
+    }
+  ],
+  "path_diagnostic_totals": [
+    {
+      "pose_arm": "survey",
+      "counts": {
+        "first_order_prediction_count": 240,
+        "first_order_compatible_capped": 78,
+        "first_order_compatible_uncapped": 163,
+        "lost_compatible_due_to_cap": 85
+      }
+    },
+    {
+      "pose_arm": "echo_refined",
+      "counts": {
+        "first_order_prediction_count": 240,
+        "first_order_compatible_capped": 89,
+        "first_order_compatible_uncapped": 178,
+        "lost_compatible_due_to_cap": 89
+      }
+    }
+  ],
+  "original_report_passed": false,
+  "no_inverse_fits_run": true
+}

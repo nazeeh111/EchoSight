@@ -1,0 +1,437 @@
+{
+  "seed": 27119,
+  "conventions": {
+    "effective_speed_m_s": 343.0,
+    "driver_delay_profile_bound_us": 150,
+    "independent_timing_std_us": 20,
+    "shared_source_center_std_m": 0.003,
+    "per_source_placement_std_m": 0.004,
+    "reused_receiver_std_m": 0.006,
+    "shared_effective_speed_std_m_s": 0.6
+  },
+  "layouts": {
+    "one_source": {
+      "source_rank": 0,
+      "source_normal_span_m": 0.0,
+      "profiled_offset_m": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "profiled_driver_delay_us": 0.0,
+      "rms_model_difference_us": 0.0,
+      "max_model_difference_us": 0.0,
+      "fixed_plane_covariance_score": 0.0,
+      "rms_after_independent_two_sample_echo_shift_us": 0.0
+    },
+    "two_tangential": {
+      "source_rank": 1,
+      "source_normal_span_m": 0.0,
+      "profiled_offset_m": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "profiled_driver_delay_us": 0.0,
+      "rms_model_difference_us": 0.0,
+      "max_model_difference_us": 0.0,
+      "fixed_plane_covariance_score": 0.0,
+      "rms_after_independent_two_sample_echo_shift_us": 0.0
+    },
+    "two_normal": {
+      "source_rank": 1,
+      "source_normal_span_m": 0.1,
+      "profiled_offset_m": [
+        0.28285744449342987,
+        -0.0013471833604388754,
+        0.0019731623079684547
+      ],
+      "profiled_driver_delay_us": 31.09920663316948,
+      "rms_model_difference_us": 235.90657405104315,
+      "max_model_difference_us": 296.2607299933012,
+      "fixed_plane_covariance_score": 316.1681312360884,
+      "rms_after_independent_two_sample_echo_shift_us": 194.72096627445833
+    },
+    "line_tangential": {
+      "source_rank": 1,
+      "source_normal_span_m": 0.0,
+      "profiled_offset_m": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "profiled_driver_delay_us": 0.0,
+      "rms_model_difference_us": 0.0,
+      "max_model_difference_us": 0.0,
+      "fixed_plane_covariance_score": 0.0,
+      "rms_after_independent_two_sample_echo_shift_us": 0.0
+    },
+    "line_normal": {
+      "source_rank": 1,
+      "source_normal_span_m": 0.2,
+      "profiled_offset_m": [
+        0.3519769466584147,
+        -0.0033393799634605687,
+        0.004485387698975056
+      ],
+      "profiled_driver_delay_us": 82.0928832077465,
+      "rms_model_difference_us": 352.1833445400208,
+      "max_model_difference_us": 611.8665068942737,
+      "fixed_plane_covariance_score": 1431.3251273736648,
+      "rms_after_independent_two_sample_echo_shift_us": 316.5959590620762
+    },
+    "coplanar_tangential": {
+      "source_rank": 2,
+      "source_normal_span_m": 0.0,
+      "profiled_offset_m": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "profiled_driver_delay_us": 0.0,
+      "rms_model_difference_us": 0.0,
+      "max_model_difference_us": 0.0,
+      "fixed_plane_covariance_score": 0.0,
+      "rms_after_independent_two_sample_echo_shift_us": 0.0
+    },
+    "coplanar_with_normal_motion": {
+      "source_rank": 2,
+      "source_normal_span_m": 0.16,
+      "profiled_offset_m": [
+        0.3653955656177009,
+        -0.0019532571440042095,
+        0.004005832466289558
+      ],
+      "profiled_driver_delay_us": 49.76726643232712,
+      "rms_model_difference_us": 380.0556355690734,
+      "max_model_difference_us": 497.4545888082576,
+      "fixed_plane_covariance_score": 1668.8504641327847,
+      "rms_after_independent_two_sample_echo_shift_us": 339.1204468375435
+    },
+    "four_3d": {
+      "source_rank": 3,
+      "source_normal_span_m": 0.18,
+      "profiled_offset_m": [
+        0.3275723648956902,
+        -0.011455235206632611,
+        0.011005654412109656
+      ],
+      "profiled_driver_delay_us": 52.31736029100847,
+      "rms_model_difference_us": 304.9054510212457,
+      "max_model_difference_us": 587.4442984681622,
+      "fixed_plane_covariance_score": 1170.8647206110654,
+      "rms_after_independent_two_sample_echo_shift_us": 269.27331391815187
+    },
+    "four_3d_short_normal": {
+      "source_rank": 3,
+      "source_normal_span_m": 0.011,
+      "profiled_offset_m": [
+        0.3978442265272904,
+        -0.0006180738008578359,
+        0.00037724770431472545
+      ],
+      "profiled_driver_delay_us": 0.6238135599661802,
+      "rms_model_difference_us": 18.418836012155314,
+      "max_model_difference_us": 32.984735387670256,
+      "fixed_plane_covariance_score": 4.295482634162245,
+      "rms_after_independent_two_sample_echo_shift_us": 0.0
+    }
+  },
+  "unknown_orientation_exact_alias": {
+    "source_rank": 3,
+    "baseline_norms_m": [
+      0.4
+    ],
+    "every_plane_path_same_halfspace": true,
+    "minimum_excess_delay_us": 1050.8668660872142,
+    "max_exact_alias_error_s": 0.0,
+    "required_orientation": "secondary baseline alternates +x/-x; source acoustic reference at x=\u00b10.2m"
+  },
+  "next_measurement": {
+    "same_x_y_move": {
+      "source_position_m": [
+        0.0,
+        0.25,
+        1.2
+      ],
+      "rms_predicted_separation_us": 0.0,
+      "min_predicted_separation_us": 0.0,
+      "receiver_positions_m": [
+        [
+          -1.488714012486631,
+          -0.2752893420224628,
+          0.7506618637350652
+        ],
+        [
+          -1.716706229400864,
+          -1.1530100825940612,
+          1.075630724300959
+        ],
+        [
+          -0.6875681473561406,
+          0.8432047604810191,
+          0.8250504025014477
+        ],
+        [
+          -0.9366095316961236,
+          -1.1274826434689054,
+          0.6210927444359298
+        ],
+        [
+          -1.0931753613764768,
+          0.5362935298535867,
+          0.6475083192029925
+        ],
+        [
+          -1.4935495959034386,
+          -1.156586432444561,
+          0.48161908393563374
+        ],
+        [
+          -0.35226309192972083,
+          -1.0907236587505478,
+          1.0381714603727068
+        ],
+        [
+          -0.41434059563124775,
+          -0.1828240376068513,
+          0.552423166577951
+        ],
+        [
+          -1.571518420692064,
+          -0.15524151187823354,
+          0.341650570218455
+        ],
+        [
+          -1.1958142611434484,
+          0.7213514453576166,
+          0.5037320338425583
+        ],
+        [
+          -0.6397143201214001,
+          0.6980413519238557,
+          1.1996436899485865
+        ],
+        [
+          -1.4266474349157812,
+          1.1096366894202077,
+          1.8534749054369772
+        ]
+      ]
+    },
+    "same_x_z_move": {
+      "source_position_m": [
+        0.0,
+        0.0,
+        1.45
+      ],
+      "rms_predicted_separation_us": 0.0,
+      "min_predicted_separation_us": 0.0,
+      "receiver_positions_m": [
+        [
+          -1.488714012486631,
+          -0.2752893420224628,
+          0.7506618637350652
+        ],
+        [
+          -1.716706229400864,
+          -1.1530100825940612,
+          1.075630724300959
+        ],
+        [
+          -0.6875681473561406,
+          0.8432047604810191,
+          0.8250504025014477
+        ],
+        [
+          -0.9366095316961236,
+          -1.1274826434689054,
+          0.6210927444359298
+        ],
+        [
+          -1.0931753613764768,
+          0.5362935298535867,
+          0.6475083192029925
+        ],
+        [
+          -1.4935495959034386,
+          -1.156586432444561,
+          0.48161908393563374
+        ],
+        [
+          -0.35226309192972083,
+          -1.0907236587505478,
+          1.0381714603727068
+        ],
+        [
+          -0.41434059563124775,
+          -0.1828240376068513,
+          0.552423166577951
+        ],
+        [
+          -1.571518420692064,
+          -0.15524151187823354,
+          0.341650570218455
+        ],
+        [
+          -1.1958142611434484,
+          0.7213514453576166,
+          0.5037320338425583
+        ],
+        [
+          -0.6397143201214001,
+          0.6980413519238557,
+          1.1996436899485865
+        ],
+        [
+          -1.4266474349157812,
+          1.1096366894202077,
+          1.8534749054369772
+        ]
+      ]
+    },
+    "normal_toward_plane": {
+      "source_position_m": [
+        0.1,
+        0.0,
+        1.2
+      ],
+      "rms_predicted_separation_us": 478.0805496189087,
+      "min_predicted_separation_us": 327.98102894952194,
+      "receiver_positions_m": [
+        [
+          -1.488714012486631,
+          -0.2752893420224628,
+          0.7506618637350652
+        ],
+        [
+          -1.716706229400864,
+          -1.1530100825940612,
+          1.075630724300959
+        ],
+        [
+          -0.6875681473561406,
+          0.8432047604810191,
+          0.8250504025014477
+        ],
+        [
+          -0.9366095316961236,
+          -1.1274826434689054,
+          0.6210927444359298
+        ],
+        [
+          -1.0931753613764768,
+          0.5362935298535867,
+          0.6475083192029925
+        ],
+        [
+          -1.4935495959034386,
+          -1.156586432444561,
+          0.48161908393563374
+        ],
+        [
+          -0.35226309192972083,
+          -1.0907236587505478,
+          1.0381714603727068
+        ],
+        [
+          -0.41434059563124775,
+          -0.1828240376068513,
+          0.552423166577951
+        ],
+        [
+          -1.571518420692064,
+          -0.15524151187823354,
+          0.341650570218455
+        ],
+        [
+          -1.1958142611434484,
+          0.7213514453576166,
+          0.5037320338425583
+        ],
+        [
+          -0.6397143201214001,
+          0.6980413519238557,
+          1.1996436899485865
+        ],
+        [
+          -1.4266474349157812,
+          1.1096366894202077,
+          1.8534749054369772
+        ]
+      ]
+    },
+    "normal_away_plane": {
+      "source_position_m": [
+        -0.1,
+        0.0,
+        1.2
+      ],
+      "rms_predicted_separation_us": 478.08054961890883,
+      "min_predicted_separation_us": 327.98102894952194,
+      "receiver_positions_m": [
+        [
+          -1.488714012486631,
+          -0.2752893420224628,
+          0.7506618637350652
+        ],
+        [
+          -1.716706229400864,
+          -1.1530100825940612,
+          1.075630724300959
+        ],
+        [
+          -0.6875681473561406,
+          0.8432047604810191,
+          0.8250504025014477
+        ],
+        [
+          -0.9366095316961236,
+          -1.1274826434689054,
+          0.6210927444359298
+        ],
+        [
+          -1.0931753613764768,
+          0.5362935298535867,
+          0.6475083192029925
+        ],
+        [
+          -1.4935495959034386,
+          -1.156586432444561,
+          0.48161908393563374
+        ],
+        [
+          -0.35226309192972083,
+          -1.0907236587505478,
+          1.0381714603727068
+        ],
+        [
+          -0.41434059563124775,
+          -0.1828240376068513,
+          0.552423166577951
+        ],
+        [
+          -1.571518420692064,
+          -0.15524151187823354,
+          0.341650570218455
+        ],
+        [
+          -1.1958142611434484,
+          0.7213514453576166,
+          0.5037320338425583
+        ],
+        [
+          -0.6397143201214001,
+          0.6980413519238557,
+          1.1996436899485865
+        ],
+        [
+          -1.4266474349157812,
+          1.1096366894202077,
+          1.8534749054369772
+        ]
+      ]
+    }
+  },
+  "limitations": "analytic identifiability and chosen uncertainty budget only; not waveform detector or calibrated false-alarm evaluation"
+}

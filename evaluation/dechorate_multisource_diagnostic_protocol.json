@@ -1,0 +1,10 @@
+{
+  "declared_after_primary_failure": true,
+  "primary_unchanged": true,
+  "core": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "purpose": "Separate surveyed-pose mismatch from processing failure, not improve benchmark score by tuning",
+  "echo_refined_arm": "Use exact SourcePosition/ReceiverPosition from each licensed SOFA file, verify metric Cartesian units first. Keep original extracted observations, speed346.98, candidate IDs and every threshold unchanged. Jointmapper andplane_grid only. Distributed poses are echo-calibrated; acoustic-label leakage risk makes this diagnostic, never independent validation or replacement for primary.",
+  "direct_reference_diagnostic": "For each source, compare extracted directarrival minusprobelead to source-receiverdistance/346.98. Report residuals forsurvey-only andSOFAposes, median sourceconstant latency and remaining centeredRMS/max. Median latency is evaluation nuisance summary only, never applied to fitting, waveform or echo candidates. No walllabels or model-generatedechoannotations.",
+  "geometry_reference": "Score only after both diagnostic fits. Existing5degree/15cm matching, no gate relaxation. Original failure persists even if diagnostic improves.",
+  "source_latency_limits": "Assuming one constant recording/processing delay per source is a diagnostic compatibility model, not qualification of directpath, phase response oracousticcenter. Remaining variation may come from detector/pathbias or pose errors. Do not assign uniquecause without evidence."
+}

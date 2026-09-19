@@ -1,0 +1,8 @@
+{
+  "declared_after_primary_failure": true,
+  "purpose": "Evaluation-only attribution of already selected supports; no labels, reassignment, discarded evidence or refit enters the mapper",
+  "reference": "Six supplied room planes with dataset dimensions. Geometry-generated first/ordered-second-order paths are compatibility predictions, not independently measured echo labels.",
+  "paths": "All6singlewalls and all30ordered distinct wallpairs. Validate reflection law/order with immutable reflection_path and require reflection vertices within rectangularroom bounds. Usebothsurvey-only andecho-refinedposes at346.98m/s; exact0.075m existinggate. Report all compatible labels, nearestdistance and dominantfamily count; overlapping labels are ambiguous.",
+  "candidate_cap": "Instrument an exact copy of frozen signals.py only to retain pre-budget candidates immediately before strongest18 selection. Verify final returned cappedcandidates exactlyequal previously extracted candidate dictionaries. Do not change extractionthresholds, timing, fitting inputs, pathassignment or runnewinversefit. For240firstorderpredictions report whether no cappedcandidate but atleastone pre-budgetcandidate is within0.075m pathlengthresidual; fraction is modelpredicted timing compatibility lost tocap, not measuredechorecall. No detectablecandidate doesnot establish absentreflection.",
+  "causal_limits": "RoomDescription conflicts, sourcephase/directivity, arraycovariance and9–15cm survey/refinedsource difference remain. Knownhigherorder compatibility cannot proveactual pathorder. Mixtures or missingmatchedpredictions cannotidentify onephysicalcause. Original failureremains."
+}

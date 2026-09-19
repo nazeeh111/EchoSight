@@ -1,0 +1,9 @@
+# Bounded local nuisance sensitivity, declared after v3 before execution
+
+V3 passed its narrow fresh-development engineering gates, while source qualification withheld24true surfaces to remove13false ones. This sensitivity check is not another acceptance adjustment or an estimate of physical false-alarm probability.
+
+Use each of the12fresh cases and the unchanged v3 diagnostic. For each case, draw8deterministic joint perturbations from declared source12x12covariance (common source error preserved), the shared effective-speed SD0.6m/s, and one receiver-pose error of SD6mm per reused receiver group. Use seed8101+case-index, independent of generating data/truth. Keep nominal point truth outside fitting. Refit both source/plane competitors with exactly the same budgets and perturbed supplied geometry.
+
+Run paired versions: geometry/speed only, and the same draw plus local timing perturbations. Timing version adds one direct-reference shift per recording from its reported direct_std_s and one relative-rate perturbation from alpha_std/alpha; apply these to the entire stored response time axis, not to the secondary component alone. Keep all repeated/shared pose relationships intact. These are local sensitivity draws conditional on already accepted observations and affine timing. They do not repeat raw pilot association, calibrate the timing-floor distribution, or establish that direct and rate errors are independent in real devices. Unreported timing cross-covariance and incorrect-model uncertainty remain limitations.
+
+Report source-flag counts, any rejected valid control, waveform residual ratios, component support and all geometry withheld. Do not label8draws a coverage study. If valid controls acquire false source flags or dual flags change materially, recommend retaining the prototype as a diagnostic pending better evidence; do not relax thresholds or narrow uncertainty after the result.

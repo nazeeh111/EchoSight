@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "frozen_date": "2026-09-19",
+  "core_commit": "de8442b",
+  "files": [
+    {
+      "filename": "dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "bytes": 1763703,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "bytes": 1763789,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "bytes": 1761801,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "bytes": 1760208,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "bytes": 1763688,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "bytes": 1765105,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "bytes": 1763564,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "bytes": 1764829,
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "expected_sha256": null,
+      "expected_sha256_reason": "Publisher full-file hashes unavailable before retrieval; exact byte count pinned from HEAD; first retrieval hashes must be pinned before fitting, not claimed preverified.",
+      "last_modified_date": "2025-02-04"
+    }
+  ],
+  "total_bytes": 14106687,
+  "evidence_class": "measured laboratory RIR convolved with generated probe; hybrid replay, not our devices",
+  "source_version": {
+    "metadata_commit": "d3e664f1e7a7d46241d7f7b3b3761448686b9537",
+    "sofa_mirror": "https://www.sofaconventions.org/data/database/dechorate/",
+    "primary_paper": "https://link.springer.com/article/10.1186/s13636-021-00229-0",
+    "access_depth": "paper sections2.1\u20132.4; entire geometry source and CSV; earlier local SOFA metadata and HTTP HEAD; no selected RIR payload before freeze"
+  },
+  "license": "Expected embedded MIT Copyright(c)2019DiegoDiCarlo; verify all8 before fitting; preserve full license. No claims about other raw archives.",
+  "metadata_conflict": "Earlier SOFA RoomDescription incorrectly constant020002 across filenames. Use exact filenames and Title as provisional identity; preserve conflicting attributes. Dimensions are supplied structural reference, not laser verified. Unmatched definitive surfaces fail benchmark but are not proven nonexistent furniture.",
+  "pose_policy": "Original beacon CSV only, source IDs1\u20134, array centers5+6, known offsets[-.1225,-.0825,-.0325,.0325,.1325] rotated by supplied azimuth, height translation+2.355m. Common right-handed metric z-up frame. Height translation is coordinate origin, not a fitted ceiling constraint. Beacon center is assumed acoustic center, not independently qualified. Echo-refined poses never primary input; no echo annotations loaded.",
+  "probe": {
+    "sample_rate_hz": 48000,
+    "low_hz": 2000.0,
+    "high_hz": 14000.0,
+    "period_s": 1.0,
+    "repetitions": 7,
+    "duration_s": 0.04,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08
+  },
+  "replay": "Entire1sIR convolved, one global gain for all40 records, Float32 WAV, no cropping/time correction/path labels. Period1s is frozen core maximum; late1sIR tail may overlap next burst and remains model mismatch.",
+  "conditional_calibration": {
+    "sound_speed_m_s": 346.98,
+    "sound_speed_std_m_s": 1.0,
+    "source_position_std_m": 0.02,
+    "receiver_position_std_m": 0.02,
+    "source_clock_scale": 1.0,
+    "source_clock_std_ppm": 0.0,
+    "note": "Speed source-reported. Gaussian numeric priors are explicit sensitivity assumptions, not dataset covariance or proof acoustic-center calibration. Repeated capsule position shares receiver group across sources; cross-capsule rigid-array covariance unsupported."
+  },
+  "matching": {
+    "maximum_normal_error_deg": 5.0,
+    "maximum_offset_error_m": 0.15
+  },
+  "acceptance": {
+    "minimum_matched_room_planes": 4,
+    "minimum_horizontal_matched": 1,
+    "maximum_unmatched_definitive_planes": 0,
+    "maximum_runtime_seconds": 300.0,
+    "forbid_enclosure_claim": true
+  },
+  "methods": [
+    "joint_mapper",
+    "joint_plane_grid",
+    "single_source_mapper_each",
+    "single_source_first_echo_each",
+    "independent_source_consensus"
+  ],
+  "equal_inputs": "Extract signals once via raw process_scene_bundle for nominal and null; same processed observations for comparator methods; no labels in fit. Geometry shuffled control changes pose attribution only; identical raw waveform evidence.",
+  "controls": {
+    "null": "40 distinct duration-preserving digital-zero WAV containers through raw entry; shared-waveform rejection or no_signal valid, no surfaces required.",
+    "shuffled_geometry": "Keep source poses and every waveform/candidate unchanged; rotate ten receiver pose assignments by3 consistently in all source sessions including receiver_pose_group_id. Require0definitiveplanes; report any residual and hypothesis."
+  },
+  "sensitivity": {
+    "arms": [
+      "array_x_plus",
+      "array_x_minus",
+      "array_y_plus",
+      "array_y_minus",
+      "array_z_plus",
+      "array_z_minus",
+      "array_yaw_plus",
+      "array_yaw_minus"
+    ],
+    "translation_m": 0.02,
+    "yaw_deg": 2.0,
+    "policy": "Translate whole array5 by signed vector and array6 by opposite vector, or rotate each capsule about its fixed array center by\u00b12deg and opposite for array6. All ten fixed receiver positions remain same across sources.\u00b12cm matches approximate beacon precision as a deterministic bound;2deg is an explicitly assumed orientation perturbation, not calibratedprobability. Run jointmapper only with unchanged observations; do not choose favorable arm. Report geometry retention, changes, all failures, not coverage."
+  },
+  "uncertainty": "No calibrated confidence/coverage claim. Suppress evaluation95percentcoverage booleans; retain mapper conditionalcovariance with explicitqualifier. Original source/acousticcenter and whole-arraycorrelation unresolved.",
+  "ground_truth": "Six planes from separately loaded datasetroom_size[5.705,5.965,2.355], only afterfitting. Includeall6misses includingabsorbingfloor; model-generatedecho_toa forbidden.",
+  "thresholds": "Frozen before selectedaudio retrieval. No tuningcore, inputposes, speed, gain, gates or candidateIDs based on truth or result. No automatic addition of arrays/files. Failures retained."
+}

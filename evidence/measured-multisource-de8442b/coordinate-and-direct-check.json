@@ -1,0 +1,335 @@
+{
+  "protocol_sha256": "d77c93d59824165d585f7bba8f0990b1d3c683e40b567d5a64535d86154be02a",
+  "datasets": [
+    {
+      "file": "dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    },
+    {
+      "file": "dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "datasets": {
+        "SourcePosition": {
+          "_Netcdf4Coordinates": "[1 4]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "ReceiverPosition": {
+          "_Netcdf4Coordinates": "[2 4 5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)\n array([<HDF5 object reference>], dtype=object)]",
+          "Type": "cartesian",
+          "Units": "metre"
+        },
+        "Data.SamplingRate": {
+          "_Netcdf4Coordinates": "[5]",
+          "DIMENSION_LIST": "[array([<HDF5 object reference>], dtype=object)]",
+          "Units": "hertz"
+        }
+      }
+    }
+  ],
+  "direct_reference": [
+    {
+      "pose_arm": "survey",
+      "session_id": "dechorate-survey-source1",
+      "direct_reference_model_residual_s": [
+        0.00035405733439495494,
+        0.00028914078895587135,
+        0.0002815314872013702,
+        0.0003362757063458087,
+        0.0003414805136921833,
+        -3.336359823428482e-05,
+        -3.796414339605862e-05,
+        -4.521369851493047e-05,
+        0.00043709294763680587,
+        -9.05005451137318e-05
+      ],
+      "source_constant_latency_median_s": 0.00028533613807862077,
+      "remaining_rms_s": 0.0002213905404862371,
+      "remaining_max_abs_s": 0.00037583668319235257
+    },
+    {
+      "pose_arm": "survey",
+      "session_id": "dechorate-survey-source2",
+      "direct_reference_model_residual_s": [
+        4.552871000349651e-05,
+        5.5145052724261956e-05,
+        5.2234958878396784e-05,
+        6.486922839983242e-06,
+        1.2412784419333148e-05,
+        8.985444031404423e-05,
+        9.446316186166939e-05,
+        9.787101682134751e-05,
+        9.852876899148558e-05,
+        0.00011892097614353732
+      ],
+      "source_constant_latency_median_s": 7.249974651915309e-05,
+      "remaining_rms_s": 3.6969093399385595e-05,
+      "remaining_max_abs_s": 6.601282367916985e-05
+    },
+    {
+      "pose_arm": "survey",
+      "session_id": "dechorate-survey-source3",
+      "direct_reference_model_residual_s": [
+        0.00027988229187585634,
+        0.00028019149224551513,
+        0.0002736690053583681,
+        0.00032329866622930834,
+        0.00032698359778544645,
+        0.00012504575727286405,
+        4.0953884196246425e-05,
+        4.783413860210729e-05,
+        0.0001602630462105301,
+        0.0001769558868314116
+      ],
+      "source_constant_latency_median_s": 0.00022531244609488984,
+      "remaining_rms_s": 0.00010506001910021115,
+      "remaining_max_abs_s": 0.00018435856189864342
+    },
+    {
+      "pose_arm": "survey",
+      "session_id": "dechorate-survey-source4",
+      "direct_reference_model_residual_s": [
+        -0.0001311583709826679,
+        -0.00011872594180568343,
+        -0.00012371770747133908,
+        -0.00011969625198563231,
+        -0.00010676110595144806,
+        0.00010864439458312895,
+        0.00011048381307588156,
+        0.00011793631957554129,
+        0.0001449380340383796,
+        0.0001527093572449758
+      ],
+      "source_constant_latency_median_s": 9.416443158404442e-07,
+      "remaining_rms_s": 0.00012430591529327193,
+      "remaining_max_abs_s": 0.00015176771292913535
+    },
+    {
+      "pose_arm": "echo_refined",
+      "session_id": "dechorate-survey-source1",
+      "direct_reference_model_residual_s": [
+        0.00031610950220917894,
+        0.00025145509534703694,
+        0.0002441986366736948,
+        0.00029944491807058424,
+        0.0003055216396811661,
+        -8.670490978699742e-05,
+        -9.112117867834685e-05,
+        -9.812582956756667e-05,
+        0.0003845260598850358,
+        -0.00014246703331460744
+      ],
+      "source_constant_latency_median_s": 0.0002478268660103659,
+      "remaining_rms_s": 0.00022982134534465425,
+      "remaining_max_abs_s": 0.0003902938993249733
+    },
+    {
+      "pose_arm": "echo_refined",
+      "session_id": "dechorate-survey-source2",
+      "direct_reference_model_residual_s": [
+        7.996597517818255e-05,
+        8.945525988180575e-05,
+        8.638236526483344e-05,
+        4.041594726330623e-05,
+        4.598995604845196e-05,
+        5.3091175999079795e-05,
+        5.3227864790181614e-05,
+        5.107180150874281e-05,
+        4.45465376113785e-05,
+        5.40183857472374e-05
+      ],
+      "source_constant_latency_median_s": 5.3159520394630705e-05,
+      "remaining_rms_s": 1.8527856021402644e-05,
+      "remaining_max_abs_s": 3.6295739487175044e-05
+    },
+    {
+      "pose_arm": "echo_refined",
+      "session_id": "dechorate-survey-source3",
+      "direct_reference_model_residual_s": [
+        0.0002935041017851957,
+        0.00029366768656504706,
+        0.00028695290629924663,
+        0.0003363149579346091,
+        0.0003395475918552271,
+        -1.1456396385542411e-05,
+        -9.49589661186764e-05,
+        -8.736945952582224e-05,
+        2.5938544866387775e-05,
+        4.389622340008042e-05
+      ],
+      "source_constant_latency_median_s": 0.00016542456484966352,
+      "remaining_rms_s": 0.00017445885553905445,
+      "remaining_max_abs_s": 0.0002603835309683399
+    },
+    {
+      "pose_arm": "echo_refined",
+      "session_id": "dechorate-survey-source4",
+      "direct_reference_model_residual_s": [
+        -1.241757963672558e-05,
+        -2.8354979035483292e-06,
+        -1.1460026928538855e-05,
+        -1.222922239184224e-05,
+        -6.685140616344721e-06,
+        -4.991486765503102e-06,
+        -4.13632977598697e-06,
+        2.1868318364195657e-06,
+        2.78740019236225e-05,
+        3.3922016182639896e-05
+      ],
+      "source_constant_latency_median_s": -4.563908270745036e-06,
+      "remaining_rms_s": 1.659759986758954e-05,
+      "remaining_max_abs_s": 3.848592445338493e-05
+    }
+  ]
+}

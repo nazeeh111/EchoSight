@@ -1,0 +1,8 @@
+test_controls_and_recovery_are_separate (tests.test_measured_acceptance.MeasuredAcceptanceTests.test_controls_and_recovery_are_separate) ... ok
+test_every_frozen_numeric_gate_is_applied (tests.test_measured_acceptance.MeasuredAcceptanceTests.test_every_frozen_numeric_gate_is_applied) ... ok
+test_geometry_success_cannot_claim_physical_extent (tests.test_measured_acceptance.MeasuredAcceptanceTests.test_geometry_success_cannot_claim_physical_extent) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

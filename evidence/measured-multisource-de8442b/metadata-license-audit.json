@@ -1,0 +1,858 @@
+[
+  {
+    "filename": "dEchorate_room011111_src1_arr5_mics21-25.sofa",
+    "sha256": "e52967696dd74710f452697d5771e044e8b0d2c6ebe89767bd43983a1a18d62a",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src1_arr5_mics21-25",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:4",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:1",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        1.89407487,
+        4.52190448,
+        1.4481839
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.72758061
+        ],
+        [
+          4.02235716
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.70088482
+        ],
+        [
+          3.99256898
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.6675151
+        ],
+        [
+          3.95533377
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.62413445
+        ],
+        [
+          3.90692799
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.55739499
+        ],
+        [
+          3.83245756
+        ],
+        [
+          0.95058622
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src1_arr6_mics26-30.sofa",
+    "sha256": "a6298fad1510ed7bd13ac19773a3e0ebf85d1334f7a3df6679e13fa44c93f109",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src1_arr6_mics26-30",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:5",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:1",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        1.89407487,
+        4.52190448,
+        1.4481839
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.08212703
+        ],
+        [
+          3.42108318
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.04939035
+        ],
+        [
+          3.44406817
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.00846949
+        ],
+        [
+          3.4727994
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.95527238
+        ],
+        [
+          3.51015
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.87343067
+        ],
+        [
+          3.56761246
+        ],
+        [
+          1.49048013
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src2_arr5_mics21-25.sofa",
+    "sha256": "5f8d937ca344a2de8b90ac1cad4c2e70e3758e7865d385794fad9830ac4a3a62",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src2_arr5_mics21-25",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:4",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:2",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        1.6330509,
+        0.8420041,
+        1.02493109
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.72758061
+        ],
+        [
+          4.02235716
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.70088482
+        ],
+        [
+          3.99256898
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.6675151
+        ],
+        [
+          3.95533377
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.62413445
+        ],
+        [
+          3.90692799
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.55739499
+        ],
+        [
+          3.83245756
+        ],
+        [
+          0.95058622
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src2_arr6_mics26-30.sofa",
+    "sha256": "4c273f7e2373cc751a5c8e337c53f11ac1babeb7d8d55934eac424ec436691e6",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src2_arr6_mics26-30",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:5",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:2",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        1.6330509,
+        0.8420041,
+        1.02493109
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.08212703
+        ],
+        [
+          3.42108318
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.04939035
+        ],
+        [
+          3.44406817
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.00846949
+        ],
+        [
+          3.4727994
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.95527238
+        ],
+        [
+          3.51015
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.87343067
+        ],
+        [
+          3.56761246
+        ],
+        [
+          1.49048013
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src3_arr5_mics21-25.sofa",
+    "sha256": "6ce0cd1c1406599541863b503d35a71594b212de198fbb21833f12e3b1e2850b",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src3_arr5_mics21-25",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:4",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:3",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        4.30997826,
+        2.1408947,
+        1.09632443
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.72758061
+        ],
+        [
+          4.02235716
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.70088482
+        ],
+        [
+          3.99256898
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.6675151
+        ],
+        [
+          3.95533377
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.62413445
+        ],
+        [
+          3.90692799
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.55739499
+        ],
+        [
+          3.83245756
+        ],
+        [
+          0.95058622
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src3_arr6_mics26-30.sofa",
+    "sha256": "eb689b78e421cd7c47d52e09321c7e68ce0356ef453110bff438088264bf7864",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src3_arr6_mics26-30",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:5",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:3",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        4.30997826,
+        2.1408947,
+        1.09632443
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.08212703
+        ],
+        [
+          3.42108318
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.04939035
+        ],
+        [
+          3.44406817
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.00846949
+        ],
+        [
+          3.4727994
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.95527238
+        ],
+        [
+          3.51015
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.87343067
+        ],
+        [
+          3.56761246
+        ],
+        [
+          1.49048013
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src4_arr5_mics21-25.sofa",
+    "sha256": "c621cca5739de1baede50cdaa328b071bfc0e6d0b7b7f48f6683fcd8f5ff4e90",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src4_arr5_mics21-25",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:4",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:4",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        4.61104211,
+        3.7451399,
+        1.50903224
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.72758061
+        ],
+        [
+          4.02235716
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.70088482
+        ],
+        [
+          3.99256898
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.6675151
+        ],
+        [
+          3.95533377
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.62413445
+        ],
+        [
+          3.90692799
+        ],
+        [
+          0.95058622
+        ]
+      ],
+      [
+        [
+          3.55739499
+        ],
+        [
+          3.83245756
+        ],
+        [
+          0.95058622
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  },
+  {
+    "filename": "dEchorate_room011111_src4_arr6_mics26-30.sofa",
+    "sha256": "bdb9f18de08092e1c0467d8d96c018be738d9c4bc3adcab5c73e74f10e6d2d28",
+    "attributes": {
+      "Conventions": "SOFA",
+      "Version": "2.1",
+      "SOFAConventions": "SingleRoomSRIR",
+      "SOFAConventionsVersion": "1.0",
+      "DataType": "FIR",
+      "RoomType": "shoebox",
+      "Title": "dEchorate_room011111_src4_arr6_mics26-30",
+      "DateCreated": "2024-03-24",
+      "DateModified": "2024-07-07",
+      "APIName": "sofar SOFA API for Python (pyfar.org)",
+      "APIVersion": "sofar v1.2.1 implementing SOFA standard AES69-2022 (SOFA conventions 2.1)",
+      "AuthorContact": "diego.dicarlo89@gmail.com",
+      "Organization": "INRIA Rennes (Fr)",
+      "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "ApplicationName": "Python",
+      "ApplicationVersion": "3.9.19",
+      "Comment": "Annotated echoes are available as h5 file on the Zenodo page",
+      "History": "- 2019-01-20: Recorded raw data\n                \n- 2019-06-17: Processed annotation\n                \n- 2021-03-22: Publication on Zenodo v0\n                \n- 2022-04-21: Creation SOFA\n                \n- 2023-01-26: New Sofa\n                \n- 2024-03-24: Updating Sofa\n                \n- 2024-07-07: Updating Sofa\n                ",
+      "References": "- article: @article{dicarlo2021dechorate,\n                \ntitle={dEchorate: a calibrated room impulse response dataset for echo-aware signal processing},\n                \nauthor={Di Carlo, Diego and Tandeitnik, Pinchas and Foy, Cedri{'c} and Bertin, Nancy and Deleforge, Antoine and Gannot, Sharon},\n                \njournal={EURASIP Journal on Audio, Speech, and Music Processing},\n                \nvolume={2021},\n                \nnumber={1},\n                \npages={1--15},\n                \nyear={2021},\n                \npublisher={Springer}\n                \n};\n                \n- website: 'http://diegodicarlo.com/datasets/dechorate';\n                \n- code: 'https://github.com/Chutlhu/DechorateDB'; \n                \n- paper: 'https://doi.org/10.1186/s13636-021-00229-0'\n                ",
+      "Origin": "",
+      "DatabaseName": "dEchorate",
+      "RoomShortName": "",
+      "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+      "RoomLocation": "",
+      "RoomGeometry": "",
+      "ListenerShortName": "array_id:5",
+      "ListenerDescription": "handcrafted 5-mics non-Uniform Linear Array",
+      "ReceiverShortName": "capsule",
+      "ReceiverDescription": "AKG CK32",
+      "SourceShortName": "loudspeaker_id:4",
+      "SourceDescription": "Directional Avanton MIXCUBE",
+      "EmitterShortName": "",
+      "EmitterDescription": "",
+      "_NCProperties": "version=2,netcdf=4.9.3-development,hdf5=1.14.2"
+    },
+    "source_position_echo_refined": [
+      [
+        4.61104211,
+        3.7451399,
+        1.50903224
+      ]
+    ],
+    "receiver_position_echo_refined": [
+      [
+        [
+          3.08212703
+        ],
+        [
+          3.42108318
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.04939035
+        ],
+        [
+          3.44406817
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          3.00846949
+        ],
+        [
+          3.4727994
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.95527238
+        ],
+        [
+          3.51015
+        ],
+        [
+          1.49048013
+        ]
+      ],
+      [
+        [
+          2.87343067
+        ],
+        [
+          3.56761246
+        ],
+        [
+          1.49048013
+        ]
+      ]
+    ],
+    "room_temperature_raw": [
+      0.0
+    ]
+  }
+]

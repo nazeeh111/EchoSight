@@ -1,0 +1,23 @@
+# Source-model failure and qualification work
+
+The current single-emitter assumption remains unqualified on our MacBook. In the [frozen raw evaluation](../../evidence/path-interpretation-evaluation/REPORT.md), secondary-emitter wall reflections create four false planes while six real room planes remain correctly recovered in each affected case. Small residuals and additional receiver positions do not resolve that coherent alias by themselves.
+
+For plane `n·x=d`, let `H=I−2nnᵀ`. A secondary emitter at `s+δ` reflects to `Hs+Hδ+2dn`. If `δ=a n`, that path is exactly the declared source reflected in the shifted plane `d−a/2`. The false copies in the frozen cases lie112–123mm from already matched walls for a240mm emitter separation. One-to-one evaluation correctly counts those extra copies as false; merging nearby surfaces would hide the failure.
+
+The [independent information audit](../../evidence/source-model-identifiability/README.md) derives the difference between a rigid secondary source and a real nearby plane. Normal source motion can distinguish their early direct/image paths; purely tangential motion cannot. Unknown source rotation or placement-dependent driver delay can preserve ambiguities even with noncoplanar source positions. Information depends on which source positions actually hear the component, not merely the rank of every surveyed position. The scripts include exact aliases, joint uncertainty and a concrete next-placement prediction. These are analytic/synthetic information checks, not device measurements.
+
+## Preserved experimental warning
+
+The [archived experiment](../../evidence/source-model-diagnostic-trial/README.md) compares single-source, rigid-secondary and fixed-near-reflector explanations using generated raw recordings, learned waveform kernels and held receiver bearings. The same inputs and search budgets feed both alternatives. It has not been promoted into the backend.
+
+- V1 missed every dual-emitter case because its waveform search found poor local solutions.
+- V2 improved the search but falsely rejected a valid nearby reflector. Only three tangential source positions actually heard that component; the fourth position was not useful evidence.
+- V3 checked source diversity only where the secondary component was supported. On fresh development fixtures it changed62true/13false/0miss to38true/0false/24miss. This is a source-calibration warning with substantial lost structure, not improved completeness.
+
+[Independent review](../../evidence/independent-review-source-model-prototype.md) found that the subsequent timing-axis stress violated the extractor's direct-zero convention. A fresh raw recording translated by three samples preserved its normalized response to2.85e−12; the axis-only stress instead changed normalization sign and distorted the waveform. Its0/32 retained flags cannot be interpreted as failure under real clock uncertainty. The review also found that independently clipping two correlated fitted gains does not generally minimize their bounded least-squares objective. An algebraic counterexample establishes the defect; the reviewed physical profile probe did not establish a nominal classification impact.
+
+A bounded correction is active: exact constrained gain fitting, followed by raw clock/offset variation and complete re-extraction, reanchoring and kernel learning. Every classification threshold, control and withheld-geometry cost remains fixed. No new physical-confidence claim or public source-identification capability follows until that work is independently verified. The archived versions and failed tests remain intact.
+
+## Remaining requirement
+
+A warning does not identify physical drivers; absence of a warning does not qualify one acoustic center. Arbitrary direction-dependent source filters, unknown orientation, inaccurate poses, an incorrectly selected direct arrival and inaudible discriminating paths remain limits. The eventual route must pass [hardware source/timing qualification](../HARDWARE_ACCEPTANCE.md), using separately declared routing, orientation, band and level. No own-device experiment has run, and none is requested while independent backend work remains.

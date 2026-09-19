@@ -1,0 +1,19 @@
+{
+  "hashes": {
+    "work/source-model-diagnostic/V3-DESIGN.md": "b2ac29fcfe5881cf0977b9a34521e4e844303a2d3ba2d0d9ee2a7e3cfbbc8929",
+    "work/source-model-diagnostic/run_v3.py": "a411aaf2bb44a48019953daac778243f8700d308d74ee2a695445f7b41ae5683",
+    "work/source-model-diagnostic/diagnostic_v3.py": "81ad33f98ff9bd901cad12cc0a17961658a78765d637d56c21b871873d038612",
+    "work/source-model-diagnostic/waveform_v3.py": "199d0e031b2b24637a95343d7a4d8a1caccb522473df8c2c5e7d77c2ffdaf69e",
+    "work/source-model-diagnostic/render_v3.py": "dccf00e4719bcb180d26db773b9886c4db84ffde2bd7b4f055e007f524e77879",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c"
+  },
+  "old_results_sha256": "4d00b62980616b25d77409dc8d6ad2e47d1558a31b38a08b94a2cbc0f38ad6d3",
+  "v2_results_sha256": "95f43c0423740a07a5fed930133bf0be0a09e8113daa763e4bb24bf96217c32b",
+  "fresh_seeds": [
+    2423,
+    2437
+  ],
+  "before_fresh_generation": true
+}

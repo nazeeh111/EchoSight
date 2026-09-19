@@ -1,0 +1,21 @@
+{
+  "snapshot_content_sha256": "b5de1137125e098c6e546463abb18495585fdbcc48b2c3ed5b7fe3b2c896e417",
+  "original_review_artifact_sha256": {
+    "work/review-source-model/PROTOCOL.md": "b30d05f35d444f7863641f43c046733a9874be56a24ae25eaa34b96c6d98ea39",
+    "work/review-source-model/gain-algebra.json": "11bcf783072893fc094b95eeb92743fe7ffdcb1179e395fc1daa12fa15fd27e4",
+    "work/review-source-model/gain-results.json": "b9250ded215daa9edfcc9fd3b643601927eb2b9bddb91ca05a7c65d8f5780fd4",
+    "work/review-source-model/gain_probe.py": "3023f253ce4a347d199cef14ffce7a8902cc7377a8070b429c15fe94832ad145",
+    "work/review-source-model/probe.py": "d569fd0451e540d8ee831db6f0d51f646783fbc4e26c1669afdfc576ba94eb94",
+    "work/review-source-model/results.json": "ce27be764cf9e559b115421b8a82e48226497a6a23255a93f0dc92c2aa1f046d"
+  },
+  "files": {
+    "PROTOCOL.md": "b30d05f35d444f7863641f43c046733a9874be56a24ae25eaa34b96c6d98ea39",
+    "gain-algebra.json": "11bcf783072893fc094b95eeb92743fe7ffdcb1179e395fc1daa12fa15fd27e4",
+    "gain-results.json": "b9250ded215daa9edfcc9fd3b643601927eb2b9bddb91ca05a7c65d8f5780fd4",
+    "reproduce.py": "ddee2b72d4c3a85e671852dedf4a8e6685e2f6074ca20b12f859f6775deb90f7",
+    "results.json": "ce27be764cf9e559b115421b8a82e48226497a6a23255a93f0dc92c2aa1f046d",
+    "verification-explicit-core.json": "1c43f4ba44da9c6069c151629c87b0061b34f2a3a86d3d271925f7f75b10c9c6",
+    "verification-git-core.json": "1c43f4ba44da9c6069c151629c87b0061b34f2a3a86d3d271925f7f75b10c9c6"
+  },
+  "scope": "Portable reproduction of existing independent review only; no scientific prototype edits or classifier fits"
+}

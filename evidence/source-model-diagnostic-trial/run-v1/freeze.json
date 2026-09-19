@@ -1,0 +1,30 @@
+{
+  "hashes": {
+    "work/source-model-diagnostic/DESIGN.md": "ee3eccffc395f3f0be3a3db5c05137838c4f5de7fbb02ed48f6a07ab78fb7468",
+    "work/source-model-diagnostic/diagnostic.py": "3deb26616fe658f385bdadbe5f7c0da6a926bda34d92619033ba1847899e581e",
+    "work/source-model-diagnostic/render.py": "a35ac0f72b81dd34bd6ad9f651add1a7de1c69378741f8bc155de21f5f965903",
+    "work/source-model-diagnostic/run.py": "dcded235203a6c9d59341b2a451e1e7eabeb5cc23413df72638d86d6c795c694",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c"
+  },
+  "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "seeds": [
+    2401,
+    2411
+  ],
+  "families": [
+    "single_room",
+    "dual_room",
+    "near_reflector",
+    "direct_null",
+    "receiver_filter",
+    "dual_phase"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "frozen_time": 1789791324.562776,
+  "no_cases_generated": true
+}

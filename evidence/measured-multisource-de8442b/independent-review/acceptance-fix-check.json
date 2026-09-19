@@ -1,0 +1,179 @@
+{
+  "all_21_saved_decisions_unchanged": true,
+  "rows": [
+    {
+      "arm": "joint_mapper",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "joint_plane_grid",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "independent_source_consensus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_1",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_1",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_2",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_2",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_3",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_3",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_4",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_4",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "null",
+      "same_acceptance": true,
+      "failures": []
+    },
+    {
+      "arm": "shuffled_geometry",
+      "same_acceptance": true,
+      "failures": [
+        "definitive_geometry_in_control"
+      ]
+    },
+    {
+      "arm": "array_x_plus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_x_minus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_y_plus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_y_minus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_z_plus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_z_minus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_yaw_plus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_yaw_minus",
+      "same_acceptance": true,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    }
+  ],
+  "inverse_fits_run": 0
+}

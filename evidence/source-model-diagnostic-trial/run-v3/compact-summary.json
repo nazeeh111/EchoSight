@@ -1,0 +1,50 @@
+{
+  "baseline_score": {
+    "matched_count": 62,
+    "false_surfaces": 13,
+    "missed_surfaces": 0
+  },
+  "guarded_score": {
+    "matched_count": 38,
+    "false_surfaces": 0,
+    "missed_surfaces": 24
+  },
+  "runtime_s": {
+    "median": 0.7599809999992431,
+    "maximum": 0.8995396250029444
+  },
+  "offset_errors_evaluation_only": [
+    {
+      "family": "dual_room",
+      "seed": 2423,
+      "offset_error_m": 0.0008269429400657036,
+      "driver_delay_error_s": -2.3538781535882266e-06,
+      "held_mse_ratio_vs_single": 0.04561116996959246,
+      "held_mse_ratio_vs_plane": 0.0456857711164211
+    },
+    {
+      "family": "dual_room",
+      "seed": 2437,
+      "offset_error_m": 0.0018845603430996804,
+      "driver_delay_error_s": 3.0434405988493746e-06,
+      "held_mse_ratio_vs_single": 0.059121467160570026,
+      "held_mse_ratio_vs_plane": 0.059597250995474665
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2423,
+      "offset_error_m": 0.0009822547630672501,
+      "driver_delay_error_s": -1.1461744373065781e-07,
+      "held_mse_ratio_vs_single": 0.2655964664498669,
+      "held_mse_ratio_vs_plane": 0.26721336552439623
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2437,
+      "offset_error_m": 0.0014544289576802357,
+      "driver_delay_error_s": 2.4942277806727756e-06,
+      "held_mse_ratio_vs_single": 0.13723431639541842,
+      "held_mse_ratio_vs_plane": 0.13775896743669097
+    }
+  ]
+}

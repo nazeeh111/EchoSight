@@ -1,0 +1,11 @@
+{
+  "hashes": {
+    "work/source-model-diagnostic/V2-DESIGN.md": "ff5db5f248722c0701113da8395b114dfee115b8881c8b2708415bc7c23f0870",
+    "work/source-model-diagnostic/diagnostic_v2.py": "03aa4c38866b64839c83735e247ecc6cd64ffac32bdfaaa81b8072dfda0d590b",
+    "work/source-model-diagnostic/run_v2.py": "4e5453b7ba93dae2073aa8bad67807e493377c25fecbe89554b9065b3e52c3af",
+    "work/source-model-diagnostic/diagnostic.py": "3deb26616fe658f385bdadbe5f7c0da6a926bda34d92619033ba1847899e581e"
+  },
+  "v1_freeze_sha256": "57ba038aeedd0ac1e92bee3c8ca94d332c73a5fdaf01db02c3f6ff1978dada3a",
+  "v1_results_sha256": "4d00b62980616b25d77409dc8d6ad2e47d1558a31b38a08b94a2cbc0f38ad6d3",
+  "before_v2_fitting": true
+}

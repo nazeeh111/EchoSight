@@ -1,0 +1,10 @@
+{
+  "evaluation/dechorate_multisource.py": "13e21eee4a3c411c81153fe38f2018ee3f3f2318ae5c8c9d3d1af2fc29edb0be",
+  "evaluation/dechorate_multisource_diagnostics.py": "ff4789058e0d6fecb079d0fc09dee627b9dc456d175eef1458da43564b5dcf57",
+  "evaluation/dechorate_multisource_protocol.json": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f",
+  "evaluation/dechorate_multisource_diagnostic_protocol.json": "d77c93d59824165d585f7bba8f0990b1d3c683e40b567d5a64535d86154be02a",
+  "evaluation/dechorate_multisource_path_protocol.json": "51404da2549c82ad52a5bc96c5dfe331065fe180730de2592382a75aea052bae",
+  "evaluation/dechorate_multisource_manifest.json": "0f6da1027d08cfee7bab280865deea484806f497b05e93da7d9b5ea4145b715a",
+  "docs/audit/MEASURED_MULTISOURCE.md": "a87ff2d850575f5cfd985af0ac3b03f7e20f505ff73831bfaad6a95fbdb053ef",
+  "evidence/measured-multisource-de8442b/verification.json": "211519d7490218fff1856aaa26c2e77554353a723a336c825c97f4a27849ae7c"
+}

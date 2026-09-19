@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "opposite_side_plane_path_absent": true,
+  "absent_reflection_gain": 0.0,
+  "max_null_residual": 2.220446049250313e-16,
+  "all_source_min_singular_m": 0.41533929378492684,
+  "three_supported_source_min_singular_m": 0.0,
+  "scope": "No generated recording or fitted truth used"
+}

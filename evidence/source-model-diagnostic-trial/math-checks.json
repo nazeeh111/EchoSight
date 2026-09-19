@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "plane_broken_path_max_error_s": 0.0,
+  "signed_gain_mixture_residual": 2.220446060009598e-16,
+  "alignment_moves_whole_mixture": true,
+  "no_recording_cases_generated": true
+}

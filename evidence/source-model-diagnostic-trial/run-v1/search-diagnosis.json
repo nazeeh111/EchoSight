@@ -1,0 +1,90 @@
+[
+  {
+    "family": "dual_room",
+    "seed": 2401,
+    "fitted_parameters": [
+      0.004075049505558834,
+      -0.13532172696022873,
+      -0.00947538756159072,
+      0.007749310093321542
+    ],
+    "truth_parameters_evaluation_only": [
+      0.07664801045947847,
+      -0.19653264994042002,
+      0.07,
+      0.8
+    ],
+    "executed_train_mse": 0.007283103237603676,
+    "executed_held_mse": 0.007017985534705603,
+    "oracle_fixed_truth_train_mse": 0.000504482412022567,
+    "oracle_fixed_truth_held_mse": 0.0007054501493512025,
+    "single_held_mse": 0.00866520630444244,
+    "scope": "Truth-parameter cost is diagnostic upper-bound evidence only. It does not count as fitted recovery or validated source qualification."
+  },
+  {
+    "family": "dual_room",
+    "seed": 2411,
+    "fitted_parameters": [
+      -0.0040418217702004,
+      0.13310064523038975,
+      0.04641056142077688,
+      0.3440921497842629
+    ],
+    "truth_parameters_evaluation_only": [
+      0.05943451916242623,
+      0.20240439207668193,
+      0.07,
+      0.8
+    ],
+    "executed_train_mse": 0.007238974762650234,
+    "executed_held_mse": 0.007943439365463857,
+    "oracle_fixed_truth_train_mse": 0.0005388848046589002,
+    "oracle_fixed_truth_held_mse": 0.00036541700020081635,
+    "single_held_mse": 0.008862386345969952,
+    "scope": "Truth-parameter cost is diagnostic upper-bound evidence only. It does not count as fitted recovery or validated source qualification."
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2401,
+    "fitted_parameters": [
+      0.01614237376952279,
+      -0.14559695964525876,
+      0.01808304632747749,
+      0.293580912256087
+    ],
+    "truth_parameters_evaluation_only": [
+      0.07664801045947847,
+      -0.19653264994042002,
+      0.07,
+      0.8
+    ],
+    "executed_train_mse": 0.009537229518738552,
+    "executed_held_mse": 0.009710031429922715,
+    "oracle_fixed_truth_train_mse": 0.0018705415066034823,
+    "oracle_fixed_truth_held_mse": 0.002148401053619203,
+    "single_held_mse": 0.011552934388063978,
+    "scope": "Truth-parameter cost is diagnostic upper-bound evidence only. It does not count as fitted recovery or validated source qualification."
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2411,
+    "fitted_parameters": [
+      0.07258166494671955,
+      0.07819187951754021,
+      -0.05147890111188677,
+      0.4184105719675533
+    ],
+    "truth_parameters_evaluation_only": [
+      0.05943451916242623,
+      0.20240439207668193,
+      0.07,
+      0.8
+    ],
+    "executed_train_mse": 0.02439849261761572,
+    "executed_held_mse": 0.010530870206366163,
+    "oracle_fixed_truth_train_mse": 0.019128540673174363,
+    "oracle_fixed_truth_held_mse": 0.001495176558442764,
+    "single_held_mse": 0.011691621531072532,
+    "scope": "Truth-parameter cost is diagnostic upper-bound evidence only. It does not count as fitted recovery or validated source qualification."
+  }
+]

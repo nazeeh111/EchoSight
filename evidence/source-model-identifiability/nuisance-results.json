@@ -1,0 +1,67 @@
+{
+  "source_specific_driver_delay": {
+    "source_rank": 3,
+    "rms_difference_us": 2.55374833271979,
+    "max_difference_us": 6.597921507304116,
+    "fitted_offsets_us": [
+      8.58420476813534,
+      -18.689201724009795,
+      31.629573991628288,
+      -6.133658539547975
+    ],
+    "delay_bound_us": 1000,
+    "semantics": "additional nuisance freedom only; not authorized constant-driver assumption"
+  },
+  "nongeneric_receiver_alias": {
+    "receiver_count": 6,
+    "all_receivers_same_side_of_candidate_plane_as_source": true,
+    "receiver_rank": 3,
+    "position_plus_delay_equations_rank": 3,
+    "receiver_positions_m": [
+      [
+        -0.7734949106664494,
+        -1.0,
+        0.3
+      ],
+      [
+        -0.5209994742376822,
+        0.8,
+        0.5
+      ],
+      [
+        -0.5335351576358685,
+        -0.4,
+        2.2
+      ],
+      [
+        -0.7701666550942149,
+        1.2,
+        1.8
+      ],
+      [
+        0.14645106242484324,
+        0.3,
+        1.1
+      ],
+      [
+        -0.8507810117268254,
+        -1.4,
+        1.5
+      ]
+    ],
+    "virtual_positions_m": [
+      [
+        0.4,
+        0.0,
+        1.2
+      ],
+      [
+        0.46,
+        0.0,
+        1.2
+      ]
+    ],
+    "compensating_driver_delay_us": -116.61807580174927,
+    "max_distance_difference_error_m": 4.475586568020162e-15
+  }
+}

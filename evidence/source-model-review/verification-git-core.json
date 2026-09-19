@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reference_matches": {
+    "results.json": true,
+    "gain-results.json": true,
+    "gain-algebra.json": true
+  },
+  "numerical_tolerance": {
+    "relative": 1e-09,
+    "absolute": 1e-10
+  },
+  "core_commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "core_signals_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "snapshot_content_sha256": "b5de1137125e098c6e546463abb18495585fdbcc48b2c3ed5b7fe3b2c896e417",
+  "manifest_files_verified": 50,
+  "helper_sha256": "ddee2b72d4c3a85e671852dedf4a8e6685e2f6074ca20b12f859f6775deb90f7",
+  "classifier_fits": 0,
+  "heldout_cases_generated": 0
+}

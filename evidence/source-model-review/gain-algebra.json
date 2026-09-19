@@ -1,0 +1,17 @@
+{
+  "unconstrained_gains": [
+    3.0,
+    -1.0
+  ],
+  "clipped_gains": [
+    2.0,
+    -0.9999999999999999
+  ],
+  "correct_bounded_gains": [
+    1.9999999999999998,
+    -0.19999999999999987
+  ],
+  "clipped_sse": 1.0000000000000004,
+  "bounded_sse": 0.3600000000000003,
+  "scope": "Algebraic counterexample to componentwiseclipping as boundedleast-squares; not a physicalclassifierfalsepositive"
+}

@@ -1,0 +1,21 @@
+{
+  "core_commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "original_source_unchanged": true,
+  "portable_source_unchanged": true,
+  "all21_metric_rows_exactly_reproduced": true,
+  "all21_definitive_surface_lists_exactly_reproduced": true,
+  "portable_fit_exit_code": 1,
+  "exit_code_semantics": "Expected frozen scientific acceptance failure; executioncompleted",
+  "h5py_version": "3.16.0",
+  "portable_artifact_sha256": {
+    "evaluation/dechorate_multisource.py": "d704c7eeb0fb03055cbd87661cd7df27d144bb07ad15fbcde5c8149bb3d759a4",
+    "evaluation/dechorate_multisource_diagnostic_protocol.json": "d77c93d59824165d585f7bba8f0990b1d3c683e40b567d5a64535d86154be02a",
+    "evaluation/dechorate_multisource_diagnostics.py": "ff4789058e0d6fecb079d0fc09dee627b9dc456d175eef1458da43564b5dcf57",
+    "evaluation/dechorate_multisource_manifest.json": "0f6da1027d08cfee7bab280865deea484806f497b05e93da7d9b5ea4145b715a",
+    "evaluation/dechorate_multisource_path_protocol.json": "51404da2549c82ad52a5bc96c5dfe331065fe180730de2592382a75aea052bae",
+    "evaluation/dechorate_multisource_protocol.json": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f"
+  },
+  "original_protocol_sha256": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f",
+  "limitations": "Repeatability is not independent confirmation of scientific correctness. Failed recovery and shuffledcontrol preserved.",
+  "post_reproduction_verification": "Portable module now explicitly loads comparator/metric modules from immutable snapshot despite cached evaluation package. Both module origins asserted; independent consensus rerun exactlymatched saved output. Numerical comparator bytes were unchanged. Full21row reproduction predates only this importorigin guard."
+}

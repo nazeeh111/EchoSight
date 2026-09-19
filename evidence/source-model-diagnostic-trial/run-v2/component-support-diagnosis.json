@@ -1,0 +1,351 @@
+[
+  {
+    "family": "dual_room",
+    "seed": 2401,
+    "sources": [
+      {
+        "source_index": 0,
+        "train_count": 6,
+        "train_strong": 6,
+        "held_count": 4,
+        "held_strong": 3,
+        "held_secondary_gains": [
+          0.675743183796634,
+          0.6609940626678772,
+          0.6500105048853576,
+          0.08276046948582672
+        ]
+      },
+      {
+        "source_index": 1,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6513288575093565,
+          0.7062951810470592,
+          0.6638204683012386,
+          0.6366233055729011
+        ]
+      },
+      {
+        "source_index": 2,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6320557095058039,
+          0.6673677511612273,
+          0.6656000941668467,
+          0.6897263962680041
+        ]
+      },
+      {
+        "source_index": 3,
+        "train_count": 8,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.9478819100312748,
+          0.7022859419019738,
+          0.5158771893409355,
+          0.9155823414295081
+        ]
+      }
+    ],
+    "component_supported_sources": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "centered_source_singular_values_m": [
+      0.7513580856999735,
+      0.5379046497905069,
+      0.4164620736882881
+    ],
+    "scope": "Postfit diagnosis of frozen false flag. No gate changed. Strong amplitude is an engineering indicator, not confidence."
+  },
+  {
+    "family": "dual_room",
+    "seed": 2411,
+    "sources": [
+      {
+        "source_index": 0,
+        "train_count": 8,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6696324273469821,
+          0.7437645475069485,
+          0.7150371243935068,
+          0.6760662481077351
+        ]
+      },
+      {
+        "source_index": 1,
+        "train_count": 7,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6577402037181992,
+          0.6387731251278359,
+          0.7074282817978765,
+          0.7274686265372873
+        ]
+      },
+      {
+        "source_index": 2,
+        "train_count": 7,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6848123558381063,
+          0.6620096912451436,
+          0.1080541640847927,
+          0.6444530308377827
+        ]
+      },
+      {
+        "source_index": 3,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6477915110079359,
+          0.7219679970601875,
+          0.6444440838439559,
+          0.7221560078413736
+        ]
+      }
+    ],
+    "component_supported_sources": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "centered_source_singular_values_m": [
+      0.7509735017875256,
+      0.5406931686691332,
+      0.41620104373445005
+    ],
+    "scope": "Postfit diagnosis of frozen false flag. No gate changed. Strong amplitude is an engineering indicator, not confidence."
+  },
+  {
+    "family": "near_reflector",
+    "seed": 2401,
+    "sources": [
+      {
+        "source_index": 0,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.5576956596690976,
+          0.6257503457465673,
+          0.4976956698235364,
+          0.569814349064147
+        ]
+      },
+      {
+        "source_index": 1,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6100218649854386,
+          0.6122124620126962,
+          0.5066656273114573,
+          0.6151537959684632
+        ]
+      },
+      {
+        "source_index": 2,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6561782661812386,
+          0.5477258526037174,
+          0.5890579583620791,
+          0.4995885534738518
+        ]
+      },
+      {
+        "source_index": 3,
+        "train_count": 8,
+        "train_strong": 0,
+        "held_count": 4,
+        "held_strong": 0,
+        "held_secondary_gains": [
+          0.02337376847926197,
+          -0.002221984094753839,
+          0.006384888373773978,
+          0.0023744499204650248
+        ]
+      }
+    ],
+    "component_supported_sources": [
+      0,
+      1,
+      2
+    ],
+    "centered_source_singular_values_m": [
+      0.7502723464413463,
+      0.4311694895672123,
+      1.3095164267856248e-18
+    ],
+    "scope": "Postfit diagnosis of frozen false flag. No gate changed. Strong amplitude is an engineering indicator, not confidence."
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2401,
+    "sources": [
+      {
+        "source_index": 0,
+        "train_count": 7,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6211036920653078,
+          0.7311028102042617,
+          0.7350831784269952,
+          0.919121811114326
+        ]
+      },
+      {
+        "source_index": 1,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.7216263271158708,
+          0.7822769598721304,
+          0.7317415354217119,
+          0.6907370145502649
+        ]
+      },
+      {
+        "source_index": 2,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6127036667832745,
+          0.7437719661877477,
+          0.7692286141371382,
+          0.796483149869114
+        ]
+      },
+      {
+        "source_index": 3,
+        "train_count": 8,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.990125278312355,
+          0.7644804604176718,
+          0.511277927108927,
+          1.0366544068933878
+        ]
+      }
+    ],
+    "component_supported_sources": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "centered_source_singular_values_m": [
+      0.7513580856999735,
+      0.5379046497905069,
+      0.4164620736882881
+    ],
+    "scope": "Postfit diagnosis of frozen false flag. No gate changed. Strong amplitude is an engineering indicator, not confidence."
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2411,
+    "sources": [
+      {
+        "source_index": 0,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.7067238287072736,
+          0.7268977671256247,
+          0.7742686460149456,
+          0.7095727259072634
+        ]
+      },
+      {
+        "source_index": 1,
+        "train_count": 7,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.48448099379019494,
+          0.8138933191963355,
+          0.659476268176509,
+          0.7689375359106547
+        ]
+      },
+      {
+        "source_index": 2,
+        "train_count": 7,
+        "train_strong": 7,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6860653119115074,
+          0.7288810374548117,
+          0.21077544660602393,
+          0.6734123693039258
+        ]
+      },
+      {
+        "source_index": 3,
+        "train_count": 8,
+        "train_strong": 8,
+        "held_count": 4,
+        "held_strong": 4,
+        "held_secondary_gains": [
+          0.6964490593002672,
+          0.6091480239799189,
+          0.6451629299180147,
+          0.681503051952818
+        ]
+      }
+    ],
+    "component_supported_sources": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "centered_source_singular_values_m": [
+      0.7509735017875256,
+      0.5406931686691332,
+      0.41620104373445005
+    ],
+    "scope": "Postfit diagnosis of frozen false flag. No gate changed. Strong amplitude is an engineering indicator, not confidence."
+  }
+]

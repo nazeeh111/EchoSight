@@ -1,0 +1,10 @@
+{
+  "hashes": {
+    "work/source-model-diagnostic/SENSITIVITY.md": "f55de1e5d09b93842a8ab944753b8226c35dbec5eb2e6f53588e17583799e1b5",
+    "work/source-model-diagnostic/sensitivity.py": "0b96264a7e7a77e6f768f42385eef80b21c3e53ca8a2ad641183e82ecc920d02",
+    "work/source-model-diagnostic/diagnostic_v3.py": "81ad33f98ff9bd901cad12cc0a17961658a78765d637d56c21b871873d038612",
+    "work/source-model-diagnostic/waveform_v3.py": "199d0e031b2b24637a95343d7a4d8a1caccb522473df8c2c5e7d77c2ffdaf69e"
+  },
+  "v3_results_sha256": "5debb3dcc9f52b836bb56c821cd840d696b854a2354dd477164c22757c48032d",
+  "before_sensitivity": true
+}

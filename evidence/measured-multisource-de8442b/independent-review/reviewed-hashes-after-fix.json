@@ -1,0 +1,8 @@
+{
+  "evaluation/dechorate_multisource.py": "13e21eee4a3c411c81153fe38f2018ee3f3f2318ae5c8c9d3d1af2fc29edb0be",
+  "evaluation/dechorate_multisource_diagnostics.py": "ff4789058e0d6fecb079d0fc09dee627b9dc456d175eef1458da43564b5dcf57",
+  "tests/test_measured_acceptance.py": "6ea039a3c9cd0ec132aa28ce4dab4f9ecaba60bcb71e2ba9c9c932fcffef0120",
+  "evaluation/dechorate_multisource_protocol.json": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f",
+  "docs/audit/MEASURED_MULTISOURCE.md": "a87ff2d850575f5cfd985af0ac3b03f7e20f505ff73831bfaad6a95fbdb053ef",
+  "evidence/measured-multisource-de8442b/acceptance-recheck.json": "31f29cfc98dccd05ed88b886f92f97286deaad1b4b16cbf9a994fb45b7d519f5"
+}

@@ -1,0 +1,62 @@
+{
+  "annotation_hash_verified": true,
+  "room_dimensions_match": true,
+  "sofa_frames": [
+    {
+      "filename": "dEchorate_room011111_src1_arr5_mics21-25.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr6_mics26-30.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr5_mics21-25.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src2_arr6_mics26-30.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr5_mics21-25.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src3_arr6_mics26-30.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr5_mics21-25.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    },
+    {
+      "filename": "dEchorate_room011111_src4_arr6_mics26-30.sofa",
+      "stored_receivers_exactly_equal_world_annotation": true,
+      "listener_nonzero": true
+    }
+  ],
+  "publisher_converter_git_blob_sha1": "cd03ca06621e64f217599a811e56ac0701b98760",
+  "publisher_converter_sha256": "254dc40b0739944ae727a69e1d6a69288cd59d23d078324593fc1c03d2879631",
+  "current_contract_semantic_gate_reproduction": {
+    "surface_extent_status": "known_physical_extent",
+    "surface_mesh_semantics": "closed_room_boundary",
+    "joint_row_passed": true,
+    "suggested_predicate": "All returned surface extent_status must equal unknown and mesh_semantics must equal reflection_support_convex_hull_not_physical_edges; do not keyword scan."
+  },
+  "enclosure_gate_reproduction": {
+    "protocol_forbid_enclosure_claim": true,
+    "stubbed_result_enclosure_status": "closed",
+    "joint_row_passed": true,
+    "matched_planes": 5,
+    "horizontal_matched": 1,
+    "no_acoustic_fitting_run": true
+  }
+}

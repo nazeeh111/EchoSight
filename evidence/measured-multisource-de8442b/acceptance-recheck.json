@@ -1,0 +1,202 @@
+{
+  "original_criteria_unchanged": true,
+  "no_fitting_rerun": true,
+  "all_21_original_acceptance_decisions_unchanged": true,
+  "runner_sha256": "13e21eee4a3c411c81153fe38f2018ee3f3f2318ae5c8c9d3d1af2fc29edb0be",
+  "rows": [
+    {
+      "arm": "joint_mapper",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "joint_plane_grid",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "independent_source_consensus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_1",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_1",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_2",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_2",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_3",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_3",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_mapper_4",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "single_source_first_echo_4",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "null",
+      "original_passed": true,
+      "rechecked_passed": true,
+      "failures": []
+    },
+    {
+      "arm": "shuffled_geometry",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "definitive_geometry_in_control"
+      ]
+    },
+    {
+      "arm": "array_x_plus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_x_minus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_y_plus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_y_minus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_z_plus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_z_minus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_yaw_plus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "insufficient_horizontal_planes",
+        "unmatched_definitive_planes"
+      ]
+    },
+    {
+      "arm": "array_yaw_minus",
+      "original_passed": false,
+      "rechecked_passed": false,
+      "failures": [
+        "insufficient_room_planes",
+        "unmatched_definitive_planes"
+      ]
+    }
+  ]
+}

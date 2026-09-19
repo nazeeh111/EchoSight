@@ -1,0 +1,1191 @@
+[
+  {
+    "family": "single_room",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "held_waveform_ratio_failed": 8,
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0,
+        "search_boundary_failed": 1
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "component_support_or_conditioning_failed": 6,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 4
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 22,
+        "max_reference_shift_us": 122.37960250121318,
+        "maximum_relative_rate_ppm": 3.374525224364433,
+        "training_negative_zero_normalizers": 18,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9628106273831236
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 11,
+        "max_reference_shift_us": 107.07492579902659,
+        "maximum_relative_rate_ppm": 2.2957481350394104,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.085258517730586
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 108.79775698276808,
+        "maximum_relative_rate_ppm": 3.32536099456604,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 2,
+        "learned_kernel_energy_ratio": 1.1028704646425769
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 104.84283205246443,
+        "maximum_relative_rate_ppm": 2.7308947228021907,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0011747228550592
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 75.56027485374139,
+        "maximum_relative_rate_ppm": 4.061771679775283,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 0.9963056853088015
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 11,
+        "max_reference_shift_us": 108.2786488220263,
+        "maximum_relative_rate_ppm": 3.0438186409131873,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.98391086656769
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 95.87471262998469,
+        "maximum_relative_rate_ppm": 2.354551931871285,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.144211829847212
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 22,
+        "max_reference_shift_us": 130.79180497872397,
+        "maximum_relative_rate_ppm": 2.7575192208528776,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1743031828582826
+      }
+    ]
+  },
+  {
+    "family": "single_room",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0,
+        "held_waveform_ratio_failed": 1
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "source_flags": 0,
+        "component_support_or_conditioning_failed": 6,
+        "minimum12_strong_components_failed": 4
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 118.74316097973762,
+        "maximum_relative_rate_ppm": 2.9606097269319065,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1035502444898744
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 101.59544869463876,
+        "maximum_relative_rate_ppm": 3.312140925748608,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0257590423365333
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 90.80100831099773,
+        "maximum_relative_rate_ppm": 2.984150160978416,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0971806279709422
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 110.85725859205972,
+        "maximum_relative_rate_ppm": 2.649862362757993,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2561531882072694
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 83.78800391107568,
+        "maximum_relative_rate_ppm": 2.4996224610163154,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2949350943728741
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 98.73008370502883,
+        "maximum_relative_rate_ppm": 2.99740984366359,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1103302771670274
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 131.8934852283551,
+        "maximum_relative_rate_ppm": 2.5412894892884452,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0197966848596651
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 101.61855891041866,
+        "maximum_relative_rate_ppm": 2.318296880909898,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2644215890537105
+      }
+    ]
+  },
+  {
+    "family": "dual_room",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "source_flags": 8
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "component_support_or_conditioning_failed": 4,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 1
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 20,
+        "max_reference_shift_us": 95.84775865764722,
+        "maximum_relative_rate_ppm": 14.828141692069252,
+        "training_negative_zero_normalizers": 17,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1196044353638142
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 101.69685675889156,
+        "maximum_relative_rate_ppm": 26.89522038912262,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.012717726388199
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 78.5194945682717,
+        "maximum_relative_rate_ppm": 2.4154793196728974,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9928905418649313
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 19,
+        "max_reference_shift_us": 111.39381048837933,
+        "maximum_relative_rate_ppm": 12.5064150415799,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.326292011243661
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 111.33243575524295,
+        "maximum_relative_rate_ppm": 16.922853975365193,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.5468013768481297
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 110.52246419122665,
+        "maximum_relative_rate_ppm": 8.660281648475987,
+        "training_negative_zero_normalizers": 17,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 0.9877842410282905
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 88.77222526726293,
+        "maximum_relative_rate_ppm": 18.190149394303745,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0190904538671555
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 124.70255088210959,
+        "maximum_relative_rate_ppm": 9.416930305872206,
+        "training_negative_zero_normalizers": 17,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0457315102142188
+      }
+    ]
+  },
+  {
+    "family": "dual_room",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "source_flags": 8
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "component_support_or_conditioning_failed": 4,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 1
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 9,
+        "max_reference_shift_us": 119.68484685016364,
+        "maximum_relative_rate_ppm": 15.022454387558781,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9768878334565471
+      },
+      {
+        "draw": 1,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 7,
+        "max_reference_shift_us": 95.60220227130307,
+        "maximum_relative_rate_ppm": 15.365525675603564,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.013569873020812
+      },
+      {
+        "draw": 2,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 103.16041439395906,
+        "maximum_relative_rate_ppm": 9.418466921262691,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1010037206182413
+      },
+      {
+        "draw": 3,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 103.72362062331831,
+        "maximum_relative_rate_ppm": 5.79913242459984,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0097204998068747
+      },
+      {
+        "draw": 4,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 117.63560639874461,
+        "maximum_relative_rate_ppm": 9.254004260661475,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0430233492735599
+      },
+      {
+        "draw": 5,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 87.30982239756645,
+        "maximum_relative_rate_ppm": 11.465678475319763,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1998681554840014
+      },
+      {
+        "draw": 6,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 94.27264266755135,
+        "maximum_relative_rate_ppm": 8.87390810122568,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2738573217322002
+      },
+      {
+        "draw": 7,
+        "record_count": 46,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 106.697068440022,
+        "maximum_relative_rate_ppm": 9.663083280431195,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.134054420502297
+      }
+    ]
+  },
+  {
+    "family": "near_reflector",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "held_waveform_ratio_failed": 2,
+        "minimum12_strong_components_failed": 7,
+        "search_boundary_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "component_support_or_conditioning_failed": 6,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 4
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 96.90050505622962,
+        "maximum_relative_rate_ppm": 2.094117983797439,
+        "training_negative_zero_normalizers": 19,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 0.9530754062203806
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 144.61062629401138,
+        "maximum_relative_rate_ppm": 2.671597217673849,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.007590208805609
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 121.23659945320108,
+        "maximum_relative_rate_ppm": 3.920331583584513,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.5712741845592564
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 104.87475356981211,
+        "maximum_relative_rate_ppm": 2.7000192999171446,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0508566013178788
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 111.68147176638787,
+        "maximum_relative_rate_ppm": 2.8059570057470395,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2052278971767787
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 91.2146532634203,
+        "maximum_relative_rate_ppm": 2.799710123291277,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 2,
+        "learned_kernel_energy_ratio": 1.1659288449435308
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 19,
+        "max_reference_shift_us": 107.82311704424761,
+        "maximum_relative_rate_ppm": 2.291339087800992,
+        "training_negative_zero_normalizers": 17,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9331626960353554
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 100.54066338809267,
+        "maximum_relative_rate_ppm": 2.3527396195710537,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.018804389105041
+      }
+    ]
+  },
+  {
+    "family": "near_reflector",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "search_boundary_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 1
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "minimum12_strong_components_failed": 5,
+        "component_support_or_conditioning_failed": 7,
+        "source_flags": 0
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 20,
+        "max_reference_shift_us": 100.99322417338414,
+        "maximum_relative_rate_ppm": 3.244283296011119,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.3866145409190702
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 135.1449936745392,
+        "maximum_relative_rate_ppm": 2.175584576491474,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0009440043548175
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 19,
+        "max_reference_shift_us": 78.78249208609466,
+        "maximum_relative_rate_ppm": 1.9350772194615118,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9844266619273953
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 84.65197756130134,
+        "maximum_relative_rate_ppm": 2.8567223597786295,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9500804818328878
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 107.47392300625786,
+        "maximum_relative_rate_ppm": 2.928376045763237,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.128337919726969
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 70.9642775480901,
+        "maximum_relative_rate_ppm": 2.6148236786927015,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0194325542574318
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 23,
+        "max_reference_shift_us": 97.61117471796625,
+        "maximum_relative_rate_ppm": 2.7088025482679967,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0855481023594944
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 94.36006490547537,
+        "maximum_relative_rate_ppm": 2.538061816936832,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9900409040970094
+      }
+    ]
+  },
+  {
+    "family": "direct_null",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "held_waveform_ratio_failed": 2,
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "minimum12_strong_components_failed": 5,
+        "component_support_or_conditioning_failed": 7,
+        "source_flags": 0
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 104.8110977170343,
+        "maximum_relative_rate_ppm": 2.805732300825703,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9889504711739564
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 20,
+        "max_reference_shift_us": 90.64842352053685,
+        "maximum_relative_rate_ppm": 5.023297988904218,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.156874981952893
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 98.72225306601571,
+        "maximum_relative_rate_ppm": 2.6538940478548767,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0925963063577753
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 102.01862301135178,
+        "maximum_relative_rate_ppm": 3.6215685657037255,
+        "training_negative_zero_normalizers": 11,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1009775564172815
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 98.11308931730069,
+        "maximum_relative_rate_ppm": 2.5411063173663706,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.3262388398511236
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 96.90337447782667,
+        "maximum_relative_rate_ppm": 2.87720551583881,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.028278043207917
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 151.37392145299964,
+        "maximum_relative_rate_ppm": 3.464582876366862,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9630105965061699
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 19,
+        "max_reference_shift_us": 113.5635614368044,
+        "maximum_relative_rate_ppm": 3.8804655273505517,
+        "training_negative_zero_normalizers": 18,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.1227909215216836
+      }
+    ]
+  },
+  {
+    "family": "direct_null",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "held_waveform_ratio_failed": 2,
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 6,
+        "component_support_or_conditioning_failed": 7,
+        "search_boundary_failed": 1
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 23,
+        "max_reference_shift_us": 111.34201942284452,
+        "maximum_relative_rate_ppm": 2.222310289234919,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.172899295422335
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 99.18466546943417,
+        "maximum_relative_rate_ppm": 2.6467825341436324,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.032905020753091
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 98.344166165553,
+        "maximum_relative_rate_ppm": 2.825566778996702,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2234066691030805
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 120.89454491291298,
+        "maximum_relative_rate_ppm": 3.07282501554873,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.003837742230736
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 102.07548185549452,
+        "maximum_relative_rate_ppm": 3.0015921396175926,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.3201493059636296
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 140.2815714962116,
+        "maximum_relative_rate_ppm": 2.371105000786855,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0279239075560622
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 107.36866336955318,
+        "maximum_relative_rate_ppm": 3.2112721337629324,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0276772446778217
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 72.15982060229958,
+        "maximum_relative_rate_ppm": 2.880125511417475,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.1424865084683866
+      }
+    ]
+  },
+  {
+    "family": "receiver_filter",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "held_waveform_ratio_failed": 4,
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 3,
+        "component_support_or_conditioning_failed": 4
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 85.98769568329585,
+        "maximum_relative_rate_ppm": 3.2183673271957147,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.1361444426763148
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 19,
+        "max_reference_shift_us": 130.61231644310357,
+        "maximum_relative_rate_ppm": 2.794754064172622,
+        "training_negative_zero_normalizers": 18,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.8617266522242532
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 11,
+        "max_reference_shift_us": 91.20976719055342,
+        "maximum_relative_rate_ppm": 2.3902279286946992,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.6269845661510798
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 94.42529580922545,
+        "maximum_relative_rate_ppm": 2.9706921309546885,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.072732800205123
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 93.03415958253714,
+        "maximum_relative_rate_ppm": 2.6971405848730257,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.144507719411564
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 134.5837650708996,
+        "maximum_relative_rate_ppm": 2.9940817796170194,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1870460715276796
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 117.21694548164753,
+        "maximum_relative_rate_ppm": 3.637110005949573,
+        "training_negative_zero_normalizers": 8,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.2143747438128012
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 102.26790423807071,
+        "maximum_relative_rate_ppm": 2.78175177137463,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.1515311378776203
+      }
+    ]
+  },
+  {
+    "family": "receiver_filter",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "minimum12_strong_components_failed": 8,
+        "component_support_or_conditioning_failed": 8,
+        "source_flags": 0
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 7,
+        "source_flags": 0,
+        "component_support_or_conditioning_failed": 7,
+        "minimum12_strong_components_failed": 4
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 11,
+        "max_reference_shift_us": 97.21029663864633,
+        "maximum_relative_rate_ppm": 4.304718873804347,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9630635196177318
+      },
+      {
+        "draw": 1,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 109.59039397834118,
+        "maximum_relative_rate_ppm": 2.5073691632959694,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0110330013764135
+      },
+      {
+        "draw": 2,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 21,
+        "max_reference_shift_us": 102.29024525431491,
+        "maximum_relative_rate_ppm": 2.5734353241713137,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 0.9620659167468741
+      },
+      {
+        "draw": 3,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 77.5462479057221,
+        "maximum_relative_rate_ppm": 3.313559164719315,
+        "training_negative_zero_normalizers": 8,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0562620065330983
+      },
+      {
+        "draw": 4,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 11,
+        "max_reference_shift_us": 133.86522984135058,
+        "maximum_relative_rate_ppm": 2.8360034113328325,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0182049489405787
+      },
+      {
+        "draw": 5,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 10,
+        "max_reference_shift_us": 125.43642788340938,
+        "maximum_relative_rate_ppm": 2.3447622268246704,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 0.9858885542825969
+      },
+      {
+        "draw": 6,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 17,
+        "max_reference_shift_us": 85.0186039735284,
+        "maximum_relative_rate_ppm": 2.5604612143848016,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 0.9769894836978168
+      },
+      {
+        "draw": 7,
+        "record_count": 48,
+        "outside_whole_mixture_alignment_domain": 14,
+        "max_reference_shift_us": 104.62516732418949,
+        "maximum_relative_rate_ppm": 3.8298695059779675,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.0583108125153455
+      }
+    ]
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2423,
+    "gates": {
+      "geometry_only": {
+        "source_flags": 8
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "source_flags": 0,
+        "component_support_or_conditioning_failed": 2
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 20,
+        "max_reference_shift_us": 121.07933875329806,
+        "maximum_relative_rate_ppm": 16.44544297385586,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.044628275264478
+      },
+      {
+        "draw": 1,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 117.23047010773793,
+        "maximum_relative_rate_ppm": 19.28041421428439,
+        "training_negative_zero_normalizers": 10,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0954510791929528
+      },
+      {
+        "draw": 2,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 90.93404840903776,
+        "maximum_relative_rate_ppm": 19.862429757599998,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.2157853121420814
+      },
+      {
+        "draw": 3,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 126.6134062330469,
+        "maximum_relative_rate_ppm": 11.24915316552677,
+        "training_negative_zero_normalizers": 16,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.1001903074829211
+      },
+      {
+        "draw": 4,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 105.67692301984647,
+        "maximum_relative_rate_ppm": 16.407908280058336,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 1,
+        "learned_kernel_energy_ratio": 1.081540819597679
+      },
+      {
+        "draw": 5,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 22,
+        "max_reference_shift_us": 115.45866047710236,
+        "maximum_relative_rate_ppm": 4.528876540454974,
+        "training_negative_zero_normalizers": 18,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.052358081670572
+      },
+      {
+        "draw": 6,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 99.9014884429028,
+        "maximum_relative_rate_ppm": 25.95433408814074,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.167374253835426
+      },
+      {
+        "draw": 7,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 124.73957391157813,
+        "maximum_relative_rate_ppm": 9.793145654191093,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0106132902052598
+      }
+    ]
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2437,
+    "gates": {
+      "geometry_only": {
+        "source_flags": 8
+      },
+      "geometry_and_local_timing": {
+        "held_waveform_ratio_failed": 8,
+        "component_support_or_conditioning_failed": 5,
+        "source_flags": 0,
+        "minimum12_strong_components_failed": 3
+      }
+    },
+    "perturbations": [
+      {
+        "draw": 0,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 108.21465990181053,
+        "maximum_relative_rate_ppm": 16.03337185118736,
+        "training_negative_zero_normalizers": 9,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1379254274034114
+      },
+      {
+        "draw": 1,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 13,
+        "max_reference_shift_us": 148.64777000636602,
+        "maximum_relative_rate_ppm": 14.253849127232598,
+        "training_negative_zero_normalizers": 12,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.4741900357864826
+      },
+      {
+        "draw": 2,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 18,
+        "max_reference_shift_us": 97.6640665206232,
+        "maximum_relative_rate_ppm": 17.39387772226042,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.318607821035039
+      },
+      {
+        "draw": 3,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 12,
+        "max_reference_shift_us": 103.76357111289819,
+        "maximum_relative_rate_ppm": 10.626723253914783,
+        "training_negative_zero_normalizers": 13,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.162314394384519
+      },
+      {
+        "draw": 4,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 22,
+        "max_reference_shift_us": 118.43918773640989,
+        "maximum_relative_rate_ppm": 27.371992192937178,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.1964192484811578
+      },
+      {
+        "draw": 5,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 15,
+        "max_reference_shift_us": 85.67147192124466,
+        "maximum_relative_rate_ppm": 40.91623174162784,
+        "training_negative_zero_normalizers": 14,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.0904355000862396
+      },
+      {
+        "draw": 6,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 16,
+        "max_reference_shift_us": 94.1668075287309,
+        "maximum_relative_rate_ppm": 10.226257082468493,
+        "training_negative_zero_normalizers": 15,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.052705155993227
+      },
+      {
+        "draw": 7,
+        "record_count": 47,
+        "outside_whole_mixture_alignment_domain": 9,
+        "max_reference_shift_us": 90.7614685539425,
+        "maximum_relative_rate_ppm": 27.175645086030542,
+        "training_negative_zero_normalizers": 8,
+        "training_small_zero_normalizers": 0,
+        "learned_kernel_energy_ratio": 1.227446243394378
+      }
+    ]
+  }
+]

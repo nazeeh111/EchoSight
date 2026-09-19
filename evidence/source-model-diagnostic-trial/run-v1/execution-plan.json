@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "family": "single_room",
+      "seed": 2401,
+      "bundle": "cases/single_room-2401/bundle.json",
+      "manifest_sha256": "7d1e61b60da946b2fbb7c1ff38ddf5f39a61281da6f7d93356c7ac5d99fd58fe"
+    },
+    {
+      "family": "single_room",
+      "seed": 2411,
+      "bundle": "cases/single_room-2411/bundle.json",
+      "manifest_sha256": "4bf407c404bcbae560e1e4b978ff9733e5548afd37d77b16eb1581ac65843a28"
+    },
+    {
+      "family": "dual_room",
+      "seed": 2401,
+      "bundle": "cases/dual_room-2401/bundle.json",
+      "manifest_sha256": "787fe806fe72345f5bb574164d0f3e2094d9f651ceb0f768d8a5754fbbcb7c9b"
+    },
+    {
+      "family": "dual_room",
+      "seed": 2411,
+      "bundle": "cases/dual_room-2411/bundle.json",
+      "manifest_sha256": "5c2be65afd9d0b80acd4366eae59ab54bcfd4357a8da274371ece6f8a0f359f0"
+    },
+    {
+      "family": "near_reflector",
+      "seed": 2401,
+      "bundle": "cases/near_reflector-2401/bundle.json",
+      "manifest_sha256": "6f1cf226a35abb1d531340d30805406b683d6f547a7f3e42f14d4632a4dd9696"
+    },
+    {
+      "family": "near_reflector",
+      "seed": 2411,
+      "bundle": "cases/near_reflector-2411/bundle.json",
+      "manifest_sha256": "bf7230fafec6676aa8c41aa573876a699a244f64418161d6d899c0b779bf81f9"
+    },
+    {
+      "family": "direct_null",
+      "seed": 2401,
+      "bundle": "cases/direct_null-2401/bundle.json",
+      "manifest_sha256": "e887ab4ae51713e313596cec11c4e22e79bf1ee81c18b60aa9e084696bac2972"
+    },
+    {
+      "family": "direct_null",
+      "seed": 2411,
+      "bundle": "cases/direct_null-2411/bundle.json",
+      "manifest_sha256": "cf0cf7183c6291c45d92d089e70f43cc315899edf15c4abf05347e49dc9eabea"
+    },
+    {
+      "family": "receiver_filter",
+      "seed": 2401,
+      "bundle": "cases/receiver_filter-2401/bundle.json",
+      "manifest_sha256": "6d1013db06f1abdef65339575725dd5784037405540f033e1727f038152e5450"
+    },
+    {
+      "family": "receiver_filter",
+      "seed": 2411,
+      "bundle": "cases/receiver_filter-2411/bundle.json",
+      "manifest_sha256": "8146174cb83d3defbe466128e80f0453b10e95702b7133e5c5a765a939611a15"
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2401,
+      "bundle": "cases/dual_phase-2401/bundle.json",
+      "manifest_sha256": "78be9f63fb1381a8657ef3e343d89491f603efe92012a960805896170b400694"
+    },
+    {
+      "family": "dual_phase",
+      "seed": 2411,
+      "bundle": "cases/dual_phase-2411/bundle.json",
+      "manifest_sha256": "be2dff1f2db0cb4c6ae88bd1ecf7eb9cd74b7d4bb8f7b08cbd68d093b6fe2f31"
+    }
+  ],
+  "hashes": {
+    "work/source-model-diagnostic/DESIGN.md": "ee3eccffc395f3f0be3a3db5c05137838c4f5de7fbb02ed48f6a07ab78fb7468",
+    "work/source-model-diagnostic/diagnostic.py": "3deb26616fe658f385bdadbe5f7c0da6a926bda34d92619033ba1847899e581e",
+    "work/source-model-diagnostic/render.py": "a35ac0f72b81dd34bd6ad9f651add1a7de1c69378741f8bc155de21f5f965903",
+    "work/source-model-diagnostic/run.py": "dcded235203a6c9d59341b2a451e1e7eabeb5cc23413df72638d86d6c795c694",
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c"
+  }
+}

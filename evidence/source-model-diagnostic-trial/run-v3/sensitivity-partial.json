@@ -1,0 +1,5138 @@
+[
+  {
+    "family": "single_room",
+    "seed": 2423,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.758606740501166e-05,
+          "plane": 8.266088659872847e-05
+        },
+        "parameters": [
+          -0.4333874487664305,
+          0.3144351407889968,
+          -0.03860562421497742,
+          0.6294016753080206
+        ],
+        "runtime_s": 0.6751790839989553
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.9271449414256344,
+          "secondary": 0.904967376644888,
+          "plane": 0.9215018041666811
+        },
+        "parameters": [
+          0.07945421397689705,
+          0.03687594184543715,
+          -0.031193149617347184,
+          1.235914023478604
+        ],
+        "runtime_s": 0.6012712080046185
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.815806935862124e-05,
+          "plane": 8.833282651354575e-05
+        },
+        "parameters": [
+          -0.35809886711274425,
+          -0.38745630391666486,
+          -0.14157833066320114,
+          0.7498613903397173
+        ],
+        "runtime_s": 0.5965583750003134
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 3.9529725389042896,
+          "secondary": 3.9618323985200643,
+          "plane": 3.952971938454552
+        },
+        "parameters": [
+          -0.026423645817099866,
+          1.5507675759049066e-05,
+          -0.046218564122073556,
+          -1.3026046484021372
+        ],
+        "runtime_s": 0.7349326670009759
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.760925858990082e-05,
+          "plane": 8.828183367274036e-05
+        },
+        "parameters": [
+          -0.4195735070253346,
+          0.3160417784626692,
+          -0.04964110901062081,
+          0.8992495633585917
+        ],
+        "runtime_s": 0.6182026249953196
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2588183452371278,
+          "secondary": 0.22502819575564414,
+          "plane": 0.24830364065083818
+        },
+        "parameters": [
+          -0.024153184402834288,
+          -0.030222135128354338,
+          -0.018551196219594206,
+          -0.44383381878138034
+        ],
+        "runtime_s": 0.6076188330043806
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.802900933112297e-05,
+          "plane": 8.84714537929503e-05
+        },
+        "parameters": [
+          -0.33273468321584926,
+          -0.2623138785582016,
+          -0.2216049822484666,
+          0.6865082032564798
+        ],
+        "runtime_s": 0.9033749590016669
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.17154193275637336,
+          "secondary": 0.14507402899938188,
+          "plane": 0.17154180712628536
+        },
+        "parameters": [
+          -0.03475434464809363,
+          0.013433849178481947,
+          0.039136962035452895,
+          -0.054809455896050706
+        ],
+        "runtime_s": 0.6823332499989192
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.823868587136723e-05,
+          "plane": 8.843087354308943e-05
+        },
+        "parameters": [
+          -0.3718148061031319,
+          0.2131065429966664,
+          -0.3399935597492094,
+          -1.4988180165592957
+        ],
+        "runtime_s": 0.6285256249975646
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.6959142045285767,
+          "secondary": 0.6119728712715504,
+          "plane": 0.635823943136599
+        },
+        "parameters": [
+          0.03183017703900904,
+          -0.02643414945901944,
+          -0.048724784322293324,
+          -0.7746758531756154
+        ],
+        "runtime_s": 0.6760052079989691
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.773141555522215e-05,
+          "plane": 0.0014018584192588962
+        },
+        "parameters": [
+          -0.4250971323849476,
+          0.3208790826607362,
+          -0.04212775118631482,
+          0.7925630766095587
+        ],
+        "runtime_s": 0.596640292002121
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 3.7615551557358273,
+          "secondary": 3.676694488054876,
+          "plane": 3.604913908846502
+        },
+        "parameters": [
+          0.010589987444856834,
+          -0.06537834923966744,
+          0.04481721883491961,
+          0.2116949327597375
+        ],
+        "runtime_s": 0.6825440419997904
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.760528971245166e-05,
+          "plane": 7.680280574240873e-05
+        },
+        "parameters": [
+          -0.3076757174179671,
+          -0.18565003049292877,
+          -0.25082188435161445,
+          1.1919912009440257
+        ],
+        "runtime_s": 0.609872875000292
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 4.114552636005227,
+          "secondary": 3.991118365906952,
+          "plane": 4.114419859501902
+        },
+        "parameters": [
+          -0.046934911106090174,
+          0.016626166411251184,
+          0.05347633516698408,
+          -0.04119253953803684
+        ],
+        "runtime_s": 0.6889685830028611
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.851676173008557e-05,
+          "secondary": 8.812104317514661e-05,
+          "plane": 8.261326923960182e-05
+        },
+        "parameters": [
+          -0.35522697463468317,
+          -0.3800830051160864,
+          -0.1386484893912937,
+          0.861212296279118
+        ],
+        "runtime_s": 0.8420638749958016
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2257422742137182,
+          "secondary": 0.19311326185871924,
+          "plane": 0.22573638059475293
+        },
+        "parameters": [
+          0.070670935460208,
+          -0.009975206576029676,
+          -0.036141418360360375,
+          -0.9837403933569693
+        ],
+        "runtime_s": 0.6775700420039357
+      }
+    ]
+  },
+  {
+    "family": "single_room",
+    "seed": 2437,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.501569902983983e-05,
+          "plane": 7.748055231292391e-05
+        },
+        "parameters": [
+          -0.0010094932962111858,
+          0.0017693997755828456,
+          0.0013480412726021075,
+          0.2373225959600433
+        ],
+        "runtime_s": 0.7156395000056364
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2549190106414454,
+          "secondary": 0.20508145579127288,
+          "plane": 0.2548764079330116
+        },
+        "parameters": [
+          -0.007898712698083362,
+          -0.0030823821588784905,
+          0.05422667641074043,
+          0.9657017893734101
+        ],
+        "runtime_s": 0.5450983330010786
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 0.0009284552155781239,
+          "plane": 7.764168296499354e-05
+        },
+        "parameters": [
+          0.010111532610277458,
+          0.015255306190033652,
+          0.0023442594552174458,
+          -0.058979779745378755
+        ],
+        "runtime_s": 0.674926041996514
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 3.106063770449733,
+          "secondary": 2.808648669629509,
+          "plane": 3.103945942137551
+        },
+        "parameters": [
+          -0.011037366084935472,
+          0.01991739595395424,
+          -0.01651520322563088,
+          -0.20773306067236025
+        ],
+        "runtime_s": 0.7422297920056735
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.195543157165731e-05,
+          "plane": 7.021707410181835e-05
+        },
+        "parameters": [
+          -0.0004335248390473901,
+          0.001532304387128609,
+          0.00021421976670602558,
+          0.21641692594423992
+        ],
+        "runtime_s": 0.6682014170000912
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          1,
+          4,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.11797589721956013,
+          "secondary": 0.10668866858439655,
+          "plane": 0.10478292807193934
+        },
+        "parameters": [
+          -0.024220552410424222,
+          -0.07832607736326312,
+          -0.04019532273014233,
+          -1.4735486597486982
+        ],
+        "runtime_s": 0.5456760000015493
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 3.718794222849792e-05,
+          "plane": 6.98290112987485e-05
+        },
+        "parameters": [
+          -0.0005391972168158326,
+          0.0011489895632581597,
+          0.00044588377139799035,
+          0.22750258575479956
+        ],
+        "runtime_s": 0.7470662909981911
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.3255247262905947,
+          "secondary": 0.28721486322501977,
+          "plane": 0.3204266080702232
+        },
+        "parameters": [
+          0.051929298378269824,
+          -0.005407447967832406,
+          0.0012476299860095913,
+          0.2692633081241447
+        ],
+        "runtime_s": 0.6194242920028046
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.854788319159522e-05,
+          "plane": 7.737786204240309e-05
+        },
+        "parameters": [
+          -0.00265346263264439,
+          0.006863437340660309,
+          -0.011846340007094301,
+          -0.12249538510850853
+        ],
+        "runtime_s": 0.7078311660006875
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.4553955374290927,
+          "secondary": 0.425786725834947,
+          "plane": 0.4540081612281964
+        },
+        "parameters": [
+          0.05452004855555923,
+          -0.011185031700199946,
+          -0.05180972358110698,
+          -0.9859372625236905
+        ],
+        "runtime_s": 0.6843082499981392
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.2199492377519596e-05,
+          "plane": 7.714821505415867e-05
+        },
+        "parameters": [
+          -0.004815387372732057,
+          0.0072902884165854005,
+          -0.005132402933305161,
+          0.004495566276363667
+        ],
+        "runtime_s": 0.7185632909968263
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.04173247663178586,
+          "secondary": 0.03839382463910929,
+          "plane": 0.037231000044592615
+        },
+        "parameters": [
+          -0.04335943527150579,
+          -0.016052697648368402,
+          0.03561175558525436,
+          0.7205143135523426
+        ],
+        "runtime_s": 0.707872832994326
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.0566534342256346e-05,
+          "plane": 7.566225667825873e-05
+        },
+        "parameters": [
+          -0.0005072550756847772,
+          0.0012743817360875468,
+          0.0004927171287672827,
+          0.22680863112945418
+        ],
+        "runtime_s": 0.5897777909995057
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2057261841465258,
+          "secondary": 0.15570914352201504,
+          "plane": 0.2057155666524752
+        },
+        "parameters": [
+          0.00970289223703206,
+          0.02166191677168017,
+          -0.054007479280010304,
+          -1.3329488528185693
+        ],
+        "runtime_s": 0.5565273340034764
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.790465368055355e-05,
+          "secondary": 4.8196675020787216e-05,
+          "plane": 7.784930519800334e-05
+        },
+        "parameters": [
+          0.008304373032456668,
+          0.01529170196507284,
+          0.00511952065713873,
+          -5.043502890446855e-05
+        ],
+        "runtime_s": 0.70216841599904
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.15676908715435822,
+          "secondary": 0.1323921234599473,
+          "plane": 0.15640355989835664
+        },
+        "parameters": [
+          0.02421919216281521,
+          0.03621401508897816,
+          0.01427612980860856,
+          0.07560023433902746
+        ],
+        "runtime_s": 0.656004208001832
+      }
+    ]
+  },
+  {
+    "family": "dual_room",
+    "seed": 2423,
+    "nominal_source_flag": true,
+    "control": false,
+    "source_flags_by_kind": {
+      "geometry_only": 8,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0005041113136377031,
+          "plane": 0.008570710769889994
+        },
+        "parameters": [
+          0.04660454880786336,
+          -0.2073262358443989,
+          0.0696107147161936,
+          0.7723859261359004
+        ],
+        "runtime_s": 0.5975686250021681
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.13347668270061777,
+          "secondary": 0.11798354975273175,
+          "plane": 0.12451197472065405
+        },
+        "parameters": [
+          -0.06995366569959124,
+          -0.041308442834362684,
+          0.16702391775871098,
+          0.9748058271273967
+        ],
+        "runtime_s": 0.5579103749987553
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0006625082508225982,
+          "plane": 0.00645019788294995
+        },
+        "parameters": [
+          0.04641111845073977,
+          -0.20542056647765633,
+          0.06879960630533462,
+          0.7558930119391526
+        ],
+        "runtime_s": 0.608193415995629
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 3.585396625875981,
+          "secondary": 3.508107251027377,
+          "plane": 3.5892691886550745
+        },
+        "parameters": [
+          -0.006663577787866968,
+          0.0020131367450868308,
+          0.03248632534364769,
+          0.2505695226112103
+        ],
+        "runtime_s": 0.5975480410052114
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0017301239948697867,
+          "plane": 0.008580936583367392
+        },
+        "parameters": [
+          0.046337042471784703,
+          -0.2062160870504075,
+          0.07013496283891366,
+          0.7965881809877573
+        ],
+        "runtime_s": 0.6095116249998682
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.21911199459666647,
+          "secondary": 0.17338603276670045,
+          "plane": 0.20884505498824407
+        },
+        "parameters": [
+          0.029639220079090377,
+          -0.17598661833577026,
+          -0.061128353896888865,
+          -1.3592944664940567
+        ],
+        "runtime_s": 0.6136168750017532
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.00048140971824397257,
+          "plane": 0.008580812223339075
+        },
+        "parameters": [
+          0.04655098228630322,
+          -0.20798143559801802,
+          0.06904507250596931,
+          0.7463158075648527
+        ],
+        "runtime_s": 0.7772322079981677
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.26819363940418967,
+          "secondary": 0.22142776017365798,
+          "plane": 0.2676199131179027
+        },
+        "parameters": [
+          0.0009799072574633865,
+          -0.044331184689538325,
+          0.07357231154993292,
+          1.0143738901534933
+        ],
+        "runtime_s": 0.8208654159971047
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0007571462792607524,
+          "plane": 0.008572203781393586
+        },
+        "parameters": [
+          0.046921219885954706,
+          -0.20530246309914238,
+          0.06949050059063976,
+          0.7870225344161945
+        ],
+        "runtime_s": 0.6038832499980344
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.33434215290367464,
+          "secondary": 0.2667665070574563,
+          "plane": 0.3343290534492974
+        },
+        "parameters": [
+          0.04573039718577045,
+          -0.28925649239096585,
+          0.06791278778861881,
+          -1.4550877810976799
+        ],
+        "runtime_s": 0.6760894580002059
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0017003545294661286,
+          "plane": 0.008572517556199791
+        },
+        "parameters": [
+          0.046841930266345755,
+          -0.2064837312860059,
+          0.06787885964485177,
+          0.7412038362405277
+        ],
+        "runtime_s": 0.5928714170004241
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.9747404826069862,
+          "secondary": 0.9534222670634537,
+          "plane": 0.9640480112580784
+        },
+        "parameters": [
+          0.03191634653570307,
+          0.030125509289742076,
+          0.049548292030384924,
+          0.9984688203978579
+        ],
+        "runtime_s": 0.732940250003594
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0011312582891973419,
+          "plane": 0.008574884558825506
+        },
+        "parameters": [
+          0.04580054404240349,
+          -0.20592430595465794,
+          0.0702860758321422,
+          0.7941890396210112
+        ],
+        "runtime_s": 0.652040750006563
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.8712591566285859,
+          "secondary": 0.78492786788729,
+          "plane": 0.8592804833890075
+        },
+        "parameters": [
+          0.008556050079928181,
+          0.015363772374911924,
+          0.020946064385717503,
+          1.0013974477721557
+        ],
+        "runtime_s": 0.6048008750003646
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.0085813988703562,
+          "secondary": 0.0006594302573831821,
+          "plane": 0.008377162183516822
+        },
+        "parameters": [
+          0.04558104477200312,
+          -0.20700056769984693,
+          0.07099342559187265,
+          0.7621798088896069
+        ],
+        "runtime_s": 0.631147999993118
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.218215805903416,
+          "secondary": 8.317992024592405,
+          "plane": 8.201464501273586
+        },
+        "parameters": [
+          -0.005696223958342481,
+          0.16417861766536368,
+          -0.09263345003422271,
+          1.4343071056195509
+        ],
+        "runtime_s": 0.6019159999996191
+      }
+    ]
+  },
+  {
+    "family": "dual_room",
+    "seed": 2437,
+    "nominal_source_flag": true,
+    "control": false,
+    "source_flags_by_kind": {
+      "geometry_only": 8,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0008316245329502895,
+          "plane": 0.009273190272004597
+        },
+        "parameters": [
+          0.008006843898967903,
+          0.21084457459346906,
+          0.07299618793647805,
+          0.8680974040707525
+        ],
+        "runtime_s": 0.6292649590031942
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.6881493252809134,
+          "secondary": 1.5650809716669207,
+          "plane": 1.6891281143469274
+        },
+        "parameters": [
+          0.0011354675703687755,
+          0.003998696702613346,
+          -0.049077141684424355,
+          -1.332953128828514
+        ],
+        "runtime_s": 0.5553527919983026
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0006364178473611951,
+          "plane": 0.00931152030293973
+        },
+        "parameters": [
+          0.008517851769502384,
+          0.21147154564096535,
+          0.0732430740531549,
+          0.8556870248121945
+        ],
+        "runtime_s": 0.6579906250044587
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.7261864231855248,
+          "secondary": 0.6683751211942162,
+          "plane": 0.6372992586441235
+        },
+        "parameters": [
+          0.030693278589334058,
+          0.006463514645268152,
+          0.007123579159307264,
+          -0.24888365867566278
+        ],
+        "runtime_s": 0.6317996670040884
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0009000694390576751,
+          "plane": 0.00938364990297004
+        },
+        "parameters": [
+          0.009694954945567907,
+          0.21147439110426441,
+          0.07129929986839478,
+          0.8466212124020552
+        ],
+        "runtime_s": 0.6152981249979348
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.5484455453936325,
+          "secondary": 0.53598222914148,
+          "plane": 0.5479638077841663
+        },
+        "parameters": [
+          0.016430494026862016,
+          -0.005927811646402188,
+          0.0014364961276946296,
+          1.0299552374152892
+        ],
+        "runtime_s": 0.5304724160014302
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0007386334254513719,
+          "plane": 0.009357323704624042
+        },
+        "parameters": [
+          0.009087360926818472,
+          0.21106536639220413,
+          0.0706369539422168,
+          0.8301648299826555
+        ],
+        "runtime_s": 0.5671577920002164
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.8266232913053027,
+          "secondary": 0.7194998744896559,
+          "plane": 0.8266231338860571
+        },
+        "parameters": [
+          0.03813775972968093,
+          0.028127258442419402,
+          -0.05878475268615668,
+          -1.3615739595693321
+        ],
+        "runtime_s": 0.6358885420049774
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0009577519723350053,
+          "plane": 0.00940243211230224
+        },
+        "parameters": [
+          0.008350115159955979,
+          0.20963316905693508,
+          0.07140221318405847,
+          0.8411262249878584
+        ],
+        "runtime_s": 0.6322848749987315
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.04177135102024985,
+          "secondary": 0.030908356901420388,
+          "plane": 0.04224578359739428
+        },
+        "parameters": [
+          0.0332619397313066,
+          0.02526447090168667,
+          0.0558853471699368,
+          0.9997493169241429
+        ],
+        "runtime_s": 0.8053925000058371
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0007479107624577084,
+          "plane": 0.009028410228072756
+        },
+        "parameters": [
+          0.00840257685738536,
+          0.2100271310099502,
+          0.07179629027357816,
+          0.8383047711986242
+        ],
+        "runtime_s": 0.739919750005356
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.5438108656219499,
+          "secondary": 0.5224946718723295,
+          "plane": 0.5436126189526929
+        },
+        "parameters": [
+          -0.01694251580340968,
+          0.06934248745840624,
+          -0.05695373372741007,
+          0.7693804012638145
+        ],
+        "runtime_s": 0.5279880419984693
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0008889342351662473,
+          "plane": 0.009125491448350566
+        },
+        "parameters": [
+          0.009404554785564238,
+          0.21000084155822688,
+          0.06906583778404313,
+          0.7825597052158249
+        ],
+        "runtime_s": 0.6695413750057924
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.713838765690024,
+          "secondary": 2.625857755355859,
+          "plane": 2.7150023629370854
+        },
+        "parameters": [
+          0.014688624577822723,
+          0.025856503419556885,
+          -0.04801079364617273,
+          -1.3337617168551419
+        ],
+        "runtime_s": 0.5665903749977588
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.00940243211230224,
+          "secondary": 0.0007815546783519427,
+          "plane": 0.009378376630197803
+        },
+        "parameters": [
+          0.009108405008907224,
+          0.21019771271039775,
+          0.07036921316099272,
+          0.8052399518427182
+        ],
+        "runtime_s": 0.5927010420055012
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.718753782158433,
+          "secondary": 2.560708647172743,
+          "plane": 2.6954497858582163
+        },
+        "parameters": [
+          0.051914374280463145,
+          0.05819726884631721,
+          -7.645105151381171e-05,
+          -0.7852732188019508
+        ],
+        "runtime_s": 0.700808749999851
+      }
+    ]
+  },
+  {
+    "family": "near_reflector",
+    "seed": 2423,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.002836247444091725,
+          "plane": 0.000990844758547485
+        },
+        "parameters": [
+          0.0012027673038568804,
+          -0.0022593019426052916,
+          -0.44999999999999996,
+          0.5385327001129638
+        ],
+        "runtime_s": 0.9704880420031259
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.19287953023925397,
+          "secondary": 0.17579999083904319,
+          "plane": 0.17065468754788407
+        },
+        "parameters": [
+          -0.031319971022819006,
+          0.04080340940762172,
+          0.04827830795494071,
+          0.9173363641122693
+        ],
+        "runtime_s": 0.9977699159935582
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.002710360270008055,
+          "plane": 0.004711171087425079
+        },
+        "parameters": [
+          -0.0026102599860652856,
+          -0.0024635834857760883,
+          -0.44999999999927875,
+          0.4906881808715894
+        ],
+        "runtime_s": 1.2424458329987829
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.7238588421152578,
+          "secondary": 0.6623489961596568,
+          "plane": 0.7170566113448016
+        },
+        "parameters": [
+          0.024388086328375195,
+          0.0788678447114393,
+          -0.054877116344527396,
+          -0.27765733191313197
+        ],
+        "runtime_s": 0.698086542004603
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.0032118009773990136,
+          "plane": 0.005553468867659379
+        },
+        "parameters": [
+          -0.0031456283994148663,
+          -0.007974684213862382,
+          -0.44999999999999996,
+          0.46909646573329883
+        ],
+        "runtime_s": 0.9992253749951487
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.15320095762989475,
+          "secondary": 0.11561550757536586,
+          "plane": 0.15019272521285792
+        },
+        "parameters": [
+          0.018164092669968768,
+          0.07592553545545955,
+          -0.061180005221548824,
+          -0.27778732569730663
+        ],
+        "runtime_s": 0.9374669579992769
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.0031272928294086228,
+          "plane": 0.005556503063054302
+        },
+        "parameters": [
+          -0.00011509491590136486,
+          -0.0005016427375998885,
+          -0.44999999999999996,
+          0.5479571593568454
+        ],
+        "runtime_s": 1.258661709005537
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.4829282542980584,
+          "secondary": 2.475930418897704,
+          "plane": 2.477289516352907
+        },
+        "parameters": [
+          0.01802995860562106,
+          -0.04027046794873347,
+          0.014728787411347316,
+          -0.7241776119807204
+        ],
+        "runtime_s": 0.9149659999966389
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.0024526649050135053,
+          "plane": 0.00503641705197472
+        },
+        "parameters": [
+          0.0006669058570535634,
+          -0.0034658884036012838,
+          -0.44999999999124946,
+          0.5511066991689105
+        ],
+        "runtime_s": 0.6193995409994386
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          1,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0740550716876182,
+          "secondary": 0.0651943365735514,
+          "plane": 0.06543828024996627
+        },
+        "parameters": [
+          -0.07388710158251366,
+          0.039596446893685,
+          -0.021990526257054596,
+          0.33015882091293275
+        ],
+        "runtime_s": 0.7524176250008168
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.0027080388703704843,
+          "plane": 0.004991401087487126
+        },
+        "parameters": [
+          -0.002675204672749887,
+          -0.004397236769693616,
+          -0.44999999999999996,
+          0.4237828171195123
+        ],
+        "runtime_s": 0.6693823329987936
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          1,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.21757081296475367,
+          "secondary": 0.20738154819847363,
+          "plane": 0.21746239814698864
+        },
+        "parameters": [
+          0.02930673304613615,
+          -0.08230189347582084,
+          0.038424787526560915,
+          -0.17090949569779965
+        ],
+        "runtime_s": 0.4987366670029587
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.0029288844137306154,
+          "plane": 0.0051053376129034786
+        },
+        "parameters": [
+          -0.0036527999030382323,
+          -0.004491655388617557,
+          -0.44999999999999996,
+          0.4417816811250101
+        ],
+        "runtime_s": 0.9566044579987647
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.951170284742957,
+          "secondary": 1.8811050582931972,
+          "plane": 1.9079747898358839
+        },
+        "parameters": [
+          0.03666019798839014,
+          -0.03871424938340196,
+          -0.03492654804576973,
+          -0.8000641561166979
+        ],
+        "runtime_s": 0.5840592080057831
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.005592908261148871,
+          "secondary": 0.002515265044185121,
+          "plane": 0.0030751070148452454
+        },
+        "parameters": [
+          -0.0009760346222767097,
+          -0.0033490178919345637,
+          -0.4499999999999816,
+          0.45555059322137686
+        ],
+        "runtime_s": 0.639566375000868
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.3680703257895488,
+          "secondary": 1.2907119936272384,
+          "plane": 1.361420337072652
+        },
+        "parameters": [
+          0.09625198027041176,
+          -0.23355144657982893,
+          0.07105421115686059,
+          0.04026792937012308
+        ],
+        "runtime_s": 0.542322791996412
+      }
+    ]
+  },
+  {
+    "family": "near_reflector",
+    "seed": 2437,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0013738518091161076,
+          "plane": 0.004796861577155265
+        },
+        "parameters": [
+          -0.000892128998879296,
+          0.0002428354088802637,
+          -0.44999999999999996,
+          0.12464775324752168
+        ],
+        "runtime_s": 0.6367685829973198
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          3,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.24743427336877188,
+          "secondary": 0.2344928808245822,
+          "plane": 0.24696728742376478
+        },
+        "parameters": [
+          0.14098236010910395,
+          0.028074565387984064,
+          0.05618631258516644,
+          1.0457597390954911
+        ],
+        "runtime_s": 0.6085025840002345
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.001758582460566494,
+          "plane": 0.0026235643831510683
+        },
+        "parameters": [
+          -0.0017524830153250682,
+          0.001183838909212196,
+          -0.4499999999995867,
+          0.09416146843294335
+        ],
+        "runtime_s": 0.6723199170010048
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.12775545401011212,
+          "secondary": 0.12668550971295708,
+          "plane": 0.12682695149560208
+        },
+        "parameters": [
+          0.03720451118918459,
+          -0.06371140778680699,
+          -0.07550659975869525,
+          -1.1569268723792496
+        ],
+        "runtime_s": 0.7525701670019771
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0014461284451578848,
+          "plane": 0.004439849885073893
+        },
+        "parameters": [
+          -0.00021338165618383013,
+          -0.00010975693210893496,
+          -0.44999999999999996,
+          0.0886205680062029
+        ],
+        "runtime_s": 0.7349014169958537
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.2413152236179426,
+          "secondary": 1.1936412424281788,
+          "plane": 1.2208360098506272
+        },
+        "parameters": [
+          -0.021814533590869385,
+          -0.031151056343828303,
+          -0.04089905862810979,
+          -0.8195201706837554
+        ],
+        "runtime_s": 0.735690583998803
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0018691708582608197,
+          "plane": 0.004940464659670636
+        },
+        "parameters": [
+          -0.0010128930579257774,
+          0.0003619822286863876,
+          -0.4499999999999985,
+          0.13387574649931683
+        ],
+        "runtime_s": 0.7660677079984453
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.9615156370922401,
+          "secondary": 0.9351387928782058,
+          "plane": 0.8761931690591478
+        },
+        "parameters": [
+          -0.014755219019673449,
+          -0.0059995311149105245,
+          0.06825700264422072,
+          1.2727759889696955
+        ],
+        "runtime_s": 0.7229526250011986
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0019974885053272743,
+          "plane": 0.0046892927987073505
+        },
+        "parameters": [
+          -0.0021092361605287405,
+          0.0011848083282172345,
+          -0.44999999999999996,
+          0.10788828817206665
+        ],
+        "runtime_s": 0.6346281250007451
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.29805380676203413,
+          "secondary": 0.26328570085439834,
+          "plane": 0.298045481708865
+        },
+        "parameters": [
+          -0.01932617232238963,
+          -0.058359022235846644,
+          -0.011920782936440071,
+          -0.7875493600694914
+        ],
+        "runtime_s": 0.6921382910004468
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0013333778559257924,
+          "plane": 0.0037347728660039902
+        },
+        "parameters": [
+          -0.0007831902262234278,
+          -8.43352459053126e-05,
+          -0.44999999999999973,
+          0.1501110686701136
+        ],
+        "runtime_s": 0.6285362080016057
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.14297340468844416,
+          "secondary": 0.12882569461055934,
+          "plane": 0.13993944955152277
+        },
+        "parameters": [
+          -0.01789213967436259,
+          -0.04155849416338145,
+          0.040789847436761416,
+          0.7266704900010901
+        ],
+        "runtime_s": 0.7575351249979576
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.001327266155679395,
+          "plane": 0.0046297111584865
+        },
+        "parameters": [
+          -0.0006026298748359016,
+          0.00046303892830759505,
+          -0.44999999999999996,
+          0.09111062033949878
+        ],
+        "runtime_s": 0.6216015419995529
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2616749292418255,
+          "secondary": 0.20380023080094742,
+          "plane": 0.2552687104891365
+        },
+        "parameters": [
+          0.04367171830521998,
+          0.008708606355329622,
+          0.002930003505773406,
+          0.028874814037505536
+        ],
+        "runtime_s": 0.522532916002092
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.004952843710501418,
+          "secondary": 0.0017756538387963031,
+          "plane": 0.004462214374710393
+        },
+        "parameters": [
+          -0.0026666435066171734,
+          0.0014313099819206804,
+          -0.44999999999999996,
+          0.13151335664846597
+        ],
+        "runtime_s": 0.6154725000014878
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.6142091755056797,
+          "secondary": 0.6033945430700658,
+          "plane": 0.6126666849200536
+        },
+        "parameters": [
+          -0.012446117847533853,
+          0.05974047489878239,
+          -0.004706302737096971,
+          -0.559904665899098
+        ],
+        "runtime_s": 0.6797850000002654
+      }
+    ]
+  },
+  {
+    "family": "direct_null",
+    "seed": 2423,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 6.062768299186919e-05,
+          "plane": 7.183485689967158e-05
+        },
+        "parameters": [
+          0.0016419429919294886,
+          -0.01807354186395057,
+          -0.027456720142209484,
+          -0.7125177181721356
+        ],
+        "runtime_s": 0.7313345410002512
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.26037279380701195,
+          "secondary": 0.22818883534825316,
+          "plane": 0.25583547662924955
+        },
+        "parameters": [
+          -0.01618218316607146,
+          -0.09580408119924275,
+          0.020587881654559863,
+          0.17033750797795993
+        ],
+        "runtime_s": 0.6196968750009546
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 5.512351685995931e-05,
+          "plane": 7.978571958609771e-05
+        },
+        "parameters": [
+          -0.0029484473964154676,
+          -0.020398735314765416,
+          -0.02652829306520202,
+          -0.7057102819728844
+        ],
+        "runtime_s": 0.6524796249941573
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.07788130831622765,
+          "secondary": 0.05032156379114431,
+          "plane": 0.06329931028744673
+        },
+        "parameters": [
+          0.017015339167915804,
+          -0.03827933655899135,
+          0.016462587245672917,
+          -0.7240944795931888
+        ],
+        "runtime_s": 0.5580411670016474
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 4.378043322020966e-05,
+          "plane": 7.482717745462479e-05
+        },
+        "parameters": [
+          0.0030009845246936396,
+          0.007014992168255837,
+          0.006296228788705291,
+          0.040038501252557965
+        ],
+        "runtime_s": 0.7036980830016546
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.17917382945457389,
+          "secondary": 0.165723546106482,
+          "plane": 0.16496332334968686
+        },
+        "parameters": [
+          0.0102228406661706,
+          0.11354808782598597,
+          -0.11053828905603053,
+          0.6448010607783683
+        ],
+        "runtime_s": 0.5026454999970156
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 4.442818165494942e-05,
+          "plane": 7.478819728902351e-05
+        },
+        "parameters": [
+          0.002203807425417556,
+          0.00793687205184128,
+          0.006808096381266315,
+          0.04478840979888671
+        ],
+        "runtime_s": 0.6923062909991131
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          4,
+          3,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 5.758532829573049,
+          "secondary": 5.561941657645289,
+          "plane": 5.748863130045933
+        },
+        "parameters": [
+          0.010797371660357439,
+          -0.035612538919956284,
+          0.038226232739161266,
+          0.1602540461055763
+        ],
+        "runtime_s": 0.6370523750010761
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 4.393159430671473e-05,
+          "plane": 0.0001365967298614786
+        },
+        "parameters": [
+          0.00223640142666599,
+          0.00808713072995737,
+          0.0063561423572640365,
+          0.037753745529646686
+        ],
+        "runtime_s": 0.6663069169953815
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 4.664502708629247,
+          "secondary": 4.626061263290531,
+          "plane": 4.577733663955663
+        },
+        "parameters": [
+          -0.03331997458272424,
+          -0.020578158348023373,
+          0.004818907065328119,
+          0.322132917962173
+        ],
+        "runtime_s": 0.5554817090014694
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 4.772463202279752e-05,
+          "plane": 7.667199057106305e-05
+        },
+        "parameters": [
+          0.013498801999122165,
+          -0.0023867188890036397,
+          -0.0056529436666648124,
+          -0.023269383034209324
+        ],
+        "runtime_s": 0.705326209004852
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.34672478644493254,
+          "secondary": 0.3114707335777853,
+          "plane": 0.3392217801031581
+        },
+        "parameters": [
+          0.1382733398955567,
+          -0.24709535268674768,
+          0.11101308268925475,
+          -0.7792708008137375
+        ],
+        "runtime_s": 0.5915939580008853
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 4.383447657384484e-05,
+          "plane": 8.293869200988795e-05
+        },
+        "parameters": [
+          -0.0011818930382952318,
+          -5.0284989559926644e-05,
+          -0.00018219394727023391,
+          -0.20524636700897655
+        ],
+        "runtime_s": 0.8326892500044778
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          4,
+          3,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.40618998192119427,
+          "secondary": 0.3956351897337597,
+          "plane": 0.40618609417593043
+        },
+        "parameters": [
+          -0.04267273298048091,
+          -0.034223268152502206,
+          0.008882098195742016,
+          -0.441979472135282
+        ],
+        "runtime_s": 0.6109856249968288
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          1,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.8000767622262e-05,
+          "secondary": 0.0001513835595539859,
+          "plane": 7.812989568165968e-05
+        },
+        "parameters": [
+          -0.0013847092082161611,
+          0.007010439537339567,
+          0.005902914682144786,
+          0.030800283267657866
+        ],
+        "runtime_s": 0.800394874997437
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.0174033360413346,
+          "secondary": 1.9996111684666442,
+          "plane": 1.9443942152601545
+        },
+        "parameters": [
+          -0.0010760726895131547,
+          -0.049965250110576565,
+          0.08484215300790143,
+          1.2631705780061213
+        ],
+        "runtime_s": 0.5484008339990396
+      }
+    ]
+  },
+  {
+    "family": "direct_null",
+    "seed": 2437,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 0.0013534300368281797,
+          "plane": 7.546010982128516e-05
+        },
+        "parameters": [
+          0.01076980091071036,
+          0.015132176023999034,
+          0.001002186713807173,
+          -0.08365360567590308
+        ],
+        "runtime_s": 0.7456496660015546
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.11989833114147602,
+          "secondary": 0.10686378871399911,
+          "plane": 0.11936966822395226
+        },
+        "parameters": [
+          -0.05066911666214273,
+          -0.006429637548986711,
+          -0.0019090068730787185,
+          1.3346422648494782
+        ],
+        "runtime_s": 0.615981417002331
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.3559207288994774e-05,
+          "plane": 0.0013251350930225455
+        },
+        "parameters": [
+          -7.825328063891156e-05,
+          0.0011934305319725802,
+          -0.0007962976494624828,
+          0.20171419774052213
+        ],
+        "runtime_s": 0.6905162500042934
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          4,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.18207683568186686,
+          "secondary": 0.1506419630074783,
+          "plane": 0.18207683568186686
+        },
+        "parameters": [
+          -0.029834833507332136,
+          -0.03002320799225804,
+          0.0331796261794286,
+          0.649138446400615
+        ],
+        "runtime_s": 0.6665088329973514
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.424563340223759e-05,
+          "plane": 7.77185380650897e-05
+        },
+        "parameters": [
+          -0.0019322638762120361,
+          0.0023276986954649153,
+          0.00308437157355821,
+          0.26376759781148024
+        ],
+        "runtime_s": 0.6496437500027241
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          1,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.1328535642467338,
+          "secondary": 0.09373612601001695,
+          "plane": 0.13284555855459174
+        },
+        "parameters": [
+          0.0012973082778781524,
+          -0.02703872283959639,
+          -0.032926670936765025,
+          -0.005646408231388014
+        ],
+        "runtime_s": 1.4714453749984386
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.9015076202428445e-05,
+          "plane": 7.762255436810652e-05
+        },
+        "parameters": [
+          -0.001511260073234005,
+          0.006500481100033495,
+          -0.013465141940123312,
+          -0.14227730010364079
+        ],
+        "runtime_s": 0.9073429589989246
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          1,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.30455668707963257,
+          "secondary": 0.2593523069588297,
+          "plane": 0.29649038470118216
+        },
+        "parameters": [
+          -0.01581722719751474,
+          -0.025803722219328626,
+          0.045571268246159716,
+          0.4307340691552101
+        ],
+        "runtime_s": 0.6843287500014412
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.853089707970718e-05,
+          "plane": 7.762153300053056e-05
+        },
+        "parameters": [
+          0.008254766281095787,
+          0.015986891505128803,
+          0.006613497325105824,
+          0.013216239600175782
+        ],
+        "runtime_s": 0.6917617080034688
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.3123931100733746,
+          "secondary": 1.2686489729068346,
+          "plane": 1.2988391205015137
+        },
+        "parameters": [
+          0.009401980164535716,
+          0.0356910838713414,
+          -0.07505037936154053,
+          -1.456905068980461
+        ],
+        "runtime_s": 0.6232220419988153
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 6.191572141889449e-05,
+          "plane": 7.732254305767927e-05
+        },
+        "parameters": [
+          -0.002975261073632648,
+          -0.003300276458352251,
+          0.026178913037758572,
+          0.35879232659442
+        ],
+        "runtime_s": 0.8761156249966007
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.09846690817450271,
+          "secondary": 0.0863575938045245,
+          "plane": 0.0984154663511026
+        },
+        "parameters": [
+          0.0346995467347776,
+          -0.10324986211699418,
+          -0.01913876466761742,
+          1.491208089300397
+        ],
+        "runtime_s": 0.46966754200548166
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.866278473761715e-05,
+          "plane": 7.313797228219956e-05
+        },
+        "parameters": [
+          -0.006432525286465917,
+          0.003115356294307467,
+          0.008821599359586731,
+          0.3738668110355098
+        ],
+        "runtime_s": 0.6831448749944684
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.07875283415898567,
+          "secondary": 0.07687703431636508,
+          "plane": 0.07873407617921614
+        },
+        "parameters": [
+          -0.16946260710107014,
+          -0.1912523471543223,
+          -0.04450824875887624,
+          -1.1565052827971078
+        ],
+        "runtime_s": 0.7540229160003946
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 7.791759937700364e-05,
+          "secondary": 4.362292388732816e-05,
+          "plane": 7.616601095083742e-05
+        },
+        "parameters": [
+          -0.0002231059272812222,
+          0.0011532426812264206,
+          -0.00039774272227338317,
+          0.2112867882009397
+        ],
+        "runtime_s": 0.8185343330042087
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.25424328258733153,
+          "secondary": 0.19553407935810532,
+          "plane": 0.2526556482150279
+        },
+        "parameters": [
+          0.00977681110754532,
+          0.0017657325385343633,
+          0.025445956077719597,
+          0.7972162697497266
+        ],
+        "runtime_s": 0.6480052910046652
+      }
+    ]
+  },
+  {
+    "family": "receiver_filter",
+    "seed": 2423,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.00029737548973397755,
+          "plane": 0.00039396488817904643
+        },
+        "parameters": [
+          0.06525854672121503,
+          -0.024336919363396114,
+          0.010077540193899675,
+          -0.45643572364439383
+        ],
+        "runtime_s": 0.6493501670047408
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.1016760854982133,
+          "secondary": 1.9579454395615483,
+          "plane": 1.9371173777474724
+        },
+        "parameters": [
+          -0.014276710970992581,
+          0.05014551555450229,
+          -0.03630992379623557,
+          -0.14343276669410485
+        ],
+        "runtime_s": 0.6621684589990764
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.0002077873441964482,
+          "plane": 0.0003939648344044216
+        },
+        "parameters": [
+          0.020480812556160365,
+          0.0036246812434198145,
+          -0.003075892211419556,
+          0.08918490451633224
+        ],
+        "runtime_s": 0.5674516250001034
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.2510706817947899,
+          "secondary": 0.24006076064391343,
+          "plane": 0.25076423806671067
+        },
+        "parameters": [
+          0.022283404829737865,
+          -0.02983005944816183,
+          -0.05322076766020075,
+          -0.9783661063470209
+        ],
+        "runtime_s": 0.6541591249988414
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.00031075402941188693,
+          "plane": 0.0003939649426044098
+        },
+        "parameters": [
+          0.06678975957936864,
+          -0.02299733675676214,
+          0.011197810539428123,
+          -0.5019586371612148
+        ],
+        "runtime_s": 0.6956115830034832
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          4,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.4184786314051598,
+          "secondary": 1.3538189743691393,
+          "plane": 1.4184786016096997
+        },
+        "parameters": [
+          -0.0009982617199508828,
+          -0.05035948749970428,
+          0.08732126272995719,
+          1.262679753137615
+        ],
+        "runtime_s": 0.513275875004183
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.0003299908169199716,
+          "plane": 0.000393384044507012
+        },
+        "parameters": [
+          0.07951580369833543,
+          -0.025600087307023484,
+          0.012826710594536345,
+          -0.7653398048273082
+        ],
+        "runtime_s": 0.6302360839981702
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          3,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.0487701318616363,
+          "secondary": 0.9021053261381284,
+          "plane": 1.0370116461103138
+        },
+        "parameters": [
+          0.03473333951870629,
+          -0.086294492654989,
+          0.03479732442867219,
+          -0.17025437276305538
+        ],
+        "runtime_s": 0.5436967919958988
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.0002831331146478785,
+          "plane": 0.0003935896725023033
+        },
+        "parameters": [
+          0.048844396827855144,
+          -0.0022788232874602302,
+          -0.0021940583668390037,
+          -0.49565719647262796
+        ],
+        "runtime_s": 0.7146363329957239
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 4.495523855455941,
+          "secondary": 4.35484053993071,
+          "plane": 4.495489771794657
+        },
+        "parameters": [
+          -0.03589359501545897,
+          -0.023133070677725392,
+          -0.013271008747740485,
+          -0.7951065402464996
+        ],
+        "runtime_s": 0.622037500004808
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.00024805319926434475,
+          "plane": 0.00039365299117054666
+        },
+        "parameters": [
+          0.09706364620408359,
+          -0.03883454891036368,
+          0.005293912701858817,
+          -1.0673107200095968
+        ],
+        "runtime_s": 0.6736384999967413
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.41123990892725,
+          "secondary": 1.3140138055270367,
+          "plane": 1.402550725635041
+        },
+        "parameters": [
+          -0.013132460431356557,
+          -0.010989634993722248,
+          -0.02100655467480309,
+          0.004350913575716126
+        ],
+        "runtime_s": 0.5559732500041719
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.0001936354748417896,
+          "plane": 0.00039371681152062675
+        },
+        "parameters": [
+          0.01649058730155868,
+          0.004573693491954656,
+          -0.001292099469484846,
+          0.17816413581143942
+        ],
+        "runtime_s": 0.6305280829983531
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.4029156454084108,
+          "secondary": 0.35444864577344615,
+          "plane": 0.3802497320819193
+        },
+        "parameters": [
+          -0.06695316345449691,
+          0.028879470641532914,
+          -0.06588503327175849,
+          -0.746576214478924
+        ],
+        "runtime_s": 0.5109282500052359
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.00039396533599161536,
+          "secondary": 0.00023167997676463352,
+          "plane": 0.0003936472950968717
+        },
+        "parameters": [
+          0.025084241730198138,
+          0.006209603450199306,
+          -0.007198529907669176,
+          -0.0773627165467386
+        ],
+        "runtime_s": 0.6622086249990389
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.11187870873310732,
+          "secondary": 0.10695083576821716,
+          "plane": 0.10330346661194341
+        },
+        "parameters": [
+          -0.054069998990949004,
+          -0.31954702419109365,
+          0.24976809439170883,
+          -1.1563082074463007
+        ],
+        "runtime_s": 0.5233020829982706
+      }
+    ]
+  },
+  {
+    "family": "receiver_filter",
+    "seed": 2437,
+    "nominal_source_flag": false,
+    "control": true,
+    "source_flags_by_kind": {
+      "geometry_only": 0,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.494495795683853e-05,
+          "plane": 0.0002374949793775978
+        },
+        "parameters": [
+          -0.0009449785303555006,
+          -0.003607910143630821,
+          0.0020605398438608242,
+          0.6505270072003271
+        ],
+        "runtime_s": 0.6750766250042943
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.523851896800075,
+          "secondary": 0.5063327617323761,
+          "plane": 0.5233891479396728
+        },
+        "parameters": [
+          0.06282295766940398,
+          -0.023011408813821545,
+          -0.05197317450059104,
+          -0.9853474892178531
+        ],
+        "runtime_s": 0.5743519580064458
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.518347487278072e-05,
+          "plane": 0.00023597115211304554
+        },
+        "parameters": [
+          -0.000980149690990603,
+          -0.003603998113308394,
+          0.002155911491210012,
+          0.651774653010797
+        ],
+        "runtime_s": 0.7644214159954572
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.12637629374516984,
+          "secondary": 0.10304558320669334,
+          "plane": 0.12156884075181362
+        },
+        "parameters": [
+          -0.06138336754194151,
+          -0.020359495762085254,
+          0.01680190294471782,
+          1.3366539754455575
+        ],
+        "runtime_s": 0.7117722910043085
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.515111963257838e-05,
+          "plane": 0.0002638850948171493
+        },
+        "parameters": [
+          -0.0010218310547859958,
+          -0.003645710739058453,
+          0.0022615500867896664,
+          0.653346685628786
+        ],
+        "runtime_s": 0.644546541996533
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          2,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.1272817022454201,
+          "secondary": 0.08419138972509706,
+          "plane": 0.12155129604261689
+        },
+        "parameters": [
+          0.02304951321080885,
+          0.010159133842661424,
+          -0.0628874588176822,
+          -1.3274423558195958
+        ],
+        "runtime_s": 0.6673301249975339
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.490798564314141e-05,
+          "plane": 0.00023592908731944536
+        },
+        "parameters": [
+          -0.0009611633549659626,
+          -0.0036213615801751905,
+          0.0021010626969553015,
+          0.6509704782094805
+        ],
+        "runtime_s": 0.6474317090032855
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.06361954591988524,
+          "secondary": 0.04729270936560076,
+          "plane": 0.05870865117692625
+        },
+        "parameters": [
+          0.010559534134740327,
+          0.019639257455736806,
+          -0.05071744924520985,
+          -1.3329396122188235
+        ],
+        "runtime_s": 0.6124770829992485
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.490410384844337e-05,
+          "plane": 0.0002641536934047944
+        },
+        "parameters": [
+          -0.0009506375251113712,
+          -0.0035713704278719236,
+          0.0020688487765376383,
+          0.6505772257097604
+        ],
+        "runtime_s": 0.6547033329989063
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.05077422549726694,
+          "secondary": 0.040826319547487604,
+          "plane": 0.049656444063033316
+        },
+        "parameters": [
+          -0.015249424256570457,
+          -0.019994937421386146,
+          0.03324929711722475,
+          0.6831170885021568
+        ],
+        "runtime_s": 0.5601724170046509
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.479922146619374e-05,
+          "plane": 0.0002644978132654923
+        },
+        "parameters": [
+          -0.0009668180020882899,
+          -0.0036259549574419038,
+          0.002121456949476354,
+          0.6511004836330991
+        ],
+        "runtime_s": 0.627179666000302
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.08142826891889268,
+          "secondary": 0.0745001753526309,
+          "plane": 0.08140534916031422
+        },
+        "parameters": [
+          -0.021607597216546343,
+          0.09004226649645596,
+          0.16185374381221607,
+          0.19445213734933595
+        ],
+        "runtime_s": 0.5624535419992753
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.509425403333713e-05,
+          "plane": 0.0002640918859981017
+        },
+        "parameters": [
+          -0.0010183028460366392,
+          -0.0036510703945716724,
+          0.002259787803161501,
+          0.6531242951072416
+        ],
+        "runtime_s": 0.633986458000436
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.9696310210558508,
+          "secondary": 1.9044804882089836,
+          "plane": 1.9696218293027725
+        },
+        "parameters": [
+          -0.017291829012506057,
+          -0.015939267862727386,
+          -0.015769246762675916,
+          0.19541382446588984
+        ],
+        "runtime_s": 0.6913302499960992
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.0002644996155143234,
+          "secondary": 9.510478957540028e-05,
+          "plane": 0.00023729396566919743
+        },
+        "parameters": [
+          -0.0009780382184032105,
+          -0.003644204091907964,
+          0.0021006223686237378,
+          0.6507867365431157
+        ],
+        "runtime_s": 0.6224524579956778
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          4,
+          0
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.41823102747787166,
+          "secondary": 0.4261088427461495,
+          "plane": 0.3534509401534206
+        },
+        "parameters": [
+          0.028665570820865766,
+          0.02104472866547541,
+          0.058601379877596345,
+          0.9977312701070739
+        ],
+        "runtime_s": 0.6373651249959948
+      }
+    ]
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2423,
+    "nominal_source_flag": true,
+    "control": false,
+    "source_flags_by_kind": {
+      "geometry_only": 8,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0018881341906172471,
+          "plane": 0.011393269551695463
+        },
+        "parameters": [
+          0.04649125444721908,
+          -0.20483328132304457,
+          0.06902661436743164,
+          0.7858807702708711
+        ],
+        "runtime_s": 0.6223079580013291
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.8465523555416062,
+          "secondary": 0.7346088923246635,
+          "plane": 0.8442290300916478
+        },
+        "parameters": [
+          -0.06021433443093075,
+          -0.06825967829825685,
+          0.040789255719636784,
+          -0.5678957993123493
+        ],
+        "runtime_s": 0.5044750419983757
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0018151963851248043,
+          "plane": 0.00865013131403259
+        },
+        "parameters": [
+          0.046941651527014246,
+          -0.20482217326545663,
+          0.07008786594087665,
+          0.8099864002603043
+        ],
+        "runtime_s": 0.6216254579994711
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.45561086134419276,
+          "secondary": 0.3950967174506435,
+          "plane": 0.44393090431577614
+        },
+        "parameters": [
+          0.038580562049975606,
+          -0.24091803452774332,
+          0.10098416858687823,
+          0.6929272258349526
+        ],
+        "runtime_s": 0.9226187079984811
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.001747178716981473,
+          "plane": 0.010158945173650348
+        },
+        "parameters": [
+          0.046941720840852845,
+          -0.20309662615832358,
+          0.06892695798129468,
+          0.8426592815867622
+        ],
+        "runtime_s": 0.5930152919972898
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.7480603433332849,
+          "secondary": 0.6882944641743983,
+          "plane": 0.7430817908896262
+        },
+        "parameters": [
+          0.1177687608088796,
+          -0.20744177262771393,
+          -0.10160719066702631,
+          -0.5320783903788254
+        ],
+        "runtime_s": 0.6341336249970482
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0017779184365491866,
+          "plane": 0.011403768529683282
+        },
+        "parameters": [
+          0.046360484392054126,
+          -0.20426644083299486,
+          0.06921509779671886,
+          0.7909568346509701
+        ],
+        "runtime_s": 0.6548875830048928
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.5807408044397868,
+          "secondary": 0.5129010324471281,
+          "plane": 0.5440227868605455
+        },
+        "parameters": [
+          0.013271392108451192,
+          -0.23261983339899103,
+          0.16568568748377313,
+          1.297921002886753
+        ],
+        "runtime_s": 0.6077334590008832
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0018936671201259924,
+          "plane": 0.01026675654913462
+        },
+        "parameters": [
+          0.04668337829212526,
+          -0.20554561615497846,
+          0.06877353975696524,
+          0.7845832110338137
+        ],
+        "runtime_s": 0.5918042910052463
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          4,
+          3
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.4403608830577777,
+          "secondary": 1.328134808403184,
+          "plane": 1.4402532490511966
+        },
+        "parameters": [
+          0.03570392112172474,
+          -0.25415955552593333,
+          0.09392088780830882,
+          -0.20684528555265178
+        ],
+        "runtime_s": 0.6305631659997744
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0022635314938899017,
+          "plane": 0.011452138862703473
+        },
+        "parameters": [
+          0.04792474694620998,
+          -0.203943354171343,
+          0.0692216533789291,
+          0.8320755121531814
+        ],
+        "runtime_s": 0.7154715409997152
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.06359109708966378,
+          "secondary": 0.05478717901123971,
+          "plane": 0.06096243541651666
+        },
+        "parameters": [
+          0.0033551103749046417,
+          -0.023089016462641138,
+          0.015444055791252227,
+          -0.722608688199042
+        ],
+        "runtime_s": 0.6534531669967691
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0020913121298157104,
+          "plane": 0.0086663665002748
+        },
+        "parameters": [
+          0.04776875264035701,
+          -0.20335033723965482,
+          0.06973707936681606,
+          0.8561193446405679
+        ],
+        "runtime_s": 0.6347614159967634
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.1171322096625865,
+          "secondary": 0.082917482952749,
+          "plane": 0.11610956838505233
+        },
+        "parameters": [
+          0.04651084072971971,
+          -0.20004018207422414,
+          0.06766351519781946,
+          0.9456062589932994
+        ],
+        "runtime_s": 0.6751294159985264
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          3,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.011452514580108169,
+          "secondary": 0.0025222133769250417,
+          "plane": 0.008649311461807346
+        },
+        "parameters": [
+          0.04770694050728539,
+          -0.20522283091194174,
+          0.0698854964928197,
+          0.8342083511669419
+        ],
+        "runtime_s": 0.6054094589999295
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 14.291623801427697,
+          "secondary": 13.941879074451546,
+          "plane": 14.29449077727302
+        },
+        "parameters": [
+          0.06432691890244437,
+          -0.19331699142809033,
+          0.03475321339824102,
+          0.7757593472894488
+        ],
+        "runtime_s": 0.5778312909969827
+      }
+    ]
+  },
+  {
+    "family": "dual_phase",
+    "seed": 2437,
+    "nominal_source_flag": true,
+    "control": false,
+    "source_flags_by_kind": {
+      "geometry_only": 8,
+      "geometry_and_local_timing": 0
+    },
+    "draws": [
+      {
+        "draw": 0,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.0016672995636337435,
+          "plane": 0.012819522577979246
+        },
+        "parameters": [
+          0.009625153248177433,
+          0.21097012572207588,
+          0.07076647921495147,
+          0.7926407953878353
+        ],
+        "runtime_s": 0.6738952090017847
+      },
+      {
+        "draw": 0,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          4,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.22404487429757775,
+          "secondary": 0.19664955484326127,
+          "plane": 0.22155845515354963
+        },
+        "parameters": [
+          0.0038880608212520287,
+          0.0024742122110039057,
+          -0.03878929761390473,
+          -1.0199027511072554
+        ],
+        "runtime_s": 0.5661933749943273
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.002773216159461855,
+          "plane": 0.01272614730028963
+        },
+        "parameters": [
+          0.009612322561857742,
+          0.2124013396508319,
+          0.06968041303342828,
+          0.8135763362220089
+        ],
+        "runtime_s": 0.5880816669960041
+      },
+      {
+        "draw": 1,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          2,
+          4,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.0303735547809354,
+          "secondary": 0.8902927463067806,
+          "plane": 1.0302133494998624
+        },
+        "parameters": [
+          -0.007447961081932599,
+          0.2221225912035202,
+          0.061281801559734776,
+          0.49432628734993705
+        ],
+        "runtime_s": 0.6568163750052918
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.002093311125623548,
+          "plane": 0.01281952257836454
+        },
+        "parameters": [
+          0.008115692904994734,
+          0.21021074523289401,
+          0.07088000814412831,
+          0.8488946880642907
+        ],
+        "runtime_s": 0.5918969580015983
+      },
+      {
+        "draw": 2,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          2,
+          2,
+          4
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 2.025504207415367,
+          "secondary": 2.0082507645967334,
+          "plane": 2.0143559306747325
+        },
+        "parameters": [
+          0.0009817539629721733,
+          0.006164812610145138,
+          0.16518874209792658,
+          0.7560425982279326
+        ],
+        "runtime_s": 0.5426810419958201
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.0024682924119987073,
+          "plane": 0.012168035892383898
+        },
+        "parameters": [
+          0.00977138848052594,
+          0.20947113107756019,
+          0.07006693776716953,
+          0.8321103625188871
+        ],
+        "runtime_s": 0.9544447080043028
+      },
+      {
+        "draw": 3,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          4,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 8.97523127537624,
+          "secondary": 8.91547349929547,
+          "plane": 8.966842410413513
+        },
+        "parameters": [
+          -0.03633351588407871,
+          0.07966336474174081,
+          0.05456478925903249,
+          -1.1867255657128488
+        ],
+        "runtime_s": 0.5304328339989297
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.0017048592426355173,
+          "plane": 0.012311487558591558
+        },
+        "parameters": [
+          0.007259718099562212,
+          0.21024540446124287,
+          0.07204154270576799,
+          0.8537405708127607
+        ],
+        "runtime_s": 0.6921427080014837
+      },
+      {
+        "draw": 4,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          4,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.5388584438053993,
+          "secondary": 0.47209614428529567,
+          "plane": 0.5364955721893725
+        },
+        "parameters": [
+          0.03684268038649067,
+          0.22277040626965905,
+          0.05859095735191788,
+          0.45377385960080485
+        ],
+        "runtime_s": 0.6138748329976806
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.0021958512319233195,
+          "plane": 0.01245629828529838
+        },
+        "parameters": [
+          0.009271940601208176,
+          0.21039426409204895,
+          0.07043991275748403,
+          0.8206962849216386
+        ],
+        "runtime_s": 0.6005244999978459
+      },
+      {
+        "draw": 5,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          3,
+          3,
+          3,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 1.5109001338378005,
+          "secondary": 1.4095184242561276,
+          "plane": 1.5046552288519024
+        },
+        "parameters": [
+          0.04126980050540567,
+          0.06867674473024456,
+          0.0452145393021258,
+          0.4190936942559512
+        ],
+        "runtime_s": 0.6352943329984555
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.0017570429281413807,
+          "plane": 0.012276540776914487
+        },
+        "parameters": [
+          0.009908791519465138,
+          0.21044515938750868,
+          0.06955570610619634,
+          0.7953723084588712
+        ],
+        "runtime_s": 0.660082666996459
+      },
+      {
+        "draw": 6,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          3,
+          2,
+          3
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.18497788727262074,
+          "secondary": 0.15169789828912136,
+          "plane": 0.18512858802870974
+        },
+        "parameters": [
+          -0.04149326770780618,
+          -0.04425292276189571,
+          0.03621185493610738,
+          0.7289339250997956
+        ],
+        "runtime_s": 0.6952365830002236
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_only",
+        "source_flag": true,
+        "status": "source_model_ambiguous",
+        "component_held_support_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "component_identifiable": true,
+        "waveform_flag_before_identifiability": true,
+        "held_mse": {
+          "single": 0.01281952257836454,
+          "secondary": 0.002643608638250436,
+          "plane": 0.012776274523109902
+        },
+        "parameters": [
+          0.009855405936884486,
+          0.20990184045005417,
+          0.06901363372468877,
+          0.808484584799754
+        ],
+        "runtime_s": 0.6262278329959372
+      },
+      {
+        "draw": 7,
+        "kind": "geometry_and_local_timing",
+        "source_flag": false,
+        "status": "not_qualified",
+        "component_held_support_counts": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "component_identifiable": false,
+        "waveform_flag_before_identifiability": false,
+        "held_mse": {
+          "single": 0.6016981295866943,
+          "secondary": 0.6003160383938194,
+          "plane": 0.601473180426863
+        },
+        "parameters": [
+          -0.16568962925855804,
+          -0.046354611555204726,
+          -0.024122164140306625,
+          -0.4341272675053216
+        ],
+        "runtime_s": 0.6381560829977388
+      }
+    ]
+  }
+]

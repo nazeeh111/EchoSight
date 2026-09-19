@@ -1,0 +1,44 @@
+{
+  "snapshot_content_sha256": "b5de1137125e098c6e546463abb18495585fdbcc48b2c3ed5b7fe3b2c896e417",
+  "all_manifest_files_verified": 50,
+  "core_signals_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "raw_representation": {
+    "statuses": [
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "direct_std_s": 4.1666666666666665e-05,
+    "nominal_normalizer": 0.33910922971979723,
+    "translated_normalizer": 0.33910922971980506,
+    "axis_shift_normalizer": -0.16354759040430597,
+    "clock_changed_normalizer": 0.3271249199813761,
+    "normalized_translation_max_abs": 2.8457791678704325e-12,
+    "axis_only_shift_normalized_max_abs": 1.6435372734857527,
+    "clock_change_normalized_max_abs": 0.11671615164400911,
+    "intercept_translation_s": 6.250000000003475e-05,
+    "expected_translation_s": 6.25e-05,
+    "nominal_alpha": 1.0002010061726836,
+    "changed_alpha": 1.0006003355677175,
+    "nominal_discrete_peak_tau_s": 4.404656496858998e-06,
+    "translated_discrete_peak_tau_s": 4.404656496874611e-06,
+    "axis_shift_discrete_peak_tau_s": 6.6904656496859e-05,
+    "clock_changed_discrete_peak_tau_s": -5.031409639351912e-06
+  },
+  "amplitude_profile": {
+    "clipped_profile_mse": 0.00034606470030172913,
+    "bounded_profile_mse": 0.0003460647003017293,
+    "clipped_gains": [
+      1.4612472562553596,
+      -0.4617173015057404
+    ],
+    "bounded_gains": [
+      1.4612472562553658,
+      -0.461717301505749
+    ],
+    "clipped_shift_s": -2.0833333333333333e-05,
+    "bounded_shift_s": -2.0833333333333333e-05,
+    "mse_ratio": 0.9999999999999996
+  },
+  "scope": "Independent analytic/raw probes; no source classifier or held-out scene fits"
+}
