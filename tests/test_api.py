@@ -12,8 +12,12 @@ from test_storage import wav_bytes
 class APITests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
+        self.processing_gate = None
+        self.processing_started = threading.Event()
         def process(session, cancel=None, progress=None):
             progress(.5, 'reading')
+            if self.processing_gate is not None:
+                self.processing_started.set(); self.processing_gate.wait(3)
             return {'schema_version': '1.0', 'status': 'no_result', 'surfaces': [], 'diagnostics': ['fixture processor'], 'capture_count': len(session['captures'])}
         self.server = create_server(self.tmp.name, port=0, processor=process)
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True); self.thread.start()
@@ -58,6 +62,72 @@ class APITests(unittest.TestCase):
         from echosight.storage import MAX_COMPARE_BYTES
         code, _ = self.request('POST', '/v1/compare', b'', {'Content-Length': str(MAX_COMPARE_BYTES + 1)})
         self.assertEqual(code, 413)
+    def test_revision_update_uses_optimistic_concurrency(self):
+        code, body = self.request('POST', '/v1/sessions', {})
+        session = json.loads(body); route = '/v1/sessions/' + session['session_id']
+        code, body = self.request('PATCH', route, {'expected_revision': 0, 'calibration': {'source_position_m': [0, 0, 1]}})
+        self.assertEqual(code, 200, body)
+        self.assertEqual(json.loads(body)['revision'], 1)
+        code, _ = self.request('PATCH', route, {'expected_revision': 0, 'calibration': {'source_position_m': [0, 0, 2]}})
+        self.assertEqual(code, 409)
+        code, _ = self.request('PATCH', route, {'expected_revision': 1, 'calibration': {'source_position_m': [0, 0, float('nan')]}})
+        self.assertEqual(code, 400)
+    def test_concurrent_upload_and_calibration_do_not_change_running_input(self):
+        self.processing_gate = threading.Event()
+        code, body = self.request('POST', '/v1/sessions', {})
+        route = '/v1/sessions/' + json.loads(body)['session_id']
+        headers = {'X-Capture-Metadata': json.dumps({'capture_id': 'first'})}
+        self.assertEqual(self.request('POST', route + '/recordings', wav_bytes(), headers)[0], 201)
+        _, body = self.request('POST', route + '/jobs', {})
+        jid = json.loads(body)['job_id']; self.assertTrue(self.processing_started.wait(1))
+        self.assertEqual(self.request('POST', route + '/jobs', {})[0], 409)
+        headers = {'X-Capture-Metadata': json.dumps({'capture_id': 'second'})}
+        self.assertEqual(self.request('POST', route + '/recordings', wav_bytes(), headers)[0], 201)
+        self.assertEqual(self.request('PATCH', route, {'expected_revision': 2, 'calibration': {'source_position_m': [0, 0, 1]}})[0], 200)
+        self.processing_gate.set()
+        for _ in range(100):
+            _, job = self.request('GET', '/v1/jobs/' + jid)
+            if json.loads(job)['status'] == 'completed': break
+            time.sleep(.01)
+        code, body = self.request('GET', route + '/result')
+        result = json.loads(body)
+        self.assertEqual(result['capture_count'], 1)
+        self.assertTrue(result['stale']); self.assertEqual(result['session_revision'], 1)
+        self.processing_gate = None
+        _, body = self.request('POST', route + '/jobs', {})
+        jid = json.loads(body)['job_id']
+        for _ in range(100):
+            _, job = self.request('GET', '/v1/jobs/' + jid)
+            if json.loads(job)['status'] == 'completed': break
+            time.sleep(.01)
+        _, body = self.request('GET', route + '/result')
+        self.assertEqual(json.loads(body)['capture_count'], 2); self.assertFalse(json.loads(body)['stale'])
+    def test_interrupted_upload_does_not_publish_capture(self):
+        import socket
+        code, body = self.request('POST', '/v1/sessions', {})
+        route = '/v1/sessions/' + json.loads(body)['session_id']
+        port = self.server.server_address[1]
+        with socket.create_connection(('127.0.0.1', port), timeout=2) as connection:
+            header = f'POST {route}/recordings HTTP/1.0\r\nHost: 127.0.0.1:{port}\r\nContent-Length: 1000\r\n\r\n'.encode()
+            connection.sendall(header + b'partial recording'); connection.shutdown(socket.SHUT_WR)
+            self.assertIn(b'400', connection.recv(4096).split(b'\r\n', 1)[0])
+        code, body = self.request('GET', route)
+        self.assertEqual(code, 200); self.assertEqual(json.loads(body)['captures'], [])
+        self.assertEqual(self.request('POST', route + '/recordings', wav_bytes())[0], 201)
+    def test_http_cancellation_waits_for_worker_without_publishing(self):
+        self.processing_gate = threading.Event()
+        _, body = self.request('POST', '/v1/sessions', {})
+        route = '/v1/sessions/' + json.loads(body)['session_id']
+        _, body = self.request('POST', route + '/jobs', {})
+        jid = json.loads(body)['job_id']; self.assertTrue(self.processing_started.wait(1))
+        self.assertEqual(self.request('POST', '/v1/jobs/' + jid + '/cancel', {})[0], 202)
+        self.processing_gate.set()
+        for _ in range(100):
+            _, job = self.request('GET', '/v1/jobs/' + jid)
+            if json.loads(job)['status'] == 'cancelled': break
+            time.sleep(.01)
+        self.assertEqual(json.loads(job)['status'], 'cancelled')
+        self.assertEqual(self.request('GET', route + '/result')[0], 404)
     def test_errors_and_host_guard(self):
         for raw in (b'{broken', b'{"sound_speed_m_s":NaN}', b'[]'):
             code, _ = self.request('POST', '/v1/sessions', raw)

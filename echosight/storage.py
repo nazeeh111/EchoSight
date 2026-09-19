@@ -110,7 +110,7 @@ def load_session(path):
 
 def _read_wav(path):
     try:
-        with wave.open(str(path), 'rb') as f:
+        with wave.open(path if hasattr(path, 'read') else str(path), 'rb') as f:
             channels, width, rate, frames = f.getnchannels(), f.getsampwidth(), f.getframerate(), f.getnframes()
             if channels != 1 or width not in (1, 2, 3, 4) or f.getcomptype() != 'NONE':
                 raise ValueError('recording must be uncompressed mono PCM WAV (8/16/24/32 bit)')
@@ -141,9 +141,12 @@ def _csv_column(raw, field):
         names = [name.strip() for name in header]
         if field not in names: return None
         if names.count(field) != 1: raise ValueError('duplicate CSV field')
-        index = names.index(field); values = array('d')
+        index = names.index(field); values = array('d'); sample_gap = False
         for row in rows:
-            if not row or all(not item.strip() for item in row): continue
+            if not row or all(not item.strip() for item in row):
+                if field == 'sample_value' and values: sample_gap = True
+                continue
+            if sample_gap: raise ValueError('explicit sample gap in phyphox CSV; acquisition must be continuous')
             if len(row) != len(header): raise ValueError('ragged CSV row')
             value = float(row[index])
             if not math.isfinite(value): raise ValueError('nonfinite CSV sample')
@@ -189,26 +192,50 @@ def _read_phyphox(path):
         raise ValueError('invalid phyphox ZIP') from exc
 
 
-def _is_zip(path):
-    with open(path, 'rb') as stream: return stream.read(4) == b'PK\x03\x04'
+def _recording_bytes(path, limit=MAX_RECORDING_BYTES):
+    """Capture one bounded byte snapshot; reject a file changed during reading."""
+    path = Path(path)
+    if not path.is_file(): raise ValueError('recording missing or not a regular file')
+    with path.open('rb') as stream:
+        before = os.fstat(stream.fileno())
+        if before.st_size > limit: raise ValueError('recording exceeds remaining byte limit')
+        raw = stream.read(limit + 1)
+        after = os.fstat(stream.fileno())
+    if len(raw) > limit: raise ValueError('recording exceeds remaining byte limit')
+    if (before.st_size, before.st_mtime_ns, before.st_ctime_ns) != (after.st_size, after.st_mtime_ns, after.st_ctime_ns):
+        raise ValueError('recording changed during reading; finish acquisition before importing')
+    if len(raw) != before.st_size: raise ValueError('incomplete recording read')
+    return raw
+
+
+def _decode_recording_bytes(raw):
+    stream = io.BytesIO(raw)
+    return _read_phyphox(stream) if raw.startswith(b'PK\x03\x04') else _read_wav(stream)
+
+
+def read_recording_snapshot(path):
+    """Return samples, nominal rate and SHA-256 derived from the exact same bytes."""
+    raw = _recording_bytes(path)
+    samples, rate = _decode_recording_bytes(raw)
+    return samples, rate, hashlib.sha256(raw).hexdigest()
 
 
 def read_recording(path):
-    path = Path(path)
-    if not path.is_file() or path.stat().st_size > MAX_RECORDING_BYTES: raise ValueError('recording missing or exceeds 64 MiB')
-    return _read_phyphox(path) if _is_zip(path) else _read_wav(path)
+    samples, rate, _ = read_recording_snapshot(path)
+    return samples, rate
 
 
-def import_recording(path, destination_dir):
-    """Validate before storing; address original bytes by their content hash."""
-    path = Path(path)
-    samples, rate = read_recording(path)
-    raw = path.read_bytes()
+def import_recording(path, destination_dir, *, max_bytes=MAX_RECORDING_BYTES):
+    """Decode, hash and preserve a single bounded immutable source snapshot."""
+    raw = _recording_bytes(path, min(max_bytes, MAX_RECORDING_BYTES))
+    samples, rate = _decode_recording_bytes(raw)
     sha = hashlib.sha256(raw).hexdigest()
     dest = Path(destination_dir); dest.mkdir(parents=True, exist_ok=True)
-    is_zip = _is_zip(path)
+    is_zip = raw.startswith(b'PK\x03\x04')
     target = dest / (sha + ('.zip' if is_zip else '.wav'))
-    if not target.exists(): _atomic_bytes(target, raw)
+    if target.exists():
+        if _recording_bytes(target) != raw: raise ValueError('stored recording is corrupted; original input retained at source')
+    else: _atomic_bytes(target, raw)
     return {'recording_path': str(target.resolve()), 'sha256': sha, 'sample_rate_hz': rate,
             'sample_count': len(samples), 'duration_s': len(samples) / rate,
             'byte_count': len(raw), 'format': 'phyphox_csv_zip' if is_zip else 'pcm_wav', 'channels': 1,
@@ -319,7 +346,12 @@ class SessionStore:
         with self._lock:
             d = self._session_dir(s['session_id'])
             if d.exists(): raise FileExistsError('session already exists')
-            d.mkdir(); _write_json(d / 'session.json', s)
+            stage = Path(tempfile.mkdtemp(prefix='.create-', dir=self.root / 'sessions'))
+            try:
+                _write_json(stage / 'session.json', s)
+                os.replace(stage, d)
+            finally:
+                if stage.exists(): shutil.rmtree(stage)
         return copy.deepcopy(s)
     def get_session(self, sid):
         with self._lock: s = self._raw_session(sid)
@@ -340,13 +372,51 @@ class SessionStore:
             s = self._raw_session(sid)
             if len(s['captures']) >= MAX_CAPTURES: raise ValueError('capture limit reached')
             if any(c['capture_id'] == cap['capture_id'] for c in s['captures']): raise FileExistsError('capture already exists')
-            if sum(c.get('byte_count', 0) for c in s['captures']) + Path(path).stat().st_size > MAX_ARCHIVE_BYTES:
-                raise ValueError('session recording byte limit reached')
-            meta = import_recording(path, self._session_dir(sid) / 'raw')
+            remaining = MAX_ARCHIVE_BYTES - sum(c.get('byte_count', 0) for c in s['captures'])
+            meta = import_recording(path, self._session_dir(sid) / 'raw', max_bytes=remaining)
             cap.update(meta); cap['recording_path'] = str(Path(meta['recording_path']).relative_to(self._session_dir(sid)))
             s['captures'].append(cap); s = validate_session(s); s['revision'] += 1
             _write_json(self._session_dir(sid) / 'session.json', s)
             return copy.deepcopy(s['captures'][-1])
+    def update_calibration(self, sid, changes):
+        """Revise supplied calibration without replacing immutable raw acquisitions.
+
+        expected_revision prevents concurrent clients from silently overwriting
+        a newer survey. Active processing retains its prior input snapshot.
+        """
+        if not isinstance(changes, dict) or set(changes) - {'expected_revision', 'calibration', 'captures'}:
+            raise ValueError('unsupported calibration update fields')
+        expected = changes.get('expected_revision')
+        if isinstance(expected, bool) or not isinstance(expected, int) or expected < 0:
+            raise ValueError('expected_revision must be a nonnegative integer')
+        calibration = changes.get('calibration', {})
+        allowed = {'source_position_m', 'source_position_std_m', 'sound_speed_m_s',
+            'sound_speed_std_m_s', 'source_clock_scale', 'source_clock_std_ppm', 'probe', 'coordinate_frame_id'}
+        if not isinstance(calibration, dict) or set(calibration) - allowed:
+            raise ValueError('unsupported calibration fields')
+        capture_changes = changes.get('captures', [])
+        if not isinstance(capture_changes, list) or len(capture_changes) > MAX_CAPTURES:
+            raise ValueError('capture calibration changes must be a bounded list')
+        with self._lock:
+            before = self._raw_session(sid)
+            if before['revision'] != expected: raise FileExistsError('session revision changed; reload before updating calibration')
+            updated = copy.deepcopy(before); updated.update(copy.deepcopy(calibration))
+            captures = {c['capture_id']: c for c in updated['captures']}
+            seen = set()
+            for change in capture_changes:
+                if not isinstance(change, dict) or set(change) - {'capture_id', 'receiver_position_m', 'receiver_position_std_m'}:
+                    raise ValueError('only existing capture poses and pose uncertainty can be revised')
+                cid = _id(change.get('capture_id'))
+                if cid not in captures: raise ValueError('capture not found')
+                if cid in seen: raise ValueError('duplicate capture calibration update')
+                seen.add(cid); captures[cid].update(copy.deepcopy(change))
+            updated = validate_session(updated)
+            if updated == before: return copy.deepcopy(updated)
+            updated['revision'] = before['revision'] + 1
+            _write_json(self._session_dir(sid) / 'revisions' / f"revision_{before['revision']}.json", before)
+            _write_json(self._session_dir(sid) / 'session.json', updated)
+            return copy.deepcopy(updated)
+
     def start_job(self, sid, processor):
         with self._lock:
             if self._closed: raise RuntimeError('store is closed')
@@ -383,6 +453,9 @@ class SessionStore:
             result['computation_origin'] = 'local_processing'
             result['recording_manifest'] = [{'capture_id': c['capture_id'], 'sha256': c['sha256'], 'provenance': c['provenance']} for c in session['captures']]
             with self._lock:
+                if event.is_set():
+                    self._update_job(jid, status='cancelled')
+                    return
                 _write_json(self.root / 'jobs' / (jid + '.result.json'), result, MAX_RESULT_BYTES)
                 _write_json(self._session_dir(session['session_id']) / 'result.json', result, MAX_RESULT_BYTES)
                 self._update_job(jid, status='completed', progress=1.)
@@ -398,7 +471,7 @@ class SessionStore:
     def cancel_job(self, jid):
         with self._lock:
             job = self.get_job(jid)
-            if jid in self._events:
+            if jid in self._events and job['status'] not in TERMINAL:
                 self._events[jid].set(); self._update_job(jid, cancellation_requested=True)
             return self.get_job(jid)
     def get_result(self, sid):

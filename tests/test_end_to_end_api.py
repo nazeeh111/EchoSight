@@ -31,12 +31,29 @@ class EndToEndAPITests(unittest.TestCase):
                     return data if raw else json.loads(data)
 
             try:
-                created = request("POST", "/v1/sessions", dict(session, captures=[]))
+                created = request("POST", "/v1/sessions", dict(session, captures=[], source_position_m=None))
                 route = f"/v1/sessions/{created['session_id']}"
                 for capture in session["captures"]:
                     metadata = {k:capture[k] for k in ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance")}
                     request("POST", route + "/recordings", (path.parent / capture["recording_path"]).read_bytes(),
                             {"X-Capture-Metadata":json.dumps(metadata)})
+                # Raw input is reusable when missing supplied calibration is corrected.
+                first_job = request("POST", route + "/jobs", {})
+                deadline = time.monotonic() + 5
+                while time.monotonic() < deadline:
+                    first_job = request("GET", f"/v1/jobs/{first_job['job_id']}")
+                    if first_job["status"] in {"completed", "failed"}: break
+                    time.sleep(.01)
+                self.assertEqual(first_job["status"], "completed")
+                before = request("GET", route + "/result")
+                self.assertEqual(before["status"], "no_result")
+                self.assertIn("missing_calibration", str(before["diagnostics"]))
+                current_session = request("GET", route)
+                patched = request("PATCH", route, {"expected_revision": current_session["revision"],
+                    "calibration": {"source_position_m": session["source_position_m"]}})
+                self.assertEqual([c["sha256"] for c in patched["captures"]],
+                                 [c["sha256"] for c in current_session["captures"]])
+                self.assertTrue(request("GET", route + "/result")["stale"])
                 job = request("POST", route + "/jobs", {})
                 end = time.monotonic() + 20
                 while time.monotonic() < end:

@@ -34,6 +34,67 @@ class StorageTests(unittest.TestCase):
         y, fs = read_recording(meta['recording_path'])
         self.assertEqual(fs, 48000); self.assertEqual(len(y), 300)
         self.assertEqual(y[2], -1.0)
+    def test_import_uses_same_bytes_for_decode_hash_and_preservation(self):
+        from unittest.mock import patch
+        import echosight.storage as storage
+        original = self.wav.read_bytes()
+        decode = storage._read_wav
+        def mutate_source_after_decode(source):
+            decoded = decode(source)
+            changed = bytearray(original)
+            changed[24:28] = (44100).to_bytes(4, 'little')
+            self.wav.write_bytes(changed)
+            return decoded
+        with patch('echosight.storage._read_wav', side_effect=mutate_source_after_decode):
+            meta = import_recording(self.wav, self.root / 'raw')
+        self.assertEqual(Path(meta['recording_path']).read_bytes(), original)
+        _, actual_rate = read_recording(meta['recording_path'])
+        self.assertEqual(meta['sample_rate_hz'], actual_rate)
+    def test_cancel_before_publication_wins_over_completed_result(self):
+        import threading
+        from unittest.mock import patch
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            ready = threading.Event(); release = threading.Event()
+            class InterceptResult(dict):
+                def keys(self):
+                    ready.set()
+                    release.wait(2)
+                    return super().keys()
+                def __iter__(self): return super().__iter__()
+            def process(session, **kwargs):
+                return InterceptResult(status='no_result')
+            jid = store.start_job(sid, process)['job_id']
+            self.assertTrue(ready.wait(2))
+            store.cancel_job(jid)
+            release.set()
+            for _ in range(100):
+                if store.get_job(jid)['status'] in ('cancelled', 'completed'): break
+                time.sleep(.01)
+            self.assertEqual(store.get_job(jid)['status'], 'cancelled')
+            with self.assertRaises(KeyError): store.get_result(sid)
+    def test_pcm_widths_and_rates_preserve_signed_samples(self):
+        for width, raw, expected in (
+            (1, bytes([0, 128, 255]), [-1., 0., 127/128]),
+            (2, b'\x00\x80\x00\x00\xff\x7f', [-1., 0., 32767/32768]),
+            (3, b'\x00\x00\x80\x00\x00\x00\xff\xff\x7f', [-1., 0., 8388607/8388608]),
+            (4, b'\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\xff\x7f', [-1., 0., 2147483647/2147483648])):
+            for rate in (8000, 44100, 48000, 96000, 192000):
+                with self.subTest(width=width, rate=rate):
+                    out = io.BytesIO()
+                    with wave.open(out, 'wb') as stream:
+                        stream.setnchannels(1); stream.setsampwidth(width); stream.setframerate(rate); stream.writeframes(raw)
+                    self.wav.write_bytes(out.getvalue())
+                    meta = import_recording(self.wav, self.root / 'raw')
+                    values, actual_rate = read_recording(meta['recording_path'])
+                    self.assertEqual(actual_rate, rate); self.assertEqual(values.tolist(), expected)
+                    self.assertEqual(Path(meta['recording_path']).read_bytes(), out.getvalue())
+    def test_failed_session_creation_does_not_reserve_identifier(self):
+        from unittest.mock import patch
+        with SessionStore(self.root / 'store') as store:
+            with patch('echosight.storage._write_json', side_effect=OSError('interrupted write')):
+                with self.assertRaises(OSError): store.create_session({'session_id': 'retryable'})
+            self.assertEqual(store.create_session({'session_id': 'retryable'})['session_id'], 'retryable')
     def test_phyphox_zip_preserves_decimal_values_and_source(self):
         path = self.root / 'phone.zip'
         with zipfile.ZipFile(path, 'w') as z:
@@ -45,6 +106,32 @@ class StorageTests(unittest.TestCase):
         self.assertEqual(y[0], 0.123456789012345); self.assertEqual(fs, 48000)
         self.assertEqual(meta['format'], 'phyphox_csv_zip')
         self.assertIn('sample_grid_unverified', meta['diagnostics'])
+    def test_phyphox_never_closes_an_explicit_sample_gap(self):
+        path = self.root / 'gap.zip'
+        with zipfile.ZipFile(path, 'w') as z:
+            z.writestr('Audio samples.csv', 'sample_value\n0.1\n\n0.2\n')
+            z.writestr('Recording rate.csv', 'reported_rate_Hz\n48000\n')
+        with self.assertRaisesRegex(ValueError, 'sample gap'):
+            import_recording(path, self.root / 'raw')
+    def test_calibration_revision_preserves_raw_and_prior_input(self):
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            cap = store.add_recording(sid, self.wav, {'capture_id': 'phone'})
+            before = store.public_session(sid)
+            changed = store.update_calibration(sid, {'expected_revision': before['revision'],
+                'calibration': {'source_position_m': [0, 0, 1], 'sound_speed_m_s': 344.},
+                'captures': [{'capture_id': 'phone', 'receiver_position_m': [1, 1, 2]}]})
+            self.assertEqual(changed['revision'], before['revision'] + 1)
+            self.assertEqual(changed['captures'][0]['sha256'], cap['sha256'])
+            self.assertEqual(changed['captures'][0]['receiver_position_m'], [1, 1, 2])
+            self.assertEqual(Path(store.get_session(sid)['captures'][0]['recording_path']).read_bytes(), wav_bytes())
+            with self.assertRaises(FileExistsError):
+                store.update_calibration(sid, {'expected_revision': before['revision'], 'calibration': {'sound_speed_m_s': 345.}})
+            with self.assertRaises(ValueError):
+                store.update_calibration(sid, {'expected_revision': changed['revision'], 'captures': [{'capture_id': 'phone', 'sha256': '0' * 64}]})
+            self.assertEqual(store.public_session(sid), changed)
+            saved = self.root / 'store' / 'sessions' / sid / 'revisions' / f"revision_{before['revision']}.json"
+            self.assertEqual(json.loads(saved.read_text()), before)
     def test_phyphox_rejects_inconsistent_rate_and_nonfinite(self):
         for values, rates in [('0\nnan\n', '48000\n'), ('0\n1\n', '48000\n44100\n')]:
             path = self.root / 'phone.zip'

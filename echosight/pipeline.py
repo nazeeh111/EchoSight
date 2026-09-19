@@ -50,7 +50,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     progress = progress or (lambda fraction, message="": None)
     if cancel():
         return _empty(session if isinstance(session, dict) else {}, "cancelled", [])
-    from .storage import load_session, validate_session, read_recording
+    from .storage import load_session, validate_session, read_recording_snapshot
     from .signals import process_recording
     from .inference import infer_scene, infer_baseline
 
@@ -81,8 +81,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         capture_id = capture["capture_id"]
         try:
             path = Path(capture["recording_path"])
-            samples, rate = read_recording(path)
-            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            samples, rate, digest = read_recording_snapshot(path)
             if capture.get("sha256") is not None and digest != capture["sha256"]:
                 raise ValueError("recording checksum differs from its imported manifest")
             observation = process_recording(samples, rate, session["probe"], capture_id,

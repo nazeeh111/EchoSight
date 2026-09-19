@@ -1,0 +1,41 @@
+test_calibration_revision_preserves_raw_and_prior_input (test_storage.StorageTests.test_calibration_revision_preserves_raw_and_prior_input) ... ok
+test_cancel_before_publication_wins_over_completed_result (test_storage.StorageTests.test_cancel_before_publication_wins_over_completed_result) ... ok
+test_checksum_failure_is_atomic (test_storage.StorageTests.test_checksum_failure_is_atomic) ... ok
+test_completed_job_is_immutable_and_result_can_be_stale (test_storage.StorageTests.test_completed_job_is_immutable_and_result_can_be_stale) ... ok
+test_coordinate_frame_identity_is_a_bounded_string (test_storage.StorageTests.test_coordinate_frame_identity_is_a_bounded_string) ... ok
+test_export_replay_preserves_raw_and_hashes (test_storage.StorageTests.test_export_replay_preserves_raw_and_hashes) ... ok
+test_failed_session_creation_does_not_reserve_identifier (test_storage.StorageTests.test_failed_session_creation_does_not_reserve_identifier) ... ok
+test_foreign_archived_geometry_is_quarantined_until_recomputed (test_storage.StorageTests.test_foreign_archived_geometry_is_quarantined_until_recomputed) ... ok
+test_import_checks_revision_and_recomputes_audio_metadata (test_storage.StorageTests.test_import_checks_revision_and_recomputes_audio_metadata) ... ok
+test_import_uses_same_bytes_for_decode_hash_and_preservation (test_storage.StorageTests.test_import_uses_same_bytes_for_decode_hash_and_preservation) ... ok
+test_invalid_and_nonfinite (test_storage.StorageTests.test_invalid_and_nonfinite) ... ok
+test_jobs_cancel_and_recover (test_storage.StorageTests.test_jobs_cancel_and_recover) ... ok
+test_lossless_and_decode (test_storage.StorageTests.test_lossless_and_decode) ... ok
+test_maximum_response_shape_exports_and_reloads (test_storage.StorageTests.test_maximum_response_shape_exports_and_reloads) ... ok
+test_only_one_process_owns_store (test_storage.StorageTests.test_only_one_process_owns_store) ... ok
+test_oversized_result_archive_rejected_before_publication (test_storage.StorageTests.test_oversized_result_archive_rejected_before_publication) ... ok
+test_path_injection_and_zip_traversal (test_storage.StorageTests.test_path_injection_and_zip_traversal) ... ok
+test_pcm_widths_and_rates_preserve_signed_samples (test_storage.StorageTests.test_pcm_widths_and_rates_preserve_signed_samples) ... ok
+test_phyphox_never_closes_an_explicit_sample_gap (test_storage.StorageTests.test_phyphox_never_closes_an_explicit_sample_gap) ... ok
+test_phyphox_rejects_inconsistent_rate_and_nonfinite (test_storage.StorageTests.test_phyphox_rejects_inconsistent_rate_and_nonfinite) ... ok
+test_phyphox_zip_preserves_decimal_values_and_source (test_storage.StorageTests.test_phyphox_zip_preserves_decimal_values_and_source) ... ok
+test_result_budget_does_not_expand_raw_session_budget (test_storage.StorageTests.test_result_budget_does_not_expand_raw_session_budget) ... ok
+test_compare_accepts_two_results_above_session_limit (test_api.APITests.test_compare_accepts_two_results_above_session_limit) ... ok
+test_compare_endpoint_and_size_limit (test_api.APITests.test_compare_endpoint_and_size_limit) ... ok
+test_concurrent_upload_and_calibration_do_not_change_running_input (test_api.APITests.test_concurrent_upload_and_calibration_do_not_change_running_input) ... ok
+test_errors_and_host_guard (test_api.APITests.test_errors_and_host_guard) ... ok
+test_http_cancellation_waits_for_worker_without_publishing (test_api.APITests.test_http_cancellation_waits_for_worker_without_publishing) ... ok
+test_http_recording_to_result_and_export (test_api.APITests.test_http_recording_to_result_and_export) ... ok
+test_interrupted_upload_does_not_publish_capture (test_api.APITests.test_interrupted_upload_does_not_publish_capture) ... ok
+test_revision_update_uses_optimistic_concurrency (test_api.APITests.test_revision_update_uses_optimistic_concurrency) ... ok
+test_real_recordings_through_http_and_replayed_processing (test_end_to_end_api.EndToEndAPITests.test_real_recordings_through_http_and_replayed_processing) ... ok
+test_cancelled_before_reading_missing_recordings (test_pipeline.PipelineTests.test_cancelled_before_reading_missing_recordings) ... ok
+test_declared_recording_checksum_mismatch_is_rejected (test_pipeline.PipelineTests.test_declared_recording_checksum_mismatch_is_rejected) ... ok
+test_missing_pose_and_probe_returns_calibration_diagnostic (test_pipeline.PipelineTests.test_missing_pose_and_probe_returns_calibration_diagnostic) ... ok
+test_recordings_recover_height_without_truth_and_reload_exactly (test_pipeline.PipelineTests.test_recordings_recover_height_without_truth_and_reload_exactly) ... ok
+test_result_serialization_rejects_nonfinite (test_pipeline.PipelineTests.test_result_serialization_rejects_nonfinite) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 10.820s
+
+OK

@@ -23,3 +23,13 @@ Prioritized work:
 6. Integrate/review/reproduce and push coherent verified checkpoints continuously.
 
 Next coordinator action: finish coverage matrix against specialist evidence; adopt immutable read snapshot into pipeline after backend interface lands; develop controlled-comparison contract after physical priorities are grounded. Preserve runnable baseline and all failure reports. Do not report completion while these tractable gaps remain.
+
+## Audit milestone in progress
+
+Published coverage/evidence checkpoint: `6f50be0` (baseline remains1c77336). Backend fixes now passed36 targeted storage/API/pipeline tests: immutable raw snapshot, cancellation-publication lock, CSV sample-gap rejection, failed creation rollback and revision-checked calibration PATCH. Clock retry independently improved development15/27→27/27 with0/30invalid controls accepted; its frozen suites preserved prior counts. Inference reproduced coherent double-bounce phantom planes; competing explanations/joint calibrated source-speed covariance are being integrated.
+
+Correction: baseline20/25 external acceptance at defaultspacing included one difficultsource5 channel with5.58ms model discrepancy; only1s spacing rejected allfive. Prior blanketstatement was wrong. `docs/SIGNAL_MODEL.md` and `docs/EVALUATION.md` now distinguish channel outcomes.
+
+Evaluation retrieved a bounded8.46MB FLAIR subset (24 measuredRIR,4982 independentlaserpoints,CC-BY4.0). New harder13case criteria and measuredspatialcriteria frozen before execution; live-treeexploration fails multiple recoverygates, so immutablebaseline comparison runs next. No measuredspatialaccuracy established.
+
+Coordinator sourcecalibration experiment: independentlysurveyed referenceplane,16training+4heldout rawsynthetic recordings; effective sourceposition/combinedc-kappa fit reduces heldoutRMS247us→0.91us. Newcalibration.py is EXPERIMENTAL/uncommitted, needs malformed/degenerate/wrongmodel tests and correlatedcovariance integration before any usableclaim. Knownreferenceplane is suppliedcalibration, never inferredroomtruth.

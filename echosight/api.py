@@ -110,6 +110,7 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
             if len(p) >= 3 and p[:2] == ['v1', 'sessions']:
                 sid = p[2]
                 if len(p) == 3 and method == 'GET': return self._reply(200, store.public_session(sid))
+                if len(p) == 3 and method == 'PATCH': return self._reply(200, store.update_calibration(sid, self._json_body()))
                 if len(p) == 4:
                     if p[3] == 'recordings' and method == 'POST':
                         metadata_raw = self.headers.get('X-Capture-Metadata', '{}')
@@ -144,6 +145,7 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
             except Exception: self._reply(500, {'error': {'code': 'internal_error', 'message': 'Unexpected server error'}})
         do_GET = _handle
         do_POST = _handle
+        do_PATCH = _handle
 
     try: server = _Server((host, port), Handler)
     except BaseException: store.close(); raise
