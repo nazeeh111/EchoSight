@@ -1,0 +1,2150 @@
+{
+  "kind": "development_equal_waveforms_50us_matching",
+  "baseline_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "rows": [
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999284757655491
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.152423445091344e-07
+          ],
+          "runtime_s": 0.006552833001478575
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000617966355,
+            0.012149997478363176
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            6.179663551708625e-10,
+            2.521636824695528e-09
+          ],
+          "runtime_s": 0.008524500000930857
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199861898406472
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.3810159352808243e-06
+          ],
+          "runtime_s": 0.005299042000842746
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000001109183638,
+            0.012149998782251068
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.1091836372989494e-09,
+            1.2177489329412428e-09
+          ],
+          "runtime_s": 0.008158249998814426
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012150739308973731
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.393089737298825e-07
+          ],
+          "runtime_s": 0.005109915997309145
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012152446826430845
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.446826430843596e-06
+          ],
+          "runtime_s": 0.0081965420031338
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000770442891148
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.704428911479988e-07
+          ],
+          "runtime_s": 0.005089958001917694
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.01199999997817579
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.182421084129249e-11
+          ],
+          "runtime_s": 0.006331374999717809
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012001602727106956
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.602727106956095e-06
+          ],
+          "runtime_s": 0.005155375001777429
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.0119999999569629
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.3037099925480327e-11
+          ],
+          "runtime_s": 0.00620954100304516
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012146529089666345
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.4709103336558883e-06
+          ],
+          "runtime_s": 0.005081916999188252
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012145832543304957
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.1674566950439945e-06
+          ],
+          "runtime_s": 0.006807792000472546
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999806907581522
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.9309241847814684e-07
+          ],
+          "runtime_s": 0.005270041998301167
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999945319596,
+            0.01220833223322224
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.4680404301676866e-11,
+            8.332233222239915e-06
+          ],
+          "runtime_s": 0.007063042001391295
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999601426903586
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.985730964144868e-07
+          ],
+          "runtime_s": 0.005235666001681238
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999796974928,
+            0.012208332232265154
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.0302507244829293e-10,
+            8.332232265153075e-06
+          ],
+          "runtime_s": 0.006656875004409812
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999382328336444
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.17671663556002e-07
+          ],
+          "runtime_s": 0.005235041004198138
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999644568552,
+            0.012208332231326821
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.5543144816241323e-10,
+            8.33223132682033e-06
+          ],
+          "runtime_s": 0.006464416001108475
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000181796586266
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.817965862658394e-07
+          ],
+          "runtime_s": 0.004973416005668696
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000054880972,
+            0.012208332234890491
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.488097129524583e-11,
+            8.332234890490522e-06
+          ],
+          "runtime_s": 0.006541458998981398
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000353255787691
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.532557876911868e-07
+          ],
+          "runtime_s": 0.005178375002287794
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000001145740997,
+            0.012199997446383726
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.145740996869038e-09,
+            2.5536162750333657e-09
+          ],
+          "runtime_s": 0.00952066700119758
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000515236404446
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.152364044459096e-07
+          ],
+          "runtime_s": 0.004832749997149222
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000001556886662,
+            0.012199998345049631
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5568866612580834e-09,
+            1.6549503694535117e-09
+          ],
+          "runtime_s": 0.008252333995187655
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000395003047878
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.950030478781785e-07
+          ],
+          "runtime_s": 0.005208750000747386
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000001035797,
+            0.012250000001035795
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0357964486118476e-12,
+            1.0357947138883716e-12
+          ],
+          "runtime_s": 0.006368707996443845
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200078932809388,
+            0.012371330952776132
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.893280938794933e-07
+          ],
+          "runtime_s": 0.0053451250059879385
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.01200000000193238,
+            0.01225000000193238
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.9323796035530805e-12,
+            1.9323796035530805e-12
+          ],
+          "runtime_s": 0.006581250003364403
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011878618778151596,
+            0.012249177872404744
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            8.221275952565582e-07
+          ],
+          "runtime_s": 0.005078916001366451
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000002829149,
+            0.012250000628922486
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.829148373906243e-12,
+            6.289224852712438e-10
+          ],
+          "runtime_s": 0.006187667000631336
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999604322400067
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.95677599933017e-07
+          ],
+          "runtime_s": 0.005017666997446213
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999242249,
+            0.012249999999242249
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.57751500435333e-13,
+            7.57751500435333e-13
+          ],
+          "runtime_s": 0.00617387500096811
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999207963347283,
+            0.01237401341548514
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.920366527167794e-07
+          ],
+          "runtime_s": 0.004795542001374997
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000081021093,
+            0.012249999998091081
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.102109261276524e-11,
+            1.90891920326397e-12
+          ],
+          "runtime_s": 0.006149125001684297
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011876080571117605,
+            0.012250825067721955
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            8.250677219542174e-07
+          ],
+          "runtime_s": 0.0048322080037905835
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000121474173,
+            0.012249999997295938
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.2147417273455918e-10,
+            2.7040626682239832e-12
+          ],
+          "runtime_s": 0.006250792001083028
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000015834534626,
+            0.012353792734615426
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.583453462621065e-08
+          ],
+          "runtime_s": 0.005248875000688713
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000001307564,
+            0.012291667646854769
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.3075634325288021e-12,
+            8.332353145231591e-06
+          ],
+          "runtime_s": 0.006226167002751026
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000031031276556,
+            0.012354674480342744
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.1031276555293363e-08
+          ],
+          "runtime_s": 0.005115874999319203
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000002490517,
+            0.012291667647066162
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.4905164736077623e-12,
+            8.332352933838189e-06
+          ],
+          "runtime_s": 0.006667374997050501
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200004562953013,
+            0.012354991414675179
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            4.5629530130014695e-08
+          ],
+          "runtime_s": 0.005187333998037502
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000003661748,
+            0.012291667647093843
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.661747988159547e-12,
+            8.332352906157206e-06
+          ],
+          "runtime_s": 0.007062167002004571
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999983492060922
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.6507939078203027e-08
+          ],
+          "runtime_s": 0.005272458998661023
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999998904831,
+            0.012291667648087505
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0951690943006298e-12,
+            8.332351912495456e-06
+          ],
+          "runtime_s": 0.006513250002171844
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999966261190593,
+            0.012356782455835939
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.373880940772678e-08
+          ],
+          "runtime_s": 0.0053983749967301264
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999997684864,
+            0.012291667647875369
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.315135930186507e-12,
+            8.33235212463132e-06
+          ],
+          "runtime_s": 0.006514374996186234
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199994826080194,
+            0.01235639380964065
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            5.173919805957772e-08
+          ],
+          "runtime_s": 0.004852375001064502
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999996452227,
+            0.012291667647847435
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.547773186340919e-12,
+            8.332352152565572e-06
+          ],
+          "runtime_s": 0.0064942919998429716
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000142568859633,
+            0.012397399608398378
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.425688596328606e-07,
+            2.6003916016210937e-06
+          ],
+          "runtime_s": 0.005094332998851314
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000000122324,
+            0.012395833333455657
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.2232402590850455e-13,
+            4.166666544342182e-06
+          ],
+          "runtime_s": 0.006172166999022011
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200028798207888,
+            0.012398117268581279
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.879820788798809e-07,
+            1.882731418720654e-06
+          ],
+          "runtime_s": 0.005105791999085341
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000012376643,
+            0.012395833720639697
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.237664311315445e-11,
+            4.166279360302144e-06
+          ],
+          "runtime_s": 0.006409208006516565
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000436327467388,
+            0.012398347875221826
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.363274673877676e-07,
+            1.652124778173461e-06
+          ],
+          "runtime_s": 0.004956708995450754
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000018582445,
+            0.012395833720662731
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.8582444610837356e-11,
+            4.166279337268486e-06
+          ],
+          "runtime_s": 0.006441500001528766
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999860197928551,
+            0.012400053310114999
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.398020714488829e-07,
+            5.331011499951077e-08
+          ],
+          "runtime_s": 0.004809084006410558
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000174943569,
+            0.012395833721154761
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7494356831238012e-10,
+            4.166278845238458e-06
+          ],
+          "runtime_s": 0.006194666995725129
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999723077899205,
+            0.012399441316548116
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.769221007954681e-07,
+            5.586834518830908e-07
+          ],
+          "runtime_s": 0.005171000004338566
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000259667364,
+            0.012395833721028017
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.5966736399984924e-10,
+            4.166278971982559e-06
+          ],
+          "runtime_s": 0.006725125000230037
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999588565092966,
+            0.012399230228825622
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.1143490703450525e-07,
+            7.697711743772512e-07
+          ],
+          "runtime_s": 0.005331000000296626
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000057498312,
+            0.012399999679298387
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.749831166745878e-11,
+            3.2070161283537235e-10
+          ],
+          "runtime_s": 0.007082833006279543
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999824264389187,
+            0.012501101809374679
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7573561081341005e-07,
+            1.1018093746782698e-06
+          ],
+          "runtime_s": 0.0050442080028005876
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999053072,
+            0.012499999999279863
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            9.469282996610318e-13,
+            7.201374913057279e-13
+          ],
+          "runtime_s": 0.006361583000398241
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999648313023921,
+            0.012500549852779064
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.516869760793184e-07,
+            5.498527790633728e-07
+          ],
+          "runtime_s": 0.004577833999064751
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999997998726,
+            0.012499999998420438
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.0012741464014994e-12,
+            1.5795628693915376e-12
+          ],
+          "runtime_s": 0.005990582998492755
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199947214723649,
+            0.01250036633258893
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.278527635110136e-07,
+            3.6633258892852794e-07
+          ],
+          "runtime_s": 0.005165458998817485
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999997561243,
+            0.01250000512463779
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.4387575292550423e-12,
+            5.124637788775366e-09
+          ],
+          "runtime_s": 0.0064983330012182705
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200017552541936,
+            0.012498906534726373
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7552541935889066e-07,
+            1.093465273627539e-06
+          ],
+          "runtime_s": 0.005032000000937842
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000000998283,
+            0.012500000000998284
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            9.982830534438492e-13,
+            9.982830534438492e-13
+          ],
+          "runtime_s": 0.006177582996315323
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000350835859045,
+            0.01249945223374638
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.5083585904482906e-07,
+            5.477662536213651e-07
+          ],
+          "runtime_s": 0.0049289169983239844
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000001857513,
+            0.012500000001857513
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.8575124077768734e-12,
+            1.8575124077768734e-12
+          ],
+          "runtime_s": 0.006210708001162857
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200052593343431,
+            0.012499634595140715
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.259334343102329e-07,
+            3.654048592854203e-07
+          ],
+          "runtime_s": 0.00521620899962727
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000002716471,
+            0.012499994881178112
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.7164711452476453e-12,
+            5.118821888930314e-09
+          ],
+          "runtime_s": 0.006502791999082547
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999994717622208,
+            0.01300003314336639
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.282377792126258e-09,
+            3.314336638818305e-08
+          ],
+          "runtime_s": 0.005474792000313755
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999996437402,
+            0.013000000000063563
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.5625981331666168e-12,
+            6.356200288326619e-14
+          ],
+          "runtime_s": 0.006763000004866626
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999989426023516,
+            0.01300001653479343
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0573976484337666e-08,
+            1.6534793428543693e-08
+          ],
+          "runtime_s": 0.005091749997518491
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999992748162,
+            0.012999999999988002
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.251838018973444e-12,
+            1.1999082283331575e-14
+          ],
+          "runtime_s": 0.006296416999248322
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199998412691348,
+            0.013000011014849131
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5873086520526436e-08,
+            1.1014849130019932e-08
+          ],
+          "runtime_s": 0.00528900000063004
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999912456,
+            0.013000001379792809
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.754455493864555e-14,
+            1.3797928077874388e-09
+          ],
+          "runtime_s": 0.006290124998486135
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000005278348486,
+            0.012999967149631702
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.278348485723838e-09,
+            3.2850368298850685e-08
+          ],
+          "runtime_s": 0.005168834002688527
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.01200000000021455,
+            0.01300000000021455
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.145505995088115e-13,
+            2.1454886478533552e-13
+          ],
+          "runtime_s": 0.006516959001601208
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200001054750779,
+            0.012999983538973008
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0547507789046562e-08,
+            1.646102699287555e-08
+          ],
+          "runtime_s": 0.005184583002119325
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000000289904,
+            0.013000000000289905
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.8990351785829205e-13,
+            2.8990351785829205e-13
+          ],
+          "runtime_s": 0.006183750003401656
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200001580921898,
+            0.012999989018319325
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5809218979062623e-08,
+            1.0981680675925531e-08
+          ],
+          "runtime_s": 0.004927415997372009
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000000000365342,
+            0.013000000000365343
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.6534143765809546e-13,
+            3.6534143765809546e-13
+          ],
+          "runtime_s": 0.006075417004467454
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 3000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004095981668887448,
+            0.0008911027846152451,
+            0.011999999983245468,
+            0.012409598086755616
+          ],
+          "matched": 1,
+          "false": 3,
+          "missed": 0,
+          "errors_s": [
+            1.6754531789731075e-11
+          ],
+          "runtime_s": 0.00510279100126354
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.011999911412295486
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.858770451404541e-08
+          ],
+          "runtime_s": 0.006360542000038549
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 3000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004986833002476487
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.0050479589990573
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 4000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004050579250442728,
+            0.011588586621387151,
+            0.011999999969383357,
+            0.012405057631976144
+          ],
+          "matched": 1,
+          "false": 3,
+          "missed": 0,
+          "errors_s": [
+            3.061664290149313e-11
+          ],
+          "runtime_s": 0.005385292002756614
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012005407201040642
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.407201040641407e-06
+          ],
+          "runtime_s": 0.005542915998375975
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 4000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012118432040783783
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004969041998265311
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.0055931660026544705
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 6000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004007449338840979,
+            0.011999999965766448
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 0,
+          "errors_s": [
+            3.423355175724563e-11
+          ],
+          "runtime_s": 0.005192584001633804
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012000451772830597
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.5177283059666395e-07
+          ],
+          "runtime_s": 0.0057442089964752086
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 6000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012079584953642638
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.005314166999596637
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012083332573553542
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.0057087499953922816
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 10000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999999989063023
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0936977018483063e-11
+          ],
+          "runtime_s": 0.005186417001823429
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.01199954705105265
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.529489473509979e-07
+          ],
+          "runtime_s": 0.005890250002266839
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 10000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012045666837859449
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.566683785944825e-05
+          ],
+          "runtime_s": 0.004836957996303681
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [
+            0.012041666909963129
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.1666909963128385e-05
+          ],
+          "runtime_s": 0.005388624995248392
+        }
+      }
+    },
+    {
+      "kind": "direct_only",
+      "config": {},
+      "truth_for_evaluation_only": [],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0051759589987341315
+        },
+        "joint": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.005179625004529953
+        }
+      }
+    },
+    {
+      "kind": "noise",
+      "config": {},
+      "truth_for_evaluation_only": [],
+      "methods": {
+        "matched": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0034034170021186583
+        },
+        "joint": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0033274169982178137
+        }
+      }
+    }
+  ]
+}

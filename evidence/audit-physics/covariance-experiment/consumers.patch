@@ -1,0 +1,59 @@
+--- a/echosight/inference.py
++++ b/echosight/inference.py
+@@ -5,6 +5,7 @@
+ import numpy as np
+ from scipy.optimize import least_squares, linear_sum_assignment
+ from scipy.linalg import solve_triangular
++from .timing_bootstrap import validate as validate_timing_covariance
+ from .geometry import image_source, plane_from_image, excess_delay, reflection_point, support_mesh, sphere_intersections, reflection_path
+ 
+ MAX_CANDIDATES = 18
+@@ -81,6 +82,7 @@
+             for key,default in (('receiver_position_std_m',.01),('direct_std_s',1e-5)):
+                 std=float(o.get(key,default))
+                 if not np.isfinite(std) or std<0:raise ValueError()
++            validate_timing_covariance(o)
+             clock=o.get('clock',{});alpha=float(clock.get('alpha',1));astd=float(clock.get('alpha_std',0))
+             if not np.isfinite(alpha) or alpha<=0 or not np.isfinite(astd) or astd<0:raise ValueError()
+             if any(old['o']['capture_id']==o['capture_id'] for old in rows):raise ValueError()
+@@ -221,7 +223,7 @@
+     for a,(k,i,l) in enumerate(assignments):
+         q=qs[k];n,d=plane_from_image(s,q);u=(r[i]-s)/np.linalg.norm(r[i]-s);g=(r[i]-q)/np.linalg.norm(r[i]-q);A=np.eye(3)-2*np.outer(n,n)
+         mu=float(excess_delay(s,r[i],q,v));p=rows[i]['peaks'][l]
+-        residual.append(p['delay_s']-mu);cov[a,a]=max(float(p.get('delay_std_s',1e-5)),1e-6)**2
++        residual.append(p['delay_s']-mu);cov[a,a]=0 if validate_timing_covariance(rows[i]['o']) is not None else max(float(p.get('delay_std_s',1e-5)),1e-6)**2
+         source_grad.append((u-A@g)/v);receiver_grad.append((g-u)/v);scale_grad.append(-mu/v)
+         J[a,3*k:3*k+3]=-g/v
+     calibration_jacobian=np.column_stack((np.array(source_grad),np.array(scale_grad)))
+@@ -229,9 +231,16 @@
+     for a,(_,i,_) in enumerate(assignments):
+         for b,(_,j,_) in enumerate(assignments):
+             if i==j:
+-                cov[a,b]+=float(rows[i]['o'].get('direct_std_s',1e-5))**2
+-                clock=rows[i]['o'].get('clock',{});relative_slope_std=float(clock.get('alpha_std',0))/float(clock.get('alpha',1))
+-                cov[a,b]+=rows[i]['t'][assignments[a][2]]*rows[j]['t'][assignments[b][2]]*relative_slope_std**2
++                complete=validate_timing_covariance(rows[i]['o'])
++                if complete is None:
++                    cov[a,b]+=float(rows[i]['o'].get('direct_std_s',1e-5))**2
++                    clock=rows[i]['o'].get('clock',{});relative_slope_std=float(clock.get('alpha_std',0))/float(clock.get('alpha',1))
++                    cov[a,b]+=rows[i]['t'][assignments[a][2]]*rows[j]['t'][assignments[b][2]]*relative_slope_std**2
++                else:
++                    mapping,C=complete
++                    aid=rows[i]['peaks'][assignments[a][2]]['candidate_id']
++                    bid=rows[j]['peaks'][assignments[b][2]]['candidate_id']
++                    cov[a,b]+=C[mapping[aid],mapping[bid]]
+                 cov[a,b]+=float(rows[i]['o'].get('receiver_position_std_m',.01))**2*np.dot(receiver_grad[a],receiver_grad[b])
+     return np.array(residual),cov,J
+ 
+--- a/echosight/calibration.py
++++ b/echosight/calibration.py
+@@ -84,7 +84,8 @@
+          'clock_interpretation':'Only c/kappa is estimated. Physical sound speed and absolute source clock rate are not separately identifiable.',
+          'conditional_on':['stationary effective point source','correct isolated reference reflection','surveyed poses and reference plane','affine within-recording clocks','no path-dependent unmodeled delay']}
+     if failures:return out
+-    delay=np.asarray([c['delay_s'] for c in selected]);sigma=np.asarray([c['delay_std_s'] for c in selected])
++    from .timing_bootstrap import timing_variance
++    delay=np.asarray([c['delay_s'] for c in selected]);sigma=np.sqrt(np.asarray([timing_variance(observations[cid],c) for cid,c in zip(train+held,selected)]))
+     pose_std=np.asarray([captures[c].get('receiver_position_std_m',.01) for c in train+held])
+     axis=np.eye(3)[np.argmin(np.abs(normal))];u=np.cross(normal,axis);u/=np.linalg.norm(u);w=np.cross(normal,u)
+     def predict(theta, ref=np.zeros(3)):

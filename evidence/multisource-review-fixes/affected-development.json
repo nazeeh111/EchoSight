@@ -1,0 +1,231 @@
+[
+  {
+    "case": "higher_order_four_sources-1001",
+    "runtime_s": 4.1160008907318115,
+    "status": "partial",
+    "metrics": {
+      "predicted_count": 6,
+      "truth_count": 6,
+      "matched_count": 6,
+      "false_surfaces": 0,
+      "missed_surfaces": 0,
+      "horizontal_matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "matches": [
+        {
+          "predicted_id": "reflector-28ad9e2811b4ec58",
+          "truth_id": "wall-2-0",
+          "normal_error_deg": 0.11635882346665415,
+          "offset_error_m": 0.0021362055867770735,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-0241da4c436cf2e2",
+          "truth_id": "wall-2-1",
+          "normal_error_deg": 0.0551932071166436,
+          "offset_error_m": 0.004600661795579386,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-1551c9c29d9fc8d8",
+          "truth_id": "wall-1-1",
+          "normal_error_deg": 0.12177057928607238,
+          "offset_error_m": 0.007201689393780519,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-3b42821b526219ee",
+          "truth_id": "wall-1-0",
+          "normal_error_deg": 0.1074965473663033,
+          "offset_error_m": 0.0009951392359828226,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-1b489651adce7022",
+          "truth_id": "wall-0-1",
+          "normal_error_deg": 0.16792672959833493,
+          "offset_error_m": 0.0027147202629356215,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-9699863735932775",
+          "truth_id": "wall-0-0",
+          "normal_error_deg": 0.1961108185991961,
+          "offset_error_m": 0.009669403974642887,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        }
+      ]
+    },
+    "diagnostics": [
+      "joint_first_order_vs_second_order_parent_models"
+    ]
+  },
+  {
+    "case": "higher_order_four_sources-1003",
+    "runtime_s": 4.107668399810791,
+    "status": "partial",
+    "metrics": {
+      "predicted_count": 6,
+      "truth_count": 6,
+      "matched_count": 6,
+      "false_surfaces": 0,
+      "missed_surfaces": 0,
+      "horizontal_matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "matches": [
+        {
+          "predicted_id": "reflector-9326b4f8901312e5",
+          "truth_id": "wall-2-0",
+          "normal_error_deg": 0.13477942900874978,
+          "offset_error_m": 0.004758993979295023,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-2c13026a031779b6",
+          "truth_id": "wall-0-0",
+          "normal_error_deg": 0.035088248057720275,
+          "offset_error_m": 7.646077350176306e-05,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-51925080c783d287",
+          "truth_id": "wall-0-1",
+          "normal_error_deg": 0.4418177326252321,
+          "offset_error_m": 0.012048919105701827,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-2f4845f6730bfcc6",
+          "truth_id": "wall-1-1",
+          "normal_error_deg": 0.08063158858749928,
+          "offset_error_m": 0.0044833418780942935,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-28312be9c58d38e8",
+          "truth_id": "wall-2-1",
+          "normal_error_deg": 0.2911092947162503,
+          "offset_error_m": 0.009587752988985176,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-6beea72981eabf34",
+          "truth_id": "wall-1-0",
+          "normal_error_deg": 0.16848594186210233,
+          "offset_error_m": 0.005233455958146713,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        }
+      ]
+    },
+    "diagnostics": [
+      "joint_first_order_vs_second_order_parent_models"
+    ]
+  },
+  {
+    "case": "finite_panel_four_sources-1001",
+    "runtime_s": 1.1182808876037598,
+    "status": "partial",
+    "metrics": {
+      "predicted_count": 7,
+      "truth_count": 7,
+      "matched_count": 7,
+      "false_surfaces": 0,
+      "missed_surfaces": 0,
+      "horizontal_matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "matches": [
+        {
+          "predicted_id": "reflector-01e80f1cddffbddb",
+          "truth_id": "wall-2-1",
+          "normal_error_deg": 0.07901201657816553,
+          "offset_error_m": 0.006221533102733323,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-267a8b0c43b92ceb",
+          "truth_id": "wall-2-0",
+          "normal_error_deg": 0.04532138622283501,
+          "offset_error_m": 0.0006184299029097229,
+          "horizontal": true,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-6899ab24ce4cb482",
+          "truth_id": "wall-1-1",
+          "normal_error_deg": 0.14270969303999798,
+          "offset_error_m": 0.007559658268073477,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-d90f5ad731904d44",
+          "truth_id": "wall-0-1",
+          "normal_error_deg": 0.11967047031402343,
+          "offset_error_m": 0.005364661479033472,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-b804a0d7b5726aa6",
+          "truth_id": "wall-1-0",
+          "normal_error_deg": 0.145232503837843,
+          "offset_error_m": 0.00013798234258155517,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-27bd7ca22d2b9aad",
+          "truth_id": "wall-0-0",
+          "normal_error_deg": 0.24975302945224281,
+          "offset_error_m": 0.011921060769340186,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        },
+        {
+          "predicted_id": "reflector-ceff7147c294c9fc",
+          "truth_id": "finite-panel",
+          "normal_error_deg": 0.10022043580239566,
+          "offset_error_m": 0.003574966632118759,
+          "horizontal": false,
+          "offset_95pct_covered": true,
+          "normal_95pct_covered": true
+        }
+      ]
+    },
+    "diagnostics": []
+  }
+]

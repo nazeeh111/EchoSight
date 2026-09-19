@@ -1,0 +1,47 @@
+{
+  "status": "partial",
+  "diagnostics": [
+    "joint_first_order_vs_second_order_parent_models"
+  ],
+  "surface_count": 2,
+  "parent_model_comparison": {
+    "original_score": 560.1814633033207,
+    "score_semantics": "Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.",
+    "compatibility_semantics": "Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.",
+    "assignment_semantics": "Exclusive candidate-to-predicted-arrival matching within each recording; coincident path predictions share one capacity.",
+    "coincident_arrival_tolerance_s": 1e-09,
+    "enumerated_subsets": 15,
+    "sufficient_alternatives": [
+      {
+        "parent_indices": [
+          0,
+          1,
+          2
+        ],
+        "score": 265.1037614025845
+      },
+      {
+        "parent_indices": [
+          0,
+          1,
+          3
+        ],
+        "score": 275.47777801553997
+      }
+    ],
+    "invariant_parent_indices": [
+      0,
+      1
+    ],
+    "parent_surface_ids": [
+      "reflector-30c519a08a4fc9b8",
+      "reflector-97b8e3d6aac27c3f",
+      "reflector-f9889e90e15b8a8b",
+      "reflector-ad90b8e88b3b98ee"
+    ],
+    "extent_and_occlusion_status": "unknown",
+    "absence_established": false
+  },
+  "path_reuse_count": 0,
+  "duplicate_evidence_example": []
+}

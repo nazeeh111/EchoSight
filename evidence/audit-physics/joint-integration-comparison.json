@@ -1,0 +1,603 @@
+{
+  "base_commit": "659099f",
+  "classification": "isolated_integration_trial_not_runtime",
+  "rows": [
+    {
+      "suite": "eight",
+      "identical_input_wav_count": 90,
+      "different_or_missing_input_wavs": [],
+      "matched_filter": {
+        "passed": true,
+        "source_unchanged": true,
+        "matched": 27,
+        "false": 0,
+        "missed": 19,
+        "runtime_seconds": 2.2534467069999664,
+        "cases": [
+          {
+            "family": "room",
+            "seed": 101,
+            "matched": 5,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 107,
+            "matched": 5,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 113,
+            "matched": 5,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "partial",
+            "seed": 127,
+            "matched": 3,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "coplanar",
+            "seed": 131,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "null",
+            "seed": 137,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "clutter",
+            "seed": 139,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "mismatch",
+            "seed": 149,
+            "matched": 4,
+            "false": 0,
+            "missed": 2,
+            "failures": []
+          },
+          {
+            "family": "reflector",
+            "seed": 151,
+            "matched": 5,
+            "false": 0,
+            "missed": 2,
+            "failures": []
+          },
+          {
+            "family": "warp",
+            "seed": 157,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          }
+        ]
+      },
+      "joint_kernel": {
+        "passed": true,
+        "source_unchanged": true,
+        "matched": 30,
+        "false": 0,
+        "missed": 16,
+        "runtime_seconds": 3.153119666996645,
+        "cases": [
+          {
+            "family": "room",
+            "seed": 101,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 107,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 113,
+            "matched": 5,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "partial",
+            "seed": 127,
+            "matched": 3,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "coplanar",
+            "seed": 131,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "null",
+            "seed": 137,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "clutter",
+            "seed": 139,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "mismatch",
+            "seed": 149,
+            "matched": 4,
+            "false": 0,
+            "missed": 2,
+            "failures": []
+          },
+          {
+            "family": "reflector",
+            "seed": 151,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "warp",
+            "seed": 157,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          }
+        ]
+      }
+    },
+    {
+      "suite": "twelve",
+      "identical_input_wav_count": 65,
+      "different_or_missing_input_wavs": [],
+      "matched_filter": {
+        "passed": true,
+        "source_unchanged": true,
+        "matched": 25,
+        "false": 0,
+        "missed": 0,
+        "runtime_seconds": 2.1986449170071865,
+        "cases": [
+          {
+            "family": "room",
+            "seed": 211,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 223,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 227,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "clutter",
+            "seed": 229,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "reflector",
+            "seed": 233,
+            "matched": 7,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          }
+        ]
+      },
+      "joint_kernel": {
+        "passed": true,
+        "source_unchanged": true,
+        "matched": 25,
+        "false": 0,
+        "missed": 0,
+        "runtime_seconds": 3.0734918339949218,
+        "cases": [
+          {
+            "family": "room",
+            "seed": 211,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 223,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "room",
+            "seed": 227,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "clutter",
+            "seed": 229,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "reflector",
+            "seed": 233,
+            "matched": 7,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          }
+        ]
+      }
+    },
+    {
+      "suite": "stress",
+      "identical_input_wav_count": 156,
+      "different_or_missing_input_wavs": [],
+      "matched_filter": {
+        "passed": false,
+        "source_unchanged": true,
+        "matched": 30,
+        "false": 0,
+        "missed": 48,
+        "runtime_seconds": 13.550595166991116,
+        "cases": [
+          {
+            "family": "higher_order",
+            "seed": 601,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 4",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "higher_order",
+            "seed": 607,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 4",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "overlap",
+            "seed": 613,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "overlap",
+            "seed": 617,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "finite_panel",
+            "seed": 619,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "finite_panel",
+            "seed": 631,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "edge_scattering_surrogate",
+            "seed": 641,
+            "matched": 0,
+            "false": 0,
+            "missed": 7,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 3",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "edge_scattering_surrogate",
+            "seed": 643,
+            "matched": 0,
+            "false": 0,
+            "missed": 7,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 3",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "distributed_source",
+            "seed": 647,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "distributed_source",
+            "seed": 653,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "source_nonlinearity",
+            "seed": 659,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "nonaffine_clock",
+            "seed": 661,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "diffuse_null",
+            "seed": 673,
+            "matched": 0,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          }
+        ]
+      },
+      "joint_kernel": {
+        "passed": false,
+        "source_unchanged": true,
+        "matched": 32,
+        "false": 1,
+        "missed": 46,
+        "runtime_seconds": 27.059680664984626,
+        "cases": [
+          {
+            "family": "higher_order",
+            "seed": 601,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 4",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "higher_order",
+            "seed": 607,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 4",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "overlap",
+            "seed": 613,
+            "matched": 7,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "overlap",
+            "seed": 617,
+            "matched": 7,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "finite_panel",
+            "seed": 619,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "finite_panel",
+            "seed": 631,
+            "matched": 6,
+            "false": 0,
+            "missed": 1,
+            "failures": []
+          },
+          {
+            "family": "edge_scattering_surrogate",
+            "seed": 641,
+            "matched": 0,
+            "false": 0,
+            "missed": 7,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 3",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "edge_scattering_surrogate",
+            "seed": 643,
+            "matched": 0,
+            "false": 0,
+            "missed": 7,
+            "failures": [
+              "minimum_matched_surfaces: 0 versus 3",
+              "minimum_horizontal_surfaces: 0 versus 1"
+            ]
+          },
+          {
+            "family": "distributed_source",
+            "seed": 647,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "distributed_source",
+            "seed": 653,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "source_nonlinearity",
+            "seed": 659,
+            "matched": 6,
+            "false": 0,
+            "missed": 0,
+            "failures": []
+          },
+          {
+            "family": "nonaffine_clock",
+            "seed": 661,
+            "matched": 0,
+            "false": 0,
+            "missed": 6,
+            "failures": []
+          },
+          {
+            "family": "diffuse_null",
+            "seed": 673,
+            "matched": 0,
+            "false": 1,
+            "missed": 0,
+            "failures": [
+              "maximum_false_surfaces: 1 versus 0",
+              "maximum_definitive_surfaces: 1 versus 0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "suite": "flair",
+      "identical_input_wav_count": 24,
+      "different_or_missing_input_wavs": [],
+      "matched_filter": {
+        "passed": false,
+        "source_unchanged": true,
+        "matched": 0,
+        "false": 0,
+        "missed": 10,
+        "runtime_seconds": 3.3846333750043414,
+        "cases": [
+          {
+            "family": null,
+            "seed": null,
+            "matched": 0,
+            "false": 0,
+            "missed": 10,
+            "failures": [
+              "minimum_matched_surfaces: observed0, required3",
+              "minimum_horizontal_surfaces: observed0, required1"
+            ]
+          }
+        ]
+      },
+      "joint_kernel": {
+        "passed": false,
+        "source_unchanged": true,
+        "matched": 0,
+        "false": 0,
+        "missed": 10,
+        "runtime_seconds": 6.611944541000412,
+        "cases": [
+          {
+            "family": null,
+            "seed": null,
+            "matched": 0,
+            "false": 0,
+            "missed": 10,
+            "failures": [
+              "minimum_matched_surfaces: observed0, required3",
+              "minimum_horizontal_surfaces: observed0, required1"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

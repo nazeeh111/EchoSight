@@ -1,0 +1,19 @@
+test_cancel_and_inconsistent_reused_receiver (tests.test_multisource.MultiSourceTests.test_cancel_and_inconsistent_reused_receiver) ... ok
+test_hidden_parents_source_move_discriminates_alias (tests.test_multisource.MultiSourceTests.test_hidden_parents_source_move_discriminates_alias) ... ok
+test_missing_shared_calibration_and_frame_rejected (tests.test_multisource.MultiSourceTests.test_missing_shared_calibration_and_frame_rejected) ... ok
+test_room_height_and_exclusive_recording_evidence (tests.test_multisource.MultiSourceTests.test_room_height_and_exclusive_recording_evidence) ... ok
+test_shared_calibration_not_divided_by_source_count (tests.test_multisource.MultiSourceTests.test_shared_calibration_not_divided_by_source_count) ... ok
+test_tangent_sources_remain_ambiguous (tests.test_multisource.MultiSourceTests.test_tangent_sources_remain_ambiguous) ... ok
+test_exact_corner_retains_real_extra_reflector_alternative (tests.test_multisource.ParentAlternativeTests.test_exact_corner_retains_real_extra_reflector_alternative) ... ok
+test_genuine_additional_plane_is_retained (tests.test_multisource.ParentAlternativeTests.test_genuine_additional_plane_is_retained) ... ok
+test_duplicate_source_session_ids_numerical_and_raw (tests.test_multisource.ReviewRegressionTests.test_duplicate_source_session_ids_numerical_and_raw) ... ok
+test_equivalent_path_predictions_cannot_explain_two_peaks (tests.test_multisource.ReviewRegressionTests.test_equivalent_path_predictions_cannot_explain_two_peaks) ... ok
+test_malformed_raw_bundle_and_byte_cap (tests.test_multisource.ReviewRegressionTests.test_malformed_raw_bundle_and_byte_cap) ... ok
+test_public_doublet_has_no_reused_physical_paths (tests.test_multisource.ReviewRegressionTests.test_public_doublet_has_no_reused_physical_paths) ... ok
+test_bundle_preserves_shared_frame_and_receiver_survey_without_truth_leak (evaluation.test_source_relocation.SourceRelocationChecks.test_bundle_preserves_shared_frame_and_receiver_survey_without_truth_leak) ... ok
+test_corner_alias_persists_along_intersection_and_changes_with_general_move (evaluation.test_source_relocation.SourceRelocationChecks.test_corner_alias_persists_along_intersection_and_changes_with_general_move) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.323s
+
+OK

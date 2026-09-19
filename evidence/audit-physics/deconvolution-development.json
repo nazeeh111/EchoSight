@@ -1,0 +1,3545 @@
+{
+  "kind": "development_equal_waveforms_50us_matching",
+  "baseline_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "rows": [
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999284757655491
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.152423445091344e-07
+          ],
+          "runtime_s": 0.00565199999982724
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999477515259448
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.224847405525812e-07
+          ],
+          "runtime_s": 0.00469941600022139
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999633623238136
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.6637676186467016e-07
+          ],
+          "runtime_s": 0.004685291998612229
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999766168836905
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.3383116309547147e-07
+          ],
+          "runtime_s": 0.005056959002104122
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199861898406472
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.3810159352808243e-06
+          ],
+          "runtime_s": 0.005007166997529566
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01199900228918832
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            9.977108116794586e-07
+          ],
+          "runtime_s": 0.005096667002362665
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999303772035513
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.962279644872477e-07
+          ],
+          "runtime_s": 0.005207542002608534
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999556229013063
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.4377098693676453e-07
+          ],
+          "runtime_s": 0.004930875002173707
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012150739308973731
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.393089737298825e-07
+          ],
+          "runtime_s": 0.004901625005004462
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012150030436818084
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.0436818083262596e-08
+          ],
+          "runtime_s": 0.0051349580025998875
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01214950130944569
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.986905543114678e-07
+          ],
+          "runtime_s": 0.004999417004000861
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012149070234012986
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            9.297659870153435e-07
+          ],
+          "runtime_s": 0.004835958003241103
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000770442891148
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.704428911479988e-07
+          ],
+          "runtime_s": 0.004653332995076198
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000577162187824
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.771621878238042e-07
+          ],
+          "runtime_s": 0.0051129580024280585
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000409324884853
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.0932488485322105e-07
+          ],
+          "runtime_s": 0.004770333995111287
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01200026204683947
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.620468394689407e-07
+          ],
+          "runtime_s": 0.004940749997331295
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012001602727106956
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.602727106956095e-06
+          ],
+          "runtime_s": 0.005194124998524785
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012001218058076081
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.2180580760811494e-06
+          ],
+          "runtime_s": 0.004957208999258
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000869619857068
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            8.696198570672803e-07
+          ],
+          "runtime_s": 0.004747042003145907
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000557744364256
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.577443642559854e-07
+          ],
+          "runtime_s": 0.00507320900214836
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00015,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.012150000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012146529089666345
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.4709103336558883e-06
+          ],
+          "runtime_s": 0.00497683299909113
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012147059761857013
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.9402381429878555e-06
+          ],
+          "runtime_s": 0.0048354999962612055
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012147580121387563
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.419878612438045e-06
+          ],
+          "runtime_s": 0.00472020899906056
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01214806690333895
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.9330966610515282e-06
+          ],
+          "runtime_s": 0.0051565829999162816
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999806907581522
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.9309241847814684e-07
+          ],
+          "runtime_s": 0.004713708003691863
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999677908384437
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.22091615562875e-07
+          ],
+          "runtime_s": 0.004618915998435114
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999646362285827
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.5363771417294687e-07
+          ],
+          "runtime_s": 0.00493599999754224
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999664227836833
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.357721631673527e-07
+          ],
+          "runtime_s": 0.004822583003260661
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999601426903586
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.985730964144868e-07
+          ],
+          "runtime_s": 0.0047078749994398095
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999342585482957
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.574145170433476e-07
+          ],
+          "runtime_s": 0.004801333001523744
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999286121373716
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.138786262839841e-07
+          ],
+          "runtime_s": 0.004922166001051664
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999328923808335
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.710761916647878e-07
+          ],
+          "runtime_s": 0.004623458000423852
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999382328336444
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.17671663556002e-07
+          ],
+          "runtime_s": 0.004713667003670707
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01199899319906371
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0068009362908248e-06
+          ],
+          "runtime_s": 0.00490991700644372
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011998919090585699
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0809094143013342e-06
+          ],
+          "runtime_s": 0.004863166999712121
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011998994086920916
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0059130790846665e-06
+          ],
+          "runtime_s": 0.004733791000035126
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000181796586266
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.817965862658394e-07
+          ],
+          "runtime_s": 0.004696916999819223
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000309628733325
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.096287333245046e-07
+          ],
+          "runtime_s": 0.004866040995693766
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000347214473506
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.472144735061633e-07
+          ],
+          "runtime_s": 0.0045771250006509945
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000336241260741
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.362412607406384e-07
+          ],
+          "runtime_s": 0.004762874996231403
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000353255787691
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.532557876911868e-07
+          ],
+          "runtime_s": 0.005085666001832578
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000607503807234
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.075038072334699e-07
+          ],
+          "runtime_s": 0.004831749996810686
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000688179094126
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.881790941253713e-07
+          ],
+          "runtime_s": 0.0046962919950601645
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000672952629144
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            6.72952629144144e-07
+          ],
+          "runtime_s": 0.004673249997722451
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0002,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0122
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000515236404446
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.152364044459096e-07
+          ],
+          "runtime_s": 0.004639166996639688
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000894282154282
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            8.94282154282125e-07
+          ],
+          "runtime_s": 0.004523459007032216
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012001023061124685
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0230611246844767e-06
+          ],
+          "runtime_s": 0.004472957996767946
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012001010135090832
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0101350908318235e-06
+          ],
+          "runtime_s": 0.004488625003432389
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000395003047878
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.950030478781785e-07
+          ],
+          "runtime_s": 0.004844499999308027
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000245631050042
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.456310500414949e-07
+          ],
+          "runtime_s": 0.004832833001273684
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000092575149049
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            9.257514904832675e-08
+          ],
+          "runtime_s": 0.004912124997645151
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999957066145152
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            4.2933854848062336e-08
+          ],
+          "runtime_s": 0.00496825000300305
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200078932809388,
+            0.012371330952776132
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.893280938794933e-07
+          ],
+          "runtime_s": 0.0050236669994774275
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000503980066062
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            5.039800660619487e-07
+          ],
+          "runtime_s": 0.004922000000078697
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01200019271355171
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.9271355171032734e-07
+          ],
+          "runtime_s": 0.004968791996361688
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999910200643112
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            8.979935688796514e-08
+          ],
+          "runtime_s": 0.00488812499679625
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011878618778151596,
+            0.012249177872404744
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            8.221275952565582e-07
+          ],
+          "runtime_s": 0.004606417001923546
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011876995160382119,
+            0.01224947388874572
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            5.261112542807866e-07
+          ],
+          "runtime_s": 0.004671082999266218
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011877344401177853,
+            0.012249798571645609
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.014283543919082e-07
+          ],
+          "runtime_s": 0.004814416999579407
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011878337224030536,
+            0.012250093899574585
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            9.389957458458276e-08
+          ],
+          "runtime_s": 0.004635083001630846
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999604322400067
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.95677599933017e-07
+          ],
+          "runtime_s": 0.004681749996962026
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999766170800352
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            2.338291996487052e-07
+          ],
+          "runtime_s": 0.00482329199439846
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999914162495316
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            8.583750468402207e-08
+          ],
+          "runtime_s": 0.004725500002678018
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000039477036649
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            3.9477036648319364e-08
+          ],
+          "runtime_s": 0.004602207998686936
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999207963347283,
+            0.01237401341548514
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.920366527167794e-07
+          ],
+          "runtime_s": 0.004627083006198518
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01199954331247054,
+            0.012369400649273487
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            4.566875294598205e-07
+          ],
+          "runtime_s": 0.004737457995361183
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999834352899834,
+            0.012363964612614178
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.656471001667409e-07
+          ],
+          "runtime_s": 0.004377791003207676
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000075898626646,
+            0.012360818823270395
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.58986266457401e-08
+          ],
+          "runtime_s": 0.0044832499988842756
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.00025,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.01225
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011876080571117605,
+            0.012250825067721955
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            8.250677219542174e-07
+          ],
+          "runtime_s": 0.004702124999312218
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011880576411691974,
+            0.012250474785746583
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            4.747857465826899e-07
+          ],
+          "runtime_s": 0.00473887500265846
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011885858519189232,
+            0.01225017204561402
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.720456140191784e-07
+          ],
+          "runtime_s": 0.004564082999422681
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011889041591849146,
+            0.01224992119328564
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            7.88067143608212e-08
+          ],
+          "runtime_s": 0.0044507499987958
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000015834534626,
+            0.012353792734615426
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.583453462621065e-08
+          ],
+          "runtime_s": 0.004861708002863452
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01200007762920735
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            7.762920735052137e-08
+          ],
+          "runtime_s": 0.004600790998665616
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000101144222649
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.0114422264832779e-07
+          ],
+          "runtime_s": 0.004529457997705322
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01200010019722773
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.001972277300811e-07
+          ],
+          "runtime_s": 0.004739541000162717
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000031031276556,
+            0.012354674480342744
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.1031276555293363e-08
+          ],
+          "runtime_s": 0.004903542001557071
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000152063350299,
+            0.01235451796554401
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.5206335029875617e-07
+          ],
+          "runtime_s": 0.004738917006761767
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000199403190234,
+            0.012354899883805203
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.9940319023400987e-07
+          ],
+          "runtime_s": 0.004962291997799184
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01200019933924804,
+            0.012355488437801966
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.99339248040456e-07
+          ],
+          "runtime_s": 0.0049772920028772205
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200004562953013,
+            0.012354991414675179
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            4.5629530130014695e-08
+          ],
+          "runtime_s": 0.004775291999976616
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000223495834511,
+            0.012354797017163188
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.2349583451118649e-07
+          ],
+          "runtime_s": 0.004726125000161119
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000294898635999,
+            0.012354927643521257
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.948986359985889e-07
+          ],
+          "runtime_s": 0.004887374998361338
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000297442631105,
+            0.012355164713588685
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.97442631105177e-07
+          ],
+          "runtime_s": 0.0049441669980296865
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999983492060922
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [
+            1.6507939078203027e-08
+          ],
+          "runtime_s": 0.004777457994350698
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999918965954119,
+            0.012356343209146648
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            8.103404588143126e-08
+          ],
+          "runtime_s": 0.004862417001277208
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01199989584159394,
+            0.012355042178911266
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.0415840605987325e-07
+          ],
+          "runtime_s": 0.005095499996969011
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999898730605897,
+            0.012353896681866317
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.0126939410312619e-07
+          ],
+          "runtime_s": 0.004827208002097905
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999966261190593,
+            0.012356782455835939
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.373880940772678e-08
+          ],
+          "runtime_s": 0.005026457998610567
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999834297561754,
+            0.01235587370857883
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            1.6570243824634567e-07
+          ],
+          "runtime_s": 0.005128083001181949
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999788532178922,
+            0.012355013007552417
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.1146782107871187e-07
+          ],
+          "runtime_s": 0.005003207996196579
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999796371766408,
+            0.012354209727312394
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.0362823359258708e-07
+          ],
+          "runtime_s": 0.00492645800113678
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0003,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0123
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199994826080194,
+            0.01235639380964065
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            5.173919805957772e-08
+          ],
+          "runtime_s": 0.004719791999377776
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999745744883,
+            0.012355692444562067
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            2.54255117000321e-07
+          ],
+          "runtime_s": 0.004940332997648511
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999677926589132,
+            0.012355000617064339
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.2207341086817887e-07
+          ],
+          "runtime_s": 0.004588625000906177
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999692905798684,
+            0.012354344689710584
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [
+            3.070942013166239e-07
+          ],
+          "runtime_s": 0.004605042006005533
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000142568859633,
+            0.012397399608398378
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.425688596328606e-07,
+            2.6003916016210937e-06
+          ],
+          "runtime_s": 0.004894458994385786
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000076964487665,
+            0.012398220110001927
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.696448766497666e-08,
+            1.7798899980721317e-06
+          ],
+          "runtime_s": 0.004609040996001568
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01199997803631577,
+            0.012399367478216693
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.1963684230727476e-08,
+            6.325217833062086e-07
+          ],
+          "runtime_s": 0.004607249997206964
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999906936567013,
+            0.012399918991080592
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            9.306343298765007e-08,
+            8.100891940761301e-08
+          ],
+          "runtime_s": 0.004675374999351334
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200028798207888,
+            0.012398117268581279
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.879820788798809e-07,
+            1.882731418720654e-06
+          ],
+          "runtime_s": 0.0047506669943686575
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000156933205062,
+            0.01239850576004376
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5693320506125763e-07,
+            1.4942399562400954e-06
+          ],
+          "runtime_s": 0.0047043749946169555
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999955400517478,
+            0.012399001304467229
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.459948252204249e-08,
+            9.986955327705854e-07
+          ],
+          "runtime_s": 0.004733666995889507
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999812972542571,
+            0.01239925923490137
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.870274574291425e-07,
+            7.40765098629359e-07
+          ],
+          "runtime_s": 0.004740541000501253
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000436327467388,
+            0.012398347875221826
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.363274673877676e-07,
+            1.652124778173461e-06
+          ],
+          "runtime_s": 0.004631415999028832
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000240085718646,
+            0.012398589149485734
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.4008571864603256e-07,
+            1.410850514265219e-06
+          ],
+          "runtime_s": 0.004736166003567632
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999932061291744,
+            0.012398894012517085
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            6.793870825638759e-08,
+            1.1059874829143918e-06
+          ],
+          "runtime_s": 0.004798791000212077
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999718094782792,
+            0.012399053001776357
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.819052172080283e-07,
+            9.469982236425672e-07
+          ],
+          "runtime_s": 0.004836082996916957
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999860197928551,
+            0.012400053310114999
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.398020714488829e-07,
+            5.331011499951077e-08
+          ],
+          "runtime_s": 0.004417042000568472
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999925873994243,
+            0.012399106920207415
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.412600575712469e-08,
+            8.930797925840728e-07
+          ],
+          "runtime_s": 0.004444040998350829
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000021321112858,
+            0.012398223795414455
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.132111285788052e-08,
+            1.7762045855448938e-06
+          ],
+          "runtime_s": 0.004679290999774821
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000092175705319,
+            0.012397608578441582
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            9.217570531849795e-08,
+            2.391421558417539e-06
+          ],
+          "runtime_s": 0.004649624999728985
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999723077899205,
+            0.012399441316548116
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.769221007954681e-07,
+            5.586834518830908e-07
+          ],
+          "runtime_s": 0.0048174999974435195
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01199985443187887,
+            0.01239893885174904
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.455681211300075e-07,
+            1.0611482509602366e-06
+          ],
+          "runtime_s": 0.004944250002154149
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000042027402258,
+            0.012398442113083682
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.202740225799084e-08,
+            1.5578869163174192e-06
+          ],
+          "runtime_s": 0.004987166998034809
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000183476346417,
+            0.012398111143728376
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.8347634641625865e-07,
+            1.8888562716232876e-06
+          ],
+          "runtime_s": 0.004911208001431078
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0004,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0124
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999588565092966,
+            0.012399230228825622
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.1143490703450525e-07,
+            7.697711743772512e-07
+          ],
+          "runtime_s": 0.004914000004646368
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999785530613155,
+            0.012398876638996944
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.1446938684548111e-07,
+            1.123361003056017e-06
+          ],
+          "runtime_s": 0.005168791001779027
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000062145098514,
+            0.012398522739221323
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            6.214509851339145e-08,
+            1.4772607786761593e-06
+          ],
+          "runtime_s": 0.004996083000150975
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.0120002739143184,
+            0.012398288479679328
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.739143183990572e-07,
+            1.7115203206716917e-06
+          ],
+          "runtime_s": 0.005052790998888668
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999824264389187,
+            0.012501101809374679
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7573561081341005e-07,
+            1.1018093746782698e-06
+          ],
+          "runtime_s": 0.005038290997617878
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999934995838254,
+            0.012500376488630399
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            6.500416174608226e-08,
+            3.764886303981446e-07
+          ],
+          "runtime_s": 0.005213791002461221
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000086685148726,
+            0.01249949544755089
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.66851487257847e-08,
+            5.045524491108927e-07
+          ],
+          "runtime_s": 0.00493412499781698
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000163488384324,
+            0.012498992962179193
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.6348838432350687e-07,
+            1.007037820808035e-06
+          ],
+          "runtime_s": 0.005088665995572228
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999648313023921,
+            0.012500549852779064
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.516869760793184e-07,
+            5.498527790633728e-07
+          ],
+          "runtime_s": 0.004717249998066109
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01199987192141054,
+            0.012500196832944567
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.280785894598735e-07,
+            1.968329445666689e-07
+          ],
+          "runtime_s": 0.0046943330016802065
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01200017096735428,
+            0.012499736964715239
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.70967354279003e-07,
+            2.6303528476157023e-07
+          ],
+          "runtime_s": 0.004688833003456239
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01200032606617602,
+            0.012499492112774367
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.260661760196709e-07,
+            5.078872256335243e-07
+          ],
+          "runtime_s": 0.0047154999992926605
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199947214723649,
+            0.01250036633258893
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.278527635110136e-07,
+            3.6633258892852794e-07
+          ],
+          "runtime_s": 0.004977166994649451
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999810692177496,
+            0.012500133248228682
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.8930782250473066e-07,
+            1.3324822868178432e-07
+          ],
+          "runtime_s": 0.0047959160001482815
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000252945181004,
+            0.01249982211431437
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.5294518100384134e-07,
+            1.7788568563124885e-07
+          ],
+          "runtime_s": 0.004947540997818578
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000487740952723,
+            0.012499660426521569
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.877409527231924e-07,
+            3.395734784316512e-07
+          ],
+          "runtime_s": 0.005019791999075096
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200017552541936,
+            0.012498906534726373
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7552541935889066e-07,
+            1.093465273627539e-06
+          ],
+          "runtime_s": 0.004814916996110696
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000067024284225,
+            0.012499543904141068
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            6.702428422510065e-08,
+            4.5609585893301163e-07
+          ],
+          "runtime_s": 0.004812667000805959
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01199991080771197,
+            0.01250060325320301
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.91922880309759e-08,
+            6.032532030089688e-07
+          ],
+          "runtime_s": 0.004929834001814015
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999835593338854,
+            0.012501042918277274
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.6440666114614366e-07,
+            1.0429182772733747e-06
+          ],
+          "runtime_s": 0.004948292000335641
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000350835859045,
+            0.01249945223374638
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.5083585904482906e-07,
+            5.477662536213651e-07
+          ],
+          "runtime_s": 0.004911625001113862
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000136163878138,
+            0.01249978340214797
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.3616387813802922e-07,
+            2.165978520308337e-07
+          ],
+          "runtime_s": 0.00506929200491868
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01199981899787512,
+            0.012500287563349156
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.8100212488027234e-07,
+            2.8756334915537585e-07
+          ],
+          "runtime_s": 0.0049877089986694045
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999670260672583,
+            0.012500516855282015
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.2973932741729717e-07,
+            5.168552820143668e-07
+          ],
+          "runtime_s": 0.004926999994495418
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.0005,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.0125
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200052593343431,
+            0.012499634595140715
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.259334343102329e-07,
+            3.654048592854203e-07
+          ],
+          "runtime_s": 0.004886124996119179
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000207520687216,
+            0.012499857978627446
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.07520687215898e-07,
+            1.4202137255461822e-07
+          ],
+          "runtime_s": 0.005117000000609551
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999724453563742,
+            0.012500188775072687
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.7554643625832265e-07,
+            1.8877507268651172e-07
+          ],
+          "runtime_s": 0.004997500000172295
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999503994149835,
+            0.012500343559114842
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.960058501649739e-07,
+            3.4355911484110213e-07
+          ],
+          "runtime_s": 0.004886250004346948
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999994717622208,
+            0.01300003314336639
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.282377792126258e-09,
+            3.314336638818305e-08
+          ],
+          "runtime_s": 0.005267874999844935
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000017624956725,
+            0.012999890579727497
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.7624956724984764e-08,
+            1.0942027250417097e-07
+          ],
+          "runtime_s": 0.005167417002667207
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000007833869503,
+            0.012999949596537785
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.833869502746338e-09,
+            5.040346221646397e-08
+          ],
+          "runtime_s": 0.005038041002990212
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.01199997198001334,
+            0.013000177186573526
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.80199866607711e-08,
+            1.771865735245015e-07
+          ],
+          "runtime_s": 0.0052395420061657205
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999989426023516,
+            0.01300001653479343
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0573976484337666e-08,
+            1.6534793428543693e-08
+          ],
+          "runtime_s": 0.0049257919963565655
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000035204705654,
+            0.012999945071613913
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.5204705654129365e-08,
+            5.492838608782413e-08
+          ],
+          "runtime_s": 0.005117249995237216
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012000015753559445,
+            0.012999975232408739
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.57535594447894e-08,
+            2.476759126263106e-08
+          ],
+          "runtime_s": 0.005000875004043337
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999943835553339,
+            0.01300008797677545
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.6164446661163825e-08,
+            8.797677544802873e-08
+          ],
+          "runtime_s": 0.005152208002982661
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": 1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01199998412691348,
+            0.013000011014849131
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5873086520526436e-08,
+            1.1014849130019932e-08
+          ],
+          "runtime_s": 0.0051848750008502975
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012000052739564865,
+            0.012999963332303395
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.2739564864595634e-08,
+            3.666769660647107e-08
+          ],
+          "runtime_s": 0.005123542003275361
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01200002376050354,
+            0.012999983582543059
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.3760503540387612e-08,
+            1.6417456942530162e-08
+          ],
+          "runtime_s": 0.005220291997829918
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999915565782535,
+            0.013000058515447714
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.443421746495705e-08,
+            5.851544771298678e-08
+          ],
+          "runtime_s": 0.005013709000195377
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.08
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012000005278348486,
+            0.012999967149631702
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.278348485723838e-09,
+            3.2850368298850685e-08
+          ],
+          "runtime_s": 0.004879415995674208
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999982330101367,
+            0.013000111187397039
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.766989863281887e-08,
+            1.1118739703767921e-07
+          ],
+          "runtime_s": 0.005074207998404745
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999992250609812,
+            0.013000047101001734
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            7.749390188577232e-09,
+            4.710100173256626e-08
+          ],
+          "runtime_s": 0.00490608399559278
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000027896314977,
+            0.012999827644648207
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.7896314976766368e-08,
+            1.7235535179453698e-07
+          ],
+          "runtime_s": 0.004836125001020264
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.16
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200001054750779,
+            0.012999983538973008
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0547507789046562e-08,
+            1.646102699287555e-08
+          ],
+          "runtime_s": 0.00502937500277767
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999964614647174,
+            0.013000055370188598
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.53853528266973e-08,
+            5.537018859733123e-08
+          ],
+          "runtime_s": 0.005216500001552049
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999984584293917,
+            0.013000023942688458
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5415706083182767e-08,
+            2.3942688456846106e-08
+          ],
+          "runtime_s": 0.004846416995860636
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000055669797248,
+            0.012999913230856188
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.5669797247720476e-08,
+            8.676914381271217e-08
+          ],
+          "runtime_s": 0.004877625004155561
+        }
+      }
+    },
+    {
+      "kind": "overlap",
+      "config": {
+        "gap": 0.001,
+        "sign": -1,
+        "amplitude": 0.24
+      },
+      "truth_for_evaluation_only": [
+        0.012,
+        0.013000000000000001
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.01200001580921898,
+            0.012999989018319325
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.5809218979062623e-08,
+            1.0981680675925531e-08
+          ],
+          "runtime_s": 0.0048969589988701046
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999946853608577,
+            0.013000036864083754
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            5.314639142314781e-08,
+            3.686408375259964e-08
+          ],
+          "runtime_s": 0.004794166001374833
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999976999738699,
+            0.013000016050893485
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.3000261301434066e-08,
+            1.6050893484123585e-08
+          ],
+          "runtime_s": 0.004694707997259684
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012000083321249017,
+            0.012999942021261703
+          ],
+          "matched": 2,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            8.332124901665183e-08,
+            5.7978738298228305e-08
+          ],
+          "runtime_s": 0.004949790993123315
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 3000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004095981668887448,
+            0.0008911027846152451,
+            0.011999999983245468,
+            0.012409598086755616
+          ],
+          "matched": 1,
+          "false": 3,
+          "missed": 0,
+          "errors_s": [
+            1.6754531789731075e-11
+          ],
+          "runtime_s": 0.0047851249983068556
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.0004966238604493303,
+            0.0008776160018691292,
+            0.011521608240968113,
+            0.011999999996976837,
+            0.012496623875253526
+          ],
+          "matched": 1,
+          "false": 4,
+          "missed": 0,
+          "errors_s": [
+            3.023163316906441e-12
+          ],
+          "runtime_s": 0.004826000003959052
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.0005361489535817986,
+            0.0009663436207315333,
+            0.01146014539585186,
+            0.011999999999663497,
+            0.012536148953427959
+          ],
+          "matched": 1,
+          "false": 4,
+          "missed": 0,
+          "errors_s": [
+            3.36503394593457e-13
+          ],
+          "runtime_s": 0.0048910000041360036
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.00036067862788994985,
+            0.0008237086533161702,
+            0.011640668621078635,
+            0.011999999999793553,
+            0.012360678627418189
+          ],
+          "matched": 1,
+          "false": 4,
+          "missed": 0,
+          "errors_s": [
+            2.0644770615252384e-13
+          ],
+          "runtime_s": 0.0051373749956837855
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 3000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004639584003598429
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004695457995694596
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004692667003837414
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.0046566669989260845
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 4000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004050579250442728,
+            0.011588586621387151,
+            0.011999999969383357,
+            0.012405057631976144
+          ],
+          "matched": 1,
+          "false": 3,
+          "missed": 0,
+          "errors_s": [
+            3.061664290149313e-11
+          ],
+          "runtime_s": 0.004965666004864033
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.00044581444205160636,
+            0.01199999999744578,
+            0.012445814406508826
+          ],
+          "matched": 1,
+          "false": 2,
+          "missed": 0,
+          "errors_s": [
+            2.5542207238160586e-12
+          ],
+          "runtime_s": 0.004885458001808729
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.0005004270523919611,
+            0.011999999999721827
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 0,
+          "errors_s": [
+            2.781733177137369e-13
+          ],
+          "runtime_s": 0.005085290998977143
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.0005907578455497558,
+            0.011642726050573373,
+            0.011999999999916345
+          ],
+          "matched": 1,
+          "false": 2,
+          "missed": 0,
+          "errors_s": [
+            8.365530490550555e-14
+          ],
+          "runtime_s": 0.005079875001683831
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 4000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012118432040783783
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.005046041005698498
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012118002108352418
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.00508741699741222
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01211762260580424
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004989874993043486
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012117308471962535
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004985709005268291
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 6000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.0004007449338840979,
+            0.011999999965766448
+          ],
+          "matched": 1,
+          "false": 1,
+          "missed": 0,
+          "errors_s": [
+            3.423355175724563e-11
+          ],
+          "runtime_s": 0.005324916994140949
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999999996926306
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.0736940770381693e-12
+          ],
+          "runtime_s": 0.005756083999585826
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999665743
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            3.3425692769206705e-13
+          ],
+          "runtime_s": 0.004972708004061133
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999951001
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.8998999302440893e-14
+          ],
+          "runtime_s": 0.004877583000052255
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 6000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012079584953642638
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.005552916998567525
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.012079282443199075
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.005070750004961155
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012079092711318708
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.004783457996381912
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012078961515399438
+          ],
+          "matched": 0,
+          "false": 1,
+          "missed": 1,
+          "errors_s": [],
+          "runtime_s": 0.0050218329997733235
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 10000,
+        "common": true
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.011999999989063023
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0936977018483063e-11
+          ],
+          "runtime_s": 0.004985584004316479
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999007898
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            9.921022336989438e-13
+          ],
+          "runtime_s": 0.00508970800001407
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.01199999999989142
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            1.0857981180834031e-13
+          ],
+          "runtime_s": 0.005104750001919456
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.011999999999979891
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            2.0108914533523148e-14
+          ],
+          "runtime_s": 0.005025541999202687
+        }
+      }
+    },
+    {
+      "kind": "coloration",
+      "config": {
+        "cutoff": 10000,
+        "common": false
+      },
+      "truth_for_evaluation_only": [
+        0.012
+      ],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [
+            0.012045666837859449
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.566683785944825e-05
+          ],
+          "runtime_s": 0.004475416004424915
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [
+            0.01204566274327873
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.5662743278730364e-05
+          ],
+          "runtime_s": 0.004659166996134445
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [
+            0.012045660091135285
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.5660091135284533e-05
+          ],
+          "runtime_s": 0.004758540999318939
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [
+            0.012045658688037891
+          ],
+          "matched": 1,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [
+            4.5658688037891054e-05
+          ],
+          "runtime_s": 0.004428749998623971
+        }
+      }
+    },
+    {
+      "kind": "direct_only",
+      "config": {},
+      "truth_for_evaluation_only": [],
+      "methods": {
+        "matched": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0047226669994415715
+        },
+        "deconv0.1": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.004816041997401044
+        },
+        "deconv0.01": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.004761916003189981
+        },
+        "deconv0.001": {
+          "status": "ok",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0048233339985017665
+        }
+      }
+    },
+    {
+      "kind": "noise",
+      "config": {},
+      "truth_for_evaluation_only": [],
+      "methods": {
+        "matched": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.003291166001872625
+        },
+        "deconv0.1": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.003236541997466702
+        },
+        "deconv0.01": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.003064500000618864
+        },
+        "deconv0.001": {
+          "status": "rejected",
+          "predictions": [],
+          "matched": 0,
+          "false": 0,
+          "missed": 0,
+          "errors_s": [],
+          "runtime_s": 0.0030701249997946434
+        }
+      }
+    }
+  ]
+}

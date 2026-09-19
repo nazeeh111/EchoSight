@@ -1,0 +1,81 @@
+{
+  "status": "partial",
+  "diagnostics": [
+    "joint_first_order_vs_second_order_parent_models"
+  ],
+  "surface_count": 2,
+  "parent_model_comparison": {
+    "original_score": 560.1814633033207,
+    "score_semantics": "Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.",
+    "compatibility_semantics": "Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.",
+    "enumerated_subsets": 15,
+    "sufficient_alternatives": [
+      {
+        "parent_indices": [
+          0,
+          1
+        ],
+        "score": 251.9999999999945
+      },
+      {
+        "parent_indices": [
+          0,
+          1,
+          2
+        ],
+        "score": 201.03057553593715
+      },
+      {
+        "parent_indices": [
+          0,
+          1,
+          3
+        ],
+        "score": 202.37469927946736
+      }
+    ],
+    "invariant_parent_indices": [
+      0,
+      1
+    ],
+    "parent_surface_ids": [
+      "reflector-30c519a08a4fc9b8",
+      "reflector-97b8e3d6aac27c3f",
+      "reflector-f9889e90e15b8a8b",
+      "reflector-ad90b8e88b3b98ee"
+    ],
+    "extent_and_occlusion_status": "unknown",
+    "absence_established": false
+  },
+  "path_reuse_count": 24,
+  "duplicate_evidence_example": [
+    {
+      "session_id": "s0",
+      "capture_id": "0",
+      "candidate_id": "0-3",
+      "reflection_order": 2,
+      "parent_surface_ids": [
+        "reflector-97b8e3d6aac27c3f",
+        "reflector-30c519a08a4fc9b8"
+      ],
+      "observed_delay_s": 0.00813052052985737,
+      "predicted_delay_s": 0.008070520529857366,
+      "residual_s": 6.0000000000004494e-05,
+      "extent_and_occlusion_status": "unknown"
+    },
+    {
+      "session_id": "s0",
+      "capture_id": "0",
+      "candidate_id": "0-2",
+      "reflection_order": 2,
+      "parent_surface_ids": [
+        "reflector-97b8e3d6aac27c3f",
+        "reflector-30c519a08a4fc9b8"
+      ],
+      "observed_delay_s": 0.008010520529857372,
+      "predicted_delay_s": 0.008070520529857366,
+      "residual_s": -5.9999999999994086e-05,
+      "extent_and_occlusion_status": "unknown"
+    }
+  ]
+}

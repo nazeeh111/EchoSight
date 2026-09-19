@@ -1,0 +1,903 @@
+{
+  "schema_version": "1.0",
+  "split": "frozen_extended_held_out",
+  "acceptance_sha256": "ee6c1e26e0b53e5f74816dab084c54a064a5e9c140c971bf5658db22cb26b85d",
+  "git_commit": "659099fed613f3ed26545b0a4631a05cbb97de74",
+  "source_sha256": {
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "echosight/api.py": "b37ec722b98666c819b1131bdab2083267678930eeb6691f2e360f5a1409c7ae",
+    "echosight/calibration.py": "45b2224ddaf8b1da4b0e530a3bdeaf1ef8f44df30ed52a135db1d61a5673648a",
+    "echosight/cli.py": "4b29a2f423e15b287abb11cc617e64ff41294089491497271873b0d4ee8bdb5d",
+    "echosight/evolution.py": "8b05097619beb38859c3e573e0ea20c59daa7a876df0438d1375b6037eb5eeba",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "echosight/inference.py": "ee1867b46a0c4403ceb109a91c1d8c61de5bf53ea5f38ea9d73d6c0164126e34",
+    "echosight/joint_kernel.py": "ee4b6e80c5393acbfb9fbb906536e3eb6720614a035bbe3720ca1dc9637b3299",
+    "echosight/pipeline.py": "3c12f74d8579f1fecbe177bf3bf967adb5ac684a7e55002c1e816c8c1dfb1ab2",
+    "echosight/signals.py": "5a208c9ba9a7d564f11f791b99b28dd5e5c4305cff47e0af759ff6889b07a1a4",
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/storage.py": "be1b66fd645929c49d4a5dc4163335a51d550449758af60013f20ea338cfb42a",
+    "evaluation/__init__.py": "27112db071291f12c1b8138daab004ff7b003512a093a3382aa42555cf7a6478",
+    "evaluation/calibration_development.py": "94a7586c989dada47abb76cbca44ce65f61794772ff901e5c1be2745aadc3eba",
+    "evaluation/external.py": "962ae38ba5e51177ae56875e5585bd3d96c85bb48c3fc1d8f585c4dd3b5aff4e",
+    "evaluation/flair.py": "67c4381a213771f384247f8bcc3432aac96ed98315d7c04c623d17d87f72fe6c",
+    "evaluation/flair_subset.py": "b5132ff1266eff524f74b05d9173d7f346310a00a7bc5e32cbf64b80f4343407",
+    "evaluation/guidance.py": "02f712b676e36c2089a38a167f13b16e9c8a4756c16180e745a80a24904023d9",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "evaluation/physics_development.py": "bae2f2872aebbae6431680ff4874c15a8ac6e9916b6c0a7b606c376c7e3080b4",
+    "evaluation/run.py": "ef32222b5bdf1ee1ca9f4190c7f27f4298b3559df6b00f514ac3d2d6d2b17454",
+    "evaluation/stress.py": "0bbd84f9fb980990fbd52ef196221364421b356bc791bf897a6e4cbf2f156249",
+    "evaluation/stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7",
+    "evaluation/test_audit_harness.py": "a363a42e40e45fe1f83032e281d209556f8b0c8d5a311e6f691395e1134991e4"
+  },
+  "source_unchanged_during_run": true,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "claims": "Synthetic software evaluation. Not physical-device validation. Alternative inference timings exclude shared waveform extraction; mapper timing includes it.",
+  "aggregate": {
+    "mapper": {
+      "matched": 25,
+      "false": 0,
+      "missed": 0,
+      "room_matches": 18,
+      "runtime_seconds": 3.0734918339949218,
+      "offset_95pct_coverage_count": 25,
+      "offset_95pct_coverage_denominator": 25,
+      "maximum_offset_error_m": 0.009445714188402446,
+      "maximum_normal_error_deg": 0.29889689672547437
+    },
+    "first_echo": {
+      "matched": 0,
+      "false": 1,
+      "missed": 25,
+      "room_matches": 0,
+      "runtime_seconds": 0.052741708990652114,
+      "offset_95pct_coverage_count": 0,
+      "offset_95pct_coverage_denominator": 0,
+      "maximum_offset_error_m": null,
+      "maximum_normal_error_deg": null
+    },
+    "plane_grid": {
+      "matched": 24,
+      "false": 0,
+      "missed": 1,
+      "room_matches": 18,
+      "runtime_seconds": 1.743587501012371,
+      "offset_95pct_coverage_count": 24,
+      "offset_95pct_coverage_denominator": 24,
+      "maximum_offset_error_m": 0.009445713634014719,
+      "maximum_normal_error_deg": 0.298896860624758
+    }
+  },
+  "cases": [
+    {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.6479109590000007,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-28fb804309c9",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.01705872374497165,
+            "offset_error_m": 0.0004140915303748844,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d0ec3e008d4b",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.03596016903399421,
+            "offset_error_m": 0.00040803649592646707,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ba882d513690",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.13001497012522223,
+            "offset_error_m": 0.005188934466497486,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b844fb705130",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.06177451338112703,
+            "offset_error_m": 0.001901630727895881,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-98fb18b4d727",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.013722380964399445,
+            "offset_error_m": 0.0004716443818444668,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-a31aa9b548c6",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.024963662761136738,
+            "offset_error_m": 0.0009914300722968505,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.013485833995218854,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 6",
+        "minimum_horizontal_surfaces: observed 0, required 2"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.40322541700152215,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-28fb804309c9",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.017058723488588067,
+            "offset_error_m": 0.0004140915314904059,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d0ec3e008d4b",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.03596005604622324,
+            "offset_error_m": 0.0004080398005124053,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ba882d513690",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.13001498010761064,
+            "offset_error_m": 0.005188934932752076,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b844fb705130",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.061774390751133404,
+            "offset_error_m": 0.001901626556075218,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-98fb18b4d727",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.01372249942093063,
+            "offset_error_m": 0.00047164585136812035,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-a31aa9b548c6",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.024963678295329653,
+            "offset_error_m": 0.0009914284763175019,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.6567610420024721,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-8b7880c94189",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.014483237455762682,
+            "offset_error_m": 0.0002891031340820646,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-679a45917e9d",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.009960518925596386,
+            "offset_error_m": 0.0005856678706530616,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0db0c1f04c4b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.01612857925133422,
+            "offset_error_m": 0.00013350777112552947,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dba0dbd9a0e0",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.04331240647527774,
+            "offset_error_m": 0.00033960010112196525,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa8b49fffedb",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.028946944913740214,
+            "offset_error_m": 0.0017800813136270577,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-23a9eacf534d",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.03431699985435729,
+            "offset_error_m": 0.002294318530690619,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.008750374996452592,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 6",
+        "minimum_horizontal_surfaces: observed 0, required 2"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.3941985420024139,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-8b7880c94189",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.01448323420953029,
+            "offset_error_m": 0.00028910305014387725,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-679a45917e9d",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.009960519474460427,
+            "offset_error_m": 0.0005856678942848248,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0db0c1f04c4b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.016128578008474555,
+            "offset_error_m": 0.0001335078191457839,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dba0dbd9a0e0",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.04331239490494155,
+            "offset_error_m": 0.00033960024735195924,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa8b49fffedb",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.028946910754922676,
+            "offset_error_m": 0.001780081853650195,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-23a9eacf534d",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.03431695037327032,
+            "offset_error_m": 0.002294315794132408,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.6520912909982144,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-fa23d7df2303",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.005292668096802525,
+            "offset_error_m": 0.0002315094949963136,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-64ec8cb9c6ed",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.034562427699367904,
+            "offset_error_m": 0.00020218853008739922,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-41ee14828ebb",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.021978054298017715,
+            "offset_error_m": 0.0005433309372246953,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7416236d00bc",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03126251386545963,
+            "offset_error_m": 0.00012240567717380912,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-62a587f812bc",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.0037164663857071796,
+            "offset_error_m": 0.00018324432069421272,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-36a1244358b5",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.05255532100217341,
+            "offset_error_m": 0.0008609505927608119,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.013963124998554122,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 6",
+        "minimum_horizontal_surfaces: observed 0, required 2"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.40509000000020023,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-fa23d7df2303",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.005292668165664716,
+            "offset_error_m": 0.00023150950976720465,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-64ec8cb9c6ed",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.03456242554816457,
+            "offset_error_m": 0.00020218862928187448,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-41ee14828ebb",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.021978052390958742,
+            "offset_error_m": 0.0005433311546756414,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7416236d00bc",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03126252987216847,
+            "offset_error_m": 0.0001224059684172829,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-62a587f812bc",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.0037164661895720923,
+            "offset_error_m": 0.00018324431303264955,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-36a1244358b5",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.05255531765956182,
+            "offset_error_m": 0.0008609510067061343,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true,
+      "method": "mapper",
+      "status": "ambiguous",
+      "runtime_seconds": 0.34341124999627937,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached",
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true,
+      "method": "first_echo",
+      "status": "no_result",
+      "runtime_seconds": 0.003967249998822808,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true,
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "runtime_seconds": 0.12832804200297687,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached",
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.7733172919979552,
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-547da4e5cd97",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03768076328545988,
+            "offset_error_m": 0.001106812561595838,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1d55a7e80428",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.04741639741227971,
+            "offset_error_m": 0.0005738255269404597,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-292947d47443",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.16544137405663292,
+            "offset_error_m": 0.0007987497664938559,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8067adef5ae",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.1356068632251784,
+            "offset_error_m": 0.0026900918524237483,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-4106360e7349",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.1484147880932549,
+            "offset_error_m": 0.004825951054615035,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-fb6fb1b66af2",
+            "truth_id": "truth-tilted-reflector",
+            "normal_error_deg": 0.005307051973684194,
+            "offset_error_m": 3.1224551547914814e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b4e0caab1073",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.29889689672547437,
+            "offset_error_m": 0.009445714188402446,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false,
+      "method": "first_echo",
+      "status": "ok",
+      "runtime_seconds": 0.012575125001603737,
+      "metrics": {
+        "predicted_count": 1,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 1,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 7",
+        "minimum_horizontal_surfaces: observed 0, required 2",
+        "maximum_false_surfaces: observed 1, required 0"
+      ],
+      "diagnostics": []
+    },
+    {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.4127455000052578,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 7,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "matches": [
+          {
+            "predicted_id": "reflector-547da4e5cd97",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03768084971824279,
+            "offset_error_m": 0.0011068121393140729,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1d55a7e80428",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.04741638398401306,
+            "offset_error_m": 0.0005738243607697845,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-292947d47443",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.16544138139698603,
+            "offset_error_m": 0.0007987497081716199,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8067adef5ae",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.13560686092454194,
+            "offset_error_m": 0.002690091726583077,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-cc619e3b7d2c",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.14841476787531277,
+            "offset_error_m": 0.004825951546595918,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b4e0caab1073",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.298896860624758,
+            "offset_error_m": 0.009445713634014719,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 6, required 7"
+      ],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    }
+  ],
+  "required_failures": [],
+  "passed": true
+}

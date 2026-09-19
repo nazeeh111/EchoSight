@@ -20,6 +20,7 @@ MAX_PLANES = 10
 
 
 def _empty(bundle, method):
+    bundle=bundle if isinstance(bundle,dict) else {}
     return dict(schema_version='1.0', scene_id=bundle.get('scene_id'),
         coordinate_frame_id=bundle.get('coordinate_frame_id'), status='no_result',
         method='multi_source_'+method, surfaces=[], hypotheses=[], diagnostics=[],
@@ -141,6 +142,50 @@ def _covariance(qs,reference,sources,receivers,v,rows,links,calibration_covarian
 
 
 
+
+def _physical_path_groups(residual,observed_delays,links):
+    """One capacity per coincident predicted arrival in each recording.
+
+    Different reflection labels with the same travel time cannot supply two
+    distinct detected peaks. The 1 ns tolerance groups numerical coincidences;
+    it does not merge paths at the much larger detector resolution scale.
+    """
+    captures={}
+    for row,(k,i,l) in enumerate(links):captures.setdefault(i,[]).append(row)
+    groups=[]
+    for indices in captures.values():
+        indices=np.array(indices);prediction=observed_delays[indices[0]]-residual[indices[0]]
+        ordered=np.argsort(prediction);ids=np.empty(len(prediction),dtype=int);group=-1;previous=None
+        for col in ordered:
+            if previous is None or abs(prediction[col]-previous)>1e-9:group+=1
+            ids[col]=group;previous=prediction[col]
+        groups.append((indices,ids))
+    return groups
+
+
+def _exclusive_physical_assignment(cost,groups,allowed,cancel=None,maximum_score=np.inf):
+    """Assign distinct selected peaks to distinct physical-arrival groups."""
+    columns=np.flatnonzero(allowed);choices=np.full(cost.shape[0],-1,dtype=int);score=0.
+    for indices,path_groups in groups:
+        single._check(cancel)
+        ids,inverse=np.unique(path_groups[columns],return_inverse=True)
+        if len(ids)<len(indices):return None
+        edges=cost[np.ix_(indices,columns)]
+        grouped=np.full((len(ids),len(indices)),np.inf)
+        np.minimum.at(grouped,inverse,edges.T)
+        try:row_ids,group_ids=linear_sum_assignment(grouped.T)
+        except ValueError:return None
+        assigned=grouped[group_ids,row_ids]
+        if not np.all(np.isfinite(assigned)):return None
+        score+=float(assigned.sum())
+        if score>maximum_score:return None
+        for local_row,chosen_group in zip(row_ids,group_ids):
+            members=np.where(inverse==chosen_group)[0]
+            selected=members[np.argmin(edges[local_row,members])]
+            choices[indices[local_row]]=columns[selected]
+    return score,choices
+
+
 def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,calibration_covariance,parameter_covariance,cancel):
     """Bounded physical explanations on fixed evidence, not model probabilities.
 
@@ -195,14 +240,15 @@ def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,
     original=np.array([residual[row,k] for row,(k,i,l) in enumerate(links)])
     denominator=np.maximum(independent,1e-14)
     original_score=float(np.sum(original**2/denominator));sufficient=[]
+    path_groups=_physical_path_groups(residual,ys,links)
+    comparison_cost=np.where(compatible,residual**2/denominator[:,None],np.inf)
+    tolerance_score=original_score+1e-8*(1+original_score)
     for mask in range(1,(1<<count)-1):
         if mask%16==0:single._check(cancel)
         allowed=(masks&mask)==masks
-        cost=np.where(compatible[:,allowed],residual[:,allowed]**2/denominator[:,None],np.inf)
-        best=cost.min(axis=1)
-        if not np.all(np.isfinite(best)):continue
-        score=float(best.sum())
-        if score>original_score+1e-8*(1+original_score):continue
+        assignment=_exclusive_physical_assignment(comparison_cost,path_groups,allowed,cancel,tolerance_score)
+        if assignment is None:continue
+        score,choices=assignment
         sufficient.append(dict(parent_indices=[i for i in range(count) if mask&(1<<i)],score=score))
     if not sufficient:return
     sufficient.sort(key=lambda x:(len(x['parent_indices']),x['score']))
@@ -211,14 +257,14 @@ def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,
     all_surfaces=out['surfaces'];best=sufficient[0];kept=best['parent_indices']
     out['hypotheses'].append(dict(hypothesis_id='joint_first_order_interpretation',surfaces=all_surfaces,reason='Additional physical reflectors remain possible.'))
     out['hypotheses'].append(dict(hypothesis_id='joint_fewer_parents_with_second_order_paths',surfaces=[all_surfaces[i] for i in kept],parent_indices=kept,score=best['score'],reason='These fixed parent planes explain the same selected recording candidates with physically valid first- or second-order paths. Extra planes are not required by this explanation; their absence is not established.'))
-    best_mask=sum(1<<i for i in kept);allowed=np.where((masks&best_mask)==masks)[0]
-    choices=allowed[np.argmin(np.where(compatible[:,allowed],residual[:,allowed]**2/denominator[:,None],np.inf),axis=1)]
+    best_mask=sum(1<<i for i in kept);allowed=(masks&best_mask)==masks
+    _,choices=_exclusive_physical_assignment(comparison_cost,path_groups,allowed,cancel,tolerance_score)
     path_evidence=[]
     for row,((k,i,l),choice) in enumerate(zip(links,choices)):
         path=paths[choice];observation=rows[i]
         path_evidence.append(dict(session_id=observation['session_id'],capture_id=observation['o']['capture_id'],candidate_id=observation['peaks'][l]['candidate_id'],reflection_order=len(path),parent_surface_ids=[all_surfaces[p]['surface_id'] for p in path],observed_delay_s=float(ys[row]),predicted_delay_s=float(ys[row]-residual[row,choice]),residual_s=float(residual[row,choice]),extent_and_occlusion_status='unknown'))
     out['hypotheses'][-1]['path_evidence']=path_evidence
-    out['parent_model_comparison']=dict(original_score=original_score,score_semantics='Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.',compatibility_semantics='Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.',enumerated_subsets=(1<<count)-1,sufficient_alternatives=sufficient,invariant_parent_indices=sorted(invariant),parent_surface_ids=[p['surface_id'] for p in all_surfaces],extent_and_occlusion_status='unknown',absence_established=False)
+    out['parent_model_comparison']=dict(original_score=original_score,score_semantics='Squared residuals on fixed selected evidence, normalized by fixed marginal detector/direct timing scale; not likelihood, chi-square significance, or posterior.',compatibility_semantics='Three marginal standard deviations with declared calibration, receiver, clock and conservative fitted-parent uncertainty; selection effects are not calibrated.',assignment_semantics='Exclusive candidate-to-predicted-arrival matching within each recording; coincident path predictions share one capacity.',coincident_arrival_tolerance_s=1e-9,enumerated_subsets=(1<<count)-1,sufficient_alternatives=sufficient,invariant_parent_indices=sorted(invariant),parent_surface_ids=[p['surface_id'] for p in all_surfaces],extent_and_occlusion_status='unknown',absence_established=False)
     out['surfaces']=[all_surfaces[i] for i in sorted(invariant)]
     for surface in out['surfaces']:surface['model_status']='invariant_across_tested_parent_subsets_conditional_on_path_model'
     out['status']='partial' if out['surfaces'] else 'ambiguous'
@@ -229,15 +275,22 @@ def _parent_subset_alternatives(out,qs,reference,sources,receivers,v,rows,links,
 def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,progress=None):
     start=time.perf_counter();out=_empty(bundle,method);out['processed_sessions']=processed_sessions
     try:
+        if not isinstance(bundle,dict):raise ValueError('bundle must be an object')
+        if bundle.get('schema_version','1.0')!='1.0':raise ValueError('unsupported bundle schema_version')
+        if not isinstance(processed_sessions,list):raise ValueError('processed_sessions must be an array')
         if method not in ('mapper','plane_grid'):raise ValueError('unknown joint method')
         single._check(cancel)
         count=len(processed_sessions)
         if not 2<=count<=MAX_SOURCES:raise ValueError('requires two to four source sessions')
         if bundle.get('scene_static') is not True or not bundle.get('coordinate_frame_id'):raise ValueError('static common coordinate frame must be declared')
         v,calcov=_calibration(bundle,count)
-        allrows=[];sources_list=[];prepared=[];groups={}
+        allrows=[];sources_list=[];prepared=[];groups={};session_ids=set()
         for a,item in enumerate(processed_sessions):
             session=item['session'];observations=item['observations']
+            sid=session.get('session_id')
+            if not isinstance(sid,str) or not sid:raise ValueError('source session_id must be a nonempty string')
+            if sid in session_ids:raise ValueError('duplicate source session_id')
+            session_ids.add(sid)
             if session.get('coordinate_frame_id')!=bundle['coordinate_frame_id']:raise ValueError('coordinate_frame_mismatch')
             cov=calcov[np.ix_([3*a,3*a+1,3*a+2,3*count],[3*a,3*a+1,3*a+2,3*count])]
             session=dict(session,effective_speed_m_s=v,source_effective_speed_covariance=cov.tolist())
@@ -333,26 +386,39 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
 
 
 def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
-    """Lossless raw recording entry point, with no supplied geometry fitting."""
-    from .storage import load_session,validate_session,read_recording_snapshot
+    """Bounded lossless recording entry; malformed input yields no_result."""
+    from .storage import load_session,validate_session,read_recording_snapshot,MAX_JSON_BYTES
     from .signals import process_recording
-    start=time.perf_counter();base=Path.cwd()
-    if isinstance(bundle,(str,Path)):
-        path=Path(bundle);base=path.parent;bundle=json.loads(path.read_text())
-    out=_empty(bundle,method);processed=[]
+    start=time.perf_counter();base=Path.cwd();out=_empty(bundle,method);processed=[]
     try:
-        entries=bundle.get('sessions',[])
+        single._check(cancel)
+        if isinstance(bundle,(str,Path)):
+            path=Path(bundle);base=path.parent
+            with path.open('rb') as stream:raw=stream.read(MAX_JSON_BYTES+1)
+            if len(raw)>MAX_JSON_BYTES:raise ValueError('bundle JSON exceeds byte limit')
+            bundle=json.loads(raw)
+        if not isinstance(bundle,dict):raise ValueError('bundle must be an object')
+        out=_empty(bundle,method)
+        if bundle.get('schema_version','1.0')!='1.0':raise ValueError('unsupported bundle schema_version')
+        if method not in ('mapper','plane_grid'):raise ValueError('unknown joint method')
+        entries=bundle.get('sessions')
+        if not isinstance(entries,list):raise ValueError('bundle sessions must be an array')
         if not 2<=len(entries)<=MAX_SOURCES:raise ValueError('requires two to four source sessions')
         _calibration(bundle,len(entries))
         if bundle.get('scene_static') is not True or not bundle.get('coordinate_frame_id'):raise ValueError('static common coordinate frame must be declared')
-        total_records=0
-        for a,entry in enumerate(entries):
+        sessions=[];session_ids=set();total_records=0
+        # Validate all acquisition identities/budgets before reading any WAV.
+        for entry in entries:
             single._check(cancel)
+            if not isinstance(entry,(str,dict)):raise ValueError('session entry must be a path or object')
             session=load_session(base/entry) if isinstance(entry,str) else validate_session(entry)
             if session.get('coordinate_frame_id')!=bundle['coordinate_frame_id']:raise ValueError('coordinate_frame_mismatch')
+            if session['session_id'] in session_ids:raise ValueError('duplicate source session_id')
+            session_ids.add(session['session_id']);sessions.append(session)
             total_records+=len(session['captures'])
             if total_records>MAX_RECORDS:raise ValueError('joint capture resource limit exceeded')
-            observations=[]
+        for a,session in enumerate(sessions):
+            single._check(cancel);observations=[]
             for capture in session['captures']:
                 single._check(cancel)
                 samples,rate,digest=read_recording_snapshot(capture['recording_path'])
@@ -370,5 +436,5 @@ def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
         return result
     except single._Cancelled:out['status']='cancelled'
     except (ValueError,KeyError,TypeError,OSError) as exc:out['diagnostics'].append(str(exc))
-    out['processed_sessions']=processed
+    out['processed_sessions']=processed;out['runtime_s']=time.perf_counter()-start
     return out

@@ -101,3 +101,72 @@ class ParentAlternativeTests(unittest.TestCase):
         out=infer_scene_bundle(data,bundle)
         self.assertEqual(len(out['surfaces']),7,out['diagnostics'])
         self.assertTrue(any(abs(p['normal'][0])>.99 and abs(abs(p['offset_m'])-4)<.01 for p in out['surfaces']))
+
+
+class ReviewRegressionTests(unittest.TestCase):
+    def test_equivalent_path_predictions_cannot_explain_two_peaks(self):
+        from echosight.multisource import _physical_path_groups,_exclusive_physical_assignment
+        observed=np.array([.00994,.01006])
+        # Two different labels predict the very same physical arrival.
+        residual=observed[:,None]-np.array([[.01,.01]])
+        groups=_physical_path_groups(residual,observed,[(0,0,0),(1,0,1)])
+        self.assertIsNone(_exclusive_physical_assignment((residual/2e-5)**2,groups,np.array([True,True])))
+        # Two genuinely different arrivals remain separately available.
+        residual=observed[:,None]-np.array([[.00994,.01006]])
+        groups=_physical_path_groups(residual,observed,[(0,0,0),(1,0,1)])
+        score,choices=_exclusive_physical_assignment((residual/2e-5)**2,groups,np.array([True,True]))
+        self.assertEqual(score,0.);self.assertEqual(len(set(choices)),2)
+
+    def test_public_doublet_has_no_reused_physical_paths(self):
+        from collections import Counter
+        from echosight.multisource import _predict
+        reference=np.array([1.2,1.1,.9]);poses=reference+np.array([[0,0,0],[.3,0,0],[0,.3,0],[.1,.1,.3]])
+        rng=np.random.default_rng(123);receivers=rng.uniform([.7,.6,.3],[3.8,3.4,2.8],(8,3));processed=[]
+        for a,s in enumerate(poses):
+            observations=[]
+            for i,r in enumerate(receivers):
+                images=[image_source(s,[1,0,0],0),image_source(s,[0,1,0],0)]
+                double=float(excess_delay(s,r,s*np.array([-1,-1,1]),343))
+                times=[float(excess_delay(s,r,q,343)) for q in images]+[double-60e-6,double+60e-6]
+                observations.append(dict(capture_id=str(i),status='ok',receiver_position_m=r.tolist(),receiver_position_std_m=.003,receiver_pose_group_id=f'r{i}',direct_std_s=2e-5,candidates=[dict(candidate_id=f'{i}-{k}',delay_s=t,delay_std_s=2e-5) for k,t in enumerate(times)]))
+            processed.append(dict(session=dict(session_id=f's{a}',coordinate_frame_id='frame',source_position_m=s.tolist()),observations=observations))
+        bundle=dict(schema_version='1.0',scene_id='doublet',scene_static=True,coordinate_frame_id='frame',shared_calibration=dict(effective_speed_m_s=343.,joint_source_effective_speed_covariance=np.diag([.003**2]*12+[.3**2]).tolist()))
+        out=infer_scene_bundle(processed,bundle)
+        alternative=next((h for h in out['hypotheses'] if h['hypothesis_id']=='joint_fewer_parents_with_second_order_paths'),None)
+        if alternative:
+            evidence=alternative['path_evidence']
+            keys=[(e['session_id'],e['capture_id'],tuple(e['parent_surface_ids'])) for e in evidence]
+            self.assertEqual(len(keys),len(set(keys)))
+            self.assertGreaterEqual(len(alternative['surfaces']),3)
+            byrecord={}
+            for e in evidence:byrecord.setdefault((e['session_id'],e['capture_id']),[]).append(e['predicted_delay_s'])
+            self.assertTrue(all(np.min(np.diff(sorted(times)))>1e-9 for times in byrecord.values() if len(times)>1))
+        else:
+            self.assertEqual(len(out['surfaces']),4)
+
+    def test_duplicate_source_session_ids_numerical_and_raw(self):
+        from echosight.multisource import process_scene_bundle
+        from unittest.mock import patch
+        data,bundle=fixture();data[1]['session']['session_id']=data[0]['session']['session_id']
+        numerical=infer_scene_bundle(data,bundle)
+        self.assertEqual(numerical['surfaces'],[]);self.assertIn('duplicate source session_id',numerical['diagnostics'])
+        bundle=copy.deepcopy(bundle);bundle['sessions']=[item['session'] for item in data]
+        with patch('echosight.storage.read_recording_snapshot',side_effect=AssertionError('must validate before reading')):
+            raw=process_scene_bundle(bundle)
+        self.assertEqual(raw['surfaces'],[]);self.assertIn('duplicate source session_id',raw['diagnostics'])
+
+    def test_malformed_raw_bundle_and_byte_cap(self):
+        import tempfile
+        from pathlib import Path
+        from echosight.multisource import process_scene_bundle
+        from echosight.storage import MAX_JSON_BYTES
+        for value in [None,[],{},dict(sessions='ab'),dict(schema_version='wrong',sessions=[])]:
+            result=process_scene_bundle(value);self.assertEqual(result['status'],'no_result');self.assertTrue(result['diagnostics'])
+        with tempfile.TemporaryDirectory() as directory:
+            p=Path(directory)/'bundle.json';p.write_text('{broken')
+            self.assertEqual(process_scene_bundle(p)['status'],'no_result')
+            p.write_bytes(b' '*(MAX_JSON_BYTES+1))
+            self.assertIn('byte limit',str(process_scene_bundle(p)['diagnostics']))
+            missing=Path(directory)/'missing.json'
+            self.assertEqual(process_scene_bundle(missing)['status'],'no_result')
+            self.assertEqual(process_scene_bundle(missing,cancel=lambda:True)['status'],'cancelled')
