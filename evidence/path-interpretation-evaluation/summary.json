@@ -1,0 +1,645 @@
+{
+  "original_mapper": {
+    "cases": 12,
+    "failed_cases": 6,
+    "true_surfaces": 38,
+    "false_surfaces": 8,
+    "missed_surfaces": 0,
+    "runtime_total_s": 15.76309879100154,
+    "runtime_median_s": 1.2090038745009224,
+    "runtime_max_s": 2.6546875830026693,
+    "peak_rss_max_bytes": 145145856,
+    "statuses": {
+      "partial": 10,
+      "no_result": 2
+    },
+    "point_modes": 0,
+    "paired_against_original": [
+      {
+        "family": "room",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "room",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_definitive_surfaces: observed 1, required 0",
+          "No supported compact-location mode within0.15m"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_definitive_surfaces: observed 1, required 0",
+          "No supported compact-location mode within0.15m"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.0,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ],
+        "point_modes": []
+      }
+    ]
+  },
+  "updated_mapper": {
+    "cases": 12,
+    "failed_cases": 2,
+    "true_surfaces": 38,
+    "false_surfaces": 4,
+    "missed_surfaces": 0,
+    "runtime_total_s": 23.110035375000734,
+    "runtime_median_s": 1.884481646004133,
+    "runtime_max_s": 4.511183499998879,
+    "peak_rss_max_bytes": 142278656,
+    "statuses": {
+      "partial": 6,
+      "ambiguous": 4,
+      "no_result": 2
+    },
+    "point_modes": 4,
+    "paired_against_original": [
+      {
+        "family": "room",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.5579174170052283,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "room",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.719712417005212,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.7499697909952374,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.7737219589980668,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 1.255173375007871,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              1.2505171334644836,
+              -6.425388713675134,
+              3.9304251559562102
+            ],
+            "position_error_m": 0.005294978931804641,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.07724086284120794,
+            "score": {
+              "Q": 1.444025590729208,
+              "rms_s": 1.7904085699481132e-05,
+              "max_error_s": 3.90608912920979e-05,
+              "max_marginal_standardized_residual": 0.5505358513018765
+            }
+          }
+        ]
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 1.2807640000028186,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              4.850930212307484,
+              -1.7877631981618685,
+              4.258817701179316
+            ],
+            "position_error_m": 0.02717160224182307,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 2.4905619494077764,
+            "score": {
+              "Q": 1.9903988429053567,
+              "rms_s": 2.189237102252995e-05,
+              "max_error_s": 5.0688347099356323e-05,
+              "max_marginal_standardized_residual": 0.710420190164831
+            }
+          }
+        ]
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.15619124999648193,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              1.2509638400143857,
+              -6.42713411741308,
+              3.9245320619285886
+            ],
+            "position_error_m": 0.009589305953938053,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.7765509915311225,
+            "score": {
+              "Q": 0.8358409207051286,
+              "rms_s": 1.4618401593445882e-05,
+              "max_error_s": 3.315125716164477e-05,
+              "max_marginal_standardized_residual": 0.4711990010452806
+            }
+          }
+        ]
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.08705204199213767,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              4.85113464491436,
+              -1.7878318215293083,
+              4.258874051842371
+            ],
+            "position_error_m": 0.02711396953759798,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 2.428585801947958,
+            "score": {
+              "Q": 1.9962882578227659,
+              "rms_s": 2.1922168200407247e-05,
+              "max_error_s": 5.0815215878772385e-05,
+              "max_marginal_standardized_residual": 0.7121917365990856
+            }
+          }
+        ]
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": -0.5149535830059904,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": -0.22005445899412734,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 2.171006958000362,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.33043541699589696,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ],
+        "point_modes": []
+      }
+    ]
+  },
+  "updated_plane_grid": {
+    "cases": 12,
+    "failed_cases": 2,
+    "true_surfaces": 29,
+    "false_surfaces": 1,
+    "missed_surfaces": 9,
+    "runtime_total_s": 22.04004070901283,
+    "runtime_median_s": 1.8021715214999858,
+    "runtime_max_s": 4.31578491700202,
+    "peak_rss_max_bytes": 154206208,
+    "statuses": {
+      "partial": 5,
+      "ambiguous": 4,
+      "no_result": 3
+    },
+    "point_modes": 4,
+    "paired_against_original": [
+      {
+        "family": "room",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.6677915420004865,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "room",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.8420511669974076,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1301,
+        "delta_true": -1,
+        "delta_false": 0,
+        "delta_missed": 1,
+        "delta_runtime_s": 0.4424647920022835,
+        "status": "partial",
+        "failures": [
+          "minimum_matched_surfaces: observed 6, required 7"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "finite_tilted_panel",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": 2.822847126000852,
+        "status": "partial",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.05209862500487361,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              1.2560047173773754,
+              -6.421955760225448,
+              3.9414264284164133
+            ],
+            "position_error_m": 0.014276997432844331,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.46845763014210906,
+            "score": {
+              "Q": 1.4764999435404822,
+              "rms_s": 1.7802216064849707e-05,
+              "max_error_s": 3.256409312276179e-05,
+              "max_marginal_standardized_residual": 0.45873188031245354
+            }
+          }
+        ]
+      },
+      {
+        "family": "ideal_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 1.117294084004243,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              4.855324634254385,
+              -1.7839888689250323,
+              4.253266489922586
+            ],
+            "position_error_m": 0.01929649730826775,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.6270222958539988,
+            "score": {
+              "Q": 1.2583785817156203,
+              "rms_s": 1.8610733003521646e-05,
+              "max_error_s": 4.243074958358746e-05,
+              "max_marginal_standardized_residual": 0.6081395033276683
+            }
+          }
+        ]
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.4820054160009022,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              1.2561764265191266,
+              -6.4221766359352745,
+              3.941746993000292
+            ],
+            "position_error_m": 0.014541670684127648,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.46140158002180526,
+            "score": {
+              "Q": 1.4472531659716685,
+              "rms_s": 1.790869795814445e-05,
+              "max_error_s": 3.209072964146728e-05,
+              "max_marginal_standardized_residual": 0.45201275785646117
+            }
+          }
+        ]
+      },
+      {
+        "family": "dispersive_point",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": -1,
+        "delta_missed": 0,
+        "delta_runtime_s": 0.6132211669973913,
+        "status": "ambiguous",
+        "failures": [],
+        "point_modes": [
+          {
+            "position_m": [
+              4.85548586584964,
+              -1.7840645368216275,
+              4.253394314553434
+            ],
+            "position_error_m": 0.01931397212589832,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.6526745858610851,
+            "score": {
+              "Q": 1.256253584366361,
+              "rms_s": 1.8602415903388073e-05,
+              "max_error_s": 4.2321052739650866e-05,
+              "max_marginal_standardized_residual": 0.6065597980482809
+            }
+          }
+        ]
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1301,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": -0.3887373750039842,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "diffuse_null",
+        "seed": 1307,
+        "delta_true": 0,
+        "delta_false": 0,
+        "delta_missed": 0,
+        "delta_runtime_s": -0.24926425099693006,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1301,
+        "delta_true": -2,
+        "delta_false": -1,
+        "delta_missed": 2,
+        "delta_runtime_s": 0.6845764990066527,
+        "status": "partial",
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ],
+        "point_modes": []
+      },
+      {
+        "family": "two_emitters",
+        "seed": 1307,
+        "delta_true": -6,
+        "delta_false": -2,
+        "delta_missed": 6,
+        "delta_runtime_s": -0.8094068740028888,
+        "status": "no_result",
+        "failures": [],
+        "point_modes": []
+      }
+    ]
+  },
+  "all_raw_unchanged": true,
+  "operational_error_files": [],
+  "source_sha256": {
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "docs/audit/PATH_ALTERNATIVES.md": "c4cbed9f97b727bc7d70e59e0ebdd850d51487715bcf618525b69f18d9a846a3"
+  },
+  "integrated_commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "baseline_commit": "be5c70ab14a450aaae28537b0905e77e9453be33"
+}

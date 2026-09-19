@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "verification": "injected_software_buffers",
+  "physical_validation": false,
+  "frame_count": 93120,
+  "sample_rate_hz": 48000,
+  "sample_values_identical": true,
+  "observation_objects_identical": true,
+  "extracted_candidate_count": 5,
+  "all_native_manifests_schema_valid": true,
+  "invalid_times_explicit_null": true,
+  "processing_eligible": true,
+  "control_processing_eligibility": {
+    "exact": true,
+    "gap": false,
+    "overlap": false,
+    "host-regression": false,
+    "host-inconsistent": false,
+    "invalid-timestamp": false
+  },
+  "package_sha256": "d447c0784ea6f30fa096e65a54603dafeb0b919dfc53b6c396477f19f2362de7"
+}

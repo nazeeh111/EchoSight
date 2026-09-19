@@ -1,0 +1,86 @@
+{
+  "methods": [
+    {
+      "name": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "method": "mapper"
+    },
+    {
+      "name": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "method": "mapper"
+    },
+    {
+      "name": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "method": "plane_grid"
+    }
+  ],
+  "cases": [
+    {
+      "family": "room",
+      "seed": 1301,
+      "manifest_sha256": "08cf48979318a4811645b40b6203fab7ccd75fee70116aa87046eaba4df36034"
+    },
+    {
+      "family": "room",
+      "seed": 1307,
+      "manifest_sha256": "8a01c1108b6baec23bfa8eafa43644aad4f1123b9b751405fb29b8e9e370fb8f"
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1301,
+      "manifest_sha256": "3dfe86d9fb21b923b15483f69f13c93b415dd99afe14c9e08a54e1f297c326e5"
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1307,
+      "manifest_sha256": "19d44bbc36bd39dde89583fef6d0272b0082c9645b1089cfb7ce5cfd1a60e0f6"
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1301,
+      "manifest_sha256": "83862175a30fa4b3ef84ef692f7e3293cccb07ad1b5bc38aed1beb7385a75da0"
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1307,
+      "manifest_sha256": "bd3d48d483d06ad1c7dfc8ba6abce64b024492cd2a0013e13b205db0427821e0"
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1301,
+      "manifest_sha256": "9f1f230ca33e854d2e2b6c4830ffd98df4013637826542a7bed563dfcdd3707c"
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1307,
+      "manifest_sha256": "83490f0b2db1073be523fcd9cc56872dbaf557c109c8437d292b9aa6488b0309"
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1301,
+      "manifest_sha256": "2e11e7c076b16ac14e6feb0e6c733fde45f31e225d09686eb33ea6c2822de70d"
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1307,
+      "manifest_sha256": "41ce00a8f867366f11c7d1b93b5bd16d8dd9ddf92215369fd794c597f8c6ec6d"
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1301,
+      "manifest_sha256": "d698a7e52d055bda48cd73390ed71815c31939dae9eb625c0a7901776480d152"
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1307,
+      "manifest_sha256": "349b5d29ba4496e2801b16c608d381e35888df8cb554c8c6cd2bf1ece416de21"
+    }
+  ],
+  "source_sha256": {
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "docs/audit/PATH_ALTERNATIVES.md": "c4cbed9f97b727bc7d70e59e0ebdd850d51487715bcf618525b69f18d9a846a3"
+  }
+}

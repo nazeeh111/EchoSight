@@ -1,0 +1,282 @@
+[
+  {
+    "family": "diffuse_null",
+    "seed": 1301,
+    "count": 48,
+    "maximum_error_ppm": 1.25413885543324,
+    "maximum_z": 1.1148948790625652,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-diffuse_null-1301-source-00",
+      "capture_id": "capture-04",
+      "error_ppm": 1.25413885543324,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.1148948790625652,
+      "pilot_rms_us": 0.1917039533252874,
+      "pilot_max_us": 0.28832471654638425,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "diffuse_null",
+    "seed": 1307,
+    "count": 48,
+    "maximum_error_ppm": 0.8741371999576586,
+    "maximum_z": 0.7770838799936706,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-diffuse_null-1307-source-00",
+      "capture_id": "capture-07",
+      "error_ppm": -0.8741371999576586,
+      "std_ppm": 1.1248942649084144,
+      "z": 0.7770838799936706,
+      "pilot_rms_us": 0.17545391593674906,
+      "pilot_max_us": 0.28364323512164447,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "dispersive_point",
+    "seed": 1301,
+    "count": 48,
+    "maximum_error_ppm": 1.254191498656354,
+    "maximum_z": 1.1149416774370937,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-dispersive_point-1301-source-00",
+      "capture_id": "capture-04",
+      "error_ppm": 1.254191498656354,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.1149416774370937,
+      "pilot_rms_us": 0.1917196811547477,
+      "pilot_max_us": 0.28831606924129005,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        },
+        {
+          "code": "no_resolved_echoes",
+          "message": "No repeatable separated echoes; this does not establish empty space."
+        }
+      ]
+    }
+  },
+  {
+    "family": "dispersive_point",
+    "seed": 1307,
+    "count": 48,
+    "maximum_error_ppm": 0.8741399355471913,
+    "maximum_z": 0.7770863118573736,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-dispersive_point-1307-source-00",
+      "capture_id": "capture-07",
+      "error_ppm": -0.8741399355471913,
+      "std_ppm": 1.1248942649084144,
+      "z": 0.7770863118573736,
+      "pilot_rms_us": 0.1754870908095208,
+      "pilot_max_us": 0.2837124202237362,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "finite_tilted_panel",
+    "seed": 1301,
+    "count": 48,
+    "maximum_error_ppm": 1.254181600796045,
+    "maximum_z": 1.1149328785120587,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-finite_tilted_panel-1301-source-00",
+      "capture_id": "capture-04",
+      "error_ppm": 1.254181600796045,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.1149328785120587,
+      "pilot_rms_us": 0.19173768525317972,
+      "pilot_max_us": 0.28838956644960945,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "finite_tilted_panel",
+    "seed": 1307,
+    "count": 48,
+    "maximum_error_ppm": 0.8741232568887369,
+    "maximum_z": 0.7770714849896629,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-finite_tilted_panel-1307-source-00",
+      "capture_id": "capture-07",
+      "error_ppm": -0.8741232568887369,
+      "std_ppm": 1.1248942649084144,
+      "z": 0.7770714849896629,
+      "pilot_rms_us": 0.17545024126697967,
+      "pilot_max_us": 0.2836375103676403,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "ideal_point",
+    "seed": 1301,
+    "count": 48,
+    "maximum_error_ppm": 1.2542101175405662,
+    "maximum_z": 1.1149582291120315,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-ideal_point-1301-source-00",
+      "capture_id": "capture-04",
+      "error_ppm": 1.2542101175405662,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.1149582291120315,
+      "pilot_rms_us": 0.19172490837643216,
+      "pilot_max_us": 0.28838855659074625,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "ideal_point",
+    "seed": 1307,
+    "count": 48,
+    "maximum_error_ppm": 0.8741051078509088,
+    "maximum_z": 0.7770553509952118,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-ideal_point-1307-source-00",
+      "capture_id": "capture-07",
+      "error_ppm": -0.8741051078509088,
+      "std_ppm": 1.1248942649084144,
+      "z": 0.7770553509952118,
+      "pilot_rms_us": 0.17546503165801655,
+      "pilot_max_us": 0.28364695747740143,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "room",
+    "seed": 1301,
+    "count": 48,
+    "maximum_error_ppm": 1.2541694658363411,
+    "maximum_z": 1.1149220908673154,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-room-1301-source-00",
+      "capture_id": "capture-04",
+      "error_ppm": 1.2541694658363411,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.1149220908673154,
+      "pilot_rms_us": 0.19173796386433073,
+      "pilot_max_us": 0.2883254128782653,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "room",
+    "seed": 1307,
+    "count": 48,
+    "maximum_error_ppm": 0.874107595860707,
+    "maximum_z": 0.7770575627673542,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-room-1307-source-00",
+      "capture_id": "capture-07",
+      "error_ppm": -0.874107595860707,
+      "std_ppm": 1.1248942649084144,
+      "z": 0.7770575627673542,
+      "pilot_rms_us": 0.17547434546843216,
+      "pilot_max_us": 0.2836659418470333,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "two_emitters",
+    "seed": 1301,
+    "count": 46,
+    "maximum_error_ppm": 40.56766558235836,
+    "maximum_z": 4.450047029175583,
+    "outside_3std": 1,
+    "max_error_record": {
+      "session_id": "paths-two_emitters-1301-source-01",
+      "capture_id": "capture-02",
+      "error_ppm": -40.56766558235836,
+      "std_ppm": 9.116233000772114,
+      "z": 4.450047029175583,
+      "pilot_rms_us": 16.883499789634175,
+      "pilot_max_us": 30.729504620907733,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  },
+  {
+    "family": "two_emitters",
+    "seed": 1307,
+    "count": 45,
+    "maximum_error_ppm": 2.1933363028026065,
+    "maximum_z": 1.9498155259785075,
+    "outside_3std": 0,
+    "max_error_record": {
+      "session_id": "paths-two_emitters-1307-source-00",
+      "capture_id": "capture-02",
+      "error_ppm": 2.1933363028026065,
+      "std_ppm": 1.1248942649084144,
+      "z": 1.9498155259785075,
+      "pilot_rms_us": 0.23746779410683372,
+      "pilot_max_us": 0.3378554148669721,
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ]
+    }
+  }
+]

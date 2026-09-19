@@ -1,0 +1,6643 @@
+{
+  "schema_version": "1.0",
+  "baseline_commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+  "integrated_commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+  "source_sha256": {
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "docs/audit/PATH_ALTERNATIVES.md": "c4cbed9f97b727bc7d70e59e0ebdd850d51487715bcf618525b69f18d9a846a3"
+  },
+  "cases": [
+    {
+      "family": "room",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-c6e0a1219885653f",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.037829608670578135,
+              "offset_error_m": 0.0013810819928503637,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-cdda2d145e8d0663",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.1998656031203412,
+              "offset_error_m": 0.01318008197039866,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-b7c37b4564ca7fbb",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.018900815593572245,
+              "offset_error_m": 0.004244527151138655,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-cd5fb73305c602c5",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.23978401501162008,
+              "offset_error_m": 0.017511410372900438,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-517b11aaf387eac7",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241310243818024,
+              "offset_error_m": 0.011284167429745473,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-93f47dde729303cc",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.30936754762355284,
+              "offset_error_m": 0.014277236137384186,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.3516522499994608,
+      "peak_process_rss_bytes": 144211968,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          5,
+          4,
+          6,
+          5,
+          2,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          4,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "15bca62df41a344f09daa7afd8d44b4fbe94698bf5ae8c3919763a0ce60d6d42",
+      "raw_unchanged": true
+    },
+    {
+      "family": "room",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-c6e0a1219885653f",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.037829608670578135,
+              "offset_error_m": 0.0013810819928503637,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-cdda2d145e8d0663",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.1998656031203412,
+              "offset_error_m": 0.01318008197039866,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-b7c37b4564ca7fbb",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.018900815593572245,
+              "offset_error_m": 0.004244527151138655,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-cd5fb73305c602c5",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.23978401501162008,
+              "offset_error_m": 0.017511410372900438,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-517b11aaf387eac7",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241310243818024,
+              "offset_error_m": 0.011284167429745473,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-93f47dde729303cc",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.30936754762355284,
+              "offset_error_m": 0.014277236137384186,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.909569667004689,
+      "peak_process_rss_bytes": 137363456,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-c6e0a1219885653f",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              12,
+              12,
+              10,
+              10
+            ],
+            "plane": {
+              "original_Q": 3.6458695033133655,
+              "refit_Q": 3.600697443640702,
+              "comparison_Q": 3.600697443640702,
+              "refit_parameters": [
+                -0.0002857415309305462,
+                6.900255565864981e-06,
+                -0.0006318655048725415
+              ]
+            },
+            "point_Q": 4813.391073051178,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-cdda2d145e8d0663",
+            "selected_records": 46,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 4.952484928350311,
+              "refit_Q": 4.871507053680186,
+              "comparison_Q": 4.871507053680186,
+              "refit_parameters": [
+                0.0004385932887855108,
+                0.00013960364651478252,
+                0.0006789567076551932
+              ]
+            },
+            "point_Q": 2950.7982423199314,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-b7c37b4564ca7fbb",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              10,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.758819960960187,
+              "refit_Q": 2.7199970316914404,
+              "comparison_Q": 2.7199970316914404,
+              "refit_parameters": [
+                -0.00024142837211337095,
+                0.00047532710188408596,
+                0.0005703896986146535
+              ]
+            },
+            "point_Q": 975.9373772107124,
+            "physical_parent_Q": 1037.921185110525,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-cd5fb73305c602c5",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 6.11385477501194,
+              "refit_Q": 6.053481522802511,
+              "comparison_Q": 6.053481522802511,
+              "refit_parameters": [
+                3.650857256037226e-05,
+                -0.001146502448716068,
+                0.0006305464577525095
+              ]
+            },
+            "point_Q": 3537.275504890127,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-517b11aaf387eac7",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              9,
+              12,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.709542916941103,
+              "refit_Q": 2.7051459606889763,
+              "comparison_Q": 2.7051459606889763,
+              "refit_parameters": [
+                7.99388812840853e-05,
+                0.00013660241141015734,
+                -0.00028731367309990153
+              ]
+            },
+            "point_Q": 444.05335562431407,
+            "physical_parent_Q": 972.3220272043649,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-93f47dde729303cc",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              10,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 4.037335325014595,
+              "refit_Q": 4.001629649355157,
+              "comparison_Q": 4.001629649355157,
+              "refit_parameters": [
+                -0.00020855947011480804,
+                -0.0009549037684962182,
+                -5.3061449559462016e-05
+              ]
+            },
+            "point_Q": 1591.8658292899108,
+            "physical_parent_Q": 2341.769493815197,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          6,
+          5,
+          4,
+          6,
+          5,
+          2,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          4,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "48d025aa898664a9b501fa1cd974c97638b65125873316f0f9fa3816819c12cd",
+      "raw_unchanged": true
+    },
+    {
+      "family": "room",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-b0aed7c952b387bd",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.17724190893758054,
+              "offset_error_m": 0.0038137856074542675,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-e61bb5cc40db391d",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.1998655934792179,
+              "offset_error_m": 0.013180081360870233,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-df49312f54f571af",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.018900813125346062,
+              "offset_error_m": 0.004244526724518138,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-114eaa4833aac423",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.2506620007405459,
+              "offset_error_m": 0.012241502892825773,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f7a3fdd42ef3f9f1",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241309912745826,
+              "offset_error_m": 0.011284168337224898,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-25cff583f6fd509d",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.7819343002590711,
+              "offset_error_m": 0.05790416048077926,
+              "horizontal": false,
+              "offset_95pct_covered": false,
+              "normal_95pct_covered": false
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 2.0194437919999473,
+      "peak_process_rss_bytes": 140148736,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-b0aed7c952b387bd",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              12,
+              12,
+              10,
+              10
+            ],
+            "plane": {
+              "original_Q": 4.323571265480126,
+              "refit_Q": 3.600430451862627,
+              "comparison_Q": 3.600430451862627,
+              "refit_parameters": [
+                -0.0025799681023806345,
+                0.0008830773053371091,
+                -0.001234900996217347
+              ]
+            },
+            "point_Q": 4812.361709426573,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-e61bb5cc40db391d",
+            "selected_records": 46,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 4.9524849209459525,
+              "refit_Q": 4.871507053639854,
+              "comparison_Q": 4.871507053639854,
+              "refit_parameters": [
+                0.00043859302264785563,
+                0.00013960344439607457,
+                0.0006789566178838597
+              ]
+            },
+            "point_Q": 2950.7982422561568,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-df49312f54f571af",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              10,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.7588199592483287,
+              "refit_Q": 2.7199970316707267,
+              "comparison_Q": 2.7199970316707267,
+              "refit_parameters": [
+                -0.0002414282870600899,
+                0.00047532699918994143,
+                0.0005703894343980172
+              ]
+            },
+            "point_Q": 975.9373772165105,
+            "physical_parent_Q": 1037.921021058102,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-114eaa4833aac423",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              10,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 4.013731064849844,
+              "refit_Q": 4.001256010739385,
+              "comparison_Q": 4.001256010739385,
+              "refit_parameters": [
+                -0.0005037933754446024,
+                4.412485527294626e-05,
+                2.8591331746862126e-05
+              ]
+            },
+            "point_Q": 1591.6913260563101,
+            "physical_parent_Q": 2342.454190774724,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-f7a3fdd42ef3f9f1",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              9,
+              12,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.7095429092479826,
+              "refit_Q": 2.705145960690445,
+              "comparison_Q": 2.705145960690445,
+              "refit_parameters": [
+                7.993868381196318e-05,
+                0.00013660150013762348,
+                -0.0002873133608912741
+              ]
+            },
+            "point_Q": 444.0533556208563,
+            "physical_parent_Q": 972.3204811354628,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-25cff583f6fd509d",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 10.673391580569575,
+              "refit_Q": 6.056601095434926,
+              "comparison_Q": 6.056601095434926,
+              "refit_parameters": [
+                0.00511189783078927,
+                -0.009306675799091849,
+                0.0009941475853816949
+              ]
+            },
+            "point_Q": 3541.9380399182674,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          6,
+          5,
+          4,
+          6,
+          5,
+          2,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          4,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "48d025aa898664a9b501fa1cd974c97638b65125873316f0f9fa3816819c12cd",
+      "raw_unchanged": true
+    },
+    {
+      "family": "room",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-d27ff9839150bbd8",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22505300879480492,
+              "offset_error_m": 0.008995688861286766,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-d6b10447073ed52c",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.27418743232864745,
+              "offset_error_m": 0.0073278680993111855,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f82b334225ac265a",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.39258126334355525,
+              "offset_error_m": 0.022046786755482384,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-5dd0c6c03e7243b3",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.2661864184411886,
+              "offset_error_m": 0.017650058939035596,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-275d63e614d27131",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.39004688125616416,
+              "offset_error_m": 0.0025300910927036346,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-a62da060b7f6e310",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2757902048272982,
+              "offset_error_m": 0.009753258478088611,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.2150727909975103,
+      "peak_process_rss_bytes": 132857856,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          4,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          4,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          6,
+          5,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "46daec3739363bbd1b9742206bfae28754e6eb5510bac8b3c84fcca03a0a407a",
+      "raw_unchanged": true
+    },
+    {
+      "family": "room",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-d27ff9839150bbd8",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22505300879480492,
+              "offset_error_m": 0.008995688861286766,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-d6b10447073ed52c",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.27418743232864745,
+              "offset_error_m": 0.0073278680993111855,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f82b334225ac265a",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.39258126334355525,
+              "offset_error_m": 0.022046786755482384,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-5dd0c6c03e7243b3",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.2661864184411886,
+              "offset_error_m": 0.017650058939035596,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-275d63e614d27131",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.39004688125616416,
+              "offset_error_m": 0.0025300910927036346,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-a62da060b7f6e310",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2757902048272982,
+              "offset_error_m": 0.009753258478088611,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.9347852080027224,
+      "peak_process_rss_bytes": 134545408,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-d27ff9839150bbd8",
+            "selected_records": 47,
+            "source_receiver_counts": [
+              12,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 7.495579006264828,
+              "refit_Q": 7.189477508487491,
+              "comparison_Q": 7.189477508487491,
+              "refit_parameters": [
+                0.0010868080768595253,
+                0.0005200972831761624,
+                0.0018653018778460395
+              ]
+            },
+            "point_Q": 912.0325249678151,
+            "physical_parent_Q": 1870.4517189486348,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-d6b10447073ed52c",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 7.421172938804348,
+              "refit_Q": 7.392154345963287,
+              "comparison_Q": 7.392154345963287,
+              "refit_parameters": [
+                0.000862182808369807,
+                -0.00010714918183212656,
+                6.339022034336812e-05
+              ]
+            },
+            "point_Q": 1861.9201613393607,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-f82b334225ac265a",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.741473789836891,
+              "refit_Q": 6.658746086172657,
+              "comparison_Q": 6.658746086172657,
+              "refit_parameters": [
+                -0.0006456796493203373,
+                1.557295689545733e-05,
+                -0.0010902749238984367
+              ]
+            },
+            "point_Q": 1382.0149142921907,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-5dd0c6c03e7243b3",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              12
+            ],
+            "plane": {
+              "original_Q": 3.501594625995516,
+              "refit_Q": 3.4820027338352273,
+              "comparison_Q": 3.4820027338352273,
+              "refit_parameters": [
+                3.618480259417698e-05,
+                7.947433847150852e-05,
+                -0.00072475798627585
+              ]
+            },
+            "point_Q": 400.4176612201039,
+            "physical_parent_Q": 1837.6724640405391,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-275d63e614d27131",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.2225086153986995,
+              "refit_Q": 5.216276856160258,
+              "comparison_Q": 5.216276856160258,
+              "refit_parameters": [
+                -0.00027215567317029457,
+                -0.0003322297437544791,
+                0.00015761201361625356
+              ]
+            },
+            "point_Q": 1065.1576401502693,
+            "physical_parent_Q": 4378.9212641196955,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-a62da060b7f6e310",
+            "selected_records": 38,
+            "source_receiver_counts": [
+              10,
+              9,
+              9,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.274004783490244,
+              "refit_Q": 6.243016087524931,
+              "comparison_Q": 6.243016087524931,
+              "refit_parameters": [
+                -0.00023757200651302064,
+                -0.00075836718990974,
+                6.062638297316481e-05
+              ]
+            },
+            "point_Q": 2871.0188179892666,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          4,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          4,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          6,
+          5,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "1131757c7b6ef3be8506675fbfa0e6388715e5875319b7e43905de6e3ada2dce",
+      "raw_unchanged": true
+    },
+    {
+      "family": "room",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-784e8758b4ab70b6",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.2741874265144686,
+              "offset_error_m": 0.007327868684265937,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-9424e9772c0415c6",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22505299663909412,
+              "offset_error_m": 0.008995690936162148,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-657d6c4848c55b6d",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.3925812921495642,
+              "offset_error_m": 0.022046788614478285,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f474903788e3f0eb",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.2661864437593138,
+              "offset_error_m": 0.01765006093397492,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-21b7a9171e351a10",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3900468936232102,
+              "offset_error_m": 0.0025300900125202475,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-421b0c8f07f1f9c6",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2757901783596144,
+              "offset_error_m": 0.009753257704486984,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 2.057123957994918,
+      "peak_process_rss_bytes": 138395648,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-784e8758b4ab70b6",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 7.4211729336875845,
+              "refit_Q": 7.392154346032276,
+              "comparison_Q": 7.392154346032276,
+              "refit_parameters": [
+                0.0008621827414806101,
+                -0.00010714917247304962,
+                6.339024409428451e-05
+              ]
+            },
+            "point_Q": 1861.9201613630667,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-9424e9772c0415c6",
+            "selected_records": 47,
+            "source_receiver_counts": [
+              12,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 7.495579003885092,
+              "refit_Q": 7.189477509067811,
+              "comparison_Q": 7.189477509067811,
+              "refit_parameters": [
+                0.001086808095851511,
+                0.0005200971178953252,
+                0.0018653021123305263
+              ]
+            },
+            "point_Q": 912.032525032808,
+            "physical_parent_Q": 1870.4517966328874,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-657d6c4848c55b6d",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.741473832882841,
+              "refit_Q": 6.658746085856532,
+              "comparison_Q": 6.658746085856532,
+              "refit_parameters": [
+                -0.0006456803607856176,
+                1.5573497247466863e-05,
+                -0.001090275295151347
+              ]
+            },
+            "point_Q": 1382.0149142228302,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-f474903788e3f0eb",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              12
+            ],
+            "plane": {
+              "original_Q": 3.5015946244686966,
+              "refit_Q": 3.482002734267145,
+              "comparison_Q": 3.482002734267145,
+              "refit_parameters": [
+                3.618452361748676e-05,
+                7.947556546262247e-05,
+                -0.0007247585972984769
+              ]
+            },
+            "point_Q": 400.41766123998053,
+            "physical_parent_Q": 1837.6712031901104,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-21b7a9171e351a10",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.222508622540108,
+              "refit_Q": 5.216276856090551,
+              "comparison_Q": 5.216276856090551,
+              "refit_parameters": [
+                -0.0002721555746911054,
+                -0.0003322295628566118,
+                0.000157611824696615
+              ]
+            },
+            "point_Q": 1065.1576401222428,
+            "physical_parent_Q": 4378.921206496036,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-421b0c8f07f1f9c6",
+            "selected_records": 38,
+            "source_receiver_counts": [
+              10,
+              9,
+              9,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.274004765593507,
+              "refit_Q": 6.243016087265759,
+              "comparison_Q": 6.243016087265759,
+              "refit_parameters": [
+                -0.0002375717169255031,
+                -0.0007583671141746037,
+                6.0626195670275486e-05
+              ]
+            },
+            "point_Q": 2871.018817858167,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          5,
+          5,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          4,
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          4,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          6,
+          5,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "1131757c7b6ef3be8506675fbfa0e6388715e5875319b7e43905de6e3ada2dce",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 7,
+          "truth_count": 7,
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-c6e81fa5b93c49ea",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.037831809464581166,
+              "offset_error_m": 0.001381243327427839,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f80bbbfa0ae98968",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.1934065203606688,
+              "offset_error_m": 0.012775059192408733,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-2ee31e2016054ada",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.030215880522672284,
+              "offset_error_m": 0.005618971091009506,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-78d6df85c53af0b5",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.23183645276831336,
+              "offset_error_m": 0.016948763371895048,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-604ed2d54733d9ea",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241475197145504,
+              "offset_error_m": 0.011284475894880686,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-30b7b6749545af7e",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.30919208908299645,
+              "offset_error_m": 0.014239661752240007,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-4c6c0c12f97a2c5a",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.1293157837134074,
+              "offset_error_m": 0.005136751703450848,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.643159375002142,
+      "peak_process_rss_bytes": 143638528,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          7,
+          5,
+          4,
+          7,
+          6,
+          2,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          5,
+          5,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          4,
+          7,
+          3,
+          7,
+          7,
+          7,
+          7,
+          6,
+          7,
+          7
+        ]
+      ],
+      "processed_input_sha256": "911b826d0ed1a31af184fff46eec031a1ca475fe2d1ea0d68bf0dd38c54c5a6b",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 7,
+          "truth_count": 7,
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-c6e81fa5b93c49ea",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.037831809464581166,
+              "offset_error_m": 0.001381243327427839,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f80bbbfa0ae98968",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.1934065203606688,
+              "offset_error_m": 0.012775059192408733,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-2ee31e2016054ada",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.030215880522672284,
+              "offset_error_m": 0.005618971091009506,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-78d6df85c53af0b5",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.23183645276831336,
+              "offset_error_m": 0.016948763371895048,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-604ed2d54733d9ea",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241475197145504,
+              "offset_error_m": 0.011284475894880686,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-30b7b6749545af7e",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.30919208908299645,
+              "offset_error_m": 0.014239661752240007,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-4c6c0c12f97a2c5a",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.1293157837134074,
+              "offset_error_m": 0.005136751703450848,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 2.3931291659973795,
+      "peak_process_rss_bytes": 141934592,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-c6e81fa5b93c49ea",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              12,
+              12,
+              10,
+              10
+            ],
+            "plane": {
+              "original_Q": 3.6458837722120534,
+              "refit_Q": 3.600711078259649,
+              "comparison_Q": 3.600711078259649,
+              "refit_parameters": [
+                -0.0002857361984147416,
+                6.902698537712549e-06,
+                -0.000631872286266824
+              ]
+            },
+            "point_Q": 4813.3912052067235,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-f80bbbfa0ae98968",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              10,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 4.917367953148156,
+              "refit_Q": 4.841348381866231,
+              "comparison_Q": 4.841348381866231,
+              "refit_parameters": [
+                0.000418600436826707,
+                0.00013778416547426722,
+                0.0006710931717589396
+              ]
+            },
+            "point_Q": 2929.844298106693,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-2ee31e2016054ada",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              12,
+              11,
+              10
+            ],
+            "plane": {
+              "original_Q": 2.302713125993289,
+              "refit_Q": 2.265688712450488,
+              "comparison_Q": 2.265688712450488,
+              "refit_parameters": [
+                -0.0002813744775237023,
+                0.0004970091957424509,
+                0.0005122643114001266
+              ]
+            },
+            "point_Q": 957.5096143485895,
+            "physical_parent_Q": 1131.1792677323492,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-78d6df85c53af0b5",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 6.243457432630004,
+              "refit_Q": 6.180899771059569,
+              "comparison_Q": 6.180899771059569,
+              "refit_parameters": [
+                8.67486548170414e-05,
+                -0.0011967071569411768,
+                0.0006318702042836198
+              ]
+            },
+            "point_Q": 3539.522684071081,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-604ed2d54733d9ea",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              9,
+              12,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.7096316238050187,
+              "refit_Q": 2.7052346786518346,
+              "comparison_Q": 2.7052346786518346,
+              "refit_parameters": [
+                7.993330122911985e-05,
+                0.00013660841343848075,
+                -0.0002873168863846673
+              ]
+            },
+            "point_Q": 444.05367632370246,
+            "physical_parent_Q": 972.3225818993088,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-30b7b6749545af7e",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              10,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 4.0319446559156775,
+              "refit_Q": 3.996438891926451,
+              "comparison_Q": 3.996438891926451,
+              "refit_parameters": [
+                -0.0002114203201433097,
+                -0.0009532958301356754,
+                -5.093499839812355e-05
+              ]
+            },
+            "point_Q": 1591.7625924893503,
+            "physical_parent_Q": 2341.657387286162,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-4c6c0c12f97a2c5a",
+            "selected_records": 38,
+            "source_receiver_counts": [
+              10,
+              11,
+              7,
+              10
+            ],
+            "plane": {
+              "original_Q": 5.094219645021503,
+              "refit_Q": 5.086925723584697,
+              "comparison_Q": 5.086925723584697,
+              "refit_parameters": [
+                0.0001337376368626837,
+                2.0412007942285722e-05,
+                0.00037138416380673553
+              ]
+            },
+            "point_Q": 690.6367043535606,
+            "physical_parent_Q": 363.94203339871547,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          7,
+          5,
+          4,
+          7,
+          6,
+          2,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          5,
+          5,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          4,
+          7,
+          3,
+          7,
+          7,
+          7,
+          7,
+          6,
+          7,
+          7
+        ]
+      ],
+      "processed_input_sha256": "1273c9de116b92d4f6842d18ed1e46f63e61ccc4f2d4497620daf88a9f10bbb7",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 6,
+          "truth_count": 7,
+          "matched_count": 6,
+          "false_surfaces": 0,
+          "missed_surfaces": 1,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "matches": [
+            {
+              "predicted_id": "reflector-ef168f04142a6f2f",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.1809380560120069,
+              "offset_error_m": 0.008990524624659324,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-497c0477a87733af",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.19340652700713282,
+              "offset_error_m": 0.012775058686867347,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-5b035510b10b8ae9",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.030216008271319577,
+              "offset_error_m": 0.005618978965755694,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-4d8fddea69be44a5",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.18241474704837404,
+              "offset_error_m": 0.011284475589471654,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-e8569c1f9206c582",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.2640727348313088,
+              "offset_error_m": 0.008215468891826339,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-27e903816ff3c2ab",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.12009158849498942,
+              "offset_error_m": 0.001729675417889709,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": [
+          "minimum_matched_surfaces: observed 6, required 7"
+        ]
+      },
+      "runtime_s": 2.0856241670044255,
+      "peak_process_rss_bytes": 139001856,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-ef168f04142a6f2f",
+            "selected_records": 46,
+            "source_receiver_counts": [
+              12,
+              12,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 15.044515732666712,
+              "refit_Q": 14.771650935952172,
+              "comparison_Q": 14.771650935952172,
+              "refit_parameters": [
+                -0.000541052824429297,
+                -0.00023695475650035026,
+                -0.0015160734486033439
+              ]
+            },
+            "point_Q": 4813.776273875163,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-497c0477a87733af",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              10,
+              12,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 4.917367942307324,
+              "refit_Q": 4.841348381834064,
+              "comparison_Q": 4.841348381834064,
+              "refit_parameters": [
+                0.0004186004524177448,
+                0.00013778395669390153,
+                0.0006710931870875046
+              ]
+            },
+            "point_Q": 2929.844298193521,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-5b035510b10b8ae9",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              12,
+              11,
+              10
+            ],
+            "plane": {
+              "original_Q": 2.3027131801656435,
+              "refit_Q": 2.265688712752618,
+              "comparison_Q": 2.265688712752618,
+              "refit_parameters": [
+                -0.0002813736184447801,
+                0.0004970110714495512,
+                0.0005122636922921614
+              ]
+            },
+            "point_Q": 957.5096142586877,
+            "physical_parent_Q": 1131.179268170484,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-4d8fddea69be44a5",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              9,
+              12,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.7096316224888035,
+              "refit_Q": 2.7052346786677264,
+              "comparison_Q": 2.7052346786677264,
+              "refit_parameters": [
+                7.993313764230022e-05,
+                0.00013660811951724834,
+                -0.0002873166950520588
+              ]
+            },
+            "point_Q": 444.0536763236434,
+            "physical_parent_Q": 972.3227193813836,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-e8569c1f9206c582",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              10,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 10.258366387328264,
+              "refit_Q": 10.190314186943667,
+              "comparison_Q": 10.190314186943667,
+              "refit_parameters": [
+                -0.000594430692603872,
+                -0.0008035467712212628,
+                -0.0004773865765223111
+              ]
+            },
+            "point_Q": 1596.9862130760262,
+            "physical_parent_Q": 2539.603363293471,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-27e903816ff3c2ab",
+            "selected_records": 39,
+            "source_receiver_counts": [
+              10,
+              11,
+              8,
+              10
+            ],
+            "plane": {
+              "original_Q": 5.725229225151937,
+              "refit_Q": 5.711426889717144,
+              "comparison_Q": 5.711426889717144,
+              "refit_parameters": [
+                -1.677274819502769e-05,
+                0.00012919463475975513,
+                0.0004499105808736635
+              ]
+            },
+            "point_Q": 693.257363375412,
+            "physical_parent_Q": 428.96075660434286,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          7,
+          5,
+          4,
+          7,
+          6,
+          2,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          5,
+          5,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          4,
+          7,
+          3,
+          7,
+          7,
+          7,
+          7,
+          6,
+          7,
+          7
+        ]
+      ],
+      "processed_input_sha256": "1273c9de116b92d4f6842d18ed1e46f63e61ccc4f2d4497620daf88a9f10bbb7",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 7,
+          "truth_count": 7,
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-b98736258d7422d9",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22655270807462616,
+              "offset_error_m": 0.008922116112213274,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-38c5cd3202fd1924",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.20532660401796787,
+              "offset_error_m": 0.006403929557140531,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-0b7aeb6c4afc8365",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.39498654915782005,
+              "offset_error_m": 0.022148405028619478,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-e8673bc0a827e12c",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.26618734156878865,
+              "offset_error_m": 0.017650154773148685,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-44cab468db30084d",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.39361359380494715,
+              "offset_error_m": 0.0032679896837601863,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-808fc795fc637746",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.27446024580566547,
+              "offset_error_m": 0.009710865358481868,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-de07249800c8e47f",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.20265416766106603,
+              "offset_error_m": 0.007702965063512757,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.492937791001168,
+      "peak_process_rss_bytes": 133496832,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          7,
+          7,
+          7,
+          6,
+          5,
+          6,
+          7,
+          5,
+          7,
+          7,
+          6,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          5,
+          7,
+          7,
+          7,
+          4,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          4,
+          5,
+          7,
+          7
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ]
+      ],
+      "processed_input_sha256": "e07ce06039008067bac0c53067881decc329c37832234e4a92470b82493086f7",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 7,
+          "truth_count": 7,
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-b98736258d7422d9",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22655270807462616,
+              "offset_error_m": 0.008922116112213274,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-38c5cd3202fd1924",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.20532660401796787,
+              "offset_error_m": 0.006403929557140531,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-0b7aeb6c4afc8365",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.39498654915782005,
+              "offset_error_m": 0.022148405028619478,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-e8673bc0a827e12c",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.26618734156878865,
+              "offset_error_m": 0.017650154773148685,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-44cab468db30084d",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.39361359380494715,
+              "offset_error_m": 0.0032679896837601863,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-808fc795fc637746",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.27446024580566547,
+              "offset_error_m": 0.009710865358481868,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-de07249800c8e47f",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.20265416766106603,
+              "offset_error_m": 0.007702965063512757,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 2.266659749999235,
+      "peak_process_rss_bytes": 135872512,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-b98736258d7422d9",
+            "selected_records": 47,
+            "source_receiver_counts": [
+              12,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 7.492146149667773,
+              "refit_Q": 7.1800291696282885,
+              "comparison_Q": 7.1800291696282885,
+              "refit_parameters": [
+                0.001088930265955165,
+                0.0005339109713313835,
+                0.001882457861935845
+              ]
+            },
+            "point_Q": 909.6925315100063,
+            "physical_parent_Q": 1864.904966632131,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-38c5cd3202fd1924",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 8.17733353363761,
+              "refit_Q": 8.135637841633022,
+              "comparison_Q": 8.135637841633022,
+              "refit_parameters": [
+                0.00104296864958663,
+                -0.0001272990136477513,
+                0.000100799074463151
+              ]
+            },
+            "point_Q": 1861.1753385785823,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-0b7aeb6c4afc8365",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.733594853849749,
+              "refit_Q": 6.652197201038179,
+              "comparison_Q": 6.652197201038179,
+              "refit_parameters": [
+                -0.0006463998283743137,
+                3.9140178824272066e-06,
+                -0.0010757197918750047
+              ]
+            },
+            "point_Q": 1380.2367129107045,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-e8673bc0a827e12c",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              12
+            ],
+            "plane": {
+              "original_Q": 3.5016282630369524,
+              "refit_Q": 3.482036327519546,
+              "comparison_Q": 3.482036327519546,
+              "refit_parameters": [
+                3.6181132191002425e-05,
+                7.948509406724476e-05,
+                -0.0007247660805802775
+              ]
+            },
+            "point_Q": 400.4174023745463,
+            "physical_parent_Q": 1837.6702949927005,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-44cab468db30084d",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.128738975746815,
+              "refit_Q": 5.124184683593072,
+              "comparison_Q": 5.124184683593072,
+              "refit_parameters": [
+                -0.00020961618010360326,
+                -0.00032382150051034667,
+                7.467901476715303e-05
+              ]
+            },
+            "point_Q": 1049.9266407902235,
+            "physical_parent_Q": 4330.45485871133,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-808fc795fc637746",
+            "selected_records": 38,
+            "source_receiver_counts": [
+              10,
+              9,
+              9,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.232637743386292,
+              "refit_Q": 6.201867045997379,
+              "comparison_Q": 6.201867045997379,
+              "refit_parameters": [
+                -0.00023656440369162292,
+                -0.0007559847026611951,
+                6.093189591674328e-05
+              ]
+            },
+            "point_Q": 2871.0255602965312,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-de07249800c8e47f",
+            "selected_records": 37,
+            "source_receiver_counts": [
+              10,
+              10,
+              8,
+              9
+            ],
+            "plane": {
+              "original_Q": 2.8605434512378247,
+              "refit_Q": 2.832982969351522,
+              "comparison_Q": 2.832982969351522,
+              "refit_parameters": [
+                5.907835401406663e-05,
+                -0.00021682730168292623,
+                -0.0005654202584628854
+              ]
+            },
+            "point_Q": 691.6737725982154,
+            "physical_parent_Q": 2662.0356392479307,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          7,
+          7,
+          7,
+          6,
+          5,
+          6,
+          7,
+          5,
+          7,
+          7,
+          6,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          5,
+          7,
+          7,
+          7,
+          4,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          4,
+          5,
+          7,
+          7
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ]
+      ],
+      "processed_input_sha256": "1b59e76c8ca3bdac9526c41cc2384977c84356941e0cf945940e4947ebf2b901",
+      "raw_unchanged": true
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 7,
+          "truth_count": 7,
+          "matched_count": 7,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-9a84f5fdb68fb0dd",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.20532659725324273,
+              "offset_error_m": 0.006403929522084351,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-0d811d902d855c42",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.22655263681362045,
+              "offset_error_m": 0.008922120699429215,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-848231311467d958",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.39498655082520084,
+              "offset_error_m": 0.022148405150854422,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-94da9b8633c9d245",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.26618726861049175,
+              "offset_error_m": 0.017650148863679327,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-9bc80b6791c88b9f",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3936135798350979,
+              "offset_error_m": 0.0032679903387612397,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-68dd3a43dfd495e5",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2744602794210789,
+              "offset_error_m": 0.009710865880703246,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-94396dece12ab706",
+              "truth_id": "finite-panel",
+              "normal_error_deg": 0.20265416501553088,
+              "offset_error_m": 0.0077029653108153795,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 4.31578491700202,
+      "peak_process_rss_bytes": 148258816,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-9a84f5fdb68fb0dd",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 8.177333523744984,
+              "refit_Q": 8.135637841635202,
+              "comparison_Q": 8.135637841635202,
+              "refit_parameters": [
+                0.001042968112194783,
+                -0.00012729861615533669,
+                0.00010079872550664748
+              ]
+            },
+            "point_Q": 1861.1753385909074,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-0d811d902d855c42",
+            "selected_records": 47,
+            "source_receiver_counts": [
+              12,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 7.49214607577966,
+              "refit_Q": 7.180029170994342,
+              "comparison_Q": 7.180029170994342,
+              "refit_parameters": [
+                0.0010889296521231985,
+                0.0005339092791622825,
+                0.0018824584095481884
+              ]
+            },
+            "point_Q": 909.6925316796345,
+            "physical_parent_Q": 1864.9050771721527,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-848231311467d958",
+            "selected_records": 45,
+            "source_receiver_counts": [
+              11,
+              12,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.7335948607627465,
+              "refit_Q": 6.652197200982126,
+              "comparison_Q": 6.652197200982126,
+              "refit_parameters": [
+                -0.0006463999456537258,
+                3.914268032182967e-06,
+                -0.001075719891033299
+              ]
+            },
+            "point_Q": 1380.2367129079373,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-94da9b8633c9d245",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              12
+            ],
+            "plane": {
+              "original_Q": 3.501628266120272,
+              "refit_Q": 3.4820363262584877,
+              "comparison_Q": 3.4820363262584877,
+              "refit_parameters": [
+                3.6181782930603776e-05,
+                7.948294043334914e-05,
+                -0.0007247647219979145
+              ]
+            },
+            "point_Q": 400.417402317148,
+            "physical_parent_Q": 1837.6731323060121,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-9bc80b6791c88b9f",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              11,
+              11,
+              10,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.12873896873947,
+              "refit_Q": 5.1241846836412135,
+              "comparison_Q": 5.1241846836412135,
+              "refit_parameters": [
+                -0.0002096157991097189,
+                -0.00032382106022288106,
+                7.467885064051762e-05
+              ]
+            },
+            "point_Q": 1049.9266408188187,
+            "physical_parent_Q": 4330.45478198366,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-68dd3a43dfd495e5",
+            "selected_records": 38,
+            "source_receiver_counts": [
+              10,
+              9,
+              9,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.232637781629541,
+              "refit_Q": 6.201867046241895,
+              "comparison_Q": 6.201867046241895,
+              "refit_parameters": [
+                -0.0002365647300865964,
+                -0.0007559848778305926,
+                6.0932097825576746e-05
+              ]
+            },
+            "point_Q": 2871.025560459298,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-94396dece12ab706",
+            "selected_records": 37,
+            "source_receiver_counts": [
+              10,
+              10,
+              8,
+              9
+            ],
+            "plane": {
+              "original_Q": 2.860543451299444,
+              "refit_Q": 2.8329829693665203,
+              "comparison_Q": 2.8329829693665203,
+              "refit_parameters": [
+                5.907851021963049e-05,
+                -0.0002168273844772713,
+                -0.0005654200898694816
+              ]
+            },
+            "point_Q": 691.6737726000548,
+            "physical_parent_Q": 2662.0351479180094,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          7,
+          7,
+          7,
+          6,
+          5,
+          6,
+          7,
+          5,
+          7,
+          7,
+          6,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          5,
+          7,
+          7,
+          7,
+          4,
+          7,
+          6,
+          7,
+          6
+        ],
+        [
+          6,
+          7,
+          6,
+          7,
+          6,
+          7,
+          6,
+          6,
+          4,
+          5,
+          7,
+          7
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          7,
+          7,
+          7,
+          6,
+          7,
+          6
+        ]
+      ],
+      "processed_input_sha256": "1b59e76c8ca3bdac9526c41cc2384977c84356941e0cf945940e4947ebf2b901",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 1,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 1,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": 0.0,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": true,
+        "mismatch_unresolved": false,
+        "failures": [
+          "maximum_definitive_surfaces: observed 1, required 0",
+          "No supported compact-location mode within0.15m"
+        ]
+      },
+      "runtime_s": 0.6042202499957057,
+      "peak_process_rss_bytes": 142065664,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "15ad08059a0a6e017a2a519c907ec46220f893d757f7e57e0a51eac29874ffa4",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              1.2505171334644836,
+              -6.425388713675134,
+              3.9304251559562102
+            ],
+            "position_error_m": 0.005294978931804641,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.07724086284120794,
+            "score": {
+              "Q": 1.444025590729208,
+              "rms_s": 1.7904085699481132e-05,
+              "max_error_s": 3.90608912920979e-05,
+              "max_marginal_standardized_residual": 0.5505358513018765
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.005294978931804641,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.8593936250035767,
+      "peak_process_rss_bytes": 142000128,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-4aab377a168cf8dd",
+            "selected_records": 23,
+            "source_receiver_counts": [
+              5,
+              7,
+              6,
+              5
+            ],
+            "plane": {
+              "original_Q": 71.10161661117998,
+              "refit_Q": 70.23875696989953,
+              "comparison_Q": 70.23875696989953,
+              "refit_parameters": [
+                -0.006055268533291804,
+                -0.0009465923446838077,
+                -0.0015953726499391627
+              ]
+            },
+            "point_Q": 1.444025590729208,
+            "physical_parent_Q": 364.78654784422173,
+            "alternative_ids": [
+              "compact-location-6f24116216d0b602"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "1464a146df8e0599f4b3dc0feb013f0f960f722f6ef4e688ab9d7d57178f0bf8",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              1.2560047173773754,
+              -6.421955760225448,
+              3.9414264284164133
+            ],
+            "position_error_m": 0.014276997432844331,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.46845763014210906,
+            "score": {
+              "Q": 1.4764999435404822,
+              "rms_s": 1.7802216064849707e-05,
+              "max_error_s": 3.256409312276179e-05,
+              "max_marginal_standardized_residual": 0.45873188031245354
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.014276997432844331,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.6563188750005793,
+      "peak_process_rss_bytes": 134070272,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-0350e27e8c35643b",
+            "selected_records": 24,
+            "source_receiver_counts": [
+              5,
+              7,
+              6,
+              6
+            ],
+            "plane": {
+              "original_Q": 92.98541953908507,
+              "refit_Q": 92.8391382832572,
+              "comparison_Q": 92.8391382832572,
+              "refit_parameters": [
+                0.00014810153415794299,
+                -0.0006952958957841598,
+                -0.0017169282570641642
+              ]
+            },
+            "point_Q": 1.4764999435404822,
+            "physical_parent_Q": 610.4535179414797,
+            "alternative_ids": [
+              "compact-location-39a8536d292a0f0b"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "1464a146df8e0599f4b3dc0feb013f0f960f722f6ef4e688ab9d7d57178f0bf8",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 1,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 1,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": 0.0,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": true,
+        "mismatch_unresolved": false,
+        "failures": [
+          "maximum_definitive_surfaces: observed 1, required 0",
+          "No supported compact-location mode within0.15m"
+        ]
+      },
+      "runtime_s": 0.4951318329985952,
+      "peak_process_rss_bytes": 130662400,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "ca3fe7dd6438657cff78446eeff5a7480d22fb84e4e31857220b9adf81d40be9",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              4.850930212307484,
+              -1.7877631981618685,
+              4.258817701179316
+            ],
+            "position_error_m": 0.02717160224182307,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 2.4905619494077764,
+            "score": {
+              "Q": 1.9903988429053567,
+              "rms_s": 2.189237102252995e-05,
+              "max_error_s": 5.0688347099356323e-05,
+              "max_marginal_standardized_residual": 0.710420190164831
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.02717160224182307,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.7758958330014138,
+      "peak_process_rss_bytes": 142278656,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-5709e1bbfa08d71f",
+            "selected_records": 23,
+            "source_receiver_counts": [
+              7,
+              6,
+              5,
+              5
+            ],
+            "plane": {
+              "original_Q": 61.378851478630835,
+              "refit_Q": 59.604375642579335,
+              "comparison_Q": 59.604375642579335,
+              "refit_parameters": [
+                -0.005769764326032945,
+                0.0005257866315115805,
+                0.004222106028346124
+              ]
+            },
+            "point_Q": 1.9903988429053567,
+            "physical_parent_Q": 381.03216754423767,
+            "alternative_ids": [
+              "compact-location-2fccb524c0e51165"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "6153e5d4285c433657712da190a89ee98561cc4c556b5e7db4b009b220093a7a",
+      "raw_unchanged": true
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              4.855324634254385,
+              -1.7839888689250323,
+              4.253266489922586
+            ],
+            "position_error_m": 0.01929649730826775,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.6270222958539988,
+            "score": {
+              "Q": 1.2583785817156203,
+              "rms_s": 1.8610733003521646e-05,
+              "max_error_s": 4.243074958358746e-05,
+              "max_marginal_standardized_residual": 0.6081395033276683
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.01929649730826775,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.612425917002838,
+      "peak_process_rss_bytes": 143753216,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-64d4dfb3e0c823e8",
+            "selected_records": 22,
+            "source_receiver_counts": [
+              6,
+              4,
+              6,
+              6
+            ],
+            "plane": {
+              "original_Q": 60.619556788499665,
+              "refit_Q": 60.06978059997221,
+              "comparison_Q": 60.06978059997221,
+              "refit_parameters": [
+                -0.00244662757257828,
+                0.0064321982334780755,
+                -0.0016143386539524917
+              ]
+            },
+            "point_Q": 1.2583785817156203,
+            "physical_parent_Q": 5746.026775333286,
+            "alternative_ids": [
+              "compact-location-e6a8c79036a4ec5c"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "6153e5d4285c433657712da190a89ee98561cc4c556b5e7db4b009b220093a7a",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 1,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 1,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": 0.0,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": true,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ]
+      },
+      "runtime_s": 0.7606300420011394,
+      "peak_process_rss_bytes": 142442496,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "b3a8495f861dcfc06a7579f1563a51f99a230dfd6147c36d8e52515dde45a32d",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              1.2509638400143857,
+              -6.42713411741308,
+              3.9245320619285886
+            ],
+            "position_error_m": 0.009589305953938053,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.7765509915311225,
+            "score": {
+              "Q": 0.8358409207051286,
+              "rms_s": 1.4618401593445882e-05,
+              "max_error_s": 3.315125716164477e-05,
+              "max_marginal_standardized_residual": 0.4711990010452806
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.009589305953938053,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": []
+      },
+      "runtime_s": 0.9168212919976213,
+      "peak_process_rss_bytes": 139247616,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-d02f45645d20ef5f",
+            "selected_records": 19,
+            "source_receiver_counts": [
+              5,
+              6,
+              4,
+              4
+            ],
+            "plane": {
+              "original_Q": 46.22624832476803,
+              "refit_Q": 46.12137783643177,
+              "comparison_Q": 46.12137783643177,
+              "refit_parameters": [
+                0.0009915345214613813,
+                0.0010216265664826296,
+                0.0007177366951625621
+              ]
+            },
+            "point_Q": 0.8358409207051286,
+            "physical_parent_Q": 285.45162424224844,
+            "alternative_ids": [
+              "compact-location-c1f135964f3ad6b0"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "45b42673db7b9278e2b56c27f388b0d435e2b0b875bb4215d21512985fb4d7b1",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              1.2561764265191266,
+              -6.4221766359352745,
+              3.941746993000292
+            ],
+            "position_error_m": 0.014541670684127648,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.46140158002180526,
+            "score": {
+              "Q": 1.4472531659716685,
+              "rms_s": 1.790869795814445e-05,
+              "max_error_s": 3.209072964146728e-05,
+              "max_marginal_standardized_residual": 0.45201275785646117
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.014541670684127648,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": []
+      },
+      "runtime_s": 1.2426354580020416,
+      "peak_process_rss_bytes": 144195584,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-6f64e4a7be3ceb30",
+            "selected_records": 23,
+            "source_receiver_counts": [
+              4,
+              7,
+              6,
+              6
+            ],
+            "plane": {
+              "original_Q": 85.35595034748006,
+              "refit_Q": 85.28046307765165,
+              "comparison_Q": 85.28046307765165,
+              "refit_parameters": [
+                0.0002527939987548434,
+                -0.00104556829579756,
+                -0.0010641724268192897
+              ]
+            },
+            "point_Q": 1.4472531659716685,
+            "physical_parent_Q": 583.1089378637491,
+            "alternative_ids": [
+              "compact-location-ed9f965ef8f884fd"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "45b42673db7b9278e2b56c27f388b0d435e2b0b875bb4215d21512985fb4d7b1",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 1,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 1,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": 0.0,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": true,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ]
+      },
+      "runtime_s": 1.1458411670028,
+      "peak_process_rss_bytes": 142163968,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "42e7c2b4c8aee3f5967b82457231f7e585ab21c71142fc823b46337ff66ceb1e",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              4.85113464491436,
+              -1.7878318215293083,
+              4.258874051842371
+            ],
+            "position_error_m": 0.02711396953759798,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 2.428585801947958,
+            "score": {
+              "Q": 1.9962882578227659,
+              "rms_s": 2.1922168200407247e-05,
+              "max_error_s": 5.0815215878772385e-05,
+              "max_marginal_standardized_residual": 0.7121917365990856
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.02711396953759798,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": []
+      },
+      "runtime_s": 1.2328932089949376,
+      "peak_process_rss_bytes": 142180352,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-591536c6a97a18ae",
+            "selected_records": 23,
+            "source_receiver_counts": [
+              7,
+              6,
+              5,
+              5
+            ],
+            "plane": {
+              "original_Q": 61.41758196440994,
+              "refit_Q": 59.64260768788171,
+              "comparison_Q": 59.64260768788171,
+              "refit_parameters": [
+                -0.005770572383240419,
+                0.0005214585904284172,
+                0.004224961623579649
+              ]
+            },
+            "point_Q": 1.9962882578227659,
+            "physical_parent_Q": 380.8695526450681,
+            "alternative_ids": [
+              "compact-location-535ac27449ff0baf"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "14f677b6cb78ba888a8365c6659235661e691c891d9cb30dfa5fc88eaf1e4678",
+      "raw_unchanged": true
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "ambiguous",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 1,
+        "unique_compact_hypotheses": 1,
+        "point_modes": [
+          {
+            "position_m": [
+              4.85548586584964,
+              -1.7840645368216275,
+              4.253394314553434
+            ],
+            "position_error_m": 0.01931397212589832,
+            "unique_conditional": true,
+            "local_rank": 3,
+            "search_boundary_limited": false,
+            "nominal_95pct_ellipsoid_covered": true,
+            "mahalanobis_squared": 0.6526745858610851,
+            "score": {
+              "Q": 1.256253584366361,
+              "rms_s": 1.8602415903388073e-05,
+              "max_error_s": 4.2321052739650866e-05,
+              "max_marginal_standardized_residual": 0.6065597980482809
+            }
+          }
+        ],
+        "minimum_point_error_m": 0.01931397212589832,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": []
+      },
+      "runtime_s": 1.7590623340001912,
+      "peak_process_rss_bytes": 139886592,
+      "diagnostics": [
+        "competing_compact_or_unobserved_parent_paths"
+      ],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-46342c3798c38bdc",
+            "selected_records": 22,
+            "source_receiver_counts": [
+              6,
+              4,
+              6,
+              6
+            ],
+            "plane": {
+              "original_Q": 60.59143612142571,
+              "refit_Q": 60.04202702102739,
+              "comparison_Q": 60.04202702102739,
+              "refit_parameters": [
+                -0.002455327599988264,
+                0.006425162800753252,
+                -0.001603437282867706
+              ]
+            },
+            "point_Q": 1.256253584366361,
+            "physical_parent_Q": 5747.2413529679925,
+            "alternative_ids": [
+              "compact-location-068907bc34acfc9a"
+            ]
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "processed_input_sha256": "14f677b6cb78ba888a8365c6659235661e691c891d9cb30dfa5fc88eaf1e4678",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 1.2029349580043345,
+      "peak_process_rss_bytes": 137822208,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          4,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "073e9c1a19f9178b9e0ca383d9a0506b54f163b20d8f57bb3e613b612426c8e1",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.6879813749983441,
+      "peak_process_rss_bytes": 132874240,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          4,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "c54117b0ab595667a54ce63af63078bb69063c5fc9d80735b15017148a3fa9e3",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.8141975830003503,
+      "peak_process_rss_bytes": 142360576,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          4,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6
+        ]
+      ],
+      "processed_input_sha256": "c54117b0ab595667a54ce63af63078bb69063c5fc9d80735b15017148a3fa9e3",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.8566542089974973,
+      "peak_process_rss_bytes": 142049280,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          4,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          6,
+          5,
+          6,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6
+        ]
+      ],
+      "processed_input_sha256": "4ac81a79daca38ab9e7384a32e207aa84d6d93dbed92cf24ab1f784fe8d6ec26",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.63659975000337,
+      "peak_process_rss_bytes": 136036352,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          4,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          6,
+          5,
+          6,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6
+        ]
+      ],
+      "processed_input_sha256": "ccaa45bccb134067ecc846cd7a83cdd49a633e07a5a1d8688e2461f66162ba46",
+      "raw_unchanged": true
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 0,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 0,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": null,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": false,
+        "failures": []
+      },
+      "runtime_s": 0.6073899580005673,
+      "peak_process_rss_bytes": 141508608,
+      "diagnostics": [
+        "no_joint_plane_beats_null"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          6,
+          6,
+          6,
+          4,
+          6,
+          6,
+          5,
+          6,
+          6,
+          5,
+          6,
+          6
+        ],
+        [
+          5,
+          6,
+          4,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          6,
+          5,
+          6,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          4,
+          6,
+          6,
+          6,
+          5,
+          6
+        ]
+      ],
+      "processed_input_sha256": "ccaa45bccb134067ecc846cd7a83cdd49a633e07a5a1d8688e2461f66162ba46",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1301,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 8,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 2,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 0.75,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-fbdf8dda082c0f64",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.44006530389500387,
+              "offset_error_m": 0.023398983013276364,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-5940443d20d8b646",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3005820109823397,
+              "offset_error_m": 0.011398741322201422,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-06be72964b964f7e",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.06788933212322855,
+              "offset_error_m": 0.002800368501038264,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-76081e4545b96929",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.21200385262218166,
+              "offset_error_m": 0.013015223850689539,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-6eee7916ccb36b61",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.16338649591054422,
+              "offset_error_m": 0.011261592101598161,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-938c3911a14d94d9",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.11649360152522997,
+              "offset_error_m": 0.007544560412492268,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ]
+      },
+      "runtime_s": 2.3401765419985168,
+      "peak_process_rss_bytes": 135839744,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          9,
+          7,
+          6,
+          7,
+          7,
+          4,
+          10,
+          9,
+          8,
+          0,
+          7,
+          9
+        ],
+        [
+          7,
+          8,
+          9,
+          7,
+          0,
+          7,
+          10,
+          11,
+          7,
+          8,
+          7,
+          8
+        ],
+        [
+          9,
+          8,
+          7,
+          8,
+          8,
+          9,
+          10,
+          8,
+          9,
+          7,
+          10,
+          7
+        ],
+        [
+          9,
+          9,
+          8,
+          7,
+          4,
+          9,
+          11,
+          10,
+          9,
+          8,
+          9,
+          7
+        ]
+      ],
+      "processed_input_sha256": "30c58df360cc9f5a1e3bccdda7df317392b90122cc47538cb38cccc230eb939b",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1301,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 8,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 2,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 0.75,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-fbdf8dda082c0f64",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.44006530389500387,
+              "offset_error_m": 0.023398983013276364,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-5940443d20d8b646",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3005820109823397,
+              "offset_error_m": 0.011398741322201422,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-06be72964b964f7e",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.06788933212322855,
+              "offset_error_m": 0.002800368501038264,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-76081e4545b96929",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.21200385262218166,
+              "offset_error_m": 0.013015223850689539,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-6eee7916ccb36b61",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.16338649591054422,
+              "offset_error_m": 0.011261592101598161,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-938c3911a14d94d9",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.11649360152522997,
+              "offset_error_m": 0.007544560412492268,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ]
+      },
+      "runtime_s": 4.511183499998879,
+      "peak_process_rss_bytes": 141492224,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-fbdf8dda082c0f64",
+            "selected_records": 46,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 14.094569270952107,
+              "refit_Q": 14.08481709221194,
+              "comparison_Q": 14.08481709221194,
+              "refit_parameters": [
+                0.0001337055642021019,
+                0.00024304567118486244,
+                0.00013132680270759733
+              ]
+            },
+            "point_Q": 3129.12134031578,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-5940443d20d8b646",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 5.511192542882403,
+              "refit_Q": 5.471185831921684,
+              "comparison_Q": 5.471185831921684,
+              "refit_parameters": [
+                -0.0002389988744692681,
+                -0.0009788381341476631,
+                -9.855839735671019e-05
+              ]
+            },
+            "point_Q": 1546.1701922791501,
+            "physical_parent_Q": 2589.2869397468676,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-06be72964b964f7e",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              9,
+              11,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 3.9682660063680775,
+              "refit_Q": 3.8943765249651197,
+              "comparison_Q": 3.8943765249651197,
+              "refit_parameters": [
+                -0.0004036415908800776,
+                0.0007599897598489982,
+                0.0006740477859416018
+              ]
+            },
+            "point_Q": 942.7418949943959,
+            "physical_parent_Q": 1060.3123446452205,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-76081e4545b96929",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              10,
+              11,
+              12,
+              10
+            ],
+            "plane": {
+              "original_Q": 6.867698261531818,
+              "refit_Q": 6.723467648511708,
+              "comparison_Q": 6.723467648511708,
+              "refit_parameters": [
+                -0.0005721274408764602,
+                -0.000156135678181752,
+                -0.0010562501164251494
+              ]
+            },
+            "point_Q": 4710.87350715086,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-2dddffbeab53bd30",
+            "selected_records": 41,
+            "source_receiver_counts": [
+              10,
+              9,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 4.888647814838371,
+              "refit_Q": 4.849027456375791,
+              "comparison_Q": 4.849027456375791,
+              "refit_parameters": [
+                -0.0006425457006498342,
+                -0.0009540869133884249,
+                0.00020727894626893187
+              ]
+            },
+            "point_Q": 1385.0435844985718,
+            "physical_parent_Q": 1923.7850598521593,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-3ed47b1a1881bd6b",
+            "selected_records": 41,
+            "source_receiver_counts": [
+              8,
+              10,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 2.75743115831069,
+              "refit_Q": 2.736508048590096,
+              "comparison_Q": 2.736508048590096,
+              "refit_parameters": [
+                0.00014477833899649158,
+                0.00033009590620725727,
+                0.0004505619578971276
+              ]
+            },
+            "point_Q": 970.968824160476,
+            "physical_parent_Q": 1138.871201733726,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-6eee7916ccb36b61",
+            "selected_records": 39,
+            "source_receiver_counts": [
+              10,
+              9,
+              9,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.938284718104584,
+              "refit_Q": 5.8756027479460675,
+              "comparison_Q": 5.8756027479460675,
+              "refit_parameters": [
+                -0.00015957607104880183,
+                0.0007114120872735818,
+                0.0009418447639940938
+              ]
+            },
+            "point_Q": 422.90306411574517,
+            "physical_parent_Q": 1047.1540743573453,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-938c3911a14d94d9",
+            "selected_records": 35,
+            "source_receiver_counts": [
+              7,
+              9,
+              9,
+              10
+            ],
+            "plane": {
+              "original_Q": 12.943958089752458,
+              "refit_Q": 12.889280257038651,
+              "comparison_Q": 12.889280257038651,
+              "refit_parameters": [
+                -0.0002850723569393961,
+                -0.0006484760333139703,
+                0.0006726214328874122
+              ]
+            },
+            "point_Q": 3067.5032512020416,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          9,
+          7,
+          6,
+          7,
+          7,
+          4,
+          10,
+          9,
+          8,
+          0,
+          7,
+          9
+        ],
+        [
+          7,
+          8,
+          9,
+          7,
+          0,
+          7,
+          10,
+          11,
+          7,
+          8,
+          7,
+          8
+        ],
+        [
+          9,
+          8,
+          7,
+          8,
+          8,
+          9,
+          10,
+          8,
+          9,
+          7,
+          10,
+          7
+        ],
+        [
+          9,
+          9,
+          8,
+          7,
+          4,
+          9,
+          11,
+          10,
+          9,
+          8,
+          9,
+          7
+        ]
+      ],
+      "processed_input_sha256": "ec0ed41a4f26c5857c538d82e4575f03f14c397c493a7d9d297cc27078fe2b42",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1301,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 5,
+          "truth_count": 6,
+          "matched_count": 4,
+          "false_surfaces": 1,
+          "missed_surfaces": 2,
+          "horizontal_matched": 2,
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "matches": [
+            {
+              "predicted_id": "reflector-f730a614ead1e352",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.4400653166528142,
+              "offset_error_m": 0.02339898227710524,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-7660ff327ae67405",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.2913971935912404,
+              "offset_error_m": 0.018100978035667348,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-24de0be48d687fb8",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3005820062716388,
+              "offset_error_m": 0.011398739852594542,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-75df3ef3e2f42054",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 1.895057647458958,
+              "offset_error_m": 0.040527291640602314,
+              "horizontal": false,
+              "offset_95pct_covered": false,
+              "normal_95pct_covered": false
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 1, required 0"
+        ]
+      },
+      "runtime_s": 3.0247530410051695,
+      "peak_process_rss_bytes": 154206208,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-f730a614ead1e352",
+            "selected_records": 46,
+            "source_receiver_counts": [
+              11,
+              11,
+              12,
+              12
+            ],
+            "plane": {
+              "original_Q": 14.094569256025236,
+              "refit_Q": 14.084817092342389,
+              "comparison_Q": 14.084817092342389,
+              "refit_parameters": [
+                0.00013370562720673416,
+                0.00024304537459579213,
+                0.00013132682431487807
+              ]
+            },
+            "point_Q": 3129.121340417829,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-7660ff327ae67405",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              12,
+              11
+            ],
+            "plane": {
+              "original_Q": 8.789322724611742,
+              "refit_Q": 8.55508953970153,
+              "comparison_Q": 8.55508953970153,
+              "refit_parameters": [
+                -0.0008671965316297285,
+                2.802235538718921e-05,
+                -0.0013162844347028389
+              ]
+            },
+            "point_Q": 4710.392845582422,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-24de0be48d687fb8",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              10,
+              11,
+              11,
+              12
+            ],
+            "plane": {
+              "original_Q": 5.511192524675275,
+              "refit_Q": 5.471185831947395,
+              "comparison_Q": 5.471185831947395,
+              "refit_parameters": [
+                -0.0002389988188228068,
+                -0.0009788383867446171,
+                -9.855839282011975e-05
+              ]
+            },
+            "point_Q": 1546.1701922579866,
+            "physical_parent_Q": 2589.2869005558705,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-fc9c30820ad840cb",
+            "selected_records": 37,
+            "source_receiver_counts": [
+              7,
+              11,
+              10,
+              9
+            ],
+            "plane": {
+              "original_Q": 59.81806169338321,
+              "refit_Q": 59.52415477542723,
+              "comparison_Q": 59.52415477542723,
+              "refit_parameters": [
+                0.0004811019812545087,
+                0.0026139192135273466,
+                -0.0003040827585853382
+              ]
+            },
+            "point_Q": 817.6522715774847,
+            "physical_parent_Q": 824.9586172551204,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-75df3ef3e2f42054",
+            "selected_records": 35,
+            "source_receiver_counts": [
+              8,
+              7,
+              10,
+              10
+            ],
+            "plane": {
+              "original_Q": 29.316633500365366,
+              "refit_Q": 17.215619691459146,
+              "comparison_Q": 17.215619691459146,
+              "refit_parameters": [
+                0.019413855072777868,
+                -0.002557875653112765,
+                0.00474815877194483
+              ]
+            },
+            "point_Q": 566.3534432870521,
+            "physical_parent_Q": 426.0080975762139,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          9,
+          7,
+          6,
+          7,
+          7,
+          4,
+          10,
+          9,
+          8,
+          0,
+          7,
+          9
+        ],
+        [
+          7,
+          8,
+          9,
+          7,
+          0,
+          7,
+          10,
+          11,
+          7,
+          8,
+          7,
+          8
+        ],
+        [
+          9,
+          8,
+          7,
+          8,
+          8,
+          9,
+          10,
+          8,
+          9,
+          7,
+          10,
+          7
+        ],
+        [
+          9,
+          9,
+          8,
+          7,
+          4,
+          9,
+          11,
+          10,
+          9,
+          8,
+          9,
+          7
+        ]
+      ],
+      "processed_input_sha256": "ec0ed41a4f26c5857c538d82e4575f03f14c397c493a7d9d297cc27078fe2b42",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1307,
+      "method": "original_mapper",
+      "commit": "be5c70ab14a450aaae28537b0905e77e9453be33",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 8,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 2,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 0.75,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-b5e6f5e398d004ce",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3613129923807385,
+              "offset_error_m": 0.00010467024978777495,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-606345383c026233",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.21017421388945065,
+              "offset_error_m": 0.01399460186634105,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f38add996e2efa03",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.43453011346687137,
+              "offset_error_m": 0.007279324949641897,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-2fbd94d4e7903ea4",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.3491045500396753,
+              "offset_error_m": 0.018341453608902047,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-ed5210d74e03247d",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.23104532168747977,
+              "offset_error_m": 0.01246432973947842,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-a269139771856e76",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2058068871112837,
+              "offset_error_m": 0.0016363980806319844,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ]
+      },
+      "runtime_s": 2.6546875830026693,
+      "peak_process_rss_bytes": 145145856,
+      "diagnostics": [],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          7,
+          11,
+          8,
+          7,
+          7,
+          7,
+          10,
+          6,
+          8,
+          9,
+          7,
+          9
+        ],
+        [
+          8,
+          11,
+          8,
+          6,
+          9,
+          7,
+          9,
+          6,
+          8,
+          8,
+          0,
+          9
+        ],
+        [
+          8,
+          8,
+          9,
+          9,
+          8,
+          8,
+          9,
+          7,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          8,
+          7,
+          8,
+          7,
+          7,
+          9,
+          8,
+          8,
+          8,
+          0,
+          9
+        ]
+      ],
+      "processed_input_sha256": "f87c66957c0c6dac7911ec0b3d33e74c8ad34c535a20d04e409645940ddd0e6d",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1307,
+      "method": "updated_mapper",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "partial",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 8,
+          "truth_count": 6,
+          "matched_count": 6,
+          "false_surfaces": 2,
+          "missed_surfaces": 0,
+          "horizontal_matched": 2,
+          "precision": 0.75,
+          "recall": 1.0,
+          "matches": [
+            {
+              "predicted_id": "reflector-b5e6f5e398d004ce",
+              "truth_id": "wall-1-0",
+              "normal_error_deg": 0.3613129923807385,
+              "offset_error_m": 0.00010467024978777495,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-606345383c026233",
+              "truth_id": "wall-0-1",
+              "normal_error_deg": 0.21017421388945065,
+              "offset_error_m": 0.01399460186634105,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-f38add996e2efa03",
+              "truth_id": "wall-1-1",
+              "normal_error_deg": 0.43453011346687137,
+              "offset_error_m": 0.007279324949641897,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-2fbd94d4e7903ea4",
+              "truth_id": "wall-0-0",
+              "normal_error_deg": 0.3491045500396753,
+              "offset_error_m": 0.018341453608902047,
+              "horizontal": false,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-ed5210d74e03247d",
+              "truth_id": "wall-2-0",
+              "normal_error_deg": 0.23104532168747977,
+              "offset_error_m": 0.01246432973947842,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            },
+            {
+              "predicted_id": "reflector-a269139771856e76",
+              "truth_id": "wall-2-1",
+              "normal_error_deg": 0.2058068871112837,
+              "offset_error_m": 0.0016363980806319844,
+              "horizontal": true,
+              "offset_95pct_covered": true,
+              "normal_95pct_covered": true
+            }
+          ]
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": [
+          "maximum_false_surfaces: observed 2, required 0"
+        ]
+      },
+      "runtime_s": 2.9851229999985662,
+      "peak_process_rss_bytes": 138493952,
+      "diagnostics": [],
+      "path_model_comparison": {
+        "comparisons": [
+          {
+            "surface_id": "reflector-b5e6f5e398d004ce",
+            "selected_records": 42,
+            "source_receiver_counts": [
+              10,
+              10,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 6.567676445840315,
+              "refit_Q": 6.555689657297525,
+              "comparison_Q": 6.555689657297525,
+              "refit_parameters": [
+                -0.00023803403556112515,
+                -0.0005372617216719973,
+                -8.738212303583419e-05
+              ]
+            },
+            "point_Q": 952.7347674096816,
+            "physical_parent_Q": 789.068466243964,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-606345383c026233",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              12,
+              11,
+              10,
+              11
+            ],
+            "plane": {
+              "original_Q": 5.699247320641001,
+              "refit_Q": 5.665394725467731,
+              "comparison_Q": 5.665394725467731,
+              "refit_parameters": [
+                -0.00013248402270474416,
+                0.000904382697071299,
+                -0.0011844879255016607
+              ]
+            },
+            "point_Q": 410.8884336844151,
+            "physical_parent_Q": 1625.441735321052,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-f38add996e2efa03",
+            "selected_records": 44,
+            "source_receiver_counts": [
+              12,
+              10,
+              11,
+              11
+            ],
+            "plane": {
+              "original_Q": 14.456934358682908,
+              "refit_Q": 14.223104403299178,
+              "comparison_Q": 14.223104403299178,
+              "refit_parameters": [
+                0.0009638386227200842,
+                0.0020073941229310226,
+                0.0008715684485938282
+              ]
+            },
+            "point_Q": 766.1875643303559,
+            "physical_parent_Q": 1107.060027780338,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-2fbd94d4e7903ea4",
+            "selected_records": 43,
+            "source_receiver_counts": [
+              11,
+              11,
+              11,
+              10
+            ],
+            "plane": {
+              "original_Q": 18.527666681544638,
+              "refit_Q": 18.470772583092046,
+              "comparison_Q": 18.470772583092046,
+              "refit_parameters": [
+                -0.0006733613485085547,
+                0.001603339067122512,
+                -0.0009349258017587573
+              ]
+            },
+            "point_Q": 1101.8922712028755,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-110a45e7f535fdfb",
+            "selected_records": 40,
+            "source_receiver_counts": [
+              10,
+              10,
+              10,
+              10
+            ],
+            "plane": {
+              "original_Q": 1.2278227934222212,
+              "refit_Q": 1.226014776204526,
+              "comparison_Q": 1.226014776204526,
+              "refit_parameters": [
+                -2.6104441555212783e-05,
+                -0.0001593771314449328,
+                -8.934118066803045e-05
+              ]
+            },
+            "point_Q": 866.2489164542853,
+            "physical_parent_Q": 4169.718444046354,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-ed5210d74e03247d",
+            "selected_records": 41,
+            "source_receiver_counts": [
+              12,
+              10,
+              10,
+              9
+            ],
+            "plane": {
+              "original_Q": 4.893606885198005,
+              "refit_Q": 4.85625312806902,
+              "comparison_Q": 4.85625312806902,
+              "refit_parameters": [
+                0.0008590284106349066,
+                0.00021014713141437671,
+                -0.00029633812601755365
+              ]
+            },
+            "point_Q": 1666.0880902428692,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-8eb21a26e266e45d",
+            "selected_records": 33,
+            "source_receiver_counts": [
+              8,
+              9,
+              10,
+              6
+            ],
+            "plane": {
+              "original_Q": 9.872628106405653,
+              "refit_Q": 9.796782356433667,
+              "comparison_Q": 9.796782356433667,
+              "refit_parameters": [
+                0.0006475209022918255,
+                0.00133282577639575,
+                0.0003370401029018873
+              ]
+            },
+            "point_Q": 784.982752243421,
+            "physical_parent_Q": 978.4006518426427,
+            "alternative_ids": []
+          },
+          {
+            "surface_id": "reflector-a269139771856e76",
+            "selected_records": 35,
+            "source_receiver_counts": [
+              11,
+              8,
+              8,
+              8
+            ],
+            "plane": {
+              "original_Q": 9.39863103551695,
+              "refit_Q": 9.352240761103843,
+              "comparison_Q": 9.352240761103843,
+              "refit_parameters": [
+                0.0008587664049617543,
+                2.2735131798485806e-05,
+                -0.00028339914423331343
+              ]
+            },
+            "point_Q": 2689.278960014222,
+            "physical_parent_Q": null,
+            "alternative_ids": []
+          }
+        ],
+        "score_semantics": "Full fixed-covariance squared residual, not calibrated probability or model odds.",
+        "selection_semantics": "Exactly the original selected candidate IDs; one arrival per recording per challenged interpretation; hypotheses are alternatives, not simultaneous geometry.",
+        "parameter_counts": {
+          "plane": 3,
+          "compact_point": 3,
+          "two_parent_operator": 5
+        },
+        "limits": {
+          "surface_count": 10,
+          "records_per_surface": 64,
+          "point_starts": 32,
+          "parent_angles": 180
+        },
+        "global_optimality_proven": false
+      },
+      "candidate_counts": [
+        [
+          7,
+          11,
+          8,
+          7,
+          7,
+          7,
+          10,
+          6,
+          8,
+          9,
+          7,
+          9
+        ],
+        [
+          8,
+          11,
+          8,
+          6,
+          9,
+          7,
+          9,
+          6,
+          8,
+          8,
+          0,
+          9
+        ],
+        [
+          8,
+          8,
+          9,
+          9,
+          8,
+          8,
+          9,
+          7,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          8,
+          7,
+          8,
+          7,
+          7,
+          9,
+          8,
+          8,
+          8,
+          0,
+          9
+        ]
+      ],
+      "processed_input_sha256": "c884a82a0d197c09bee97c0df0ddeafd01e7ee0e93bf1fa1bd80ba20a68ddd64",
+      "raw_unchanged": true
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1307,
+      "method": "updated_plane_grid",
+      "commit": "de8442b2dd088c036d2b92eaeaf29a1273785795",
+      "status": "no_result",
+      "metrics": {
+        "surfaces": {
+          "predicted_count": 0,
+          "truth_count": 6,
+          "matched_count": 0,
+          "false_surfaces": 0,
+          "missed_surfaces": 6,
+          "horizontal_matched": 0,
+          "precision": null,
+          "recall": 0.0,
+          "matches": []
+        },
+        "point_mode_count": 0,
+        "unique_compact_hypotheses": 0,
+        "point_modes": [],
+        "minimum_point_error_m": null,
+        "point_capability_missed": false,
+        "mismatch_unresolved": true,
+        "failures": []
+      },
+      "runtime_s": 1.8452807089997805,
+      "peak_process_rss_bytes": 138706944,
+      "diagnostics": [
+        "joint_refit_lost_required_support"
+      ],
+      "path_model_comparison": null,
+      "candidate_counts": [
+        [
+          7,
+          11,
+          8,
+          7,
+          7,
+          7,
+          10,
+          6,
+          8,
+          9,
+          7,
+          9
+        ],
+        [
+          8,
+          11,
+          8,
+          6,
+          9,
+          7,
+          9,
+          6,
+          8,
+          8,
+          0,
+          9
+        ],
+        [
+          8,
+          8,
+          9,
+          9,
+          8,
+          8,
+          9,
+          7,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          8,
+          7,
+          8,
+          7,
+          7,
+          9,
+          8,
+          8,
+          8,
+          0,
+          9
+        ]
+      ],
+      "processed_input_sha256": "c884a82a0d197c09bee97c0df0ddeafd01e7ee0e93bf1fa1bd80ba20a68ddd64",
+      "raw_unchanged": true
+    }
+  ],
+  "passed": false,
+  "interpretation": "Frozen synthetic raw-recording evaluation; no hardware or measured furniture accuracy claim"
+}

@@ -1,0 +1,22 @@
+{
+  "tests": {
+    "exit_code": 0,
+    "seconds": 61.622712667005544
+  },
+  "native_bridge": {
+    "exit_code": 0,
+    "seconds": 3.8414174170029582
+  },
+  "unsigned_build": {
+    "exit_code": 0,
+    "seconds": 4.88227120800002
+  },
+  "demo": {
+    "exit_code": 0,
+    "seconds": 1.4463895000008051
+  },
+  "relocation_regression": {
+    "exit_code": 1,
+    "seconds": 82.6351580000046
+  }
+}

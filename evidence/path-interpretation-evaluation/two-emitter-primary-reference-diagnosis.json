@@ -1,0 +1,890 @@
+[
+  {
+    "seed": 1301,
+    "surfaces": [
+      {
+        "surface_id": "reflector-2dddffbeab53bd30",
+        "reason_false": "Unmatched duplicate under one-to-one matching; a true wall is already represented by another output plane.",
+        "nearest_wall": "wall-1-0",
+        "offset_separation_m": 0.11212318457150894,
+        "half_emitter_separation_m": 0.12,
+        "nearest_path_counts": {
+          "wall-1-0-emitter-1": 40,
+          "wall-0-0-emitter-0": 1
+        },
+        "nearest_path_rms_s": 1.6617586060470468e-05,
+        "primary_direct_bias_max_s": 5.4611122583462176e-05,
+        "primary_direct_bias_median_s": 2.4108591920792343e-06,
+        "records": [
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.4495492157030193e-07,
+            "detected_direct_bias_from_primary_s": 1.602109101894548e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.1742506794993474e-06,
+            "detected_direct_bias_from_primary_s": 3.1375946119745803e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 5.7232082828697836e-05,
+            "detected_direct_bias_from_primary_s": -5.4611122583462176e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-0-0-emitter-0",
+            "nearest_path_residual_s": 6.218048780059354e-05,
+            "detected_direct_bias_from_primary_s": -1.3531919685558242e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.2223932683418787e-06,
+            "detected_direct_bias_from_primary_s": 3.733383754733578e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.796252206460462e-07,
+            "detected_direct_bias_from_primary_s": 2.2669990461941114e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -6.908023311522765e-07,
+            "detected_direct_bias_from_primary_s": 1.7550825464852992e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.577875912624348e-08,
+            "detected_direct_bias_from_primary_s": 2.7420326618629592e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.267689080016246e-06,
+            "detected_direct_bias_from_primary_s": 2.0381389453674964e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 4.295112814665242e-07,
+            "detected_direct_bias_from_primary_s": 2.3261427026777197e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 8.858604166137735e-07,
+            "detected_direct_bias_from_primary_s": 2.2458456259818704e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 2.121760869550418e-06,
+            "detected_direct_bias_from_primary_s": 1.3295854769269994e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0435582669545904e-05,
+            "detected_direct_bias_from_primary_s": 2.7994696831516073e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 7.480744513826271e-07,
+            "detected_direct_bias_from_primary_s": 1.47813228476648e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0718929063738974e-06,
+            "detected_direct_bias_from_primary_s": 6.396681241445334e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -6.092856969959481e-07,
+            "detected_direct_bias_from_primary_s": 2.787323044468031e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.5349946430424921e-06,
+            "detected_direct_bias_from_primary_s": 4.078556602495503e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.0039767543073304e-07,
+            "detected_direct_bias_from_primary_s": 2.9405890168182366e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -5.752882192566755e-07,
+            "detected_direct_bias_from_primary_s": 2.4378027325623934e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.872366807470667e-06,
+            "detected_direct_bias_from_primary_s": 3.1426212172867816e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -6.182138928207369e-05,
+            "detected_direct_bias_from_primary_s": 2.5825168512614813e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.472704132295978e-05,
+            "detected_direct_bias_from_primary_s": 1.6518578726237e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.575713683582701e-07,
+            "detected_direct_bias_from_primary_s": 2.141183268618976e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 7.118226630995622e-07,
+            "detected_direct_bias_from_primary_s": 2.021000081487683e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 4.921982556197607e-07,
+            "detected_direct_bias_from_primary_s": 3.157434464478682e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.8261103323285195e-07,
+            "detected_direct_bias_from_primary_s": 2.335815272699369e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -9.314310752935387e-07,
+            "detected_direct_bias_from_primary_s": 3.5572300764040045e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.1114300146105455e-06,
+            "detected_direct_bias_from_primary_s": 1.3708863694545817e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -3.2718068689128327e-07,
+            "detected_direct_bias_from_primary_s": 2.5507649845105036e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 9.260619337168874e-07,
+            "detected_direct_bias_from_primary_s": 8.045058204777896e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.825391604648452e-06,
+            "detected_direct_bias_from_primary_s": 2.574162211245684e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -5.308745400535442e-07,
+            "detected_direct_bias_from_primary_s": 3.498248209391499e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.6027961682388292e-06,
+            "detected_direct_bias_from_primary_s": -5.53731307040145e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -2.634606471353662e-08,
+            "detected_direct_bias_from_primary_s": 3.4147242705305106e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -6.909873881220246e-07,
+            "detected_direct_bias_from_primary_s": 2.4108591920792343e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -3.6381959301994005e-07,
+            "detected_direct_bias_from_primary_s": 2.2275689522975073e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.970758482817194e-07,
+            "detected_direct_bias_from_primary_s": 1.3645169118190223e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 9.823714953657858e-08,
+            "detected_direct_bias_from_primary_s": 1.4990972560967743e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0949015500491197e-06,
+            "detected_direct_bias_from_primary_s": 2.064579805846057e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 5.835676288382108e-07,
+            "detected_direct_bias_from_primary_s": 1.3100654605302997e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.7583431897973e-07,
+            "detected_direct_bias_from_primary_s": 1.8088722665152488e-06
+          }
+        ]
+      },
+      {
+        "surface_id": "reflector-3ed47b1a1881bd6b",
+        "reason_false": "Unmatched duplicate under one-to-one matching; a true wall is already represented by another output plane.",
+        "nearest_wall": "wall-1-1",
+        "offset_separation_m": 0.12272172133335779,
+        "half_emitter_separation_m": 0.12,
+        "nearest_path_counts": {
+          "wall-1-1-emitter-1": 40,
+          "wall-0-1-emitter-0": 1
+        },
+        "nearest_path_rms_s": 4.140043233805152e-06,
+        "primary_direct_bias_max_s": 2.7994696831516073e-05,
+        "primary_direct_bias_median_s": 2.4378027325623934e-06,
+        "records": [
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 9.321418090735278e-07,
+            "detected_direct_bias_from_primary_s": 1.602109101894548e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.875738603220392e-06,
+            "detected_direct_bias_from_primary_s": -1.3531919685558242e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -5.023178500200565e-07,
+            "detected_direct_bias_from_primary_s": 1.3554975476799075e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.7429564607509005e-08,
+            "detected_direct_bias_from_primary_s": 2.2669990461941114e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -7.166844469708861e-08,
+            "detected_direct_bias_from_primary_s": 1.7550825464852992e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -2.1268836936788604e-07,
+            "detected_direct_bias_from_primary_s": 2.7420326618629592e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.1369264387925404e-07,
+            "detected_direct_bias_from_primary_s": 2.0381389453674964e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -5.217090227570276e-07,
+            "detected_direct_bias_from_primary_s": 2.3261427026777197e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.0032652135390516e-07,
+            "detected_direct_bias_from_primary_s": 2.2458456259818704e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.5580688622018196e-05,
+            "detected_direct_bias_from_primary_s": 2.7994696831516073e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-0-1-emitter-0",
+            "nearest_path_residual_s": 1.5248754563008254e-05,
+            "detected_direct_bias_from_primary_s": 1.47813228476648e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.5626982501834585e-06,
+            "detected_direct_bias_from_primary_s": 3.4847694044240277e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.4259207461063059e-06,
+            "detected_direct_bias_from_primary_s": 6.396681241445334e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.0044741328906967e-06,
+            "detected_direct_bias_from_primary_s": 2.787323044468031e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.0452430393784184e-06,
+            "detected_direct_bias_from_primary_s": 4.078556602495503e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.6804137570030492e-06,
+            "detected_direct_bias_from_primary_s": 2.9405890168182366e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 5.349572835839506e-07,
+            "detected_direct_bias_from_primary_s": 1.3045030384622311e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -6.167314411924946e-07,
+            "detected_direct_bias_from_primary_s": 2.4378027325623934e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -3.383580136316622e-07,
+            "detected_direct_bias_from_primary_s": 3.1426212172867816e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -3.089599045812477e-07,
+            "detected_direct_bias_from_primary_s": 2.5825168512614813e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.0603880178771535e-06,
+            "detected_direct_bias_from_primary_s": 1.7440446524367631e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.34256389436576e-05,
+            "detected_direct_bias_from_primary_s": 1.6518578726237e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 7.269704715012759e-07,
+            "detected_direct_bias_from_primary_s": 2.141183268618976e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -4.022762222864046e-07,
+            "detected_direct_bias_from_primary_s": 2.021000081487683e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 5.383412601299778e-07,
+            "detected_direct_bias_from_primary_s": 3.157434464478682e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -4.832175083784029e-07,
+            "detected_direct_bias_from_primary_s": 2.335815272699369e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -4.2458548748028346e-07,
+            "detected_direct_bias_from_primary_s": 3.5572300764040045e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 3.665102498284084e-07,
+            "detected_direct_bias_from_primary_s": 1.3708863694545817e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 5.580418284776428e-07,
+            "detected_direct_bias_from_primary_s": 2.5507649845105036e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 9.569109158773237e-07,
+            "detected_direct_bias_from_primary_s": 8.045058204777896e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.2185498832681385e-06,
+            "detected_direct_bias_from_primary_s": 2.574162211245684e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.1395612707458536e-07,
+            "detected_direct_bias_from_primary_s": 3.498248209391499e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 3.564141643347396e-06,
+            "detected_direct_bias_from_primary_s": -5.53731307040145e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.6935080062184813e-07,
+            "detected_direct_bias_from_primary_s": 3.4147242705305106e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 4.3994929938354077e-07,
+            "detected_direct_bias_from_primary_s": 2.2275689522975073e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 6.479528965770698e-07,
+            "detected_direct_bias_from_primary_s": 1.3645169118190223e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.176275914355901e-06,
+            "detected_direct_bias_from_primary_s": 1.4990972560967743e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.2093878201287211e-06,
+            "detected_direct_bias_from_primary_s": 2.064579805846057e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.0274599466501425e-06,
+            "detected_direct_bias_from_primary_s": 1.3100654605302997e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -8.782960675378371e-07,
+            "detected_direct_bias_from_primary_s": 1.8088722665152488e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -2.3281374351494244e-06,
+            "detected_direct_bias_from_primary_s": 2.6426743149535773e-06
+          }
+        ]
+      }
+    ],
+    "response_window": {
+      "sample_rate_hz": 48000,
+      "band_hz": [
+        2000,
+        14000
+      ],
+      "published_signed_response": true,
+      "minimum_detector_separation_s": 0.00035,
+      "earliest_response_delay_s": -0.004665220079887099
+    },
+    "accepted": 46,
+    "rejected": 2,
+    "physical_direct_pair": {
+      "min_delay_s": -0.0006648219231629475,
+      "max_delay_s": 0.0006632175760568205,
+      "absolute_separation_below_detector_350us": 24,
+      "secondary_before_primary": 24,
+      "count": 48,
+      "all_within_earlier_path_guard_1ms": true
+    }
+  },
+  {
+    "seed": 1307,
+    "surfaces": [
+      {
+        "surface_id": "reflector-110a45e7f535fdfb",
+        "reason_false": "Unmatched duplicate under one-to-one matching; a true wall is already represented by another output plane.",
+        "nearest_wall": "wall-1-0",
+        "offset_separation_m": 0.11363203681023804,
+        "half_emitter_separation_m": 0.12,
+        "nearest_path_counts": {
+          "wall-1-0-emitter-1": 40
+        },
+        "nearest_path_rms_s": 4.165440914729755e-06,
+        "primary_direct_bias_max_s": 1.833409970172561e-05,
+        "primary_direct_bias_median_s": 2.127574763591023e-06,
+        "records": [
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -8.550115449985907e-07,
+            "detected_direct_bias_from_primary_s": 2.862316846596495e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -4.5686697329357095e-06,
+            "detected_direct_bias_from_primary_s": 3.3454183774667167e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -8.527992544960644e-06,
+            "detected_direct_bias_from_primary_s": 1.0066126925844572e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.226543409569349e-07,
+            "detected_direct_bias_from_primary_s": 1.8316086199320327e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -5.029590953199714e-07,
+            "detected_direct_bias_from_primary_s": 3.471574519076117e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 9.437646238076233e-07,
+            "detected_direct_bias_from_primary_s": 2.515523366150322e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -3.037726574168023e-06,
+            "detected_direct_bias_from_primary_s": 1.6691010592091034e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -2.1362618553288915e-07,
+            "detected_direct_bias_from_primary_s": 2.3131857765506517e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 8.384006087167398e-07,
+            "detected_direct_bias_from_primary_s": 1.3320142542710467e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.8588133727549805e-07,
+            "detected_direct_bias_from_primary_s": 1.9062152687586853e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -2.989934790899318e-07,
+            "detected_direct_bias_from_primary_s": 1.6520635806272443e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.5457806152533587e-06,
+            "detected_direct_bias_from_primary_s": 2.4132122874770386e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.431184163685488e-07,
+            "detected_direct_bias_from_primary_s": 1.5116832706444302e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -5.230462497306243e-06,
+            "detected_direct_bias_from_primary_s": 7.90625650457408e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0284027507675118e-05,
+            "detected_direct_bias_from_primary_s": -8.465957103578642e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 3.543184240641789e-07,
+            "detected_direct_bias_from_primary_s": 1.9826037187915934e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.4162983725278175e-06,
+            "detected_direct_bias_from_primary_s": 3.1169403266502644e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.5150455164730792e-06,
+            "detected_direct_bias_from_primary_s": 2.0830775517087976e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 9.510587961943789e-07,
+            "detected_direct_bias_from_primary_s": 1.5396220861897099e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.81722534383658e-07,
+            "detected_direct_bias_from_primary_s": 2.6528325244181163e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.6571669433888478e-05,
+            "detected_direct_bias_from_primary_s": 1.833409970172561e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.9116283621854746e-07,
+            "detected_direct_bias_from_primary_s": 2.317365624521476e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 2.327903189810153e-06,
+            "detected_direct_bias_from_primary_s": 3.5758405310141275e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.6619954679806398e-06,
+            "detected_direct_bias_from_primary_s": 2.7855855095012994e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -8.248875647005188e-07,
+            "detected_direct_bias_from_primary_s": 2.65756566410086e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0029734411175911e-06,
+            "detected_direct_bias_from_primary_s": 1.4696046919997494e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.5550874516156998e-06,
+            "detected_direct_bias_from_primary_s": 2.2856127047175044e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.0930652626327253e-06,
+            "detected_direct_bias_from_primary_s": 1.2749285423577002e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 2.539449972062402e-06,
+            "detected_direct_bias_from_primary_s": -1.8721105877348403e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.3071106803007326e-07,
+            "detected_direct_bias_from_primary_s": 2.2752666228970794e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 5.670315529268666e-08,
+            "detected_direct_bias_from_primary_s": 1.2421103928964194e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.272928029012886e-07,
+            "detected_direct_bias_from_primary_s": 1.0764758041169972e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.212543270055419e-05,
+            "detected_direct_bias_from_primary_s": -1.0969523640591586e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 1.2335392338292533e-06,
+            "detected_direct_bias_from_primary_s": 6.696503997300747e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 6.938989722919675e-07,
+            "detected_direct_bias_from_primary_s": 1.8911449223395356e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -3.761351595587409e-07,
+            "detected_direct_bias_from_primary_s": 1.942111680170311e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -1.3582700141828025e-06,
+            "detected_direct_bias_from_primary_s": 3.0565495423469737e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": -4.0252474274062033e-07,
+            "detected_direct_bias_from_primary_s": 3.467271441643315e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 5.139835850698909e-07,
+            "detected_direct_bias_from_primary_s": 2.500767852866012e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-0-emitter-1",
+            "nearest_path_residual_s": 4.4421931047304575e-07,
+            "detected_direct_bias_from_primary_s": 2.1720719754732483e-06
+          }
+        ]
+      },
+      {
+        "surface_id": "reflector-8eb21a26e266e45d",
+        "reason_false": "Unmatched duplicate under one-to-one matching; a true wall is already represented by another output plane.",
+        "nearest_wall": "wall-1-1",
+        "offset_separation_m": 0.11606798876857338,
+        "half_emitter_separation_m": 0.12,
+        "nearest_path_counts": {
+          "wall-1-1-emitter-1": 32,
+          "wall-0-0-emitter-1": 1
+        },
+        "nearest_path_rms_s": 2.157186601607289e-05,
+        "primary_direct_bias_max_s": 5.845538696010323e-05,
+        "primary_direct_bias_median_s": 2.0830775517087976e-06,
+        "records": [
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.306915022949301e-06,
+            "detected_direct_bias_from_primary_s": 5.882682577585141e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 5.7958857281254546e-05,
+            "detected_direct_bias_from_primary_s": 2.862316846596495e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -9.05150412226774e-06,
+            "detected_direct_bias_from_primary_s": 1.0066126925844572e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 6.483084656686011e-07,
+            "detected_direct_bias_from_primary_s": 3.471574519076117e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.0305888386914356e-06,
+            "detected_direct_bias_from_primary_s": 2.515523366150322e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -4.7598373008155004e-07,
+            "detected_direct_bias_from_primary_s": 1.6691010592091034e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.338974206598371e-06,
+            "detected_direct_bias_from_primary_s": 1.3320142542710467e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.7082138422074011e-06,
+            "detected_direct_bias_from_primary_s": 1.9062152687586853e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 8.540941011450642e-07,
+            "detected_direct_bias_from_primary_s": 1.6520635806272443e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 5.90278249151103e-05,
+            "detected_direct_bias_from_primary_s": 2.4132122874770386e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.8964157556099898e-06,
+            "detected_direct_bias_from_primary_s": 1.5116832706444302e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -5.759000626852015e-06,
+            "detected_direct_bias_from_primary_s": 7.90625650457408e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.0604373131991446e-05,
+            "detected_direct_bias_from_primary_s": -8.465957103578642e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.947784409684448e-07,
+            "detected_direct_bias_from_primary_s": 1.9826037187915934e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.9382424773541074e-06,
+            "detected_direct_bias_from_primary_s": 3.1169403266502644e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 2.2644489202847118e-07,
+            "detected_direct_bias_from_primary_s": 2.0830775517087976e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 6.988920961533904e-07,
+            "detected_direct_bias_from_primary_s": 2.6528325244181163e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.4564805780993909e-05,
+            "detected_direct_bias_from_primary_s": 1.833409970172561e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.9654618204349283e-05,
+            "detected_direct_bias_from_primary_s": 2.317365624521476e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.4825137290633283e-06,
+            "detected_direct_bias_from_primary_s": 3.5758405310141275e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -2.8599363101691755e-08,
+            "detected_direct_bias_from_primary_s": 2.7855855095012994e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -8.571148444689453e-07,
+            "detected_direct_bias_from_primary_s": 2.65756566410086e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.3581601798866305e-06,
+            "detected_direct_bias_from_primary_s": 1.4696046919997494e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 3.155211797997021e-08,
+            "detected_direct_bias_from_primary_s": 2.2856127047175044e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.652595509448601e-07,
+            "detected_direct_bias_from_primary_s": 2.3162567835457113e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-0-0-emitter-1",
+            "nearest_path_residual_s": -6.239779819764736e-05,
+            "detected_direct_bias_from_primary_s": 1.2749285423577002e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 4.078490838223606e-06,
+            "detected_direct_bias_from_primary_s": -1.8721105877348403e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -1.010889318463562e-06,
+            "detected_direct_bias_from_primary_s": 1.2421103928964194e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 6.651058955427225e-07,
+            "detected_direct_bias_from_primary_s": 1.0764758041169972e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 1.2213066291396485e-06,
+            "detected_direct_bias_from_primary_s": 6.696503997300747e-07
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 6.1197337042556e-05,
+            "detected_direct_bias_from_primary_s": -5.845538696010323e-05
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": -5.708714865930442e-07,
+            "detected_direct_bias_from_primary_s": 3.0565495423469737e-06
+          },
+          {
+            "nearest_primary_referenced_path": "wall-1-1-emitter-1",
+            "nearest_path_residual_s": 3.671844160148263e-08,
+            "detected_direct_bias_from_primary_s": 3.467271441643315e-06
+          }
+        ]
+      }
+    ],
+    "response_window": {
+      "sample_rate_hz": 48000,
+      "band_hz": [
+        2000,
+        14000
+      ],
+      "published_signed_response": true,
+      "minimum_detector_separation_s": 0.00035,
+      "earliest_response_delay_s": -0.004690859566130851
+    },
+    "accepted": 45,
+    "rejected": 3,
+    "physical_direct_pair": {
+      "min_delay_s": -0.0006960992373142728,
+      "max_delay_s": 0.000491590886705872,
+      "absolute_separation_below_detector_350us": 23,
+      "secondary_before_primary": 35,
+      "count": 48,
+      "all_within_earlier_path_guard_1ms": true
+    }
+  }
+]

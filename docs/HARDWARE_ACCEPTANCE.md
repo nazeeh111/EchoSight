@@ -20,11 +20,11 @@ For independent geometry scoring, match one-to-one using normal error ≤5 degre
 
 ## H0: file and route qualification
 
-**Inputs:** Each intended phone/recorder/route at one fixed, clear-line-of-sight position. Capture one silence interval and three complete seven-pilot shots. Start with the existing 48 kHz phyphox experiment or another lossless PCM recorder, preserving actual delivered rate. Keep each record below the implemented 30 s processing limit.
+**Inputs:** Each intended phone/recorder/route at one fixed, clear-line-of-sight position. Capture one silence interval and three complete seven-pilot shots. Start with the delivered native measurement-mode recorder, preserving its original ZIP, timestamp/route manifest and actual delivered rate; its preferred48kHz request is not a guarantee of the actual format. The phyphox route remains a provisional alternative without native buffer-continuity evidence. Keep each record below the implemented 30 s processing limit.
 
 **Pass gates:** All three signal recordings import without dropped/nonfinite samples, explicit sample gaps, rate changes, missing metadata or route/interruption notices. Original and imported raw hashes survive export/reload. The delivered rate supports the selected band: `high_hz <= 0.45 * actual_rate`. All seven pilots are recovered. Clipped sample fraction is ≤0.0001. Each record has `status: ok`; no `direct_reference_ambiguous`, `nonaffine_clock_or_motion`, `clock_rate_out_of_bounds`, `truncated_probe`, `weak_direct` or unsupported-band diagnostic. Silence returns no definitive geometry.
 
-**Failure consequence:** That device/route is not qualified. Preserve originals; correct format/rate/route or acquisition interruptions and repeat H0 as a new labeled attempt. If phyphox cannot provide adequate export/continuity, a native measurement-mode recorder is a possible next implementation, not an already delivered fallback. CSV numeric fidelity and a lossless container do not prove unprocessed ADC samples or absence of sub-pilot discontinuities.
+**Failure consequence:** That device/route is not qualified. Preserve originals; correct format/rate/route or acquisition interruptions and repeat H0 as a new labeled attempt. The native measurement-mode recorder is implemented and unsigned-build/injected-test verified, but has not been installed or physically qualified on our phones. Failure of either route must remain visible; the existence of the harness does not qualify its delivered data. CSV numeric fidelity and a lossless container do not prove unprocessed ADC samples or absence of sub-pilot discontinuities.
 
 ## H1: repeated level, timing and source-route checks
 
