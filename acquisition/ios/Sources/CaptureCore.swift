@@ -9,6 +9,19 @@ struct CaptureBlock: Codable {
     let sample_time: String?
     let host_time_valid: Bool
     let host_time: String?
+    enum CodingKeys: String, CodingKey {
+        case sequence, first_frame, frame_count, sample_time_valid, sample_time, host_time_valid, host_time
+    }
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(sequence, forKey: .sequence)
+        try container.encode(first_frame, forKey: .first_frame)
+        try container.encode(frame_count, forKey: .frame_count)
+        try container.encode(sample_time_valid, forKey: .sample_time_valid)
+        try container.encode(sample_time, forKey: .sample_time)
+        try container.encode(host_time_valid, forKey: .host_time_valid)
+        try container.encode(host_time, forKey: .host_time)
+    }
 }
 struct CaptureEvent: Codable {
     let type: String

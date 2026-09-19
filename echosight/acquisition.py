@@ -109,6 +109,7 @@ def validate_manifest(manifest,audio,samples,rate):
         if cursor>len(samples):raise ValueError('block frames exceed recording')
         times={}
         for name,signed in [('sample_time',True),('host_time',False)]:
+            if name not in block:raise ValueError('timestamp field required; use null when invalid')
             valid=block.get(name+'_valid')
             if not isinstance(valid,bool):raise ValueError('timestamp validity must be boolean')
             if valid:times[name]=_ticks(block.get(name),name,signed)

@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "surfaces": 3,
+  "accepted_observations": 12,
+  "distinct_raw_hashes": 4,
+  "native_processing_eligible": true,
+  "native_provenance": "repackaged synthetic Float32 WAV and injected fixture manifest; no microphone",
+  "job_status": "completed"
+}

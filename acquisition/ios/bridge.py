@@ -13,6 +13,7 @@ import subprocess
 import zipfile
 
 import numpy as np
+from jsonschema import Draft202012Validator
 
 from echosight.acquisition import read_capture_package
 from echosight.signals import process_recording
@@ -25,6 +26,7 @@ def main():
     parser.add_argument('--session', type=Path, help='Synthetic session JSON; otherwise generate seed 1 room fixture')
     args = parser.parse_args()
     native = Path(__file__).resolve().parent
+    validator = Draft202012Validator(json.loads((native.parent.parent / 'schemas' / 'capture-manifest.schema.json').read_text()))
     output = native / 'build' / 'bridge'
     output.mkdir(parents=True, exist_ok=True)
     session_path = args.session or simulate_session(output / 'synthetic-input', seed=1)
@@ -52,14 +54,22 @@ def main():
         assert set(archive.namelist()) == {'recording.wav', 'manifest.json'}
         assert archive.testzip() is None
         manifest = json.loads(archive.read('manifest.json'))
+        validator.validate(manifest)
         assert hashlib.sha256(archive.read('recording.wav')).hexdigest() == manifest['recording_sha256']
     before = process_recording(original, rate, session['probe'], capture['capture_id'])
     after = process_recording(imported, imported_rate, session['probe'], capture['capture_id'])
     assert before == after, 'Export/import changed deterministic acoustic observations'
     assert before['status'] != 'rejected' and before['candidates'], 'Bridge must exercise actual echo extraction'
     controls = {}
-    for name, eligible in [('exact', True), ('gap', False), ('overlap', False), ('host-regression', False), ('host-inconsistent', False)]:
-        _, _, control = read_capture_package((native / 'build' / 'fixtures' / f'{name}.echosight.zip').read_bytes(), 64 * 1024 * 1024)
+    for name, eligible in [('exact', True), ('gap', False), ('overlap', False), ('host-regression', False), ('host-inconsistent', False), ('invalid-timestamp', False)]:
+        control_path = native / 'build' / 'fixtures' / f'{name}.echosight.zip'
+        _, _, control = read_capture_package(control_path.read_bytes(), 64 * 1024 * 1024)
+        with zipfile.ZipFile(control_path) as archive:
+            control_manifest = json.loads(archive.read('manifest.json'))
+            validator.validate(control_manifest)
+            if name == 'invalid-timestamp':
+                block = control_manifest['continuity']['blocks'][0]
+                assert block['sample_time'] is None and block['host_time'] is None
         actual = control['acquisition']['processing_eligible']
         assert actual is eligible
         controls[name] = actual
@@ -67,6 +77,7 @@ def main():
                   supplied_session=str(Path(session_path).resolve()), native_package=str(package),
                   frame_count=len(original), sample_rate_hz=rate, sample_values_identical=True,
                   observation_objects_identical=True, extracted_candidate_count=len(after['candidates']),
+                  all_native_manifests_schema_valid=True, invalid_times_explicit_null=True,
                   processing_eligible=True, control_processing_eligibility=controls,
                   package_sha256=hashlib.sha256(data).hexdigest())
     (output / 'report.json').write_text(json.dumps(report, indent=2) + '\n')

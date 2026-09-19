@@ -92,6 +92,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
                 observation = process_recording(samples, rate, session["probe"], capture_id,
                                                 sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
                                                 cancel=cancel)
+            observation['waveform_sha256']=input_evidence['waveform_sha256']
             observation['input_format']=input_evidence['format']
             observation['input_diagnostics']=list(dict.fromkeys(capture.get('diagnostics',[])+input_evidence['diagnostics']))
             if acquisition is not None:observation['acquisition_evidence']=acquisition
@@ -108,6 +109,9 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
                             "provenance": capture.get("provenance", "measured")})
         observations.append(observation)
         progress(0.65 * (index + 1) / max(len(captures), 1), f"Processed capture {capture_id}")
+
+    from .storage import reject_reused_waveforms
+    reject_reused_waveforms(observations)
 
     # Only calibrated acquisition information enters inference. Unknown keys,
     # annotations and scene truth are deliberately excluded from this boundary.

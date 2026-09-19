@@ -1,0 +1,33 @@
+{
+  "block": {
+    "first_frame": 0,
+    "frame_count": 3,
+    "host_time_valid": false,
+    "sample_time_valid": false,
+    "sequence": 0
+  },
+  "schema_errors": [
+    {
+      "path": [
+        "continuity",
+        "blocks",
+        0
+      ],
+      "message": "'sample_time' is a required property"
+    },
+    {
+      "path": [
+        "continuity",
+        "blocks",
+        0
+      ],
+      "message": "'host_time' is a required property"
+    }
+  ],
+  "backend_processing_eligible": false,
+  "backend_rejection_reasons": [
+    "acquisition_event:timestamp_invalid",
+    "recorder_continuity_not_complete",
+    "timestamp_invalid"
+  ]
+}

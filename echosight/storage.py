@@ -227,7 +227,7 @@ def _recording_bytes(path, limit=MAX_RECORDING_BYTES):
     return raw
 
 
-def _decode_recording_evidence(raw):
+def _decode_recording_format(raw):
     from .acquisition import read_float_wav,read_capture_package
     if raw.startswith(b'PK\x03\x04'):
         package=read_capture_package(raw,MAX_RECORDING_BYTES)
@@ -240,6 +240,50 @@ def _decode_recording_evidence(raw):
         return samples,rate,{'format':'ieee_float32_wav','diagnostics':['sample_grid_unverified']}
     samples,rate=_read_wav(io.BytesIO(raw))
     return samples,rate,{'format':'pcm_wav','diagnostics':['sample_grid_unverified']}
+
+
+def waveform_sha256(samples,rate):
+    """Exact decoded-value identity, not proof that different values are independent.
+
+    Canonicalize signed zero only for this digest. Original bytes/samples remain
+    unchanged. Bounded chunks avoid another recording-sized allocation.
+    """
+    samples=np.asarray(samples)
+    if samples.ndim!=1 or len(samples)==0 or not 8000<=rate<=192000 or int(rate)!=rate:
+        raise ValueError('invalid waveform fingerprint input')
+    digest=hashlib.sha256(b'echosight-mono-float64-waveform-v1\0')
+    digest.update(int(rate).to_bytes(4,'little'));digest.update(len(samples).to_bytes(8,'little'))
+    for start in range(0,len(samples),131072):
+        chunk=np.array(samples[start:start+131072],dtype='<f8',copy=True)
+        if not np.isfinite(chunk).all():raise ValueError('nonfinite waveform fingerprint input')
+        chunk[chunk==0]=0.0
+        digest.update(chunk.tobytes())
+    return digest.hexdigest()
+
+
+def _decode_recording_evidence(raw):
+    samples,rate,evidence=_decode_recording_format(raw)
+    evidence['waveform_sha256']=waveform_sha256(samples,rate)
+    evidence['waveform_hash_semantics']='Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence.'
+    return samples,rate,evidence
+
+
+def reject_reused_waveforms(observations):
+    """Reject every exact-equivalent group; no declared pose wins by list order."""
+    groups={}
+    for observation in observations:
+        digest=observation.get('waveform_sha256')
+        if digest:groups.setdefault(digest,[]).append(observation)
+    rejected=[]
+    for digest,group in groups.items():
+        if len(group)<2:continue
+        identities=[{k:o[k] for k in ('session_id','capture_id') if k in o} for o in group]
+        rejected.append({'waveform_sha256':digest,'captures':identities})
+        for observation in group:
+            observation['status']='rejected';observation['candidates']=[]
+            observation.setdefault('diagnostics',[]).append({'code':'recording_waveform_reused','message':'Exact decoded audio is reused across declared measurements; every member is excluded as independent evidence.'})
+            observation['duplicate_waveform_group']=identities
+    return rejected
 
 
 def _decode_recording_bytes(raw):

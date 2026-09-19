@@ -157,7 +157,8 @@ class AcquisitionTests(unittest.TestCase):
         from echosight.storage import read_recording
         for mutation in [lambda m:m.update(recording_sha256='0'*64),lambda m:m.update(frame_count=9),
                          lambda m:m['continuity']['blocks'][1].update(first_frame=4),
-                         lambda m:m['host_timebase'].update(denom=0)]:
+                         lambda m:m['host_timebase'].update(denom=0),
+                         lambda m:(m['continuity']['blocks'][0].update(sample_time_valid=False),m['continuity']['blocks'][0].pop('sample_time'))]:
             raw,_,_=capture_bytes(mutate=mutation)
             with tempfile.TemporaryDirectory() as tmp:
                 path=Path(tmp)/'capture.zip';path.write_bytes(raw)

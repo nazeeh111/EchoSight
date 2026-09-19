@@ -64,6 +64,9 @@ func word(_ data: Data, _ index: Int) -> UInt32 {
         let invalid = try CaptureCollector(sampleRate: 48000)
         try check(invalid.append([0.2], sampleRate: 48000, sampleTime: nil, hostTime: nil) == "timestamp_invalid", "missing timestamp")
         try check(try invalid.snapshot().blocks[0].sample_time == nil, "invalid time stays null")
+        let invalidBlock = try JSONSerialization.jsonObject(with: JSONEncoder().encode(invalid.snapshot().blocks[0])) as! [String: Any]
+        try check(invalidBlock["sample_time"] is NSNull && invalidBlock["host_time"] is NSNull, "invalid timestamp keys encode explicit JSON null")
+        try identityPackage(invalid.snapshot(), "invalid-timestamp-test").write(to: directory.appendingPathComponent("invalid-timestamp.echosight.zip"))
 
         let inconsistent = try CaptureCollector(sampleRate: 48000)
         _ = inconsistent.append([Float](repeating: 0.1, count: 480), sampleRate: 48000, sampleTime: 0, hostTime: 1_000_000)

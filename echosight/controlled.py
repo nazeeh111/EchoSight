@@ -208,6 +208,36 @@ def _compact_epoch(result):
     return result
 
 
+def _native_control_conflicts(protocol,observations,ids):
+    """Known raw-manifest contradictions cannot be overridden by outer labels.
+
+    Manifests remain unauthenticated declarations. Legacy WAV controls still
+    rely on operator declarations; absence is never promoted to observed proof.
+    """
+    conflicts=[];source_values={key:set() for key in ('configuration_id','probe_id','route_id')}
+    for cid in sorted(ids):
+        evidence=[epoch[cid].get('acquisition_evidence') for epoch in observations]
+        if not any(e is not None for e in evidence):continue
+        if any(e is None for e in evidence):
+            conflicts.append(cid+': native acquisition evidence missing in some epochs');continue
+        signatures=[]
+        for index,e in enumerate(evidence):
+            # The pipeline derives these from the immutable raw package.
+            signatures.append({key:e[key] for key in ('device','recorder','route_initial','route_final')})
+            signatures[-1]['session']={key:e['session'][key] for key in ('category','mode','activated_sample_rate_hz')}
+            declaration=e['source_declaration']
+            for key,values in source_values.items():
+                if declaration[key].strip().lower()!='unknown':values.add(declaration[key])
+            native=declaration['configuration_id'];outer=protocol['epochs'][index]['source_configuration_id']
+            if native.strip().lower()!='unknown' and outer.strip().lower()!='unknown' and native!=outer:
+                conflicts.append(cid+': native source configuration contradicts epoch '+EPOCHS[index])
+        if any(signature!=signatures[0] for signature in signatures[1:]):
+            conflicts.append(cid+': observed recorder, device, input route or active format changed across epochs')
+    for key,values in source_values.items():
+        if len(values)>1:conflicts.append('native source '+key+' differs across captures/epochs')
+    return conflicts
+
+
 def process_controlled_protocol(protocol,cancel=None,progress=None):
     """Raw-recording entry point; exactly four epochs, bounded by session limits."""
     from .pipeline import process_session
@@ -230,9 +260,17 @@ def process_controlled_protocol(protocol,cancel=None,progress=None):
     ids={c['capture_id'] for c in sessions[0]['captures']}
     if any(set(o)!=ids or any(v.get('status')!='ok' for v in o.values()) for o in observations):
         out['diagnostics'].append({'code':'capture_quality_failed','message':'Every declared capture must pass signal checks in all four epochs.'});return out
+    conflicts=_native_control_conflicts(protocol,observations,ids)
+    if conflicts:
+        out['diagnostics'].append({'code':'native_controls_contradict_protocol','message':'; '.join(conflicts)})
+        return out
     hashes=[o.get('recording_sha256') for epoch in observations for o in epoch.values()]
     if None in hashes or len(set(hashes))!=len(hashes):
         out['diagnostics'].append({'code':'recordings_reused','message':'Independent epochs and devices require distinct preserved recording bytes.'});return out
+    waveforms=[o.get('waveform_sha256') for epoch in observations for o in epoch.values()]
+    if any(waveforms) and (None in waveforms or len(set(waveforms))!=len(waveforms)):
+        out['diagnostics'].append({'code':'recording_waveforms_reused','message':'Distinct containers cannot make identical decoded audio independent across epochs or devices.'})
+        return out
     try:
         for cid in sorted(ids):
             if cancel():out['status']='cancelled';return out

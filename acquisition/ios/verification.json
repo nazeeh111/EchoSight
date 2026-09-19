@@ -8,11 +8,11 @@
     "sdk": "iPhoneOS 27.0"
   },
   "source_sha256": {
-    "Sources/CaptureCore.swift": "cf657e8d4eddecd6566ea4f6b075ee6dc88ff0fa75335194aae5a585fbcc8094",
+    "Sources/CaptureCore.swift": "bc46a6f9a41bf51383ebb594542cb2c972c2b7460da2571a4dd0d3dd8b8308f7",
     "Sources/NativeRecorder.swift": "816421f3049678f6eb806e84cbb221804c6b38a7551e40d6919f8157961a1936",
     "Sources/App.swift": "64c850bb9eb0c5a162d376c2e6ee25465100f0bca2f9bc8bc268d34d6e643d09",
-    "Tests/CoreTests.swift": "a3b772e965ea68c409aac3b40472203697525d4796caa401904652aa796d5986",
-    "bridge.py": "2b851a056ff642e7c728884e9d728a3e95282717d7e5bc79e9a96279838ce28c",
+    "Tests/CoreTests.swift": "bf95b4376f478fba84cef75b21303eb3975fab7d1760392b868e2a304be16748",
+    "bridge.py": "85188e5e2069d31f1da199b1220631453e72fd67689b32e84ffff8729465ec99",
     "build.sh": "b034c04e48a1d0aac63e8fca179343cc42d0313c2844be968b8ec37caa837055",
     "test-core.sh": "bcb880bcf87df55ced156d8d566efd9f264caa7cc897bb51cb0e32fb9059511f",
     "EchoSightCapture.xcodeproj/project.pbxproj": "4dfdc1cf90c0b12f560aa10718d5b19a9ad62dd2ae1ccbf1a5371c1cc7ba1720",
@@ -30,7 +30,9 @@
       "identical_acoustic_observation_objects": true,
       "candidate_count": 5,
       "clean_processing_eligible": true,
-      "invalid_timing_controls_ineligible": 4
+      "invalid_timing_controls_ineligible": 5,
+      "all_generated_manifests_schema_valid": true,
+      "unavailable_timestamps_explicit_null": true
     }
   },
   "limitations": [

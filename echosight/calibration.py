@@ -90,6 +90,10 @@ def calibrate_reference(session, reference):
     if None in hashes or len(set(hashes)) != len(hashes):
         out['diagnostics'].append({'code':'reference_recordings_reused','message':'Independent calibration and validation recordings require distinct preserved raw bytes.'})
         return out
+    waveforms=[observations[cid].get('waveform_sha256') for cid in train+held]
+    if any(waveforms) and (None in waveforms or len(set(waveforms))!=len(waveforms)):
+        out['diagnostics'].append({'code':'reference_waveforms_reused','message':'Repackaging identical decoded audio cannot supply independent calibration or held-out evidence.'})
+        return out
     delay=np.asarray([c['delay_s'] for c in selected])
     timing_variance=[]
     for cid,candidate in zip(train+held,selected):

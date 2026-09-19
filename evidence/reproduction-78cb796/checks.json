@@ -1,0 +1,15 @@
+{
+  "commit": "78cb7963b8bbe5ef822c199ba857fde2d5529cf1",
+  "source": "clean existing GitHub clone fast-forwarded without working changes",
+  "environment": "existing project-local Python3.12.14; pinned test packages installed; cache reused where available",
+  "tests": {
+    "count": 136,
+    "seconds": 32.78,
+    "status": "passed"
+  },
+  "native_bridge": "passed exact93120samples and wholeechoobservation;4invalidtiming controlsrejected",
+  "unsigned_ios_build": "BUILD SUCCEEDED; no launch/sign/mic",
+  "working_tree": "clean after reproduction",
+  "physical_validation": false,
+  "remaining_findings": "Independent review reproduced experimental multisource native-interruption admission bypass; fix pending. Controlled inner/outer declaration binding still under review."
+}

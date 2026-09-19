@@ -6,7 +6,7 @@ The existing phyphox route remains available. This native route adds observable 
 
 ## Build and software checks
 
-Run from the repository root on macOS with Xcode and the repository Python environment. No extra Swift dependencies are required. These commands do not launch the app, request microphone permission, sign or install anything.
+Run from the repository root on macOS with Xcode and the repository Python environment, including `requirements-test.txt` for the bridge's formal JSON Schema check. No extra Swift dependencies are required. These commands do not launch the app, request microphone permission, sign or install anything.
 
 ```sh
 acquisition/ios/test-core.sh
@@ -20,7 +20,7 @@ The `codesign` command deliberately reports `code object is not signed at all` a
 
 `test-core.sh` compiles only the Foundation/CryptoKit collector and exporter for macOS. It checks exact Float32 bit patterns including signed zero and subnormals, WAV counts, stop/append admission races, a partial final block, duration/block limits, missing/gapped/overlapping sample timestamps, host-clock regression/inconsistent elapsed time, cumulative drift, native tick scaling, nonfinite samples, format changes, interrupted export and retries after injected encoding/write failures. Fifty injected stop/append races are exercised per run. These checks do not execute AVAudioEngine or prove real-time callback performance.
 
-`bridge.py` generates a fresh deterministic synthetic room session, supplies its first recording to the same Swift collector/exporter in 511-frame blocks, then independently decodes the resulting ZIP through the backend. It verifies exact sample values, ZIP members/CRC, WAV hash, continuity eligibility and equality of the complete extracted acoustic-observation objects. Clean and four invalid-timestamp packages exercise backend admission. To use an existing synthetic session instead:
+`bridge.py` generates a fresh deterministic synthetic room session, supplies its first recording to the same Swift collector/exporter in 511-frame blocks, then independently decodes the resulting ZIP through the backend. It verifies exact sample values, ZIP members/CRC, WAV hash, continuity eligibility and equality of the complete extracted acoustic-observation objects. Clean and five invalid-timestamp packages exercise backend admission. Every generated manifest is checked against the published schema, including explicit JSON null for unavailable sample and host timestamps. To use an existing synthetic session instead:
 
 ```sh
 PYTHONPATH=. .venv/bin/python acquisition/ios/bridge.py --session work/first-demo/session.json

@@ -376,18 +376,24 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
             out['guidance'].append(dict(action='Acquire source poses spanning three dimensions with recalibrated acoustic center; avoid source poses confined to one line or plane.'))
         if out['surfaces']:
             _parent_subset_alternatives(out,qs,reference,sources,receivers,v,allrows,links,calcov,pcov,cancel)
+        if out['surfaces']:
+            from .path_alternatives import apply_path_alternatives
+            apply_path_alternatives(out,processed_sessions,v,calcov,cancel)
         if progress:progress(1.,'Joint inference complete')
         return out
     except single._Cancelled:
-        out['status']='cancelled';out['diagnostics'].append('cancelled_by_caller');return out
+        out['status']='cancelled';out['surfaces']=[];out['diagnostics'].append('cancelled_by_caller');return out
     except (ValueError,KeyError,TypeError,np.linalg.LinAlgError) as exc:
-        out['diagnostics'].append(str(exc));out['status']='calibration_needed';return out
+        out['diagnostics'].append(str(exc));out['status']='calibration_needed';out['surfaces']=[]
+        for hypothesis in out['hypotheses']:
+            hypothesis['verification_status']='unverified_due_to_processing_error'
+        return out
     finally:out['runtime_s']=time.perf_counter()-start
 
 
 def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
     """Bounded lossless recording entry; malformed input yields no_result."""
-    from .storage import load_session,validate_session,read_recording_snapshot,MAX_JSON_BYTES
+    from .storage import load_session,validate_session,read_recording_evidence_snapshot,reject_reused_waveforms,MAX_JSON_BYTES
     from .signals import process_recording
     start=time.perf_counter();base=Path.cwd();out=_empty(bundle,method);processed=[]
     try:
@@ -421,13 +427,32 @@ def process_scene_bundle(bundle,cancel=None,progress=None,*,method='mapper'):
             single._check(cancel);observations=[]
             for capture in session['captures']:
                 single._check(cancel)
-                samples,rate,digest=read_recording_snapshot(capture['recording_path'])
-                if capture.get('sha256') and capture['sha256']!=digest:raise ValueError('recording checksum differs')
-                observation=process_recording(samples,rate,session['probe'],capture['capture_id'],sound_speed_m_s=session.get('sound_speed_m_s',343),cancel=cancel)
+                digest=None;input_evidence=None
+                try:
+                    samples,rate,digest,input_evidence=read_recording_evidence_snapshot(capture['recording_path'])
+                    if capture.get('sha256') and capture['sha256']!=digest:raise ValueError('recording checksum differs')
+                    acquisition=input_evidence.get('acquisition')
+                    if acquisition is not None and not acquisition['processing_eligible']:
+                        observation=dict(capture_id=capture['capture_id'],status='rejected',candidates=[],
+                            diagnostics=[dict(code='acquisition_not_continuous',message=', '.join(acquisition['rejection_reasons']))])
+                    else:
+                        observation=process_recording(samples,rate,session['probe'],capture['capture_id'],sound_speed_m_s=session.get('sound_speed_m_s',343),cancel=cancel)
+                except (OSError,ValueError,KeyError) as exc:
+                    observation=dict(capture_id=capture['capture_id'],status='rejected',candidates=[],diagnostics=[dict(code='recording_rejected',message=str(exc))])
                 observation.update({key:capture[key] for key in ('receiver_position_m','receiver_position_std_m','receiver_pose_group_id','provenance') if key in capture})
-                observation['recording_sha256']=digest;observations.append(observation)
+                observation['input_diagnostics']=list(capture.get('diagnostics',[]))
+                observation['input_format']=capture.get('format','unspecified_lossless')
+                observation['session_id']=session['session_id']
+                if input_evidence is not None:
+                    observation['waveform_sha256']=input_evidence['waveform_sha256']
+                    observation['input_format']=input_evidence['format']
+                    observation['input_diagnostics']=list(dict.fromkeys(observation['input_diagnostics']+input_evidence['diagnostics']))
+                    if input_evidence.get('acquisition') is not None:observation['acquisition_evidence']=input_evidence['acquisition']
+                if digest is not None:observation['recording_sha256']=digest
+                observations.append(observation)
             processed.append(dict(session=session,observations=observations))
             if progress:progress(.2*(a+1)/len(entries),'Processed source session')
+        reject_reused_waveforms([observation for item in processed for observation in item['observations']])
         result=infer_scene_bundle(processed,bundle,method=method,cancel=cancel,progress=progress)
         result['runtime_s']=time.perf_counter()-start
         result['provenance']=dict(physical_validation=False,geometry='inferred from recording-derived excess delays',evidence_classes=sorted({o.get('provenance','unspecified') for item in processed for o in item['observations']}),effective_speed_semantics='metres per source-buffer second')

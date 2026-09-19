@@ -1,0 +1,9 @@
+# Recording evidence integration repairs
+
+The full integrated suite passes **157tests in38.988s**, including raw API/CLI, calibration/controls, schemas, cancellation/recovery, exact waveform identity, and experimental path alternatives. [Log](full-tests.txt). This is software/simulation evidence, not physical accuracy.
+
+The [immutable78cb796 review](../independent-review-78cb796.md) found three P2 defects. Repairs enforce native acquisition eligibility at multi-source raw entry, reject controlled inner/outer and cross-epoch metadata contradictions, and serialize unavailable native timestamps as explicit null. Backend structural checks now require those fields. Native injected tests formally validate all generated manifests, including interrupted ones; unsigned iOS rebuild and93,120sample Swift/backend bridge pass. Original failing probes are retained here.
+
+A separate independent audit demonstrated three false surfaces from one waveform at twelve declared poses, including four different lossless containers through HTTP. The exact decoded waveform fingerprint now rejects every equivalent group before inference while preserving original bytes; cross-source, calibration and controlled independence sets use it too. [Independent recheck](duplicates-after-REPORT.md) records zero surfaces after import/replay/HTTP and six surfaces retained on the unique-recording control. Different hashes still do not prove acquisition independence.
+
+Point and unobserved-parent competing models are experimental and documented separately in docs/audit/PATH_ALTERNATIVES.md. Their same-selected-evidence development checks retain28true surfaces while withholding three challenged false planes. The first new raw suite remains unexecuted at this checkpoint. Scientific model selection, source mismatch, measured spatial validation and hardware behavior are unresolved. Immutable review and frozen raw evaluation follow, without changing criteria.

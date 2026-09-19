@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "checks": {
+    "canonical_probe_exact": true,
+    "fractional_delay_centroid_errors_samples": [
+      1.4210854715202004e-14,
+      0.0,
+      0.0,
+      2.842170943040401e-14,
+      1.4210854715202004e-14
+    ]
+  },
+  "cases": [
+    {
+      "family": "room",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "76bbe067f05cbc38f37d585bbf2fdd1de3906fdb9368f6fb7148201cb29d086b",
+      "panel_visibility": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_active_snr_db": 62.495723982439216,
+      "maximum_peak": 0.4055028128321272
+    },
+    {
+      "family": "finite_tilted_panel",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "4fc19da2e8b1833d60a53544fe4200b6df200b3eed64e17e7ce73a24d6d36407",
+      "panel_visibility": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "minimum_active_snr_db": 62.51327427354575,
+      "maximum_peak": 0.43833947662052253
+    },
+    {
+      "family": "ideal_point",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "44fd38f30446c1de585daabd4a43750e846f58517c9caa50d8b8f9346c9606aa",
+      "panel_visibility": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_active_snr_db": 62.48801170302552,
+      "maximum_peak": 0.2105894794291355
+    },
+    {
+      "family": "dispersive_point",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "19ce19e883df27540dd164677a4af3b0979723984530bf8cc921f5da0424f8ba",
+      "panel_visibility": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_active_snr_db": 62.49249310899491,
+      "maximum_peak": 0.23833652554469276
+    },
+    {
+      "family": "diffuse_null",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "4debe932229c2ab406850468612dc823b584cdd692f40cecf5b705c66a719ea5",
+      "panel_visibility": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_active_snr_db": 60.58934007855554,
+      "maximum_peak": 0.2791969561574775
+    },
+    {
+      "family": "two_emitters",
+      "seed": 1001,
+      "recordings": 48,
+      "truth_sha256": "5691fee6e455b0047e275de61d621bb20ad1986aa577d6e16770fdef8e2a04dc",
+      "panel_visibility": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_active_snr_db": 63.60672935989709,
+      "maximum_peak": 0.5736605501784907
+    }
+  ],
+  "no_fitting_executed": true,
+  "heldout_not_generated": true,
+  "source_sha256": {
+    "evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "evaluation/path_interpretations_acceptance.json": "1b1ac213a1a84841c8cf13d57a5f7a6c24a52f895854e5b7403cfa15137e5ad5",
+    "docs/audit/PATH_ALTERNATIVES.md": "c4cbed9f97b727bc7d70e59e0ebdd850d51487715bcf618525b69f18d9a846a3"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "matching": {
+    "status": "repeatable_acoustic_change_unlocalized",
+    "changed_views": 4,
+    "diagnostics": [
+      {
+        "code": "controlled_acoustic_difference",
+        "message": "Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional."
+      }
+    ],
+    "all_packages_processing_eligible": true,
+    "source_configuration_ids": [
+      "qualified-source-one"
+    ],
+    "input_port_types": [
+      "builtInMic"
+    ],
+    "source_playback_routes": [
+      "playback-one"
+    ]
+  },
+  "source_configuration_changed": {
+    "status": "repeatable_acoustic_change_unlocalized",
+    "changed_views": 4,
+    "diagnostics": [
+      {
+        "code": "controlled_acoustic_difference",
+        "message": "Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional."
+      }
+    ],
+    "all_packages_processing_eligible": true,
+    "source_configuration_ids": [
+      "different-source-configuration",
+      "qualified-source-one"
+    ],
+    "input_port_types": [
+      "builtInMic"
+    ],
+    "source_playback_routes": [
+      "playback-one"
+    ]
+  },
+  "input_route_changed": {
+    "status": "repeatable_acoustic_change_unlocalized",
+    "changed_views": 4,
+    "diagnostics": [
+      {
+        "code": "controlled_acoustic_difference",
+        "message": "Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional."
+      }
+    ],
+    "all_packages_processing_eligible": true,
+    "source_configuration_ids": [
+      "qualified-source-one"
+    ],
+    "input_port_types": [
+      "USBAudio",
+      "builtInMic"
+    ],
+    "source_playback_routes": [
+      "playback-one"
+    ]
+  },
+  "source_playback_route_changed": {
+    "status": "repeatable_acoustic_change_unlocalized",
+    "changed_views": 4,
+    "diagnostics": [
+      {
+        "code": "controlled_acoustic_difference",
+        "message": "Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional."
+      }
+    ],
+    "all_packages_processing_eligible": true,
+    "source_configuration_ids": [
+      "qualified-source-one"
+    ],
+    "input_port_types": [
+      "builtInMic"
+    ],
+    "source_playback_routes": [
+      "different-playback-route",
+      "playback-one"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "checks": {
+    "result.json": {
+      "observations": 12,
+      "all_group_members_rejected": true,
+      "surfaces": 0,
+      "status": "no_result",
+      "group_size": 12
+    },
+    "replay-result.json": {
+      "observations": 12,
+      "all_group_members_rejected": true,
+      "surfaces": 0,
+      "status": "no_result",
+      "group_size": 12
+    },
+    "http-result.json": {
+      "observations": 12,
+      "all_group_members_rejected": true,
+      "surfaces": 0,
+      "status": "no_result",
+      "group_size": 12
+    }
+  },
+  "retained": [
+    {
+      "store": "store",
+      "capture_references": 12,
+      "distinct_containers": 3,
+      "all_original_byte_hashes_verified": true
+    },
+    {
+      "store": "replay-store",
+      "capture_references": 12,
+      "distinct_containers": 3,
+      "all_original_byte_hashes_verified": true
+    },
+    {
+      "store": "http-aniuw4d7",
+      "capture_references": 12,
+      "distinct_containers": 4,
+      "all_original_byte_hashes_verified": true
+    }
+  ],
+  "unique_control": {
+    "accepted_observations": 12,
+    "surfaces": 6,
+    "status": "partial",
+    "distinct_waveforms": 12,
+    "seed": 1701
+  },
+  "signed_zero": {
+    "digest_equal": true,
+    "original_bits_untouched": true,
+    "different_rate_digest_different": true
+  },
+  "source_sha256": {
+    "echosight/storage.py": "df884e5a1c8746934ef752dd6e4d90dcdf0654becf5dad6581c4b58911fcae63",
+    "echosight/pipeline.py": "989423595700d7c604fb40b2154c2f937082ee80ac768693ece95e2ca3a774ff",
+    "echosight/signals.py": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+    "echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "echosight/calibration.py": "fc587cf1496a4cc3ad9d3345378d76726d70d49a92be3a57eb2b37b3e455339e",
+    "echosight/controlled.py": "0ccd5448cded25f4fd635a20ee060de6eab51f513768816a52eca98ac1087022"
+  }
+}

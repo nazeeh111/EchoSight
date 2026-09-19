@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "reference_generator_commit": "be5c70a",
+  "physical_and_surveyed_geometry_exact_match": true,
+  "source_covariance_exact_match": true,
+  "max_path_length_error_m": 5.329070518200751e-15,
+  "max_reflection_law_error": 9.255558542105616e-16,
+  "path_checks": 1008,
+  "specular_ray_checks": 912,
+  "reproduced_wavs": 48,
+  "identical_reproduced_wavs": true,
+  "heldout_not_generated": true,
+  "no_solver_executed": true
+}

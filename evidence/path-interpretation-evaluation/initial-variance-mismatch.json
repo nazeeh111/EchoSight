@@ -1,0 +1,6 @@
+{
+  "original_variance": 2.4999999999999998e-05,
+  "initial_renderer_variance": 2.5e-05,
+  "absolute_difference": 3.3881317890172014e-21,
+  "failure": "Exact metadata comparison failed, not a physical discrepancy. Initial freeze and development bytes preserved. Correction changes metadata only before held-out generation."
+}

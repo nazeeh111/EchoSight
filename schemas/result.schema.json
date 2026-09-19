@@ -182,6 +182,11 @@
             "items": {
               "$ref": "#/$defs/candidate"
             }
+          },
+          "waveform_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Recomputed exact decoded mono waveform identity (nominal rate/count/Float64 values). Signed zero canonicalized for this digest only; raw bytes remain unchanged. Distinct hashes do not prove independent acquisition."
           }
         }
       }
