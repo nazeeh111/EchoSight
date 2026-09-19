@@ -1,0 +1,7 @@
+test_cancellation_during_refit_stops_before_another_fit (tests.test_multisource_support_recovery.MultisourceSupportRecovery.test_cancellation_during_refit_stops_before_another_fit) ... ok
+test_weak_candidate_cannot_erase_supported_room (tests.test_multisource_support_recovery.MultisourceSupportRecovery.test_weak_candidate_cannot_erase_supported_room) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 8.342s
+
+OK

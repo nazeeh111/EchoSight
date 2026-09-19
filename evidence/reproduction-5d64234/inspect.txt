@@ -1,0 +1,197 @@
+{
+  "session_id": "sim-room-1",
+  "result_id": "result-88c96eea6c371d4653e6",
+  "status": "partial",
+  "surface_count": 6,
+  "hypothesis_count": 1,
+  "dimensions": [
+    {
+      "direction": [
+        0.9999882353641232,
+        0.002938474792549881,
+        0.003859339223316586
+      ],
+      "geometry_std_m": 0.010868672714627934,
+      "intersection_points_m": [
+        [
+          5.812709709549668,
+          1.7109098322437706,
+          1.2643287747796712
+        ],
+        [
+          0.002959866574904879,
+          1.6938378279332542,
+          1.241906715545659
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.007873761819538232,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 7.87380249835365e-05,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.01094741073961147,
+      "surface_ids": [
+        "reflector-4de59ede9fa1",
+        "reflector-bd3bf7b08a9b"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 5.809818193370319
+    },
+    {
+      "direction": [
+        0.00033740173311463186,
+        -3.9066705670888336e-05,
+        0.9999999423169299
+      ],
+      "geometry_std_m": 0.008058665189681484,
+      "intersection_points_m": [
+        [
+          2.100694935788878,
+          1.6999195355291343,
+          3.309668580764237
+        ],
+        [
+          2.099577721828644,
+          1.7000488942865803,
+          -0.0015589149451875617
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.0022656775377748644,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 2.2656785069998252e-05,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.008081321974751482,
+      "surface_ids": [
+        "reflector-b1b9e976003c",
+        "reflector-9fb935b9aef1"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 3.311227686711203
+    },
+    {
+      "direction": [
+        0.000201269701088214,
+        0.9999981142672258,
+        0.0019315673686480957
+      ],
+      "geometry_std_m": 0.008293136621430207,
+      "intersection_points_m": [
+        [
+          2.1005943242028406,
+          4.652869104940144,
+          1.255703676362601
+        ],
+        [
+          2.0996576634220796,
+          -0.0008816056967009267,
+          1.2467146263971658
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.0007821484689968629,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 7.821485086570406e-06,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.008300958106516777,
+      "surface_ids": [
+        "reflector-74eb4fdab3c5",
+        "reflector-2f2a8c8fc324"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 4.653759486383631
+    }
+  ],
+  "runtime_s": 0.45354929099266883,
+  "provenance": {
+    "coordinates": "right-handed, metres, z up",
+    "evidence_classes": [
+      "simulated"
+    ],
+    "geometry": "inferred from recording-derived excess delays",
+    "implementation_sha256": "4ea69860dca8e6783fbbd257f011243b678a38fc98b8494a0af4f96fa2599cff",
+    "inference": [
+      "simulated"
+    ],
+    "method": "mapper",
+    "physical_validation": false,
+    "poses": "supplied acoustic-center positions",
+    "recordings": [
+      {
+        "capture_id": "capture-00",
+        "sha256": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65"
+      },
+      {
+        "capture_id": "capture-01",
+        "sha256": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d"
+      },
+      {
+        "capture_id": "capture-02",
+        "sha256": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698"
+      },
+      {
+        "capture_id": "capture-03",
+        "sha256": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc"
+      },
+      {
+        "capture_id": "capture-04",
+        "sha256": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc"
+      },
+      {
+        "capture_id": "capture-05",
+        "sha256": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced"
+      },
+      {
+        "capture_id": "capture-06",
+        "sha256": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14"
+      },
+      {
+        "capture_id": "capture-07",
+        "sha256": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563"
+      },
+      {
+        "capture_id": "capture-08",
+        "sha256": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918"
+      },
+      {
+        "capture_id": "capture-09",
+        "sha256": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242"
+      },
+      {
+        "capture_id": "capture-10",
+        "sha256": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c"
+      },
+      {
+        "capture_id": "capture-11",
+        "sha256": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae"
+      }
+    ],
+    "runtime_versions": {
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.18.1"
+    },
+    "software_version": "0.1.0"
+  },
+  "diagnostics": [
+    "refinement_budget_reached"
+  ]
+}

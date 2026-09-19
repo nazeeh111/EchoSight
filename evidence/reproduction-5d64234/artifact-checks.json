@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "captures": 12,
+  "surfaces": 6,
+  "height_dependent_structure": true,
+  "raw_sha256": {
+    "capture-00": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65",
+    "capture-01": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d",
+    "capture-02": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698",
+    "capture-03": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc",
+    "capture-04": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc",
+    "capture-05": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced",
+    "capture-06": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14",
+    "capture-07": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563",
+    "capture-08": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918",
+    "capture-09": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242",
+    "capture-10": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c",
+    "capture-11": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae"
+  },
+  "archive_sha256": "6cac45300b020bcab94a50c4fd32bdd9f29a79d5e686c45f64282489cba50b74",
+  "result_id": "result-88c96eea6c371d4653e6",
+  "replay_result_id": "result-88c96eea6c371d4653e6",
+  "exact_geometry_equal": true,
+  "generated_session_result_and_job_schemas": "passed",
+  "physical_validation": false
+}

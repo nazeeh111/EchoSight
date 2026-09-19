@@ -1,0 +1,13 @@
+{
+  "status": "prepared_and_frozen_only",
+  "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+  "artifacts": {
+    "PROTOCOL.md": "2a62129479cd8af5c38fa43c3efb73414b00aca385e469fd76ec740b4a6cc17f",
+    "run.py": "458eb6b54959c91135f6413929b7b47526cc1cace3441837db4773f382edc6b6",
+    "settings.json": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+    "static-check.json": "a2e512ff2122febb9455f354c69c4a7856056c5d848876a829505f4765070c2e",
+    "freeze.json": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40"
+  },
+  "no_generation_or_mapping_artifacts": true,
+  "generation_authorized": false
+}
