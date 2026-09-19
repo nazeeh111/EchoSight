@@ -1,0 +1,12 @@
+single_room 2401 not_qualified 11 0.5383454999973765
+single_room 2411 not_qualified 16 0.6757813750009518
+dual_room 2401 source_model_ambiguous 16 0.5031468329980271
+dual_room 2411 source_model_ambiguous 16 0.5399360410010559
+near_reflector 2401 source_model_ambiguous 14 0.536054874995898
+near_reflector 2411 not_qualified 7 0.5520113749953452
+direct_null 2401 not_qualified 16 0.5932921669955249
+direct_null 2411 not_qualified 15 0.6000100000019302
+receiver_filter 2401 not_qualified 16 0.6375922080042074
+receiver_filter 2411 not_qualified 16 0.5693000000028405
+dual_phase 2401 source_model_ambiguous 16 0.5615210420000949
+dual_phase 2411 source_model_ambiguous 16 0.6064116250054212

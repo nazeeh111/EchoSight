@@ -1,0 +1,12 @@
+single_room 2423 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+single_room 2437 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+dual_room 2423 {'geometry_only': 8, 'geometry_and_local_timing': 0}
+dual_room 2437 {'geometry_only': 8, 'geometry_and_local_timing': 0}
+near_reflector 2423 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+near_reflector 2437 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+direct_null 2423 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+direct_null 2437 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+receiver_filter 2423 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+receiver_filter 2437 {'geometry_only': 0, 'geometry_and_local_timing': 0}
+dual_phase 2423 {'geometry_only': 8, 'geometry_and_local_timing': 0}
+dual_phase 2437 {'geometry_only': 8, 'geometry_and_local_timing': 0}
