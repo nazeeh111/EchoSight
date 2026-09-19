@@ -4,7 +4,7 @@ import unittest
 
 def result(surface_offset=2., count=4):
     return {"schema_version": "1.0", "result_id": "r", "status": "partial",
-            "acquisition": {"source_position_m": [0, 0, 1], "sound_speed_m_s": 343.,
+            "acquisition": {"coordinate_frame_id": "room-survey", "source_position_m": [0, 0, 1], "sound_speed_m_s": 343.,
                             "source_clock_scale": 1., "probe": {"probe_id": "p"}},
             "surfaces": [{"surface_id": "s", "normal": [1, 0, 0], "offset_m": surface_offset,
                           "support": [{"capture_id": str(i), "candidate_id": f"e{i}"} for i in range(count)]}],
@@ -47,6 +47,21 @@ class EvolutionTests(unittest.TestCase):
         out = compare_results(a,b)
         self.assertTrue(out["ambiguity_reduced"])
         self.assertEqual(out["newly_supported_surface_ids"], ["s"])
+
+    def test_malformed_geometry_is_rejected(self):
+        from echosight.evolution import compare_results
+        for broken in [[], {"surfaces": [None]}, {"surfaces": [{"normal": [0,0,0]}]}]:
+            with self.subTest(broken=broken), self.assertRaises(ValueError):
+                compare_results(result(), broken)
+        broken = result(); broken["surfaces"][0]["normal"][0] = float("nan")
+        with self.assertRaises(ValueError): compare_results(result(), broken)
+
+    def test_unidentified_or_changed_coordinate_frame_is_incomparable(self):
+        from echosight.evolution import compare_results
+        a,b=result(),result();b["acquisition"]["coordinate_frame_id"]="different-room"
+        self.assertEqual(compare_results(a,b)["status"],"incomparable")
+        del a["acquisition"]["coordinate_frame_id"];del b["acquisition"]["coordinate_frame_id"]
+        self.assertEqual(compare_results(a,b)["status"],"incomparable")
 
 
 if __name__ == "__main__": unittest.main()

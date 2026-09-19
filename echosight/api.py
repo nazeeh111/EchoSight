@@ -64,7 +64,8 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
         def _body(self, limit):
             try: count = int(self.headers.get('Content-Length', '0'))
             except ValueError: raise ValueError('invalid Content-Length')
-            if count < 0 or count > limit: raise OverflowError('request body exceeds resource limit')
+            if count < 0: raise ValueError('Content-Length must be nonnegative')
+            if count > limit: raise OverflowError('request body exceeds resource limit')
             raw = self.rfile.read(count)
             if len(raw) != count: raise ValueError('incomplete request body')
             return raw

@@ -5,6 +5,34 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 
 
+def _validate_result(result):
+    if not isinstance(result, dict):
+        raise ValueError("result must be an object")
+    if result.get("schema_version", "1.0") != "1.0":
+        raise ValueError("unsupported result schema version")
+    if result.get("acquisition") is not None and not isinstance(result["acquisition"], dict):
+        raise ValueError("acquisition must be an object")
+    for key, limit in (("surfaces", 128), ("observations", 32)):
+        items = result.get(key, [])
+        if not isinstance(items, list) or len(items) > limit or any(not isinstance(x, dict) for x in items):
+            raise ValueError(f"{key} must be a bounded array of objects")
+    for surface in result.get("surfaces", []):
+        try:
+            n = np.asarray(surface["normal"], dtype=float)
+            d = float(surface["offset_m"])
+        except (KeyError, ValueError, TypeError) as exc:
+            raise ValueError("invalid plane geometry") from exc
+        if n.shape != (3,) or not np.all(np.isfinite(n)) or not np.isfinite(d) or abs(np.linalg.norm(n) - 1) > 1e-5:
+            raise ValueError("plane normal must be finite and unit length; offset must be finite")
+        if not isinstance(surface.get("surface_id"), str):
+            raise ValueError("surface_id must be a string")
+        support = surface.get("support", [])
+        if not isinstance(support, list) or len(support) > 32 or any(not isinstance(e, dict) or not isinstance(e.get("capture_id"), str) for e in support):
+            raise ValueError("invalid surface support")
+    if any(not isinstance(o.get("capture_id"), str) for o in result.get("observations", [])):
+        raise ValueError("observation capture_id must be a string")
+
+
 def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_m=.3):
     """Associate supported planes in one calibrated frame for frontend tracks.
 
@@ -12,6 +40,8 @@ def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_
     tests. Establishing a causal scene change additionally requires controlled
     repeated acquisition; a changed fit alone cannot establish it.
     """
+    _validate_result(previous)
+    _validate_result(current)
     if not 0 < maximum_angle_deg < 90 or not 0 < maximum_offset_m < 10:
         raise ValueError("invalid surface continuity gates")
     out = {"schema_version": "1.0", "previous_result_id": previous.get("result_id"),
@@ -22,8 +52,8 @@ def compare_results(previous, current, *, maximum_angle_deg=10., maximum_offset_
            "interpretation": "Changes describe inference and acoustic support; missing echoes do not establish absence.",
            "association_gates": {"angle_deg": maximum_angle_deg, "offset_m": maximum_offset_m}}
     a, b = previous.get("acquisition"), current.get("acquisition")
-    calibration_keys = ("source_position_m", "sound_speed_m_s", "source_clock_scale", "probe")
-    if not a or not b or any(a.get(k) != b.get(k) for k in calibration_keys):
+    calibration_keys = ("coordinate_frame_id", "source_position_m", "sound_speed_m_s", "source_clock_scale", "probe")
+    if not a or not b or not a.get("coordinate_frame_id") or any(a.get(k) != b.get(k) for k in calibration_keys):
         out.update(status="incomparable", diagnostics=[{"code": "calibration_changed_or_missing",
             "message": "Use the same surveyed coordinate frame, source and probe, or reprocess both sessions."}])
         return out

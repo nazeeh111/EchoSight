@@ -72,6 +72,36 @@ class StorageTests(unittest.TestCase):
             with zipfile.ZipFile(bad, 'w') as z: z.writestr('../escape', 'bad')
             with self.assertRaises(ValueError): store.import_archive(bad)
             with self.assertRaises(ValueError): store.get_session('../bad')
+    def test_only_one_process_owns_store(self):
+        import subprocess
+        import sys
+        with SessionStore(self.root / 'store'):
+            child = subprocess.run([sys.executable, '-c', 'from echosight.storage import SessionStore; SessionStore(' + repr(str(self.root / 'store')) + ')'], capture_output=True, text=True)
+            self.assertNotEqual(child.returncode, 0)
+            self.assertIn('already open', child.stderr)
+        with SessionStore(self.root / 'store'):
+            pass
+    def test_import_checks_revision_and_recomputes_audio_metadata(self):
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            store.add_recording(sid, self.wav, {'capture_id': 'mic1'})
+            good = store.export_session(sid)
+            for revision in [-1, 1]:
+                altered = self.root / ('altered' + str(revision) + '.zip')
+                with zipfile.ZipFile(good) as source, zipfile.ZipFile(altered, 'w') as target:
+                    for name in source.namelist():
+                        raw = source.read(name)
+                        if name == 'session.json':
+                            spec = json.loads(raw); spec['revision'] = revision
+                            spec['captures'][0]['sample_count'] = 999
+                            raw = json.dumps(spec).encode()
+                        target.writestr(name, raw)
+                with SessionStore(self.root / ('replay' + str(revision))) as replay:
+                    if revision < 0:
+                        with self.assertRaises(ValueError): replay.import_archive(altered)
+                    else:
+                        session = replay.import_archive(altered)
+                        self.assertEqual(session['captures'][0]['sample_count'], 300)
     def test_checksum_failure_is_atomic(self):
         with SessionStore(self.root / 'store') as store:
             sid = store.create_session({})['session_id']

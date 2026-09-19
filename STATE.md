@@ -25,3 +25,7 @@ Development controls now pass declared scenario criteria; serious direct-plane c
 Unresolved in priority order: per-surface supporting-view ambiguity (an unused elevated capture cannot resolve a plane's mirror), missing2/6 room surfaces under conservative confirmation and extra-view improvement, frozen held-out evaluation, independent integrated review, physical source/iPhone qualification. API/schema and source-playback refinements follow. No final completion or physical accuracy claimed.
 
 Active workers: acoustics, inference, backend, evaluation. Coordinator owns commits; checkpoint uses a brief writer freeze. Repository checkpoints should remain frequent and coherent per current user steering. Current context remains grounded in files; no coordinator handoff needed at this milestone.
+
+## Checkpoint 2: durable store and comparison safety
+
+Prior remote checkpoint: ea5975d6ad9c9d39139d6de9b2379c554aab0868. Added exclusive process ownership for the local store, stricter archive/revision/metadata validation, bounded API comparison, and explicit coordinate-frame identity before relating maps. 24 targeted storage/API/evolution/pipeline tests passed. This checkpoint changes safety/recovery semantics, not acoustic acceptance. Physics/playback/additional-view work continues independently and will be the next coherent checkpoint.

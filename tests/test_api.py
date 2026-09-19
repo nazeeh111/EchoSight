@@ -50,6 +50,12 @@ class APITests(unittest.TestCase):
         code, _ = self.request('POST', '/v1/sessions', b'', {'Content-Length': str(1024 * 1024 + 1)})
         self.assertEqual(code, 413)
     def test_errors_and_host_guard(self):
+        for raw in (b'{broken', b'{"sound_speed_m_s":NaN}', b'[]'):
+            code, _ = self.request('POST', '/v1/sessions', raw)
+            self.assertEqual(code, 400)
+        for length in ('-1', 'NaN'):
+            code, _ = self.request('POST', '/v1/sessions', b'', {'Content-Length': length})
+            self.assertEqual(code, 400)
         code, _ = self.request('POST', '/v1/sessions', b'{broken')
         self.assertEqual(code, 400)
         code, _ = self.request('POST', '/v1/sessions', {'captures': [{'capture_id': 'x', 'recording_path': '/etc/passwd'}]})

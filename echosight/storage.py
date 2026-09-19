@@ -5,6 +5,7 @@ import copy
 import csv
 from array import array
 import hashlib
+import fcntl
 import io
 import json
 import math
@@ -229,6 +230,12 @@ class SessionStore:
     def __init__(self, root, max_workers=2, max_jobs=8):
         self.root = Path(root).resolve(); self.root.mkdir(parents=True, exist_ok=True)
         (self.root / 'sessions').mkdir(exist_ok=True); (self.root / 'jobs').mkdir(exist_ok=True)
+        self._ownership_file = open(self.root / '.store.lock', 'a+b')
+        try:
+            fcntl.flock(self._ownership_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError as exc:
+            self._ownership_file.close()
+            raise RuntimeError('store already open by another process') from exc
         self._lock = threading.RLock(); self._events = {}; self._closed = False
         self._max_jobs = max_jobs
         self._pool = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix='echosight')
@@ -246,6 +253,7 @@ class SessionStore:
             self._closed = True
             for event in self._events.values(): event.set()
         self._pool.shutdown(wait=True, cancel_futures=False)
+        self._ownership_file.close()
     def _session_dir(self, sid): return self.root / 'sessions' / _id(sid)
     def _job_path(self, jid): return self.root / 'jobs' / (_id(jid) + '.json')
     def _raw_session(self, sid):
@@ -379,6 +387,8 @@ class SessionStore:
                 if any(i.is_dir() or i.flag_bits & 1 or i.filename.startswith('/') or '..' in Path(i.filename).parts or '\\' in i.filename for i in infos): raise ValueError('unsafe archive member')
                 if 'session.json' not in names or z.getinfo('session.json').file_size > MAX_JSON_BYTES: raise ValueError('missing or oversized session.json')
                 s = validate_session(json.loads(z.read('session.json')))
+                revision = s.get('revision')
+                if isinstance(revision, bool) or not isinstance(revision, int) or revision < 0: raise ValueError('archive requires nonnegative integer session revision')
                 sid = _id(s.get('session_id')); directory = self._session_dir(sid)
                 allowed = {'session.json', 'result.json'} | {c.get('recording_path', '') for c in s['captures']}
                 if set(names) - allowed: raise ValueError('unexpected archive member')
@@ -392,7 +402,11 @@ class SessionStore:
                             if z.getinfo(relative).file_size > MAX_RECORDING_BYTES: raise ValueError('recording exceeds resource limit')
                             raw = z.read(relative)
                             if hashlib.sha256(raw).hexdigest() != cap.get('sha256'): raise ValueError('recording checksum mismatch')
-                            _atomic_bytes(stage / relative, raw); read_recording(stage / relative)
+                            if relative.split('/')[-1].split('.')[0] != cap.get('sha256'): raise ValueError('raw filename does not match content hash')
+                            _atomic_bytes(stage / relative, raw)
+                            actual = import_recording(stage / relative, stage / 'raw')
+                            if Path(actual['recording_path']).relative_to(stage).as_posix() != relative: raise ValueError('raw extension does not match recording format')
+                            cap.update(actual); cap['recording_path'] = relative
                         s['replay'] = {'kind': 'archive_reload', 'archive_sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'loaded_at': time.time()}
                         _write_json(stage / 'session.json', s)
                         if 'result.json' in names:

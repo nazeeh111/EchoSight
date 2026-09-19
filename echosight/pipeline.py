@@ -102,6 +102,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
             "source_clock_scale", "source_clock_std_ppm", "source_position_m",
             "source_position_std_m", "probe")
     fitting_session = {key: session[key] for key in keys if key in session}
+    fitting_session["coordinate_frame_id"] = session.get("coordinate_frame_id", "session:" + session["session_id"])
     fitting_session["captures"] = [{key: capture[key] for key in
         ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance")
         if key in capture} for capture in captures]
