@@ -68,6 +68,7 @@ def main(argv=None):
     command.add_argument("previous", type=Path)
     command.add_argument("current", type=Path)
     command.add_argument("--output", type=Path, required=True)
+    command.add_argument("--previous-comparison", type=Path, help="carry declared display tracks from the comparison ending at previous")
     command = sub.add_parser("controlled", help="process declared A-before/B-first/B-repeat/A-return recordings")
     command.add_argument("protocol",type=Path)
     command.add_argument("--output",type=Path,required=True)
@@ -125,7 +126,14 @@ def main(argv=None):
             print(json.dumps(_summary(json.loads(args.result.read_text())), indent=2, allow_nan=False))
         elif args.command == "compare":
             from .evolution import compare_results
-            result = compare_results(json.loads(args.previous.read_text()), json.loads(args.current.read_text()))
+            from .storage import MAX_JSON_BYTES, MAX_RESULT_BYTES
+            def read_comparison_input(path, limit):
+                with path.open('rb') as stream: raw = stream.read(limit + 1)
+                if len(raw) > limit: raise ValueError("comparison input exceeds byte limit")
+                return json.loads(raw)
+            prior = read_comparison_input(args.previous_comparison, MAX_JSON_BYTES) if args.previous_comparison else None
+            result = compare_results(read_comparison_input(args.previous, MAX_RESULT_BYTES),
+                                     read_comparison_input(args.current, MAX_RESULT_BYTES), previous_comparison=prior)
             save_result(result, args.output)
             print(json.dumps(result, indent=2, allow_nan=False))
         elif args.command == "controlled":

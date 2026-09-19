@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "ideal exact supported mode passes",
+    "ideal no-result preserved as failure",
+    "unique wrong-model uncovered point fails",
+    "unresolved dispersive point allowed but capability missed",
+    "null supported compact mode fails",
+    "two-emitter unsupported unique compact point fails"
+  ]
+}

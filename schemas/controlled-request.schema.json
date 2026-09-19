@@ -23,7 +23,7 @@
     "coordinate_frame_id": {
       "type": "string",
       "minLength": 1,
-      "maxLength": 1024
+      "maxLength": 160
     },
     "intervention_description": {
       "type": "string",

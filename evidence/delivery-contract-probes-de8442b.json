@@ -1,0 +1,51 @@
+{
+  "storage_vs_processing": [
+    {
+      "sample_rate_hz": 8000,
+      "duration_s": 1,
+      "imported": true,
+      "result_status": "no_result",
+      "observation_diagnostics": [
+        {
+          "code": "recording_rejected",
+          "message": "unsupported recording sample rate"
+        }
+      ]
+    },
+    {
+      "sample_rate_hz": 192000,
+      "duration_s": 1,
+      "imported": true,
+      "result_status": "no_result",
+      "observation_diagnostics": [
+        {
+          "code": "recording_rejected",
+          "message": "unsupported recording sample rate"
+        }
+      ]
+    },
+    {
+      "sample_rate_hz": 48000,
+      "duration_s": 31,
+      "imported": true,
+      "result_status": "no_result",
+      "observation_diagnostics": [
+        {
+          "code": "recording_rejected",
+          "message": "recording exceeds 30 second processing limit"
+        }
+      ]
+    }
+  ],
+  "track_chain": {
+    "without_carry_forward": [
+      "a",
+      "b"
+    ],
+    "with_frontend_carry_forward": "a"
+  },
+  "controlled_schema_frame_boundary": {
+    "schema_accepts_length": 161,
+    "session_rejection": "coordinate_frame_id must be a string of 1 to 160 characters"
+  }
+}

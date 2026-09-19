@@ -12,6 +12,79 @@ def result(surface_offset=2., count=4):
 
 
 class EvolutionTests(unittest.TestCase):
+    def test_tracks_carry_through_four_raw_revisions_without_mutation(self):
+        from echosight.evolution import compare_results
+        revisions=[]
+        for i in range(4):
+            item=result(2.+i*.01);item['result_id']=f'revision-{i}';item['surfaces'][0]['surface_id']=f'fit-{i}';revisions.append(item)
+        originals=copy.deepcopy(revisions);carry=None
+        for i in range(3):
+            carry=compare_results(revisions[i],revisions[i+1],previous_comparison=carry)
+            self.assertEqual(carry['current_tracks'],[{'surface_id':f'fit-{i+1}','track_id':'fit-0'}])
+        self.assertEqual(revisions,originals)
+
+    def test_birth_death_empty_intermediate_does_not_revive_a_track(self):
+        from echosight.evolution import compare_results
+        a,b,empty,c=[result() for _ in range(4)]
+        for i,item in enumerate((a,b,empty,c)):item['result_id']=f'r{i}'
+        b['surfaces'][0]['surface_id']='refit';empty['surfaces']=[]
+        ab=compare_results(a,b);gone=compare_results(b,empty,previous_comparison=ab)
+        self.assertEqual(gone['current_tracks'],[])
+        reborn=compare_results(empty,c,previous_comparison=gone)
+        self.assertEqual(reborn['correspondences'],[])
+        self.assertEqual(reborn['newly_supported_surface_ids'],['s'])
+        self.assertNotEqual(reborn['current_tracks'][0]['track_id'],'s')
+
+    def test_born_surface_track_continues_when_an_older_surface_is_missing(self):
+        from echosight.evolution import compare_results
+        a,b,c=result(),result(),result()
+        for name,item in zip(('a','b','c'),(a,b,c)):item['result_id']=name
+        born=copy.deepcopy(b['surfaces'][0]);born.update(surface_id='born',normal=[0,1,0],offset_m=4.)
+        b['surfaces'].append(born)
+        c['surfaces']=[dict(copy.deepcopy(born),surface_id='born-refined',offset_m=4.01)]
+        ab=compare_results(a,b);born_track=next(x['track_id'] for x in ab['current_tracks'] if x['surface_id']=='born')
+        bc=compare_results(b,c,previous_comparison=ab)
+        self.assertEqual(bc['current_tracks'],[{'surface_id':'born-refined','track_id':born_track}])
+        self.assertEqual(bc['unconfirmed_previous_surface_ids'],['s'])
+
+    def test_carry_is_bound_complete_unique_and_explicit(self):
+        from echosight.evolution import compare_results
+        a,b,c=result(),result(),result()
+        a['result_id']='a';b['result_id']='b';c['result_id']='c'
+        carry=compare_results(a,b)
+        mutations=[lambda x:x.update(status='incomparable'),lambda x:x.update(current_result_id='stale'),
+            lambda x:x.update(current_tracks=[]),lambda x:x['current_tracks'].append(copy.deepcopy(x['current_tracks'][0])),
+            lambda x:x['current_tracks'][0].update(track_id=''),lambda x:x['current_tracks'][0].update(track_id='x'*161),
+            lambda x:x['current_tracks'][0].update(surface_id='absent')]
+        for mutate in mutations:
+            invalid=copy.deepcopy(carry);mutate(invalid)
+            with self.subTest(invalid=invalid),self.assertRaises(ValueError):compare_results(b,c,previous_comparison=invalid)
+        previous=copy.deepcopy(b);previous.pop('result_id')
+        with self.assertRaises(ValueError):compare_results(previous,c,previous_comparison=carry)
+        b['surfaces'][0]['track_id']='conflicting-display-state'
+        with self.assertRaises(ValueError):compare_results(b,c,previous_comparison=carry)
+        two=copy.deepcopy(a);second=copy.deepcopy(a['surfaces'][0]);second['surface_id']='second';two['surfaces'].append(second)
+        invalid={'schema_version':'1.0','status':'comparable','current_result_id':'a','current_tracks':[{'surface_id':'s','track_id':'same'},{'surface_id':'second','track_id':'same'}]}
+        with self.assertRaises(ValueError):compare_results(two,c,previous_comparison=invalid)
+
+    def test_result_identity_validation_and_collision_resolution(self):
+        from echosight.evolution import compare_results
+        for key,value in [('surface_id',''),('surface_id','x'*161),('track_id',None),('track_id',True)]:
+            broken=result();broken['surfaces'][0][key]=value
+            with self.subTest(key=key,value=value),self.assertRaises(ValueError):compare_results(broken,result())
+        duplicate=result();duplicate['surfaces']*=2
+        with self.assertRaises(ValueError):compare_results(duplicate,result())
+        tracks=result();second=copy.deepcopy(tracks['surfaces'][0]);second['surface_id']='other';second['track_id']='s';tracks['surfaces'].append(second)
+        with self.assertRaises(ValueError):compare_results(tracks,result())
+        a,b=result(),result();a['result_id']='a';b['result_id']='b'
+        birth=copy.deepcopy(b['surfaces'][0]);birth.update(surface_id='new',normal=[0,1,0],offset_m=4.)
+        b['surfaces'].append(birth)
+        first=compare_results(a,b);born=next(t['track_id'] for t in first['current_tracks'] if t['surface_id']=='new')
+        a['surfaces'][0]['track_id']=born
+        collided=compare_results(a,b);tracks={x['surface_id']:x['track_id'] for x in collided['current_tracks']}
+        self.assertEqual(tracks['s'],born);self.assertNotEqual(tracks['new'],born)
+        self.assertEqual(collided,compare_results(a,b))
+
     def test_extra_views_preserve_track_and_explain_support(self):
         from echosight.evolution import compare_results
         a, b = result(), result(2.01, 7)

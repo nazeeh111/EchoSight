@@ -30,6 +30,13 @@ class SchemaTests(unittest.TestCase):
         for name,schema in contracts.items():
             with self.subTest(example=name):validator(schema).validate(json.loads((ROOT/'examples/frontend'/f'{name}.json').read_text()))
 
+    def test_controlled_frame_matches_session_bound(self):
+        request=json.loads((ROOT/'examples/frontend/controlled-request.json').read_text())
+        request['coordinate_frame_id']='x'*160
+        validator('controlled-request').validate(request)
+        request['coordinate_frame_id']='x'*161
+        with self.assertRaises(ValidationError):validator('controlled-request').validate(request)
+
     def test_capture_manifest_structural_boundaries(self):
         raw,_,_=capture_bytes()
         with zipfile.ZipFile(io.BytesIO(raw)) as z:manifest=json.loads(z.read('manifest.json'))

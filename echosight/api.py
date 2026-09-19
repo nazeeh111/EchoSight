@@ -99,7 +99,7 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                         offset = surface.get('offset_m')
                         if isinstance(offset, bool) or not isinstance(offset, (int, float)) or not math.isfinite(offset): raise ValueError('surface offset must be finite')
                         if not isinstance(surface.get('surface_id'), str): raise ValueError('surface_id required')
-                return self._reply(200, compare_results(body['previous'], body['current']))
+                return self._reply(200, compare_results(body['previous'], body['current'], previous_comparison=body.get('previous_comparison')))
             if p == ['v1', 'controlled-jobs'] and method == 'POST':
                 return self._reply(202,store.start_controlled_job(self._json_body()))
             if p == ['v1', 'sessions'] and method == 'POST': return self._reply(201, store.create_session(self._json_body()))
