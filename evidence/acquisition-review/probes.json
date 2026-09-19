@@ -1,0 +1,281 @@
+[
+  {
+    "probe": "host_time_one_second_jump",
+    "capture_id": "record-1",
+    "recording_sha256": "fe507abf01dfb0747572b67b19f8006f692a07a233b20c795685498d50b80870",
+    "acquisition_layer": "ios_audioengine_delivered_buffers",
+    "recorder": {
+      "name": "EchoSight native",
+      "version": "1"
+    },
+    "device": {
+      "model": "simulated",
+      "os_version": "fixture"
+    },
+    "source_declaration": {
+      "configuration_id": "unknown",
+      "probe_id": "probe-one",
+      "route_id": "unknown"
+    },
+    "session": {
+      "category": "record",
+      "mode": "measurement",
+      "preferred_sample_rate_hz": 48000,
+      "activated_sample_rate_hz": 48000
+    },
+    "route_initial": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "route_final": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "block_count": 2,
+    "frame_count": 6,
+    "declared_continuity_status": "complete",
+    "events": [
+      {
+        "type": "user_stop",
+        "at_frame": 6,
+        "detail": "fixture"
+      }
+    ],
+    "rejection_reasons": [],
+    "processing_eligible": true,
+    "physical_validation": false,
+    "clock_semantics": "Native delivered-frame timestamps and unsynchronized host ticks; not source-buffer or calibrated physical time.",
+    "processing_semantics": "No conversion added by this importer; OS/device processing and actual recorder behavior await hardware qualification.",
+    "delivered_frames_per_host_second": 3.0,
+    "manifest_sha256": "fc27bc79cd3b7e591bb78d137b9ee30170359eae27c7df31dfc342c470cc7b2a"
+  },
+  {
+    "probe": "host_time_one_nanosecond_step",
+    "capture_id": "record-1",
+    "recording_sha256": "fe507abf01dfb0747572b67b19f8006f692a07a233b20c795685498d50b80870",
+    "acquisition_layer": "ios_audioengine_delivered_buffers",
+    "recorder": {
+      "name": "EchoSight native",
+      "version": "1"
+    },
+    "device": {
+      "model": "simulated",
+      "os_version": "fixture"
+    },
+    "source_declaration": {
+      "configuration_id": "unknown",
+      "probe_id": "probe-one",
+      "route_id": "unknown"
+    },
+    "session": {
+      "category": "record",
+      "mode": "measurement",
+      "preferred_sample_rate_hz": 48000,
+      "activated_sample_rate_hz": 48000
+    },
+    "route_initial": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "route_final": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "block_count": 2,
+    "frame_count": 6,
+    "declared_continuity_status": "complete",
+    "events": [
+      {
+        "type": "user_stop",
+        "at_frame": 6,
+        "detail": "fixture"
+      }
+    ],
+    "rejection_reasons": [],
+    "processing_eligible": true,
+    "physical_validation": false,
+    "clock_semantics": "Native delivered-frame timestamps and unsynchronized host ticks; not source-buffer or calibrated physical time.",
+    "processing_semantics": "No conversion added by this importer; OS/device processing and actual recorder behavior await hardware qualification.",
+    "delivered_frames_per_host_second": 3000000000.0,
+    "manifest_sha256": "3db36d38534b17291bebbf3f1d7f916a84955eb40398f04196854a78cf5d526a"
+  },
+  {
+    "probe": "host_time_extreme_timebase",
+    "capture_id": "record-1",
+    "recording_sha256": "fe507abf01dfb0747572b67b19f8006f692a07a233b20c795685498d50b80870",
+    "acquisition_layer": "ios_audioengine_delivered_buffers",
+    "recorder": {
+      "name": "EchoSight native",
+      "version": "1"
+    },
+    "device": {
+      "model": "simulated",
+      "os_version": "fixture"
+    },
+    "source_declaration": {
+      "configuration_id": "unknown",
+      "probe_id": "probe-one",
+      "route_id": "unknown"
+    },
+    "session": {
+      "category": "record",
+      "mode": "measurement",
+      "preferred_sample_rate_hz": 48000,
+      "activated_sample_rate_hz": 48000
+    },
+    "route_initial": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "route_final": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "block_count": 2,
+    "frame_count": 6,
+    "declared_continuity_status": "complete",
+    "events": [
+      {
+        "type": "user_stop",
+        "at_frame": 6,
+        "detail": "fixture"
+      }
+    ],
+    "rejection_reasons": [],
+    "processing_eligible": true,
+    "physical_validation": false,
+    "clock_semantics": "Native delivered-frame timestamps and unsynchronized host ticks; not source-buffer or calibrated physical time.",
+    "processing_semantics": "No conversion added by this importer; OS/device processing and actual recorder behavior await hardware qualification.",
+    "delivered_frames_per_host_second": 1.1175870897987827e-05,
+    "manifest_sha256": "0ccae97c415be674d900b49c12b1ea6b642b6d1408a85018f11250ae672db9e6"
+  },
+  {
+    "probe": "entire_record_unsupported_bluetooth",
+    "capture_id": "record-1",
+    "recording_sha256": "fe507abf01dfb0747572b67b19f8006f692a07a233b20c795685498d50b80870",
+    "acquisition_layer": "ios_audioengine_delivered_buffers",
+    "recorder": {
+      "name": "EchoSight native",
+      "version": "1"
+    },
+    "device": {
+      "model": "simulated",
+      "os_version": "fixture"
+    },
+    "source_declaration": {
+      "configuration_id": "unknown",
+      "probe_id": "probe-one",
+      "route_id": "unknown"
+    },
+    "session": {
+      "category": "record",
+      "mode": "measurement",
+      "preferred_sample_rate_hz": 48000,
+      "activated_sample_rate_hz": 48000
+    },
+    "route_initial": {
+      "input_port_type": "BluetoothHFP",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "route_final": {
+      "input_port_type": "BluetoothHFP",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "block_count": 2,
+    "frame_count": 6,
+    "declared_continuity_status": "complete",
+    "events": [
+      {
+        "type": "user_stop",
+        "at_frame": 6,
+        "detail": "fixture"
+      }
+    ],
+    "rejection_reasons": [],
+    "processing_eligible": true,
+    "physical_validation": false,
+    "clock_semantics": "Native delivered-frame timestamps and unsynchronized host ticks; not source-buffer or calibrated physical time.",
+    "processing_semantics": "No conversion added by this importer; OS/device processing and actual recorder behavior await hardware qualification.",
+    "delivered_frames_per_host_second": 48000.0,
+    "manifest_sha256": "174dccde9ef762f6e516c047c9f755fd886104287282392ecd1156a79d007fbc"
+  },
+  {
+    "probe": "source_conflict_declaration",
+    "capture_id": "record-1",
+    "recording_sha256": "fe507abf01dfb0747572b67b19f8006f692a07a233b20c795685498d50b80870",
+    "acquisition_layer": "ios_audioengine_delivered_buffers",
+    "recorder": {
+      "name": "EchoSight native",
+      "version": "1"
+    },
+    "device": {
+      "model": "simulated",
+      "os_version": "fixture"
+    },
+    "source_declaration": {
+      "configuration_id": "definitely-another-source",
+      "probe_id": "different-probe",
+      "route_id": "Bluetooth-speaker"
+    },
+    "session": {
+      "category": "record",
+      "mode": "measurement",
+      "preferred_sample_rate_hz": 48000,
+      "activated_sample_rate_hz": 48000
+    },
+    "route_initial": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "route_final": {
+      "input_port_type": "builtInMic",
+      "input_port_name": "Microphone",
+      "input_channel_count": 1,
+      "input_sample_rate_hz": 48000
+    },
+    "block_count": 2,
+    "frame_count": 6,
+    "declared_continuity_status": "complete",
+    "events": [
+      {
+        "type": "user_stop",
+        "at_frame": 6,
+        "detail": "fixture"
+      }
+    ],
+    "rejection_reasons": [],
+    "processing_eligible": true,
+    "physical_validation": false,
+    "clock_semantics": "Native delivered-frame timestamps and unsynchronized host ticks; not source-buffer or calibrated physical time.",
+    "processing_semantics": "No conversion added by this importer; OS/device processing and actual recorder behavior await hardware qualification.",
+    "delivered_frames_per_host_second": 48000.0,
+    "manifest_sha256": "a61c534a7ed49362edc04e20faa347bbbb9f89bc1c413b8ce708dbc38b44b811"
+  },
+  {
+    "probe": "exact_float32_widening",
+    "finite_values_checked": 19928,
+    "bit_preservation": true
+  },
+  {
+    "probe": "uint64_above_javascript_integer_precision",
+    "frames_per_host_second": 48000.0
+  }
+]

@@ -1,0 +1,414 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "format",
+    "capture_id",
+    "recording_sha256",
+    "sample_encoding",
+    "sample_rate_hz",
+    "channel_count",
+    "frame_count",
+    "recorder",
+    "acquisition_layer",
+    "device",
+    "source_declaration",
+    "session",
+    "route_initial",
+    "route_final",
+    "host_timebase",
+    "continuity",
+    "events"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "format": {
+      "const": "echosight_capture"
+    },
+    "capture_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+    },
+    "recording_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sample_encoding": {
+      "const": "ieee_float32_le"
+    },
+    "sample_rate_hz": {
+      "type": "integer",
+      "minimum": 8000,
+      "maximum": 192000
+    },
+    "channel_count": {
+      "const": 1
+    },
+    "frame_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 23040000
+    },
+    "recorder": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    },
+    "acquisition_layer": {
+      "const": "ios_audioengine_delivered_buffers"
+    },
+    "device": {
+      "type": "object",
+      "required": [
+        "model",
+        "os_version"
+      ],
+      "properties": {
+        "model": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "os_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    },
+    "source_declaration": {
+      "type": "object",
+      "required": [
+        "configuration_id",
+        "probe_id",
+        "route_id"
+      ],
+      "properties": {
+        "configuration_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "probe_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "route_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "required": [
+        "category",
+        "mode",
+        "preferred_sample_rate_hz",
+        "activated_sample_rate_hz"
+      ],
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "preferred_sample_rate_hz": {
+          "type": "number",
+          "minimum": 8000,
+          "maximum": 192000
+        },
+        "activated_sample_rate_hz": {
+          "type": "number",
+          "minimum": 8000,
+          "maximum": 192000
+        }
+      }
+    },
+    "route_initial": {
+      "type": "object",
+      "required": [
+        "input_port_type",
+        "input_port_name",
+        "input_channel_count",
+        "input_sample_rate_hz"
+      ],
+      "properties": {
+        "input_port_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "input_port_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "input_channel_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "input_sample_rate_hz": {
+          "type": "integer",
+          "minimum": 8000,
+          "maximum": 192000
+        }
+      }
+    },
+    "route_final": {
+      "type": "object",
+      "required": [
+        "input_port_type",
+        "input_port_name",
+        "input_channel_count",
+        "input_sample_rate_hz"
+      ],
+      "properties": {
+        "input_port_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "input_port_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "input_channel_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "input_sample_rate_hz": {
+          "type": "integer",
+          "minimum": 8000,
+          "maximum": 192000
+        }
+      }
+    },
+    "host_timebase": {
+      "type": "object",
+      "required": [
+        "numer",
+        "denom"
+      ],
+      "properties": {
+        "numer": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967295
+        },
+        "denom": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967295
+        }
+      }
+    },
+    "continuity": {
+      "type": "object",
+      "required": [
+        "status",
+        "reasons",
+        "blocks"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "complete",
+            "interrupted",
+            "unverified"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sequence",
+              "first_frame",
+              "frame_count",
+              "sample_time_valid",
+              "sample_time",
+              "host_time_valid",
+              "host_time"
+            ],
+            "properties": {
+              "sequence": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 16383
+              },
+              "first_frame": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 23040000
+              },
+              "frame_count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 23040000
+              },
+              "sample_time_valid": {
+                "type": "boolean"
+              },
+              "sample_time": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?[0-9]{1,19}$"
+              },
+              "host_time_valid": {
+                "type": "boolean"
+              },
+              "host_time": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9]{1,20}$"
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "sample_time_valid": {
+                      "const": true
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "sample_time": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "sample_time_valid": {
+                      "const": false
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "sample_time": {
+                      "type": "null"
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "host_time_valid": {
+                      "const": true
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "host_time": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "host_time_valid": {
+                      "const": false
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "host_time": {
+                      "type": "null"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 16384
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "at_frame",
+          "detail"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "at_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23040000
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 256
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/capture-manifest-1.0.json",
+  "title": "EchoSight native delivered-audio manifest v1",
+  "description": "Structural schema only. Runtime verifies raw SHA, actual waveform rate/count, duration<=120s, signed/unsigned64-bit tick bounds, block coverage, timestamp adjacency, event frame bounds and acquisition eligibility. Host ticks are unsynchronized, source declarations unauthenticated and physical validation absent. Structurally valid interrupted packages are preserved but excluded from mapping."
+}

@@ -2,7 +2,7 @@
 
 **Baseline research prototype. Charter objective unmet; native goal active.** Scope: [charter](docs/CHARTER.md), [continued-work instruction](docs/CHARTER_ADDENDUM.md), [coverage matrix](docs/audit/COVERAGE.md). Preserve selected Astra model/effort. No software evidence establishes our iPhone accuracy.
 
-Authority: private project branches, ordinary commits/push/default-branch integration and missing collaborator invitations authorized. No paid services, public deployment, ownership changes or global installs. One existing EchoSight vault index authorized. Checkout is this directory; branch/default `backend/implementation`. Last verified remote commit **198d365f3b13f221ac258332eaaccdf96506a641**. Teammate `Oltans_UI/UX` untouched. GitHub access: nazeeh111 owner/admin, sinha-ritwik accepted write, littleapple08 pending write invitation333732214; no duplicate invitations.
+Authority: private project branches, ordinary commits/push/default-branch integration and missing collaborator invitations authorized. No paid services, public deployment, ownership changes or global installs. One existing EchoSight vault index authorized. Checkout is this directory; branch/default `backend/implementation`. Last verified remote commit **eb1c26730f7f6ee2224c0ee17acb772ba250d505**. Teammate `Oltans_UI/UX` untouched. GitHub access: nazeeh111 owner/admin, sinha-ritwik accepted write, littleapple08 pending write invitation333732214; no duplicate invitations.
 
 ## Load-bearing conventions
 
@@ -20,19 +20,19 @@ Plane n·x=d; reflected source q=s+2(d−n·s)n; excess source-buffer delay=(|r�
 
 ## Active work and ownership
 
-- Coordinator: integration, calibration/evolution/CLI/API, state, frequent verified commits; isolated density-aware clutter alternative in `work/density-trial.py` (analytic development only).
-- physics_audit: isolated empirical direct-kernel joint waveform estimator/covariance; main signals frozen. More paths recovered, but one new diffuse-null false plane blocks promotion. Source-dependent filter bias remains.
-- inference: new `multisource.py` experimental joint moved-source solver. Development rooms6/6 and panels7/7, but higher-order scenes each4false;4phones×4sources only1plane. Studying explicit higher-order alternative; frozen held-out evaluation not run.
-- evaluation: new controlled A–B–B–A core/tests frozen for coordinator integration. Four fixed phones yield repeated acoustic change without localization;12static receivers support one conditional plane change in simulation. Preparing exact hardware acceptance only, no hardware request.
-- independent_review: read-only, finished659 review; next bounded review after fixes committed. No separate backend writer active. No daemon/automation.
+- Coordinator: acquisition backend integration, API/replay/schema checks, state and frequent verified commits. Native package decoding already passes38focused tests; injected Swift exports interoperate. Uncommitted work is not an accepted checkpoint.
+- inference: minimal native iOS collector/exporter under acquisition/ios; unsigned generic build and injected-buffer tests, no microphone/signing/install/launch.
+- physics_audit: independent acquisition timing/format/continuity review. Waveform plus null-guard branch closed without promotion because it loses necessary surfaces; evidence archived next.
+- evaluation: isolated same-path compact-point versus plane alternative and shared-uncertainty controls; no production edits or new held-out tuning.
+- independent_review: immutable be5c70a follow-up on three198P2 fixes. No other writer or daemon/automation.
 
 ## Prioritized next actions
 
-1. Commit/push verified review fixes and immutable failure evidence, then narrow fresh follow-up.
-2. Address chance associations and higher-order moved-source false planes with equal-input alternatives; retain failures, no held-out tuning.
-3. Integrate controlled recording comparison into bounded API/CLI with cancellation, recovery and versioned schemas; verify realistic4-phone limitation.
-4. Resolve timing covariance/overlap branch only if measurable gain survives null controls; retain baseline while experimental.
-5. Tighten operational acquisition/hardware acceptance and finish remaining charter matrix gaps; repeat clean reproduction/review at coherent milestones.
+1. Finish exact native-export to backend API/CLI/replay bridge, malformed/resource checks, schemas and independent review; commit/push coherent verified acquisition checkpoint.
+2. Resolve physical missing-parent and point-scatterer competing models using equal selected observations, preserving all failures and existing frozen criteria.
+3. Recheck affected source-relocation regressions only after justified model changes; no physical or general object-reconstruction claims.
+4. Keep measured FLAIR and stress failures explicit; do not promote filters that trade away required recovery merely to reduce false surfaces.
+5. Update full charter matrix, clean reproduction and frontend handoff at coherent milestones; all own-device qualification remains pending.
 
 Do not declare completion or request device experiments while independent software work remains. Save consequential findings before compaction; inspect active workers and authoritative files after recovery. No claim execution survives runtime termination.
 
@@ -58,3 +58,9 @@ New bounded acquisition investigation: existingphyphoxroute remainsprovisional; 
 Independent198d365 review found3P2s: reused physical paths in alternatives, duplicate source-session identities and unguarded raw-bundle admission. Repairs enforce exclusive matching over coincident-arrival groups, reject duplicate identities and bound/type-check raw JSON.14focusedchecks pass in isolated198snapshot with only these repairs overlaid; higher-order development still6/6bothseeds andpanel7/7. Raw held-out198failure remains unchanged evidence, not silently overwritten. Fresh repaired-commit review next.
 
 Working-tree ownership: coordinator has uncommitted acquisition.py/storage/pipeline Float32+hash-bound native manifest support (38focusedchecks), contract/tests; inference owns acquisition/ios/ minimal recorder and is no longerediting multisource afterfreeze. Evaluation owns isolated unobserved-parent/point-alternative investigations; physics owns isolated closed-or-closing waveform/null comparisons; independentreview awaits identifiedfixcommit. Native mic/signing/deployment not authorized by this implementation phase and not performed. No daemon/automation.
+
+## Acquisition integration in progress
+
+Native Float32 package import, raw API processing to six simulated surfaces, exact export/reload and interrupted-byte preservation pass targeted software checks. Independent acquisition review reproduced host/sample clock inconsistency; backend/native owners fixed it with a broad documented gate, reviewer rechecked9clockcases and19,928Float32patterns. No hardware used. Native recorder adds pending-save retry after alive-process disk failure; review of that new state remains pending. Formal offline schema checks now exercise published examples and real outputs; corrected controlled cross-schema references to canonical versioned IDs. New test-only dependencies are pinned in requirements-test.txt. Experimental point/missing-parent alternatives remain separate uncommitted work; new raw12case evaluation specification frozen before generation. Renderer specialist awaits identified integrated commit before evaluating.
+
+Acquisition checkpoint gate: isolated eb1c267+acquisition overlay passes136tests in32.513s, including actual raw native-packageHTTP→six simulated surfaces and formal offline schemas. Native owner frozen; unsignedbuild/Swift bridge/save-retry checks pass. Sources and evidence: evidence/acquisition-integration/. Nextcommit excludes path-alternative experimental edits; immutable review/cleanGitHubreproduction next. No own-device claim.

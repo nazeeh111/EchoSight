@@ -1,0 +1,21 @@
+{
+  "files": {
+    "echosight/acquisition.py": "8328f07f92d3b84e93d67aa94209fd4fd25f58692f861b25fb767601e839f44b",
+    "echosight/storage.py": "54940792c4a0659cbc69ae1a13089bce3ccb524550e240a5f9eeff73b1c43a13",
+    "echosight/pipeline.py": "75899f8a1dfa52b1aeb49160c9ae64057370ead4648a1e6f063e0c13deb8c430",
+    "tests/test_acquisition.py": "0ec5f93c6420417db5a8906ff3399c2c110fcf38fcd27da8319beedb61b92926",
+    "acquisition/ios/Sources/NativeRecorder.swift": "464334f93ea866613db4f47b6cbb13d241c9c72721d6b9d03b8f9dfd77cb187d",
+    "acquisition/ios/Sources/CaptureCore.swift": "a5a4134459b8254acef00c19242344c791e3f95f523cc8ceb214d7faed9bf621",
+    "acquisition/ios/Sources/App.swift": "e51c32e6ba6b3a27f396f0648b4a3219e122c45e29383ca95388bd1b5febe845",
+    "acquisition/ios/Tests/CoreTests.swift": "fb343d4c2059f389195b7bfbe41cf601d3ef66d765496147093a48d5f46e63c4",
+    "acquisition/ios/CONTRACT.md": "17d397ac5fc742b499d6c474e583fd0e9370b15cfa19ba7d4337398b270441ce"
+  },
+  "changed_since_initial_review": [
+    "echosight/acquisition.py",
+    "tests/test_acquisition.py",
+    "acquisition/ios/Sources/NativeRecorder.swift",
+    "acquisition/ios/Sources/CaptureCore.swift",
+    "acquisition/ios/Tests/CoreTests.swift",
+    "acquisition/ios/CONTRACT.md"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "echosight/acquisition.py": "3908dd4ec4c1dbc8eeef3ffd2a7cae4e9a55ca481067960e1a3145b697d5a8ae",
+  "echosight/storage.py": "54940792c4a0659cbc69ae1a13089bce3ccb524550e240a5f9eeff73b1c43a13",
+  "echosight/pipeline.py": "75899f8a1dfa52b1aeb49160c9ae64057370ead4648a1e6f063e0c13deb8c430",
+  "tests/test_acquisition.py": "e5c8d542bf53bf3c2a089fb7ff9f00523584cfbb2e1d269b370e022675c79210",
+  "acquisition/ios/Sources/NativeRecorder.swift": "1f86b2021549f27b3d078a10d9f754f249dbaadce311ed12633300b4bd176fbd",
+  "acquisition/ios/Sources/CaptureCore.swift": "dd11c281314654984180ea8d1f1176ba7d0d205c366378e572d0192fbccba445",
+  "acquisition/ios/Sources/App.swift": "e51c32e6ba6b3a27f396f0648b4a3219e122c45e29383ca95388bd1b5febe845",
+  "acquisition/ios/Tests/CoreTests.swift": "be1c43b20b63f1781a6e8930b4650b3e585c881c7db8867599026e218a84b3bf",
+  "acquisition/ios/CONTRACT.md": "a441fc460066085c5618ab2b44cdabb3d739e269a0df9b496bf9de70989405f7"
+}

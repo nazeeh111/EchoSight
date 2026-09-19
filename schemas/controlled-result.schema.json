@@ -83,7 +83,7 @@
             "type": "string"
           },
           "result": {
-            "$ref": "result.schema.json"
+            "$ref": "result-1.0.json"
           }
         }
       }

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "file": "exact.echosight.zip",
+      "processing_eligible": true,
+      "rejection_reasons": [],
+      "wav_sha256": "11e949ec8d6033a958facf36556ed245f79184f12f1593ee381d0d9f8dd5807a"
+    },
+    {
+      "file": "gap.echosight.zip",
+      "processing_eligible": false,
+      "rejection_reasons": [
+        "acquisition_event:timestamp_invalid",
+        "host_sample_time_inconsistent",
+        "native_sample_time_gap_or_overlap",
+        "recorder_continuity_not_complete"
+      ],
+      "wav_sha256": "c971ba8d2ad55e2a9fac6eb189768d5b00bab7890e1f0789b3b1f68e4605e573"
+    },
+    {
+      "file": "host-inconsistent.echosight.zip",
+      "processing_eligible": false,
+      "rejection_reasons": [
+        "acquisition_event:timestamp_invalid",
+        "host_sample_time_inconsistent",
+        "recorder_continuity_not_complete"
+      ],
+      "wav_sha256": "9e1925f3cdc5e0e5b3f3c7f1710afe03e3ab91f50ef560ffcb13600f1defccaa"
+    },
+    {
+      "file": "host-regression.echosight.zip",
+      "processing_eligible": false,
+      "rejection_reasons": [
+        "acquisition_event:timestamp_invalid",
+        "host_sample_time_inconsistent",
+        "host_time_not_increasing",
+        "recorder_continuity_not_complete"
+      ],
+      "wav_sha256": "c971ba8d2ad55e2a9fac6eb189768d5b00bab7890e1f0789b3b1f68e4605e573"
+    },
+    {
+      "file": "overlap.echosight.zip",
+      "processing_eligible": false,
+      "rejection_reasons": [
+        "acquisition_event:timestamp_invalid",
+        "native_sample_time_gap_or_overlap",
+        "recorder_continuity_not_complete"
+      ],
+      "wav_sha256": "c971ba8d2ad55e2a9fac6eb189768d5b00bab7890e1f0789b3b1f68e4605e573"
+    }
+  ]
+}

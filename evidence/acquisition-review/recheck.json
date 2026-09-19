@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "consistent_48k",
+      "expected_eligible": true,
+      "actual_eligible": true,
+      "reasons": [],
+      "check": {
+        "max_discrepancy_s": 5.551115123125783e-17,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "plus_5000ppm_host_scale",
+      "expected_eligible": true,
+      "actual_eligible": true,
+      "reasons": [],
+      "check": {
+        "max_discrepancy_s": 0.0019500000000000073,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "minus_5000ppm_host_scale",
+      "expected_eligible": true,
+      "actual_eligible": true,
+      "reasons": [],
+      "check": {
+        "max_discrepancy_s": 0.0019500000000000073,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "cumulative_130us_per10ms_below_adjacent_allowance",
+      "expected_eligible": false,
+      "actual_eligible": false,
+      "reasons": [
+        "host_sample_time_inconsistent"
+      ],
+      "check": {
+        "max_discrepancy_s": 0.005070000000000019,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "one_second_gap",
+      "expected_eligible": false,
+      "actual_eligible": false,
+      "reasons": [
+        "host_sample_time_inconsistent"
+      ],
+      "check": {
+        "max_discrepancy_s": 1.0000000000000002,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "host_progression_one_nanosecond_per_block",
+      "expected_eligible": false,
+      "actual_eligible": false,
+      "reasons": [
+        "host_sample_time_inconsistent"
+      ],
+      "check": {
+        "max_discrepancy_s": 0.389999961,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "unresolvable_tick_timebase",
+      "expected_eligible": false,
+      "actual_eligible": false,
+      "reasons": [
+        "host_sample_time_inconsistent",
+        "host_time_not_increasing",
+        "host_timer_resolution_unqualified"
+      ],
+      "check": {
+        "max_discrepancy_s": 0.39,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "fractional_mach_tick_125_over3",
+      "expected_eligible": true,
+      "actual_eligible": true,
+      "reasons": [],
+      "check": {
+        "max_discrepancy_s": 5.551115123125783e-17,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    },
+    {
+      "name": "subthreshold_step_is_not_guaranteed_detected",
+      "expected_eligible": true,
+      "actual_eligible": true,
+      "reasons": [],
+      "check": {
+        "max_discrepancy_s": 8.00000000000245e-05,
+        "allowance": "1% of sample interval plus two sample periods plus two host ticks; adjacent and first-to-current blocks",
+        "semantics": "Engineering admission bound, not physical clock calibration or guaranteed sub-buffer discontinuity detection"
+      }
+    }
+  ]
+}

@@ -108,6 +108,8 @@ def validate_session(spec):
         for key in ('device_id', 'receiver_pose_group_id'):
             if key in cap and (not isinstance(cap[key],str) or not 1<=len(cap[key])<=160):
                 raise ValueError(key+' must be a string of1 to160 characters')
+        if 'diagnostics' in cap and (not isinstance(cap['diagnostics'],list) or len(cap['diagnostics'])>256 or any(not isinstance(d,str) or len(d)>1024 for d in cap['diagnostics'])):
+            raise ValueError('capture diagnostics must be a bounded string list')
         if 'sample_rate_hz' in cap: _number(cap['sample_rate_hz'], 'sample_rate_hz', 8000, 192000)
         if 'recording_path' in cap and not isinstance(cap['recording_path'], str): raise ValueError('recording_path must be a string')
     if 'probe' in s and not isinstance(s['probe'], dict): raise ValueError('probe must be an object')
@@ -225,16 +227,37 @@ def _recording_bytes(path, limit=MAX_RECORDING_BYTES):
     return raw
 
 
+def _decode_recording_evidence(raw):
+    from .acquisition import read_float_wav,read_capture_package
+    if raw.startswith(b'PK\x03\x04'):
+        package=read_capture_package(raw,MAX_RECORDING_BYTES)
+        if package is not None:return package
+        samples,rate=_read_phyphox(io.BytesIO(raw))
+        return samples,rate,{'format':'phyphox_csv_zip','diagnostics':['sample_grid_unverified','phone_export_not_hardware_validated']}
+    decoded=read_float_wav(raw)
+    if decoded is not None:
+        samples,rate=decoded
+        return samples,rate,{'format':'ieee_float32_wav','diagnostics':['sample_grid_unverified']}
+    samples,rate=_read_wav(io.BytesIO(raw))
+    return samples,rate,{'format':'pcm_wav','diagnostics':['sample_grid_unverified']}
+
+
 def _decode_recording_bytes(raw):
-    stream = io.BytesIO(raw)
-    return _read_phyphox(stream) if raw.startswith(b'PK\x03\x04') else _read_wav(stream)
+    samples,rate,_=_decode_recording_evidence(raw)
+    return samples,rate
+
+
+def read_recording_evidence_snapshot(path):
+    """Decode waveform and acquisition evidence from the same immutable bytes."""
+    raw=_recording_bytes(path)
+    samples,rate,evidence=_decode_recording_evidence(raw)
+    return samples,rate,hashlib.sha256(raw).hexdigest(),evidence
 
 
 def read_recording_snapshot(path):
-    """Return samples, nominal rate and SHA-256 derived from the exact same bytes."""
-    raw = _recording_bytes(path)
-    samples, rate = _decode_recording_bytes(raw)
-    return samples, rate, hashlib.sha256(raw).hexdigest()
+    """Compatibility interface: samples, nominal rate and same-byte SHA256."""
+    samples,rate,digest,_=read_recording_evidence_snapshot(path)
+    return samples,rate,digest
 
 
 def read_recording(path):
@@ -245,7 +268,7 @@ def read_recording(path):
 def import_recording(path, destination_dir, *, max_bytes=MAX_RECORDING_BYTES):
     """Decode, hash and preserve a single bounded immutable source snapshot."""
     raw = _recording_bytes(path, min(max_bytes, MAX_RECORDING_BYTES))
-    samples, rate = _decode_recording_bytes(raw)
+    samples, rate, evidence = _decode_recording_evidence(raw)
     sha = hashlib.sha256(raw).hexdigest()
     dest = Path(destination_dir); dest.mkdir(parents=True, exist_ok=True)
     is_zip = raw.startswith(b'PK\x03\x04')
@@ -255,8 +278,7 @@ def import_recording(path, destination_dir, *, max_bytes=MAX_RECORDING_BYTES):
     else: _atomic_bytes(target, raw)
     return {'recording_path': str(target.resolve()), 'sha256': sha, 'sample_rate_hz': rate,
             'sample_count': len(samples), 'duration_s': len(samples) / rate,
-            'byte_count': len(raw), 'format': 'phyphox_csv_zip' if is_zip else 'pcm_wav', 'channels': 1,
-            'diagnostics': ['sample_grid_unverified', 'phone_export_not_hardware_validated'] if is_zip else []}
+            'byte_count': len(raw), 'channels': 1, **evidence}
 
 
 def _atomic_bytes(path, content):

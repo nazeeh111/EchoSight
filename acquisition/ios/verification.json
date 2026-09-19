@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "verification": "injected software and unsigned compilation only",
+  "physical_validation": false,
+  "toolchain": {
+    "xcode": "27.0 (27A266a)",
+    "swift": "6.4",
+    "sdk": "iPhoneOS 27.0"
+  },
+  "source_sha256": {
+    "Sources/CaptureCore.swift": "cf657e8d4eddecd6566ea4f6b075ee6dc88ff0fa75335194aae5a585fbcc8094",
+    "Sources/NativeRecorder.swift": "816421f3049678f6eb806e84cbb221804c6b38a7551e40d6919f8157961a1936",
+    "Sources/App.swift": "64c850bb9eb0c5a162d376c2e6ee25465100f0bca2f9bc8bc268d34d6e643d09",
+    "Tests/CoreTests.swift": "a3b772e965ea68c409aac3b40472203697525d4796caa401904652aa796d5986",
+    "bridge.py": "2b851a056ff642e7c728884e9d728a3e95282717d7e5bc79e9a96279838ce28c",
+    "build.sh": "b034c04e48a1d0aac63e8fca179343cc42d0313c2844be968b8ec37caa837055",
+    "test-core.sh": "bcb880bcf87df55ced156d8d566efd9f264caa7cc897bb51cb0e32fb9059511f",
+    "EchoSightCapture.xcodeproj/project.pbxproj": "4dfdc1cf90c0b12f560aa10718d5b19a9ad62dd2ae1ccbf1a5371c1cc7ba1720",
+    "EchoSightCapture.xcodeproj/xcshareddata/xcschemes/EchoSightCapture.xcscheme": "872fa1956994d8ed11ad25d7f95c4877df4c12dc94a8245f254e57f74aa4d522",
+    "Info.plist": "9421497caa817f744bdd72502d1e2a53df18c5e61a40531348c083b973e702cb"
+  },
+  "checks": {
+    "injected_collector_exporter_tests": "passed; includes encoding/write failure retries and 50 stop/append races",
+    "unsigned_generic_ios_release_build": "passed",
+    "executable": "Mach-O 64-bit arm64; not signed",
+    "bridge": {
+      "frames": 93120,
+      "sample_rate_hz": 48000,
+      "exact_decoded_samples": true,
+      "identical_acoustic_observation_objects": true,
+      "candidate_count": 5,
+      "clean_processing_eligible": true,
+      "invalid_timing_controls_ineligible": 4
+    }
+  },
+  "limitations": [
+    "No microphone or AVAudioEngine runtime executed",
+    "No signing, installation or launch",
+    "No phone or acoustic physical validation",
+    "No recovery after process death before durable save"
+  ]
+}

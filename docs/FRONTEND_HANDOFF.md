@@ -77,3 +77,9 @@ python -m echosight controlled work/controlled-demo/protocol.json --output work/
 ```
 
 This four-fixed-phone synthetic demo yields repeatable unlocalized change. `--receivers 12` generates a separate twelve-static-device geometry demonstration; it does not simulate four phones occupying twelve simultaneous positions. For that run use `--receivers 12`. The API request and actual compact four-phone result are in `examples/frontend/controlled-*.json`. Epoch response arrays are explicitly omitted; full waveforms remain reproducible from preserved raw inputs. No own-device measurement exists yet.
+
+## Native recording evidence
+
+The minimal iOS recorder is an acquisition harness, not a frontend viewer. Upload its original `.echosight.zip` bytes to the existing recording endpoint. [Capture manifest schema](../schemas/capture-manifest.schema.json) and [native contract](../acquisition/ios/CONTRACT.md) define exact delivered Float32, string-valued native timestamps, route and interruption evidence. Capture imports expose `acquisition.processing_eligible`; processed observations expose the recomputed `acquisition_evidence`. A well-formed interrupted capture stays downloadable and exportable but cannot enter spatial fitting. Unknown source declarations do not authenticate playback. Show `input_diagnostics`, especially unverified continuity on standalone WAV/phyphox, and never interpret eligibility or measurement mode as physical validation. Native sample/host clocks do not share the MacBook source clock.
+
+For formal offline JSON Schema validation, register each bundled schema by its `$id`; cross-schema references resolve to those canonical versioned IDs. The `.local` IDs are identifiers, not hosted schema services. `tests/test_schemas.py` validates the shipped examples and actual pipeline/job outputs without fetching schemas from the network. Install `requirements-test.txt` for these checks; the processing runtime remains NumPy/SciPy only.

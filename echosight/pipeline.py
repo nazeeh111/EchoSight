@@ -50,7 +50,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     progress = progress or (lambda fraction, message="": None)
     if cancel():
         return _empty(session if isinstance(session, dict) else {}, "cancelled", [])
-    from .storage import load_session, validate_session, read_recording_snapshot
+    from .storage import load_session, validate_session, read_recording_evidence_snapshot
     from .signals import process_recording
     from .inference import infer_scene, infer_baseline
 
@@ -81,12 +81,20 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         capture_id = capture["capture_id"]
         try:
             path = Path(capture["recording_path"])
-            samples, rate, digest = read_recording_snapshot(path)
+            samples, rate, digest, input_evidence = read_recording_evidence_snapshot(path)
             if capture.get("sha256") is not None and digest != capture["sha256"]:
                 raise ValueError("recording checksum differs from its imported manifest")
-            observation = process_recording(samples, rate, session["probe"], capture_id,
-                                            sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
-                                            cancel=cancel)
+            acquisition=input_evidence.get('acquisition')
+            if acquisition is not None and not acquisition['processing_eligible']:
+                observation={'capture_id':capture_id,'status':'rejected','candidates':[],
+                    'diagnostics':[{'code':'acquisition_not_continuous','message':', '.join(acquisition['rejection_reasons'])}]}
+            else:
+                observation = process_recording(samples, rate, session["probe"], capture_id,
+                                                sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
+                                                cancel=cancel)
+            observation['input_format']=input_evidence['format']
+            observation['input_diagnostics']=list(dict.fromkeys(capture.get('diagnostics',[])+input_evidence['diagnostics']))
+            if acquisition is not None:observation['acquisition_evidence']=acquisition
             observation["recording_sha256"] = digest
             fingerprints.append({"capture_id": capture_id, "sha256": digest})
         except (OSError, ValueError, KeyError) as exc:
@@ -95,8 +103,8 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         observation.update({"capture_id": capture_id,
                             "receiver_position_m": capture["receiver_position_m"],
                             "receiver_position_std_m": capture.get("receiver_position_std_m", 0.01),
-                            "input_diagnostics": capture.get("diagnostics", []),
-                            "input_format": capture.get("format", "unspecified_lossless"),
+                            "input_diagnostics": observation.get("input_diagnostics", capture.get("diagnostics", [])),
+                            "input_format": observation.get("input_format", capture.get("format", "unspecified_lossless")),
                             "provenance": capture.get("provenance", "measured")})
         observations.append(observation)
         progress(0.65 * (index + 1) / max(len(captures), 1), f"Processed capture {capture_id}")
