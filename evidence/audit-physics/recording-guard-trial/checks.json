@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "raw_entry_pre_cancel",
+    "fewer_than_twelve_preserves_uncalibrated_baseline_no_p",
+    "cancel_inside_training_search",
+    "cancel_inside_joint_optimizer",
+    "bounded_hypotheses_and_permutations",
+    "exclusive_evidence_shared_covariance",
+    "finite_json_export_reload",
+    "preserved_physical_ambiguity:stress-edge_scattering_surrogate-643-matched_filter-original",
+    "preserved_physical_ambiguity:stress-distributed_source-647-matched_filter-original",
+    "preserved_physical_ambiguity:stress-higher_order-601-matched_filter-original",
+    "preserved_physical_ambiguity:stress-distributed_source-653-matched_filter-original",
+    "preserved_physical_ambiguity:stress-higher_order-607-matched_filter-original",
+    "preserved_physical_ambiguity:stress-edge_scattering_surrogate-641-matched_filter-original"
+  ]
+}

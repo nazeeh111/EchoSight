@@ -1,0 +1,649 @@
+[
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "room",
+      "seed": 101,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "cbccae88dc853e78e33bd368be18a89282ff4a9dacc489bc77bbbfbc1f1ca006",
+    "recordings": {
+      "capture-00": "697ea0e93bcaf1e5da991bfc3e4f3fb975d479e1a3a74dc66d14ba8190189e78",
+      "capture-01": "110956d6233031c006de2327afa150764ff6866b8f39f4bef7bde1775a1f83c8",
+      "capture-02": "f2dfcacb3f1552e707a8b280c93933729bd206c95b29a361d8c14b2d6db808ce",
+      "capture-03": "28bc455089f273e351c752f4483fcc798a5110dd63ba96433c202d51721eddc1",
+      "capture-04": "3749d44ae0d33c5cf6666b533594e86752228f46821c72d5a67c3d95747a3b9f",
+      "capture-05": "1c582b34b1bc3b68cd20da580869ccc522ff1820c656bd4422f9bdc66c38c8a3",
+      "capture-06": "c0ac72226d63ba515b748535c210edb290d009e24119af81dd541a0200c00ff1",
+      "capture-07": "0bb6d0189f00e00fa4d80bfac18e678ba1d2b7b910f63e9cd81cb05bcde9afc8"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "room",
+      "seed": 107,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "8e0b5ed26909167d594e28eddaf3f6da46e0067295fcf84029c8f7b342d60282",
+    "recordings": {
+      "capture-00": "d3da55901da22c729f41edc62aa893084c4480139ada1976f1a898caf0edfd88",
+      "capture-01": "45f4f20594086df57f165cc69707d61be60fa788aa9220201ebabefd1c4a73e8",
+      "capture-02": "38895c91e3ce3e822d0627107c4b6560f9dd0eb8cb68556069207b634d45fec5",
+      "capture-03": "98ce7c97f6c2882da212aeb8fd707a23e03208909745a1f0cabb9739469cfcf8",
+      "capture-04": "dba808a91062bda3c85dd3ae6f4605109fa79877a1a7f97e44b99f4e2804d8e0",
+      "capture-05": "7a55077cd30f4f1e18475eec13e8ec9d5645f601777b2cc237d4962adee02fe8",
+      "capture-06": "15d3fcb4dbd74a696e4b68cbb8f4a1992e591b186becc64ada607fd20780b543",
+      "capture-07": "b0134ad477a08051df952e6e1b41663803c9f3d1274cc2c7dd4dfc5875c0e7c4"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "room",
+      "seed": 113,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "c77b2a245fe063cfb870c735cd2ef64668b93cddb3a66dd97c36b41159164928",
+    "recordings": {
+      "capture-00": "c77696cc585cdaf4294be97f84502748e41ab1a3eb71363727e75974246881fc",
+      "capture-01": "fc8646b6563a56c7a20fe00c39466c4d60b2a5b8ba0f49fdf2e32a6a5a351b5b",
+      "capture-02": "5a0dd83d856544479ae7a0a95b668288f0582493a41c206c0a04c83ebaabdd2c",
+      "capture-03": "d347413bf8ff0e6ce4cd1cccaae663c39226269f8d7ec21ed7bb3e5d3d4ac395",
+      "capture-04": "4d042a4115b54a0e4081604cd764507ca0425e6afbcbe400f87de04e67f8d581",
+      "capture-05": "18fb68191c1c2fa3d497a3718c9f33bedd8a431ed432e0366da5d45625781ccc",
+      "capture-06": "66f9b1dea990ef1cd99142dee107be6d831ab009cdf0196a8d0b35df0880ff04",
+      "capture-07": "ee63cd5a0a960beb368e9297abdbde891196ba119453206dfe5cc0d43d0cf36e"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "partial",
+      "seed": 127,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "88264232e21ec38636d89cb81d7bc84834b70614e56936f72e49aeeba40338b8",
+    "recordings": {
+      "capture-00": "e4c421d77256008289ec06468c4b974d3b888050a78e03d3bddb9e070b23a242",
+      "capture-01": "e54365e80b13397a27a065f8209174fb0a334627ba301830a483b69337e519a5",
+      "capture-02": "1f9de3eb9b434e595b744c8bc5e7b0b12ca53ad9b6ad6dc93e909bf0e201e426",
+      "capture-03": "ddaef078977094253f177801512529e12c5f236d7fd0e1ac9df0ba65cbd5b12f",
+      "capture-04": "8c0bd25277769645a3d6e7a90c41ac3b79d757ec644a3336be818458d131c473",
+      "capture-05": "bbf7b54115604b8cf5b51dfa8ae76e1ea525825b0e3d2674c23a810091240eda",
+      "capture-06": "b9dd6b6a8d321b34fabc8f42c7c47bc947f632800ff07d7b8a93577fa6694721",
+      "capture-07": "b6e3d2cd024b30b3aaa82f39ce93327f4f7803e61d56f47a6952eb1af84cd080"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "coplanar",
+      "seed": 131,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "6aee2f74e60fb63d9d0140ccda23493d10121686f814d354bb67573c4de9eb82",
+    "recordings": {
+      "capture-00": "5054d37b0c5038670fb9b2600bced37213ae272d595f517e6873bf19db99c876",
+      "capture-01": "17ce15edc1b7ec8e9eb33d7da9f0fb318d90997a426bb4d3486e2a3f0c6c5717",
+      "capture-02": "83a7a807fc1687b5038a9eeeeb6f0ef4e466f58f10f181abc2459ee1f3fed645",
+      "capture-03": "eeb2c3bc450218d5e621edcc45bcbd33d2eddd5b02aa1c1c3e847a45b51f6b72",
+      "capture-04": "55626373e36cbcfa982fa237abe85fe1b2a1ac249989da7e0ed540cf8a5ecab9",
+      "capture-05": "f6f307f5f626ad87c9974bdce4fcb9d804862e92ddbf753759cd9b8347e3382a",
+      "capture-06": "69f3cd578842f6e3818bd4615391928cf7728b3a5d3f0271480f12a0c2bab228",
+      "capture-07": "d3053257f99ad0032fc274b504c4691e34d4ad3e1e5ba6b03f954e95d58b9a44"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "null",
+      "seed": 137,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "69ff91f2c9f23cce789689e0e8fc21b59800dac9657604c98561e86e5f285f6a",
+    "recordings": {
+      "capture-00": "d888f88cd3897f4fc7083ccc086e4011d6928ba26dc8479a8e5e1fad5105df31",
+      "capture-01": "cd1b8bb968019e8e4b9d56a2200fb84509b133aeb53fe69f4cdea608df968d79",
+      "capture-02": "1fb26863cdc2b595994aaaba757f416a070df061dd3ce7c1ac845645c2f07ab0",
+      "capture-03": "2b7b0d86c74bef69b090a769858ce27a740e6eb62ec29afe50a1a059b599f6c0",
+      "capture-04": "4f5878978284d5e4aa5a4583c332c48e8afd47af467fd0a82d21fb7c470dcd5a",
+      "capture-05": "92f03127882658cf42779a3057057b41121158c9f1eebd88d75c82a5697fcee2",
+      "capture-06": "baa33c7eae6e0009c024a2a5136f6b5794e27d7c82f516365436340ed24d7f72",
+      "capture-07": "3a9488e74a9a169970b93fa1bab80b1b101092728a19cb98befa94e0c0dbb368"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "clutter",
+      "seed": 139,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "b862b9abfafba4e90166af9d94855b795997a5d3f4bf9241eeabf69171d9c401",
+    "recordings": {
+      "capture-00": "bcafeaf64a0752cf242b932a2c5b88f29f043d133b7e24da0c6533afa900f5aa",
+      "capture-01": "bc12137b884bcc33651cf68a573b6013453d0d36477075f39e4412bb65a80e19",
+      "capture-02": "a566fbadbd9ea621e252b971de442b7d3e118616860853b37fdcd4eabcd9da27",
+      "capture-03": "d185c6b82108be7af8bb44cfee302af031561344d2a9ca55a1b9f394c374a79b",
+      "capture-04": "2a0ec673a772301b3bb9683af20561d6ba10bac40007104fd4c206f438719533",
+      "capture-05": "f109b8ac6e5cb1cead999cf926bbf0d1515548e8a17cc422b1e582356f398736",
+      "capture-06": "fe000104357ff689dcb25ab22dece0317e74fdf5e1aae72e992924d07e60f781",
+      "capture-07": "a3deb4b74e38e654ce11e226c03094041dd8522b3dcbf2edc822488a1c056824"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "mismatch",
+      "seed": 149,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "b66249c271bf2c4d2845fb3c3c70c23722732f38c487d334b0e4b3f2eab92806",
+    "recordings": {
+      "capture-00": "67c882ad286512dc504e25a948f84cb23703c8604528e0abfc582a63db7bee4f",
+      "capture-01": "9936389532e125f084deb19c7e9702097687a8c3fd33e052fdb01fe7e2693818",
+      "capture-02": "34bc1883ca2b11fd96ae060558e3a0ea1783da4db44157f6ae869a65500b18d9",
+      "capture-03": "b7f927cb773eb1653f3ba93b1bf29c0f6dcbdd78f18216b0eacc92e9daf010cf",
+      "capture-04": "35a96cd9cead0b1a88a447d6147a08495fdefe503fa19f8bf18e79a64f08d432",
+      "capture-05": "99790d17ca037a94e3ba3730da5192dfc6abf47ccd6fd8c3aa62aad781b22f03",
+      "capture-06": "f731618a0213adef1fdb78da98e8f1baf0181be9fc07813e8ea27b6fcf8794ce",
+      "capture-07": "c45f6463feb549a3c90615df82fff33690ef5f70c19cf49911c273daa9b999dc"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "reflector",
+      "seed": 151,
+      "required": false
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "7d97b8242a50bad33d8cb4766284a11cfb1f48901886ba13b83afea1bf49a41d",
+    "recordings": {
+      "capture-00": "c63ae415942babdbc9992974178fa2eb89feda2fbf1fa436fb2f78018e3e7b4b",
+      "capture-01": "443efeae3403dab9d7e7a1921342a4df64c20c142a0f0779cdef0c593f6b92cd",
+      "capture-02": "6b829e033adcf84184ba4be0072b2f411b46449a8be5167bc6cc5cef01a7a9e7",
+      "capture-03": "c8cd390f214cbf730dda07d767caa051253fae020fbb2a3e5125777e67c3001b",
+      "capture-04": "d86c9f36cf51b2407ebfb3b3330a813e95a1b7f49c6c9f4f30da6154adf816e2",
+      "capture-05": "ade5793b59a0455ac01afc5fdc64c164e0629e9922c696da73867e2cd61ac4e8",
+      "capture-06": "323cd37f6cd9f87e7fdbb0fee6fc34ec60f83ed125141bde54021165b3980be4",
+      "capture-07": "dab25353a356ef6cf6681b1d89e25d7be8df696f56f6707f34abb6cce1ca86b2"
+    }
+  },
+  {
+    "suite": "eight",
+    "case": {
+      "scenario": "warp",
+      "seed": 157,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "93b8f0c9739360b475be61770e137b696f1fd8399dbe32cbfb1d10a3843b1564",
+    "recordings": {
+      "capture-00": "a10f603ea8bbaa2afd3fe48ea770c44b30b073c34bab4dd2e3fed21f34d9d667",
+      "capture-01": "278131aa5df947a15ecaf38651cfe9cf7888012e38136e27729b42d7e49199f6",
+      "capture-02": "aa54e2b4b2da8e64c55c70102d4fc4a13f8b10686ea2027eefa1813af04770d2",
+      "capture-03": "9e33afe461695717d975cd985c0c564f0598d2ad825f2a9c4cb29f68ac7eb660",
+      "capture-04": "3d66e7b02807dfa1e8bce48de42990108aa741ba73c5bce719c0b124c60fb164",
+      "capture-05": "36975c93df36a29452f419153b96a302b9275458f680e9bd8ab22a95a9ddfb6a",
+      "capture-06": "7726d4a72e87bf1eb7b4710e475d9bbb83c87d85d1dd90422c4f37c488db4829",
+      "capture-07": "df1acdd5db3d42a1e4359e77915ac24b3aa9a7df828b3bb624b536aa17b53008"
+    }
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "a082fccf56e438a14860449e1c90ad3c23c96de074f9be408a27968ec417242c",
+    "recordings": {
+      "capture-00": "9576f95efd969af0ef9336efcefb3d78e92e82e6e32e972bf1718bede286ba66",
+      "capture-01": "7e8cc8087ef139d426b0e99da6d9d3bfc6fcb6f10777e21354a9fc15da40ab5e",
+      "capture-02": "cce144e1f347948b3ac0cdcbfc768cf0e49872f25fa2631f397d1fcebc6c010f",
+      "capture-03": "69058691e3e94ef9df4ff5ef08669113348bed93a72e699b377c053fa3334a96",
+      "capture-04": "4682e4a7f8356483ea9734c4b696131d21f7de24d76dec5799bc00720c28f5f5",
+      "capture-05": "076ab09b7aab4e1a20b348b99b797c4011a802596b54d0b52c2d96ca6a131d1f",
+      "capture-06": "3820e4cced511a3c8657d0012f18c4f51bc6fd44973f5bc3daf752f5a1afe638",
+      "capture-07": "f9bfb71ad8c2293029075b48a472abdfdc34e1f7b17304e31b7d5ab554270329",
+      "capture-08": "04b82b3dbde217e2b8c18d39817033337855ada74e6760da0d9a4dbfe31afb43",
+      "capture-09": "014c90000a832e1a498e3a92dcd2d69a5b3c4dca78331788ecaebdec29416910",
+      "capture-10": "ffc11c15991638ec6b5a4bf2370174412edb32f74b10f112cf44c71877b7c5ff",
+      "capture-11": "d04969c14db4476f4178fb3ec24bba4faa6fe3ec508feafc2a4fdf878fc4abd6"
+    }
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "c7f6bab397cfc794b06dc249314c0e6ab9e072ca3087ad9468a8d9d5734bc31e",
+    "recordings": {
+      "capture-00": "2830ad12e7184fd7ff80315535a46e3ffa50251d0009924a1875b4d1e12aef25",
+      "capture-01": "c9d4ee0cd7b86a893f70e28fa6e2491436925360008839b2f9e6e8ab2dec33a3",
+      "capture-02": "0c9a442f23e60d12336c72c9ddf558b77cd6e342d2c0a39ae4559228898d7565",
+      "capture-03": "4795a671388288b7570b4c3d4d0a3fd2561e96ffeca06edf3fc2cd8d5686b089",
+      "capture-04": "629b154be6b6a9b8c0ace022bda66bb1a9f4c49c063ab9cdbdcf792eb16387ee",
+      "capture-05": "3fb0a1c9e2cd6e1c22dc4f7c0bab94364e2a1015d5590712660b2bd3c0e8e31b",
+      "capture-06": "02b8d6fca46ca130532226ca86446999ef04095f8974767cb87d8a9b413b714d",
+      "capture-07": "c90ef76d71672066942829b175f5f1d429e2f8a8f73f61e079753e917ad954a2",
+      "capture-08": "7c4ec430b5dbb34fc1fdafa727e786e3247ef9b5cbbb7b6b8411c7a7c7475b13",
+      "capture-09": "9d1fda45a6a47324b46fd4b0b6ac73eef40b0340631dd73b810a543708e49601",
+      "capture-10": "e74596dbf312da1f246bb4977eafcfba909fdcda9357bb364099b072c1563ecd",
+      "capture-11": "b80cf3540d49338cf73ec2ea6dbfb8af37b605dedd10806310e5e0dc0cb47441"
+    }
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "31da06a40f3706b3a3f3928ff484ecbd60816d83a2ad5593301cf5ab8ac4b967",
+    "recordings": {
+      "capture-00": "6554311799ebf2ed81c0143da3e7bc55570d17f22bdc78d6dd5a70fc8b77783d",
+      "capture-01": "feea4ce01bbf5e789d3320ca70b8a1bcf71c5bc8af34cad9b505faee1f40c1bd",
+      "capture-02": "46b63bd05ababdb2abde11aca310828dba00090f04fe1fc56cfacfa5fac69409",
+      "capture-03": "f131a4456112cdfd3288f72d5a30f33284b7c77953ac8ba0adb1781fa0da37bf",
+      "capture-04": "c53edce33d99cd8261ccc8a0cb8089952b725d80b285af34b0f58a34f32add78",
+      "capture-05": "81fc492ef28495308e4c8bc6628eb4805d2c60b1bef09adf93a2482ef33bf83e",
+      "capture-06": "419f2e6d3f0330af5fceb4009bbf853e39bd09b64540d055d694c2a2f0e0b5e7",
+      "capture-07": "6703ad7acc7208b699a6ddf0672f1d67760447116be2445d89bc245c849da8ec",
+      "capture-08": "01d4bc065e4768de6b3efc33a3786af1bb916edadb75f38880b00b8512bc783c",
+      "capture-09": "88ae97c9d1a1354bcc6634df3ccdecbb25eb2b528b3d09533e6c275e0cc36fb9",
+      "capture-10": "0945b60e525802f0e2be57d5eb6c7058e6613a9a7ba4f66c5f668a6049b77eb6",
+      "capture-11": "114b71252c785794325bf1f0e40cf152331a16e73c3725f46a4a024e60ac5f85"
+    }
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "d5792b69aaee5dede3fec2b2c69eb54786c38a4dd471080d2558a6aefe724f1f",
+    "recordings": {
+      "capture-00": "8c635eddec7621a711cea8cee4c8d6ef2e0d083a7920b4432adcbb68e579a936",
+      "capture-01": "80e84e86722a577b0e84eed0a0d0ef9c9649e6b652055177e4de40fbdc7d6241",
+      "capture-02": "4121b0f1979ecd33bc850d0e44b1d49a1be9b4a6dc53d52857ac98f6800be4c7",
+      "capture-03": "872baa51ec2a63378e57aed55f8e1a2a1bcc41a232020e0105351f86edd596ac",
+      "capture-04": "e50d25c9e8e909e95d652e7d76257cd67bfe75c9be6c401c47357edcc82a07cb",
+      "capture-05": "7a0093d53a401161c6747d9e4497d91d5d9a92246cdb5cf0acb03de4a9ed99d2",
+      "capture-06": "b33bf5ed83bf26bfb7a0ee92d508d1e5fbd86480c02a45441eda5f36b4333b53",
+      "capture-07": "faf97880d259b750aba617cdd4be784fef3cbbafe51a72d9511555df9b08f163",
+      "capture-08": "d7a6c3e3240cee832ca1040836040cb4054b94c16b3e2c60a092c997d9d66770",
+      "capture-09": "0a4960236ce717dfa6fb3a4cbbd93f3a173e9dc4a2d940e926dd3b0840202398",
+      "capture-10": "13c32bfa05ab81160fbe7cd369502096156b6b5521f0aa9eb45e2ac937f37727",
+      "capture-11": "4c51598e2217f97a8778367b856f81be0daf6e13d298a7daa3984591abbbdfae"
+    }
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "28d6a89bc1ec59900868c6f90488f4ad54caa003f6fe271c79332594679dcff3",
+    "recordings": {
+      "capture-00": "af80ce1f5129c66c265ea37a57bf2e20e9277c7d7b85ca4a53734a17034cee91",
+      "capture-01": "c873306531379cfd0e1f5caeb302e3ff38525d2f70de7c91923ceb1aaa19a603",
+      "capture-02": "5cea1176a6ff1c48a03a1fe19dd2d781e2a4963353e58d834e707efa81822bc4",
+      "capture-03": "eebfb406498d5106d6a401f9309a15bf8552b6178726cb391bcf93cd00d4d8da",
+      "capture-04": "ad14115fcf0d7fdcd148a12f4e9f88943e24c5e1c6e5cee153e58037039bc359",
+      "capture-05": "dc77cddf04a916b2d2f0711a2f39496c2528a414ac93eff05dda9c31c0f0af96",
+      "capture-06": "83551bedc65160e6e3f868c0296cbfa6ed584aa07e0f2d30ec435ade2af17014",
+      "capture-07": "a265e2a9228afa1de18e682ab340d97b91103c3d7a013d6102814ba976755f9b",
+      "capture-08": "dabc9972d1c6c2b1c5ef467245acf62f563e71b5ce40727d27d33d03e94e585b",
+      "capture-09": "bd94b80e263c54e34bfb077accac7c014f86864331fc3a82b025e4aee556d5ac",
+      "capture-10": "161ad9d425c30a33b90a91b30035dc12eac1c35b64ce405062e617420602b8f3",
+      "capture-11": "728004ee8156647dd8f82286171b2b61d384114eb013c1ad92002318c27a6a19"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "higher_order",
+      "seed": 601
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "10752cab5da6f353bd9fbb197bf61ac31c36d5d4ae8a609522d269707ad4297d",
+    "recordings": {
+      "capture-00": "3f85a299d49ad43dc87486aca10863f7401c3dc5ff94711cc8558ff95875516b",
+      "capture-01": "d273285ca697d02d9793ba317d92b49ff15801bd808513553e538aff830074f9",
+      "capture-02": "0943060ae1422dfa69ef5c20c1d764a2b3d88a17eaac2e0d1805c44656426c3f",
+      "capture-03": "a977f1fee0e8e481a180baa16bccc69f1096eed7465efaddfa173ad13b5460d2",
+      "capture-04": "87b9cb45e56c6f84ce2b10822ed8c36a611e5dd6392dfcbbdd333338b28bbcc2",
+      "capture-05": "5638d343c4356b023160913dd4323dc12406cecd181facf0e8e655d12e2f1747",
+      "capture-06": "284abf6d82ea890799569d090751c0eecd47bc7692e5991a63076e5d7bf75ae5",
+      "capture-07": "9ed562e766d729a16dae4cd1a1e39c19f4a2b58d7d5671b11a73959a32aa9d86",
+      "capture-08": "ce1eb2c188480f7019bafd5799347253881c68e2e1adf151054e4f0f2b481313",
+      "capture-09": "5d3b3f700cf32240013960dadfeac0649e5a7b121fb0ff7a5b0c6c9342b5ce28",
+      "capture-10": "71900c5d9f5b2f31ad2f6e8119daf39e91f2cd9e2ade74753122495b4d6c5855",
+      "capture-11": "b299e3c5428c201f7fdf9e155ebedc952c243fffa61207ea6a955fc531a005b6"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "higher_order",
+      "seed": 607
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "ecf786a94dc696778cb1e602a39c8fa81b9e1da6fe169a4e856c3c2f38beca45",
+    "recordings": {
+      "capture-00": "15c349345b61d19ea88d8598a6d3a7cb12c7abfdf2fefe51dbe1945ea824ceb2",
+      "capture-01": "ec7f9d080236945b171c579cede897398e73357f72db6cc4020f3de82f12a66e",
+      "capture-02": "82b95b1e01034a8050b17f87ec09157c24631c3cfb83acb6b4c67f5b627c9151",
+      "capture-03": "d7134802a97d7ae728ce399e329344a224a145e90c5b494fa1cf80a49a5fa5ad",
+      "capture-04": "38e40e98639eff2c5a7417498a4e553302db39ee2b61e5f0439f9873794fa2c4",
+      "capture-05": "49fb2ea9e7e541d48ccf50374bb37c1895402f0f5d7978f19245d48d64c624c9",
+      "capture-06": "fc57d1ae157d8885e3b26d45f12011a1d4ef1b387bf60adb7d8d22ee81d094f0",
+      "capture-07": "3f10019ae5ff4635bda98a2d679b33c866835f0570ee4354ec99b6531be56761",
+      "capture-08": "fbdfda445eb36185c2c038a12c0ed74abae7d618b636ee65727e285fc123603a",
+      "capture-09": "cd20410e971097f1ae96f1c5453a322efc39ab23eb612cc1a3c3405a217e3052",
+      "capture-10": "88afcf107a67e33630b54d4eacea25382c56d539ceadab675da8135916c1693c",
+      "capture-11": "f1d455930785d6f632bada6970c9d90c07f2efb2c9f39297c8530b6508f1d158"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "overlap",
+      "seed": 613
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "38ddb8d1f84d56c10f71c80d8ccc95f222136c13f97446481a2b0aaaeae251c3",
+    "recordings": {
+      "capture-00": "eae999f02771c8ab2c9b5cc615b95ac148db4a103eb3722606f678e08b047ad6",
+      "capture-01": "d2e447c8f94128068407508277cf89898c14fa291c9e2992d645f0fd1248e375",
+      "capture-02": "844d26526a0e85bc1d8ca71c89e26e0e01e5715177533df202724687cf9bcdaf",
+      "capture-03": "466d1eed699d8e98b04e1ca133eef8657d8384ef154e4720dce2317ed60a0b25",
+      "capture-04": "95a18367f9c3973dbe9ca647baa95a62441b712c4a1b5ec90cfa06f594f54d5e",
+      "capture-05": "127fa7abe881e6715e4df052db7ad1b6b3bc75492f0e826ea51842453827c1f1",
+      "capture-06": "c94c25e6b21a0d7de9cbfecc125d3b9b0d9f0ddde0eba3a6f83ff7354e7e1d72",
+      "capture-07": "6e7c0b36c4bc8b830679f5641a66613f44b3f10169173c40ee7559807bae4298",
+      "capture-08": "49dc15bcfcd2fda629913cbc542842155f90be540c873d4335f17a3c045552b3",
+      "capture-09": "b97638902fa249e613a4a3c350672862b7121bf539af1866c71897cb90b58d54",
+      "capture-10": "0f51ccf783261bba669320448fb1ca973dfddbad2450d0f3b6e8f1d6306a49be",
+      "capture-11": "7fb1d6d2b8a99e464e4c77236a2a91c3b516f9c71b44ed3885e3b86ac4a808eb"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "overlap",
+      "seed": 617
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "da1316559c227ca42075ef26df4b51fa4f5499aedafff63351c258cbc6384954",
+    "recordings": {
+      "capture-00": "e4e2bdee601e45f5668fc68e353592f53f07ab7559e307e2e731b5f2fceef099",
+      "capture-01": "2844cf8067ea5625cd0e66563e2500d41b8ec5566ffcb226acadd71401e97c25",
+      "capture-02": "e939c9e78249c88852cf703ada4d6984ad4c35bdfe1840eeda1b5208582794a9",
+      "capture-03": "6ea1df710514fb23b497675df9277ca0c77a71a998e05408d70c6de56a3369c1",
+      "capture-04": "0dc2de73ac5aeee08a5b407f65f9470c17aee106876fcbfba6334b0cd4449005",
+      "capture-05": "cd72a117e728604c7be669f696073b9e977b4553f3194c2617ebfb1d16ba6a8b",
+      "capture-06": "6162ea5a2748acbb03f559c91ae2440b3fc79415caafd6b1053b0a5af3cdc250",
+      "capture-07": "38d109c475376077e1c15340e26c4322a4d6e898023fa5bdb414cb9e4ad08329",
+      "capture-08": "e95667d67ad1e6a03970ebdbe82d24b8229c97eebef29310c1ec1c707e91ce51",
+      "capture-09": "3371076ec45a3f2ec83ca7e0f5d79607242d2a6bdbb37582840e910adcd61436",
+      "capture-10": "cac174f12fe86083ee85f426dbb34012ff39becbbe34aaf10ab66cca18520c3b",
+      "capture-11": "98c1310499a65cc45eaeaba2dcfd72b1aafe33fff0294f5453fdea826292a58e"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "finite_panel",
+      "seed": 619
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "35161c23baa78a03776cc4b390c6d6196989b6883fc15fbf51db18b255daa30d",
+    "recordings": {
+      "capture-00": "1401ddd6465bf9237484812f61c87aee24646ddfa278b16f92108da9a060d337",
+      "capture-01": "38252e77be965b9955d3bd190e462792ce2dcf7518d586f59843338648baa896",
+      "capture-02": "5a597086a874bd335ccbda90f3fb0399ba9e116d5e29b017132d5bf6dc3cfe62",
+      "capture-03": "f8269a22ca37e7ffc4eb379d08ab2c1c14147833e90d1417f12d5bc4c4cf0f84",
+      "capture-04": "d4fea127271a8833b3fda3812aee42f553c9972bd5701797c6f90a2632f6423e",
+      "capture-05": "aeafac9d823b97e7d711fc3a4698143a49f18765ac6aa66b7d361df9e734f43c",
+      "capture-06": "95d0ab56346d3c2f9dc4544220b5a9fb7ecba4a6fbfe173c0928e501a2c78519",
+      "capture-07": "63a478006aa645fb41e955ee20917930d2d8d7812da80ee3441ad5c2e81e7f9d",
+      "capture-08": "b47956097551982d19ca3cb5460d7d3c580d9797d8ca4d57a0a1ed3e0d23b74b",
+      "capture-09": "1ba546e9dfdde387fae1098f83da7a26287a1f08e25661822bab621ea77418f7",
+      "capture-10": "ebb0762a6ed3a46efd3349d91f111a72a4e50e8996ea11d3b356c89326dafc5d",
+      "capture-11": "8b630fba016d07ce7c33ff7585034530c58a79caad0e16b756e570bfd8322afa"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "finite_panel",
+      "seed": 631
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "4ba34027ced317d3f01005398b3703b234b2ea15b11c428ab6ac55d1c66ab4ce",
+    "recordings": {
+      "capture-00": "5db5fe53e905bd02779714864a6494c67764be89b39fb420d781d28980c30b68",
+      "capture-01": "60a916193e2bbf0f120200786cc9c8d10fd3f00404fa5e927aaa5a446467e1d5",
+      "capture-02": "420b1648fa842332ddd97aa58302f8b9a955d8791e9609905d5a73b04c8d4586",
+      "capture-03": "87c6ca54f0416d802bd78ab7f5f4870c4a87dc86d71fc4839ecdf299b5a3433c",
+      "capture-04": "7e4961bec28088e4e8a57f44de97bbf7b4e80af763b0812ad9813859d9f5531d",
+      "capture-05": "093482ae08e7f281c8afabbdf2205ae5bb767be7e3a3cb2e26c7bc24b7466086",
+      "capture-06": "a2652500a802e2b55357a083938497f595e1d887e7c246b7095cb2e8e159042a",
+      "capture-07": "8fc239fae70f828ab223e3bc77cdf97ab29fa3e66d0f92002e021546e5a40023",
+      "capture-08": "eba19a28514842224433afd8ed130c70f7a61984e113c0d8c6a5358bb02e09f6",
+      "capture-09": "73fb461798414f820b9ab27714518a90d3a882f56b252b97a9658bc5aaccd637",
+      "capture-10": "e95ab96b298218315e8a3ccbae42f9c20570df1ab0162526a75bfb9f27c74928",
+      "capture-11": "03330fa68f1091f1e4842a5481d280f6fb7c96ac62d0cd8f7382b93aeddcd608"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "edge_scattering_surrogate",
+      "seed": 641
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "b35fd05e0f69df2c4f5ae251b63889c96960a24a99a94a40894088648dd57a41",
+    "recordings": {
+      "capture-00": "fb8749f739e2a6b7a6ff3ca8cd7f9015fd5e7e834291b20fd4e466ad47abbd4d",
+      "capture-01": "c2433e28cb69fd0a55b2f415e13f7ecbdc5ad03d592623059986f320811d638a",
+      "capture-02": "49a5a8e923b3ca5bef5c39eaf0ec47cd31081d2ad8af144f7fd47db96e370e6e",
+      "capture-03": "c5ccd26bbb8484d948fbddc4dcbb57e46f46499683deb564096a268de5e5e9e3",
+      "capture-04": "05b0bdba5aff26242f7ca12255ccc0ebb7ae9a3d1370af8582c7f62324c356fa",
+      "capture-05": "7eba43b503edae63d1203d7ecd38bae955c83e1e7009d22ffc6c3835b22cc823",
+      "capture-06": "15baefa86ebcb4e67fb3df21fc35fe65cd2b03f4aa3efd26b791d5b0fad323d5",
+      "capture-07": "5d3226fc4614929b74b3d8c969e2e368403a8d47f123529a53bf680211ba22f4",
+      "capture-08": "661ca23cca6ef202de09833d5493b02dc10a941d72af8f88811b6a79a25b8c58",
+      "capture-09": "2c4296621d8ea876fcb99de6deda0e435e5a415c5971a11f8cc039ac4bdf3097",
+      "capture-10": "ceb272100bdff747fca279d568adb9137499154293253425d8f35eccc1a7222a",
+      "capture-11": "375ee13da7439d685d391bb47d094fa8c2478b370221abf16d1aee893801ee4a"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "edge_scattering_surrogate",
+      "seed": 643
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "6b3302a7a53028a11e07a3c98025ee289617eed5570add9bab705aba92ab831c",
+    "recordings": {
+      "capture-00": "f7a89964d2ac7ff6d58ab0519aa441ca32d0f7d3aa44ecc1b1abd6d331281b95",
+      "capture-01": "42b41736a8e6a16bf538873a92f2df1f87a5deb6a545f315c2ed8e2fc83fc6fd",
+      "capture-02": "fb4470281d4b12e16a22eefe0504c5dc020f6ddaae9223122bd55234dee6a2ad",
+      "capture-03": "7a8dc75a4684e7b0fadc0578fb749389d0c7b519b07a242c3ed7771cb5d6ea5e",
+      "capture-04": "1bebe464d4d20e5aa1eec51038ccd125b211b13b6479e6d57de59e329e28688b",
+      "capture-05": "d83037e864b23784257afcd9af5ba385a02e4ed9872d5d5b2ef5a2b2dd989546",
+      "capture-06": "ecf9240c5d24d7235e21060a3f455277b2b6e046e956cc2dc5d75dc4a266c125",
+      "capture-07": "32a129ed7cb3e7bf619493af592d4639e07ff5d6c861945caa776a79be9537fa",
+      "capture-08": "63f014a7a45b5c050c1e7636c5f00ae48c50315ba67f7aee0eaeb193ae833cc1",
+      "capture-09": "4cb08033a47dfe7e51a7e51ee05cc0f29b7a37e579733edbb3abdaf3ac3d2c16",
+      "capture-10": "14b05402e3a1aab634bfead20a4bb3c0dd7e75a41e70e78addad6e9a63358dfa",
+      "capture-11": "f90618fa75d76c7b7e11b524ff94f4001aceb10578a2965e0b6c2816ffc8b8d1"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "distributed_source",
+      "seed": 647
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "8885020816512a6b4fdee7483727088b3e15d27e03cbb152602882beab3b05ec",
+    "recordings": {
+      "capture-00": "893bce4722e056da47ef95457ed3ab270a34e4e0975d1b664bc6b24b4e38a226",
+      "capture-01": "63f3162c0b759b3cf8516ec591e534418168ae02857a0cde36458ef6d741b4a4",
+      "capture-02": "33c4dc45e1cd00511f02acea758caa1b93162c3b3fd890e378ca8ec8ae21c122",
+      "capture-03": "bdb6cadaffb0de60c133890fd5d3b69628314e33ee2be66cf79d2aafbfe0c599",
+      "capture-04": "e1640426ceba8fe2826765c593dba62a702333de0984713d5a68af92ef501693",
+      "capture-05": "548b08dc21f8999c3267a33b14544c9ea7f46706d8250af8bd0ec18e033bb7f4",
+      "capture-06": "abce15c8105025bf15749f31541575c57f901633d62aba3b41028b19db663c4a",
+      "capture-07": "86a033927c1f387a0c9548d1a3f735b4205472331dea30849b9635a35662e31d",
+      "capture-08": "4c01327ee33301dc0e01f9ae87dd1174721feaac9d86998ee3a8b20a6d0e47d1",
+      "capture-09": "3df6bc78b138e0602f4b62dc15dc533cbba7e1e54977a0fafc166bed517e7da2",
+      "capture-10": "1bc3b6e3ce9823591cb399ab5b48e915b07623b0eb177ac4888e5b6666b30815",
+      "capture-11": "5b489512e6feb2aec7eac43f293158af261110928801e26d7c15fc4fca88ec63"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "distributed_source",
+      "seed": 653
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "5d2bf8fd8e5525fccb915e7a76413ad293a8288de6497d3ef0f1b1c9110f5d51",
+    "recordings": {
+      "capture-00": "060fd90482067d63915ef15b4ccc64b7a791767b84dffe48977d72bdb4168804",
+      "capture-01": "1502e9aad246bbc9b891e26f2bc6500242fb78546355057b2c1d6c552e4d04f8",
+      "capture-02": "20d8455c7c9a78e8a9fd6a11cd493cd6185d6d9dea14957f1fecdd71b5475ea7",
+      "capture-03": "3738791347db32257cf3e8847cd6dc87251d60bae52ea2194274d9a44b047898",
+      "capture-04": "5caaac3b8dd1f856ae5af91beebc2db8fdd7f7796197a00947fdb52c20d63bab",
+      "capture-05": "b879a3a58ee9e7622af77ba12b65d96b5ef7e57d6b2b9c18c2c9c5787fe4cb58",
+      "capture-06": "1d3713ab30b76d87018f81ffedaa64c7338bd6c4e10eec656c2fc6bce22f282f",
+      "capture-07": "a2ea11ca308ba507b3d80c4578e4723816132550953be89cd307b79755b00f4e",
+      "capture-08": "f45c57fce28e0014d324c048f64263d67fe62c4d4f624d92dde9894c059ba7a1",
+      "capture-09": "f75c61c352506e75e80d5d85454e083e7fa07e36ba6c2ecd499d60e703290be0",
+      "capture-10": "0a510c62a47816c2f94045d2b7ddf751db90b7f264daa7a85cbe372776807b19",
+      "capture-11": "fa7eeeaa5b0cf37d93188bad7c792fc886275e22c7417869bb1856c6743e21cb"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "source_nonlinearity",
+      "seed": 659
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "d94d2036aebfc4d7dc72cfbfbbefe2dd2212eb2f1a9417a336f610d2bb97b40a",
+    "recordings": {
+      "capture-00": "f604203bba9cee1655d9bbb273b0c1c44d8d833c09d5b1680e23e42b15db986b",
+      "capture-01": "43ce391b172f0f336c28e903e79dcf3eda3ae2797325575c3366010dd9a1e86d",
+      "capture-02": "a67f547d9b506bfaa0e830b3a1bc141e459f7a61d95bc1dd0d74ba79f17ab6a5",
+      "capture-03": "44732a8bb9a9410be9195ba9753c1dbbe84f7d8a6237c12b615d9ddf9f39a670",
+      "capture-04": "d01ef83cc2a2b088f1742f4527090f6cbbe13ae6bfaef714784d14dae06116af",
+      "capture-05": "0c7eda624a23ef9a7250fb6e68eb7be5ba1de7dda069cfa90ebb9bbbdcd8939b",
+      "capture-06": "46a9274dae36a63b9038cfe18a838f158bb4c496902f363f0422094854a18552",
+      "capture-07": "9f6589db603855de4b641f0806e1614e20caf81e3bdaf4a603e3d11ff3b5ee59",
+      "capture-08": "fdeb0d8adff655ed34e1152262109f007a1bd3c49e2cb8bbc1b60eaf0885b091",
+      "capture-09": "79c9b408802c6eb94797576b18618f42dc8a7f2a8ca51b7ed53ced7f363f19a3",
+      "capture-10": "84d501812a486e211a832e2b0c0537488d3d9f264c7796f39360ea3a0b7413c8",
+      "capture-11": "cff85b248ce5f55efe29faca30e0c8be9b3da9c03b3fc8c61301f616aeb46ef4"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "nonaffine_clock",
+      "seed": 661
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "f108d647f520753c5e96bd2f0cf1809b81de5c5ec015e37328da085edcf82456",
+    "recordings": {
+      "capture-00": "31a4493e87d6a26147d52390670f3b6ee63a6e54d63b0fa80c8d5120df2ae4cd",
+      "capture-01": "1776a04d8eb4bd458d6a48f272d8224d2af0c4007223b01348b9886034584287",
+      "capture-02": "0544e6e465e4a277577cf68da1272143894a0d656329c1d29af59ebeb37689ba",
+      "capture-03": "dbe038f514bb11807bf0daa4db92b64881e5df43b862c061dacca4d0f0aca6a0",
+      "capture-04": "70e9bda7c5c436f4c39e7a84672bfbe78ccbbe3ba204d7b037617b8c3a440701",
+      "capture-05": "8a8b33faecbcff8c1813d8f2ef6409f09df6f9a9d6cf26f009e7037004f26909",
+      "capture-06": "2b1b51435208a688004251e13e8d06b73f58d1e08204de5935a15bfefaf91d7b",
+      "capture-07": "9a6a422e1d825c66f293e3700c3c027d986d0bc29a9c50e23ccb93207a3f615f",
+      "capture-08": "c1eb3a7406daac06604667d4eff90fd739e917f4a11a54259aacbb6e25f95cb1",
+      "capture-09": "e22e89a98dfb65184076c544ba013dcecf030cd63b407fe737fa2d43109163c2",
+      "capture-10": "291060cc5a6e0b2c65823b375596c111f7991c2c631b24e3597e5d315a85b86f",
+      "capture-11": "4d48efa2c089d5da96ab24ec8b3bbe3a03d54592e7fabb1caa255919c74566d6"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "diffuse_null",
+      "seed": 673
+    },
+    "estimator": "matched_filter",
+    "session_sha256": "2d119769f9e8d2fdfc98cad2a1ac9a6202cf498bc6d409909d18bc36850c8411",
+    "recordings": {
+      "capture-00": "a95448c4d74f009958cbe5056263fbcfeefcf47de202da4d59f188220e956362",
+      "capture-01": "75931be1b9343a83edad40ea8ff2dccf47c0854c2251c98d17b7a5e827203037",
+      "capture-02": "a8276029365c6a30f8f66afdaf87d3f83294add87fff82643df044f4794fd4ac",
+      "capture-03": "e5c94cecabc61bff963a80eb472553736d2a32fefa9d5717762f10ca9d946876",
+      "capture-04": "51b0127b2cdb86d22339e3030d788cee55bebf9991efaae767e866fb2ffb350f",
+      "capture-05": "90cc3c355f1477a0d1ea73a403f171734681cbf8863af8f03601f643ef0ce29e",
+      "capture-06": "84f58f1dc69507fa6494a1a3579875a92c6f93b79ef094f9cacbf2b4f0265451",
+      "capture-07": "42134d15de0170767f65ce6c81776bd233cb12e07b91cd65a24399b2e23c976e",
+      "capture-08": "d9b06f8df1118ca6c374381cfa4b4ee0f2a6f69184d07973a6215d0d41e97ab1",
+      "capture-09": "718d809a55775a87a6fcaaaf5c6121861b76096d9c6a77b35794a274271e4512",
+      "capture-10": "922f646570402c99ecabaa45a713135573f39ac0f1e850a28c354b75cd80a067",
+      "capture-11": "027419200c97428d1d7be78ad4bc4ebfb0b62dba60c2693c4a5c475c26ade7f3"
+    }
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "diffuse_null",
+      "seed": 673
+    },
+    "estimator": "joint_kernel",
+    "session_sha256": "2d119769f9e8d2fdfc98cad2a1ac9a6202cf498bc6d409909d18bc36850c8411",
+    "recordings": {
+      "capture-00": "a95448c4d74f009958cbe5056263fbcfeefcf47de202da4d59f188220e956362",
+      "capture-01": "75931be1b9343a83edad40ea8ff2dccf47c0854c2251c98d17b7a5e827203037",
+      "capture-02": "a8276029365c6a30f8f66afdaf87d3f83294add87fff82643df044f4794fd4ac",
+      "capture-03": "e5c94cecabc61bff963a80eb472553736d2a32fefa9d5717762f10ca9d946876",
+      "capture-04": "51b0127b2cdb86d22339e3030d788cee55bebf9991efaae767e866fb2ffb350f",
+      "capture-05": "90cc3c355f1477a0d1ea73a403f171734681cbf8863af8f03601f643ef0ce29e",
+      "capture-06": "84f58f1dc69507fa6494a1a3579875a92c6f93b79ef094f9cacbf2b4f0265451",
+      "capture-07": "42134d15de0170767f65ce6c81776bd233cb12e07b91cd65a24399b2e23c976e",
+      "capture-08": "d9b06f8df1118ca6c374381cfa4b4ee0f2a6f69184d07973a6215d0d41e97ab1",
+      "capture-09": "718d809a55775a87a6fcaaaf5c6121861b76096d9c6a77b35794a274271e4512",
+      "capture-10": "922f646570402c99ecabaa45a713135573f39ac0f1e850a28c354b75cd80a067",
+      "capture-11": "027419200c97428d1d7be78ad4bc4ebfb0b62dba60c2693c4a5c475c26ade7f3"
+    }
+  }
+]

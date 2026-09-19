@@ -1,0 +1,66 @@
+{
+  "twelve/joint_kernel/original": {
+    "cases": 5,
+    "true": 25,
+    "false": 0,
+    "missed": 0,
+    "runtime_s": 3.251742751002894,
+    "failed_cases": 0
+  },
+  "twelve/joint_kernel/held_guard": {
+    "cases": 5,
+    "true": 22,
+    "false": 0,
+    "missed": 3,
+    "runtime_s": 3.6968100819794927,
+    "failed_cases": 2
+  },
+  "stress/joint_kernel/original": {
+    "cases": 13,
+    "true": 32,
+    "false": 1,
+    "missed": 46,
+    "runtime_s": 27.94503166598588,
+    "failed_cases": 5
+  },
+  "stress/joint_kernel/held_guard": {
+    "cases": 13,
+    "true": 29,
+    "false": 0,
+    "missed": 49,
+    "runtime_s": 32.63531479099038,
+    "failed_cases": 4
+  },
+  "flair/matched_filter/original": {
+    "cases": 1,
+    "true": 0,
+    "false": 0,
+    "missed": 10,
+    "runtime_s": 3.350594125004136,
+    "failed_cases": 1
+  },
+  "flair/matched_filter/held_guard": {
+    "cases": 1,
+    "true": 0,
+    "false": 0,
+    "missed": 10,
+    "runtime_s": 4.24021008300042,
+    "failed_cases": 1
+  },
+  "flair/joint_kernel/original": {
+    "cases": 1,
+    "true": 0,
+    "false": 0,
+    "missed": 10,
+    "runtime_s": 6.660119250002026,
+    "failed_cases": 1
+  },
+  "flair/joint_kernel/held_guard": {
+    "cases": 1,
+    "true": 0,
+    "false": 0,
+    "missed": 10,
+    "runtime_s": 7.297606457999791,
+    "failed_cases": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "frozen_before_combination_execution": true,
+  "reason": "Earlier isolated joint extraction resolved more overlaps but produced one false null plane; unchanged guard removes that null but loses recording recall. Test their combination without tuning either.",
+  "class": "Exposed-case regression, not new blind validation",
+  "cases": "All frozen12-view andstress cases; FLAIR measured-RIR hybrid replay diagnostic",
+  "same_raw_not_same_extracted_candidates_across_estimators": true,
+  "same_extracted_candidates_within_each_guard_pair": true,
+  "guard_design_unchanged": true,
+  "first_order_certification": false,
+  "source_sha256": "0fcb4f3b194922d56b1ddb6c939e690d75b415e220734e611e2560c41b91175d"
+}

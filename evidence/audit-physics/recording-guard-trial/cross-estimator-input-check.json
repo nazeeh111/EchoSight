@@ -1,0 +1,156 @@
+[
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "twelve",
+    "case": {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "higher_order",
+      "seed": 601
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "higher_order",
+      "seed": 607
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "overlap",
+      "seed": 613
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "overlap",
+      "seed": 617
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "finite_panel",
+      "seed": 619
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "finite_panel",
+      "seed": 631
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "edge_scattering_surrogate",
+      "seed": 641
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "edge_scattering_surrogate",
+      "seed": 643
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "distributed_source",
+      "seed": 647
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "distributed_source",
+      "seed": 653
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "source_nonlinearity",
+      "seed": 659
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "nonaffine_clock",
+      "seed": 661
+    },
+    "identical_raw": true
+  },
+  {
+    "suite": "stress",
+    "case": {
+      "family": "diffuse_null",
+      "seed": 673
+    },
+    "identical_raw": true
+  }
+]

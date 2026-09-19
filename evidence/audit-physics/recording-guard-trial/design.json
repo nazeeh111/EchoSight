@@ -1,0 +1,24 @@
+{
+  "frozen_before_recording_execution": true,
+  "immutable_base_commit": "198d365f3b13f221ac258332eaaccdf96506a641",
+  "analytic_stage2_design_sha256": "92afc5780525b6c1a7f3c8dd6409eb2a6554c0120fc05bca19de9cdb5c67d857",
+  "same_raw_inputs": true,
+  "suites": [
+    "original_eight_all_cases",
+    "extended_twelve_all_cases",
+    "stress_all_cases",
+    "joint_kernel_diffuse_null673"
+  ],
+  "unchanged_acceptance": true,
+  "unavailable": "Fewer than12 valid independent nonempty views preserves original result with explicit unavailable/uncalibrated diagnostic, no p-value",
+  "higher_order": "Preserve both post-selection and original-core physical ambiguity, never resolve it through clutter test",
+  "source_paths": {
+    "joint_signals": "evidence/audit-physics/integration-trial/signals.py",
+    "joint_kernel": "evidence/audit-physics/integration-trial/joint_kernel.py"
+  },
+  "trial_sources": {
+    "run.py": "2510844de65649fb3d7eb9903460ea0e108ec3f6fba4516dffadabdd64b50316",
+    "build.py": "1e619b926fcb169d49d4b1e0a82ff9a439d32401b887ee80d7ae88146d4f98a6",
+    "guard_helpers.py": "37a9df805054f49cffac51dbf94c8c8d7dcbf26f55484cb8db1ccd4861e579b9"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "eight/matched_filter/original": {
+    "cases": 10,
+    "true": 27,
+    "false": 0,
+    "missed": 19,
+    "runtime_s": 2.2031682090164395,
+    "unavailable": 0,
+    "failed_cases": 0
+  },
+  "eight/matched_filter/held_guard": {
+    "cases": 10,
+    "true": 27,
+    "false": 0,
+    "missed": 19,
+    "runtime_s": 2.1452464160029194,
+    "unavailable": 10,
+    "failed_cases": 0
+  },
+  "twelve/matched_filter/original": {
+    "cases": 5,
+    "true": 25,
+    "false": 0,
+    "missed": 0,
+    "runtime_s": 2.1696142490036436,
+    "unavailable": 0,
+    "failed_cases": 0
+  },
+  "twelve/matched_filter/held_guard": {
+    "cases": 5,
+    "true": 17,
+    "false": 0,
+    "missed": 8,
+    "runtime_s": 2.861688959004823,
+    "unavailable": 0,
+    "failed_cases": 4
+  },
+  "stress/matched_filter/original": {
+    "cases": 13,
+    "true": 30,
+    "false": 0,
+    "missed": 48,
+    "runtime_s": 13.728210499008128,
+    "unavailable": 0,
+    "failed_cases": 4
+  },
+  "stress/matched_filter/held_guard": {
+    "cases": 13,
+    "true": 24,
+    "false": 0,
+    "missed": 54,
+    "runtime_s": 18.280803458990704,
+    "unavailable": 2,
+    "failed_cases": 4
+  },
+  "stress/joint_kernel/original": {
+    "cases": 1,
+    "true": 0,
+    "false": 1,
+    "missed": 0,
+    "runtime_s": 0.8251178749997052,
+    "unavailable": 0,
+    "failed_cases": 1
+  },
+  "stress/joint_kernel/held_guard": {
+    "cases": 1,
+    "true": 0,
+    "false": 0,
+    "missed": 0,
+    "runtime_s": 1.0519889589995728,
+    "unavailable": 0,
+    "failed_cases": 0
+  }
+}

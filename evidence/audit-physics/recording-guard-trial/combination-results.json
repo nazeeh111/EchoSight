@@ -1,0 +1,2263 @@
+{
+  "base_commit": "198d365f3b13f221ac258332eaaccdf96506a641",
+  "rows": [
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 211,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.6264149589987937,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-28fb804309c9",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.01705872374497165,
+            "offset_error_m": 0.0004140915303748844,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d0ec3e008d4b",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.03596016903399421,
+            "offset_error_m": 0.00040803649592646707,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ba882d513690",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.13001497012522223,
+            "offset_error_m": 0.005188934466497486,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b844fb705130",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.06177451338112703,
+            "offset_error_m": 0.001901630727895881,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-98fb18b4d727",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.013722380964399445,
+            "offset_error_m": 0.0004716443818444668,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-a31aa9b548c6",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.024963662761136738,
+            "offset_error_m": 0.0009914300722968505,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 211,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.7797492499958025,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-b844fb705130",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.11067696343808638,
+            "offset_error_m": 0.004693464493100604,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-28fb804309c9",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.011473780763602321,
+            "offset_error_m": 0.000414325550941059,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-98fb18b4d727",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.08762818241171039,
+            "offset_error_m": 0.0033880973598575553,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ba882d513690",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.16162202683838062,
+            "offset_error_m": 0.006090995881266714,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-a31aa9b548c6",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.031092588215643247,
+            "offset_error_m": 0.0003941166980738764,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d0ec3e008d4b",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.047069596467675126,
+            "offset_error_m": 0.0006994536942874774,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 223,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.6252318330007256,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-8b7880c94189",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.014483237455762682,
+            "offset_error_m": 0.0002891031340820646,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-679a45917e9d",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.009960518925596386,
+            "offset_error_m": 0.0005856678706530616,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0db0c1f04c4b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.01612857925133422,
+            "offset_error_m": 0.00013350777112552947,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dba0dbd9a0e0",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.04331240647527774,
+            "offset_error_m": 0.00033960010112196525,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa8b49fffedb",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.028946944913740214,
+            "offset_error_m": 0.0017800813136270577,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-23a9eacf534d",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.03431699985435729,
+            "offset_error_m": 0.002294318530690619,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 223,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.7957382079985109,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-0db0c1f04c4b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.022322650381960213,
+            "offset_error_m": 0.00030724430076567444,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8b7880c94189",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.025845562600953328,
+            "offset_error_m": 0.0006323180277625782,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-679a45917e9d",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.02147871409268284,
+            "offset_error_m": 0.0011138156623387019,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dba0dbd9a0e0",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.05694570340401088,
+            "offset_error_m": 0.00047523501707593356,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa8b49fffedb",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.03694820522802537,
+            "offset_error_m": 0.0023733916188533044,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-23a9eacf534d",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.013659053598279087,
+            "offset_error_m": 8.677636630243697e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 227,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.6243312500009779,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-fa23d7df2303",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.005292668096802525,
+            "offset_error_m": 0.0002315094949963136,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-64ec8cb9c6ed",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.034562427699367904,
+            "offset_error_m": 0.00020218853008739922,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-41ee14828ebb",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.021978054298017715,
+            "offset_error_m": 0.0005433309372246953,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7416236d00bc",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03126251386545963,
+            "offset_error_m": 0.00012240567717380912,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-62a587f812bc",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.0037164663857071796,
+            "offset_error_m": 0.00018324432069421272,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-36a1244358b5",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.05255532100217341,
+            "offset_error_m": 0.0008609505927608119,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "room",
+        "seed": 227,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.7661402909943718,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-fa23d7df2303",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.00010915622112572946,
+            "offset_error_m": 2.3602224617011326e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-64ec8cb9c6ed",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.029363032691398804,
+            "offset_error_m": 0.0003749933765913452,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-41ee14828ebb",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.01786248582441169,
+            "offset_error_m": 0.00048641207194766167,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7416236d00bc",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03618441377477978,
+            "offset_error_m": 0.00013806278805272854,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-62a587f812bc",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.010217983236193646,
+            "offset_error_m": 0.0005204834298016599,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 5, required 6",
+        "minimum_horizontal_surfaces: observed 1, required 2"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "clutter",
+        "seed": 229,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 0.3354785840056138,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "no_confirmed_model_beats_null"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "clutter",
+        "seed": 229,
+        "capture_count": 12,
+        "required": true
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "no_result",
+      "runtime_s": 0.3761773749938584,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "reflector",
+        "seed": 233,
+        "capture_count": 12,
+        "required": false
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 1.0402861249967827,
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-547da4e5cd97",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.03768076328545988,
+            "offset_error_m": 0.001106812561595838,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1d55a7e80428",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.04741639741227971,
+            "offset_error_m": 0.0005738255269404597,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-292947d47443",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.16544137405663292,
+            "offset_error_m": 0.0007987497664938559,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8067adef5ae",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.1356068632251784,
+            "offset_error_m": 0.0026900918524237483,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-4106360e7349",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.1484147880932549,
+            "offset_error_m": 0.004825951054615035,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-fb6fb1b66af2",
+            "truth_id": "truth-tilted-reflector",
+            "normal_error_deg": 0.005307051973684194,
+            "offset_error_m": 3.1224551547914814e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b4e0caab1073",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.29889689672547437,
+            "offset_error_m": 0.009445714188402446,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "twelve",
+      "case": {
+        "scenario": "reflector",
+        "seed": 233,
+        "capture_count": 12,
+        "required": false
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.9790049579969491,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 7,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 2,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "matches": [
+          {
+            "predicted_id": "reflector-b8067adef5ae",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.16224732828170732,
+            "offset_error_m": 0.0033876304832904935,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-547da4e5cd97",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.07492469738376512,
+            "offset_error_m": 0.0017697822836826305,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-1d55a7e80428",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.061648242350897726,
+            "offset_error_m": 0.0011243712244701583,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-292947d47443",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.16540021338420416,
+            "offset_error_m": 0.00042289385853866435,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-c3949a64f16b",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.055410224835134615,
+            "offset_error_m": 0.003106168556282546,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 5, required 7"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "higher_order",
+        "seed": 601
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 4.228292416999466,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 4",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "higher_order",
+        "seed": 601
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 5.047006291999423,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 4",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "higher_order",
+        "seed": 607
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 2.9259358329945826,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 4",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "higher_order",
+        "seed": 607
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 3.005540167003346,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 4",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "overlap",
+        "seed": 613
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.8563184579979861,
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-8c5f0e210234",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.004849159759038392,
+            "offset_error_m": 2.806240895703027e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa6584888670",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.0031551661094600105,
+            "offset_error_m": 1.578510825006596e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-cbf0e4dbc20a",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.005732032417108223,
+            "offset_error_m": 5.469487005527185e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bd9ed59c4f37",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.02273837065578049,
+            "offset_error_m": 0.00020276747887981728,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8e702a23fb28",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.138153621745862,
+            "offset_error_m": 0.0009134771982464152,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-e05d22797abd",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.01380522714138582,
+            "offset_error_m": 2.4214921912069087e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-94961c857330",
+            "truth_id": "near-ceiling-panel",
+            "normal_error_deg": 1.0740517450649167,
+            "offset_error_m": 0.0027855180207998487,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": false
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "overlap",
+        "seed": 613
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 1.082004332994984,
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-6e9a275adae6",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.010712921102620699,
+            "offset_error_m": 9.230419258887679e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8c5f0e210234",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.0022129220005908667,
+            "offset_error_m": 1.9415627834140636e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-aa6584888670",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.002292630250551586,
+            "offset_error_m": 4.215752427638719e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8e702a23fb28",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.00650584706318766,
+            "offset_error_m": 1.724521356916142e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bd9ed59c4f37",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.012685762701851332,
+            "offset_error_m": 1.0112502364378884e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-53db18bb8fdf",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.004285507271969903,
+            "offset_error_m": 1.2768136272045538e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-94961c857330",
+            "truth_id": "near-ceiling-panel",
+            "normal_error_deg": 0.023857921138681182,
+            "offset_error_m": 0.00015096524819169233,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "overlap",
+        "seed": 617
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.8761456669963081,
+      "metrics": {
+        "predicted_count": 7,
+        "truth_count": 7,
+        "matched_count": 7,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-dde6e1cd32a9",
+            "truth_id": "near-ceiling-panel",
+            "normal_error_deg": 0.01588731127120619,
+            "offset_error_m": 0.034576822618773484,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6f5e2ea7c880",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.02245284640183423,
+            "offset_error_m": 0.0015370246669941245,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2a2ccdf921cd",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.05067008727243083,
+            "offset_error_m": 0.0016993858608889134,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-5d7025240b15",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.0046066051558120834,
+            "offset_error_m": 0.0003474999491475117,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0e85cbb25b1c",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.03056490525167634,
+            "offset_error_m": 0.0002303933433909222,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bcc92399a254",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.4630908210345938,
+            "offset_error_m": 0.043282773646316386,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-67fe59ba45ef",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 1.8391727204334514,
+            "offset_error_m": 0.04472780169869672,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": false
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "overlap",
+        "seed": 617
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 1.0683832919967244,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 7,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 2,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "matches": [
+          {
+            "predicted_id": "reflector-6f5e2ea7c880",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.01877509333913769,
+            "offset_error_m": 0.0014959647091594697,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9af9be44cfec",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.012535796735755816,
+            "offset_error_m": 0.00047194329607158636,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2a2ccdf921cd",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.055371678106235174,
+            "offset_error_m": 0.0022290768138581996,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-5d7025240b15",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.00261013908040243,
+            "offset_error_m": 3.154107138492179e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-0e85cbb25b1c",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.03403132976003519,
+            "offset_error_m": 8.266464917028316e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "finite_panel",
+        "seed": 619
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.7704461249959422,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 7,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "matches": [
+          {
+            "predicted_id": "reflector-233cfa8b862c",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.012809998476370594,
+            "offset_error_m": 0.00019561304188897566,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7118d4508141",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.02914106411712242,
+            "offset_error_m": 0.00031303811626348654,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d12df35ba00d",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.08184494622186349,
+            "offset_error_m": 0.0016720254393764455,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-f5adbe61d6ef",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.18821303566475597,
+            "offset_error_m": 0.015523199422193379,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-82941f398f36",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.08449384325830935,
+            "offset_error_m": 0.005557501573488555,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bff7f712a024",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 1.0225659099426374,
+            "offset_error_m": 0.06432893024647779,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "finite_panel",
+        "seed": 619
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.8535460829953081,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 7,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 2,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "matches": [
+          {
+            "predicted_id": "reflector-233cfa8b862c",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.10360067906293874,
+            "offset_error_m": 0.005331635618857966,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7118d4508141",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.10506245523914808,
+            "offset_error_m": 0.003308173519911861,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-d12df35ba00d",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.0650879783705904,
+            "offset_error_m": 0.0047065390584195566,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-72cfe9fc0bc6",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.4500633253798011,
+            "offset_error_m": 0.036823602162150415,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-82941f398f36",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.1430433680996387,
+            "offset_error_m": 0.0003740222070214294,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "finite_panel",
+        "seed": 631
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.6719943749994854,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 7,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "matches": [
+          {
+            "predicted_id": "reflector-9c1e19e0dbd3",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.05755358260160539,
+            "offset_error_m": 0.001467183702401842,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ad1cefb1464e",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.029505173551716196,
+            "offset_error_m": 0.000906649797001835,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-51014b4d18eb",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.07260736326575808,
+            "offset_error_m": 0.002966952771821796,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-72458b768143",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.010582918108315714,
+            "offset_error_m": 0.0007012574022260409,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-51fabcc36f57",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.18393525592559806,
+            "offset_error_m": 0.005211735045155486,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-e23d4650bfb2",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.06945487101965635,
+            "offset_error_m": 0.003195061072787553,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "finite_panel",
+        "seed": 631
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.8495527080012835,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 7,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "matches": [
+          {
+            "predicted_id": "reflector-9c1e19e0dbd3",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.057374656453575666,
+            "offset_error_m": 0.00170276877503861,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-ad1cefb1464e",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.027311578397356463,
+            "offset_error_m": 0.0007996945927037924,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-51014b4d18eb",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.06442372662842871,
+            "offset_error_m": 0.002554402372022313,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-51fabcc36f57",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.039093433268573057,
+            "offset_error_m": 0.00014256738165663307,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-72458b768143",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.004539241333175093,
+            "offset_error_m": 0.00015457952151387566,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-e23d4650bfb2",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.07381523633711538,
+            "offset_error_m": 0.003286153824277882,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "edge_scattering_surrogate",
+        "seed": 641
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 3.4664629160033655,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 3",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "edge_scattering_surrogate",
+        "seed": 641
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 3.802636291999079,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 3",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "proposal_budget_reached",
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "edge_scattering_surrogate",
+        "seed": 643
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 3.497127458002069,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 3",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "edge_scattering_surrogate",
+        "seed": 643
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 4.206185415998334,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: 0 versus 3",
+        "minimum_horizontal_surfaces: 0 versus 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "distributed_source",
+        "seed": 647
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 4.4359860839977046,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "distributed_source",
+        "seed": 647
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 4.613282917001925,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "distributed_source",
+        "seed": 653
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 4.743708333000541,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "distributed_source",
+        "seed": 653
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 6.39809070800402,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "source_nonlinearity",
+        "seed": 659
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.5194343749972177,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-e8d98afa7cf9",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.016303402420476787,
+            "offset_error_m": 0.0006014675377938872,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-25e751780694",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.026255845730851803,
+            "offset_error_m": 0.0012324905210459036,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-82f882a7581a",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.029017010213422095,
+            "offset_error_m": 0.0009595791951482191,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-34caac74f13a",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.02754228661638261,
+            "offset_error_m": 0.0014562049179730474,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7f106cf531ec",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.03210198924682673,
+            "offset_error_m": 0.0012812310701644236,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dca823dbd13d",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.013764175785522477,
+            "offset_error_m": 0.00048627619127206145,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 3
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "source_nonlinearity",
+        "seed": 659
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "partial",
+      "runtime_s": 0.5230823750025593,
+      "metrics": {
+        "predicted_count": 6,
+        "truth_count": 6,
+        "matched_count": 6,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-e8d98afa7cf9",
+            "truth_id": "wall-2-1",
+            "normal_error_deg": 0.016303402420476787,
+            "offset_error_m": 0.0006014675377938872,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-25e751780694",
+            "truth_id": "wall-2-0",
+            "normal_error_deg": 0.026255845730851803,
+            "offset_error_m": 0.0012324905210459036,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-82f882a7581a",
+            "truth_id": "wall-1-0",
+            "normal_error_deg": 0.029017010213422095,
+            "offset_error_m": 0.0009595791951482191,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-34caac74f13a",
+            "truth_id": "wall-0-0",
+            "normal_error_deg": 0.02754228661638261,
+            "offset_error_m": 0.0014562049179730474,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-7f106cf531ec",
+            "truth_id": "wall-1-1",
+            "normal_error_deg": 0.03210198924682673,
+            "offset_error_m": 0.0012812310701644236,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-dca823dbd13d",
+            "truth_id": "wall-0-1",
+            "normal_error_deg": 0.013764175785522477,
+            "offset_error_m": 0.00048627619127206145,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "failures": [],
+      "guard": "unavailable",
+      "guard_reason": "requires_twelve_valid_independent_views",
+      "diagnostics": [
+        "refinement_budget_reached",
+        "held_guard_unavailable_result_is_original_uncalibrated_mapper"
+      ],
+      "rejected_captures": 3
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "nonaffine_clock",
+        "seed": 661
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "no_result",
+      "runtime_s": 0.11608291700395057,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ],
+      "rejected_captures": 12
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "nonaffine_clock",
+        "seed": 661
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "no_result",
+      "runtime_s": 0.11454687499644933,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [],
+      "guard": "unavailable",
+      "guard_reason": "insufficient_valid_independent_views",
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four",
+        "held_guard_unavailable_result_is_original_uncalibrated_mapper"
+      ],
+      "rejected_captures": 12
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "diffuse_null",
+        "seed": 673
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "partial",
+      "runtime_s": 0.8370967079972615,
+      "metrics": {
+        "predicted_count": 1,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 1,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": 0.0,
+        "recall": null,
+        "matches": []
+      },
+      "failures": [
+        "maximum_false_surfaces: 1 versus 0",
+        "maximum_definitive_surfaces: 1 versus 0"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "stress",
+      "case": {
+        "family": "diffuse_null",
+        "seed": 673
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "no_result",
+      "runtime_s": 1.0714573329969426,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "failures": [],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "no_confirmed_model_beats_null"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "flair",
+      "case": {
+        "family": "flair",
+        "seed": 0
+      },
+      "estimator": "matched_filter",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 3.350594125004136,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 3",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "flair",
+      "case": {
+        "family": "flair",
+        "seed": 0
+      },
+      "estimator": "matched_filter",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 4.24021008300042,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 3",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "flair",
+      "case": {
+        "family": "flair",
+        "seed": 0
+      },
+      "estimator": "joint_kernel",
+      "method": "original",
+      "status": "ambiguous",
+      "runtime_s": 6.660119250002026,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 3",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "guard": null,
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "rejected_captures": 0
+    },
+    {
+      "suite": "flair",
+      "case": {
+        "family": "flair",
+        "seed": 0
+      },
+      "estimator": "joint_kernel",
+      "method": "held_guard",
+      "status": "ambiguous",
+      "runtime_s": 7.297606457999791,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 10,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 10,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "failures": [
+        "minimum_matched_surfaces: observed 0, required 3",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "guard": "evaluated",
+      "guard_reason": null,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "baseline_first_order_vs_higher_order_ambiguity_preserved"
+      ],
+      "rejected_captures": 0
+    }
+  ],
+  "source_unchanged": true,
+  "source_sha256": {
+    "snapshot/echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "snapshot/echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "snapshot/echosight/api.py": "f785387ade6370a633b23b00b88f9ac4cc4514bf34cb6fabbb27477d540b3828",
+    "snapshot/echosight/calibration.py": "b5c48b5000fc2b6abaa1eeba3e9dae11bbc5d2afcd26355c4bc20275d1c34aef",
+    "snapshot/echosight/cli.py": "8d9b7ecbd693e99313e34002eaf16e2ba821c6a252c28094586581473ef1f584",
+    "snapshot/echosight/controlled.py": "6cfeaa4c1a78ffdf04be8fd76543d792022077bdf99dffce76d528b7bca3e503",
+    "snapshot/echosight/evolution.py": "ec3afa7a4526ee3b319de6c6cd9cf9c0f65c03a73bfc04ebe81b4b9bfecba01a",
+    "snapshot/echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "snapshot/echosight/guard_inference.py": "6870983a403fe7cfe72ea9d12aab3103e0ee4076215bd4aaa4b43f885f3db65f",
+    "snapshot/echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+    "snapshot/echosight/joint_kernel.py": "ee4b6e80c5393acbfb9fbb906536e3eb6720614a035bbe3720ca1dc9637b3299",
+    "snapshot/echosight/joint_trial_signals.py": "5a208c9ba9a7d564f11f791b99b28dd5e5c4305cff47e0af759ff6889b07a1a4",
+    "snapshot/echosight/multisource.py": "863b302ff4cba819ee6035cffa05aab261d1163299997f6517d4541808c7aaba",
+    "snapshot/echosight/pipeline.py": "3c12f74d8579f1fecbe177bf3bf967adb5ac684a7e55002c1e816c8c1dfb1ab2",
+    "snapshot/echosight/signals.py": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+    "snapshot/echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "snapshot/echosight/storage.py": "c379aa424c329caf9ffd0d36386fd179c5722e2c2bff8c9feb5f03e0e7671c59"
+  },
+  "same_raw_and_extracted_observations": true
+}
