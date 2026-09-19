@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.metadata
 import json
 import os
+import platform
 import tempfile
 import time
 from pathlib import Path
@@ -94,6 +96,8 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         observation.update({"capture_id": capture_id,
                             "receiver_position_m": capture["receiver_position_m"],
                             "receiver_position_std_m": capture.get("receiver_position_std_m", 0.01),
+                            "input_diagnostics": capture.get("diagnostics", []),
+                            "input_format": capture.get("format", "unspecified_lossless"),
                             "provenance": capture.get("provenance", "measured")})
         observations.append(observation)
         progress(0.65 * (index + 1) / max(len(captures), 1), f"Processed capture {capture_id}")
@@ -128,8 +132,17 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
                        "coordinates": "right-handed, metres, z up",
                        "poses": "supplied acoustic-center positions",
                        "geometry": "inferred from recording-derived excess delays"})
+    implementation = hashlib.sha256()
+    for module in sorted(Path(__file__).parent.glob("*.py")):
+        implementation.update(module.name.encode())
+        implementation.update(module.read_bytes())
+    provenance["implementation_sha256"] = implementation.hexdigest()
+    provenance["runtime_versions"] = {"python": platform.python_version(),
+        "numpy": importlib.metadata.version("numpy"), "scipy": importlib.metadata.version("scipy")}
     fingerprint = json.dumps({"session": fitting_session, "recordings": fingerprints,
-                              "method": method, "software": __version__}, sort_keys=True, allow_nan=False)
+                              "method": method, "software": __version__,
+                              "implementation": provenance["implementation_sha256"],
+                              "runtime": provenance["runtime_versions"]}, sort_keys=True, allow_nan=False)
     result["result_id"] = "result-" + hashlib.sha256(fingerprint.encode()).hexdigest()[:20]
     result["runtime_s"] = time.perf_counter() - start
     progress(1.0, result.get("status", "complete"))

@@ -22,12 +22,16 @@ class PipelineTests(unittest.TestCase):
             session = load_session(path)
             # Deliberately bogus annotations must never influence inference.
             session["truth"] = {"room": [999,999,999]}
+            session["captures"][0]["diagnostics"] = ["sample_grid_unverified"]
             result = process_session(session)
             self.assertGreaterEqual(len(result["surfaces"]), 4)
             self.assertTrue(any(abs(p["normal"][2]) > .9 for p in result["surfaces"]))
             self.assertNotIn("truth", result["acquisition"])
             self.assertEqual(result["provenance"]["evidence_classes"], ["simulated"])
             self.assertFalse(result["provenance"]["physical_validation"])
+            self.assertEqual(len(result["provenance"]["implementation_sha256"]),64)
+            self.assertIn("numpy",result["provenance"]["runtime_versions"])
+            self.assertIn("sample_grid_unverified",result["observations"][0]["input_diagnostics"])
             target = save_result(result, Path(temp) / "result.json")
             self.assertEqual(result, json.loads(target.read_text()))
 

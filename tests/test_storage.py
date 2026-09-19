@@ -65,6 +65,98 @@ class StorageTests(unittest.TestCase):
                 self.assertEqual(raw.read_bytes(), wav_bytes())
                 self.assertEqual(loaded['captures'][0]['provenance'], 'measured')
                 self.assertEqual(loaded['replay']['kind'], 'archive_reload')
+    def test_maximum_response_shape_exports_and_reloads(self):
+        # 32 captures × (96 kHz × (.15 s echo window + two .004 s margins) + 1).
+        values = [-1.2345678901234567e-123] * 15169
+        expected = {'status': 'no_result', 'observations': [
+            {'capture_id': f'c{i}', 'response': {'values': values}} for i in range(32)]}
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            jid = store.start_job(sid, lambda session, **kw: expected)['job_id']
+            deadline = time.monotonic() + 10
+            while time.monotonic() < deadline:
+                job = store.get_job(jid)
+                if job['status'] in ('completed', 'failed'): break
+                time.sleep(.02)
+            self.assertEqual(job['status'], 'completed', job)
+            archive = store.export_session(sid)
+            with SessionStore(self.root / 'replay') as replay:
+                loaded = replay.import_archive(archive)
+                with self.assertRaises(KeyError): replay.get_result(loaded['session_id'])
+                replay_archive = replay.export_session(loaded['session_id'])
+                with zipfile.ZipFile(replay_archive) as z:
+                    self.assertNotIn('result.json', z.namelist())
+                    actual = json.loads(z.read('archived-result.json'))
+                self.assertEqual(actual['observations'], expected['observations'])
+                self.assertTrue(loaded['replay']['archived_result']['requires_recomputation'])
+    def test_foreign_archived_geometry_is_quarantined_until_recomputed(self):
+        with SessionStore(self.root / 'store') as store:
+            session = store.create_session({'source_position_m': [0, 0, 1]})
+            store.add_recording(session['session_id'], self.wav, {'capture_id': 'mic1'})
+            session = store.public_session(session['session_id'])
+            original = store.export_session(session['session_id'])
+        forged = {'schema_version': '2.0', 'session_id': 'DIFFERENT_SESSION',
+                  'session_revision': 99, 'status': 'ok', 'surfaces': [{'surface_id': 'fake'}],
+                  'hypotheses': [], 'diagnostics': [], 'recording_manifest': [],
+                  'acquisition': {}, 'provenance': {'physical_validation': True, 'evidence_classes': ['measured']}}
+        payload = json.dumps(forged).encode()
+        bad = self.root / 'forged.zip'
+        with zipfile.ZipFile(original) as source, zipfile.ZipFile(bad, 'w') as target:
+            for name in source.namelist(): target.writestr(name, source.read(name))
+            target.writestr('result.json', payload)
+        with SessionStore(self.root / 'replay') as replay:
+            loaded = replay.import_archive(bad)
+            sid = loaded['session_id']
+            with self.assertRaises(KeyError): replay.get_result(sid)
+            evidence = loaded['replay']['archived_result']
+            self.assertEqual(evidence['status'], 'quarantined_unverified')
+            self.assertTrue({'schema_mismatch', 'session_mismatch', 'revision_mismatch',
+                'recording_manifest_mismatch', 'acquisition_mismatch',
+                'unsupported_physical_validation_claim'} <= set(evidence['binding_issues']))
+            exported = replay.export_session(sid)
+            with zipfile.ZipFile(exported) as z:
+                self.assertEqual(z.read('archived-result.json'), payload)
+                self.assertNotIn('result.json', z.namelist())
+            jid = replay.start_job(sid, lambda s, **kw: {'schema_version': '1.0', 'session_id': s['session_id'],
+                'status': 'no_result', 'surfaces': [], 'provenance': {'physical_validation': False}})['job_id']
+            for _ in range(100):
+                if replay.get_job(jid)['status'] == 'completed': break
+                time.sleep(.01)
+            result = replay.get_result(sid)
+            self.assertEqual(result['surfaces'], [])
+            self.assertEqual(result['computation_origin'], 'local_processing')
+            self.assertFalse(result['provenance']['physical_validation'])
+    def test_result_budget_does_not_expand_raw_session_budget(self):
+        from unittest.mock import patch
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            store.add_recording(sid, self.wav, {'capture_id': 'one'})
+            source_path = store.export_session(sid)
+            archive = self.root / 'two_captures.zip'
+            with zipfile.ZipFile(source_path) as source, zipfile.ZipFile(archive, 'w') as target:
+                for name in source.namelist():
+                    raw = source.read(name)
+                    if name == 'session.json':
+                        session = json.loads(raw)
+                        session['captures'].append(dict(session['captures'][0], capture_id='two'))
+                        raw = json.dumps(session).encode()
+                    target.writestr(name, raw)
+        with SessionStore(self.root / 'replay') as replay:
+            with patch('echosight.storage.MAX_ARCHIVE_BYTES', len(wav_bytes())):
+                with self.assertRaisesRegex(ValueError, 'recording byte limit'):
+                    replay.import_archive(archive)
+    def test_oversized_result_archive_rejected_before_publication(self):
+        from echosight.storage import MAX_RESULT_BYTES
+        with SessionStore(self.root / 'store') as store:
+            session = store.create_session({})
+        archive = self.root / 'oversized.zip'
+        with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED) as z:
+            z.writestr('session.json', json.dumps(session))
+            z.writestr('result.json', b' ' * (MAX_RESULT_BYTES + 1))
+        with SessionStore(self.root / 'replay') as replay:
+            with self.assertRaisesRegex(ValueError, 'result metadata too large'):
+                replay.import_archive(archive)
+            with self.assertRaises(KeyError): replay.get_session(session['session_id'])
     def test_path_injection_and_zip_traversal(self):
         with SessionStore(self.root / 'store') as store:
             with self.assertRaises(ValueError): store.create_session({'captures': [{'capture_id': 'x', 'recording_path': '/etc/passwd'}]})

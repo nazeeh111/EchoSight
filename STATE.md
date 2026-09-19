@@ -37,3 +37,9 @@ Scientific changes: per-support receiver-plane mirror checks, explicit unresolve
 38 focused signal/inference/CLI/pipeline/frontend/evaluation tests pass. Assembled59-test run exposed one real archive limit error:12-capture result JSON exceeds the1MiB session metadata bound. Backend specialist is fixing a distinct bounded result size; actual HTTP-to-geometry succeeded before reload. This remains explicitly unresolved at this checkpoint, so no final completion claim.
 
 Next: fix/recheck full HTTP export/replay; independent assembled-commit review; clean checkout setup/tests/demos/frozen regression; publish final verified default branch and handoff. Selected user model/effort unchanged. All scientific workers have completed; backend limit fix active. No physical device measurements have occurred.
+
+## Checkpoint 4: assembled review findings resolved in code
+
+Independent immutable-commit review of a9fc6b established3 P2 findings and no P1: origin-dependent near-parallel dimension, untrusted archive-result publication, and ordinary result exceeding reload size. Report: evidence/independent-review-a9.md. Corrections now use a physically anchored measurement line with conservative uncertainty; quarantine imported computations pending recomputation; and bound result/compare/archive metadata separately from session/raw limits. Added explicit CLI export/replay, imported-recording checksum checks, exact implementation/runtime fingerprints, and importer diagnostics in results.
+
+Full assembled suite:67 tests passed with localhost permission (work/checkpoint-4-final-tests.log); real12-recording HTTP upload→geometry→export→quarantine→recompute preserved exact geometry. Independent follow-up at this checkpoint and final clean-checkout evidence remain pending. No additional mapping features are planned before those gates. Code writers are done; reviewer follow-up and coordinator verification active.

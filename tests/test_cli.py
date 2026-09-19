@@ -21,6 +21,19 @@ class CLITests(unittest.TestCase):
             self.assertEqual(metadata["period_s"],1.)
             self.assertEqual(metadata["playback_wav_sha256"],hashlib.sha256((p/"probe.wav").read_bytes()).hexdigest())
 
+    def test_export_and_replay_are_real_processing_commands(self):
+        from echosight.cli import main
+        from echosight.simulation import simulate_session
+        with tempfile.TemporaryDirectory() as temp, contextlib.redirect_stdout(io.StringIO()):
+            p=Path(temp);session=simulate_session(p/"input",seed=1,capture_count=12)
+            archive=p/"survey.zip"
+            self.assertEqual(main(["export",str(session),"--output",str(archive)]),0)
+            self.assertTrue(archive.is_file())
+            self.assertEqual(main(["replay",str(archive),"--store",str(p/"replay"),"--output",str(p/"result.json")]),0)
+            result=json.loads((p/"result.json").read_text())
+            self.assertEqual(len(result["surfaces"]),6)
+            self.assertEqual(result["provenance"]["evidence_classes"],["simulated"])
+
     def test_inspect_prints_result_evidence_summary(self):
         from echosight.cli import main
         with tempfile.TemporaryDirectory() as temp:

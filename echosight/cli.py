@@ -6,7 +6,9 @@ import hashlib
 import json
 import signal
 import sys
+import tempfile
 import threading
+import time
 from pathlib import Path
 
 from .pipeline import process_session, save_result
@@ -20,6 +22,20 @@ def _summary(result):
             "provenance": result.get("provenance"), "diagnostics": result.get("diagnostics", [])}
 
 
+def _run_stored_session(store, session_id):
+    job = store.start_job(session_id, process_session)
+    try:
+        while job["status"] in ("queued", "running"):
+            time.sleep(.02)
+            job = store.get_job(job["job_id"])
+    except KeyboardInterrupt:
+        store.cancel_job(job["job_id"])
+        raise
+    if job["status"] != "completed":
+        raise ValueError(f"processing {job['status']}: {job.get('error', {})}")
+    return store.get_result(session_id)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="EchoSight acoustic backend")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -31,7 +47,7 @@ def main(argv=None):
     command.add_argument("directory", type=Path)
     command.add_argument("--scenario", default="room")
     command.add_argument("--seed", type=int, default=1)
-    command.add_argument("--captures", type=int, default=8)
+    command.add_argument("--captures", type=int, default=None)
     command = sub.add_parser("process", help="infer structure from a recording session")
     command.add_argument("session", type=Path)
     command.add_argument("--output", type=Path, required=True)
@@ -40,7 +56,7 @@ def main(argv=None):
     command.add_argument("directory", type=Path)
     command.add_argument("--scenario", default="room")
     command.add_argument("--seed", type=int, default=1)
-    command.add_argument("--captures", type=int, default=8)
+    command.add_argument("--captures", type=int, default=None)
     command = sub.add_parser("refine-demo", help="show what additional independent recording positions establish")
     command.add_argument("directory", type=Path)
     command.add_argument("--seed", type=int, default=1)
@@ -51,6 +67,13 @@ def main(argv=None):
     command = sub.add_parser("compare", help="explain changes in inference from two saved results")
     command.add_argument("previous", type=Path)
     command.add_argument("current", type=Path)
+    command.add_argument("--output", type=Path, required=True)
+    command = sub.add_parser("export", help="import and process a local recording session, then archive originals and result")
+    command.add_argument("session", type=Path)
+    command.add_argument("--output", type=Path, required=True)
+    command = sub.add_parser("replay", help="reload an archive and recompute geometry from original recordings")
+    command.add_argument("archive", type=Path)
+    command.add_argument("--store", type=Path, required=True)
     command.add_argument("--output", type=Path, required=True)
     command = sub.add_parser("serve", help="run the local HTTP API")
     command.add_argument("--root", type=Path, default=Path("work/store"))
@@ -112,6 +135,29 @@ def main(argv=None):
             save_result(after, args.directory / "result.json")
             save_result(comparison, args.directory / "comparison.json")
             print(json.dumps({"initial": _summary(before), "refined": _summary(after), "comparison": comparison}, indent=2, allow_nan=False))
+        elif args.command == "export":
+            from .storage import SessionStore, load_session
+            source = load_session(args.session)
+            with tempfile.TemporaryDirectory(prefix="echosight-export-") as temp, SessionStore(temp) as store:
+                session = store.create_session(dict(source, captures=[]))
+                for capture in source["captures"]:
+                    path = Path(capture["recording_path"])
+                    if path.stat().st_size > 64 * 1024 * 1024:
+                        raise ValueError("recording exceeds 64 MiB")
+                    if capture.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != capture["sha256"]:
+                        raise ValueError("recording checksum differs from manifest")
+                    metadata = {key: capture[key] for key in ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance", "device_id", "notes") if key in capture}
+                    store.add_recording(session["session_id"], path, metadata)
+                _run_stored_session(store, session["session_id"])
+                store.export_session(session["session_id"], args.output)
+            print(args.output)
+        elif args.command == "replay":
+            from .storage import SessionStore
+            with SessionStore(args.store) as store:
+                session = store.import_archive(args.archive)
+                result = _run_stored_session(store, session["session_id"])
+                save_result(result, args.output)
+            print(json.dumps(_summary(result), indent=2, allow_nan=False))
         elif args.command == "serve":
             from .api import create_server
             server = create_server(args.root, host=args.host, port=args.port, processor=process_session)
@@ -123,7 +169,10 @@ def main(argv=None):
             finally:
                 server.server_close()
         return 0
-    except (ValueError, OSError, KeyError, TypeError) as exc:
+    except KeyboardInterrupt:
+        print("EchoSight cancelled", file=sys.stderr)
+        return 130
+    except (ValueError, OSError, KeyError, TypeError, RuntimeError) as exc:
         print(f"EchoSight error: {exc}", file=sys.stderr)
         return 2
 

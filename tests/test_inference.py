@@ -93,3 +93,38 @@ class InferenceTests(unittest.TestCase):
         self.assertEqual(guidance['suggested_position_m'],elevated)
         self.assertGreater(guidance['score_sigma'],10)
         self.assertLess(guidance['candidates'][1]['score_sigma'],1e-8)
+
+    def test_near_parallel_dimension_translation_invariant(self):
+        """A two-degree pair has no unique global distance; use a stated line."""
+        import copy
+        session,observations,_=fixture()
+        source=np.asarray(session['source_position_m']);angle=np.deg2rad(2.)
+        planes=[(np.array([1.,0.,0.]),0.),(np.array([np.cos(angle),np.sin(angle),0.]),4.7)]
+        for row in observations:
+            row['candidates']=[dict(candidate_id=f"{row['capture_id']}-{j}",delay_s=float(excess_delay(source,row['receiver_position_m'],image_source(source,n,d),343)),delay_std_s=1e-5,amplitude=1.) for j,(n,d) in enumerate(planes)]
+        original=infer_scene(session,observations)
+        shifted_session=copy.deepcopy(session);shifted_observations=copy.deepcopy(observations)
+        shift=np.array([17.,100.,-31.])
+        shifted_session['source_position_m']=(source+shift).tolist()
+        for row in shifted_observations:row['receiver_position_m']=(np.array(row['receiver_position_m'])+shift).tolist()
+        shifted=infer_scene(shifted_session,shifted_observations)
+        self.assertEqual(len(original['dimensions']),1)
+        a,b=original['dimensions'][0],shifted['dimensions'][0]
+        self.assertAlmostEqual(a['value_m'],b['value_m'],places=7)
+        self.assertAlmostEqual(a['std_m'],b['std_m'],places=7)
+        np.testing.assert_allclose(a['reference_point_m'],source,atol=1e-8)
+        np.testing.assert_allclose(np.array(b['intersection_points_m'])-shift,a['intersection_points_m'],atol=1e-7)
+        mean=(planes[0][0]+planes[1][0]);mean/=np.linalg.norm(mean)
+        distances=[(d-n@source)/(n@mean) for n,d in planes]
+        self.assertAlmostEqual(a['value_m'],abs(distances[1]-distances[0]),places=7)
+        reference_sensitivity=planes[0][0]/(planes[0][0]@mean)-planes[1][0]/(planes[1][0]@mean)
+        self.assertAlmostEqual(a['reference_std_bound_m'],session['source_position_std_m']*np.linalg.norm(reference_sensitivity),places=9)
+        self.assertGreaterEqual(a['std_m'],a['geometry_std_m'])
+
+    def test_parallel_dimension_has_no_reference_location_term(self):
+        session,observations,_=fixture()
+        out=infer_scene(session,observations)
+        self.assertEqual(len(out['dimensions']),3)
+        for dimension in out['dimensions']:
+            self.assertLess(dimension['reference_std_bound_m'],1e-10)
+            self.assertAlmostEqual(dimension['std_m'],dimension['geometry_std_m'],places=9)

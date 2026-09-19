@@ -9,7 +9,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from .storage import MAX_ARCHIVE_BYTES, MAX_JSON_BYTES, MAX_RECORDING_BYTES, SessionStore
+from .storage import MAX_EXPORT_BYTES, MAX_COMPARE_BYTES, MAX_JSON_BYTES, MAX_RECORDING_BYTES, SessionStore
 
 
 class _Server(ThreadingHTTPServer):
@@ -69,8 +69,8 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
             raw = self.rfile.read(count)
             if len(raw) != count: raise ValueError('incomplete request body')
             return raw
-        def _json_body(self):
-            raw = self._body(MAX_JSON_BYTES)
+        def _json_body(self, limit=MAX_JSON_BYTES):
+            raw = self._body(limit)
             if not raw: return {}
             try: value = json.loads(raw)
             except (ValueError, UnicodeError): raise ValueError('invalid JSON')
@@ -85,7 +85,7 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
             if p == ['v1', 'health'] and method == 'GET': return self._reply(200, {'schema_version': '1.0', 'status': 'ok'})
             if p == ['v1', 'compare'] and method == 'POST':
                 from .evolution import compare_results
-                body = self._json_body()
+                body = self._json_body(MAX_COMPARE_BYTES)
                 for key in ('previous', 'current'):
                     result = body.get(key)
                     if not isinstance(result, dict): raise ValueError('previous/current must be result objects')
@@ -102,7 +102,7 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                 return self._reply(200, compare_results(body['previous'], body['current']))
             if p == ['v1', 'sessions'] and method == 'POST': return self._reply(201, store.create_session(self._json_body()))
             if p == ['v1', 'imports'] and method == 'POST':
-                raw = self._body(MAX_ARCHIVE_BYTES + MAX_JSON_BYTES * 2)
+                raw = self._body(MAX_EXPORT_BYTES)
                 with tempfile.TemporaryDirectory(prefix='echosight-import-', dir=store.root) as d:
                     path = Path(d) / 'import.zip'; path.write_bytes(raw)
                     s = store.import_archive(path)

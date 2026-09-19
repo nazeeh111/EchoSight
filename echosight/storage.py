@@ -29,6 +29,11 @@ MAX_ARCHIVE_BYTES = 256 * 1024 * 1024
 MAX_CAPTURES = 32
 MAX_SECONDS = 120
 MAX_JSON_BYTES = 1024 * 1024
+# Up to 32 full 96 kHz/.15 s response arrays, including JSON float/indent overhead.
+MAX_RESULT_BYTES = 32 * 1024 * 1024
+MAX_COMPARE_BYTES = 2 * MAX_RESULT_BYTES + MAX_JSON_BYTES
+MAX_EXPANDED_ARCHIVE_BYTES = MAX_ARCHIVE_BYTES + MAX_JSON_BYTES + MAX_RESULT_BYTES
+MAX_EXPORT_BYTES = MAX_EXPANDED_ARCHIVE_BYTES + 64 * 1024  # bounded ZIP directory overhead
 _ID = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$')
 TERMINAL = {'completed', 'failed', 'cancelled', 'interrupted'}
 
@@ -217,8 +222,48 @@ def _atomic_bytes(path, content):
         if os.path.exists(tmp): os.unlink(tmp)
 
 
-def _write_json(path, data):
-    _atomic_bytes(path, (json.dumps(data, indent=2, allow_nan=False) + '\n').encode())
+def _write_json(path, data, max_bytes=None):
+    payload = (json.dumps(data, indent=2, allow_nan=False) + '\n').encode()
+    if max_bytes is not None and len(payload) > max_bytes: raise ValueError('result metadata too large')
+    _atomic_bytes(path, payload)
+
+
+def _archived_result_issues(result, session):
+    """Check binding metadata only; agreement never authenticates an inverse result."""
+    issues = []
+    if not isinstance(result, dict): return ['result_not_object']
+    if result.get('schema_version') != SCHEMA_VERSION: issues.append('schema_mismatch')
+    if result.get('status') not in {'ok', 'partial', 'ambiguous', 'no_result', 'cancelled'}:
+        issues.append('invalid_result_status')
+    if any(not isinstance(result.get(key), list) for key in ('surfaces', 'hypotheses', 'diagnostics')):
+        issues.append('invalid_result_structure')
+    if result.get('session_id') != session['session_id']: issues.append('session_mismatch')
+    revision = result.get('session_revision')
+    if isinstance(revision, bool) or not isinstance(revision, int) or revision != session['revision']:
+        issues.append('revision_mismatch')
+    expected_manifest = {c['capture_id']: (c['sha256'], c['provenance']) for c in session['captures']}
+    manifest = result.get('recording_manifest')
+    if not isinstance(manifest, list) or any(not isinstance(c, dict) for c in manifest):
+        issues.append('recording_manifest_mismatch')
+    else:
+        actual = {c.get('capture_id'): (c.get('sha256'), c.get('provenance')) for c in manifest
+                  if isinstance(c.get('capture_id'), str)}
+        if len(actual) != len(manifest) or actual != expected_manifest:
+            issues.append('recording_manifest_mismatch')
+    keys = ('schema_version', 'session_id', 'sound_speed_m_s', 'sound_speed_std_m_s',
+            'source_clock_scale', 'source_clock_std_ppm', 'source_position_m',
+            'source_position_std_m', 'probe')
+    acquisition = {key: session[key] for key in keys if key in session}
+    acquisition['coordinate_frame_id'] = session.get('coordinate_frame_id', 'session:' + session['session_id'])
+    acquisition['captures'] = [{key: c[key] for key in
+        ('capture_id', 'receiver_position_m', 'receiver_position_std_m', 'provenance') if key in c}
+        for c in session['captures']]
+    if result.get('acquisition') != acquisition: issues.append('acquisition_mismatch')
+    provenance = result.get('provenance')
+    if not isinstance(provenance, dict): issues.append('invalid_provenance')
+    elif provenance.get('physical_validation') is not False:
+        issues.append('unsupported_physical_validation_claim')
+    return issues
 
 
 class SessionStore:
@@ -331,10 +376,11 @@ class SessionStore:
                 self._update_job(jid, status='cancelled'); return
             result = dict(result)
             result['job_id'] = jid; result['session_revision'] = session['revision']
+            result['computation_origin'] = 'local_processing'
             result['recording_manifest'] = [{'capture_id': c['capture_id'], 'sha256': c['sha256'], 'provenance': c['provenance']} for c in session['captures']]
             with self._lock:
-                _write_json(self.root / 'jobs' / (jid + '.result.json'), result)
-                _write_json(self._session_dir(session['session_id']) / 'result.json', result)
+                _write_json(self.root / 'jobs' / (jid + '.result.json'), result, MAX_RESULT_BYTES)
+                _write_json(self._session_dir(session['session_id']) / 'result.json', result, MAX_RESULT_BYTES)
                 self._update_job(jid, status='completed', progress=1.)
         except Exception as exc:
             self._update_job(jid, status='cancelled' if event.is_set() else 'failed', error={'code': 'processing_failed', 'message': str(exc)[:1000]})
@@ -355,19 +401,23 @@ class SessionStore:
         with self._lock:
             s = self._raw_session(sid); p = self._session_dir(sid) / 'result.json'
             if not p.exists(): raise KeyError('result not available')
+            if p.stat().st_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
             result = json.loads(p.read_text()); result['stale'] = result.get('session_revision') != s['revision']
             return result
     def export_session(self, sid, destination=None):
         with self._lock:
             s = self._raw_session(sid); directory = self._session_dir(sid)
             result = directory / 'result.json'
+            if not result.exists(): result = directory / 'archived-result.json'
             target = Path(destination) if destination else self.root / 'exports' / (sid + '.zip')
             target.parent.mkdir(parents=True, exist_ok=True)
             fd, tmp = tempfile.mkstemp(prefix='.export-', dir=target.parent); os.close(fd)
             try:
                 with zipfile.ZipFile(tmp, 'w', compression=zipfile.ZIP_STORED) as z:
                     z.writestr('session.json', json.dumps(s, allow_nan=False))
-                    if result.exists(): z.write(result, 'result.json')
+                    if result.exists():
+                        if result.stat().st_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
+                        z.write(result, result.name)
                     for relative in sorted({c['recording_path'] for c in s['captures']}):
                         path = (directory / relative).resolve()
                         if not path.is_relative_to(directory): raise ValueError('recording path escapes session')
@@ -378,20 +428,23 @@ class SessionStore:
             return target
     def import_archive(self, path):
         path = Path(path)
-        if path.stat().st_size > MAX_ARCHIVE_BYTES + MAX_JSON_BYTES * 2: raise ValueError('archive exceeds resource limit')
+        if path.stat().st_size > MAX_EXPORT_BYTES: raise ValueError('archive exceeds resource limit')
         try:
             with zipfile.ZipFile(path) as z:
                 infos = z.infolist(); names = [i.filename for i in infos]
                 if len(infos) > MAX_CAPTURES + 2 or len(names) != len(set(names)): raise ValueError('duplicate or too many archive entries')
-                if sum(i.file_size for i in infos) > MAX_ARCHIVE_BYTES + MAX_JSON_BYTES * 2: raise ValueError('expanded archive exceeds resource limit')
+                if sum(i.file_size for i in infos) > MAX_EXPANDED_ARCHIVE_BYTES: raise ValueError('expanded archive exceeds resource limit')
                 if any(i.is_dir() or i.flag_bits & 1 or i.filename.startswith('/') or '..' in Path(i.filename).parts or '\\' in i.filename for i in infos): raise ValueError('unsafe archive member')
                 if 'session.json' not in names or z.getinfo('session.json').file_size > MAX_JSON_BYTES: raise ValueError('missing or oversized session.json')
                 s = validate_session(json.loads(z.read('session.json')))
                 revision = s.get('revision')
                 if isinstance(revision, bool) or not isinstance(revision, int) or revision < 0: raise ValueError('archive requires nonnegative integer session revision')
                 sid = _id(s.get('session_id')); directory = self._session_dir(sid)
-                allowed = {'session.json', 'result.json'} | {c.get('recording_path', '') for c in s['captures']}
+                if 'result.json' in names and 'archived-result.json' in names: raise ValueError('archive has competing result payloads')
+                allowed = {'session.json', 'result.json', 'archived-result.json'} | {c.get('recording_path', '') for c in s['captures']}
                 if set(names) - allowed: raise ValueError('unexpected archive member')
+                if sum(z.getinfo(c['recording_path']).file_size for c in s['captures']) > MAX_ARCHIVE_BYTES:
+                    raise ValueError('session recording byte limit reached')
                 with self._lock:
                     if directory.exists(): raise FileExistsError('session already exists')
                     stage = Path(tempfile.mkdtemp(prefix='.import-', dir=self.root / 'sessions'))
@@ -408,10 +461,20 @@ class SessionStore:
                             if Path(actual['recording_path']).relative_to(stage).as_posix() != relative: raise ValueError('raw extension does not match recording format')
                             cap.update(actual); cap['recording_path'] = relative
                         s['replay'] = {'kind': 'archive_reload', 'archive_sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'loaded_at': time.time()}
+                        result_name = next((name for name in ('result.json', 'archived-result.json') if name in names), None)
+                        if result_name is not None:
+                            if z.getinfo(result_name).file_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
+                            archived_bytes = z.read(result_name)
+                            archived_result = json.loads(archived_bytes)
+                            # Preserve exact source claims for audit, but never publish imported geometry
+                            # as a current result. Even matching labels and hashes are not proof of computation.
+                            _atomic_bytes(stage / 'archived-result.json', archived_bytes)
+                            s['replay']['archived_result'] = {
+                                'status': 'quarantined_unverified', 'requires_recomputation': True,
+                                'sha256': hashlib.sha256(archived_bytes).hexdigest(),
+                                'binding_issues': _archived_result_issues(archived_result, s),
+                                'physical_validation': False}
                         _write_json(stage / 'session.json', s)
-                        if 'result.json' in names:
-                            if z.getinfo('result.json').file_size > MAX_JSON_BYTES: raise ValueError('result metadata too large')
-                            result = json.loads(z.read('result.json')); _write_json(stage / 'result.json', result)
                         os.replace(stage, directory)
                     finally:
                         if stage.exists(): shutil.rmtree(stage)

@@ -49,6 +49,15 @@ class APITests(unittest.TestCase):
         self.assertEqual(code, 400)
         code, _ = self.request('POST', '/v1/sessions', b'', {'Content-Length': str(1024 * 1024 + 1)})
         self.assertEqual(code, 413)
+    def test_compare_accepts_two_results_above_session_limit(self):
+        padding = 'x' * (1024 * 1024)
+        result = {'surfaces': [], 'transport_test_padding': padding}
+        code, body = self.request('POST', '/v1/compare', {'previous': result, 'current': result})
+        self.assertEqual(code, 200, body)
+        self.assertEqual(json.loads(body)['status'], 'incomparable')
+        from echosight.storage import MAX_COMPARE_BYTES
+        code, _ = self.request('POST', '/v1/compare', b'', {'Content-Length': str(MAX_COMPARE_BYTES + 1)})
+        self.assertEqual(code, 413)
     def test_errors_and_host_guard(self):
         for raw in (b'{broken', b'{"sound_speed_m_s":NaN}', b'[]'):
             code, _ = self.request('POST', '/v1/sessions', raw)

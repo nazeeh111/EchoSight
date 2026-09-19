@@ -246,6 +246,24 @@ def _surface(q,k,assignments,covariance,s,r,v,rows,session):
     return dict(surface_id='reflector-'+sid,kind='unclassified_planar_reflector',normal=n.tolist(),offset_m=d,image_source_m=q.tolist(),support=evidence,vertices_m=vertices,triangles=triangles,extent_status='unknown',mesh_semantics='reflection_support_convex_hull_not_physical_edges',uncertainty=dict(local_information_rank=local_rank,rank_deficient=local_rank<3,offset_std_m=float(np.sqrt(max(0,pcov[3,3]))),normal_angular_std_rad=float(np.sqrt(max(0,np.trace(pcov[:3,:3])))) if local_rank==3 else None,image_source_covariance_m2=block.tolist() if local_rank==3 else None,conditional_on='associations and first-order point-source model'),confidence=dict(kind='evidence_summary_not_probability',supporting_views=len(evidence),rms_residual_m=float(v*np.sqrt(np.mean([e['residual_s']**2 for e in evidence])))))
 
 
+
+def _local_plane_intersections(source, qa, qb):
+    """Intersect two planes with their mean-normal line through source.
+
+    Relative coordinates avoid origin-dependent offset subtraction. Each image
+    source defines its plane relative to the supplied source acoustic center.
+    """
+    ra=np.asarray(qa)-source;rb=np.asarray(qb)-source
+    la=np.linalg.norm(ra);lb=np.linalg.norm(rb);na=ra/la;nb=rb/lb
+    sign=1. if na@nb>=0 else -1.
+    direction=na+sign*nb;direction/=np.linalg.norm(direction)
+    ta=la/(2*float(na@direction));tb=lb/(2*float(nb@direction))
+    points=np.array([source+ta*direction,source+tb*direction])
+    # Sensitivity to moving the reference line while holding both physical
+    # planes and their mean-normal direction fixed (sign immaterial to norm).
+    reference_gradient=na/float(na@direction)-nb/float(nb@direction)
+    return abs(tb-ta),direction,points,reference_gradient
+
 def _run(session,observations,cancel,progress,method):
     start=time.perf_counter();out=_empty(session,method)
     try:
@@ -347,14 +365,20 @@ def _run(session,observations,cancel,progress,method):
         for a,b in combinations(range(len(out['surfaces'])),2):
             pa,pb=out['surfaces'][a],out['surfaces'][b];ia,ib=origins[pa['surface_id']],origins[pb['surface_id']];na=np.array(pa['normal']);nb=np.array(pb['normal']);dot=float(na@nb)
             if abs(dot)>np.cos(np.deg2rad(3)) and out['status']!='ambiguous':
-                sign=1 if dot>0 else -1;sep=abs(pa['offset_m']-sign*pb['offset_m'])
+                sep,direction,points,reference_gradient=_local_plane_intersections(s,qs[ia],qs[ib])
                 grad=np.zeros(3*len(qs));eps=1e-5
-                for idx,factor in ((ia,1.),(ib,-sign)):
+                for pair_index,idx in enumerate((ia,ib)):
                     for axis in range(3):
-                        plus=qs[idx].copy();minus=qs[idx].copy();plus[axis]+=eps;minus[axis]-=eps
-                        grad[3*idx+axis]=factor*(plane_from_image(s,plus)[1]-plane_from_image(s,minus)[1])/(2*eps)
-                sepstd=float(np.sqrt(max(0,grad@pcov@grad)))
-                out['dimensions'].append(dict(kind='near_parallel_plane_separation',surface_ids=[pa['surface_id'],pb['surface_id']],value_m=sep,std_m=sepstd,normal_angle_rad=float(np.arccos(np.clip(abs(dot),0,1))),semantics='Plane separation; not a proven enclosed room dimension.',uncertainty_note='See shared joint covariance; local normals are not exactly parallel.'))
+                        plus=[qs[ia].copy(),qs[ib].copy()];minus=[qs[ia].copy(),qs[ib].copy()]
+                        plus[pair_index][axis]+=eps;minus[pair_index][axis]-=eps
+                        grad[3*idx+axis]=(_local_plane_intersections(s,*plus)[0]-_local_plane_intersections(s,*minus)[0])/(2*eps)
+                geometry_std=float(np.sqrt(max(0,grad@pcov@grad)))
+                reference_std=float(session.get('source_position_std_m',.01))*float(np.linalg.norm(reference_gradient))
+                # Fitted plane geometry and reference pose share calibration
+                # errors. Their cross-covariance is not retained separately:
+                # sum marginal standard deviations to bound any correlation.
+                sepstd=geometry_std+reference_std
+                out['dimensions'].append(dict(kind='local_plane_intersection_separation',surface_ids=[pa['surface_id'],pb['surface_id']],value_m=float(sep),std_m=sepstd,geometry_std_m=geometry_std,reference_std_bound_m=reference_std,reference_point_m=s.tolist(),reference_kind='surveyed_source_acoustic_center',direction=direction.tolist(),intersection_points_m=points.tolist(),normal_angle_rad=float(np.arccos(np.clip(abs(dot),0,1))),semantics='Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.',uncertainty_kind='first_order_conservative_standard_deviation_bound',uncertainty_note='Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.'))
         if not out['guidance']:out['guidance'].append(dict(action='Add surveyed views around weakly supported reflectors with a different height.',suggested_position_m=(r.mean(axis=0)+np.array([.35,-.25,.6])).tolist(),reason='Finite support and missing echoes do not establish physical edges or empty space.'))
         out['provenance']=sorted(set(o.get('provenance','unspecified') for o in observations))
         out['search']['complete']=not any('budget' in str(x) or 'limit' in str(x) for x in out['diagnostics'])
