@@ -1,0 +1,1331 @@
+{
+  "schema_version": "1.0",
+  "source_unchanged_during_run": true,
+  "git_commit": "6f50be010e85e28d4122170f71fc3e224962aeb9",
+  "source_sha256": {
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "echosight/api.py": "b37ec722b98666c819b1131bdab2083267678930eeb6691f2e360f5a1409c7ae",
+    "echosight/cli.py": "ad9b83276257e1d44672efe1ed4e6cf18bb378f9856ad2e96cdb204bfbc55b4d",
+    "echosight/evolution.py": "8b05097619beb38859c3e573e0ea20c59daa7a876df0438d1375b6037eb5eeba",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "echosight/inference.py": "a2dfd5cb04be7269c6294956702e4e173e862dde7420504673672f18a678287e",
+    "echosight/pipeline.py": "fca6a3588d19d4523d14ea4b109cafb311599a63976e75eae8d8e3e93675f77c",
+    "echosight/signals.py": "361024f74c762a11af0ce3b312528f1a30b681cbe406b009fff4bf851b841bf3",
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/storage.py": "2dacb2046c80bd800ef6bb335e3bbc7cd6c4adc4cfa7d015ace5e4a584902fc8",
+    "evaluation/__init__.py": "27112db071291f12c1b8138daab004ff7b003512a093a3382aa42555cf7a6478",
+    "evaluation/external.py": "962ae38ba5e51177ae56875e5585bd3d96c85bb48c3fc1d8f585c4dd3b5aff4e",
+    "evaluation/guidance.py": "02f712b676e36c2089a38a167f13b16e9c8a4756c16180e745a80a24904023d9",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "evaluation/run.py": "ef32222b5bdf1ee1ca9f4190c7f27f4298b3559df6b00f514ac3d2d6d2b17454",
+    "evaluation/stress.py": "d91faa062e1322146e22da3b5ec1ccd44afaa587c2095bdd04507071d4519bdf",
+    "evaluation/stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7"
+  },
+  "evidence_class": "hybrid replay derived from measured laboratory impulse responses",
+  "not_established": [
+    "iPhone capture performance",
+    "blind room-geometry accuracy",
+    "independently measured echo recall"
+  ],
+  "annotation_policy": "No echo annotations loaded. Collinear receiver poses cannot establish unique unconstrained 3D reflector geometry.",
+  "sound_speed_policy": "345.844 m/s is an explicit inherited model constant with 1 m/s uncertainty, not a measured temperature conversion.",
+  "probe_period_s": 0.22,
+  "h5py_version": "3.16.0",
+  "cases": [
+    {
+      "filename": "dEchorate_room000000_src1_arr1_mics1-5.sofa",
+      "bytes": 1758263,
+      "sha256": "26a76bbafb80af0dc29a6838ae9d8fdc4846249c8a4e60a2ef87d13b87496b07",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000000_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18",
+      "metadata": {
+        "Title": "dEchorate_room000000_src1_arr1_mics1-5",
+        "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+        "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      },
+      "stored_temperature_kelvin": 0.0,
+      "receiver_singular_values_m": [
+        0.20107212192697937,
+        6.45045214916598e-09,
+        0.0
+      ],
+      "receiver_affine_rank_1micrometre": 1,
+      "status": "ambiguous",
+      "surface_count": 0,
+      "direct_arrival_model_residual_s": [
+        0.0002886457025174788,
+        0.00042793281248292014,
+        0.0004228644981855989,
+        0.00038971625392085485,
+        0.0003757473868968991
+      ],
+      "direct_arrival_score_semantics": "Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.",
+      "runtime_seconds": 0.04809379100333899,
+      "diagnostics": [
+        "few_views_weak_unlabeled_echo_rejection",
+        "collinear_receivers_unobservable_rotation"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "external-1",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000198387502,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.019838750198175603,
+            "intercept_s": 0.0035147726936921838,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 9.455742091942881e-09,
+            "pilot_residual_max_s": 2.0545187218168337e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10351478215672962,
+              0.323514773905228,
+              0.5435147885776083,
+              0.7635147672259551,
+              0.9835148008441591,
+              1.2035148008441592,
+              1.423514800844159
+            ],
+            "pilot_residuals_s": [
+              7.479162400514383e-09,
+              -5.136864267285546e-09,
+              5.170990968750289e-09,
+              -2.0545187218168337e-08,
+              8.708491816555863e-09,
+              4.343966741870986e-09,
+              -2.0558443836193874e-11
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-2",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000239105142,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.023910514235225833,
+            "intercept_s": 0.0034197831242522574,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 5.276090184369771e-08,
+            "pilot_residual_max_s": 9.802121782309658e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10341988353652151,
+              0.32341971796201063,
+              0.5434197517503838,
+              0.7634197630384195,
+              0.9834198309287896,
+              1.2034198309287896,
+              1.4234198309287898
+            ],
+            "pilot_residuals_s": [
+              9.802121782309658e-08,
+              -7.281360620003952e-08,
+              -4.4285546230149464e-08,
+              -3.825782357580465e-08,
+              2.4372233342617733e-08,
+              1.9111920268599647e-08,
+              1.3851607416626166e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-3",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999998042811874,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.19571881260116442,
+            "intercept_s": 0.0032809948540273204,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 3.69432533300003e-08,
+            "pilot_residual_max_s": 5.4538798144321277e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10328102058853282,
+              0.32328094889238057,
+              0.5432808346270704,
+              0.7632808243713551,
+              0.9832807647582573,
+              1.2032807647582573,
+              1.4232807647582573
+            ],
+            "pilot_residuals_s": [
+              4.5306386753374284e-08,
+              1.6668373292727523e-08,
+              -5.4538798144321277e-08,
+              -2.1736374589131913e-08,
+              -3.8291333659401516e-08,
+              4.7668051728066985e-09,
+              4.782494400501491e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-4",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000065920278,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.00659202781250201,
+            "intercept_s": 0.0033631729696897163,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.0532037544353091e-09,
+            "pilot_residual_max_s": 1.876051647364818e-09,
+            "pilot_arrivals_receiver_s": [
+              0.1033631744109583,
+              0.32336317371384776,
+              0.5433631765681097,
+              0.763363177246717,
+              0.9833631813059286,
+              1.2033631813059287,
+              1.4233631813059286
+            ],
+            "pilot_residuals_s": [
+              7.820658010082582e-10,
+              -1.3652908803507557e-09,
+              3.872502318813531e-11,
+              -7.329138407285996e-10,
+              1.876051647364818e-09,
+              4.258056129913257e-10,
+              -1.0244405324044692e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-5",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999561189475,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.04388105245833884,
+            "intercept_s": 0.002797861682016637,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 7.715412924003209e-09,
+            "pilot_residual_max_s": 1.1787082754288747e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10279786655315544,
+              0.32279784760164887,
+              0.5427978368993603,
+              0.7627978165453341,
+              0.9827978102424736,
+              1.2027978102424737,
+              1.4227978102424734
+            ],
+            "pilot_residuals_s": [
+              9.259244038162251e-09,
+              -3.843098062006334e-11,
+              -1.0868880240266776e-09,
+              -1.1787082754288747e-08,
+              -8.436111698095772e-09,
+              1.2177201469398824e-09,
+              1.0871551436864024e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "filename": "dEchorate_room000000_src5_arr1_mics1-5.sofa",
+      "bytes": 1760690,
+      "sha256": "5feaf10343abfd6d251f7133560688a7def7f6c989e95a56f1244c8aecd6277c",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000000_src5_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18",
+      "metadata": {
+        "Title": "dEchorate_room000000_src5_arr1_mics1-5",
+        "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+        "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      },
+      "stored_temperature_kelvin": 0.0,
+      "receiver_singular_values_m": [
+        0.20107212192697937,
+        6.45045214916598e-09,
+        0.0
+      ],
+      "receiver_affine_rank_1micrometre": 1,
+      "status": "ambiguous",
+      "surface_count": 0,
+      "direct_arrival_model_residual_s": [
+        0.0008325858723758073,
+        0.0008532064607349871,
+        0.0004089636791607121,
+        9.582520114560789e-05,
+        0.00046338697602560375
+      ],
+      "direct_arrival_score_semantics": "Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.",
+      "runtime_seconds": 0.04415391699876636,
+      "diagnostics": [
+        "few_views_weak_unlabeled_echo_rejection",
+        "collinear_receivers_unobservable_rotation"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "external-1",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.000000012493048,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.012493047929496015,
+            "intercept_s": 0.009476449106048324,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 2.2380113238415676e-08,
+            "pilot_residual_max_s": 3.9307512356145935e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10947641168821194,
+              0.3294764718013353,
+              0.5494764951598066,
+              0.7694764561638572,
+              0.9894764584640477,
+              1.2094764584640478,
+              1.429476458464048
+            ],
+            "pilot_residuals_s": [
+              -3.866714118339054e-08,
+              1.869751165006761e-08,
+              3.9307512356145935e-08,
+              -2.4369075646291094e-09,
+              -2.8851875333302246e-09,
+              -5.633657984560614e-09,
+              -8.3821283247687e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-2",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999732383356,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.026761664440044797,
+            "intercept_s": 0.009499184927183794,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 5.709981910140078e-08,
+            "pilot_residual_max_s": 9.48149324608849e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10949910239140248,
+              0.32949917969014175,
+              0.549499239854745,
+              0.7694992594032514,
+              0.989499123592897,
+              1.2094991235928971,
+              1.429499123592897
+            ],
+            "pilot_residuals_s": [
+              -7.985961487932958e-08,
+              3.3266905896667254e-09,
+              6.937885999036553e-08,
+              9.48149324608849e-08,
+              -3.51078556226625e-08,
+              -2.9220289299303204e-08,
+              -2.3332723086966212e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-3",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999998625804493,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.13741955073864887,
+            "intercept_s": 0.009530346985975033,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 4.63970246376732e-08,
+            "pilot_residual_max_s": 1.0581551646016152e-07,
+            "pilot_arrivals_receiver_s": [
+              0.10953030949619445,
+              0.32953027657380174,
+              0.549530378594934,
+              0.7695302263015438,
+              0.9895301689544479,
+              1.209530168954448,
+              1.429530168954448
+            ],
+            "pilot_residuals_s": [
+              -2.3747825511621912e-08,
+              -2.643791707779286e-08,
+              1.0581551646016152e-07,
+              -1.62455726648858e-08,
+              -4.3360367407707656e-08,
+              -1.3128066189693754e-08,
+              1.7104234917297845e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-4",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000567957317,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.056795731673275895,
+            "intercept_s": 0.00957325815012053,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.8374624717780802e-08,
+            "pilot_residual_max_s": 3.227466971456039e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10957325117491054,
+              0.329573256042819,
+              0.5495733071072159,
+              0.7695733335895464,
+              0.989573320429882,
+              1.209573320429882,
+              1.429573320429882
+            ],
+            "pilot_residuals_s": [
+              -1.2654783165810812e-08,
+              -2.028193568648362e-08,
+              1.8287400149752386e-08,
+              3.227466971456039e-08,
+              6.61994437045621e-09,
+              -5.8751163933834505e-09,
+              -1.8370177379267716e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-5",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000579841326,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.05798413260649227,
+            "intercept_s": 0.009651072356706696,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.4679001203229443e-08,
+            "pilot_residual_max_s": 2.8907773841346796e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10965106512591576,
+              0.32965108173953744,
+              0.5496511098367469,
+              0.7696511453324213,
+              0.989651137645971,
+              1.209651137645971,
+              1.429651137645971
+            ],
+            "pilot_residuals_s": [
+              -1.3029204201653322e-08,
+              -9.17209169726263e-09,
+              6.1686086239021165e-09,
+              2.8907773841346796e-08,
+              8.464814404973708e-09,
+              -4.2916947773363745e-09,
+              -1.7048203959646457e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "filename": "dEchorate_room000001_src1_arr1_mics1-5.sofa",
+      "bytes": 1761123,
+      "sha256": "53b0807a35cce74ea589e4dd1fe55310c9b13ecd9317ecc78d176119385a3c0d",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room000001_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18",
+      "metadata": {
+        "Title": "dEchorate_room000001_src1_arr1_mics1-5",
+        "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+        "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      },
+      "stored_temperature_kelvin": 0.0,
+      "receiver_singular_values_m": [
+        0.20107212192697937,
+        6.45045214916598e-09,
+        0.0
+      ],
+      "receiver_affine_rank_1micrometre": 1,
+      "status": "ambiguous",
+      "surface_count": 0,
+      "direct_arrival_model_residual_s": [
+        0.0002892413908723579,
+        0.00042818867617501477,
+        0.0004227821232608009,
+        0.0003897858113737912,
+        0.00037581206795166133
+      ],
+      "direct_arrival_score_semantics": "Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.",
+      "runtime_seconds": 0.0425262089993339,
+      "diagnostics": [
+        "few_views_weak_unlabeled_echo_rejection",
+        "collinear_receivers_unobservable_rotation"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "external-1",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.999999962088792,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.03791120795071379,
+            "intercept_s": 0.003515491815486443,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.7561968207722897e-08,
+            "pilot_residual_max_s": 3.2689241091787835e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10351546312976091,
+              0.32351549402297486,
+              0.5435155040326753,
+              0.7635154558679366,
+              0.9835154413224779,
+              1.2035154413224778,
+              1.423515441322478
+            ],
+            "pilot_residuals_s": [
+              -2.4894604738756598e-08,
+              1.4339074982938627e-08,
+              3.2689241091787835e-08,
+              -7.1350318986418415e-09,
+              -1.3340024751506974e-08,
+              -4.999559211071869e-09,
+              3.340906884474748e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-2",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000028049223,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.002804922294430412,
+            "intercept_s": 0.0034206417123216473,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 2.40078198369765e-08,
+            "pilot_residual_max_s": 4.536958986278705e-08,
+            "pilot_arrivals_receiver_s": [
+              0.103420673375473,
+              0.32342061783271836,
+              0.5434206537937921,
+              0.7634205984744726,
+              0.9834206544773283,
+              1.2034206544773283,
+              1.4234206544773282
+            ],
+            "pilot_residuals_s": [
+              3.138265912416838e-08,
+              -2.4777178420087864e-08,
+              1.05668124250613e-08,
+              -4.536958986278705e-08,
+              1.0016182883099134e-08,
+              9.399099942797307e-09,
+              8.782016891473177e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-3",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000000050163111,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.005016311144245833,
+            "intercept_s": 0.003570535301757622,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.5497629390710022e-09,
+            "pilot_residual_max_s": 3.454084573917271e-09,
+            "pilot_arrivals_receiver_s": [
+              0.10357053504733034,
+              0.3235705364040622,
+              0.54357053690277,
+              0.7635705425682388,
+              0.983570540958894,
+              1.203570540958894,
+              1.423570540958894
+            ],
+            "pilot_residuals_s": [
+              -7.560583964449918e-10,
+              -5.029149874324901e-10,
+              -1.1077957440264186e-09,
+              3.454084573917271e-09,
+              7.411513625044108e-10,
+              -3.624369693255858e-10,
+              -1.4660255232001873e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-4",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999930474665,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.006952533548876261,
+            "intercept_s": 0.0033643354568491466,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 2.5170121064416335e-09,
+            "pilot_residual_max_s": 4.213582482925915e-09,
+            "pilot_arrivals_receiver_s": [
+              0.10336433845217631,
+              0.3233643307780943,
+              0.5433643326522006,
+              0.7633643259593411,
+              0.983364327789552,
+              1.203364327789552,
+              1.423364327789552
+            ],
+            "pilot_residuals_s": [
+              3.690580507864638e-09,
+              -2.4539441589865874e-09,
+              9.497196362673321e-10,
+              -4.213582482925915e-09,
+              -8.538142415304151e-10,
+              6.757432391424345e-10,
+              2.2053006087929816e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-5",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999558179019,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.044182098091205546,
+            "intercept_s": 0.002798952272557935,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 6.2062095977018235e-09,
+            "pilot_residual_max_s": 1.2214568800850145e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10279894440878715,
+              0.3227989443978107,
+              0.5427989306969389,
+              0.7627989210770114,
+              0.9827988967595329,
+              1.2027988967595329,
+              1.4227988967595329
+            ],
+            "pilot_residuals_s": [
+              -3.4455609754235894e-09,
+              6.263524143790278e-09,
+              2.282713906787137e-09,
+              2.382848030002549e-09,
+              -1.2214568800850145e-08,
+              -2.494507267414292e-09,
+              7.2255541549992586e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "filename": "dEchorate_room011111_src1_arr1_mics1-5.sofa",
+      "bytes": 1767577,
+      "sha256": "ec8a4f2305b4b170e7ec9b5dab4f51695d861b462125e3119e2a33fd20813fa1",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src1_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18",
+      "metadata": {
+        "Title": "dEchorate_room011111_src1_arr1_mics1-5",
+        "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+        "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      },
+      "stored_temperature_kelvin": 0.0,
+      "receiver_singular_values_m": [
+        0.20107212192697937,
+        6.45045214916598e-09,
+        0.0
+      ],
+      "receiver_affine_rank_1micrometre": 1,
+      "status": "ambiguous",
+      "surface_count": 0,
+      "direct_arrival_model_residual_s": [
+        0.00029116553607723417,
+        0.00042866561431008365,
+        0.0004238474932364289,
+        0.000390979491717125,
+        0.00037732579673042943
+      ],
+      "direct_arrival_score_semantics": "Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.",
+      "runtime_seconds": 0.061675709002884105,
+      "diagnostics": [
+        "few_views_weak_unlabeled_echo_rejection",
+        "collinear_receivers_unobservable_rotation"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "external-1",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999979556000071,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -2.044399992850998,
+            "intercept_s": 0.0035133511406038706,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.1127186260723906e-06,
+            "pilot_residual_max_s": 2.1535567359259877e-06,
+            "pilot_arrivals_receiver_s": [
+              0.10351530025734051,
+              0.3235113284710317,
+              0.5435111966792548,
+              0.7635111759239492,
+              0.9835111934815641,
+              1.203511193481564,
+              1.423511193481564
+            ],
+            "pilot_residuals_s": [
+              2.1535567359259877e-06,
+              -1.368461574446922e-06,
+              -1.0504853529269553e-06,
+              -6.214726601116993e-07,
+              -1.541470467936179e-07,
+              2.9562095171797864e-07,
+              7.453889501185529e-07
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-2",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 1.0000013733226862,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 1.373322686237799,
+            "intercept_s": 0.0034222843368892893,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 8.073412344283868e-07,
+            "pilot_residual_max_s": 1.5627120804051486e-06,
+            "pilot_arrivals_receiver_s": [
+              0.10342085895707752,
+              0.3234238090616803,
+              0.5434237242522426,
+              0.7634237147066266,
+              0.9834237298190972,
+              1.2034237298190973,
+              1.423423729819097
+            ],
+            "pilot_residuals_s": [
+              -1.5627120804051486e-06,
+              1.0852615313639014e-06,
+              6.983211027211667e-07,
+              3.8664449575342985e-07,
+              9.962597546930851e-08,
+              -2.025050154230712e-07,
+              -5.046360065374955e-07
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-3",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999621876074,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.037812392550407026,
+            "intercept_s": 0.0035706447436234167,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 1.1885941621604178e-08,
+            "pilot_residual_max_s": 1.8784347369238397e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10357065974673153,
+              0.3235706326304376,
+              0.5435706059878431,
+              0.7635706048961372,
+              0.9835706029274291,
+              1.2035706029274291,
+              1.423570602927429
+            ],
+            "pilot_residuals_s": [
+              1.8784347369238397e-08,
+              -1.3220147199177745e-11,
+              -1.833708840326409e-08,
+              -1.1110067976716209e-08,
+              -4.760049576724157e-09,
+              3.5586766866657626e-09,
+              1.1877403061077985e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-4",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999999186283849,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.08137161511267976,
+            "intercept_s": 0.0030752468055785143,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 4.3331639099792275e-08,
+            "pilot_residual_max_s": 8.36710335599955e-08,
+            "pilot_arrivals_receiver_s": [
+              0.10307532233945056,
+              0.32307516997742897,
+              0.5430751622633422,
+              0.7630751561681365,
+              0.9830751613312337,
+              1.2030751613312338,
+              1.4230751613312338
+            ],
+            "pilot_residuals_s": [
+              8.36710335599955e-08,
+              -5.078923270840363e-08,
+              -4.060156411078708e-08,
+              -2.879501448393995e-08,
+              -5.730161900530106e-09,
+              1.2171593510856837e-08,
+              3.0073348700199176e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": true
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-5",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.99999901018772,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.9898122800278131,
+            "intercept_s": 0.0027977462589214197,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 5.66381967851081e-07,
+            "pilot_residual_max_s": 1.0962909382239427e-06,
+            "pilot_arrivals_receiver_s": [
+              0.10279874356863164,
+              0.3227966702655623,
+              0.5427967178394707,
+              0.762796730421034,
+              0.9827966986388073,
+              1.2027966986388072,
+              1.4227966986388074
+            ],
+            "pilot_residuals_s": [
+              1.0962909382239427e-06,
+              -7.592534295164377e-07,
+              -4.939208194665312e-07,
+              -2.635805544937142e-07,
+              -7.760407971790784e-08,
+              1.4015462190819505e-07,
+              3.5791332364532025e-07
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "filename": "dEchorate_room011111_src5_arr1_mics1-5.sofa",
+      "bytes": 1767752,
+      "sha256": "d3657b7d88a9af4905a9263f047ac566eacfa7c9fabc151b590e8c682e51422f",
+      "source_url": "https://www.sofaconventions.org/data/database/dechorate/dEchorate_room011111_src5_arr1_mics1-5.sofa",
+      "retrieved": "2026-09-18",
+      "metadata": {
+        "Title": "dEchorate_room011111_src5_arr1_mics1-5",
+        "RoomDescription": "room_code:020002->is reflective?floor:0_ceiling:1_west:0_south:0_east:0_north:1_hasFornituer?:1",
+        "License": "The MIT License (MIT) Copyright (c) 2019, Diego Di Carlo. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+      },
+      "stored_temperature_kelvin": 0.0,
+      "receiver_singular_values_m": [
+        0.20107212192697937,
+        6.45045214916598e-09,
+        0.0
+      ],
+      "receiver_affine_rank_1micrometre": 1,
+      "status": "no_result",
+      "surface_count": 0,
+      "direct_arrival_model_residual_s": [
+        null,
+        null,
+        null,
+        0.0055767781511460585,
+        null
+      ],
+      "direct_arrival_score_semantics": "Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.",
+      "runtime_seconds": 0.03482508299930487,
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ],
+      "recording_status": [
+        {
+          "capture_id": "external-1",
+          "status": "rejected",
+          "candidate_count": 0,
+          "clock": {
+            "alpha": 0.9997169885353926,
+            "alpha_std": 0.00013811305424045868,
+            "relative_rate_ppm": -283.0114646074078,
+            "intercept_s": 0.01466978336293158,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 0.0001607816295060045,
+            "pilot_residual_max_s": 0.00031135228499575007,
+            "pilot_arrivals_receiver_s": [
+              0.1149528345014666,
+              0.3343716206964427,
+              0.5543716826319975,
+              0.7743716862652557,
+              0.9943716794845503,
+              1.2143716794845503,
+              1.4343716794845505
+            ],
+            "pilot_residuals_s": [
+              0.00031135228499575007,
+              -0.00020759899781447322,
+              -0.00014527454004609197,
+              -8.300838457431237e-05,
+              -2.0752643066002108e-05,
+              4.1509879147527684e-05,
+              0.00010377240136127952
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": true
+          },
+          "diagnostics": [
+            {
+              "code": "nonaffine_clock_or_motion",
+              "message": "Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-2",
+          "status": "rejected",
+          "candidate_count": 0,
+          "clock": {
+            "alpha": 1.0000000145663757,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.01456637566121799,
+            "intercept_s": 0.014972993455750589,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 5.062388949412147e-09,
+            "pilot_residual_max_s": 9.355512323172555e-09,
+            "pilot_arrivals_receiver_s": [
+              0.11497298555687584,
+              0.3349730019888656,
+              0.5549730062737094,
+              0.7749730095384525,
+              0.9949730094418235,
+              1.2149730094418236,
+              1.4349730094418234
+            ],
+            "pilot_residuals_s": [
+              -9.355512323172555e-09,
+              3.871874765248862e-09,
+              4.95211593953826e-09,
+              5.0122564987375995e-09,
+              1.7110248773377634e-09,
+              -1.4935777059577049e-09,
+              -4.698180511297778e-09
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "direct_reference_ambiguous",
+              "message": "Weaker repeatable arrivals precede the selected reference; direct sound is not reliably identified. Reposition for clear line of sight or qualify source/band."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-3",
+          "status": "rejected",
+          "candidate_count": 0,
+          "clock": {
+            "alpha": 1.0000001644740444,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": 0.16447404438402202,
+            "intercept_s": 0.014407508170043866,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 6.652681191967079e-08,
+            "pilot_residual_max_s": 1.2182614964051375e-07,
+            "pilot_arrivals_receiver_s": [
+              0.11440740279129867,
+              0.33440760359209404,
+              0.5544076771841732,
+              0.774407695673474,
+              0.9944076843170616,
+              1.2144076843170617,
+              1.4344076843170614
+            ],
+            "pilot_residuals_s": [
+              -1.2182614964051375e-07,
+              4.279035592524849e-08,
+              8.019814523585467e-08,
+              6.250315642830628e-08,
+              1.496245427556886e-08,
+              -2.1221835400098144e-08,
+              -5.7406125408832054e-08
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "direct_reference_ambiguous",
+              "message": "Weaker repeatable arrivals precede the selected reference; direct sound is not reliably identified. Reposition for clear line of sight or qualify source/band."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-4",
+          "status": "ok",
+          "candidate_count": 18,
+          "clock": {
+            "alpha": 0.9999996685692522,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -0.33143074784636184,
+            "intercept_s": 0.014351447364799425,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 2.0196500044292724e-07,
+            "pilot_residual_max_s": 3.902580752584983e-07,
+            "pilot_arrivals_receiver_s": [
+              0.11435180447979991,
+              0.3343511017810225,
+              0.5543510663503076,
+              0.7743510748617157,
+              0.9943511069563907,
+              1.2143511069563908,
+              1.4343511069563908
+            ],
+            "pilot_residuals_s": [
+              3.902580752584983e-07,
+              -2.395259376397618e-07,
+              -2.0204188799777256e-07,
+              -1.206157153044174e-07,
+              -1.560627582719576e-08,
+              5.730848884333284e-08,
+              1.3022325329181683e-07
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "candidate_budget",
+              "message": "Strongest 18 repeatable paths retained."
+            },
+            {
+              "code": "direct_path_assumed",
+              "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+            }
+          ]
+        },
+        {
+          "capture_id": "external-5",
+          "status": "rejected",
+          "candidate_count": 0,
+          "clock": {
+            "alpha": 0.9999987697792992,
+            "alpha_std": 1.7896045123542957e-06,
+            "relative_rate_ppm": -1.230220700754181,
+            "intercept_s": 0.012133439264281379,
+            "intercept_includes_propagation": true,
+            "pilot_residual_rms_s": 6.756842531919577e-07,
+            "pilot_residual_max_s": 1.3076338447465252e-06,
+            "pilot_arrivals_receiver_s": [
+              0.11213462387605606,
+              0.33213221391488756,
+              0.5521321449012215,
+              0.7721321142838542,
+              0.9921321443666079,
+              1.212132144366608,
+              1.4321321443666077
+            ],
+            "pilot_residuals_s": [
+              1.3076338447465252e-06,
+              -8.316787695750172e-07,
+              -6.300438813999776e-07,
+              -3.9001269458438514e-07,
+              -8.928138672814612e-08,
+              1.8136716750660753e-07,
+              4.5201572151931657e-07
+            ],
+            "correction": "affine_waveform_resampling",
+            "absolute_source_rate_calibrated": false,
+            "acquisition_template_rate_refined": false
+          },
+          "diagnostics": [
+            {
+              "code": "direct_reference_ambiguous",
+              "message": "Weaker repeatable arrivals precede the selected reference; direct sound is not reliably identified. Reposition for clear line of sight or qualify source/band."
+            }
+          ]
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

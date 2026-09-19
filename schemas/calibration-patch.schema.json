@@ -57,8 +57,37 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 160
+        },
+        "effective_speed_m_s": {
+          "type": "number",
+          "minimum": 250,
+          "maximum": 460,
+          "description": "Effective propagation speed in metres per source-buffer second. Supplied together with source_effective_speed_covariance; replaces sound_speed_m_s/source_clock_scale for inference."
+        },
+        "source_effective_speed_covariance": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          },
+          "description": "Finite symmetric positive-semidefinite joint covariance for [source_x_m, source_y_m, source_z_m, effective_speed_m_s]. Cross-covariances are retained. Replaces independent source-position, sound-speed and source-clock uncertainty terms, not added to them. Runtime symmetry tolerance rtol=1e-8, atol=1e-12; smallest eigenvalue must be >= -1e-12."
         }
-      }
+      },
+      "dependentRequired": {
+        "effective_speed_m_s": [
+          "source_effective_speed_covariance"
+        ],
+        "source_effective_speed_covariance": [
+          "effective_speed_m_s"
+        ]
+      },
+      "description": "Supply both joint source/effective-speed calibration fields together in any patch that changes either. Null clearing is unsupported; an existing pair can be replaced by a new valid pair."
     },
     "captures": {
       "type": "array",

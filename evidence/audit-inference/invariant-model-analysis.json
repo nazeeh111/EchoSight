@@ -1,0 +1,140 @@
+{
+  "corner": {
+    "surface_count": 4,
+    "explanations": [
+      {
+        "target": 3,
+        "parents": [
+          1,
+          2
+        ]
+      }
+    ],
+    "consistent_models": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "minimal_models": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "invariant_surface_indices": [
+      0,
+      1,
+      2
+    ],
+    "invariant_surface_ids": [
+      "reflector-eb8b4993284a",
+      "reflector-7abe52313713",
+      "reflector-5b2bb97c2ecd"
+    ]
+  },
+  "flair": {
+    "surface_count": 10,
+    "explanations": [
+      {
+        "target": 1,
+        "parents": [
+          0,
+          2
+        ]
+      }
+    ],
+    "consistent_models": [
+      [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    "minimal_models": [
+      [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    "invariant_surface_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "invariant_surface_ids": [
+      "reflector-8c956936b1b8",
+      "reflector-8ae95b975c2d",
+      "reflector-e38804ac3293",
+      "reflector-57eb7074fc16",
+      "reflector-07aea25568e8",
+      "reflector-6fea527154ad",
+      "reflector-6770f1f59a49",
+      "reflector-cea6c388fc24",
+      "reflector-ed32bab452ee"
+    ]
+  },
+  "cycle_counterexample": {
+    "consistent_models": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "invariant": [
+      2
+    ],
+    "naive_removed_targets_model": [
+      2
+    ],
+    "naive_model_valid": false
+  }
+}

@@ -1,0 +1,62 @@
+--- work/physics-audit/baseline-signals.py	2026-09-18 22:16:48
++++ work/physics-audit/experimental/echosight/signals.py	2026-09-18 22:13:54
+@@ -210,9 +210,28 @@
+     min_delay=max(.00035,3/(p['high_hz']-p['low_hz']))
+     # This intentionally rejects weak sidelobes; sensitivity is qualified on data.
+     threshold=max(float(envelope.max())*.07,noise_floor*12)
+-    candidate_indices,properties=find_peaks(envelope,height=threshold,
+-        prominence=threshold*.65,distance=max(2,round(min_delay*src_fs)))
++    # Keep all significant local maxima for the resolution guard. scipy's distance
++    # suppression can discard a real nearby peak but keep that peak's farther
++    # sidelobe, incorrectly turning an unresolved cluster into separated paths.
++    all_indices,_=find_peaks(envelope,height=threshold,prominence=threshold*.65)
++    separation=max(2,round(min_delay*src_fs))
++    candidate_indices=np.asarray([j for j in all_indices if not np.any(
++        (np.abs(all_indices-j)<separation)&(envelope[all_indices]>envelope[j]))],dtype=int)
++    suppressed=[int(j) for j in all_indices if j not in candidate_indices
++                and min_delay <= (j-direct_sample)/src_fs <= p['max_echo_delay_s']]
++    if suppressed:
++        result['diagnostics'].append(dict(code='unresolved_echo_overlap',
++            message='Nearby significant maxima are not independently resolved; suppressed paths and sidelobes are not geometry evidence.',
++            suppressed_peak_count=len(suppressed)))
++    # A relative waveform check compares each path with the measured direct kernel.
++    # It catches strong path-dependent filtering/overlap; it does not calibrate
++    # common source filtering, a pure path delay, or arbitrary diffraction.
++    kernel_radius=max(2,round(src_fs/(p['high_hz']-p['low_hz'])))
++    offsets=np.arange(-kernel_radius,kernel_radius+1)
++    direct_kernel=np.interp(direct_sample+offsets,np.arange(len(response)),response)
++    direct_energy=float(direct_kernel@direct_kernel)
+     candidates=[]
++    unmodeled=[]
+     for index in candidate_indices:
+         delay=(_peak_time(envelope,int(index))-direct_sample)/src_fs
+         if not min_delay<=delay<=p['max_echo_delay_s']:
+@@ -228,7 +247,14 @@
+             j=left+int(np.argmax(np.abs(r[left:right])))
+             local_delays.append((_peak_time(np.abs(r),j)-direct_sample)/src_fs)
+         std=max(timing_floor,float(np.std(local_delays,ddof=1)))
+-        candidates.append(dict(delay_s=float(delay),delay_std_s=float(std),amplitude=float(envelope[index]/direct_amp),
++        echo_kernel=np.interp(direct_sample+delay*src_fs+offsets,np.arange(len(response)),response)
++        shape_scale=float(echo_kernel@direct_kernel)/max(direct_energy,1e-20)
++        shape_residual=float(np.linalg.norm(echo_kernel-shape_scale*direct_kernel)/max(np.linalg.norm(echo_kernel),1e-20))
++        if shape_residual > math.sqrt(.5):
++            unmodeled.append(dict(delay_s=float(delay),waveform_shape_residual=shape_residual,
++                amplitude=float(envelope[index]/direct_amp),reason='waveform_shape_mismatch'))
++            continue
++        candidates.append(dict(waveform_shape_residual=shape_residual,delay_s=float(delay),delay_std_s=float(std),amplitude=float(envelope[index]/direct_amp),
+                                repeat_support=repeat_support,repeat_count=len(responses)))
+     if len(candidates)>18:
+         result['diagnostics'].append(dict(code='candidate_budget',message='Strongest 18 repeatable paths retained.'))
+@@ -236,7 +262,11 @@
+     candidates.sort(key=lambda z:z['delay_s'])
+     for i,candidate in enumerate(candidates):
+         candidate['candidate_id']=f'{capture_id}:echo:{i:02d}'
+-    result.update(status='ok',candidates=candidates,
++    if unmodeled:
++        result['diagnostics'].append(dict(code='waveform_model_mismatch',
++            message='Some repeatable peaks have less than half their local waveform energy explained by a scaled direct-path kernel; retained for inspection but excluded from geometric fitting.',
++            excluded_candidate_count=len(unmodeled)))
++    result.update(status='ok',candidates=candidates,unmodeled_candidates=unmodeled,
+         quality=dict(clipped_fraction=clipped,noise_response_amplitude=noise_floor,
+                      direct_response_amplitude=direct_amp,usable_band_hz=[p['low_hz'],p['high_hz']],
+                      minimum_resolved_excess_delay_s=min_delay),

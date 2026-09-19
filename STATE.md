@@ -33,3 +33,9 @@ Correction: baseline20/25 external acceptance at defaultspacing included one dif
 Evaluation retrieved a bounded8.46MB FLAIR subset (24 measuredRIR,4982 independentlaserpoints,CC-BY4.0). New harder13case criteria and measuredspatialcriteria frozen before execution; live-treeexploration fails multiple recoverygates, so immutablebaseline comparison runs next. No measuredspatialaccuracy established.
 
 Coordinator sourcecalibration experiment: independentlysurveyed referenceplane,16training+4heldout rawsynthetic recordings; effective sourceposition/combinedc-kappa fit reduces heldoutRMS247us→0.91us. Newcalibration.py is EXPERIMENTAL/uncommitted, needs malformed/degenerate/wrongmodel tests and correlatedcovariance integration before any usableclaim. Knownreferenceplane is suppliedcalibration, never inferredroomtruth.
+
+## Integrated audit checkpoint ready
+
+95assembled tests pass, including new rawreference calibration, jointcalibration propagation and repaired reviewerP2job-publication/archivehash races. Portable reports: `evidence/audit-integrated-tests.txt`, `evidence/audit-calibration/`, `evidence/audit-inference/`, `evidence/audit-physics/`; [updated matrix](docs/audit/COVERAGE.md). New stress/FLAIR baseline failures are in `evaluation/reports/`; spatialacceptance is unmet.
+
+Next: commit/push this coherent implementation, run immutable original+harder+FLAIR regressions, independent review of repaired persistence and new calibration/model math. Physics specialist is testing empiricaldirect-kernel jointwaveformfit in isolatedwork: development83/84overlap paths vs60/84baseline, false1vs9; notintegrated orqualified. Inference/evaluation specialists are designing source-relocation disambiguation (newmodules, no edits to this frozen core). Controlledscenecomparison remains missing. Backendcodewriter finished; reviewerawaitsidentifiednewcommit.

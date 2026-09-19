@@ -1,0 +1,2139 @@
+{
+  "source_position_m": [
+    0.374151,
+    -0.634032,
+    -0.532562
+  ],
+  "effective_speed_m_s": 344.74,
+  "poses": [
+    [
+      -2.553222,
+      1.382097,
+      -0.525664
+    ],
+    [
+      -2.125553,
+      1.314177,
+      -0.532762
+    ],
+    [
+      -1.450385,
+      1.173915,
+      -0.519142
+    ],
+    [
+      -0.976956,
+      1.113769,
+      -0.514432
+    ],
+    [
+      -0.318016,
+      1.027657,
+      -0.522918
+    ],
+    [
+      0.010991,
+      0.978486,
+      -0.522012
+    ],
+    [
+      -2.546444,
+      1.360565,
+      -0.225762
+    ],
+    [
+      -2.116392,
+      1.323525,
+      -0.229799
+    ],
+    [
+      -1.483725,
+      1.185426,
+      -0.198824
+    ],
+    [
+      -1.018961,
+      1.09045,
+      -0.192346
+    ],
+    [
+      -0.31098,
+      1.028748,
+      -0.224817
+    ],
+    [
+      0.020538,
+      0.996018,
+      -0.226815
+    ],
+    [
+      -2.553895,
+      1.383005,
+      0.120019
+    ],
+    [
+      -2.131345,
+      1.314476,
+      0.116299
+    ],
+    [
+      -1.488225,
+      1.199981,
+      0.120957
+    ],
+    [
+      -1.020171,
+      1.092728,
+      0.12571
+    ],
+    [
+      -0.310029,
+      1.029166,
+      0.106567
+    ],
+    [
+      0.022817,
+      1.016672,
+      0.100414
+    ],
+    [
+      -2.399113,
+      1.960938,
+      0.117466
+    ],
+    [
+      -1.970203,
+      1.932455,
+      0.112696
+    ],
+    [
+      -1.368602,
+      1.82339,
+      0.106281
+    ],
+    [
+      -0.898286,
+      1.735343,
+      0.118015
+    ],
+    [
+      -0.179801,
+      1.651306,
+      0.099281
+    ],
+    [
+      0.153133,
+      1.638344,
+      0.106244
+    ]
+  ],
+  "declared_source_std_m": 0.005,
+  "views": [
+    {
+      "capture_id": "flair-00",
+      "direct_expected_s": 0.010310614297308299,
+      "strongest_early_rir_peak_s": 0.017770833333333333,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.010366078652539322,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.4068780036419938e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.11036607865253933,
+          1.1103660786525393,
+          2.1103660786525396,
+          3.110366078652539,
+          4.11036607865254,
+          5.11036607865254,
+          6.11036607865254
+        ],
+        "pilot_residuals_s": [
+          2.7755575615628914e-17,
+          2.220446049250313e-16,
+          4.440892098500626e-16,
+          4.440892098500626e-16,
+          1.7763568394002505e-15,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0020753281994565905,
+        0.05325113227472717
+      ]
+    },
+    {
+      "capture_id": "flair-01",
+      "direct_expected_s": 0.009193111037074589,
+      "strongest_early_rir_peak_s": 0.00925,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.009311070279694633,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.128034535932587e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10931107027969443,
+          1.1093110702796944,
+          2.1093110702796944,
+          3.1093110702796944,
+          4.109311070279694,
+          5.109311070279694,
+          6.109311070279695
+        ],
+        "pilot_residuals_s": [
+          -1.8041124150158794e-16,
+          0.0,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.001849467104999699,
+        0.03467027218082887
+      ]
+    },
+    {
+      "capture_id": "flair-02",
+      "direct_expected_s": 0.0074508766144209685,
+      "strongest_early_rir_peak_s": 0.007541666666666667,
+      "clock": {
+        "alpha": 1.0,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": 0.0,
+        "intercept_s": 0.007554891997823971,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 6.227798788614397e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.1075548919978243,
+          1.1075548919978242,
+          2.1075548919978244,
+          3.107554891997824,
+          4.107554891997824,
+          5.107554891997824,
+          6.107554891997824
+        ],
+        "pilot_residuals_s": [
+          3.191891195797325e-16,
+          2.220446049250313e-16,
+          4.440892098500626e-16,
+          0.0,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0005367200414983025,
+        0.037627309893756275
+      ]
+    },
+    {
+      "capture_id": "flair-03",
+      "direct_expected_s": 0.006408348753870283,
+      "strongest_early_rir_peak_s": 0.0065,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.0065017269273397035,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 6.76949978672341e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.10650172692733918,
+          1.1065017269273392,
+          2.106501726927339,
+          3.1065017269273394,
+          4.106501726927339,
+          5.106501726927339,
+          6.1065017269273385
+        ],
+        "pilot_residuals_s": [
+          -4.996003610813204e-16,
+          -4.440892098500626e-16,
+          -4.440892098500626e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.000747517607052389,
+        0.038223576451908256
+      ]
+    },
+    {
+      "capture_id": "flair-04",
+      "direct_expected_s": 0.005221647298683854,
+      "strongest_early_rir_peak_s": 0.005270833333333333,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.005319988131003722,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.5286189109634859e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10531998813100413,
+          1.105319988131004,
+          2.1053199881310043,
+          3.1053199881310043,
+          4.105319988131004,
+          5.105319988131004,
+          6.105319988131004
+        ],
+        "pilot_residuals_s": [
+          4.3021142204224816e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          1.3322676295501878e-15,
+          1.7763568394002505e-15,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 16,
+      "candidate_delay_span_s": [
+        0.0007730777133621273,
+        0.038879379704516166
+      ]
+    },
+    {
+      "capture_id": "flair-05",
+      "direct_expected_s": 0.004794743992017178,
+      "strongest_early_rir_peak_s": 0.004875,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.004884640178628496,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 9.083327519006963e-16,
+        "pilot_residual_max_s": 1.7763568394002505e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10488464017862856,
+          1.1048846401786285,
+          2.1048846401786285,
+          3.1048846401786285,
+          4.1048846401786285,
+          5.1048846401786285,
+          6.1048846401786285
+        ],
+        "pilot_residuals_s": [
+          8.326672684688674e-17,
+          2.220446049250313e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 9,
+      "candidate_delay_span_s": [
+        0.0030617614079314127,
+        0.03798094964302363
+      ]
+    },
+    {
+      "capture_id": "flair-06",
+      "direct_expected_s": 0.010297582332430366,
+      "strongest_early_rir_peak_s": 0.017833333333333333,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.010328886529125038,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 8.461874733404262e-16,
+        "pilot_residual_max_s": 1.7763568394002505e-15,
+        "pilot_arrivals_receiver_s": [
+          0.11032888652912483,
+          1.1103288865291248,
+          2.1103288865291248,
+          3.1103288865291248,
+          4.110328886529125,
+          5.110328886529125,
+          6.110328886529125
+        ],
+        "pilot_residuals_s": [
+          -1.8041124150158794e-16,
+          -2.220446049250313e-16,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.002212153907177673,
+        0.03545923706333803
+      ]
+    },
+    {
+      "capture_id": "flair-07",
+      "direct_expected_s": 0.009230771292314983,
+      "strongest_early_rir_peak_s": 0.009270833333333334,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.009320562666471393,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.6467602784974222e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10932056266647139,
+          1.1093205626664713,
+          2.1093205626664715,
+          3.109320562666471,
+          4.109320562666471,
+          5.109320562666471,
+          6.109320562666471
+        ],
+        "pilot_residuals_s": [
+          2.7755575615628914e-17,
+          2.220446049250313e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.002399138479230139,
+        0.05384938735302605
+      ]
+    },
+    {
+      "capture_id": "flair-08",
+      "direct_expected_s": 0.007604972724276584,
+      "strongest_early_rir_peak_s": 0.0076875,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.007686420534256351,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 2.0572386961145154e-15,
+        "pilot_residual_max_s": 3.552713678800501e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10768642053425652,
+          1.1076864205342565,
+          2.1076864205342565,
+          3.1076864205342565,
+          4.1076864205342565,
+          5.1076864205342565,
+          6.107686420534256
+        ],
+        "pilot_residuals_s": [
+          2.0816681711721685e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          1.3322676295501878e-15,
+          2.6645352591003757e-15,
+          3.552713678800501e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0005047591883303676,
+        0.036082080630626845
+      ]
+    },
+    {
+      "capture_id": "flair-09",
+      "direct_expected_s": 0.006505898114131876,
+      "strongest_early_rir_peak_s": 0.006541666666666667,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.006558085134697543,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.4387458094560697e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.1065580851346972,
+          1.1065580851346972,
+          2.1065580851346972,
+          3.1065580851346972,
+          4.106558085134697,
+          5.106558085134697,
+          6.106558085134696
+        ],
+        "pilot_residuals_s": [
+          -3.0531133177191805e-16,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0031241316635777197,
+        0.030750312484731018
+      ]
+    },
+    {
+      "capture_id": "flair-10",
+      "direct_expected_s": 0.005292512355659121,
+      "strongest_early_rir_peak_s": 0.005291666666666667,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.005287868314417562,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.7101965501416192e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10528786831441786,
+          1.1052878683144178,
+          2.105287868314418,
+          3.105287868314418,
+          4.105287868314417,
+          5.105287868314417,
+          6.105287868314417
+        ],
+        "pilot_residuals_s": [
+          3.3306690738754696e-16,
+          6.661338147750939e-16,
+          8.881784197001252e-16,
+          1.3322676295501878e-15,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0011494124426701653,
+        0.03876180188992566
+      ]
+    },
+    {
+      "capture_id": "flair-11",
+      "direct_expected_s": 0.0049189400773199795,
+      "strongest_early_rir_peak_s": 0.004916666666666666,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.004931630804699041,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 4.3317502600352714e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.10493163080469849,
+          1.1049316308046986,
+          2.1049316308046984,
+          3.1049316308046984,
+          4.104931630804698,
+          5.104931630804698,
+          6.104931630804698
+        ],
+        "pilot_residuals_s": [
+          -5.273559366969494e-16,
+          -2.220446049250313e-16,
+          -4.440892098500626e-16,
+          0.0,
+          0.0,
+          0.0,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 11,
+      "candidate_delay_span_s": [
+        0.0007511019123466535,
+        0.038917404262666315
+      ]
+    },
+    {
+      "capture_id": "flair-12",
+      "direct_expected_s": 0.010485974353793595,
+      "strongest_early_rir_peak_s": 0.017854166666666667,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.010491313115031741,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.6467352170225024e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.11049131311503169,
+          1.1104913131150316,
+          2.110491313115032,
+          3.1104913131150314,
+          4.110491313115031,
+          5.110491313115031,
+          6.110491313115031
+        ],
+        "pilot_residuals_s": [
+          -1.3877787807814457e-17,
+          2.220446049250313e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0020476921850016054,
+        0.062284625996909766
+      ]
+    },
+    {
+      "capture_id": "flair-13",
+      "direct_expected_s": 0.009397319152415968,
+      "strongest_early_rir_peak_s": 0.009395833333333334,
+      "clock": {
+        "alpha": 0.9999999999999996,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -4.440892098500626e-10,
+        "intercept_s": 0.009458390927029721,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.6468605205833143e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10945839092702975,
+          1.1094583909270297,
+          2.10945839092703,
+          3.1094583909270295,
+          4.1094583909270295,
+          5.1094583909270295,
+          6.1094583909270295
+        ],
+        "pilot_residuals_s": [
+          5.551115123125783e-17,
+          2.220446049250313e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.002300098829250938,
+        0.06310898295462046
+      ]
+    },
+    {
+      "capture_id": "flair-14",
+      "direct_expected_s": 0.007815391950859731,
+      "strongest_early_rir_peak_s": 0.007833333333333333,
+      "clock": {
+        "alpha": 1.0,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": 0.0,
+        "intercept_s": 0.00784659199554914,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 3.3569988834012605e-16,
+        "pilot_residual_max_s": 4.440892098500626e-16,
+        "pilot_arrivals_receiver_s": [
+          0.1078465919955487,
+          1.1078465919955487,
+          2.107846591995549,
+          3.107846591995549,
+          4.107846591995549,
+          5.107846591995549,
+          6.107846591995549
+        ],
+        "pilot_residuals_s": [
+          -4.440892098500626e-16,
+          -4.440892098500626e-16,
+          -4.440892098500626e-16,
+          -4.440892098500626e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0004833054395080237,
+        0.03664439735521282
+      ]
+    },
+    {
+      "capture_id": "flair-15",
+      "direct_expected_s": 0.00671516240996324,
+      "strongest_early_rir_peak_s": 0.006729166666666666,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.006733677671058594,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.2252489046577152e-15,
+        "pilot_residual_max_s": 1.7763568394002505e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10673367767105865,
+          1.1067336776710588,
+          2.1067336776710586,
+          3.1067336776710586,
+          4.106733677671059,
+          5.106733677671059,
+          6.106733677671058
+        ],
+        "pilot_residuals_s": [
+          8.326672684688674e-17,
+          2.220446049250313e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          1.7763568394002505e-15,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0010637777277312346,
+        0.029359408473615345
+      ]
+    },
+    {
+      "capture_id": "flair-16",
+      "direct_expected_s": 0.005536393177784928,
+      "strongest_early_rir_peak_s": 0.005479166666666667,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.005542849627439866,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.4341968811465487e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10554284962743989,
+          1.1055428496274398,
+          2.1055428496274398,
+          3.1055428496274398,
+          4.10554284962744,
+          5.10554284962744,
+          6.10554284962744
+        ],
+        "pilot_residuals_s": [
+          4.163336342344337e-17,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15,
+          1.7763568394002505e-15,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0013106738513757783,
+        0.038563377263430294
+      ]
+    },
+    {
+      "capture_id": "flair-17",
+      "direct_expected_s": 0.005228506961524689,
+      "strongest_early_rir_peak_s": 0.005208333333333333,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.00516822871614474,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 9.111906491099091e-16,
+        "pilot_residual_max_s": 1.7763568394002505e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10516822871614451,
+          1.1051682287161444,
+          2.1051682287161446,
+          3.1051682287161446,
+          4.105168228716145,
+          5.105168228716145,
+          6.105168228716145
+        ],
+        "pilot_residuals_s": [
+          -2.0816681711721685e-16,
+          -2.220446049250313e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 13,
+      "candidate_delay_span_s": [
+        0.0008750829586406911,
+        0.02856434718165447
+      ]
+    },
+    {
+      "capture_id": "flair-18",
+      "direct_expected_s": 0.011177212590787421,
+      "strongest_early_rir_peak_s": 0.013729166666666667,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.011181047719107277,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 6.10284636837248e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.11118104771910704,
+          1.111181047719107,
+          2.111181047719107,
+          3.111181047719107,
+          4.111181047719107,
+          5.111181047719107,
+          6.111181047719106
+        ],
+        "pilot_residuals_s": [
+          -2.0816681711721685e-16,
+          0.0,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0009909200547209291,
+        0.05299475335392733
+      ]
+    },
+    {
+      "capture_id": "flair-19",
+      "direct_expected_s": 0.01025532880402138,
+      "strongest_early_rir_peak_s": 0.01025,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.010315320127850271,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 8.764536011457246e-16,
+        "pilot_residual_max_s": 1.7763568394002505e-15,
+        "pilot_arrivals_receiver_s": [
+          0.11031532012784975,
+          1.1103153201278497,
+          2.11031532012785,
+          3.11031532012785,
+          4.1103153201278495,
+          5.1103153201278495,
+          6.1103153201278495
+        ],
+        "pilot_residuals_s": [
+          -4.996003610813204e-16,
+          -4.440892098500626e-16,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          1.7763568394002505e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.00098639661760879,
+        0.05370885232455409
+      ]
+    },
+    {
+      "capture_id": "flair-20",
+      "direct_expected_s": 0.008933248000082569,
+      "strongest_early_rir_peak_s": 0.008979166666666667,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.008977222515233805,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 7.226355566799486e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.10897722251523298,
+          1.108977222515233,
+          2.1089772225152332,
+          3.1089772225152332,
+          4.108977222515233,
+          5.108977222515233,
+          6.108977222515232
+        ],
+        "pilot_residuals_s": [
+          -8.049116928532385e-16,
+          -6.661338147750939e-16,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0006214188295337918,
+        0.03364462569867162
+      ]
+    },
+    {
+      "capture_id": "flair-21",
+      "direct_expected_s": 0.008026336196317348,
+      "strongest_early_rir_peak_s": 0.008041666666666667,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.008056619164936187,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 1.1388486515425148e-15,
+        "pilot_residual_max_s": 2.6645352591003757e-15,
+        "pilot_arrivals_receiver_s": [
+          0.10805661916493609,
+          1.1080566191649361,
+          2.108056619164936,
+          3.1080566191649357,
+          4.108056619164936,
+          5.108056619164936,
+          6.108056619164937
+        ],
+        "pilot_residuals_s": [
+          -8.326672684688674e-17,
+          0.0,
+          4.440892098500626e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          2.6645352591003757e-15
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0005874424141455663,
+        0.030561146033711913
+      ]
+    },
+    {
+      "capture_id": "flair-22",
+      "direct_expected_s": 0.007063075576477079,
+      "strongest_early_rir_peak_s": 0.0070416666666666666,
+      "clock": {
+        "alpha": 1.0,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": 0.0,
+        "intercept_s": 0.007037157485592682,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 6.880960108772192e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.10703715748559328,
+          1.1070371574855933,
+          2.107037157485593,
+          3.107037157485593,
+          4.1070371574855935,
+          5.1070371574855935,
+          6.1070371574855935
+        ],
+        "pilot_residuals_s": [
+          5.967448757360216e-16,
+          4.440892098500626e-16,
+          4.440892098500626e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 18,
+      "candidate_delay_span_s": [
+        0.0009062073501773002,
+        0.0364591476708597
+      ]
+    },
+    {
+      "capture_id": "flair-23",
+      "direct_expected_s": 0.006877019122923823,
+      "strongest_early_rir_peak_s": 0.006854166666666666,
+      "clock": {
+        "alpha": 0.9999999999999998,
+        "alpha_std": 3.93712992717945e-07,
+        "relative_rate_ppm": -2.220446049250313e-10,
+        "intercept_s": 0.006869016593079538,
+        "intercept_includes_propagation": true,
+        "pilot_residual_rms_s": 6.89853092519042e-16,
+        "pilot_residual_max_s": 8.881784197001252e-16,
+        "pilot_arrivals_receiver_s": [
+          0.10686901659307894,
+          1.1068690165930788,
+          2.106869016593079,
+          3.106869016593079,
+          4.1068690165930795,
+          5.1068690165930795,
+          6.106869016593079
+        ],
+        "pilot_residuals_s": [
+          -5.689893001203927e-16,
+          -6.661338147750939e-16,
+          0.0,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "correction": "affine_waveform_resampling",
+        "absolute_source_rate_calibrated": false,
+        "acquisition_template_rate_refined": false
+      },
+      "candidate_count": 13,
+      "candidate_delay_span_s": [
+        0.0008528145089517954,
+        0.02862712276933264
+      ]
+    }
+  ],
+  "reference_candidate_coverage": [
+    {
+      "surface_id": "laser-plane-0",
+      "normal": [
+        -0.0004354092288840935,
+        -0.003380125667141891,
+        -0.9999941925677758
+      ],
+      "offset_m": 1.5591747947744388,
+      "valid_views": 24,
+      "within_75mm": 17,
+      "within_25mm": 2,
+      "median_nearest_residual_mm": 64.40431697704862
+    },
+    {
+      "surface_id": "laser-plane-1",
+      "normal": [
+        0.0005892496764615539,
+        -0.000690983861536159,
+        0.999999587662976
+      ],
+      "offset_m": 1.1497596275170652,
+      "valid_views": 24,
+      "within_75mm": 11,
+      "within_25mm": 2,
+      "median_nearest_residual_mm": 85.16307697581624
+    },
+    {
+      "surface_id": "laser-plane-2",
+      "normal": [
+        0.1466896310413114,
+        0.9891802479555034,
+        0.0021422417354123153
+      ],
+      "offset_m": 2.782529040012934,
+      "valid_views": 24,
+      "within_75mm": 24,
+      "within_25mm": 20,
+      "median_nearest_residual_mm": 12.833686683424483
+    },
+    {
+      "surface_id": "laser-plane-3",
+      "normal": [
+        -0.986194858509715,
+        0.16315645414421795,
+        -0.0282784815732581
+      ],
+      "offset_m": 3.1183491160348256,
+      "valid_views": 24,
+      "within_75mm": 16,
+      "within_25mm": 11,
+      "median_nearest_residual_mm": 29.922734300949454
+    },
+    {
+      "surface_id": "laser-plane-4",
+      "normal": [
+        0.9893121749189404,
+        -0.14578908748842562,
+        0.002638659972003856
+      ],
+      "offset_m": 1.887547777254649,
+      "valid_views": 24,
+      "within_75mm": 24,
+      "within_25mm": 21,
+      "median_nearest_residual_mm": 12.307500513118685
+    },
+    {
+      "surface_id": "laser-plane-5",
+      "normal": [
+        -0.14916146589884982,
+        -0.9888095844911653,
+        -0.0025421859324685904
+      ],
+      "offset_m": 2.080101646029634,
+      "valid_views": 24,
+      "within_75mm": 3,
+      "within_25mm": 0,
+      "median_nearest_residual_mm": 149.99531220246433
+    },
+    {
+      "surface_id": "laser-plane-6",
+      "normal": [
+        -0.003074765280226202,
+        -0.0005461666536228179,
+        0.9999951237483401
+      ],
+      "offset_m": 1.0729394583891765,
+      "valid_views": 24,
+      "within_75mm": 18,
+      "within_25mm": 3,
+      "median_nearest_residual_mm": 59.35330508425366
+    },
+    {
+      "surface_id": "laser-plane-7",
+      "normal": [
+        -0.09729517328638412,
+        -0.9952427502393004,
+        -0.005051470210356422
+      ],
+      "offset_m": 1.8795135225492223,
+      "valid_views": 24,
+      "within_75mm": 3,
+      "within_25mm": 0,
+      "median_nearest_residual_mm": 289.15551531053416
+    },
+    {
+      "surface_id": "laser-plane-8",
+      "normal": [
+        0.14700841106348567,
+        0.9891349974974206,
+        -0.0006955590321363954
+      ],
+      "offset_m": 2.836843258251853,
+      "valid_views": 24,
+      "within_75mm": 9,
+      "within_25mm": 2,
+      "median_nearest_residual_mm": 82.25749289198416
+    },
+    {
+      "surface_id": "laser-plane-9",
+      "normal": [
+        -0.1533827042430874,
+        -0.9881555176852054,
+        -0.004734860859754157
+      ],
+      "offset_m": 2.1972689177447173,
+      "valid_views": 24,
+      "within_75mm": 5,
+      "within_25mm": 0,
+      "median_nearest_residual_mm": 212.99780286646032
+    }
+  ],
+  "fitted_models": {
+    "mapper": [
+      {
+        "surface_id": "reflector-8c956936b1b8",
+        "normal": [
+          0.14255557464008722,
+          0.9895878462793052,
+          -0.019844461074080975
+        ],
+        "offset_m": 2.7929426393058936,
+        "support_count": 24,
+        "array_placement_counts": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.537415953562139,
+          1.6351789796953253,
+          0.9123641030954951
+        ],
+        "offset_std_m": 0.005124335989012033,
+        "normal_std_rad": 0.011008149030819259,
+        "rms_residual_m": 0.013324213162400315,
+        "candidate_indices": [
+          "flair-00:echo:01",
+          "flair-01:echo:03",
+          "flair-02:echo:05",
+          "flair-03:echo:05",
+          "flair-04:echo:04",
+          "flair-05:echo:02",
+          "flair-06:echo:02",
+          "flair-07:echo:03",
+          "flair-08:echo:04",
+          "flair-09:echo:04",
+          "flair-10:echo:05",
+          "flair-11:echo:04",
+          "flair-12:echo:02",
+          "flair-13:echo:03",
+          "flair-14:echo:04",
+          "flair-15:echo:05",
+          "flair-16:echo:05",
+          "flair-17:echo:06",
+          "flair-18:echo:04",
+          "flair-19:echo:03",
+          "flair-20:echo:04",
+          "flair-21:echo:03",
+          "flair-22:echo:05",
+          "flair-23:echo:05"
+        ]
+      },
+      {
+        "surface_id": "reflector-6234ffa6eb13",
+        "normal": [
+          0.5183241400222693,
+          0.8545952258119803,
+          -0.031734616581035366
+        ],
+        "offset_m": 3.310418215410932,
+        "support_count": 24,
+        "array_placement_counts": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.537415953562139,
+          1.6351789796953253,
+          0.9123641030954951
+        ],
+        "offset_std_m": 0.006600173611107244,
+        "normal_std_rad": 0.013003594169667758,
+        "rms_residual_m": 0.01726795034662513,
+        "candidate_indices": [
+          "flair-00:echo:06",
+          "flair-01:echo:08",
+          "flair-02:echo:08",
+          "flair-03:echo:10",
+          "flair-04:echo:07",
+          "flair-05:echo:04",
+          "flair-06:echo:08",
+          "flair-07:echo:07",
+          "flair-08:echo:09",
+          "flair-09:echo:08",
+          "flair-10:echo:08",
+          "flair-11:echo:06",
+          "flair-12:echo:08",
+          "flair-13:echo:07",
+          "flair-14:echo:08",
+          "flair-15:echo:10",
+          "flair-16:echo:09",
+          "flair-17:echo:09",
+          "flair-18:echo:12",
+          "flair-19:echo:08",
+          "flair-20:echo:09",
+          "flair-21:echo:07",
+          "flair-22:echo:08",
+          "flair-23:echo:08"
+        ]
+      },
+      {
+        "surface_id": "reflector-8ae95b975c2d",
+        "normal": [
+          0.9911274935969608,
+          -0.12862111084576563,
+          -0.03350971920215612
+        ],
+        "offset_m": 1.8977422523041743,
+        "support_count": 20,
+        "array_placement_counts": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "support_position_singular_values_m": [
+          4.097617749947705,
+          1.4910569654158012,
+          0.8306046030394563
+        ],
+        "offset_std_m": 0.010950760548635547,
+        "normal_std_rad": 0.029645859516805175,
+        "rms_residual_m": 0.014329411728288078,
+        "candidate_indices": [
+          "flair-00:echo:02",
+          "flair-02:echo:03",
+          "flair-03:echo:03",
+          "flair-04:echo:03",
+          "flair-05:echo:01",
+          "flair-06:echo:03",
+          "flair-08:echo:03",
+          "flair-09:echo:02",
+          "flair-10:echo:04",
+          "flair-11:echo:03",
+          "flair-12:echo:03",
+          "flair-14:echo:03",
+          "flair-15:echo:03",
+          "flair-16:echo:04",
+          "flair-17:echo:03",
+          "flair-18:echo:08",
+          "flair-20:echo:05",
+          "flair-21:echo:04",
+          "flair-22:echo:03",
+          "flair-23:echo:03"
+        ]
+      },
+      {
+        "surface_id": "reflector-e38804ac3293",
+        "normal": [
+          -0.005484717348423614,
+          -0.050004530355355896,
+          0.9987339309443473
+        ],
+        "offset_m": -1.6174276071033435,
+        "support_count": 23,
+        "array_placement_counts": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.328653859907533,
+          1.5881939278955166,
+          0.8835720623532943
+        ],
+        "offset_std_m": 0.005600277069182306,
+        "normal_std_rad": 0.02234595381908975,
+        "rms_residual_m": 0.019409072610854127,
+        "candidate_indices": [
+          "flair-01:echo:00",
+          "flair-02:echo:01",
+          "flair-03:echo:01",
+          "flair-04:echo:01",
+          "flair-05:echo:00",
+          "flair-06:echo:00",
+          "flair-07:echo:00",
+          "flair-08:echo:01",
+          "flair-09:echo:00",
+          "flair-10:echo:01",
+          "flair-11:echo:01",
+          "flair-12:echo:01",
+          "flair-13:echo:01",
+          "flair-14:echo:02",
+          "flair-15:echo:02",
+          "flair-16:echo:03",
+          "flair-17:echo:02",
+          "flair-18:echo:02",
+          "flair-19:echo:01",
+          "flair-20:echo:02",
+          "flair-21:echo:02",
+          "flair-22:echo:01",
+          "flair-23:echo:02"
+        ]
+      },
+      {
+        "surface_id": "reflector-57eb7074fc16",
+        "normal": [
+          -0.020899210377242575,
+          -0.08904691553747138,
+          0.9958081491125036
+        ],
+        "offset_m": 1.0128507085888794,
+        "support_count": 20,
+        "array_placement_counts": [
+          4,
+          6,
+          6,
+          4
+        ],
+        "support_position_singular_values_m": [
+          3.9453400254135897,
+          1.3619852640417014,
+          0.8296086162993128
+        ],
+        "offset_std_m": 0.006109615594686515,
+        "normal_std_rad": 0.014270276989401757,
+        "rms_residual_m": 0.01723629368623879,
+        "candidate_indices": [
+          "flair-01:echo:01",
+          "flair-02:echo:02",
+          "flair-03:echo:02",
+          "flair-04:echo:02",
+          "flair-06:echo:01",
+          "flair-07:echo:01",
+          "flair-08:echo:02",
+          "flair-09:echo:01",
+          "flair-10:echo:02",
+          "flair-11:echo:02",
+          "flair-12:echo:00",
+          "flair-13:echo:00",
+          "flair-14:echo:01",
+          "flair-15:echo:01",
+          "flair-16:echo:01",
+          "flair-17:echo:01",
+          "flair-18:echo:01",
+          "flair-20:echo:01",
+          "flair-21:echo:01",
+          "flair-23:echo:01"
+        ]
+      },
+      {
+        "surface_id": "reflector-07aea25568e8",
+        "normal": [
+          0.13928759886772848,
+          0.932457029421247,
+          -0.3333509458282163
+        ],
+        "offset_m": 3.1499643901127348,
+        "support_count": 17,
+        "array_placement_counts": [
+          4,
+          1,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          3.553953389121588,
+          1.4150970265387057,
+          0.8312253860611385
+        ],
+        "offset_std_m": 0.005136765522317775,
+        "normal_std_rad": 0.011072011974568391,
+        "rms_residual_m": 0.02406974726492495,
+        "candidate_indices": [
+          "flair-02:echo:06",
+          "flair-03:echo:07",
+          "flair-04:echo:06",
+          "flair-05:echo:03",
+          "flair-09:echo:06",
+          "flair-12:echo:05",
+          "flair-13:echo:05",
+          "flair-14:echo:07",
+          "flair-15:echo:08",
+          "flair-16:echo:07",
+          "flair-17:echo:08",
+          "flair-18:echo:07",
+          "flair-19:echo:04",
+          "flair-20:echo:07",
+          "flair-21:echo:05",
+          "flair-22:echo:07",
+          "flair-23:echo:07"
+        ]
+      },
+      {
+        "surface_id": "reflector-6fea527154ad",
+        "normal": [
+          0.17656172342470908,
+          0.9830221074725901,
+          -0.04993489803177838
+        ],
+        "offset_m": -5.4475548577963835,
+        "support_count": 17,
+        "array_placement_counts": [
+          5,
+          4,
+          5,
+          3
+        ],
+        "support_position_singular_values_m": [
+          3.4002882805938723,
+          1.2765455900207439,
+          0.755232364530417
+        ],
+        "offset_std_m": 0.011612968154745884,
+        "normal_std_rad": 0.0177371048668223,
+        "rms_residual_m": 0.024454321316943785,
+        "candidate_indices": [
+          "flair-00:echo:10",
+          "flair-02:echo:13",
+          "flair-03:echo:14",
+          "flair-04:echo:11",
+          "flair-05:echo:06",
+          "flair-06:echo:13",
+          "flair-07:echo:12",
+          "flair-08:echo:12",
+          "flair-09:echo:12",
+          "flair-12:echo:11",
+          "flair-13:echo:11",
+          "flair-14:echo:12",
+          "flair-15:echo:15",
+          "flair-16:echo:13",
+          "flair-20:echo:13",
+          "flair-21:echo:13",
+          "flair-22:echo:13"
+        ]
+      },
+      {
+        "surface_id": "reflector-6770f1f59a49",
+        "normal": [
+          0.1557505790708027,
+          0.9863874482376518,
+          0.05274048803645596
+        ],
+        "offset_m": -5.5782458124804375,
+        "support_count": 18,
+        "array_placement_counts": [
+          5,
+          5,
+          4,
+          4
+        ],
+        "support_position_singular_values_m": [
+          4.191624128805299,
+          1.4043296363147155,
+          0.7444740222663924
+        ],
+        "offset_std_m": 0.011948270336910996,
+        "normal_std_rad": 0.018387578383456414,
+        "rms_residual_m": 0.03042414223366541,
+        "candidate_indices": [
+          "flair-00:echo:11",
+          "flair-01:echo:13",
+          "flair-02:echo:14",
+          "flair-03:echo:15",
+          "flair-04:echo:12",
+          "flair-06:echo:14",
+          "flair-07:echo:13",
+          "flair-09:echo:13",
+          "flair-10:echo:12",
+          "flair-11:echo:08",
+          "flair-12:echo:12",
+          "flair-13:echo:12",
+          "flair-16:echo:14",
+          "flair-17:echo:12",
+          "flair-18:echo:15",
+          "flair-19:echo:12",
+          "flair-20:echo:14",
+          "flair-23:echo:12"
+        ]
+      },
+      {
+        "surface_id": "reflector-cea6c388fc24",
+        "normal": [
+          0.4585166562391276,
+          0.8196400629002433,
+          -0.3434423434001332
+        ],
+        "offset_m": 3.6699878247027167,
+        "support_count": 19,
+        "array_placement_counts": [
+          5,
+          4,
+          6,
+          4
+        ],
+        "support_position_singular_values_m": [
+          3.7958432813758964,
+          1.3977738211280617,
+          0.8573909023644747
+        ],
+        "offset_std_m": 0.0065872560614079765,
+        "normal_std_rad": 0.012535659710202658,
+        "rms_residual_m": 0.03158948380133783,
+        "candidate_indices": [
+          "flair-00:echo:07",
+          "flair-01:echo:09",
+          "flair-02:echo:09",
+          "flair-03:echo:11",
+          "flair-04:echo:08",
+          "flair-06:echo:09",
+          "flair-07:echo:08",
+          "flair-08:echo:10",
+          "flair-09:echo:09",
+          "flair-12:echo:09",
+          "flair-13:echo:09",
+          "flair-14:echo:10",
+          "flair-15:echo:12",
+          "flair-16:echo:11",
+          "flair-17:echo:10",
+          "flair-18:echo:14",
+          "flair-19:echo:09",
+          "flair-20:echo:11",
+          "flair-23:echo:09"
+        ]
+      },
+      {
+        "surface_id": "reflector-ed32bab452ee",
+        "normal": [
+          0.13233731352153438,
+          0.9911135253502064,
+          -0.013446758635038554
+        ],
+        "offset_m": 3.0762183818901883,
+        "support_count": 16,
+        "array_placement_counts": [
+          4,
+          4,
+          6,
+          2
+        ],
+        "support_position_singular_values_m": [
+          3.6410857644281993,
+          1.0870805318563417,
+          0.7383852369161256
+        ],
+        "offset_std_m": 0.005797379290939845,
+        "normal_std_rad": 0.013484681471936884,
+        "rms_residual_m": 0.023782656622568465,
+        "candidate_indices": [
+          "flair-00:echo:03",
+          "flair-01:echo:04",
+          "flair-02:echo:07",
+          "flair-03:echo:08",
+          "flair-06:echo:04",
+          "flair-08:echo:07",
+          "flair-10:echo:07",
+          "flair-11:echo:05",
+          "flair-12:echo:04",
+          "flair-13:echo:04",
+          "flair-14:echo:06",
+          "flair-15:echo:07",
+          "flair-16:echo:06",
+          "flair-17:echo:07",
+          "flair-20:echo:06",
+          "flair-22:echo:06"
+        ]
+      }
+    ],
+    "plane_grid": [
+      {
+        "surface_id": "reflector-4d0e24126440",
+        "normal": [
+          0.9911274927842935,
+          -0.1286211179564806,
+          -0.03350971594546047
+        ],
+        "offset_m": 1.897742251135638,
+        "support_count": 22,
+        "array_placement_counts": [
+          6,
+          6,
+          5,
+          5
+        ],
+        "support_position_singular_values_m": [
+          4.350943925433152,
+          1.5358731162809123,
+          0.8535151184387106
+        ],
+        "offset_std_m": 0.010809588122528904,
+        "normal_std_rad": 0.02906298574675381,
+        "rms_residual_m": 0.014478049640523178,
+        "candidate_indices": [
+          "flair-00:echo:02",
+          "flair-01:echo:03",
+          "flair-02:echo:03",
+          "flair-03:echo:03",
+          "flair-04:echo:03",
+          "flair-05:echo:01",
+          "flair-06:echo:03",
+          "flair-07:echo:03",
+          "flair-08:echo:03",
+          "flair-09:echo:02",
+          "flair-10:echo:04",
+          "flair-11:echo:03",
+          "flair-12:echo:03",
+          "flair-14:echo:03",
+          "flair-15:echo:03",
+          "flair-16:echo:04",
+          "flair-17:echo:03",
+          "flair-18:echo:08",
+          "flair-20:echo:05",
+          "flair-21:echo:04",
+          "flair-22:echo:03",
+          "flair-23:echo:03"
+        ]
+      },
+      {
+        "surface_id": "reflector-6234ffa6eb13",
+        "normal": [
+          0.5183241406646176,
+          0.8545952245690785,
+          -0.031734639560138105
+        ],
+        "offset_m": 3.3104182212202855,
+        "support_count": 24,
+        "array_placement_counts": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.537415953562139,
+          1.6351789796953253,
+          0.9123641030954951
+        ],
+        "offset_std_m": 0.006571274290982563,
+        "normal_std_rad": 0.012749867184884682,
+        "rms_residual_m": 0.017267950790080873,
+        "candidate_indices": [
+          "flair-00:echo:06",
+          "flair-01:echo:08",
+          "flair-02:echo:08",
+          "flair-03:echo:10",
+          "flair-04:echo:07",
+          "flair-05:echo:04",
+          "flair-06:echo:08",
+          "flair-07:echo:07",
+          "flair-08:echo:09",
+          "flair-09:echo:08",
+          "flair-10:echo:08",
+          "flair-11:echo:06",
+          "flair-12:echo:08",
+          "flair-13:echo:07",
+          "flair-14:echo:08",
+          "flair-15:echo:10",
+          "flair-16:echo:09",
+          "flair-17:echo:09",
+          "flair-18:echo:12",
+          "flair-19:echo:08",
+          "flair-20:echo:09",
+          "flair-21:echo:07",
+          "flair-22:echo:08",
+          "flair-23:echo:08"
+        ]
+      },
+      {
+        "surface_id": "reflector-e38804ac3293",
+        "normal": [
+          -0.005484737952919019,
+          -0.05000467077135498,
+          0.9987339238008469
+        ],
+        "offset_m": -1.617427626272325,
+        "support_count": 23,
+        "array_placement_counts": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.328653859907533,
+          1.5881939278955166,
+          0.8835720623532943
+        ],
+        "offset_std_m": 0.005607898209302332,
+        "normal_std_rad": 0.022402956749041116,
+        "rms_residual_m": 0.019409071257344215,
+        "candidate_indices": [
+          "flair-01:echo:00",
+          "flair-02:echo:01",
+          "flair-03:echo:01",
+          "flair-04:echo:01",
+          "flair-05:echo:00",
+          "flair-06:echo:00",
+          "flair-07:echo:00",
+          "flair-08:echo:01",
+          "flair-09:echo:00",
+          "flair-10:echo:01",
+          "flair-11:echo:01",
+          "flair-12:echo:01",
+          "flair-13:echo:01",
+          "flair-14:echo:02",
+          "flair-15:echo:02",
+          "flair-16:echo:03",
+          "flair-17:echo:02",
+          "flair-18:echo:02",
+          "flair-19:echo:01",
+          "flair-20:echo:02",
+          "flair-21:echo:02",
+          "flair-22:echo:01",
+          "flair-23:echo:02"
+        ]
+      },
+      {
+        "surface_id": "reflector-57eb7074fc16",
+        "normal": [
+          -0.02089920958040679,
+          -0.0890469147529033,
+          0.9958081491993844
+        ],
+        "offset_m": 1.0128507085600835,
+        "support_count": 20,
+        "array_placement_counts": [
+          4,
+          6,
+          6,
+          4
+        ],
+        "support_position_singular_values_m": [
+          3.9453400254135897,
+          1.3619852640417014,
+          0.8296086162993128
+        ],
+        "offset_std_m": 0.0060610224876264515,
+        "normal_std_rad": 0.013986005837727047,
+        "rms_residual_m": 0.017236293729875313,
+        "candidate_indices": [
+          "flair-01:echo:01",
+          "flair-02:echo:02",
+          "flair-03:echo:02",
+          "flair-04:echo:02",
+          "flair-06:echo:01",
+          "flair-07:echo:01",
+          "flair-08:echo:02",
+          "flair-09:echo:01",
+          "flair-10:echo:02",
+          "flair-11:echo:02",
+          "flair-12:echo:00",
+          "flair-13:echo:00",
+          "flair-14:echo:01",
+          "flair-15:echo:01",
+          "flair-16:echo:01",
+          "flair-17:echo:01",
+          "flair-18:echo:01",
+          "flair-20:echo:01",
+          "flair-21:echo:01",
+          "flair-23:echo:01"
+        ]
+      },
+      {
+        "surface_id": "reflector-e27884995019",
+        "normal": [
+          0.1488012218238769,
+          0.9599755025447857,
+          -0.2372872329005657
+        ],
+        "offset_m": 3.1563833849250846,
+        "support_count": 20,
+        "array_placement_counts": [
+          4,
+          4,
+          6,
+          6
+        ],
+        "support_position_singular_values_m": [
+          3.951008350328324,
+          1.4998939126175397,
+          0.8571989355275995
+        ],
+        "offset_std_m": 0.005124819580565069,
+        "normal_std_rad": 0.01084698183489671,
+        "rms_residual_m": 0.0324077173729228,
+        "candidate_indices": [
+          "flair-00:echo:03",
+          "flair-01:echo:04",
+          "flair-02:echo:07",
+          "flair-03:echo:08",
+          "flair-08:echo:07",
+          "flair-09:echo:06",
+          "flair-10:echo:07",
+          "flair-11:echo:05",
+          "flair-12:echo:05",
+          "flair-13:echo:05",
+          "flair-14:echo:07",
+          "flair-15:echo:08",
+          "flair-16:echo:07",
+          "flair-17:echo:08",
+          "flair-18:echo:07",
+          "flair-19:echo:04",
+          "flair-20:echo:07",
+          "flair-21:echo:05",
+          "flair-22:echo:07",
+          "flair-23:echo:07"
+        ]
+      },
+      {
+        "surface_id": "reflector-c6d25e984baf",
+        "normal": [
+          -0.0579428113579064,
+          0.9982328681396399,
+          0.013182244787982982
+        ],
+        "offset_m": -5.400985415276245,
+        "support_count": 19,
+        "array_placement_counts": [
+          4,
+          5,
+          4,
+          6
+        ],
+        "support_position_singular_values_m": [
+          4.210009635119457,
+          1.5139144662846464,
+          0.749637129964006
+        ],
+        "offset_std_m": 0.011627501002790468,
+        "normal_std_rad": 0.018559725418902658,
+        "rms_residual_m": 0.030157788874866746,
+        "candidate_indices": [
+          "flair-01:echo:13",
+          "flair-03:echo:14",
+          "flair-04:echo:10",
+          "flair-05:echo:05",
+          "flair-06:echo:14",
+          "flair-07:echo:13",
+          "flair-09:echo:12",
+          "flair-10:echo:11",
+          "flair-11:echo:07",
+          "flair-12:echo:12",
+          "flair-13:echo:12",
+          "flair-15:echo:15",
+          "flair-17:echo:11",
+          "flair-18:echo:15",
+          "flair-19:echo:12",
+          "flair-20:echo:13",
+          "flair-21:echo:13",
+          "flair-22:echo:12",
+          "flair-23:echo:11"
+        ]
+      },
+      {
+        "surface_id": "reflector-fec77c73587b",
+        "normal": [
+          0.49826997440278353,
+          0.8530054680499326,
+          0.15526977840379946
+        ],
+        "offset_m": 3.5660668383107508,
+        "support_count": 14,
+        "array_placement_counts": [
+          1,
+          3,
+          5,
+          5
+        ],
+        "support_position_singular_values_m": [
+          2.9566519592513836,
+          1.1372481823397718,
+          0.5998999985778455
+        ],
+        "offset_std_m": 0.009214206325501077,
+        "normal_std_rad": 0.025029182510057726,
+        "rms_residual_m": 0.020673133746409972,
+        "candidate_indices": [
+          "flair-00:echo:09",
+          "flair-06:echo:10",
+          "flair-07:echo:09",
+          "flair-08:echo:11",
+          "flair-12:echo:09",
+          "flair-13:echo:09",
+          "flair-14:echo:10",
+          "flair-15:echo:12",
+          "flair-16:echo:11",
+          "flair-18:echo:14",
+          "flair-19:echo:09",
+          "flair-20:echo:11",
+          "flair-21:echo:09",
+          "flair-22:echo:10"
+        ]
+      },
+      {
+        "surface_id": "reflector-36d5804c3451",
+        "normal": [
+          0.679918256812642,
+          -0.3921207417770989,
+          0.6196389980634176
+        ],
+        "offset_m": 2.048885607739752,
+        "support_count": 15,
+        "array_placement_counts": [
+          3,
+          4,
+          3,
+          5
+        ],
+        "support_position_singular_values_m": [
+          3.050591128278559,
+          1.3159120283648964,
+          0.6832520495135467
+        ],
+        "offset_std_m": 0.006446755572156855,
+        "normal_std_rad": 0.023002218662615218,
+        "rms_residual_m": 0.025715187339489177,
+        "candidate_indices": [
+          "flair-00:echo:04",
+          "flair-02:echo:06",
+          "flair-03:echo:06",
+          "flair-06:echo:05",
+          "flair-07:echo:04",
+          "flair-08:echo:06",
+          "flair-09:echo:04",
+          "flair-13:echo:04",
+          "flair-14:echo:05",
+          "flair-15:echo:04",
+          "flair-18:echo:10",
+          "flair-19:echo:05",
+          "flair-20:echo:08",
+          "flair-22:echo:06",
+          "flair-23:echo:06"
+        ]
+      },
+      {
+        "surface_id": "reflector-c19403a9c27c",
+        "normal": [
+          0.15419916329195354,
+          0.9872935848880048,
+          -0.03839264615852495
+        ],
+        "offset_m": -2.3624373840215536,
+        "support_count": 16,
+        "array_placement_counts": [
+          5,
+          5,
+          5,
+          1
+        ],
+        "support_position_singular_values_m": [
+          3.706949657021504,
+          1.0735703201487872,
+          0.5456926229439155
+        ],
+        "offset_std_m": 0.011130506777213396,
+        "normal_std_rad": 0.02390374410101142,
+        "rms_residual_m": 0.027018668022636718,
+        "candidate_indices": [
+          "flair-00:echo:01",
+          "flair-02:echo:05",
+          "flair-03:echo:05",
+          "flair-04:echo:04",
+          "flair-05:echo:02",
+          "flair-06:echo:02",
+          "flair-08:echo:04",
+          "flair-09:echo:03",
+          "flair-10:echo:05",
+          "flair-11:echo:04",
+          "flair-12:echo:02",
+          "flair-13:echo:03",
+          "flair-14:echo:04",
+          "flair-16:echo:05",
+          "flair-17:echo:06",
+          "flair-21:echo:06"
+        ]
+      },
+      {
+        "surface_id": "reflector-f18f69103950",
+        "normal": [
+          0.039039032166705775,
+          0.8530232052676039,
+          0.5204107658787145
+        ],
+        "offset_m": -5.778492565748347,
+        "support_count": 17,
+        "array_placement_counts": [
+          5,
+          4,
+          4,
+          4
+        ],
+        "support_position_singular_values_m": [
+          3.6689144781381753,
+          1.38959548669134,
+          0.7379438857581536
+        ],
+        "offset_std_m": 0.01354453071475311,
+        "normal_std_rad": 0.0234007939848509,
+        "rms_residual_m": 0.0354443669639671,
+        "candidate_indices": [
+          "flair-00:echo:11",
+          "flair-02:echo:14",
+          "flair-03:echo:15",
+          "flair-04:echo:11",
+          "flair-05:echo:06",
+          "flair-08:echo:13",
+          "flair-09:echo:13",
+          "flair-10:echo:12",
+          "flair-11:echo:08",
+          "flair-12:echo:13",
+          "flair-13:echo:13",
+          "flair-14:echo:14",
+          "flair-17:echo:12",
+          "flair-19:echo:13",
+          "flair-20:echo:14",
+          "flair-21:echo:14",
+          "flair-23:echo:12"
+        ]
+      }
+    ]
+  }
+}

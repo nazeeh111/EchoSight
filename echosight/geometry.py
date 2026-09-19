@@ -69,3 +69,39 @@ def sphere_intersections(centers, radii):
     if z2 < -1e-8: return []
     base=a+x*ex+y*ey;z=np.sqrt(max(0,z2))
     return [base+z*ez,base-z*ez]
+
+
+def reflection_path(source, receiver, planes):
+    """Unfold and validate a specular path in the supplied reflection order.
+
+    Returns no path when an intersection lies outside its unfolded ray segment
+    or the reflected direction is inconsistent. Plane extents and occlusion
+    are unknown, so a returned path establishes geometric possibility only.
+    """
+    s,r=np.asarray(source,float),np.asarray(receiver,float)
+    images=[];q=s.copy();normalized=[]
+    for normal,offset in planes:
+        n=np.asarray(normal,float);length=np.linalg.norm(n)
+        if not np.isfinite(length) or length<1e-10:return None
+        n=n/length;d=float(offset)/length;normalized.append((n,d))
+        q=image_source(q,n,d);images.append(q)
+    if not images:return None
+    point=r.copy();reverse=[]
+    for (n,d),image in reversed(list(zip(normalized,images))):
+        denominator=n@(image-point)
+        if abs(denominator)<1e-10:return None
+        fraction=(d-n@point)/denominator
+        if not 1e-8<fraction<1-1e-8:return None
+        point=point+fraction*(image-point);reverse.append(point)
+    vertices=np.array([s]+list(reversed(reverse))+[r]);segments=np.diff(vertices,axis=0)
+    lengths=np.linalg.norm(segments,axis=1)
+    if np.any(lengths<1e-8):return None
+    directions=segments/lengths[:,None];errors=[]
+    for i,(n,d) in enumerate(normalized):
+        reflected=directions[i]-2*(directions[i]@n)*n
+        errors.append(float(np.linalg.norm(reflected-directions[i+1])))
+    error=max(errors)
+    if error>1e-6:return None
+    return dict(vertices_m=vertices.tolist(),length_m=float(lengths.sum()),
+                image_source_m=images[-1].tolist(),max_reflection_law_error=error,
+                extent_and_occlusion_status='unknown')

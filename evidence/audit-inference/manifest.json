@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-09-19T02:21:28.145646+00:00",
+  "baseline_commit": "1c773367f787a551aec0f15fc244b5fe9290dee3",
+  "evidence_class": "new development analytic synthetic candidates, not recordings or physical measurements",
+  "sha256": {
+    "echosight/inference.py": "ee1867b46a0c4403ceb109a91c1d8c61de5bf53ea5f38ea9d73d6c0164126e34",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "tests/test_inference.py": "819879ffe8b211ed698631ccb807619c62a7f0c0b623916edaa934c044e2a42e",
+    "docs/audit/INFERENCE.md": "66a62ccc5411f71debe33fa300e998bd07efc50718b64ba4e50a84ceb1a73ff2",
+    "work/audit-inference/composition_probe.py": "e037ff4e083a803a1384d390c885b9a1d8b753739446fee8e8e962215fed1ad8",
+    "work/audit-inference/point_model.py": "6f32c8f01733de4a7df0102e0f9729c5debe5097ea682633c4e8ac94947b988c",
+    "work/audit-inference/probe.py": "2722fb2b4ddfbe20e97cae0341ecf459c5ac510bdb60347737ae8dd4d2bb43ba",
+    "work/audit-inference/baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "work/audit-inference/baseline/geometry.py": "93a9fd33ae4dac5a47679799a0b7ca47d33f4c3dce18ba3dad428b46c846f245",
+    "work/audit-inference/baseline/inference.py": "9714b2e7c6ef343193ad68e0f88908cf4568b26bb08de4c369bc384a1edbf513",
+    "work/audit-inference/before-final/summary.json": "5a9f05eddff82581c8cc1d667fba37f3f7682fb70de78d51beacd36c8b42d7c3",
+    "work/audit-inference/before/summary.json": "c99ae10576ae9e3ff9fe8b2116629b37ad2276d4b5feb9790d423f3a0c457f11",
+    "work/audit-inference/final/summary.json": "e60af510350d354fbf8e3f8a8c05e8893caadb954a6c5bb7f4ee22662f860aa2",
+    "work/audit-inference/after/summary.json": "3a1aa575eda6ff7f351a45bf9f7b19c30b5289d4d1500b5226cee9f8fcc411b7",
+    "work/audit-inference/after-final/summary.json": "74cf29cd68eeb389616339a78853c200ac93761b969fd467f481ab5b2e4214ad",
+    "work/audit-inference/point-model-comparison.json": "2af7c346c9836547b446deae66dd9eff63b10e9248401bab35f2d2f734c25c8c",
+    "work/audit-inference/final-tests.txt": "985c3e5ee3e61350cf628e3d28792a341e8dd1d2a36e62266376f970b14369f7",
+    "work/audit-inference/flair_diagnosis.py": "5ca4ed590fde45c4c2e347a00176856d36ec573c0d835666a2f25e7cf99eba73",
+    "work/audit-inference/flair-diagnosis.json": "3addf528f7604b90f3da2c107661f4831e13a98e79b441556bc4006678cbd4f9",
+    "work/audit-inference/invariant-model-analysis.json": "7b2afa2f2bee68b4421a44b7210db816f474d8759323447e467718eac8a9f121",
+    "work/audit-inference/final/run_manifest.json": "aac80307a3fec8bb5eca7d4582c8a50442cb6f04a7e54b018d667c4a4e0bace2"
+  }
+}

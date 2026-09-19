@@ -28,6 +28,36 @@ class StorageTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory(); self.root = Path(self.tmp.name)
         self.wav = self.root / 'input.wav'; self.wav.write_bytes(wav_bytes())
     def tearDown(self): self.tmp.cleanup()
+    def test_joint_source_speed_covariance_preserves_cross_correlation(self):
+        covariance = [[.0004, 0, 0, .002], [0, .0009, 0, 0],
+                      [0, 0, .0016, 0], [.002, 0, 0, .25]]
+        spec = {'effective_speed_m_s': 343.2, 'source_effective_speed_covariance': covariance}
+        self.assertEqual(validate_session(spec)['source_effective_speed_covariance'], covariance)
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            updated = store.update_calibration(sid, {'expected_revision': 0,
+                'calibration': dict(spec, source_position_m=[1, 2, 1.4])})
+            self.assertEqual(updated['effective_speed_m_s'], 343.2)
+            self.assertEqual(updated['source_effective_speed_covariance'][0][3], .002)
+            with self.assertRaises(ValueError):
+                store.update_calibration(sid, {'expected_revision': 1, 'calibration': {'effective_speed_m_s': 344.}})
+    def test_joint_calibration_rejects_invalid_matrices_and_incomplete_pairs(self):
+        valid = [[1., 0, 0, 0], [0, 1., 0, 0], [0, 0, 1., 0], [0, 0, 0, 1.]]
+        bad_matrices = [None, [[1.]], [[1., 0], [0, 1.]],
+            [[1., 0, 0, 2], [0, 1., 0, 0], [0, 0, 1., 0], [2, 0, 0, 1.]],
+            [[1., 1, 0, 0], [0, 1., 0, 0], [0, 0, 1., 0], [0, 0, 0, 1.]],
+            [[1., 1+1e-9, 0, 0], [1., 1., 0, 0], [0, 0, 1., 0], [0, 0, 0, 1.]],
+            [[float('nan'), 0, 0, 0], *valid[1:]],
+            [[True, 0, 0, 0], *valid[1:]], [['1', 0, 0, 0], *valid[1:]]]
+        for matrix in bad_matrices:
+            with self.subTest(matrix=matrix), self.assertRaises(ValueError):
+                validate_session({'effective_speed_m_s': 343., 'source_effective_speed_covariance': matrix})
+        for spec in ({'effective_speed_m_s': 343.}, {'source_effective_speed_covariance': valid},
+                     {'effective_speed_m_s': None, 'source_effective_speed_covariance': None}):
+            with self.subTest(spec=spec), self.assertRaises(ValueError): validate_session(spec)
+        for speed in (249.9, 460.1, float('inf'), True):
+            with self.subTest(speed=speed), self.assertRaises(ValueError):
+                validate_session({'effective_speed_m_s': speed, 'source_effective_speed_covariance': valid})
     def test_lossless_and_decode(self):
         meta = import_recording(self.wav, self.root / 'raw')
         self.assertEqual(Path(meta['recording_path']).read_bytes(), wav_bytes())
@@ -314,6 +344,55 @@ class StorageTests(unittest.TestCase):
         snapshot = self.root / 'store' / 'jobs' / (jid + '.input.json')
         with SessionStore(self.root / 'store'):
             self.assertNotIn('status', json.loads(snapshot.read_text()))
+    def test_failed_final_commit_preserves_previous_completed_result(self):
+        from unittest.mock import patch
+        import echosight.storage as storage
+        def wait(store, jid):
+            for _ in range(200):
+                job = store.get_job(jid)
+                if job['status'] in ('completed', 'failed'): return job
+                time.sleep(.005)
+            self.fail('job did not settle')
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            first = store.start_job(sid, lambda *args, **kw: {'status': 'no_result', 'marker': 'previous'})
+            self.assertEqual(wait(store, first['job_id'])['status'], 'completed')
+            write = storage._write_json
+            def fail_commit(path, data, *args, **kwargs):
+                if Path(path).parent.name == 'jobs' and data.get('status') == 'completed':
+                    raise OSError('injected final-state failure')
+                return write(path, data, *args, **kwargs)
+            with patch('echosight.storage._write_json', side_effect=fail_commit):
+                second = store.start_job(sid, lambda *args, **kw: {'status': 'no_result', 'marker': 'failed-new'})
+                self.assertEqual(wait(store, second['job_id'])['status'], 'failed')
+            self.assertEqual(store.get_result(sid)['marker'], 'previous')
+            exported = store.export_session(sid)
+            with zipfile.ZipFile(exported) as z:
+                self.assertEqual(json.loads(z.read('result.json'))['marker'], 'previous')
+        with SessionStore(self.root / 'store') as store:
+            self.assertEqual(store.get_result(sid)['marker'], 'previous')
+    def test_archive_hash_uses_the_parsed_snapshot_when_source_is_replaced(self):
+        import hashlib
+        import os
+        from unittest.mock import patch
+        import echosight.storage as storage
+        with SessionStore(self.root / 'source') as store:
+            sid = store.create_session({'session_id': 'original'})['session_id']
+            store.add_recording(sid, self.wav, {'capture_id': 'phone'})
+            source = store.export_session(sid, self.root / 'input.zip')
+            other = store.create_session({'session_id': 'replacement'})['session_id']
+            replacement = store.export_session(other, self.root / 'replacement.zip')
+        expected = hashlib.sha256(source.read_bytes()).hexdigest()
+        real_import = storage.import_recording
+        def replace_source(path, destination, **kwargs):
+            imported = real_import(path, destination, **kwargs)
+            os.replace(replacement, source)
+            return imported
+        with SessionStore(self.root / 'replay') as store:
+            with patch('echosight.storage.import_recording', side_effect=replace_source):
+                loaded = store.import_archive(source)
+            self.assertEqual(loaded['session_id'], sid)
+            self.assertEqual(loaded['replay']['archive_sha256'], expected)
     def test_jobs_cancel_and_recover(self):
         def process(session, cancel=None, progress=None):
             progress(0.2, 'running')

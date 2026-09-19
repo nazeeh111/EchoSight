@@ -60,6 +60,23 @@ class PipelineTests(unittest.TestCase):
             self.assertTrue(all(o["status"] == "rejected" for o in result["observations"]))
             self.assertIn("checksum", str(result["observations"]))
 
+    def test_joint_calibration_reaches_recording_to_geometry_boundary(self):
+        from echosight.simulation import simulate_session
+        from echosight.pipeline import process_session
+        from echosight.storage import load_session
+        with tempfile.TemporaryDirectory() as temp:
+            session = load_session(simulate_session(temp, seed=1, capture_count=12))
+            session['sound_speed_m_s'] = 349.0
+            session['effective_speed_m_s'] = 343.0
+            session['source_effective_speed_covariance'] = [
+                [.0001,0,0,.0001],[0,.0001,0,0],[0,0,.0001,0],[.0001,0,0,.36]]
+            result = process_session(session)
+            self.assertEqual(len(result['surfaces']),6)
+            self.assertEqual(result['acquisition']['effective_speed_m_s'],343.0)
+            self.assertEqual(result['acquisition']['sound_speed_m_s'],349.0)
+            self.assertEqual(result['acquisition']['source_effective_speed_covariance'],
+                             session['source_effective_speed_covariance'])
+
 
 if __name__ == "__main__":
     unittest.main()

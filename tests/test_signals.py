@@ -72,6 +72,23 @@ class SignalTests(unittest.TestCase):
         self.assertEqual(len(result['candidates']),1)
         self.assertLess(abs(result['direct_arrival_receiver_s']-.16),.00008)
 
+    def test_large_affine_rates_refine_template_without_relaxing_residual_gate(self):
+        # A chirp correlated at the wrong rate splits peaks. Retry uses the
+        # coarse fitted rate, then must satisfy the original timing residual.
+        for alpha in [.9951,.996,.997,1.002,1.003,1.004,1.0049]:
+            with self.subTest(alpha=alpha):
+                y,fs,probe=waveform(alpha=alpha)
+                result=process_recording(y,fs,probe,'r1')
+                self.assertEqual(result['status'],'ok',result['diagnostics'])
+                self.assertLess(abs(result['clock']['alpha']-alpha),25e-6)
+                self.assertLessEqual(result['clock']['pilot_residual_max_s'],.0001)
+                for expected in [.012345,.026789]:
+                    self.assertLess(min(abs(c['delay_s']-expected) for c in result['candidates']),.00008)
+        for warp in [.0002,.0004,.0015]:
+            y,fs,probe=waveform(warp=warp)
+            result=process_recording(y,fs,probe,'r1')
+            self.assertEqual(result['status'],'rejected')
+
     def test_nonaffine_warp_is_rejected(self):
         y, fs, probe = waveform(warp=.0015)
         result = process_recording(y, fs, probe, 'r1')

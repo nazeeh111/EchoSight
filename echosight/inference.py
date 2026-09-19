@@ -5,7 +5,7 @@ import time
 import numpy as np
 from scipy.optimize import least_squares, linear_sum_assignment
 from scipy.linalg import solve_triangular
-from .geometry import image_source, plane_from_image, excess_delay, reflection_point, support_mesh, sphere_intersections
+from .geometry import image_source, plane_from_image, excess_delay, reflection_point, support_mesh, sphere_intersections, reflection_path
 
 MAX_CANDIDATES = 18
 MAX_VIEWS = 32
@@ -26,6 +26,33 @@ def _check(cancel):
     if cancel and cancel(): raise _Cancelled()
 
 
+
+def _effective_speed(session):
+    """Metres per nominal source-buffer second, not necessarily physical c."""
+    if 'effective_speed_m_s' in session:
+        return float(session['effective_speed_m_s'])
+    return float(session.get('sound_speed_m_s',343))/float(session.get('source_clock_scale',1))
+
+
+def _calibration_covariance(session,v):
+    """Joint [source x,y,z,effective speed] covariance without double counting."""
+    if 'effective_speed_m_s' in session or 'source_effective_speed_covariance' in session:
+        if 'effective_speed_m_s' not in session or 'source_effective_speed_covariance' not in session:
+            raise ValueError('Effective speed and joint calibration covariance must be supplied together')
+        covariance=np.asarray(session['source_effective_speed_covariance'],float)
+        if covariance.shape!=(4,4) or not np.all(np.isfinite(covariance)):
+            raise ValueError('Joint calibration covariance must be finite 4 by 4')
+        if not np.allclose(covariance,covariance.T,rtol=1e-8,atol=1e-12):
+            raise ValueError('Joint calibration covariance must be symmetric')
+        covariance=(covariance+covariance.T)/2
+        if np.linalg.eigvalsh(covariance).min() < -1e-12:
+            raise ValueError('Joint calibration covariance must be positive semidefinite')
+        return covariance
+    source_std=float(session.get('source_position_std_m',.01))
+    kappa=float(session.get('source_clock_scale',1))
+    vstd=np.hypot(float(session.get('sound_speed_std_m_s',.6))/kappa,v*float(session.get('source_clock_std_ppm',100))*1e-6)
+    return np.diag([source_std**2]*3+[vstd**2])
+
 def _empty(session,method):
     return dict(schema_version='1.0',session_id=session.get('session_id'),status='no_result',method=method,
                 surfaces=[],hypotheses=[],diagnostics=[],guidance=[],dimensions=[],provenance=[],
@@ -37,8 +64,9 @@ def _empty(session,method):
 def _prepare(session, observations, out):
     try:
         s=np.asarray(session['source_position_m'],float)
-        v=float(session.get('sound_speed_m_s',343))/float(session.get('source_clock_scale',1))
-        if s.shape!=(3,) or not np.all(np.isfinite(s)) or not 250<v<450: raise ValueError()
+        v=_effective_speed(session)
+        if s.shape!=(3,) or not np.all(np.isfinite(s)) or not 250<=v<=460: raise ValueError()
+        _calibration_covariance(session,v)
         for key,default in (('source_position_std_m',.01),('sound_speed_std_m_s',.6),('source_clock_std_ppm',100)):
             std=float(session.get(key,default))
             if not np.isfinite(std) or std<0:raise ValueError()
@@ -189,15 +217,15 @@ def _assign(qs,s,r,v,rows):
 
 def _covariance(qs,assignments,s,r,v,rows,session):
     m=len(assignments);cov=np.zeros((m,m));J=np.zeros((m,3*len(qs)));source_grad=[];scale_grad=[];receiver_grad=[];residual=[]
-    source_std=float(session.get('source_position_std_m',.01));c=float(session.get('sound_speed_m_s',343));kappa=float(session.get('source_clock_scale',1))
-    vstd=np.hypot(float(session.get('sound_speed_std_m_s',.6))/kappa,v*float(session.get('source_clock_std_ppm',100))*1e-6)
+    calibration_covariance=_calibration_covariance(session,v)
     for a,(k,i,l) in enumerate(assignments):
         q=qs[k];n,d=plane_from_image(s,q);u=(r[i]-s)/np.linalg.norm(r[i]-s);g=(r[i]-q)/np.linalg.norm(r[i]-q);A=np.eye(3)-2*np.outer(n,n)
         mu=float(excess_delay(s,r[i],q,v));p=rows[i]['peaks'][l]
         residual.append(p['delay_s']-mu);cov[a,a]=max(float(p.get('delay_std_s',1e-5)),1e-6)**2
         source_grad.append((u-A@g)/v);receiver_grad.append((g-u)/v);scale_grad.append(-mu/v)
         J[a,3*k:3*k+3]=-g/v
-    sg=np.array(source_grad);vg=np.array(scale_grad);cov+=source_std**2*(sg@sg.T)+vstd**2*np.outer(vg,vg)
+    calibration_jacobian=np.column_stack((np.array(source_grad),np.array(scale_grad)))
+    cov+=calibration_jacobian@calibration_covariance@calibration_jacobian.T
     for a,(_,i,_) in enumerate(assignments):
         for b,(_,j,_) in enumerate(assignments):
             if i==j:
@@ -243,7 +271,7 @@ def _surface(q,k,assignments,covariance,s,r,v,rows,session):
         jac[:,j]=(np.r_[np_,dp]-np.r_[nm,dm])/(2*eps)
     pcov=jac@block@jac.T
     sid=hashlib.sha256(('|'.join(sorted(e['capture_id']+':'+e['candidate_id'] for e in evidence))).encode()).hexdigest()[:12]
-    return dict(surface_id='reflector-'+sid,kind='unclassified_planar_reflector',normal=n.tolist(),offset_m=d,image_source_m=q.tolist(),support=evidence,vertices_m=vertices,triangles=triangles,extent_status='unknown',mesh_semantics='reflection_support_convex_hull_not_physical_edges',uncertainty=dict(local_information_rank=local_rank,rank_deficient=local_rank<3,offset_std_m=float(np.sqrt(max(0,pcov[3,3]))),normal_angular_std_rad=float(np.sqrt(max(0,np.trace(pcov[:3,:3])))) if local_rank==3 else None,image_source_covariance_m2=block.tolist() if local_rank==3 else None,conditional_on='associations and first-order point-source model'),confidence=dict(kind='evidence_summary_not_probability',supporting_views=len(evidence),rms_residual_m=float(v*np.sqrt(np.mean([e['residual_s']**2 for e in evidence])))))
+    return dict(surface_id='reflector-'+sid,kind='unclassified_planar_reflector',model_status='conditional_first_order_hypothesis',normal=n.tolist(),offset_m=d,image_source_m=q.tolist(),support=evidence,vertices_m=vertices,triangles=triangles,extent_status='unknown',mesh_semantics='reflection_support_convex_hull_not_physical_edges',uncertainty=dict(local_information_rank=local_rank,rank_deficient=local_rank<3,offset_std_m=float(np.sqrt(max(0,pcov[3,3]))),normal_angular_std_rad=float(np.sqrt(max(0,np.trace(pcov[:3,:3])))) if local_rank==3 else None,image_source_covariance_m2=block.tolist() if local_rank==3 else None,conditional_on='associations and first-order point-source model',excluded_model_errors=['reflection_order','multiple_emitters','unmodeled_transducer_response']),confidence=dict(kind='evidence_summary_not_probability',supporting_views=len(evidence),rms_residual_m=float(v*np.sqrt(np.mean([e['residual_s']**2 for e in evidence])))))
 
 
 
@@ -263,6 +291,93 @@ def _local_plane_intersections(source, qa, qb):
     # planes and their mean-normal direction fixed (sign immaterial to norm).
     reference_gradient=na/float(na@direction)-nb/float(nb@direction)
     return abs(tb-ta),direction,points,reference_gradient
+
+
+def _compose_image(source,qa,qb):
+    na,da=plane_from_image(source,qa);nb,db=plane_from_image(source,qb)
+    return image_source(image_source(source,na,da),nb,db)
+
+
+def _second_order_explanations(qs,assignments,parameter_cov,s,r,v,rows,session,cancel):
+    """Find alternate two-bounce explanations; do not prove a plane absent."""
+    explanations=[];source_covariance=_calibration_covariance(session,v)[:3,:3]
+    source_std=float(np.sqrt(max(0,np.linalg.eigvalsh(source_covariance).max())))
+    for target in range(len(qs)):
+        _check(cancel)
+        supported=[(i,l) for k,i,l in assignments if k==target]
+        for a,b in combinations([k for k in range(len(qs)) if k!=target],2):
+            orders=[]
+            for first,second in ((a,b),(b,a)):
+                composite=_compose_image(s,qs[first],qs[second]);delta=qs[target]-composite
+                # A broad prefilter avoids numerical derivatives for distant
+                # models. The actual gate below uses shared joint uncertainty.
+                blocks=[parameter_cov[3*k:3*k+3,3*k:3*k+3] for k in (target,first,second)]
+                radius=.03+6*np.sqrt(sum(max(0,float(np.trace(x))) for x in blocks))+8*source_std
+                if np.linalg.norm(delta)>radius:continue
+                jac=np.zeros((3,3*len(qs)));jac[:,3*target:3*target+3]=np.eye(3);eps=1e-5
+                for local,k in enumerate((first,second)):
+                    for axis in range(3):
+                        plus=[qs[first].copy(),qs[second].copy()];minus=[qs[first].copy(),qs[second].copy()]
+                        plus[local][axis]+=eps;minus[local][axis]-=eps
+                        jac[:,3*k+axis]-=(_compose_image(s,*plus)-_compose_image(s,*minus))/(2*eps)
+                sj=np.zeros((3,3))
+                for axis in range(3):
+                    sp=s.copy();sm=s.copy();sp[axis]+=eps;sm[axis]-=eps
+                    sj[:,axis]=-(_compose_image(sp,qs[first],qs[second])-_compose_image(sm,qs[first],qs[second]))/(2*eps)
+                # Source/reference and inferred geometry are correlated, but
+                # separate cross terms are not stored. 2(A+B) bounds their sum
+                # covariance for arbitrary cross correlation; no posterior claim.
+                covariance=2*(jac@parameter_cov@jac.T+sj@source_covariance@sj.T)+np.eye(3)*1e-12
+                distance=float(delta@np.linalg.solve(covariance,delta))
+                if distance<=16.27:
+                    orders.append((first,second,composite,distance))
+            if not orders:continue
+            evidence=[]
+            for i,l in supported:
+                choices=[]
+                for first,second,composite,distance in orders:
+                    planes=[plane_from_image(s,qs[k]) for k in (first,second)]
+                    path=reflection_path(s,r[i],planes)
+                    if path is None:continue
+                    mu=(path['length_m']-np.linalg.norm(r[i]-s))/v
+                    residual=rows[i]['t'][l]-mu
+                    if abs(residual)*v<=GATE_M:
+                        choices.append((abs(residual),dict(capture_id=rows[i]['o']['capture_id'],candidate_id=rows[i]['peaks'][l]['candidate_id'],reflection_order_indices=[first,second],predicted_delay_s=float(mu),residual_s=float(residual),path=path)))
+                if choices:evidence.append(min(choices,key=lambda item:item[0])[1])
+            if len(evidence)>=7 and len(evidence)>=.8*len(supported):
+                explanations.append(dict(target_index=target,parent_indices=[a,b],support=evidence,
+                    image_source_difference_m=min(float(np.linalg.norm(qs[target]-x[2])) for x in orders),
+                    standardized_image_difference=min(x[3] for x in orders),
+                    uncertainty_semantics='Conservative shared-covariance compatibility gate, not model probability.',
+                    conclusion='First-order reflector and higher-order path interpretations remain competing explanations.'))
+                break
+    return explanations
+
+
+def _source_discrimination_guidance(explanation,qs,s,r,v):
+    target=explanation['target_index'];a,b=explanation['parent_indices']
+    planes=[plane_from_image(s,q) for q in qs];candidates=[]
+    for axis in range(3):
+        for sign in (-1.,1.):
+            moved=s+sign*.35*np.eye(3)[axis]
+            first_image=image_source(moved,*planes[target]);differences=[]
+            for receiver in r:
+                if reflection_point(moved,receiver,*planes[target]) is None:continue
+                paths=[reflection_path(moved,receiver,[planes[i] for i in order]) for order in ((a,b),(b,a))]
+                paths=[path for path in paths if path is not None]
+                if not paths:continue
+                first_length=np.linalg.norm(receiver-first_image)
+                differences.append(min(abs(first_length-path['length_m'])/v for path in paths))
+            candidates.append(dict(source_position_m=moved.tolist(),predicted_median_delay_separation_s=float(np.median(differences)) if differences else 0.,geometrically_valid_receiver_count=len(differences)))
+    candidates.sort(key=lambda x:-x['predicted_median_delay_separation_s'])
+    winner=candidates[0]
+    return dict(action='move_source_for_reflection_order_discrimination',
+        suggested_source_position_m=winner['source_position_m'],
+        predicted_median_delay_separation_s=winner['predicted_median_delay_separation_s'],
+        receiver_only_discrimination_possible=False if explanation['image_source_difference_m']<=1e-5 else None,
+        candidates=candidates,requires='New source pose/configuration calibration and a new session; same coordinate frame.',
+        reason='Exactly coincident first-order and double-bounce image sources give identical delays at every receiver for the current fixed source.',
+        limitation='Conditional geometric prediction; source directivity, finite extent, occlusion and audibility are not established.')
 
 def _run(session,observations,cancel,progress,method):
     start=time.perf_counter();out=_empty(session,method)
@@ -328,6 +443,18 @@ def _run(session,observations,cancel,progress,method):
             if len(candidates)>=8:break
         if candidates:
             out['hypotheses'].append(dict(hypothesis_id='unconfirmed_candidates',surfaces=candidates,reason='Alternative individual fits; not independent resolved structure. Candidate evidence may overlap other hypotheses.'))
+        higher_order=_second_order_explanations(qs,assign,pcov,s,r,v,rows,session,cancel)
+        if higher_order and out['surfaces']:
+            all_surfaces=out['surfaces'];uncertain={item['target_index'] for item in higher_order}
+            for item in higher_order:
+                item['target_surface_id']=all_surfaces[item['target_index']]['surface_id']
+                item['parent_surface_ids']=[all_surfaces[k]['surface_id'] for k in item['parent_indices']]
+            out['higher_order_explanations']=higher_order
+            out['hypotheses'].append(dict(hypothesis_id='first_order_reflector_interpretation',surfaces=all_surfaces,reason='A genuine reflector remains possible, including one coincident with a double-bounce image.'))
+            out['hypotheses'].append(dict(hypothesis_id='fewer_surfaces_with_second_order_paths',surfaces=[surface for k,surface in enumerate(all_surfaces) if k not in uncertain],higher_order_explanations=higher_order,reason='Physically admissible double-bounce paths explain these additional images without asserting extra physical planes. Unknown finite extents and occlusion remain.'))
+            out['surfaces']=[];out['status']='ambiguous'
+            out['diagnostics'].append('first_order_vs_higher_order_ambiguity')
+            out['guidance'].append(_source_discrimination_guidance(higher_order[0],qs,s,r,v))
         # Receiver-only coplanarity is sufficient for fixed-source image mirror
         # symmetry. Each surface must be checked against its own supporting views;
         # an elevated receiver with no matched echo cannot resolve that ambiguity.
@@ -373,7 +500,7 @@ def _run(session,observations,cancel,progress,method):
                         plus[pair_index][axis]+=eps;minus[pair_index][axis]-=eps
                         grad[3*idx+axis]=(_local_plane_intersections(s,*plus)[0]-_local_plane_intersections(s,*minus)[0])/(2*eps)
                 geometry_std=float(np.sqrt(max(0,grad@pcov@grad)))
-                reference_std=float(session.get('source_position_std_m',.01))*float(np.linalg.norm(reference_gradient))
+                reference_std=float(np.sqrt(max(0,reference_gradient@_calibration_covariance(session,v)[:3,:3]@reference_gradient)))
                 # Fitted plane geometry and reference pose share calibration
                 # errors. Their cross-covariance is not retained separately:
                 # sum marginal standard deviations to bound any correlation.
@@ -421,10 +548,9 @@ def recommend_next_view(session, result, candidate_positions_m):
     a reflector is audible. Positions are proposals for the operator to survey.
     """
     s=np.asarray(session['source_position_m'],float)
-    v=float(session.get('sound_speed_m_s',343))/float(session.get('source_clock_scale',1))
-    cstd=float(session.get('sound_speed_std_m_s',.6))/float(session.get('source_clock_scale',1))
-    vstd=np.hypot(cstd,v*float(session.get('source_clock_std_ppm',100))*1e-6)
-    sstd=float(session.get('source_position_std_m',.01));rstd=.01;timing=5e-5
+    v=_effective_speed(session)
+    calibration_covariance=_calibration_covariance(session,v)
+    rstd=.01;timing=5e-5
     groups=[h['image_sources_m'] for h in result.get('hypotheses',[]) if h.get('image_sources_m')]
     pairs=[]
     if len(groups)>=2:
@@ -444,7 +570,8 @@ def recommend_next_view(session, result, candidate_positions_m):
                 gr.append((g-u)/v);gs.append((u-(np.eye(3)-2*np.outer(n,n))@g)/v)
             if len(values)!=2:continue
             difference=abs(values[0]-values[1])
-            variance=2*timing**2+sstd**2*float(np.sum((gs[0]-gs[1])**2))+rstd**2*float(np.sum((gr[0]-gr[1])**2))+(vstd*difference/v)**2
+            calibration_gradient=np.r_[gs[0]-gs[1],-(values[0]-values[1])/v]
+            variance=2*timing**2+float(calibration_gradient@calibration_covariance@calibration_gradient)+rstd**2*float(np.sum((gr[0]-gr[1])**2))
             sigma=np.sqrt(variance);separation.append(difference/sigma)
             details.append(dict(delay_separation_s=difference,conditional_std_s=float(sigma)))
         score=min(separation) if separation else 0.

@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "dataset": "FLAIR",
+  "version": "Zenodo17037517v1",
+  "source_url": "https://zenodo.org/api/records/17037517/files/data_FLAIR.mat/content",
+  "license": "CC-BY-4.0",
+  "citation": "Sundstrom, Elvander, Jakobsson, FLAIR: Room Impulse Response Dataset with Laser-Calibrated Room Geometry,2025,doi:10.5281/zenodo.17037517",
+  "source_total_bytes": 115821339,
+  "source_reported_md5": "41e06a449ff39d271e32b3b82ab29341",
+  "source_full_checksum_verified": false,
+  "integrity_limit": "Partial compressed prefixes do not include zlib trailing integrity checks or full-file MD5. Exact retrieved ranges are locallySHA256hashed, header shapes are validated; upstream authenticity not independently certified.",
+  "ranges": [
+    {
+      "start": 0,
+      "length": 128,
+      "sha256": "d777091e5e79cf26c47d88ae5686b2db1dbe3fcb4526a6d07acee2165f71a9ef"
+    },
+    {
+      "start": 78492320,
+      "length": 50,
+      "sha256": "7c922165458c8f905ec6db939b3dcd09ab1d82c5fd04a08d08c8135ae119651b"
+    },
+    {
+      "start": 78492370,
+      "length": 47,
+      "sha256": "bea24dfe8e5d27ff7809cc19a424132dbf74898ab41f870d131aa16c19f5460e"
+    },
+    {
+      "start": 78492417,
+      "length": 3185,
+      "sha256": "e575915fe8102beba7545a68b19e7a5862ea3cdb098c73006fbba3325110d6e0"
+    },
+    {
+      "start": 115821225,
+      "length": 114,
+      "sha256": "74c0d482fab5e4e8df504ea69e91d439de7361a795798a2115d30529d823be05"
+    },
+    {
+      "start": 40249812,
+      "length": 65536,
+      "sha256": "491a3f2ba9b4a00111cc41982035b9e05818483b61a87456a55ca2e417bce9b1"
+    },
+    {
+      "start": 78495610,
+      "length": 262144,
+      "sha256": "51f05597371b02ecc40eba2cbb8a992ae59331a3abe7fa6b59505d26656a8eae"
+    },
+    {
+      "start": 78757754,
+      "length": 262144,
+      "sha256": "375758e9677aba332d46f680463d06d768ea8b80520f5c329fb54747f284bca8"
+    },
+    {
+      "start": 79019898,
+      "length": 262144,
+      "sha256": "54de663f9efe5a61834d1c3ae5a7c304918014f9eabc62fccfb526842b8ef891"
+    },
+    {
+      "start": 79282042,
+      "length": 262144,
+      "sha256": "52959ac2e2957a8f06b6975d69b88a8766940390123af4f13ba59c7226042269"
+    },
+    {
+      "start": 79544186,
+      "length": 262144,
+      "sha256": "10b5deb97892da0269dc0487330d9b2e4b28427840b2188c1de94da574da5fdc"
+    },
+    {
+      "start": 79806330,
+      "length": 262144,
+      "sha256": "839e6d930a37d40fbefe3e9cc5726d5e28cba842ff203aa85cecb99215992f5e"
+    },
+    {
+      "start": 80068474,
+      "length": 262144,
+      "sha256": "23223eb3a3467d7cec47b01bc0ab694c24672505874e9d14f2a0ac54e04baef3"
+    },
+    {
+      "start": 80330618,
+      "length": 262144,
+      "sha256": "9a7ad219ea80a23b74cfc5a51fd750c50ff6f324f4a96fc1747662589433aa17"
+    },
+    {
+      "start": 80592762,
+      "length": 262144,
+      "sha256": "ea74eebb020cd629eb2cd016c91299591e9e0df313763d3df534737abdd9c01c"
+    },
+    {
+      "start": 80854906,
+      "length": 262144,
+      "sha256": "be7a8ba7e1dc2d3a2ec1fc061f0c2e3d8f480fbb9e47a8b4cf42d3e19749d7c3"
+    },
+    {
+      "start": 81117050,
+      "length": 262144,
+      "sha256": "2b5d6376a633682c7e05b7dd80ce74bb3a3207950f5bade7f3634a6c1d8e2150"
+    },
+    {
+      "start": 81379194,
+      "length": 262144,
+      "sha256": "6c9ef17441d8f1ae59b4f1eb11d5231b64ed257b6dea65e5f8132bad071deb9e"
+    },
+    {
+      "start": 81641338,
+      "length": 262144,
+      "sha256": "4982c6d12cc2178a85a8651bc71f8be0352b2bc6eddf212078fc7bd46e8b728c"
+    },
+    {
+      "start": 81903482,
+      "length": 262144,
+      "sha256": "07c4dc90ba6ece660784622e0e8e3e520ddade2efbaf3e8eaaf2d6d6afb6d567"
+    },
+    {
+      "start": 82165626,
+      "length": 262144,
+      "sha256": "cf56676bf55083c548266ba6bb45406cf8d00b90108d1e529d0209d805f929c0"
+    },
+    {
+      "start": 82427770,
+      "length": 262144,
+      "sha256": "4c635f7df945aaeeca98f66a3663cd0532d91b37bc3c1a360ed386937eeff769"
+    },
+    {
+      "start": 82689914,
+      "length": 262144,
+      "sha256": "a35b4a0edf2d8e867338bae0dc9af8164f0f78361dc991283cad40716c345eeb"
+    },
+    {
+      "start": 82952058,
+      "length": 262144,
+      "sha256": "95f1fd594cc643a6073c5449f489af4c2591150576fc78bf03dd294ebe194c57"
+    },
+    {
+      "start": 83214202,
+      "length": 262144,
+      "sha256": "d289f3a5102eaeb10b4f98482c647e630620311b76ed24970868ca1578c89862"
+    },
+    {
+      "start": 83476346,
+      "length": 262144,
+      "sha256": "49f2a5ee37d0f264d95553082b7bccb662cfed3cccbf6469e6bccadf5dd407f1"
+    },
+    {
+      "start": 83738490,
+      "length": 262144,
+      "sha256": "1897f9f154b3396d928358547aa7b4efdbba9478a3f4c5f901213bbf941c7939"
+    },
+    {
+      "start": 84000634,
+      "length": 262144,
+      "sha256": "70b91607ca25c0475c570cbeadc8d92501a8aa453ace05cb6a20c1d5716fb2d0"
+    },
+    {
+      "start": 84262778,
+      "length": 262144,
+      "sha256": "c76e69d46705efbd18b9892b8ac977e2932fbfbda59ef4be64debad4611ff6fc"
+    },
+    {
+      "start": 84524922,
+      "length": 262144,
+      "sha256": "76f67b6b5e2365159183553227d1529f63de1315dfe5c5faf6c940989e32572e"
+    },
+    {
+      "start": 84787066,
+      "length": 262144,
+      "sha256": "879cdb9b2c0bfb8972913bf79688c2e3212f042eae6a5090771ddca8b671127f"
+    },
+    {
+      "start": 85049210,
+      "length": 262144,
+      "sha256": "c0825697aaf03aefef38f4d3b515b8f2dd22489058af52406b6c6323177a1b46"
+    },
+    {
+      "start": 85311354,
+      "length": 262144,
+      "sha256": "6d7c96f9d3039ee147141cd6917715c96f75a3641ba51506041e10b40d75fd66"
+    },
+    {
+      "start": 85573498,
+      "length": 262144,
+      "sha256": "2e94e1eb89d36cb4e0be6222a814c82476cd01ba94693148ac01def2d85ece87"
+    },
+    {
+      "start": 85835642,
+      "length": 262144,
+      "sha256": "e7541f265e0596c1f00fc18f04114b71fc1b83e3a805866f0c6275cf48f0d5c4"
+    },
+    {
+      "start": 86097786,
+      "length": 262144,
+      "sha256": "339495ed893dcded462acf97c546b803663d9012d316cc455c7808fb8fd85f8a"
+    },
+    {
+      "start": 86359930,
+      "length": 262144,
+      "sha256": "1012d7ff762741ab2b89d5f539107cb551a5ac10285698aaac238652fa28ebb8"
+    },
+    {
+      "start": 86622074,
+      "length": 262144,
+      "sha256": "2859c90e6086bfa4fb3daaaf6b7bdbc0778abca45a941e75b342916e62842816"
+    }
+  ],
+  "bytes_transferred": 8457668,
+  "source_index": 0,
+  "receiver_indices_zero_based": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    14,
+    15,
+    18,
+    21,
+    24,
+    27,
+    29,
+    30,
+    33,
+    36,
+    39,
+    42,
+    44,
+    45,
+    48,
+    51,
+    54,
+    57,
+    59
+  ],
+  "point_count": 4982,
+  "selection_policy": "Fixed firstsource, six microphones per firstfour arrayplacements, before fitting. Laserprefix only for independent evaluation, never fitted acousticinput.",
+  "subset_sha256": "0e9767b0dc351fb7c9bd5e6ed4dde09f9cc3252805e143cd52f2a5da0efb86d8"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "frozen_at": "2026-09-19 before generating or processing any stress waveform",
+  "scope": "New independent forward generator; not a rerun or replacement of original held-out seeds.",
+  "cases": [
+    {"family":"higher_order", "seed":601},
+    {"family":"higher_order", "seed":607},
+    {"family":"overlap", "seed":613},
+    {"family":"overlap", "seed":617},
+    {"family":"finite_panel", "seed":619},
+    {"family":"finite_panel", "seed":631},
+    {"family":"edge_scattering_surrogate", "seed":641},
+    {"family":"edge_scattering_surrogate", "seed":643},
+    {"family":"distributed_source", "seed":647},
+    {"family":"distributed_source", "seed":653},
+    {"family":"source_nonlinearity", "seed":659},
+    {"family":"nonaffine_clock", "seed":661},
+    {"family":"diffuse_null", "seed":673}
+  ],
+  "matching": {"maximum_normal_error_deg":5.0,"maximum_offset_error_m":0.15},
+  "common": {"maximum_false_surfaces":0,"maximum_runtime_seconds":60,"require_finite_serialization":true},
+  "family_requirements": {
+    "higher_order":{"minimum_matched_surfaces":4,"minimum_horizontal_surfaces":1},
+    "overlap":{"minimum_matched_surfaces":3,"minimum_horizontal_surfaces":1},
+    "finite_panel":{"minimum_matched_surfaces":3,"minimum_horizontal_surfaces":1,"report_panel_visibility_and_finite_support":true},
+    "edge_scattering_surrogate":{"minimum_matched_surfaces":3,"minimum_horizontal_surfaces":1,"not_wave_equation_diffraction_validation":true},
+    "distributed_source":{"allow_honest_abstention":true,"report_shared_source_model_violation":true},
+    "source_nonlinearity":{"allow_honest_abstention":true},
+    "nonaffine_clock":{"maximum_definitive_surfaces":0,"require_diagnostics":true},
+    "diffuse_null":{"maximum_definitive_surfaces":0}
+  },
+  "comparison":"Identical extracted observations to main image-source mapper, direct-plane grid competitor, and earliest-echo baseline; report inference-only and complete processing time separately.",
+  "interpretation":"All cases and failures retained. No threshold adjustment using these outcomes. The edge-scattering family is a stated path surrogate, not a validated diffraction solver. Measured spatial validation is a distinct gate."
+}

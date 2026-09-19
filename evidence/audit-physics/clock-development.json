@@ -1,0 +1,1000 @@
+{
+  "evidence_class": "simulation_development_not_frozen_holdout",
+  "baseline_signals_sha256": "fbd65ae7d98ca73c62b19dd29433a78db38598d60393feec6761ee5f4e85668b",
+  "current_signals_sha256": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+  "rows": [
+    {
+      "kind": "affine",
+      "alpha": 0.9951,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9951216846260879,
+        "runtime_s": 0.005825332998938393,
+        "candidates": 2,
+        "max_delay_error_s": 7.095404704060559e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9951216846260879,
+        "runtime_s": 0.005053000000771135,
+        "candidates": 2,
+        "max_delay_error_s": 7.095404704060559e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.9951,
+      "noise": 0.003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9951076140603062,
+        "runtime_s": 0.0047630830013076775,
+        "candidates": 2,
+        "max_delay_error_s": 1.5480979528286615e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9951076140603062,
+        "runtime_s": 0.004774374996486586,
+        "candidates": 2,
+        "max_delay_error_s": 1.5480979528286615e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.9951,
+      "noise": 0.01,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9951076345118234,
+        "runtime_s": 0.005016540999349672,
+        "candidates": 2,
+        "max_delay_error_s": 1.5424367604943007e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9951076345118234,
+        "runtime_s": 0.004828166995139327,
+        "candidates": 2,
+        "max_delay_error_s": 1.5424367604943007e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.996,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 0.995908662248046,
+        "runtime_s": 0.0032215419996646233,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9959998549836195,
+        "runtime_s": 0.00805483299336629,
+        "candidates": 2,
+        "max_delay_error_s": 8.023386495747964e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.996,
+      "noise": 0.003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 0.9959086569537754,
+        "runtime_s": 0.0032080000019050203,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9959998457486684,
+        "runtime_s": 0.0076597089937422425,
+        "candidates": 2,
+        "max_delay_error_s": 8.130391844687196e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.996,
+      "noise": 0.01,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 0.995908642977912,
+        "runtime_s": 0.003325874997244682,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9959998218266705,
+        "runtime_s": 0.008156083000358194,
+        "candidates": 2,
+        "max_delay_error_s": 8.271667665468718e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.997,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9969999595085733,
+        "runtime_s": 0.0051188750003348105,
+        "candidates": 2,
+        "max_delay_error_s": 1.3539784007674666e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9969999595085733,
+        "runtime_s": 0.004933208001602907,
+        "candidates": 2,
+        "max_delay_error_s": 1.3539784007674666e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.997,
+      "noise": 0.003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9969999656487948,
+        "runtime_s": 0.005106583004817367,
+        "candidates": 2,
+        "max_delay_error_s": 1.358873733241922e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9969999656487948,
+        "runtime_s": 0.004769125000166241,
+        "candidates": 2,
+        "max_delay_error_s": 1.358873733241922e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.997,
+      "noise": 0.01,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9969999842918027,
+        "runtime_s": 0.005264833998808172,
+        "candidates": 2,
+        "max_delay_error_s": 1.379240778691393e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9969999842918027,
+        "runtime_s": 0.0050285830002394505,
+        "candidates": 2,
+        "max_delay_error_s": 1.379240778691393e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.998,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9980012989555209,
+        "runtime_s": 0.004871458004345186,
+        "candidates": 2,
+        "max_delay_error_s": 5.06029066951047e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9980012989555209,
+        "runtime_s": 0.004968791996361688,
+        "candidates": 2,
+        "max_delay_error_s": 5.06029066951047e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.998,
+      "noise": 0.003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9980012884473195,
+        "runtime_s": 0.004725082995719276,
+        "candidates": 2,
+        "max_delay_error_s": 5.04084473966146e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9980012884473195,
+        "runtime_s": 0.004747209000925068,
+        "candidates": 2,
+        "max_delay_error_s": 5.04084473966146e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 0.998,
+      "noise": 0.01,
+      "baseline": {
+        "status": "ok",
+        "alpha": 0.9980012611987079,
+        "runtime_s": 0.0050289999999222346,
+        "candidates": 2,
+        "max_delay_error_s": 4.990604399440074e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 0.9980012611987079,
+        "runtime_s": 0.004764917001011781,
+        "candidates": 2,
+        "max_delay_error_s": 4.990604399440074e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.0000000010693486,
+        "runtime_s": 0.005263874998490792,
+        "candidates": 2,
+        "max_delay_error_s": 8.93896995497051e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0000000010693486,
+        "runtime_s": 0.00508862500282703,
+        "candidates": 2,
+        "max_delay_error_s": 8.93896995497051e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0,
+      "noise": 0.003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.0000000059532401,
+        "runtime_s": 0.005146167000930291,
+        "candidates": 2,
+        "max_delay_error_s": 9.050568356636091e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0000000059532401,
+        "runtime_s": 0.004823834002309013,
+        "candidates": 2,
+        "max_delay_error_s": 9.050568356636091e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0,
+      "noise": 0.01,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.000000018615614,
+        "runtime_s": 0.005575584000325762,
+        "candidates": 2,
+        "max_delay_error_s": 9.252113686956942e-07
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.000000018615614,
+        "runtime_s": 0.005356125002435874,
+        "candidates": 2,
+        "max_delay_error_s": 9.252113686956942e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.002,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0021183804591682,
+        "runtime_s": 0.0030225410009734333,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0019996645633087,
+        "runtime_s": 0.007699083005718421,
+        "candidates": 2,
+        "max_delay_error_s": 1.2743838968404253e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.002,
+      "noise": 0.003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0021184585812808,
+        "runtime_s": 0.003367167002579663,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0019996636833954,
+        "runtime_s": 0.008244791999459267,
+        "candidates": 2,
+        "max_delay_error_s": 1.2832346734190786e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.002,
+      "noise": 0.01,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0021186554848718,
+        "runtime_s": 0.0032848749979166314,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0019996612785136,
+        "runtime_s": 0.00811954199889442,
+        "candidates": 2,
+        "max_delay_error_s": 1.29215588696302e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.003,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0029392804032626,
+        "runtime_s": 0.003097332999459468,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0030004381356123,
+        "runtime_s": 0.0078715830022702,
+        "candidates": 2,
+        "max_delay_error_s": 3.788233406860908e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.003,
+      "noise": 0.003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0029392453415593,
+        "runtime_s": 0.0031355419996543787,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.003000437233361,
+        "runtime_s": 0.007943084005091805,
+        "candidates": 2,
+        "max_delay_error_s": 4.071568785336127e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.003,
+      "noise": 0.01,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0029391554068694,
+        "runtime_s": 0.0030848750029690564,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0030004348938786,
+        "runtime_s": 0.007659084003535099,
+        "candidates": 2,
+        "max_delay_error_s": 5.047598660434804e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.004,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0039559045601885,
+        "runtime_s": 0.0032659170028637163,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0040004051525424,
+        "runtime_s": 0.007744291004200932,
+        "candidates": 2,
+        "max_delay_error_s": 4.063645444932207e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.004,
+      "noise": 0.003,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.0039559281244392,
+        "runtime_s": 0.003083457995671779,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0040004039727275,
+        "runtime_s": 0.007964208998600952,
+        "candidates": 2,
+        "max_delay_error_s": 3.996147224204216e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.004,
+      "noise": 0.01,
+      "baseline": {
+        "status": "rejected",
+        "alpha": 1.003955983699628,
+        "runtime_s": 0.003048749997105915,
+        "candidates": 0,
+        "max_delay_error_s": null
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0040004009646526,
+        "runtime_s": 0.007921125004941132,
+        "candidates": 2,
+        "max_delay_error_s": 4.194609539640015e-07
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0049,
+      "noise": 0.0003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.0048975342767588,
+        "runtime_s": 0.005243375002464745,
+        "candidates": 2,
+        "max_delay_error_s": 1.125922077632388e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0048975342767588,
+        "runtime_s": 0.0048790829969220795,
+        "candidates": 2,
+        "max_delay_error_s": 1.125922077632388e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0049,
+      "noise": 0.003,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.0048975569076168,
+        "runtime_s": 0.004839832996367477,
+        "candidates": 2,
+        "max_delay_error_s": 1.1359832430106465e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.0048975569076168,
+        "runtime_s": 0.004726917002699338,
+        "candidates": 2,
+        "max_delay_error_s": 1.1359832430106465e-06
+      }
+    },
+    {
+      "kind": "affine",
+      "alpha": 1.0049,
+      "noise": 0.01,
+      "baseline": {
+        "status": "ok",
+        "alpha": 1.004897614088487,
+        "runtime_s": 0.00523787499696482,
+        "candidates": 2,
+        "max_delay_error_s": 1.1595571340703575e-06
+      },
+      "refined": {
+        "status": "ok",
+        "alpha": 1.004897614088487,
+        "runtime_s": 0.005329500003426801,
+        "candidates": 2,
+        "max_delay_error_s": 1.1595571340703575e-06
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 0,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 1,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 2,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 3,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 4,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 5,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 6,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 7,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 8,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "warp",
+      "index": 9,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "nonaffine_clock_or_motion"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 0,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 1,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 2,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 3,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 4,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 5,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 6,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 7,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 8,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "missing",
+      "index": 9,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 0,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 1,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 2,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 3,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 4,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 5,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 6,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 7,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 8,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    },
+    {
+      "kind": "noise",
+      "index": 9,
+      "baseline": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      },
+      "refined": {
+        "status": "rejected",
+        "diagnostics": [
+          "pilots_not_found"
+        ]
+      }
+    }
+  ]
+}

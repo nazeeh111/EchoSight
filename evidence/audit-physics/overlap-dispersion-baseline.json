@@ -1,0 +1,581 @@
+[
+  {
+    "kind": "overlap",
+    "gap": 5e-05,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012003863196189096,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.33899653991839035,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 5e-05,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011998472616427927,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.6610034168497553,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0001,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012000497304183556,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4697490617914845,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0001,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999419231608952,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5302509108685979,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.00015,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.01199861898406472,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5019527244763804,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.00015,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012001602727106956,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4980472590563784,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0002,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999601426903586,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4997261487213575,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0002,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012000353255787691,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5002738191767165,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.00025,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.01200078932809388,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5217938655622754,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012371330952776132,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.0731038867655173,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.00025,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999207963347283,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.47820612084703534,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.01237401341548514,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.08060088385720345,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0003,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012000031031276556,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5185515016916804,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012354674480342744,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.1703932792864838,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0003,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999966261190593,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4814484549855209,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012356782455835939,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.14517160261902737,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0004,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.01200028798207888,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4860070190229485,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012398117268581279,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.33671487364059893,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0004,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999723077899205,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5139929537360833,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012399441316548116,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.36814480548529566,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0005,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999648313023921,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4998423118823636,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012500549852779064,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.3998031329285587,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.0005,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012000350835859045,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.5001576575260807,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.01249945223374638,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4001968792839374,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.001,
+    "sign": 1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.011999989426023516,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.4993105717915295,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.01300001653479343,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.3991377523474874,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "overlap",
+    "gap": 0.001,
+    "sign": -1,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.01200001054750779,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.500689401443548,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      },
+      {
+        "delay_s": 0.012999983538973008,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.400862254429475,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:01"
+      }
+    ]
+  },
+  {
+    "kind": "lowpass_echo",
+    "hz": 2500,
+    "status": "ok",
+    "candidates": []
+  },
+  {
+    "kind": "lowpass_echo",
+    "hz": 4000,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012118432040783783,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.07920117674419032,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "lowpass_echo",
+    "hz": 6000,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012079584953642638,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.1819848457049505,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "lowpass_echo",
+    "hz": 10000,
+    "status": "ok",
+    "candidates": [
+      {
+        "delay_s": 0.012045666837859449,
+        "delay_std_s": 3.846153846153846e-05,
+        "amplitude": 0.3448592970383403,
+        "repeat_support": 7,
+        "repeat_count": 7,
+        "candidate_id": "r:echo:00"
+      }
+    ]
+  },
+  {
+    "kind": "rate",
+    "alpha": 0.996,
+    "status": "rejected",
+    "clock": {
+      "alpha": 0.9959086652055046,
+      "alpha_std": 0.00011394743600828096,
+      "relative_rate_ppm": -4091.3347944954157,
+      "intercept_s": 0.05979810628443013,
+      "intercept_includes_propagation": true,
+      "pilot_residual_rms_s": 0.00013264969441299746,
+      "pilot_residual_max_s": 0.00023565768035882506,
+      "pilot_arrivals_receiver_s": [
+        0.15939285091830982,
+        0.3785690712735725,
+        0.5973531278150438,
+        0.8167519452327479,
+        1.0358727295589765,
+        1.2550488830328956,
+        1.4738322350527533
+      ],
+      "pilot_residuals_s": [
+        3.8781133292198344e-06,
+        8.019212338089554e-05,
+        -0.00023565768035882506,
+        6.325339213419934e-05,
+        8.413137315188557e-05,
+        0.00016037850186001457,
+        -0.00015617582349336523
+      ],
+      "correction": "affine_waveform_resampling",
+      "absolute_source_rate_calibrated": false
+    },
+    "diagnostics": [
+      {
+        "code": "nonaffine_clock_or_motion",
+        "message": "Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible."
+      }
+    ]
+  },
+  {
+    "kind": "rate",
+    "alpha": 0.998,
+    "status": "ok",
+    "clock": {
+      "alpha": 0.998001299966041,
+      "alpha_std": 1.7896045123542957e-06,
+      "relative_rate_ppm": -1998.7000339589667,
+      "intercept_s": 0.059894537525491016,
+      "intercept_includes_propagation": true,
+      "pilot_residual_rms_s": 1.3431499022201134e-07,
+      "pilot_residual_max_s": 1.5969326577769394e-07,
+      "pilot_arrivals_receiver_s": [
+        0.15969481085223677,
+        0.37925479382135835,
+        0.5988151055665377,
+        0.8183755403772628,
+        1.0379359577401939,
+        1.2574962346039813,
+        1.477056235536207
+      ],
+      "pilot_residuals_s": [
+        1.4333014164424895e-07,
+        -1.5969326577769394e-07,
+        -1.339406154876599e-07,
+        1.487758061191613e-08,
+        1.4624798261309024e-07,
+        1.3711924107262519e-07,
+        -1.4794106251159178e-07
+      ],
+      "correction": "affine_waveform_resampling",
+      "absolute_source_rate_calibrated": false
+    },
+    "diagnostics": [
+      {
+        "code": "direct_path_assumed",
+        "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+      }
+    ]
+  },
+  {
+    "kind": "rate",
+    "alpha": 1.002,
+    "status": "rejected",
+    "clock": {
+      "alpha": 1.0021183766680444,
+      "alpha_std": 0.00013565812651341724,
+      "relative_rate_ppm": 2118.376668044375,
+      "intercept_s": 0.05987048701284239,
+      "intercept_includes_propagation": true,
+      "pilot_residual_rms_s": 0.0001579237730749535,
+      "pilot_residual_max_s": 0.00025867871386076047,
+      "pilot_arrivals_receiver_s": [
+        0.15996595277953657,
+        0.38039977111704876,
+        0.6011849864691701,
+        0.8216245513824144,
+        1.0420641382820273,
+        1.2625038697660949,
+        1.4826199031676046
+      ],
+      "pilot_residuals_s": [
+        -0.0001163719001102681,
+        -0.0001485964295678266,
+        0.00017057605558368216,
+        0.0001440981018583365,
+        0.00011764213450127237,
+        9.133075159928339e-05,
+        -0.00025867871386076047
+      ],
+      "correction": "affine_waveform_resampling",
+      "absolute_source_rate_calibrated": false
+    },
+    "diagnostics": [
+      {
+        "code": "nonaffine_clock_or_motion",
+        "message": "Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible."
+      }
+    ]
+  },
+  {
+    "kind": "rate",
+    "alpha": 1.004,
+    "status": "rejected",
+    "clock": {
+      "alpha": 1.0039559080995413,
+      "alpha_std": 0.00013013778549217866,
+      "relative_rate_ppm": 3955.908099541272,
+      "intercept_s": 0.05989735995548789,
+      "intercept_includes_propagation": true,
+      "pilot_residual_rms_s": 0.0001514973752973886,
+      "pilot_residual_max_s": 0.0003445665505755757,
+      "pilot_arrivals_receiver_s": [
+        0.16029626699587782,
+        0.3810455253037265,
+        0.6019147384539035,
+        0.8232484166617148,
+        1.043817924718347,
+        1.2645671767093998,
+        1.4854369019350055
+      ],
+      "pilot_residuals_s": [
+        3.3162304357847727e-06,
+        -0.00011772524361464143,
+        -0.00011881187533657744,
+        0.0003445665505755757,
+        4.3774825308595666e-05,
+        -7.727296553761143e-05,
+        -7.78475218310426e-05
+      ],
+      "correction": "affine_waveform_resampling",
+      "absolute_source_rate_calibrated": false
+    },
+    "diagnostics": [
+      {
+        "code": "nonaffine_clock_or_motion",
+        "message": "Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible."
+      }
+    ]
+  }
+]

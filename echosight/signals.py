@@ -146,15 +146,48 @@ def process_recording(samples, sample_rate_hz, probe, capture_id, sound_speed_m_
     design=np.column_stack([starts,np.ones(len(starts))])
     alpha,intercept=np.linalg.lstsq(design,train,rcond=None)[0]
     residual=train-design@np.array([alpha,intercept])
+    acquisition_refined=False
+    # A rate-mismatched chirp can split one correlation maximum into sidelobes.
+    # Only retry a failed affine fit, using its bounded coarse rate to match
+    # the pulse duration. The corrected train must pass the same residual gate.
+    if np.max(np.abs(residual))>max(2/fs,.00010) and abs(alpha-1)<=.005:
+        stretched=np.interp(np.arange(round(p['duration_s']*fs*alpha))/(fs*alpha),
+                            np.arange(len(pulse))/src_fs,pulse)
+        refined_corr=correlate(y,stretched,mode='valid',method='fft')
+        refined_envelope=np.abs(refined_corr)
+        refined_floor=float(np.median(refined_envelope))
+        refined_spread=float(np.median(np.abs(refined_envelope-refined_floor)))
+        refined_threshold=max(float(refined_envelope.max())*.10,
+                              refined_floor+15*max(refined_spread,1e-12))
+        refined_peaks,_=find_peaks(refined_envelope,height=refined_threshold,
+                                  distance=max(1,round(fs*.0003)))
+        refined_train=[]
+        for expected in alpha*starts+intercept:
+            choices=refined_peaks[np.abs(refined_peaks/fs-expected)<.001]
+            if not len(choices):
+                break
+            # Coarse fit is within the local window; choose its closest arrival.
+            chosen=int(choices[np.argmin(np.abs(choices/fs-expected))])
+            refined_train.append(_peak_time(refined_envelope,chosen)/fs)
+        if len(refined_train)==len(starts):
+            next_train=np.asarray(refined_train)
+            next_alpha,next_intercept=np.linalg.lstsq(design,next_train,rcond=None)[0]
+            next_residual=next_train-design@np.array([next_alpha,next_intercept])
+            if np.max(np.abs(next_residual))<np.max(np.abs(residual)):
+                train=next_train;alpha=next_alpha;intercept=next_intercept;residual=next_residual
+                template=stretched;corr=refined_corr;envelope=refined_envelope
+                floor=refined_floor;spread=refined_spread;peaks=refined_peaks
+                acquisition_refined=True
     rms=float(np.sqrt(np.mean(residual**2)))
     slope_std=max(0.1/fs,rms)/float(np.sqrt(np.sum((starts-starts.mean())**2)))
     result['clock']=dict(alpha=float(alpha),alpha_std=float(slope_std),relative_rate_ppm=float((alpha-1)*1e6),
         intercept_s=float(intercept),intercept_includes_propagation=True,
         pilot_residual_rms_s=rms,pilot_residual_max_s=float(np.max(np.abs(residual))),
         pilot_arrivals_receiver_s=train.tolist(),pilot_residuals_s=residual.tolist(),
-        correction='affine_waveform_resampling',absolute_source_rate_calibrated=False)
+        correction='affine_waveform_resampling',absolute_source_rate_calibrated=False,
+        acquisition_template_rate_refined=acquisition_refined)
     if abs(alpha-1)>.005:
-        return reject('clock_rate_out_of_bounds','Relative rate exceeds validated 5000 ppm range.')
+        return reject('clock_rate_out_of_bounds','Relative rate exceeds the configured 5000 ppm bound.')
     if np.max(np.abs(residual))>max(2/fs,.00010):
         return reject('nonaffine_clock_or_motion','Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible.')
     # Detect a weak earlier repeatable arrival without silently promoting it to direct.

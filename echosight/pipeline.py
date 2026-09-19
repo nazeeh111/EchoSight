@@ -105,7 +105,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     # annotations and scene truth are deliberately excluded from this boundary.
     keys = ("schema_version", "session_id", "sound_speed_m_s", "sound_speed_std_m_s",
             "source_clock_scale", "source_clock_std_ppm", "source_position_m",
-            "source_position_std_m", "probe")
+            "source_position_std_m", "effective_speed_m_s", "source_effective_speed_covariance", "probe")
     fitting_session = {key: session[key] for key in keys if key in session}
     fitting_session["coordinate_frame_id"] = session.get("coordinate_frame_id", "session:" + session["session_id"])
     fitting_session["captures"] = [{key: capture[key] for key in

@@ -78,6 +78,20 @@ def validate_session(spec):
         ('source_position_std_m',.01,0,10)):
         s.setdefault(key, default); _number(s[key], key, low, high)
     if s.get('source_position_m') is not None: _position(s['source_position_m'], 'source_position_m')
+    joint_keys = {'effective_speed_m_s', 'source_effective_speed_covariance'}
+    if joint_keys & s.keys():
+        if not joint_keys <= s.keys(): raise ValueError('effective speed and joint source-speed covariance must appear together')
+        _number(s['effective_speed_m_s'], 'effective_speed_m_s', 250, 460)
+        rows = s['source_effective_speed_covariance']
+        if not isinstance(rows, list) or len(rows) != 4 or any(not isinstance(row, list) or len(row) != 4 for row in rows):
+            raise ValueError('source_effective_speed_covariance must be a 4 by 4 matrix')
+        if any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) for row in rows for v in row):
+            raise ValueError('source_effective_speed_covariance must contain finite numbers')
+        covariance = np.asarray(rows, dtype=float)
+        if not np.allclose(covariance, covariance.T, rtol=1e-8, atol=1e-12):
+            raise ValueError('source_effective_speed_covariance must be symmetric')
+        if np.linalg.eigvalsh(covariance / 2 + covariance.T / 2).min() < -1e-12:
+            raise ValueError('source_effective_speed_covariance must be positive semidefinite')
     captures = s.setdefault('captures', [])
     if not isinstance(captures, list) or len(captures) > MAX_CAPTURES: raise ValueError('captures must be a list of at most 32 captures')
     seen = set()
@@ -283,7 +297,7 @@ def _archived_result_issues(result, session):
             issues.append('recording_manifest_mismatch')
     keys = ('schema_version', 'session_id', 'sound_speed_m_s', 'sound_speed_std_m_s',
             'source_clock_scale', 'source_clock_std_ppm', 'source_position_m',
-            'source_position_std_m', 'probe')
+            'source_position_std_m', 'probe', 'effective_speed_m_s', 'source_effective_speed_covariance')
     acquisition = {key: session[key] for key in keys if key in session}
     acquisition['coordinate_frame_id'] = session.get('coordinate_frame_id', 'session:' + session['session_id'])
     acquisition['captures'] = [{key: c[key] for key in
@@ -313,6 +327,7 @@ class SessionStore:
             self._ownership_file.close()
             raise RuntimeError('store already open by another process') from exc
         self._lock = threading.RLock(); self._events = {}; self._closed = False
+        self._current_jobs = {}; completed_order = {}
         self._max_jobs = max_jobs
         self._pool = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix='echosight')
         for p in (self.root / 'jobs').glob('*.json'):
@@ -322,6 +337,13 @@ class SessionStore:
             if job.get('status') not in TERMINAL:
                 job.update(status='interrupted', error={'code': 'process_interrupted', 'message': 'Restart detected. Raw recordings retained; start a new job.'}, updated_at=time.time())
                 _write_json(p, job)
+            elif job.get('status') == 'completed':
+                sid = job.get('session_id'); jid = job.get('job_id')
+                if not isinstance(sid, str) or not isinstance(jid, str): continue
+                result_path = self.root / 'jobs' / (jid + '.result.json')
+                order = (job.get('updated_at', 0), job.get('created_at', 0), jid)
+                if result_path.is_file() and (sid not in completed_order or order > completed_order[sid]):
+                    self._current_jobs[sid] = jid; completed_order[sid] = order
     def __enter__(self): return self
     def __exit__(self, *args): self.close()
     def close(self):
@@ -391,9 +413,13 @@ class SessionStore:
             raise ValueError('expected_revision must be a nonnegative integer')
         calibration = changes.get('calibration', {})
         allowed = {'source_position_m', 'source_position_std_m', 'sound_speed_m_s',
-            'sound_speed_std_m_s', 'source_clock_scale', 'source_clock_std_ppm', 'probe', 'coordinate_frame_id'}
+            'sound_speed_std_m_s', 'source_clock_scale', 'source_clock_std_ppm', 'probe', 'coordinate_frame_id',
+            'effective_speed_m_s', 'source_effective_speed_covariance'}
         if not isinstance(calibration, dict) or set(calibration) - allowed:
             raise ValueError('unsupported calibration fields')
+        joint_keys = {'effective_speed_m_s', 'source_effective_speed_covariance'}
+        if joint_keys & calibration.keys() and not joint_keys <= calibration.keys():
+            raise ValueError('patch effective speed and joint source-speed covariance together')
         capture_changes = changes.get('captures', [])
         if not isinstance(capture_changes, list) or len(capture_changes) > MAX_CAPTURES:
             raise ValueError('capture calibration changes must be a bounded list')
@@ -457,8 +483,10 @@ class SessionStore:
                     self._update_job(jid, status='cancelled')
                     return
                 _write_json(self.root / 'jobs' / (jid + '.result.json'), result, MAX_RESULT_BYTES)
-                _write_json(self._session_dir(session['session_id']) / 'result.json', result, MAX_RESULT_BYTES)
+                # The atomic completed job record is the publication commit point.
+                # Until it succeeds, prior completed results remain authoritative.
                 self._update_job(jid, status='completed', progress=1.)
+                self._current_jobs[session['session_id']] = jid
         except Exception as exc:
             self._update_job(jid, status='cancelled' if event.is_set() else 'failed', error={'code': 'processing_failed', 'message': str(exc)[:1000]})
         finally:
@@ -474,18 +502,23 @@ class SessionStore:
             if jid in self._events and job['status'] not in TERMINAL:
                 self._events[jid].set(); self._update_job(jid, cancellation_requested=True)
             return self.get_job(jid)
+    def _current_result_path(self, sid):
+        jid = self._current_jobs.get(sid)
+        if jid is None: raise KeyError('result not available')
+        path = self.root / 'jobs' / (jid + '.result.json')
+        if not path.is_file(): raise KeyError('result not available')
+        return path
     def get_result(self, sid):
         with self._lock:
-            s = self._raw_session(sid); p = self._session_dir(sid) / 'result.json'
-            if not p.exists(): raise KeyError('result not available')
+            s = self._raw_session(sid); p = self._current_result_path(sid)
             if p.stat().st_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
             result = json.loads(p.read_text()); result['stale'] = result.get('session_revision') != s['revision']
             return result
     def export_session(self, sid, destination=None):
         with self._lock:
             s = self._raw_session(sid); directory = self._session_dir(sid)
-            result = directory / 'result.json'
-            if not result.exists(): result = directory / 'archived-result.json'
+            try: result = self._current_result_path(sid); result_name = 'result.json'
+            except KeyError: result = directory / 'archived-result.json'; result_name = 'archived-result.json'
             target = Path(destination) if destination else self.root / 'exports' / (sid + '.zip')
             target.parent.mkdir(parents=True, exist_ok=True)
             fd, tmp = tempfile.mkstemp(prefix='.export-', dir=target.parent); os.close(fd)
@@ -494,7 +527,7 @@ class SessionStore:
                     z.writestr('session.json', json.dumps(s, allow_nan=False))
                     if result.exists():
                         if result.stat().st_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
-                        z.write(result, result.name)
+                        z.write(result, result_name)
                     for relative in sorted({c['recording_path'] for c in s['captures']}):
                         path = (directory / relative).resolve()
                         if not path.is_relative_to(directory): raise ValueError('recording path escapes session')
@@ -504,10 +537,9 @@ class SessionStore:
                 if os.path.exists(tmp): os.unlink(tmp)
             return target
     def import_archive(self, path):
-        path = Path(path)
-        if path.stat().st_size > MAX_EXPORT_BYTES: raise ValueError('archive exceeds resource limit')
+        archive_bytes = _recording_bytes(path, MAX_EXPORT_BYTES)
         try:
-            with zipfile.ZipFile(path) as z:
+            with zipfile.ZipFile(io.BytesIO(archive_bytes)) as z:
                 infos = z.infolist(); names = [i.filename for i in infos]
                 if len(infos) > MAX_CAPTURES + 2 or len(names) != len(set(names)): raise ValueError('duplicate or too many archive entries')
                 if sum(i.file_size for i in infos) > MAX_EXPANDED_ARCHIVE_BYTES: raise ValueError('expanded archive exceeds resource limit')
@@ -537,7 +569,7 @@ class SessionStore:
                             actual = import_recording(stage / relative, stage / 'raw')
                             if Path(actual['recording_path']).relative_to(stage).as_posix() != relative: raise ValueError('raw extension does not match recording format')
                             cap.update(actual); cap['recording_path'] = relative
-                        s['replay'] = {'kind': 'archive_reload', 'archive_sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'loaded_at': time.time()}
+                        s['replay'] = {'kind': 'archive_reload', 'archive_sha256': hashlib.sha256(archive_bytes).hexdigest(), 'loaded_at': time.time()}
                         result_name = next((name for name in ('result.json', 'archived-result.json') if name in names), None)
                         if result_name is not None:
                             if z.getinfo(result_name).file_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')

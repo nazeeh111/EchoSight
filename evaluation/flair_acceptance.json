@@ -1,0 +1,11 @@
+{
+ "schema_version":"1.0",
+ "frozen_before_acoustic_processing":"2026-09-19",
+ "dataset":"FLAIR Zenodo17037517v1 source0",
+ "receiver_indices_zero_based":[0,3,6,9,12,14,15,18,21,24,27,29,30,33,36,39,42,44,45,48,51,54,57,59],
+ "geometry_policy":"Independent laserpoint prefix only. Fit evaluation planes with seeded RANSAC before acousticprocessing; geometry never enters mapper.",
+ "annotation":{"point_plane_tolerance_m":0.025,"minimum_supporting_laser_points":150,"maximum_planes":10,"ransac_iterations":1500,"seed":20260919},
+ "matching":{"maximum_normal_error_deg":5.0,"maximum_offset_error_m":0.15},
+ "acceptance":{"minimum_matched_surfaces":3,"minimum_horizontal_surfaces":1,"maximum_false_surfaces":0,"maximum_runtime_seconds":60},
+ "interpretation":"Measured laboratory RIRs replayed through generatedprobe convolution, not ourphone recordings. Laserprefix incompleteness limits referencecoverage. Unmatched returnedplanes need spatial pointcloudinspection beforecalling them trulyfalse; rawunmatchedcount remainsreported. No-result is honestbutdoesnotpassspatialvalidation."
+}

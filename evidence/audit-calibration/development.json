@@ -1,0 +1,110 @@
+{
+  "evidence": "development simulation from raw PCM, independently held-out positions within development; not new blind evaluation or hardware validation",
+  "status": "calibration_proposal",
+  "physical_validation": false,
+  "source_error_m": 0.0007178990238159153,
+  "validation_nominal_rms_s": 0.0002466935866401276,
+  "validation_fitted_rms_s": 9.061357146451503e-07,
+  "provenance": {
+    "inference": [
+      "simulated"
+    ],
+    "software_version": "0.1.0",
+    "physical_validation": false,
+    "evidence_classes": [
+      "simulated"
+    ],
+    "recordings": [
+      {
+        "capture_id": "0",
+        "sha256": "cd1a97975d6bae0f62869dc7c8760037c41cbabb3e246fad9903f6ca9ced6acf"
+      },
+      {
+        "capture_id": "1",
+        "sha256": "cc8ddebd3b36672ba565eee56741044f444bacd8dc851e9109241bc9b01441be"
+      },
+      {
+        "capture_id": "2",
+        "sha256": "9885149b912f4482eee9a98029792e1cfd2d3a87eac04ec39d6adda6c5e2b142"
+      },
+      {
+        "capture_id": "3",
+        "sha256": "a6485456e3dcb522bdfcf6b47fa9e2510fb5db59167cc3f4e25a07e4232551a6"
+      },
+      {
+        "capture_id": "4",
+        "sha256": "fd14b007359eea58f3277801a55551ab5d8fe0b4f994cde6697bc97b8d3ae77c"
+      },
+      {
+        "capture_id": "5",
+        "sha256": "c779e2a45e9a5cae21aab9f87b153ace3afb67e6dd6a344bbf25b4ce7fa9c313"
+      },
+      {
+        "capture_id": "6",
+        "sha256": "65cc8be1ee97defc2b2554dbc49bc3c68d4a869247130c4b0be1eb76cee9b7c7"
+      },
+      {
+        "capture_id": "7",
+        "sha256": "9faf2e74aa551bc13f77a121931f7f52733cb387445ab512651458792bd8ecf3"
+      },
+      {
+        "capture_id": "8",
+        "sha256": "5ea1e30e35f638429957b7c5a06c0940bdc934b78d35b6e145df9e10c6cf43d0"
+      },
+      {
+        "capture_id": "9",
+        "sha256": "6300a2e9590af035e89780392337811fcfb5eb527079e3bf888fa2c7a81e322d"
+      },
+      {
+        "capture_id": "10",
+        "sha256": "370eb18e713ebcbbe0f5ca3076eeda5874b7200591e9592b8cb9b4d599164123"
+      },
+      {
+        "capture_id": "11",
+        "sha256": "a1b2243bfdb61ea90efaee1d4de38a1efb740a060f6f963b058562d96daf3658"
+      },
+      {
+        "capture_id": "12",
+        "sha256": "ae7c74fe205a03786b910b647ee403af11e1fb66606c00a5769af0d2d7bd5ce4"
+      },
+      {
+        "capture_id": "13",
+        "sha256": "5b66ae6e3c7a548b1ec29367e4fa882cbe2f85ca1da23c18ce3f7a938c59818e"
+      },
+      {
+        "capture_id": "14",
+        "sha256": "edec2f95b5f8f050df9f43e7e08a8ba7f0bfcdcdc8b2a66c952bbdffa6e0f1aa"
+      },
+      {
+        "capture_id": "15",
+        "sha256": "afb6c324328d22bbd63aa3bce38b9919c4c685920c3f8f1e09a536f787e8c312"
+      },
+      {
+        "capture_id": "16",
+        "sha256": "8a07e19a89eab462d3250cd71138e7143a3054f9ec09edaf7b6c00ec2cca20b5"
+      },
+      {
+        "capture_id": "17",
+        "sha256": "dbf361895c76c21baa05b754a9d365732bb5fbbd38a2bc6290d0a43a2ad16bba"
+      },
+      {
+        "capture_id": "18",
+        "sha256": "90e707be29829989bc73aff19554bc11913a8ae362725cd3d325b6bfa96dee60"
+      },
+      {
+        "capture_id": "19",
+        "sha256": "fd25c8c463279cbc5c9b00df2809256f48a04563f8a5b6615d83be61276906c0"
+      }
+    ],
+    "method": "mapper",
+    "coordinates": "right-handed, metres, z up",
+    "poses": "supplied acoustic-center positions",
+    "geometry": "inferred from recording-derived excess delays",
+    "implementation_sha256": "828e8dafe25da6ddbec0967d3598bfd34a2e310a5fe91ea178dff15fe6a31d17",
+    "runtime_versions": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.18.1"
+    }
+  }
+}

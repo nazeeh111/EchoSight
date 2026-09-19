@@ -1,0 +1,149 @@
+{
+  "description": "Post-fit diagnostic against supplied acoustic-center poses and dataset sound speed, not independent echo labels. Common system latency and source angular response can contribute.",
+  "rows": [
+    {
+      "capture_id": "flair-00",
+      "direct_reference_vs_pose_model_s": 5.4065696893992876e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-01",
+      "direct_reference_vs_pose_model_s": 0.00011786316878530968,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-02",
+      "direct_reference_vs_pose_model_s": 0.00010378037425551236,
+      "candidate_count": 18,
+      "relative_clock_ppm": 0.0
+    },
+    {
+      "capture_id": "flair-03",
+      "direct_reference_vs_pose_model_s": 9.409657607968233e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-04",
+      "direct_reference_vs_pose_model_s": 0.00010076131109184889,
+      "candidate_count": 16,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-05",
+      "direct_reference_vs_pose_model_s": 9.125829597260698e-05,
+      "candidate_count": 9,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-06",
+      "direct_reference_vs_pose_model_s": 2.996426178996682e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-07",
+      "direct_reference_vs_pose_model_s": 9.253377344405761e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-08",
+      "direct_reference_vs_pose_model_s": 8.112846510986791e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-09",
+      "direct_reference_vs_pose_model_s": 5.147192732838247e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-10",
+      "direct_reference_vs_pose_model_s": 5.4797281186102706e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-11",
+      "direct_reference_vs_pose_model_s": 1.2164402481585658e-05,
+      "candidate_count": 11,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-12",
+      "direct_reference_vs_pose_model_s": 4.210089095684974e-06,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-13",
+      "direct_reference_vs_pose_model_s": 6.109935506403048e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -4.440892098500626e-10
+    },
+    {
+      "capture_id": "flair-14",
+      "direct_reference_vs_pose_model_s": 3.116680406074594e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": 0.0
+    },
+    {
+      "capture_id": "flair-15",
+      "direct_reference_vs_pose_model_s": 2.0125117983758357e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-16",
+      "direct_reference_vs_pose_model_s": 7.0440831588369085e-06,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-17",
+      "direct_reference_vs_pose_model_s": -5.987802831966711e-05,
+      "candidate_count": 13,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-18",
+      "direct_reference_vs_pose_model_s": 2.3985262222643577e-06,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-19",
+      "direct_reference_vs_pose_model_s": 6.13190757052292e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-20",
+      "direct_reference_vs_pose_model_s": 4.343676550824273e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-21",
+      "direct_reference_vs_pose_model_s": 2.9694990795232565e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": -2.220446049250313e-10
+    },
+    {
+      "capture_id": "flair-22",
+      "direct_reference_vs_pose_model_s": -2.7483212342266188e-05,
+      "candidate_count": 18,
+      "relative_clock_ppm": 0.0
+    },
+    {
+      "capture_id": "flair-23",
+      "direct_reference_vs_pose_model_s": -8.492984395981097e-06,
+      "candidate_count": 13,
+      "relative_clock_ppm": -2.220446049250313e-10
+    }
+  ]
+}

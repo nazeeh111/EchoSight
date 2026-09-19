@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "echosight/inference.py": "ee1867b46a0c4403ceb109a91c1d8c61de5bf53ea5f38ea9d73d6c0164126e34",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "work/audit-inference/probe.py": "2722fb2b4ddfbe20e97cae0341ecf459c5ac510bdb60347737ae8dd4d2bb43ba"
+  },
+  "seed": 9021,
+  "evidence_class": "development synthetic candidate delays, not measured recordings"
+}

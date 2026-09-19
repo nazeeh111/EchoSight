@@ -1,0 +1,115 @@
+{
+  "semantics": "Post-fit independent point-cloud compatibility, not feedback into acoustic inference. A finite laser prefix may miss physical surfaces.",
+  "surfaces": [
+    {
+      "surface_id": "reflector-8c956936b1b8",
+      "minimum_laser_point_plane_residual_m": 2.5043378372391345e-05,
+      "laser_points_within_0_025_m": 382,
+      "offset_m": 2.7929426393058936,
+      "normal": [
+        0.14255557464008722,
+        0.9895878462793052,
+        -0.019844461074080975
+      ]
+    },
+    {
+      "surface_id": "reflector-6234ffa6eb13",
+      "minimum_laser_point_plane_residual_m": 0.0044109054429770644,
+      "laser_points_within_0_025_m": 4,
+      "offset_m": 3.310418215410932,
+      "normal": [
+        0.5183241400222693,
+        0.8545952258119803,
+        -0.031734616581035366
+      ]
+    },
+    {
+      "surface_id": "reflector-8ae95b975c2d",
+      "minimum_laser_point_plane_residual_m": 9.967945115807453e-05,
+      "laser_points_within_0_025_m": 252,
+      "offset_m": 1.8977422523041743,
+      "normal": [
+        0.9911274935969608,
+        -0.12862111084576563,
+        -0.03350971920215612
+      ]
+    },
+    {
+      "surface_id": "reflector-e38804ac3293",
+      "minimum_laser_point_plane_residual_m": 5.659575560956753e-05,
+      "laser_points_within_0_025_m": 224,
+      "offset_m": -1.6174276071033435,
+      "normal": [
+        -0.005484717348423614,
+        -0.050004530355355896,
+        0.9987339309443473
+      ]
+    },
+    {
+      "surface_id": "reflector-57eb7074fc16",
+      "minimum_laser_point_plane_residual_m": 0.00023346062295859227,
+      "laser_points_within_0_025_m": 169,
+      "offset_m": 1.0128507085888794,
+      "normal": [
+        -0.020899210377242575,
+        -0.08904691553747138,
+        0.9958081491125036
+      ]
+    },
+    {
+      "surface_id": "reflector-07aea25568e8",
+      "minimum_laser_point_plane_residual_m": 0.0005435201361869701,
+      "laser_points_within_0_025_m": 51,
+      "offset_m": 3.1499643901127348,
+      "normal": [
+        0.13928759886772848,
+        0.932457029421247,
+        -0.3333509458282163
+      ]
+    },
+    {
+      "surface_id": "reflector-6fea527154ad",
+      "minimum_laser_point_plane_residual_m": 3.163570594755607,
+      "laser_points_within_0_025_m": 0,
+      "offset_m": -5.4475548577963835,
+      "normal": [
+        0.17656172342470908,
+        0.9830221074725901,
+        -0.04993489803177838
+      ]
+    },
+    {
+      "surface_id": "reflector-6770f1f59a49",
+      "minimum_laser_point_plane_residual_m": 3.2996764570984567,
+      "laser_points_within_0_025_m": 0,
+      "offset_m": -5.5782458124804375,
+      "normal": [
+        0.1557505790708027,
+        0.9863874482376518,
+        0.05274048803645596
+      ]
+    },
+    {
+      "surface_id": "reflector-cea6c388fc24",
+      "minimum_laser_point_plane_residual_m": 0.08693595818083777,
+      "laser_points_within_0_025_m": 0,
+      "offset_m": 3.6699878247027167,
+      "normal": [
+        0.4585166562391276,
+        0.8196400629002433,
+        -0.3434423434001332
+      ]
+    },
+    {
+      "surface_id": "reflector-ed32bab452ee",
+      "minimum_laser_point_plane_residual_m": 0.1737686591393568,
+      "laser_points_within_0_025_m": 0,
+      "offset_m": 3.0762183818901883,
+      "normal": [
+        0.13233731352153438,
+        0.9911135253502064,
+        -0.013446758635038554
+      ]
+    }
+  ]
+}

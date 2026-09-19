@@ -68,6 +68,10 @@ def main(argv=None):
     command.add_argument("previous", type=Path)
     command.add_argument("current", type=Path)
     command.add_argument("--output", type=Path, required=True)
+    command = sub.add_parser("calibrate-reference", help="test source/effective-speed calibration against an independently surveyed reference plane")
+    command.add_argument("session", type=Path)
+    command.add_argument("reference", type=Path)
+    command.add_argument("--output", type=Path, required=True)
     command = sub.add_parser("export", help="import and process a local recording session, then archive originals and result")
     command.add_argument("session", type=Path)
     command.add_argument("--output", type=Path, required=True)
@@ -121,6 +125,16 @@ def main(argv=None):
             result = compare_results(json.loads(args.previous.read_text()), json.loads(args.current.read_text()))
             save_result(result, args.output)
             print(json.dumps(result, indent=2, allow_nan=False))
+        elif args.command == "calibrate-reference":
+            from .calibration import calibrate_reference
+            if args.reference.stat().st_size > 1024 * 1024:
+                raise ValueError("reference metadata exceeds 1 MiB")
+            result = calibrate_reference(args.session, json.loads(args.reference.read_text()))
+            save_result(result, args.output)
+            print(json.dumps({"status": result["status"], "diagnostics": result["diagnostics"],
+                              "calibration_id": result.get("calibration_id")}, indent=2))
+            if result["status"] != "calibration_proposal":
+                return 2
         elif args.command == "refine-demo":
             from .simulation import simulate_session
             from .storage import load_session

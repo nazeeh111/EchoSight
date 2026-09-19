@@ -1,0 +1,538 @@
+{
+  "first_order": {
+    "mapper": {
+      "status": "partial",
+      "surface_count": 3,
+      "true_recovered": 3,
+      "false_surfaces": [],
+      "missed": 0,
+      "max_offset_error_m": 2.886579864025409e-15,
+      "runtime_s": 0.35073095800180454,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8
+      }
+    },
+    "grid": {
+      "status": "partial",
+      "surface_count": 3,
+      "true_recovered": 3,
+      "false_surfaces": [],
+      "missed": 0,
+      "max_offset_error_m": 4.440892098500626e-16,
+      "runtime_s": 0.6969612500033691,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8
+      }
+    }
+  },
+  "corner_double": {
+    "mapper": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 0.5792258330038749,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    },
+    "grid": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 0.8542223749973346,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    }
+  },
+  "corner_double_noisy": {
+    "mapper": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 0.9475004999985686,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    },
+    "grid": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 1.2399361249990761,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    }
+  },
+  "real_diagonal": {
+    "mapper": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 4,
+      "max_offset_error_m": null,
+      "runtime_s": 0.8932918339996831,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    },
+    "grid": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 4,
+      "max_offset_error_m": null,
+      "runtime_s": 1.0708184579998488,
+      "diagnostics": [
+        "refinement_budget_reached",
+        "first_order_vs_higher_order_ambiguity"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8,
+        "first_order_reflector_interpretation": 4,
+        "fewer_surfaces_with_second_order_paths": 3
+      }
+    }
+  },
+  "double_only": {
+    "mapper": {
+      "status": "ok",
+      "surface_count": 1,
+      "true_recovered": 0,
+      "false_surfaces": [
+        {
+          "normal": [
+            0.8169678632647613,
+            0.5766831975986558,
+            1.6539713233785886e-15
+          ],
+          "offset_m": 1.8780577607395524e-15,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.007290768176382267,
+            "normal_angular_std_rad": 0.006099797412894691,
+            "image_source_covariance_m2": [
+              [
+                0.00015384174820985764,
+                -0.0001208954268022449,
+                -0.00010939052793794998
+              ],
+              [
+                -0.00012089542680224486,
+                0.0001559065458737637,
+                4.4862704545763105e-05
+              ],
+              [
+                -0.00010939052793795002,
+                4.4862704545763146e-05,
+                0.00037529920239371843
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 1.5411030963795597e-15
+          }
+        }
+      ],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 0.02819945800001733,
+      "diagnostics": [],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 2
+      }
+    },
+    "grid": {
+      "status": "ok",
+      "surface_count": 1,
+      "true_recovered": 0,
+      "false_surfaces": [
+        {
+          "normal": [
+            0.8169678633038577,
+            0.5766831975432695,
+            -1.3218272046918639e-11
+          ],
+          "offset_m": -7.417687917934567e-12,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.007290768176833671,
+            "normal_angular_std_rad": 0.006099797412952395,
+            "image_source_covariance_m2": [
+              [
+                0.0001538417481993238,
+                -0.00012089542680694466,
+                -0.00010939052794101782
+              ],
+              [
+                -0.00012089542680694465,
+                0.00015590654589038642,
+                4.4862704563587836e-05
+              ],
+              [
+                -0.00010939052794101773,
+                4.486270456358783e-05,
+                0.00037529920239982303
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 6.565327309654442e-11
+          }
+        }
+      ],
+      "missed": 3,
+      "max_offset_error_m": null,
+      "runtime_s": 0.12358250000397675,
+      "diagnostics": [],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 5
+      }
+    }
+  },
+  "two_sources": {
+    "mapper": {
+      "status": "partial",
+      "surface_count": 6,
+      "true_recovered": 3,
+      "false_surfaces": [
+        {
+          "normal": [
+            0.043817524169156165,
+            1.4594167264399875e-16,
+            0.9990395510567565
+          ],
+          "offset_m": 3.455625226076318,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.0055073364156626725,
+            "normal_angular_std_rad": 0.00339213209253355,
+            "image_source_covariance_m2": [
+              [
+                8.760412938954966e-05,
+                -2.296507057930196e-05,
+                4.406151575484192e-06
+              ],
+              [
+                -2.2965070579301973e-05,
+                0.00015263411150529227,
+                2.040935567094804e-05
+              ],
+              [
+                4.406151575484213e-06,
+                2.040935567094802e-05,
+                2.0203651626841864e-05
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 2.8805805131593664e-16
+          }
+        },
+        {
+          "normal": [
+            -0.08303402767415642,
+            0.9964083320898797,
+            -0.01660680553483171
+          ],
+          "offset_m": -0.16806087201249317,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.008704219641477764,
+            "normal_angular_std_rad": 0.0049017666411168065,
+            "image_source_covariance_m2": [
+              [
+                5.282321276471561e-05,
+                -8.530513925085488e-06,
+                5.836756836991867e-06
+              ],
+              [
+                -8.530513925085493e-06,
+                3.097203150179305e-05,
+                -1.9380027545036446e-05
+              ],
+              [
+                5.836756836991821e-06,
+                -1.9380027545036443e-05,
+                8.880929537818248e-05
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 4.503706745454318e-16
+          }
+        },
+        {
+          "normal": [
+            0.9999382773199424,
+            -5.550772493423075e-16,
+            -0.011110425303555911
+          ],
+          "offset_m": -0.11243750407197797,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.00976878314395583,
+            "normal_angular_std_rad": 0.005331899223437657,
+            "image_source_covariance_m2": [
+              [
+                3.722943354165254e-05,
+                -4.333090105489662e-05,
+                -4.5615704560991536e-05
+              ],
+              [
+                -4.3330901054896664e-05,
+                0.00015924971468699465,
+                8.940822519985701e-05
+              ],
+              [
+                -4.5615704560991536e-05,
+                8.940822519985701e-05,
+                0.0002102724651455501
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 6.027078869163579e-16
+          }
+        }
+      ],
+      "missed": 0,
+      "max_offset_error_m": 2.886579864025409e-15,
+      "runtime_s": 1.3314564999964205,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8
+      }
+    },
+    "grid": {
+      "status": "partial",
+      "surface_count": 5,
+      "true_recovered": 3,
+      "false_surfaces": [
+        {
+          "normal": [
+            -0.08303402767415624,
+            0.9964083320898797,
+            -0.016606805534831154
+          ],
+          "offset_m": -0.1680608720124922,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.008805079478400125,
+            "normal_angular_std_rad": 0.0050152174512222356,
+            "image_source_covariance_m2": [
+              [
+                5.291311324869099e-05,
+                -8.474070972666877e-06,
+                5.408427255001533e-06
+              ],
+              [
+                -8.474070972666875e-06,
+                3.130224193399401e-05,
+                -2.076814745387231e-05
+              ],
+              [
+                5.408427255001548e-06,
+                -2.0768147453872302e-05,
+                9.528217144945049e-05
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 5.193040371649233e-16
+          }
+        },
+        {
+          "normal": [
+            0.9999382773199424,
+            -2.467009997076922e-16,
+            -0.011110425303555108
+          ],
+          "offset_m": -0.11243750407197646,
+          "uncertainty": {
+            "local_information_rank": 3,
+            "rank_deficient": false,
+            "offset_std_m": 0.009942685120434324,
+            "normal_angular_std_rad": 0.005447126617537652,
+            "image_source_covariance_m2": [
+              [
+                3.780874687633348e-05,
+                -4.397883075207297e-05,
+                -4.839883905311381e-05
+              ],
+              [
+                -4.397883075207299e-05,
+                0.00016010266625435794,
+                9.211152727239794e-05
+              ],
+              [
+                -4.83988390531138e-05,
+                9.211152727239783e-05,
+                0.00022558198515821996
+              ]
+            ],
+            "conditional_on": "associations and first-order point-source model",
+            "excluded_model_errors": [
+              "reflection_order",
+              "multiple_emitters",
+              "unmodeled_transducer_response"
+            ]
+          },
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "supporting_views": 12,
+            "rms_residual_m": 3.35381172750715e-16
+          }
+        }
+      ],
+      "missed": 0,
+      "max_offset_error_m": 4.440892098500626e-16,
+      "runtime_s": 0.6409339999954682,
+      "diagnostics": [
+        "refinement_budget_reached"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8
+      }
+    }
+  },
+  "point_scatterer": {
+    "mapper": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 0,
+      "max_offset_error_m": null,
+      "runtime_s": 0.0219848750057281,
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 6
+      }
+    },
+    "grid": {
+      "status": "ambiguous",
+      "surface_count": 0,
+      "true_recovered": 0,
+      "false_surfaces": [],
+      "missed": 0,
+      "max_offset_error_m": null,
+      "runtime_s": 0.12906249999650754,
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ],
+      "hypothesis_surface_counts": {
+        "unconfirmed_candidates": 8
+      }
+    }
+  }
+}

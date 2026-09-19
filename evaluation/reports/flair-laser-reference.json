@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "surfaces": [
+    {
+      "surface_id": "laser-plane-0",
+      "normal": [
+        -0.0004354092288840935,
+        -0.003380125667141891,
+        -0.9999941925677758
+      ],
+      "offset_m": 1.5591747947744388,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 1035,
+      "rms_point_residual_m": 0.004868210683481248,
+      "support_bbox_m": [
+        [
+          -3.3787872791290283,
+          -2.2660717964172363,
+          -1.575181007385254
+        ],
+        [
+          2.295079469680786,
+          3.2440526485443115,
+          -1.5258874893188477
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-1",
+      "normal": [
+        0.0005892496764615539,
+        -0.000690983861536159,
+        0.999999587662976
+      ],
+      "offset_m": 1.1497596275170652,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 971,
+      "rms_point_residual_m": 0.006264206114422611,
+      "support_bbox_m": [
+        [
+          -3.414964437484741,
+          -2.175942897796631,
+          1.1099863052368164
+        ],
+        [
+          2.238884449005127,
+          3.1563425064086914,
+          1.176377296447754
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-2",
+      "normal": [
+        0.1466896310413114,
+        0.9891802479555034,
+        0.0021422417354123153
+      ],
+      "offset_m": 2.782529040012934,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 354,
+      "rms_point_residual_m": 0.00651421383850337,
+      "support_bbox_m": [
+        [
+          -2.7155210971832275,
+          2.4941248893737793,
+          -1.526625633239746
+        ],
+        [
+          2.1880993843078613,
+          3.2243494987487793,
+          0.7564945220947266
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-3",
+      "normal": [
+        -0.986194858509715,
+        0.16315645414421795,
+        -0.0282784815732581
+      ],
+      "offset_m": 3.1183491160348256,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 366,
+      "rms_point_residual_m": 0.012592679002637237,
+      "support_bbox_m": [
+        [
+          -3.4334909915924072,
+          -1.5888872146606445,
+          -1.4868497848510742
+        ],
+        [
+          -2.5913212299346924,
+          3.260056495666504,
+          1.1031970977783203
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-4",
+      "normal": [
+        0.9893121749189404,
+        -0.14578908748842562,
+        0.002638659972003856
+      ],
+      "offset_m": 1.887547777254649,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 338,
+      "rms_point_residual_m": 0.008567913949527429,
+      "support_bbox_m": [
+        [
+          1.613334059715271,
+          -2.1316192150115967,
+          -1.519021987915039
+        ],
+        [
+          2.2620201110839844,
+          2.5386078357696533,
+          0.736231803894043
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-5",
+      "normal": [
+        -0.14916146589884982,
+        -0.9888095844911653,
+        -0.0025421859324685904
+      ],
+      "offset_m": 2.080101646029634,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 290,
+      "rms_point_residual_m": 0.006419391466983857,
+      "support_bbox_m": [
+        [
+          -3.408200979232788,
+          -2.3243093490600586,
+          -1.6305456161499023
+        ],
+        [
+          1.619969129562378,
+          -1.5883619785308838,
+          1.1281166076660156
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-6",
+      "normal": [
+        -0.003074765280226202,
+        -0.0005461666536228179,
+        0.9999951237483401
+      ],
+      "offset_m": 1.0729394583891765,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 166,
+      "rms_point_residual_m": 0.009934525855289663,
+      "support_bbox_m": [
+        [
+          -3.411870241165161,
+          -2.0762393474578857,
+          1.0317115783691406
+        ],
+        [
+          2.177295684814453,
+          3.1225175857543945,
+          1.1032304763793945
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-7",
+      "normal": [
+        -0.09729517328638412,
+        -0.9952427502393004,
+        -0.005051470210356422
+      ],
+      "offset_m": 1.8795135225492223,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 203,
+      "rms_point_residual_m": 0.012832424196670595,
+      "support_bbox_m": [
+        [
+          -3.423628568649292,
+          -2.0503997802734375,
+          -1.2615938186645508
+        ],
+        [
+          1.5876959562301636,
+          -1.5251593589782715,
+          0.9607009887695312
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-8",
+      "normal": [
+        0.14700841106348567,
+        0.9891349974974206,
+        -0.0006955590321363954
+      ],
+      "offset_m": 2.836843258251853,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 169,
+      "rms_point_residual_m": 0.004634976151586607,
+      "support_bbox_m": [
+        [
+          -2.7064743041992188,
+          2.52311635017395,
+          -1.522414207458496
+        ],
+        [
+          2.2240285873413086,
+          3.269862413406372,
+          1.051544189453125
+        ]
+      ]
+    },
+    {
+      "surface_id": "laser-plane-9",
+      "normal": [
+        -0.1533827042430874,
+        -0.9881555176852054,
+        -0.004734860859754157
+      ],
+      "offset_m": 2.1972689177447173,
+      "independent_annotation": "RANSAC of laserpoints only, before acousticfit",
+      "point_count": 162,
+      "rms_point_residual_m": 0.004819714130825326,
+      "support_bbox_m": [
+        [
+          -2.6337006092071533,
+          -1.9554414749145508,
+          -1.5217399597167969
+        ],
+        [
+          -1.7349927425384521,
+          -1.779205322265625,
+          0.48636436462402344
+        ]
+      ]
+    }
+  ],
+  "reference": "Independently measured laser scan prefix",
+  "remaining_points": 928
+}

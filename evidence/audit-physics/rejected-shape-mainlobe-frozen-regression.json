@@ -1,0 +1,1221 @@
+{
+  "schema_version": "1.0",
+  "split": "frozen_held_out",
+  "acceptance_sha256": "3fc257be6aecfb859080070bbc8707c8200a93a63fc218071b37e0d0578a375a",
+  "git_commit": "1c773367f787a551aec0f15fc244b5fe9290dee3",
+  "source_sha256": {
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "echosight/api.py": "b37ec722b98666c819b1131bdab2083267678930eeb6691f2e360f5a1409c7ae",
+    "echosight/cli.py": "ad9b83276257e1d44672efe1ed4e6cf18bb378f9856ad2e96cdb204bfbc55b4d",
+    "echosight/evolution.py": "8b05097619beb38859c3e573e0ea20c59daa7a876df0438d1375b6037eb5eeba",
+    "echosight/geometry.py": "93a9fd33ae4dac5a47679799a0b7ca47d33f4c3dce18ba3dad428b46c846f245",
+    "echosight/inference.py": "9714b2e7c6ef343193ad68e0f88908cf4568b26bb08de4c369bc384a1edbf513",
+    "echosight/pipeline.py": "1b4d3c4e2788239897b4481ea54faf2b05f8ca5188d7225275839b3dfae854ba",
+    "echosight/signals.py": "8f46043ac63b4088f34f4d651a0ab79f73bd132d49b8b75b3b2821c28f2e9390",
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/storage.py": "7771d91c30886f3579437a32a9f40b2f1071f8f474d08723d0e59902ea343c4c",
+    "evaluation/__init__.py": "27112db071291f12c1b8138daab004ff7b003512a093a3382aa42555cf7a6478",
+    "evaluation/external.py": "962ae38ba5e51177ae56875e5585bd3d96c85bb48c3fc1d8f585c4dd3b5aff4e",
+    "evaluation/guidance.py": "02f712b676e36c2089a38a167f13b16e9c8a4756c16180e745a80a24904023d9",
+    "evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "evaluation/run.py": "ef32222b5bdf1ee1ca9f4190c7f27f4298b3559df6b00f514ac3d2d6d2b17454",
+    "evaluation/stress.py": "d91faa062e1322146e22da3b5ec1ccd44afaa587c2095bdd04507071d4519bdf",
+    "evaluation/stress_simulation.py": "25c66e72e93d0e7747bc89cd4f156c4d024e724c9e4a1b58e00d877df16bacf7"
+  },
+  "source_unchanged_during_run": true,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "claims": "Synthetic software evaluation. Not physical-device validation. Alternative inference timings exclude shared waveform extraction; mapper timing includes it.",
+  "aggregate": {
+    "mapper": {
+      "matched": 23,
+      "false": 0,
+      "missed": 23,
+      "room_matches": 13,
+      "runtime_seconds": 3.399157916996046,
+      "offset_95pct_coverage_count": 23,
+      "offset_95pct_coverage_denominator": 23,
+      "maximum_offset_error_m": 0.017317586248175115,
+      "maximum_normal_error_deg": 0.608592838127167
+    },
+    "first_echo": {
+      "matched": 0,
+      "false": 0,
+      "missed": 46,
+      "room_matches": 0,
+      "runtime_seconds": 0.10956420698857983,
+      "offset_95pct_coverage_count": 0,
+      "offset_95pct_coverage_denominator": 0,
+      "maximum_offset_error_m": null,
+      "maximum_normal_error_deg": null
+    },
+    "plane_grid": {
+      "matched": 23,
+      "false": 0,
+      "missed": 23,
+      "room_matches": 13,
+      "runtime_seconds": 2.7380038339942985,
+      "offset_95pct_coverage_count": 23,
+      "offset_95pct_coverage_denominator": 23,
+      "maximum_offset_error_m": 0.017317588835762312,
+      "maximum_normal_error_deg": 0.6085929369758155
+    }
+  },
+  "cases": [
+    {
+      "scenario": "room",
+      "seed": 101,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.24028841700055636,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 6,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "matches": [
+          {
+            "predicted_id": "reflector-ad6698d5c744",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.02673234840089508,
+            "offset_error_m": 0.0005906935331194172,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9569aaf2eaea",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.03214995491741224,
+            "offset_error_m": 0.00046528359145714404,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9598e6806882",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.023177399874424204,
+            "offset_error_m": 0.0008372738390851557,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 3, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 101,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.013416499998129439,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 101,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.23273733299720334,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 6,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "matches": [
+          {
+            "predicted_id": "reflector-ad6698d5c744",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.02673234034329063,
+            "offset_error_m": 0.0005906933935013579,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9569aaf2eaea",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.03214996798827841,
+            "offset_error_m": 0.00046528397665746013,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9598e6806882",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.023177393411446236,
+            "offset_error_m": 0.0008372736769964071,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 3, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 107,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.45314945800055284,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-4f3889542f99",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.016919792628342315,
+            "offset_error_m": 0.0005905528852343522,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-9569aaf2eaea",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.004882226643536219,
+            "offset_error_m": 0.0003192761782200293,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bda515abc0c7",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.608592838127167,
+            "offset_error_m": 0.017317586248175115,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6b2052b46c3b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.3395662078965451,
+            "offset_error_m": 0.014860050320185003,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8d9830382c84",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.014736612709913182,
+            "offset_error_m": 0.00046439621161140164,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 107,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.009381542000483023,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 107,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.4008434589995886,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-9569aaf2eaea",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.004882227240746836,
+            "offset_error_m": 0.00031927621089256064,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-4f3889542f99",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.01691979320994208,
+            "offset_error_m": 0.0005905529237524298,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-bda515abc0c7",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.6085929369758155,
+            "offset_error_m": 0.017317588835762312,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-6b2052b46c3b",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.3395661007609459,
+            "offset_error_m": 0.01486006536862483,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8d9830382c84",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.014736599379402386,
+            "offset_error_m": 0.0004643960722785766,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 113,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.40676937500029453,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-4c36b6c20ef3",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.006612264191144794,
+            "offset_error_m": 0.0002631201656102533,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b7013afedea7",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.028009902970804933,
+            "offset_error_m": 5.5450170886039984e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b826da42777d",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.3714504908458877,
+            "offset_error_m": 0.006005292993523845,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-49a7394f162f",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.008588271355759411,
+            "offset_error_m": 0.0003415120639947551,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2b4adb4a9e35",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.0024943861721739746,
+            "offset_error_m": 1.7932028324008087e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 113,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.014183291998051573,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "room",
+      "seed": 113,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.37917258299785317,
+      "metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-4c36b6c20ef3",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.006612261269810455,
+            "offset_error_m": 0.00026312003730932787,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b7013afedea7",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.028009938831841837,
+            "offset_error_m": 5.544912172794625e-05,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b826da42777d",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.3714506189415436,
+            "offset_error_m": 0.00600528719581999,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-49a7394f162f",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.008588262910693797,
+            "offset_error_m": 0.00034151245986543797,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-2b4adb4a9e35",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.0024943861721739746,
+            "offset_error_m": 1.7932026201705753e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "partial",
+      "seed": 127,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.29722704099913244,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 3,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-f94d58470b65",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.0032097387175207886,
+            "offset_error_m": 0.00018260900379196698,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8a2d71bb39d",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.00425795175556063,
+            "offset_error_m": 0.0003084252513487762,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8a6e8efdbc1",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.001044072318240399,
+            "offset_error_m": 0.00016901584805939507,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "partial",
+      "seed": 127,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.019179207996785408,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 3,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 2"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "partial",
+      "seed": 127,
+      "required": true,
+      "method": "plane_grid",
+      "status": "ok",
+      "runtime_seconds": 0.06715316700137919,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 3,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "predicted_id": "reflector-f94d58470b65",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.0032097382633221416,
+            "offset_error_m": 0.00018260899208488723,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8a2d71bb39d",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.004257951584368119,
+            "offset_error_m": 0.000308425244771815,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-b8a6e8efdbc1",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.0010440262386692794,
+            "offset_error_m": 0.00016901491136600555,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": []
+    },
+    {
+      "scenario": "coplanar",
+      "seed": 131,
+      "required": true,
+      "method": "mapper",
+      "status": "ambiguous",
+      "runtime_seconds": 0.5232037089990627,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached",
+        "local_geometry_rank_deficient",
+        "support_coplanar_mirror_ambiguity"
+      ]
+    },
+    {
+      "scenario": "coplanar",
+      "seed": 131,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.013085915998090059,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "coplanar",
+      "seed": 131,
+      "required": true,
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "runtime_seconds": 0.4635510419975617,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached",
+        "local_geometry_rank_deficient",
+        "support_coplanar_mirror_ambiguity"
+      ]
+    },
+    {
+      "scenario": "null",
+      "seed": 137,
+      "required": true,
+      "method": "mapper",
+      "status": "no_result",
+      "runtime_seconds": 0.3091199160007818,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    },
+    {
+      "scenario": "null",
+      "seed": 137,
+      "required": true,
+      "method": "first_echo",
+      "status": "no_result",
+      "runtime_seconds": 7.766600174363703e-05,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    },
+    {
+      "scenario": "null",
+      "seed": 137,
+      "required": true,
+      "method": "plane_grid",
+      "status": "no_result",
+      "runtime_seconds": 3.7374997191363946e-05,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 139,
+      "required": true,
+      "method": "mapper",
+      "status": "ambiguous",
+      "runtime_seconds": 0.17664137499741628,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 139,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.006392665996827418,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "clutter",
+      "seed": 139,
+      "required": true,
+      "method": "plane_grid",
+      "status": "ambiguous",
+      "runtime_seconds": 0.3207334170001559,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 0,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 0,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": null,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "mismatch",
+      "seed": 149,
+      "required": true,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.41663258399785263,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 6,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "matches": [
+          {
+            "predicted_id": "reflector-6e7d28969f0b",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.31102891435604724,
+            "offset_error_m": 0.0007524112829229946,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-effeb8491752",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.0044285985491073435,
+            "offset_error_m": 0.00019277721260380076,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-361d1d91c7dc",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.007238456973327158,
+            "offset_error_m": 4.218489163898553e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "mismatch",
+      "seed": 149,
+      "required": true,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.014323791998322122,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 3",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "mismatch",
+      "seed": 149,
+      "required": true,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.4398715000024822,
+      "metrics": {
+        "predicted_count": 3,
+        "truth_count": 6,
+        "matched_count": 3,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "matches": [
+          {
+            "predicted_id": "reflector-6e7d28969f0b",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.31102889709061166,
+            "offset_error_m": 0.0007524113280236584,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-effeb8491752",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.0044285973146374535,
+            "offset_error_m": 0.0001927771722973759,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-361d1d91c7dc",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.007238456922975996,
+            "offset_error_m": 4.2184902833586335e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "reflector",
+      "seed": 151,
+      "required": false,
+      "method": "mapper",
+      "status": "partial",
+      "runtime_seconds": 0.5105938750020869,
+      "metrics": {
+        "predicted_count": 4,
+        "truth_count": 7,
+        "matched_count": 4,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "matches": [
+          {
+            "predicted_id": "reflector-15f297562a76",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.014257683195863378,
+            "offset_error_m": 0.0003729075185683328,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-239b7fa9a0b3",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.2974895394453009,
+            "offset_error_m": 0.0014871258437494795,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-334e951a6f47",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.02717313843299951,
+            "offset_error_m": 0.0004908258096341116,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-da60b44b48c8",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.009435269550839093,
+            "offset_error_m": 0.0001753691722945483,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "reflector",
+      "seed": 151,
+      "required": false,
+      "method": "first_echo",
+      "status": "ambiguous",
+      "runtime_seconds": 0.019509333000314655,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 7,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 7,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [
+        "minimum_matched_surfaces: observed 0, required 4"
+      ],
+      "diagnostics": [
+        "no_confirmed_model_beats_null"
+      ]
+    },
+    {
+      "scenario": "reflector",
+      "seed": 151,
+      "required": false,
+      "method": "plane_grid",
+      "status": "partial",
+      "runtime_seconds": 0.4338988330018765,
+      "metrics": {
+        "predicted_count": 4,
+        "truth_count": 7,
+        "matched_count": 4,
+        "false_surfaces": 0,
+        "missed_surfaces": 3,
+        "horizontal_matched": 2,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "matches": [
+          {
+            "predicted_id": "reflector-15f297562a76",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.014257679540398362,
+            "offset_error_m": 0.00037290741003204175,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-239b7fa9a0b3",
+            "truth_id": "truth-2-0",
+            "normal_error_deg": 0.2974895484194518,
+            "offset_error_m": 0.0014871257957444007,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-334e951a6f47",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.027173139894982084,
+            "offset_error_m": 0.0004908258735783178,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-da60b44b48c8",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.009435269705350722,
+            "offset_error_m": 0.0001753691990256101,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "refinement_budget_reached"
+      ]
+    },
+    {
+      "scenario": "warp",
+      "seed": 157,
+      "required": true,
+      "method": "mapper",
+      "status": "no_result",
+      "runtime_seconds": 0.06553216699830955,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    },
+    {
+      "scenario": "warp",
+      "seed": 157,
+      "required": true,
+      "method": "first_echo",
+      "status": "no_result",
+      "runtime_seconds": 1.4291999832494184e-05,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    },
+    {
+      "scenario": "warp",
+      "seed": 157,
+      "required": true,
+      "method": "plane_grid",
+      "status": "no_result",
+      "runtime_seconds": 5.1249990065116435e-06,
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "acceptance_failures": [],
+      "diagnostics": [
+        "insufficient_independent_views_minimum_four"
+      ]
+    }
+  ],
+  "required_failures": [
+    {
+      "scenario": "room",
+      "seed": 101,
+      "failures": [
+        "minimum_matched_surfaces: observed 3, required 4",
+        "minimum_horizontal_surfaces: observed 0, required 1"
+      ]
+    }
+  ],
+  "passed": false
+}

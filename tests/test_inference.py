@@ -128,3 +128,91 @@ class InferenceTests(unittest.TestCase):
         for dimension in out['dimensions']:
             self.assertLess(dimension['reference_std_bound_m'],1e-10)
             self.assertAlmostEqual(dimension['std_m'],dimension['geometry_std_m'],places=9)
+
+    def test_double_bounce_not_a_definitive_diagonal_wall(self):
+        """Coherent higher-order paths can fit a nonexistent plane exactly."""
+        rng=np.random.default_rng(9021);source=np.array([1.7,1.2,1.1])
+        positions=rng.uniform([.6,.5,.3],[3.8,3.4,2.7],(12,3))
+        session=dict(session_id='double-bounce',source_position_m=source.tolist(),source_position_std_m=.003,sound_speed_m_s=343.,sound_speed_std_m_s=.2,source_clock_std_ppm=50)
+        images=[image_source(source,[1,0,0],0),image_source(source,[0,1,0],0),image_source(source,[0,0,1],3.4),np.array([-1.7,-1.2,1.1])]
+        observations=[dict(capture_id=str(i),status='ok',receiver_position_m=r.tolist(),receiver_position_std_m=.003,direct_std_s=2e-5,candidates=[dict(candidate_id=f'{i}-{j}',delay_s=float(excess_delay(source,r,q,343)),delay_std_s=2e-5,amplitude=1) for j,q in enumerate(images)]) for i,r in enumerate(positions)]
+        out=infer_scene(session,observations)
+        self.assertEqual(out['status'],'ambiguous')
+        self.assertEqual(out['surfaces'],[])
+        explanations=out['higher_order_explanations']
+        self.assertEqual(len(explanations),1)
+        self.assertEqual(len(explanations[0]['support']),12)
+        fewer=next(h for h in out['hypotheses'] if h['hypothesis_id']=='fewer_surfaces_with_second_order_paths')
+        self.assertEqual(len(fewer['surfaces']),3)
+        # A real coincident diagonal reflector is observationally identical:
+        # preserve the four-reflector interpretation rather than asserting absence.
+        original=next(h for h in out['hypotheses'] if h['hypothesis_id']=='first_order_reflector_interpretation')
+        self.assertEqual(len(original['surfaces']),4)
+        guidance=next(g for g in out['guidance'] if g.get('action')=='move_source_for_reflection_order_discrimination')
+        self.assertGreater(guidance['predicted_median_delay_separation_s'],1e-5)
+        self.assertEqual(guidance['receiver_only_discrimination_possible'],False)
+
+    def test_two_bounce_path_obeys_reflection_law(self):
+        from echosight.geometry import reflection_path
+        source=np.array([1.7,1.2,1.1]);receiver=np.array([2.6,.8,2.])
+        planes=[(np.array([1.,0,0]),0.),(np.array([0.,1,0]),0.)]
+        paths=[reflection_path(source,receiver,order) for order in (planes,planes[::-1])]
+        self.assertEqual(sum(p is None for p in paths),1)
+        path=next(p for p in paths if p is not None)
+        self.assertEqual(len(path['vertices_m']),4)
+        expected=np.linalg.norm(receiver-np.array([-1.7,-1.2,1.1]))
+        self.assertAlmostEqual(path['length_m'],expected,places=10)
+        self.assertLess(path['max_reflection_law_error'],1e-10)
+
+    def test_unobserved_parent_planes_leave_order_unresolved(self):
+        session,observations,_=fixture()
+        source=np.array(session['source_position_m']);double=np.array([-source[0],-source[1],source[2]])
+        for row in observations:
+            row['candidates']=[dict(candidate_id=row['capture_id']+'-double',delay_s=float(excess_delay(source,row['receiver_position_m'],double,343)),delay_std_s=1e-5,amplitude=1.)]
+        out=infer_scene(session,observations)
+        self.assertEqual(len(out['surfaces']),1)
+        self.assertEqual(out.get('higher_order_explanations',[]),[])
+        surface=out['surfaces'][0]
+        self.assertEqual(surface['model_status'],'conditional_first_order_hypothesis')
+        self.assertIn('reflection_order',surface['uncertainty']['excluded_model_errors'])
+
+    def test_joint_calibration_covariance_matches_numerical_derivative(self):
+        from echosight.inference import _covariance
+        session,observations,_=fixture();s=np.array(session['source_position_m']);v=346.
+        n=np.array([1.,0,0]);d=4.7;q=image_source(s,n,d)
+        factor=np.array([[.002,0,0,0],[.0008,.0015,0,0],[0,.0003,.001,0],[.04,0,.02,.15]])
+        joint=factor@factor.T
+        session.update(effective_speed_m_s=v,source_effective_speed_covariance=joint.tolist(),source_position_std_m=99.,sound_speed_std_m_s=99.,source_clock_std_ppm=100000.)
+        r=np.array([o['receiver_position_m'] for o in observations[:3]])
+        rows=[]
+        for i,receiver in enumerate(r):
+            peak=dict(candidate_id=str(i),delay_s=float(excess_delay(s,receiver,q,v)),delay_std_s=1e-5)
+            rows.append(dict(o=dict(direct_std_s=0.,receiver_position_std_m=0.),r=receiver,t=np.array([peak['delay_s']]),peaks=[peak]))
+        _,covariance,_=_covariance([q],[(0,i,0) for i in range(3)],s,r,v,rows,session)
+        values=np.r_[s,v];jac=np.zeros((3,4));eps=1e-5
+        for axis in range(4):
+            plus=values.copy();minus=values.copy();plus[axis]+=eps;minus[axis]-=eps
+            def predict(theta):return excess_delay(theta[:3],r,image_source(theta[:3],n,d),theta[3])
+            jac[:,axis]=(predict(plus)-predict(minus))/(2*eps)
+        np.testing.assert_allclose(covariance,jac@joint@jac.T+np.eye(3)*1e-10,rtol=1e-7,atol=1e-15)
+
+    def test_effective_speed_is_not_relabelled_physical_sound_speed(self):
+        session,observations,_=fixture();session['effective_speed_m_s']=346.
+        session['source_effective_speed_covariance']=np.diag([1e-6,1e-6,1e-6,.01]).tolist()
+        for row in observations:
+            for peak in row['candidates']:peak['delay_s']*=343/346
+        result=infer_scene(session,observations)
+        self.assertEqual(len(result['surfaces']),6)
+        self.assertLess(max(abs(e['residual_s']) for p in result['surfaces'] for e in p['support']),1e-7)
+        bad=dict(session,source_effective_speed_covariance=np.diag([1.,1.,1.,-1.]).tolist())
+        self.assertEqual(infer_scene(bad,observations)['status'],'no_result')
+        missing=dict(session);del missing['source_effective_speed_covariance']
+        self.assertEqual(infer_scene(missing,observations)['status'],'no_result')
+
+    def test_nearly_symmetric_indefinite_calibration_is_rejected(self):
+        session,observations,_=fixture();matrix=np.eye(4)
+        matrix[0,1]=1+1e-9;matrix[1,0]=1.
+        # It meets entrywise symmetry tolerance and raw eigvalsh(lower triangle)
+        # is PSD, but the actually used symmetrized covariance is indefinite.
+        session.update(effective_speed_m_s=343.,source_effective_speed_covariance=matrix.tolist())
+        self.assertEqual(infer_scene(session,observations)['status'],'no_result')

@@ -3,39 +3,351 @@
   "$id": "https://echosight.local/schemas/result-1.0.json",
   "title": "EchoSight scene result v1",
   "type": "object",
-  "required": ["schema_version", "status", "surfaces", "hypotheses", "diagnostics", "provenance"],
+  "required": [
+    "schema_version",
+    "status",
+    "surfaces",
+    "hypotheses",
+    "diagnostics",
+    "provenance"
+  ],
   "properties": {
-    "schema_version": {"const": "1.0"},
-    "session_id": {"type": ["string", "null"]},
-    "result_id": {"type": "string"},
-    "status": {"enum": ["ok", "partial", "ambiguous", "no_result", "cancelled"]},
-    "runtime_s": {"type": "number", "minimum": 0},
-    "surfaces": {"type": "array", "maxItems": 10, "items": {"$ref": "#/$defs/surface"}},
-    "hypotheses": {"type": "array", "items": {"type": "object", "description": "Alternative interpretations. Never union incompatible hypotheses into one scene."}},
-    "diagnostics": {"type": "array", "items": {"oneOf": [{"type": "string"}, {"type": "object", "required": ["code", "message"], "properties": {"code": {"type": "string"}, "message": {"type": "string"}}}]}},
-    "guidance": {"type": "array", "items": {"type": "object", "properties": {"action": {"type": "string"}, "suggested_position_m": {"$ref": "#/$defs/vector3"}}}},
-    "dimensions": {"type": "array", "items": {"type": "object", "required": ["kind", "surface_ids", "value_m"], "properties": {"value_m": {"type": "number", "minimum": 0}, "std_m": {"type": "number", "minimum": 0}, "surface_ids": {"type": "array", "items": {"type": "string"}}}}},
-    "acquisition": {"type": "object", "properties": {"coordinate_frame_id": {"type": "string", "minLength": 1, "maxLength": 160}}, "description": "Supplied calibration, poses and exact probe. Contains no scene truth or raw filesystem paths."},
-    "observations": {"type": "array", "maxItems": 32, "items": {"type": "object", "required": ["capture_id", "status", "candidates"], "properties": {"capture_id": {"type": "string"}, "status": {"enum": ["ok", "rejected"]}, "candidates": {"type": "array", "maxItems": 18, "items": {"$ref": "#/$defs/candidate"}}}}},
-    "provenance": {"type": "object", "required": ["physical_validation"], "properties": {"physical_validation": {"const": false}, "evidence_classes": {"type": "array", "items": {"enum": ["simulated", "measured", "replayed", "supplied"]}}}},
-    "stale": {"type": "boolean", "description": "HTTP store adds this when later captures have changed the session revision."}
+    "schema_version": {
+      "const": "1.0"
+    },
+    "session_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "result_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "ambiguous",
+        "no_result",
+        "cancelled"
+      ]
+    },
+    "runtime_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "surfaces": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/surface"
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Alternative interpretations. Never union incompatible hypotheses into one scene."
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "guidance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string"
+          },
+          "suggested_position_m": {
+            "$ref": "#/$defs/vector3"
+          }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "surface_ids",
+          "value_m"
+        ],
+        "properties": {
+          "value_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "std_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "surface_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "acquisition": {
+      "type": "object",
+      "properties": {
+        "coordinate_frame_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "effective_speed_m_s": {
+          "type": "number",
+          "minimum": 250,
+          "maximum": 460,
+          "description": "Metres per source-buffer second, not independently measured physical sound speed."
+        },
+        "source_effective_speed_covariance": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          },
+          "description": "Joint source xyz/effective speed covariance, replacing independent source/speed/clock terms."
+        }
+      },
+      "description": "Supplied calibration, poses and exact probe. Contains no scene truth or raw filesystem paths.",
+      "dependentRequired": {
+        "effective_speed_m_s": [
+          "source_effective_speed_covariance"
+        ],
+        "source_effective_speed_covariance": [
+          "effective_speed_m_s"
+        ]
+      }
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "required": [
+          "capture_id",
+          "status",
+          "candidates"
+        ],
+        "properties": {
+          "capture_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "ok",
+              "rejected"
+            ]
+          },
+          "candidates": {
+            "type": "array",
+            "maxItems": 18,
+            "items": {
+              "$ref": "#/$defs/candidate"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "physical_validation"
+      ],
+      "properties": {
+        "physical_validation": {
+          "const": false
+        },
+        "evidence_classes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "simulated",
+              "measured",
+              "replayed",
+              "supplied"
+            ]
+          }
+        }
+      }
+    },
+    "stale": {
+      "type": "boolean",
+      "description": "HTTP store adds this when later captures have changed the session revision."
+    }
   },
   "$defs": {
-    "vector3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
-    "candidate": {"type": "object", "required": ["candidate_id", "delay_s", "delay_std_s", "amplitude"], "properties": {"candidate_id": {"type": "string"}, "delay_s": {"type": "number", "minimum": 0, "description": "Excess source-buffer seconds, not absolute physical arrival time."}, "delay_std_s": {"type": "number", "exclusiveMinimum": 0}, "amplitude": {"type": "number", "description": "Relative matched-filter response, not a material coefficient."}}},
+    "vector3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "delay_s",
+        "delay_std_s",
+        "amplitude"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "delay_s": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Excess source-buffer seconds, not absolute physical arrival time."
+        },
+        "delay_std_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "amplitude": {
+          "type": "number",
+          "description": "Relative matched-filter response, not a material coefficient."
+        }
+      }
+    },
     "surface": {
       "type": "object",
-      "required": ["surface_id", "normal", "offset_m", "support", "vertices_m", "triangles", "extent_status", "uncertainty"],
+      "required": [
+        "surface_id",
+        "normal",
+        "offset_m",
+        "support",
+        "vertices_m",
+        "triangles",
+        "extent_status",
+        "uncertainty"
+      ],
       "properties": {
-        "surface_id": {"type": "string"},
-        "normal": {"$ref": "#/$defs/vector3", "description": "Unit plane normal n; plane n dot x = offset_m."},
-        "offset_m": {"type": "number"},
-        "vertices_m": {"type": "array", "items": {"$ref": "#/$defs/vector3"}},
-        "triangles": {"type": "array", "items": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer", "minimum": 0}}},
-        "extent_status": {"const": "unknown"},
-        "mesh_semantics": {"const": "reflection_support_convex_hull_not_physical_edges"},
-        "support": {"type": "array", "maxItems": 32, "items": {"type": "object", "required": ["capture_id", "candidate_id", "observed_delay_s", "predicted_delay_s", "residual_s", "reflection_point_m"], "properties": {"capture_id": {"type": "string"}, "candidate_id": {"type": "string"}, "observed_delay_s": {"type": "number"}, "predicted_delay_s": {"type": "number"}, "residual_s": {"type": "number"}, "reflection_point_m": {"$ref": "#/$defs/vector3"}}}},
-        "uncertainty": {"type": "object", "required": ["offset_std_m"], "properties": {"offset_std_m": {"type": "number", "minimum": 0}, "normal_angular_std_rad": {"type": "number", "minimum": 0}}, "description": "Conditional local uncertainty. Does not include unmodeled systematic bias or alternative hypotheses."}
+        "surface_id": {
+          "type": "string"
+        },
+        "normal": {
+          "$ref": "#/$defs/vector3",
+          "description": "Unit plane normal n; plane n dot x = offset_m."
+        },
+        "offset_m": {
+          "type": "number"
+        },
+        "vertices_m": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/vector3"
+          }
+        },
+        "triangles": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "extent_status": {
+          "const": "unknown"
+        },
+        "mesh_semantics": {
+          "const": "reflection_support_convex_hull_not_physical_edges"
+        },
+        "support": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "required": [
+              "capture_id",
+              "candidate_id",
+              "observed_delay_s",
+              "predicted_delay_s",
+              "residual_s",
+              "reflection_point_m"
+            ],
+            "properties": {
+              "capture_id": {
+                "type": "string"
+              },
+              "candidate_id": {
+                "type": "string"
+              },
+              "observed_delay_s": {
+                "type": "number"
+              },
+              "predicted_delay_s": {
+                "type": "number"
+              },
+              "residual_s": {
+                "type": "number"
+              },
+              "reflection_point_m": {
+                "$ref": "#/$defs/vector3"
+              }
+            }
+          }
+        },
+        "uncertainty": {
+          "type": "object",
+          "required": [
+            "offset_std_m"
+          ],
+          "properties": {
+            "offset_std_m": {
+              "type": "number",
+              "minimum": 0
+            },
+            "normal_angular_std_rad": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "description": "Conditional local uncertainty. Does not include unmodeled systematic bias or alternative hypotheses."
+        }
       }
     }
   }
