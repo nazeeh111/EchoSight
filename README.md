@@ -4,7 +4,7 @@
 
 EchoSight turns lossless audio recordings at surveyed microphone positions into evidence-linked 3D reflector estimates. A fixed source emits a known probe; receivers need not share clocks. Raw recordings, timing diagnostics, competing explanations, supported surface patches and conditional uncertainty remain available for inspection.
 
-The frozen twelve-view synthetic benchmark recovers all six room surfaces, including floor and ceiling, and a seventh tilted reflector in its designated case, with zero false surfaces. Eight-view cases have documented misses. Measured laboratory response replay checks extraction and truthful abstention, not measured 3D accuracy. **Our iPhones and MacBook have not yet been physically validated.** See the [evaluation evidence](docs/EVALUATION.md) and [current verification state](STATE.md).
+The frozen twelve-view synthetic benchmark recovers all six room surfaces, including floor and ceiling, and a seventh tilted reflector in its designated case, with zero false surfaces. Eight-view cases have documented misses. Harder multipath cases and external measured-room spatial acceptance still fail. Measured response replay is not demonstrated measured3D accuracy. **Our iPhones and MacBook have not yet been physically validated.** See the [evaluation evidence](docs/EVALUATION.md) and [current verification state](STATE.md).
 
 ## Run locally
 
@@ -44,6 +44,15 @@ Use `python -m echosight compare old.json new.json --output comparison.json` to 
 For later physical acquisition, `python -m echosight probe work/playback --channel left --period 1` creates one continuous stereo playback WAV and its manifest; the other channel is silent. This command does not play audio. Preserve source routing and survey microphone positions. The included phyphox fixture is a provisional lossless iPhone import route; [hardware acceptance steps](docs/ACQUISITION.md) remain required. Three or four phones can be reused across three placements to obtain twelve views.
 
 Imported archive computations are quarantined as unverified artifacts. Replay recomputes from original recordings instead of trusting stored geometry. Session IDs are immutable within a store; use a new replay-store directory when importing the same archive again.
+
+For repeatable acoustic-change controls:
+
+```sh
+python -m evaluation.controlled_development --output work/controlled-demo --receivers 4 --scenario moved
+python -m echosight controlled work/controlled-demo/protocol.json --output work/controlled-demo/result.json
+```
+
+Four fixed phones support unlocalized repeatable change in this synthetic example. A separate twelve-static-receiver development case supports conditional reflector displacement. See [controlled protocol](docs/audit/CONTROLLED.md), [API](docs/API.md) and [fixed later hardware acceptance](docs/HARDWARE_ACCEPTANCE.md). These are bounded software capabilities, not physical validation.
 
 ## Project evidence
 

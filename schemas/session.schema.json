@@ -139,6 +139,16 @@
             "supplied"
           ],
           "default": "measured"
+        },
+        "device_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "receiver_pose_group_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
         }
       }
     }

@@ -1,0 +1,60 @@
+{
+  "scope": "Development raw controls, seed420; not held-out or physically validated",
+  "source_sha256": "6e35ada6cc36530ff3f9c00c5bb35cc20ffb71a2041aa8441c372ead4f025dbd",
+  "source_unchanged_during_run": true,
+  "cases": [
+    {
+      "scenario": "failed_return-12",
+      "status": "inconclusive",
+      "conditional_spatial_changes": 0,
+      "changed_views": 0,
+      "positive_shift_views": 0,
+      "two_result_offset_changes_m": [
+        -0.19994059674379283
+      ],
+      "runtime_s": 0.4303033329997561
+    },
+    {
+      "scenario": "gain_only-12",
+      "status": "no_repeatable_change",
+      "conditional_spatial_changes": 0,
+      "changed_views": 0,
+      "positive_shift_views": 0,
+      "two_result_offset_changes_m": [
+        0.0001270577877736656
+      ],
+      "runtime_s": 0.517649084002187
+    },
+    {
+      "scenario": "moved-12",
+      "status": "conditional_spatial_change",
+      "conditional_spatial_changes": 1,
+      "changed_views": 12,
+      "positive_shift_views": 12,
+      "two_result_offset_changes_m": [
+        -0.19994059674379283
+      ],
+      "runtime_s": 0.4430280419983319
+    },
+    {
+      "scenario": "moved-4",
+      "status": "repeatable_acoustic_change_unlocalized",
+      "conditional_spatial_changes": 0,
+      "changed_views": 4,
+      "positive_shift_views": 4,
+      "two_result_offset_changes_m": [],
+      "runtime_s": 0.14961566599959042
+    },
+    {
+      "scenario": "null-12",
+      "status": "no_repeatable_change",
+      "conditional_spatial_changes": 0,
+      "changed_views": 0,
+      "positive_shift_views": 0,
+      "two_result_offset_changes_m": [
+        0.00012705491394449098
+      ],
+      "runtime_s": 0.4497293750027893
+    }
+  ]
+}

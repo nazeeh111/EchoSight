@@ -68,6 +68,9 @@ def main(argv=None):
     command.add_argument("previous", type=Path)
     command.add_argument("current", type=Path)
     command.add_argument("--output", type=Path, required=True)
+    command = sub.add_parser("controlled", help="process declared A-before/B-first/B-repeat/A-return recordings")
+    command.add_argument("protocol",type=Path)
+    command.add_argument("--output",type=Path,required=True)
     command = sub.add_parser("calibrate-reference", help="test source/effective-speed calibration against an independently surveyed reference plane")
     command.add_argument("session", type=Path)
     command.add_argument("reference", type=Path)
@@ -125,6 +128,16 @@ def main(argv=None):
             result = compare_results(json.loads(args.previous.read_text()), json.loads(args.current.read_text()))
             save_result(result, args.output)
             print(json.dumps(result, indent=2, allow_nan=False))
+        elif args.command == "controlled":
+            from .controlled import process_controlled_protocol
+            cancelled=threading.Event()
+            previous_handler=signal.signal(signal.SIGINT,lambda *_:cancelled.set())
+            try:result=process_controlled_protocol(args.protocol,cancel=cancelled.is_set)
+            finally:signal.signal(signal.SIGINT,previous_handler)
+            save_result(result,args.output)
+            print(json.dumps({k:result[k] for k in ('status','diagnostics','physical_validation')},indent=2))
+            if result['status']=='cancelled':return 130
+            if result['status']=='inconclusive':return 2
         elif args.command == "calibrate-reference":
             from .calibration import calibrate_reference
             if args.reference.stat().st_size > 1024 * 1024:
@@ -160,7 +173,7 @@ def main(argv=None):
                         raise ValueError("recording exceeds 64 MiB")
                     if capture.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != capture["sha256"]:
                         raise ValueError("recording checksum differs from manifest")
-                    metadata = {key: capture[key] for key in ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance", "device_id", "notes") if key in capture}
+                    metadata = {key: capture[key] for key in ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance", "device_id", "receiver_pose_group_id", "notes") if key in capture}
                     store.add_recording(session["session_id"], path, metadata)
                 _run_stored_session(store, session["session_id"])
                 store.export_session(session["session_id"], args.output)

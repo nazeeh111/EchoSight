@@ -3,16 +3,110 @@
   "$id": "https://echosight.local/schemas/job-1.0.json",
   "title": "EchoSight processing job v1",
   "type": "object",
-  "required": ["schema_version", "job_id", "session_id", "session_revision", "status", "progress"],
+  "required": [
+    "schema_version",
+    "job_id",
+    "status",
+    "progress"
+  ],
   "properties": {
-    "schema_version": {"const": "1.0"},
-    "job_id": {"type": "string"},
-    "session_id": {"type": "string"},
-    "session_revision": {"type": "integer", "minimum": 0},
-    "status": {"enum": ["queued", "running", "completed", "failed", "cancelled", "interrupted"]},
-    "progress": {"type": "number", "minimum": 0, "maximum": 1},
-    "message": {"type": "string"},
-    "cancellation_requested": {"type": "boolean"},
-    "error": {"type": "object", "required": ["code", "message"], "properties": {"code": {"type": "string"}, "message": {"type": "string"}}}
-  }
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "session_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "failed",
+        "cancelled",
+        "interrupted"
+      ]
+    },
+    "progress": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "message": {
+      "type": "string"
+    },
+    "cancellation_requested": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "job_type": {
+      "enum": [
+        "session",
+        "controlled"
+      ],
+      "default": "session"
+    },
+    "protocol_id": {
+      "type": "string"
+    },
+    "session_snapshots": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "epoch",
+          "session_id",
+          "session_revision"
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "job_type"
+        ],
+        "properties": {
+          "job_type": {
+            "const": "controlled"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "protocol_id",
+          "session_snapshots"
+        ]
+      },
+      "else": {
+        "required": [
+          "session_id",
+          "session_revision"
+        ]
+      }
+    }
+  ]
 }

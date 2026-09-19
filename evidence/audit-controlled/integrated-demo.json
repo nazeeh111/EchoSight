@@ -1,0 +1,126 @@
+{
+  "evidence_class": "simulation development only",
+  "status": "repeatable_acoustic_change_unlocalized",
+  "receiver_evidence": [
+    {
+      "A_return_relative_difference": 0.013172713654358173,
+      "B_repeat_relative_difference": 0.003481193753329403,
+      "capture_id": "view-00",
+      "change_gate": 0.8090628187244735,
+      "cross_state_relative_difference": 1.8363299331697327,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-00:echo:00",
+            "view-00:echo:00"
+          ],
+          "A_delay_s": 0.007171631237743353,
+          "B_candidate_ids": [
+            "view-00:echo:00",
+            "view-00:echo:00"
+          ],
+          "B_delay_s": 0.006103245613061102,
+          "delay_change_s": -0.001068385624682251,
+          "differential_std_bound_s": 0.00010210615446136254,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2696876062414912
+    },
+    {
+      "A_return_relative_difference": 0.06266578236350527,
+      "B_repeat_relative_difference": 0.1042678260285814,
+      "capture_id": "view-01",
+      "change_gate": 0.8428486360836239,
+      "cross_state_relative_difference": 1.8740985547676217,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-01:echo:00",
+            "view-01:echo:00"
+          ],
+          "A_delay_s": 0.010547247092588098,
+          "B_candidate_ids": [
+            "view-01:echo:00",
+            "view-01:echo:00"
+          ],
+          "B_delay_s": 0.009408690815932427,
+          "delay_change_s": -0.0011385562766556712,
+          "differential_std_bound_s": 0.00010210615514973956,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.280949545361208
+    },
+    {
+      "A_return_relative_difference": 0.053952837970506755,
+      "B_repeat_relative_difference": 0.07624297198762925,
+      "capture_id": "view-02",
+      "change_gate": 0.829461809909422,
+      "cross_state_relative_difference": 1.8818255330157927,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-02:echo:00",
+            "view-02:echo:00"
+          ],
+          "A_delay_s": 0.01371319519945579,
+          "B_candidate_ids": [
+            "view-02:echo:00",
+            "view-02:echo:00"
+          ],
+          "B_delay_s": 0.012555893324159736,
+          "delay_change_s": -0.0011573018752960539,
+          "differential_std_bound_s": 0.00010210615605389173,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2764872699698073
+    },
+    {
+      "A_return_relative_difference": 0.010620703420668065,
+      "B_repeat_relative_difference": 0.008154550106729703,
+      "capture_id": "view-03",
+      "change_gate": 0.8054775672236463,
+      "cross_state_relative_difference": 1.871390815195157,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-03:echo:00",
+            "view-03:echo:00"
+          ],
+          "A_delay_s": 0.012130030098506574,
+          "B_candidate_ids": [
+            "view-03:echo:00",
+            "view-03:echo:00"
+          ],
+          "B_delay_s": 0.01099503132877843,
+          "delay_change_s": -0.001134998769728144,
+          "differential_std_bound_s": 0.00010210615557260364,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2684925224078821
+    }
+  ],
+  "physical_validation": false,
+  "pipeline_source_sha256": {
+    "echosight/controlled.py": "6cfeaa4c1a78ffdf04be8fd76543d792022077bdf99dffce76d528b7bca3e503",
+    "echosight/pipeline.py": "3c12f74d8579f1fecbe177bf3bf967adb5ac684a7e55002c1e816c8c1dfb1ab2",
+    "echosight/signals.py": "2fdc6c5d48f8e55efc1650eb52a9ffbc6880e4efa767dbd449900fc38859747f",
+    "echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452"
+  },
+  "note": "Four fixed simulated phones; geometry remains unlocalized. Prior12-device report predates integration clock/byte-identity checks and is explicitly historical."
+}

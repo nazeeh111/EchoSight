@@ -6,7 +6,7 @@ import unittest
 import urllib.error
 import urllib.request
 from echosight.api import create_server
-from test_storage import wav_bytes
+from tests.test_storage import wav_bytes
 
 
 class APITests(unittest.TestCase):

@@ -12,6 +12,8 @@ Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help f
 | GET `/v1/sessions/{session_id}` | session including relative raw paths and recording hashes |
 | POST `/v1/sessions/{session_id}/recordings` | original mono PCM WAV or phyphox CSV ZIP bytes; `X-Capture-Metadata` header contains capture JSON; returns 201 capture |
 | POST `/v1/sessions/{session_id}/jobs` | `{}`; returns 202 job |
+| POST `/v1/controlled-jobs` | revision-pinned four-epoch protocol; returns202 controlled job |
+| GET `/v1/jobs/{job_id}/result` | immutable completed job result, including controlled protocols |
 | GET `/v1/jobs/{job_id}` | job status/progress/error |
 | POST `/v1/jobs/{job_id}/cancel` | `{}`; requests cooperative cancellation; 202 current state |
 | GET `/v1/sessions/{session_id}/result` | latest completed result; `stale` says whether new captures were added afterward |
@@ -45,7 +47,7 @@ A stale expected revision returns 409; reload before revising. Calibration accep
 
 ## Capture and raw import contract
 
-Capture metadata accepts `capture_id`, `receiver_position_m`, `receiver_position_std_m`, `provenance` (`measured`, `simulated`, `replayed`, `supplied`), and optional `device_id`/`notes`. IDs are ASCII alphanumerics, underscore or hyphen, 1–80 characters, starting alphanumeric. The store assigns missing IDs. A capture ID cannot be overwritten. Each imported recording receives SHA-256, sample rate/count/duration, byte count and format. SHA-256 hashes identify bytes, not scientific accuracy. Provenance is the caller's declaration.
+Capture metadata accepts `capture_id`, `receiver_position_m`, `receiver_position_std_m`, `provenance` (`measured`, `simulated`, `replayed`, `supplied`), and optional `device_id`/`receiver_pose_group_id`/`notes`. IDs are ASCII alphanumerics, underscore or hyphen, 1–80 characters, starting alphanumeric. The store assigns missing IDs. A capture ID cannot be overwritten. Each imported recording receives SHA-256, sample rate/count/duration, byte count and format. SHA-256 hashes identify bytes, not scientific accuracy. Provenance is the caller's declaration.
 
 PCM WAV supports mono uncompressed 8-, 16-, 24-, and 32-bit integer PCM at 8–192 kHz, positive duration at most 120 s. No downmixing, lossy decoding, normalization, or sample-rate conversion occurs in storage. A single bounded byte snapshot supplies decoding, hash and preserved bytes; detected source changes during reading reject import. Original bytes remain available and export unchanged. Float WAV, AAC/M4A and stereo are rejected with an actionable error. Raw amplitude decoding is normalized to [-1,1).
 
@@ -66,3 +68,14 @@ Limits: 64 MiB per recording, 120 s, 32 captures, 256 MiB total recording bytes 
 `calibration` PATCH may include `effective_speed_m_s` and `source_effective_speed_covariance` together, with `source_position_m`. Speed is250–460 metres per source-buffer second. The finite symmetric positive-semidefinite4×4 matrix is ordered source x/y/z and effective speed; cross terms are retained. These fields replace separate source/sound-speed/source-clock uncertainty contributions. A partial pair, null clearing or invalid covariance is rejected. [Reference calibration](CALIBRATION.md) produces a proposal from raw recordings without applying it automatically.
 
 A completed per-job state record is the publication commit. Results from a failed/interrupted final write cannot displace the previous completed result, including after restart. Per-job result bytes are immutable; the current-result index is rebuilt from completed jobs. Archive parsing and its provenance hash use one bounded byte snapshot.
+
+
+## Controlled recording comparison
+
+`POST /v1/controlled-jobs` accepts [controlled-request schema](../schemas/controlled-request.schema.json). Create four separate sessions and upload their original recordings first. Every capture must have stable `device_id`, `receiver_pose_group_id`, capture ID and surveyed pose across epochs. Supply epochs in order `A_before`, `B_first`, `B_repeat`, `A_return`. Each epoch references a stored `session_id` and `expected_revision`, with declared `calibration_id`, `source_configuration_id` and per-device `route_ids`. The API never accepts embedded session objects or filesystem paths in this request. Changed revisions return409; malformed or changed controls return400 before work is admitted.
+
+The job pins all four calibration/recording snapshots, shares the normal two-worker/eight-job queue and supports progress, cancellation and interrupted-state recovery. Fetch its output with `GET /v1/jobs/{job_id}/result`. It cannot replace any single-session scene result. Only completed jobs serve results, including after restart. All raw hashes and epoch/session/revision bindings are preserved. Reprocess by submitting a new revision-pinned request; export the four individual sessions to preserve their original recordings alongside the request and result. A completed protocol result is not imported as trusted geometry.
+
+[Controlled-result schema](../schemas/controlled-result.schema.json) distinguishes repeated acoustic change from conditional spatial localization and inconclusive controls. No status certifies physical change, causality or validated hardware. Numerical gates are engineering bounds, not calibrated false-alarm probabilities. Missing echoes do not prove absence. Dense response sample arrays are omitted from nested epoch results, with exact sample count and omission metadata; geometry, paths, diagnostics and provenance are retained. Normal per-session reprocessing returns the full responses. The32MiB result bound and32captures-per-epoch limits still apply.
+
+CLI form: `python -m echosight controlled protocol.json --output controlled-result.json`. Here each epoch uses trusted local `session` JSON paths or embedded session dictionaries instead of API references. Ctrl-C cancels cooperatively; inconclusive input/control results exit2 and retain diagnostics, cancellation exits130. [Protocol math/limitations](audit/CONTROLLED.md) and [later hardware acceptance](HARDWARE_ACCEPTANCE.md) define what the declarations and evidence mean.

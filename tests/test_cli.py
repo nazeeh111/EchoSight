@@ -26,9 +26,17 @@ class CLITests(unittest.TestCase):
         from echosight.simulation import simulate_session
         with tempfile.TemporaryDirectory() as temp, contextlib.redirect_stdout(io.StringIO()):
             p=Path(temp);session=simulate_session(p/"input",seed=1,capture_count=12)
+            spec=json.loads(Path(session).read_text())
+            spec['captures'][0]['device_id']='phone-0'
+            spec['captures'][0]['receiver_pose_group_id']='survey-stop-0'
+            Path(session).write_text(json.dumps(spec))
             archive=p/"survey.zip"
             self.assertEqual(main(["export",str(session),"--output",str(archive)]),0)
             self.assertTrue(archive.is_file())
+            import zipfile
+            with zipfile.ZipFile(archive) as z:
+                saved=json.loads(z.read('session.json'))
+                self.assertEqual(saved['captures'][0]['receiver_pose_group_id'],'survey-stop-0')
             self.assertEqual(main(["replay",str(archive),"--store",str(p/"replay"),"--output",str(p/"result.json")]),0)
             result=json.loads((p/"result.json").read_text())
             self.assertEqual(len(result["surfaces"]),6)

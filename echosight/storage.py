@@ -105,6 +105,9 @@ def validate_session(spec):
         _number(cap['receiver_position_std_m'], 'receiver_position_std_m', 0, 10)
         cap.setdefault('provenance', 'measured')
         if cap['provenance'] not in {'measured', 'simulated', 'replayed', 'supplied'}: raise ValueError('invalid recording provenance')
+        for key in ('device_id', 'receiver_pose_group_id'):
+            if key in cap and (not isinstance(cap[key],str) or not 1<=len(cap[key])<=160):
+                raise ValueError(key+' must be a string of1 to160 characters')
         if 'sample_rate_hz' in cap: _number(cap['sample_rate_hz'], 'sample_rate_hz', 8000, 192000)
         if 'recording_path' in cap and not isinstance(cap['recording_path'], str): raise ValueError('recording_path must be a string')
     if 'probe' in s and not isinstance(s['probe'], dict): raise ValueError('probe must be an object')
@@ -337,7 +340,7 @@ class SessionStore:
             if job.get('status') not in TERMINAL:
                 job.update(status='interrupted', error={'code': 'process_interrupted', 'message': 'Restart detected. Raw recordings retained; start a new job.'}, updated_at=time.time())
                 _write_json(p, job)
-            elif job.get('status') == 'completed':
+            elif job.get('status') == 'completed' and job.get('job_type','session') == 'session':
                 sid = job.get('session_id'); jid = job.get('job_id')
                 if not isinstance(sid, str) or not isinstance(jid, str): continue
                 result_path = self.root / 'jobs' / (jid + '.result.json')
@@ -386,7 +389,7 @@ class SessionStore:
         """No server filesystem paths leave the HTTP interface."""
         with self._lock: return self._raw_session(sid)
     def add_recording(self, sid, path, metadata):
-        allowed = {'capture_id', 'receiver_position_m', 'receiver_position_std_m', 'provenance', 'device_id', 'notes'}
+        allowed = {'capture_id', 'receiver_position_m', 'receiver_position_std_m', 'provenance', 'device_id', 'receiver_pose_group_id', 'notes'}
         if not isinstance(metadata, dict) or set(metadata) - allowed: raise ValueError('unsupported capture metadata fields')
         cap = dict(metadata); cap.setdefault('capture_id', 'capture_' + uuid.uuid4().hex)
         validate_session({'captures': [cap]})
@@ -450,7 +453,7 @@ class SessionStore:
             session = self.get_session(sid)
             # Serialize processing per session to prevent older results replacing newer ones.
             for jid in self._events:
-                if self.get_job(jid)['session_id'] == sid: raise RuntimeError('session already has an active job')
+                if self.get_job(jid).get('session_id') == sid: raise RuntimeError('session already has an active job')
             jid = 'job_' + uuid.uuid4().hex
             job = {'schema_version': SCHEMA_VERSION, 'job_id': jid, 'session_id': sid,
                    'session_revision': session['revision'], 'status': 'queued', 'progress': 0.,
@@ -460,6 +463,72 @@ class SessionStore:
             event = threading.Event(); self._events[jid] = event
             self._pool.submit(self._run, jid, session, processor, event)
             return copy.deepcopy(job)
+    def start_controlled_job(self, request, processor=None):
+        """Resolve stored session references only; callers cannot inject server paths."""
+        from .controlled import _load, process_controlled_protocol
+        if processor is None: processor=process_controlled_protocol
+        if not isinstance(request,dict): raise ValueError('protocol must be an object')
+        if len(json.dumps(request,allow_nan=False).encode())>MAX_JSON_BYTES: raise ValueError('protocol metadata too large')
+        allowed={'schema_version','protocol_id','coordinate_frame_id','intervention_description','controls','epochs'}
+        if set(request)-allowed: raise ValueError('unsupported protocol fields')
+        epochs=request.get('epochs')
+        if not isinstance(epochs,list) or len(epochs)!=4: raise ValueError('four stored session epochs required')
+        with self._lock:
+            if self._closed: raise RuntimeError('store is closed')
+            if len(self._events)>=self._max_jobs: raise RuntimeError('job queue full')
+            protocol=copy.deepcopy(request);snapshots=[];manifest=[]
+            for epoch in protocol['epochs']:
+                fields={'epoch','session_id','expected_revision','calibration_id','source_configuration_id','route_ids'}
+                if not isinstance(epoch,dict) or set(epoch)-fields: raise ValueError('epochs accept stored session references only')
+                sid=_id(epoch.pop('session_id',None));revision=epoch.pop('expected_revision',None)
+                if isinstance(revision,bool) or not isinstance(revision,int) or revision<0: raise ValueError('expected_revision required')
+                session=self.get_session(sid)
+                if session['revision']!=revision: raise FileExistsError('session revision changed; reload before starting protocol')
+                epoch['session']=session
+                snapshots.append({'epoch':epoch['epoch'],'session_id':sid,'session_revision':revision})
+                manifest.extend({'epoch':epoch['epoch'],'session_id':sid,'capture_id':c['capture_id'],
+                    'sha256':c['sha256'],'provenance':c['provenance']} for c in session['captures'])
+            if len({x['session_id'] for x in snapshots})!=4: raise ValueError('four independent acquisition sessions required')
+            _load(protocol) # Validate physical/control contract before admitting work.
+            jid='job_'+uuid.uuid4().hex
+            job={'schema_version':SCHEMA_VERSION,'job_id':jid,'job_type':'controlled',
+                'protocol_id':protocol['protocol_id'],'session_snapshots':snapshots,
+                'status':'queued','progress':0.,'created_at':time.time(),'updated_at':time.time()}
+            _write_json(self._job_path(jid),job)
+            _write_json(self.root/'jobs'/(jid+'.input.json'),protocol,4*MAX_JSON_BYTES)
+            event=threading.Event();self._events[jid]=event
+            self._pool.submit(self._run_controlled,jid,protocol,processor,event,snapshots,manifest)
+            return copy.deepcopy(job)
+
+    def _run_controlled(self,jid,protocol,processor,event,snapshots,manifest):
+        try:
+            if event.is_set(): self._update_job(jid,status='cancelled');return
+            self._update_job(jid,status='running')
+            def progress(value,message=''):
+                _number(value,'progress',0,1)
+                self._update_job(jid,progress=value,message=str(message)[:1000])
+            result=processor(protocol,cancel=event.is_set,progress=progress)
+            with self._lock:
+                if event.is_set() or result.get('status')=='cancelled':
+                    self._update_job(jid,status='cancelled');return
+                result=dict(result,job_id=jid,computation_origin='local_processing',
+                    session_snapshots=snapshots,recording_manifest=manifest)
+                _write_json(self.root/'jobs'/(jid+'.result.json'),result,MAX_RESULT_BYTES)
+                self._update_job(jid,status='completed',progress=1.)
+        except Exception as exc:
+            self._update_job(jid,status='cancelled' if event.is_set() else 'failed',
+                error={'code':'processing_failed','message':str(exc)[:1000]})
+        finally:
+            with self._lock:self._events.pop(jid,None)
+
+    def get_job_result(self,jid):
+        with self._lock:
+            if self.get_job(jid)['status']!='completed':raise KeyError('job has no completed result')
+            path=self.root/'jobs'/(_id(jid)+'.result.json')
+            if not path.exists():raise KeyError('job result not found')
+            if path.stat().st_size>MAX_RESULT_BYTES:raise ValueError('result metadata too large')
+            return json.loads(path.read_text())
+
     def _update_job(self, jid, **updates):
         with self._lock:
             job = self.get_job(jid); job.update(updates, updated_at=time.time()); _write_json(self._job_path(jid), job)

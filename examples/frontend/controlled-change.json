@@ -1,0 +1,2848 @@
+{
+  "absence_semantics": "Missing echoes do not establish removed objects or empty space.",
+  "causal_attribution": "Not established; supplied protocol controls and first-order geometry remain conditional.",
+  "conditional_spatial_changes": [],
+  "control_provenance": "Operator-declared controls, not independently instrumented verification.",
+  "coordinate_frame_id": "survey-one",
+  "declared_controls": {
+    "devices_and_source_stationary": true,
+    "differential_timing_std_s": 3e-06,
+    "only_declared_intervention": true,
+    "restoration_attempted": true
+  },
+  "diagnostics": [
+    {
+      "code": "controlled_acoustic_difference",
+      "message": "Repeated normalized acoustic responses differ between declared states; localization and attribution remain conditional."
+    }
+  ],
+  "epoch_control_declarations": [
+    {
+      "calibration_id": "cal-one",
+      "epoch": "A_before",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "source_configuration_id": "qualified-source-one"
+    },
+    {
+      "calibration_id": "cal-one",
+      "epoch": "B_first",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "source_configuration_id": "qualified-source-one"
+    },
+    {
+      "calibration_id": "cal-one",
+      "epoch": "B_repeat",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "source_configuration_id": "qualified-source-one"
+    },
+    {
+      "calibration_id": "cal-one",
+      "epoch": "A_return",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "source_configuration_id": "qualified-source-one"
+    }
+  ],
+  "epoch_results": [
+    {
+      "epoch": "A_before",
+      "result": {
+        "acquisition": {
+          "captures": [
+            {
+              "capture_id": "view-00",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.710654785997377,
+                2.961833636020984,
+                2.4775124522495524
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-01",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.2341515126446603,
+                2.211492139278849,
+                1.9798845930125804
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-02",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.7249502181570897,
+                1.844001643276344,
+                1.6932104261748728
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-03",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.8182927624067304,
+                1.487551678183404,
+                2.2858723075759304
+              ],
+              "receiver_position_std_m": 0.003
+            }
+          ],
+          "coordinate_frame_id": "survey-one",
+          "probe": {
+            "duration_s": 0.04,
+            "high_hz": 14000.0,
+            "kind": "repeated_linear_chirp",
+            "lead_s": 0.1,
+            "low_hz": 2000.0,
+            "max_echo_delay_s": 0.08,
+            "period_s": 0.35,
+            "pilot_start_samples": [
+              4800,
+              21600,
+              38400,
+              55200,
+              72000,
+              88800,
+              105600
+            ],
+            "repetitions": 7,
+            "sample_count": 116160,
+            "sample_rate_hz": 48000,
+            "schema_version": "1.0",
+            "tail_s": 0.18,
+            "timing_unit": "source_buffer_seconds",
+            "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b"
+          },
+          "schema_version": "1.0",
+          "session_id": "A_before",
+          "sound_speed_m_s": 343.0,
+          "sound_speed_std_m_s": 0.3,
+          "source_clock_scale": 1.0,
+          "source_clock_std_ppm": 50.0,
+          "source_position_m": [
+            1.2,
+            1.7,
+            1.1
+          ],
+          "source_position_std_m": 0.003
+        },
+        "assumptions": [
+          "stationary effective point source",
+          "first-order specular reflectors",
+          "surveyed acoustic-center poses"
+        ],
+        "diagnostics": [
+          "few_views_weak_unlabeled_echo_rejection"
+        ],
+        "dimensions": [],
+        "guidance": [
+          {
+            "action": "Add surveyed views around weakly supported reflectors with a different height.",
+            "reason": "Finite support and missing echoes do not establish physical edges or empty space.",
+            "suggested_position_m": [
+              2.4720123198014643,
+              1.8762197741898952,
+              2.709119944753234
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "hypothesis_id": "unconfirmed_correspondences",
+            "reason": "Fewer than seven independent receiver views; acquire confirmation placements.",
+            "surfaces": [
+              {
+                "confidence": {
+                  "kind": "evidence_summary_not_probability",
+                  "rms_residual_m": 8.882809217379289e-05,
+                  "supporting_views": 4
+                },
+                "extent_status": "unknown",
+                "image_source_m": [
+                  7.199659231173942,
+                  1.7005248927835726,
+                  1.0994402203722995
+                ],
+                "kind": "unclassified_planar_reflector",
+                "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+                "model_status": "conditional_first_order_hypothesis",
+                "normal": [
+                  0.9999999918203811,
+                  8.748709869251476e-05,
+                  -9.330190291695636e-05
+                ],
+                "offset_m": 4.199875726283459,
+                "support": [
+                  {
+                    "candidate_id": "view-00:echo:00",
+                    "capture_id": "view-00",
+                    "observed_delay_s": 0.007171424341375669,
+                    "predicted_delay_s": 0.007171282781737491,
+                    "reflection_point_m": [
+                      4.1998417478835215,
+                      2.5434057733886775,
+                      2.0203493495366462
+                    ],
+                    "residual_s": 1.4155963817819028e-07
+                  },
+                  {
+                    "candidate_id": "view-01:echo:00",
+                    "capture_id": "view-01",
+                    "observed_delay_s": 0.010547153365546291,
+                    "predicted_delay_s": 0.010547576349557884,
+                    "reflection_point_m": [
+                      4.199852187573691,
+                      2.009215007062471,
+                      1.6313421688253764
+                    ],
+                    "residual_s": -4.22984011592617e-07
+                  },
+                  {
+                    "candidate_id": "view-02:echo:00",
+                    "capture_id": "view-02",
+                    "observed_delay_s": 0.013713292446960703,
+                    "predicted_delay_s": 0.013713030231696444,
+                    "reflection_point_m": [
+                      4.199853044339401,
+                      1.7791413896187087,
+                      1.4247900303237593
+                    ],
+                    "residual_s": 2.622152642586806e-07
+                  },
+                  {
+                    "candidate_id": "view-03:echo:00",
+                    "capture_id": "view-03",
+                    "observed_delay_s": 0.012129960881338138,
+                    "predicted_delay_s": 0.012129937243611482,
+                    "reflection_point_m": [
+                      4.199901658794319,
+                      1.5818063448239053,
+                      1.7607980108813273
+                    ],
+                    "residual_s": 2.3637726656242086e-08
+                  }
+                ],
+                "surface_id": "reflector-bf560b3be51f",
+                "triangles": [
+                  [
+                    0,
+                    1,
+                    2
+                  ]
+                ],
+                "uncertainty": {
+                  "conditional_on": "associations and first-order point-source model",
+                  "excluded_model_errors": [
+                    "reflection_order",
+                    "multiple_emitters",
+                    "unmodeled_transducer_response"
+                  ],
+                  "image_source_covariance_m2": [
+                    [
+                      0.0013019663230278075,
+                      -0.0018764861244028902,
+                      0.006652163671739153
+                    ],
+                    [
+                      -0.0018764861244028785,
+                      0.014799358420792576,
+                      -0.015922829593366373
+                    ],
+                    [
+                      0.006652163671739155,
+                      -0.01592282959336639,
+                      0.040138844316280106
+                    ]
+                  ],
+                  "local_information_rank": 3,
+                  "normal_angular_std_rad": 0.03906760945676272,
+                  "offset_std_m": 0.0435446946496995,
+                  "rank_deficient": false
+                },
+                "vertices_m": [
+                  [
+                    4.199853044339401,
+                    1.7791413896187087,
+                    1.4247900303237593
+                  ],
+                  [
+                    4.1998417478835215,
+                    2.5434057733886775,
+                    2.0203493495366462
+                  ],
+                  [
+                    4.199901658794319,
+                    1.5818063448239053,
+                    1.7607980108813273
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "method": "image_source_consensus",
+        "observations": [
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6037587078644217,
+                "candidate_id": "view-00:echo:00",
+                "delay_s": 0.007171424341375669,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-00",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 0.9999735405188765,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.07553003343615287,
+              "pilot_arrivals_receiver_s": [
+                0.17552680137125695,
+                0.525519210337158,
+                0.8755083984893801,
+                1.225499773542097,
+                1.5754904861976156,
+                1.92548026171273,
+                2.2754723035797935
+              ],
+              "pilot_residual_max_s": 1.0836675106151716e-06,
+              "pilot_residual_rms_s": 6.200664026667658e-07,
+              "pilot_residuals_s": [
+                -5.86116783579671e-07,
+                1.0836675106151716e-06,
+                -4.673618739792218e-07,
+                1.6850923612032886e-07,
+                1.4198314790547784e-07,
+                -8.216833444762983e-07,
+                4.810021119183716e-07
+              ],
+              "relative_rate_ppm": -26.459481123453088
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.17552810051657658,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.3850134893516644,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.446309698332153e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.710654785997377,
+              2.961833636020984,
+              2.4775124522495524
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "273ec167244989ed5b4f182e8b2875d0e0b7c89d6a731e4a4769713bf261bdd3",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.004000713047402908,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6225732865727398,
+                "candidate_id": "view-01:echo:00",
+                "delay_s": 0.010547153365546291,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-01",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.000011284160492,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.0774718323935527,
+              "pilot_arrivals_receiver_s": [
+                0.17747386109362678,
+                0.5274774118433005,
+                0.877480127798597,
+                1.2274833947655739,
+                1.5774879993662299,
+                1.927493487965844,
+                2.27749738141366
+              ],
+              "pilot_residual_max_s": 1.4144125444204292e-06,
+              "pilot_residual_rms_s": 8.707175237295669e-07,
+              "pilot_residuals_s": [
+                9.002840248850674e-07,
+                5.015775264016753e-07,
+                -7.319233493729982e-07,
+                -1.4144125444204292e-06,
+                -7.592680606460789e-07,
+                7.798753811627535e-07,
+                7.23867024543523e-07
+              ],
+              "relative_rate_ppm": 11.284160492008866
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.17747248409071656,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.39382229853902195,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.431813617597879e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.2341515126446603,
+              2.211492139278849,
+              1.9798845930125804
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "6dcbc9ad359c35717823ded9fe4214f54c6ce89cb82414f659a3a80aea029580",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999523286493975,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6049327369141327,
+                "candidate_id": "view-02:echo:00",
+                "delay_s": 0.013713292446960703,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-02",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000177235622794,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.07236133857084256,
+              "pilot_arrivals_receiver_s": [
+                0.17236233469092233,
+                0.5223704460341548,
+                0.8723753349132068,
+                1.222380668156703,
+                1.572389033359029,
+                1.9223947939491108,
+                2.272399433569123
+              ],
+              "pilot_residual_max_s": 1.1318602864962557e-06,
+              "pilot_residual_rms_s": 8.86770372319045e-07,
+              "pilot_residuals_s": [
+                -7.76236148192222e-07,
+                1.1318602864962557e-06,
+                -1.8250745925652012e-07,
+                -1.0525107607683992e-06,
+                1.1094447671666785e-06,
+                6.667880514399371e-07,
+                -8.968387343877282e-07
+              ],
+              "relative_rate_ppm": 17.72356227935923
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.17236271587292318,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.39623087483612873,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.486336210742736e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.7249502181570897,
+              1.844001643276344,
+              1.6932104261748728
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "b9b2c815ea71ce9aee3f2ac2fb8a9f37b6d15e28a084d199ffcf46a688ade768",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999604952854315,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5940013984421688,
+                "candidate_id": "view-03:echo:00",
+                "delay_s": 0.012129960881338138,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-03",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000443378224775,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.06015248240058149,
+              "pilot_arrivals_receiver_s": [
+                0.1601573251204673,
+                0.5101713174179093,
+                0.8601878257812607,
+                1.210204715543646,
+                1.5602194234516706,
+                1.9102335436931028,
+                2.2602501452669608
+              ],
+              "pilot_residual_max_s": 1.2446472155147603e-06,
+              "pilot_residual_rms_s": 7.664199198524535e-07,
+              "pilot_residuals_s": [
+                4.089376380578269e-07,
+                -1.1170027870432975e-06,
+                -1.2687730277516351e-07,
+                1.2446472155147603e-06,
+                4.3431737295485107e-07,
+                -9.636790621048164e-07,
+                1.1965692836568564e-07
+              ],
+              "relative_rate_ppm": 44.337822477480415
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.1601560498282802,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.3896896553252307,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4979867367117035e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.8182927624067304,
+              1.487551678183404,
+              2.2858723075759304
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "7f71e6b29fd8dc45131a2c380c4df4fffbaf9f760a7c4c80e16e68ba6fd52adf",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.0039991336838615206,
+              "values_omitted": true
+            },
+            "status": "ok"
+          }
+        ],
+        "provenance": {
+          "coordinates": "right-handed, metres, z up",
+          "evidence_classes": [
+            "simulated"
+          ],
+          "geometry": "inferred from recording-derived excess delays",
+          "implementation_sha256": "fccb2194adb461409130179f0a0181d14ab36fd58767c252ad0a455a76e411a6",
+          "inference": [
+            "simulated"
+          ],
+          "method": "mapper",
+          "physical_validation": false,
+          "poses": "supplied acoustic-center positions",
+          "recordings": [
+            {
+              "capture_id": "view-00",
+              "sha256": "273ec167244989ed5b4f182e8b2875d0e0b7c89d6a731e4a4769713bf261bdd3"
+            },
+            {
+              "capture_id": "view-01",
+              "sha256": "6dcbc9ad359c35717823ded9fe4214f54c6ce89cb82414f659a3a80aea029580"
+            },
+            {
+              "capture_id": "view-02",
+              "sha256": "b9b2c815ea71ce9aee3f2ac2fb8a9f37b6d15e28a084d199ffcf46a688ade768"
+            },
+            {
+              "capture_id": "view-03",
+              "sha256": "7f71e6b29fd8dc45131a2c380c4df4fffbaf9f760a7c4c80e16e68ba6fd52adf"
+            }
+          ],
+          "runtime_versions": {
+            "numpy": "2.3.5",
+            "python": "3.12.14",
+            "scipy": "1.18.1"
+          },
+          "software_version": "0.1.0"
+        },
+        "result_id": "result-7b49fb1cc29e4261c5bf",
+        "runtime_s": 0.03650470799766481,
+        "schema_version": "1.0",
+        "score": {
+          "clutter_cost": 5.0,
+          "kind": "dimensionless_full_covariance_ranking_not_posterior",
+          "miss_cost": 1.0,
+          "null": 20.0,
+          "plane_cost": 7.0,
+          "selected": 8.747278628310653
+        },
+        "search": {
+          "anchor_triples": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "complete": true,
+          "global_optimality_proven": false,
+          "max_candidates_per_view": 18,
+          "max_proposals": 24000,
+          "max_refinements": 72,
+          "proposals": 8,
+          "refined": 1
+        },
+        "session_id": "A_before",
+        "shared_image_source_covariance_m2": [
+          [
+            0.0013019663230278075,
+            -0.0018764861244028902,
+            0.006652163671739153
+          ],
+          [
+            -0.0018764861244028785,
+            0.014799358420792576,
+            -0.015922829593366373
+          ],
+          [
+            0.006652163671739155,
+            -0.01592282959336639,
+            0.040138844316280106
+          ]
+        ],
+        "status": "ambiguous",
+        "surfaces": [],
+        "uncertainty_semantics": "Local covariance conditional on path associations and point-source/plane model; includes declared shared calibration uncertainty, not unmodeled bias."
+      }
+    },
+    {
+      "epoch": "B_first",
+      "result": {
+        "acquisition": {
+          "captures": [
+            {
+              "capture_id": "view-00",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.710654785997377,
+                2.961833636020984,
+                2.4775124522495524
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-01",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.2341515126446603,
+                2.211492139278849,
+                1.9798845930125804
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-02",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.7249502181570897,
+                1.844001643276344,
+                1.6932104261748728
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-03",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.8182927624067304,
+                1.487551678183404,
+                2.2858723075759304
+              ],
+              "receiver_position_std_m": 0.003
+            }
+          ],
+          "coordinate_frame_id": "survey-one",
+          "probe": {
+            "duration_s": 0.04,
+            "high_hz": 14000.0,
+            "kind": "repeated_linear_chirp",
+            "lead_s": 0.1,
+            "low_hz": 2000.0,
+            "max_echo_delay_s": 0.08,
+            "period_s": 0.35,
+            "pilot_start_samples": [
+              4800,
+              21600,
+              38400,
+              55200,
+              72000,
+              88800,
+              105600
+            ],
+            "repetitions": 7,
+            "sample_count": 116160,
+            "sample_rate_hz": 48000,
+            "schema_version": "1.0",
+            "tail_s": 0.18,
+            "timing_unit": "source_buffer_seconds",
+            "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b"
+          },
+          "schema_version": "1.0",
+          "session_id": "B_first",
+          "sound_speed_m_s": 343.0,
+          "sound_speed_std_m_s": 0.3,
+          "source_clock_scale": 1.0,
+          "source_clock_std_ppm": 50.0,
+          "source_position_m": [
+            1.2,
+            1.7,
+            1.1
+          ],
+          "source_position_std_m": 0.003
+        },
+        "assumptions": [
+          "stationary effective point source",
+          "first-order specular reflectors",
+          "surveyed acoustic-center poses"
+        ],
+        "diagnostics": [
+          "few_views_weak_unlabeled_echo_rejection"
+        ],
+        "dimensions": [],
+        "guidance": [
+          {
+            "action": "Add surveyed views around weakly supported reflectors with a different height.",
+            "reason": "Finite support and missing echoes do not establish physical edges or empty space.",
+            "suggested_position_m": [
+              2.4720123198014643,
+              1.8762197741898952,
+              2.709119944753234
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "hypothesis_id": "unconfirmed_correspondences",
+            "reason": "Fewer than seven independent receiver views; acquire confirmation placements.",
+            "surfaces": [
+              {
+                "confidence": {
+                  "kind": "evidence_summary_not_probability",
+                  "rms_residual_m": 6.570157273659146e-05,
+                  "supporting_views": 4
+                },
+                "extent_status": "unknown",
+                "image_source_m": [
+                  6.800136082717866,
+                  1.6997985184135285,
+                  1.1002121251934311
+                ],
+                "kind": "unclassified_planar_reflector",
+                "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+                "model_status": "conditional_first_order_hypothesis",
+                "normal": [
+                  0.999999998635399,
+                  -3.5977980395569345e-05,
+                  3.787857830744736e-05
+                ],
+                "offset_m": 4.000048547411852,
+                "support": [
+                  {
+                    "candidate_id": "view-00:echo:00",
+                    "capture_id": "view-00",
+                    "observed_delay_s": 0.00610334038829566,
+                    "predicted_delay_s": 0.006103445506742717,
+                    "reflection_point_m": [
+                      4.000063401916439,
+                      2.563915456143145,
+                      2.043251288165376
+                    ],
+                    "residual_s": -1.05118447057094e-07
+                  },
+                  {
+                    "candidate_id": "view-01:echo:00",
+                    "capture_id": "view-01",
+                    "observed_delay_s": 0.009408644886128274,
+                    "predicted_delay_s": 0.009408332003962917,
+                    "reflection_point_m": [
+                      4.000058889564005,
+                      2.013593191978168,
+                      1.6396687915015002
+                    ],
+                    "residual_s": 3.1288216535696467e-07
+                  },
+                  {
+                    "candidate_id": "view-02:echo:00",
+                    "capture_id": "view-02",
+                    "observed_delay_s": 0.012555587813225905,
+                    "predicted_delay_s": 0.012555781450213506,
+                    "reflection_point_m": [
+                      4.00005850343208,
+                      1.7793581537779888,
+                      1.427380684423409
+                    ],
+                    "residual_s": -1.9363698760058168e-07
+                  },
+                  {
+                    "candidate_id": "view-03:echo:00",
+                    "capture_id": "view-03",
+                    "observed_delay_s": 0.010994854351132045,
+                    "predicted_delay_s": 0.010994872374576168,
+                    "reflection_point_m": [
+                      4.000038498933223,
+                      1.5805029432051978,
+                      1.7666249363597908
+                    ],
+                    "residual_s": -1.8023444122577947e-08
+                  }
+                ],
+                "surface_id": "reflector-bf560b3be51f",
+                "triangles": [
+                  [
+                    0,
+                    1,
+                    2
+                  ]
+                ],
+                "uncertainty": {
+                  "conditional_on": "associations and first-order point-source model",
+                  "excluded_model_errors": [
+                    "reflection_order",
+                    "multiple_emitters",
+                    "unmodeled_transducer_response"
+                  ],
+                  "image_source_covariance_m2": [
+                    [
+                      0.0012877099496026838,
+                      -0.001787861160367484,
+                      0.0061066077670919134
+                    ],
+                    [
+                      -0.0017878611603674589,
+                      0.012875554613811081,
+                      -0.013938445883619872
+                    ],
+                    [
+                      0.006106607767091926,
+                      -0.01393844588361987,
+                      0.03421845569878919
+                    ]
+                  ],
+                  "local_information_rank": 3,
+                  "normal_angular_std_rad": 0.038750876436497446,
+                  "offset_std_m": 0.04270019221650905,
+                  "rank_deficient": false
+                },
+                "vertices_m": [
+                  [
+                    4.00005850343208,
+                    1.7793581537779888,
+                    1.427380684423409
+                  ],
+                  [
+                    4.000063401916439,
+                    2.563915456143145,
+                    2.043251288165376
+                  ],
+                  [
+                    4.000038498933223,
+                    1.5805029432051978,
+                    1.7666249363597908
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "method": "image_source_consensus",
+        "observations": [
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6187479717001092,
+                "candidate_id": "view-00:echo:00",
+                "delay_s": 0.00610334038829566,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-00",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 0.9999695675160624,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.07027754401980664,
+              "pilot_arrivals_receiver_s": [
+                0.17027362297199347,
+                0.5202650539425279,
+                0.8702523590410722,
+                1.220243626752477,
+                1.5702311123585977,
+                1.9202221695879296,
+                2.270209881988354
+              ],
+              "pilot_residual_max_s": 1.2045404931271264e-06,
+              "pilot_residual_rms_s": 9.3095149260673e-07,
+              "pilot_residuals_s": [
+                -8.777994194020255e-07,
+                1.2045404931271264e-06,
+                -8.389915844286833e-07,
+                1.080089198746137e-06,
+                -7.829353025901042e-07,
+                9.256634074805703e-07,
+                -7.105667898521517e-07
+              ],
+              "relative_rate_ppm": -30.432483937636867
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.17027519474670455,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.4279896640651846,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.516283816909521e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.710654785997377,
+              2.961833636020984,
+              2.4775124522495524
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "be8db6d2c3288acf24daee21c1a81796dae336412bf2ac7178c56d253cf3067f",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.004000693996411695,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.591688051679215,
+                "candidate_id": "view-01:echo:00",
+                "delay_s": 0.009408644886128274,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-01",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 0.9999504810591426,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.06189400522734774,
+              "pilot_arrivals_receiver_s": [
+                0.16188963424241895,
+                0.5118723460323428,
+                0.8618541601655468,
+                1.2118359184431946,
+                1.561818534502953,
+                1.9118025123591071,
+                2.2617863033719727
+              ],
+              "pilot_residual_max_s": 1.2398145110559255e-06,
+              "pilot_residual_rms_s": 8.495531974741521e-07,
+              "pilot_residuals_s": [
+                5.809091569441982e-07,
+                6.243283807716438e-07,
+                -2.2990911507925205e-07,
+                -1.14000216711041e-06,
+                -1.1923131086888361e-06,
+                1.1717234538188848e-07,
+                1.2398145110559255e-06
+              ],
+              "relative_rate_ppm": -49.51894085736264
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.16189007183771412,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.38457429128106807,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.435476229879168e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.2341515126446603,
+              2.211492139278849,
+              1.9798845930125804
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "b2c71347d539b41af2b5a2d96d56a59fb301aa9fd19ad2967e757a0eb13f09e8",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.00400101855488987,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5451049651993803,
+                "candidate_id": "view-02:echo:00",
+                "delay_s": 0.012555587813225905,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-02",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000108306958797,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.07988803455587278,
+              "pilot_arrivals_receiver_s": [
+                0.17988987860821234,
+                0.5298935101314616,
+                0.8798962112107297,
+                1.229899153199921,
+                1.5799031976709583,
+                1.9299086240680383,
+                2.279912854103625
+              ],
+              "pilot_residual_max_s": 1.3366562132688387e-06,
+              "pilot_residual_rms_s": 8.806042997751703e-07,
+              "pilot_residuals_s": [
+                7.609827515908663e-07,
+                6.017624429865975e-07,
+                -4.879018469239327e-07,
+                -1.3366562132688387e-06,
+                -1.082928734019717e-06,
+                5.527247879388852e-07,
+                9.920168166921428e-07
+              ],
+              "relative_rate_ppm": 10.830695879704422
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.17988874506244842,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.4058749011241316,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4974022954721573e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.7249502181570897,
+              1.844001643276344,
+              1.6932104261748728
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "78bbe66ff164ad233b53d0b611ec84fb95761f50f31f0008391d198b16418a28",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999627441022757,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5715135536855562,
+                "candidate_id": "view-03:echo:00",
+                "delay_s": 0.010994854351132045,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-03",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.000019129393794,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.04727801233520819,
+              "pilot_arrivals_receiver_s": [
+                0.14727919391345123,
+                0.4972877501115921,
+                0.8472928182593307,
+                1.19729936034856,
+                1.5473081016362593,
+                1.897313294446141,
+                2.2473195592511686
+              ],
+              "pilot_residual_max_s": 1.3952103603553923e-06,
+              "pilot_residual_rms_s": 8.21947853829918e-07,
+              "pilot_residuals_s": [
+                -7.313611363468642e-07,
+                1.1295491766372123e-06,
+                -4.975909126958555e-07,
+                -6.50789510947547e-07,
+                1.3952103603553923e-06,
+                -1.0726758592483066e-07,
+                -5.377503864423261e-07
+              ],
+              "relative_rate_ppm": 19.129393793893
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.1472796567547216,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.3968262723458775,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4695837858627864e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.8182927624067304,
+              1.487551678183404,
+              2.2858723075759304
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "d9d0eeed8234e808b364e5cbea96bba7f194a84535ba60d533651cfb2b47a373",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999731485270518,
+              "values_omitted": true
+            },
+            "status": "ok"
+          }
+        ],
+        "provenance": {
+          "coordinates": "right-handed, metres, z up",
+          "evidence_classes": [
+            "simulated"
+          ],
+          "geometry": "inferred from recording-derived excess delays",
+          "implementation_sha256": "fccb2194adb461409130179f0a0181d14ab36fd58767c252ad0a455a76e411a6",
+          "inference": [
+            "simulated"
+          ],
+          "method": "mapper",
+          "physical_validation": false,
+          "poses": "supplied acoustic-center positions",
+          "recordings": [
+            {
+              "capture_id": "view-00",
+              "sha256": "be8db6d2c3288acf24daee21c1a81796dae336412bf2ac7178c56d253cf3067f"
+            },
+            {
+              "capture_id": "view-01",
+              "sha256": "b2c71347d539b41af2b5a2d96d56a59fb301aa9fd19ad2967e757a0eb13f09e8"
+            },
+            {
+              "capture_id": "view-02",
+              "sha256": "78bbe66ff164ad233b53d0b611ec84fb95761f50f31f0008391d198b16418a28"
+            },
+            {
+              "capture_id": "view-03",
+              "sha256": "d9d0eeed8234e808b364e5cbea96bba7f194a84535ba60d533651cfb2b47a373"
+            }
+          ],
+          "runtime_versions": {
+            "numpy": "2.3.5",
+            "python": "3.12.14",
+            "scipy": "1.18.1"
+          },
+          "software_version": "0.1.0"
+        },
+        "result_id": "result-3dc740657b56e32ecf54",
+        "runtime_s": 0.0347879999972065,
+        "schema_version": "1.0",
+        "score": {
+          "clutter_cost": 5.0,
+          "kind": "dimensionless_full_covariance_ranking_not_posterior",
+          "miss_cost": 1.0,
+          "null": 20.0,
+          "plane_cost": 7.0,
+          "selected": 8.736372289495966
+        },
+        "search": {
+          "anchor_triples": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "complete": true,
+          "global_optimality_proven": false,
+          "max_candidates_per_view": 18,
+          "max_proposals": 24000,
+          "max_refinements": 72,
+          "proposals": 8,
+          "refined": 1
+        },
+        "session_id": "B_first",
+        "shared_image_source_covariance_m2": [
+          [
+            0.0012877099496026838,
+            -0.001787861160367484,
+            0.0061066077670919134
+          ],
+          [
+            -0.0017878611603674589,
+            0.012875554613811081,
+            -0.013938445883619872
+          ],
+          [
+            0.006106607767091926,
+            -0.01393844588361987,
+            0.03421845569878919
+          ]
+        ],
+        "status": "ambiguous",
+        "surfaces": [],
+        "uncertainty_semantics": "Local covariance conditional on path associations and point-source/plane model; includes declared shared calibration uncertainty, not unmodeled bias."
+      }
+    },
+    {
+      "epoch": "B_repeat",
+      "result": {
+        "acquisition": {
+          "captures": [
+            {
+              "capture_id": "view-00",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.710654785997377,
+                2.961833636020984,
+                2.4775124522495524
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-01",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.2341515126446603,
+                2.211492139278849,
+                1.9798845930125804
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-02",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.7249502181570897,
+                1.844001643276344,
+                1.6932104261748728
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-03",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.8182927624067304,
+                1.487551678183404,
+                2.2858723075759304
+              ],
+              "receiver_position_std_m": 0.003
+            }
+          ],
+          "coordinate_frame_id": "survey-one",
+          "probe": {
+            "duration_s": 0.04,
+            "high_hz": 14000.0,
+            "kind": "repeated_linear_chirp",
+            "lead_s": 0.1,
+            "low_hz": 2000.0,
+            "max_echo_delay_s": 0.08,
+            "period_s": 0.35,
+            "pilot_start_samples": [
+              4800,
+              21600,
+              38400,
+              55200,
+              72000,
+              88800,
+              105600
+            ],
+            "repetitions": 7,
+            "sample_count": 116160,
+            "sample_rate_hz": 48000,
+            "schema_version": "1.0",
+            "tail_s": 0.18,
+            "timing_unit": "source_buffer_seconds",
+            "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b"
+          },
+          "schema_version": "1.0",
+          "session_id": "B_repeat",
+          "sound_speed_m_s": 343.0,
+          "sound_speed_std_m_s": 0.3,
+          "source_clock_scale": 1.0,
+          "source_clock_std_ppm": 50.0,
+          "source_position_m": [
+            1.2,
+            1.7,
+            1.1
+          ],
+          "source_position_std_m": 0.003
+        },
+        "assumptions": [
+          "stationary effective point source",
+          "first-order specular reflectors",
+          "surveyed acoustic-center poses"
+        ],
+        "diagnostics": [
+          "few_views_weak_unlabeled_echo_rejection"
+        ],
+        "dimensions": [],
+        "guidance": [
+          {
+            "action": "Add surveyed views around weakly supported reflectors with a different height.",
+            "reason": "Finite support and missing echoes do not establish physical edges or empty space.",
+            "suggested_position_m": [
+              2.4720123198014643,
+              1.8762197741898952,
+              2.709119944753234
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "hypothesis_id": "unconfirmed_correspondences",
+            "reason": "Fewer than seven independent receiver views; acquire confirmation placements.",
+            "surfaces": [
+              {
+                "confidence": {
+                  "kind": "evidence_summary_not_probability",
+                  "rms_residual_m": 3.166404059913096e-05,
+                  "supporting_views": 4
+                },
+                "extent_status": "unknown",
+                "image_source_m": [
+                  6.800405341638815,
+                  1.7002114278798757,
+                  1.1009067281730331
+                ],
+                "kind": "unclassified_planar_reflector",
+                "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+                "model_status": "conditional_first_order_hypothesis",
+                "normal": [
+                  0.9999999861809274,
+                  3.77522454280261e-05,
+                  0.00016190402393937838
+                ],
+                "offset_m": 4.0004449661762855,
+                "support": [
+                  {
+                    "candidate_id": "view-00:echo:00",
+                    "capture_id": "view-00",
+                    "observed_delay_s": 0.006103150837826545,
+                    "predicted_delay_s": 0.006103201493937651,
+                    "reflection_point_m": [
+                      4.000017368248524,
+                      2.564086036018743,
+                      2.0435143667945272
+                    ],
+                    "residual_s": -5.065611110612045e-08
+                  },
+                  {
+                    "candidate_id": "view-01:echo:00",
+                    "capture_id": "view-01",
+                    "observed_delay_s": 0.009408736745736578,
+                    "predicted_delay_s": 0.009408585958044917,
+                    "reflection_point_m": [
+                      4.000103483184325,
+                      2.0137595528727124,
+                      1.639948892851105
+                    ],
+                    "residual_s": 1.507876916610057e-07
+                  },
+                  {
+                    "candidate_id": "view-02:echo:00",
+                    "capture_id": "view-02",
+                    "observed_delay_s": 0.012556198835093568,
+                    "predicted_delay_s": 0.012556292161665435,
+                    "reflection_point_m": [
+                      4.000146689962082,
+                      1.7795441743812783,
+                      1.4276958563196307
+                    ],
+                    "residual_s": -9.332657186639226e-08
+                  },
+                  {
+                    "candidate_id": "view-03:echo:00",
+                    "capture_id": "view-03",
+                    "observed_delay_s": 0.010995208306424814,
+                    "predicted_delay_s": 0.010995216990252266,
+                    "reflection_point_m": [
+                      4.000099272047509,
+                      1.580681333294059,
+                      1.7669427222392635
+                    ],
+                    "residual_s": -8.683827452254933e-09
+                  }
+                ],
+                "surface_id": "reflector-bf560b3be51f",
+                "triangles": [
+                  [
+                    0,
+                    1,
+                    2
+                  ]
+                ],
+                "uncertainty": {
+                  "conditional_on": "associations and first-order point-source model",
+                  "excluded_model_errors": [
+                    "reflection_order",
+                    "multiple_emitters",
+                    "unmodeled_transducer_response"
+                  ],
+                  "image_source_covariance_m2": [
+                    [
+                      0.0012863368495023369,
+                      -0.001786673761815143,
+                      0.006103536897255914
+                    ],
+                    [
+                      -0.0017866737618151198,
+                      0.012875001579715979,
+                      -0.013937631696333332
+                    ],
+                    [
+                      0.006103536897255928,
+                      -0.013937631696333328,
+                      0.03422318430308899
+                    ]
+                  ],
+                  "local_information_rank": 3,
+                  "normal_angular_std_rad": 0.038750216113575986,
+                  "offset_std_m": 0.042697999119962506,
+                  "rank_deficient": false
+                },
+                "vertices_m": [
+                  [
+                    4.000146689962082,
+                    1.7795441743812783,
+                    1.4276958563196307
+                  ],
+                  [
+                    4.000017368248524,
+                    2.564086036018743,
+                    2.0435143667945272
+                  ],
+                  [
+                    4.000099272047509,
+                    1.580681333294059,
+                    1.7669427222392635
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "method": "image_source_consensus",
+        "observations": [
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5936968699735644,
+                "candidate_id": "view-00:echo:00",
+                "delay_s": 0.006103150837826545,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-00",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000305325133738,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.05580085977686775,
+              "pilot_arrivals_receiver_s": [
+                0.1558045221029231,
+                0.5058138025213587,
+                0.8558259884149737,
+                1.205835007278818,
+                1.5558474248875827,
+                1.9058562263853025,
+                2.255868833579778
+              ],
+              "pilot_residual_max_s": 1.118541306910359e-06,
+              "pilot_residual_rms_s": 8.377478743489976e-07,
+              "pilot_residuals_s": [
+                6.090747179388067e-07,
+                -7.968865273211279e-07,
+                7.026274068122618e-07,
+                -9.648884295998528e-07,
+                7.66340654045905e-07,
+                -1.118541306910359e-06,
+                8.022734880874793e-07
+              ],
+              "relative_rate_ppm": 30.532513373815462
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.15580294498772723,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.3828405009363734,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.331904739823772e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.710654785997377,
+              2.961833636020984,
+              2.4775124522495524
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "a81c32cfcf907d166ba1523240dca3030a8a407a3a57ad1cf9d3ab0bde4f2372",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999031989077904,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5385235962861801,
+                "candidate_id": "view-01:echo:00",
+                "delay_s": 0.009408736745736578,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-01",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.000011836758036,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.04678674370467632,
+              "pilot_arrivals_receiver_s": [
+                0.14678893746945115,
+                0.4967918983311033,
+                0.8467950318317463,
+                1.1967994433336722,
+                1.5468052190511876,
+                1.8968094633734327,
+                2.246812498444335
+              ],
+              "pilot_residual_max_s": 1.1812793587751003e-06,
+              "pilot_residual_rms_s": 8.065693360810221e-07,
+              "pilot_residuals_s": [
+                1.010088971242773e-06,
+                -1.7191468920652042e-07,
+                -1.1812793587751003e-06,
+                -9.126427453765018e-07,
+                7.20209457405474e-07,
+                8.216663898164001e-07,
+                -2.8612802083216593e-07
+              ],
+              "relative_rate_ppm": 11.836758035954631
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.14678757674947102,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.419790665961319,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4474304406220883e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.2341515126446603,
+              2.211492139278849,
+              1.9798845930125804
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "2f1e95379db321ab22c12a4987802a2ea81fc2ebd89d644a4c308a025beed5c3",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999649373141404,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5861386142184809,
+                "candidate_id": "view-02:echo:00",
+                "delay_s": 0.012556198835093568,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-02",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000418672349094,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.05433404514255132,
+              "pilot_arrivals_receiver_s": [
+                0.15433738216171658,
+                0.5043534484077745,
+                0.8543687660709282,
+                1.2043812090904145,
+                1.554396473885913,
+                1.9044125684785829,
+                2.254425499143553
+              ],
+              "pilot_residual_max_s": 1.2271404492558702e-06,
+              "pilot_residual_rms_s": 8.635971336991463e-07,
+              "pilot_residuals_s": [
+                -8.497043256783243e-07,
+                5.630095138986491e-07,
+                1.2271404492558702e-06,
+                -9.833722827146119e-07,
+                -3.7210900249995404e-07,
+                1.0689514491346586e-06,
+                -6.539157992868638e-07
+              ],
+              "relative_rate_ppm": 41.867234909398476
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.15433742885789575,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.39455234401669487,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4849801892569387e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.7249502181570897,
+              1.844001643276344,
+              1.6932104261748728
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "af1c30d3c093b73e0620bd6b8a00f9625af4a10048fca426d69cca322af86473",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999197025471797,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5657129019706781,
+                "candidate_id": "view-03:echo:00",
+                "delay_s": 0.010995208306424814,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-03",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000427974178252,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.052803069762358414,
+              "pilot_arrivals_receiver_s": [
+                0.15280807107055577,
+                0.5028216514096485,
+                0.8528361546752987,
+                1.2028528923266104,
+                1.5528685092998167,
+                1.9028816102031028,
+                2.252897118564976
+              ],
+              "pilot_residual_max_s": 1.243410720386251e-06,
+              "pilot_residual_rms_s": 8.137678786817971e-07,
+              "pilot_residuals_s": [
+                7.215664148407797e-07,
+                -6.771907312685954e-07,
+                -1.1530213198662764e-06,
+                6.055337531396532e-07,
+                1.243410720386251e-06,
+                -6.347822325558639e-07,
+                -1.055165981256323e-07
+              ],
+              "relative_rate_ppm": 42.79741782520219
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.15280624473376572,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.40439588943712923,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.461876309730489e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.8182927624067304,
+              1.487551678183404,
+              2.2858723075759304
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "23f93570673164541c64fff2d17afdfc4fa1e1bfedb6d3696b9e1551c50a9db4",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003998895276904072,
+              "values_omitted": true
+            },
+            "status": "ok"
+          }
+        ],
+        "provenance": {
+          "coordinates": "right-handed, metres, z up",
+          "evidence_classes": [
+            "simulated"
+          ],
+          "geometry": "inferred from recording-derived excess delays",
+          "implementation_sha256": "fccb2194adb461409130179f0a0181d14ab36fd58767c252ad0a455a76e411a6",
+          "inference": [
+            "simulated"
+          ],
+          "method": "mapper",
+          "physical_validation": false,
+          "poses": "supplied acoustic-center positions",
+          "recordings": [
+            {
+              "capture_id": "view-00",
+              "sha256": "a81c32cfcf907d166ba1523240dca3030a8a407a3a57ad1cf9d3ab0bde4f2372"
+            },
+            {
+              "capture_id": "view-01",
+              "sha256": "2f1e95379db321ab22c12a4987802a2ea81fc2ebd89d644a4c308a025beed5c3"
+            },
+            {
+              "capture_id": "view-02",
+              "sha256": "af1c30d3c093b73e0620bd6b8a00f9625af4a10048fca426d69cca322af86473"
+            },
+            {
+              "capture_id": "view-03",
+              "sha256": "23f93570673164541c64fff2d17afdfc4fa1e1bfedb6d3696b9e1551c50a9db4"
+            }
+          ],
+          "runtime_versions": {
+            "numpy": "2.3.5",
+            "python": "3.12.14",
+            "scipy": "1.18.1"
+          },
+          "software_version": "0.1.0"
+        },
+        "result_id": "result-4d02f88432408b3dbffc",
+        "runtime_s": 0.03473320799821522,
+        "schema_version": "1.0",
+        "score": {
+          "clutter_cost": 5.0,
+          "kind": "dimensionless_full_covariance_ranking_not_posterior",
+          "miss_cost": 1.0,
+          "null": 20.0,
+          "plane_cost": 7.0,
+          "selected": 8.736366369985733
+        },
+        "search": {
+          "anchor_triples": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "complete": true,
+          "global_optimality_proven": false,
+          "max_candidates_per_view": 18,
+          "max_proposals": 24000,
+          "max_refinements": 72,
+          "proposals": 8,
+          "refined": 1
+        },
+        "session_id": "B_repeat",
+        "shared_image_source_covariance_m2": [
+          [
+            0.0012863368495023369,
+            -0.001786673761815143,
+            0.006103536897255914
+          ],
+          [
+            -0.0017866737618151198,
+            0.012875001579715979,
+            -0.013937631696333332
+          ],
+          [
+            0.006103536897255928,
+            -0.013937631696333328,
+            0.03422318430308899
+          ]
+        ],
+        "status": "ambiguous",
+        "surfaces": [],
+        "uncertainty_semantics": "Local covariance conditional on path associations and point-source/plane model; includes declared shared calibration uncertainty, not unmodeled bias."
+      }
+    },
+    {
+      "epoch": "A_return",
+      "result": {
+        "acquisition": {
+          "captures": [
+            {
+              "capture_id": "view-00",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.710654785997377,
+                2.961833636020984,
+                2.4775124522495524
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-01",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                2.2341515126446603,
+                2.211492139278849,
+                1.9798845930125804
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-02",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.7249502181570897,
+                1.844001643276344,
+                1.6932104261748728
+              ],
+              "receiver_position_std_m": 0.003
+            },
+            {
+              "capture_id": "view-03",
+              "provenance": "simulated",
+              "receiver_position_m": [
+                1.8182927624067304,
+                1.487551678183404,
+                2.2858723075759304
+              ],
+              "receiver_position_std_m": 0.003
+            }
+          ],
+          "coordinate_frame_id": "survey-one",
+          "probe": {
+            "duration_s": 0.04,
+            "high_hz": 14000.0,
+            "kind": "repeated_linear_chirp",
+            "lead_s": 0.1,
+            "low_hz": 2000.0,
+            "max_echo_delay_s": 0.08,
+            "period_s": 0.35,
+            "pilot_start_samples": [
+              4800,
+              21600,
+              38400,
+              55200,
+              72000,
+              88800,
+              105600
+            ],
+            "repetitions": 7,
+            "sample_count": 116160,
+            "sample_rate_hz": 48000,
+            "schema_version": "1.0",
+            "tail_s": 0.18,
+            "timing_unit": "source_buffer_seconds",
+            "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b"
+          },
+          "schema_version": "1.0",
+          "session_id": "A_return",
+          "sound_speed_m_s": 343.0,
+          "sound_speed_std_m_s": 0.3,
+          "source_clock_scale": 1.0,
+          "source_clock_std_ppm": 50.0,
+          "source_position_m": [
+            1.2,
+            1.7,
+            1.1
+          ],
+          "source_position_std_m": 0.003
+        },
+        "assumptions": [
+          "stationary effective point source",
+          "first-order specular reflectors",
+          "surveyed acoustic-center poses"
+        ],
+        "diagnostics": [
+          "few_views_weak_unlabeled_echo_rejection"
+        ],
+        "dimensions": [],
+        "guidance": [
+          {
+            "action": "Add surveyed views around weakly supported reflectors with a different height.",
+            "reason": "Finite support and missing echoes do not establish physical edges or empty space.",
+            "suggested_position_m": [
+              2.4720123198014643,
+              1.8762197741898952,
+              2.709119944753234
+            ]
+          }
+        ],
+        "hypotheses": [
+          {
+            "hypothesis_id": "unconfirmed_correspondences",
+            "reason": "Fewer than seven independent receiver views; acquire confirmation placements.",
+            "surfaces": [
+              {
+                "confidence": {
+                  "kind": "evidence_summary_not_probability",
+                  "rms_residual_m": 6.616800046001569e-05,
+                  "supporting_views": 4
+                },
+                "extent_status": "unknown",
+                "image_source_m": [
+                  7.199512876623093,
+                  1.7004087683409161,
+                  1.0985256069925635
+                ],
+                "kind": "unclassified_planar_reflector",
+                "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+                "model_status": "conditional_first_order_hypothesis",
+                "normal": [
+                  0.9999999674818565,
+                  6.813358618106362e-05,
+                  -0.000245752111848442
+                ],
+                "offset_m": 4.199601996609761,
+                "support": [
+                  {
+                    "candidate_id": "view-00:echo:00",
+                    "capture_id": "view-00",
+                    "observed_delay_s": 0.007171838134111037,
+                    "predicted_delay_s": 0.007171732677778332,
+                    "reflection_point_m": [
+                      4.19992526756418,
+                      2.5433301364175085,
+                      2.0200053621058554
+                    ],
+                    "residual_s": 1.0545633270537397e-07
+                  },
+                  {
+                    "candidate_id": "view-01:echo:00",
+                    "capture_id": "view-01",
+                    "observed_delay_s": 0.010547340819629904,
+                    "predicted_delay_s": 0.010547655903988888,
+                    "reflection_point_m": [
+                      4.199866055465138,
+                      2.0091616458459503,
+                      1.6309673543129757
+                    ],
+                    "residual_s": -3.1508435898407183e-07
+                  },
+                  {
+                    "candidate_id": "view-02:echo:00",
+                    "capture_id": "view-02",
+                    "observed_delay_s": 0.013713097951950875,
+                    "predicted_delay_s": 0.013712902639598325,
+                    "reflection_point_m": [
+                      4.199830959926044,
+                      1.7790877381841506,
+                      1.424371781294142
+                    ],
+                    "residual_s": 1.9531235254978407e-07
+                  },
+                  {
+                    "candidate_id": "view-03:echo:00",
+                    "capture_id": "view-03",
+                    "observed_delay_s": 0.012130099315675009,
+                    "predicted_delay_s": 0.012130081697981882,
+                    "reflection_point_m": [
+                      4.199926977773349,
+                      1.5817585156928435,
+                      1.7603733561129848
+                    ],
+                    "residual_s": 1.7617693127275347e-08
+                  }
+                ],
+                "surface_id": "reflector-bf560b3be51f",
+                "triangles": [
+                  [
+                    0,
+                    1,
+                    2
+                  ]
+                ],
+                "uncertainty": {
+                  "conditional_on": "associations and first-order point-source model",
+                  "excluded_model_errors": [
+                    "reflection_order",
+                    "multiple_emitters",
+                    "unmodeled_transducer_response"
+                  ],
+                  "image_source_covariance_m2": [
+                    [
+                      0.0013040782254117522,
+                      -0.0018793623445450783,
+                      0.006657992766607956
+                    ],
+                    [
+                      -0.0018793623445450718,
+                      0.014802260572901276,
+                      -0.015925483231988762
+                    ],
+                    [
+                      0.006657992766607961,
+                      -0.015925483231988755,
+                      0.04013400322555188
+                    ]
+                  ],
+                  "local_information_rank": 3,
+                  "normal_angular_std_rad": 0.03906856782782067,
+                  "offset_std_m": 0.043546497051539707,
+                  "rank_deficient": false
+                },
+                "vertices_m": [
+                  [
+                    4.199830959926044,
+                    1.7790877381841506,
+                    1.424371781294142
+                  ],
+                  [
+                    4.19992526756418,
+                    2.5433301364175085,
+                    2.0200053621058554
+                  ],
+                  [
+                    4.199926977773349,
+                    1.5817585156928435,
+                    1.7603733561129848
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "method": "image_source_consensus",
+        "observations": [
+          {
+            "candidates": [
+              {
+                "amplitude": 0.60890974990504,
+                "candidate_id": "view-00:echo:00",
+                "delay_s": 0.007171838134111037,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-00",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000453033763412,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.06499043557525841,
+              "pilot_arrivals_receiver_s": [
+                0.16499570463904284,
+                0.5150106299620573,
+                0.865025322558888,
+                1.2150421648779324,
+                1.565059479123585,
+                1.9150751297698798,
+                2.265089310274977
+              ],
+              "pilot_residual_max_s": 1.3557174434186692e-06,
+              "pilot_residual_rms_s": 8.577381733713281e-07,
+              "pilot_residuals_s": [
+                7.387261503066789e-07,
+                -1.921325546438979e-07,
+                -1.3557174434186692e-06,
+                -3.6958011828680526e-07,
+                1.088483814637442e-06,
+                8.829483899575052e-07,
+                -7.92728232390516e-07
+              ],
+              "relative_rate_ppm": 45.30337634123249
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.1649937482785136,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.38606164316569064,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.4464381663875535e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.710654785997377,
+              2.961833636020984,
+              2.4775124522495524
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "4dfec354012be6034df331479d3168afec942ccd44dd2d53fb9a8047ce94b3b0",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003998782420781518,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6546782240509843,
+                "candidate_id": "view-01:echo:00",
+                "delay_s": 0.010547340819629904,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-01",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000006603985057,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.060805468771567096,
+              "pilot_arrivals_receiver_s": [
+                0.16080552380339927,
+                0.5108057660672213,
+                0.8608060037636485,
+                1.2108062369343324,
+                1.560806465748589,
+                1.9108066904102048,
+                2.260806910881548
+              ],
+              "pilot_residual_max_s": 1.1008018385716412e-08,
+              "pilot_residual_rms_s": 7.54148424216515e-09,
+              "pilot_residuals_s": [
+                -1.1008018385716412e-08,
+                1.1632661500726726e-10,
+                6.673276820023943e-09,
+                8.704483800414664e-09,
+                6.379263339795216e-09,
+                -9.859779659393553e-11,
+                -1.076673150635088e-08
+              ],
+              "relative_rate_ppm": 0.660398505658577
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.16080453530732014,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.38194895364304426,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.2144904947083724e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              2.2341515126446603,
+              2.211492139278849,
+              1.9798845930125804
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "7127d8d3248e278419164f642a88c3e41751b0076e34c587423d976d76fad02f",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003999000496562563,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.6365686444467152,
+                "candidate_id": "view-02:echo:00",
+                "delay_s": 0.013713097951950875,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-02",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.0000389849396458,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.06800958018758059,
+              "pilot_arrivals_receiver_s": [
+                0.16801444726545547,
+                0.5180258487557169,
+                0.8680409572655075,
+                1.2180551387367409,
+                1.5680666969250088,
+                1.9180820513295338,
+                2.2680957497992535
+              ],
+              "pilot_residual_max_s": 1.3606720405956452e-06,
+              "pilot_residual_rms_s": 8.669312315590691e-07,
+              "pilot_residuals_s": [
+                9.685839102990812e-07,
+                -1.2746547043418488e-06,
+                1.8912621013722486e-07,
+                7.258685676969634e-07,
+                -1.3606720405956452e-06,
+                3.4900360823542087e-07,
+                4.02744452010495e-07
+              ],
+              "relative_rate_ppm": 38.98493964582528
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.16801245739722534,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.3824020126411507,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.568500413513132e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.7249502181570897,
+              1.844001643276344,
+              1.6932104261748728
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "c941db2696d3b3a48ba21e69be7a3ac21d5fbedc0e3646ba9537fd379fc7a56d",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.003998978755493325,
+              "values_omitted": true
+            },
+            "status": "ok"
+          },
+          {
+            "candidates": [
+              {
+                "amplitude": 0.5839159900669955,
+                "candidate_id": "view-03:echo:00",
+                "delay_s": 0.012130099315675009,
+                "delay_std_s": 4.1666666666666665e-05,
+                "repeat_count": 7,
+                "repeat_support": 7
+              }
+            ],
+            "capture_id": "view-03",
+            "clock": {
+              "absolute_source_rate_calibrated": false,
+              "acquisition_template_rate_refined": false,
+              "alpha": 1.000009389915611,
+              "alpha_std": 1.1248942649084144e-06,
+              "correction": "affine_waveform_resampling",
+              "intercept_includes_propagation": true,
+              "intercept_s": 0.05664403217435263,
+              "pilot_arrivals_receiver_s": [
+                0.15664586299972202,
+                0.5066479921132376,
+                0.8566506821291846,
+                1.2066541879790493,
+                1.556658514206262,
+                1.9066619615195097,
+                2.256664613094178
+              ],
+              "pilot_residual_max_s": 8.918338082752886e-07,
+              "pilot_residual_rms_s": 5.972342372599147e-07,
+              "pilot_residuals_s": [
+                8.918338082752886e-07,
+                -2.6552314003058797e-07,
+                -8.619776569185333e-07,
+                -6.425982559399301e-07,
+                3.97158492759786e-07,
+                5.580012765182829e-07,
+                -7.689451919645762e-08
+              ],
+              "relative_rate_ppm": 9.38991561105773
+            },
+            "diagnostics": [
+              {
+                "code": "direct_path_assumed",
+                "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+              }
+            ],
+            "direct_arrival_receiver_s": 0.15664468204329257,
+            "direct_std_s": 4.1666666666666665e-05,
+            "input_diagnostics": [],
+            "input_format": "unspecified_lossless",
+            "provenance": "simulated",
+            "quality": {
+              "clipped_fraction": 0.0,
+              "direct_response_amplitude": 0.39635853580611485,
+              "minimum_resolved_excess_delay_s": 0.00035,
+              "noise_response_amplitude": 3.5511106196035314e-07,
+              "usable_band_hz": [
+                2000.0,
+                14000.0
+              ]
+            },
+            "receiver_position_m": [
+              1.8182927624067304,
+              1.487551678183404,
+              2.2858723075759304
+            ],
+            "receiver_position_std_m": 0.003,
+            "recording_sha256": "3e14cc12cfa313f22dc57d99acf53009e2791adcc6ae6aeccc14e493e0857290",
+            "response": {
+              "delay_unit": "source_buffer_seconds",
+              "sample_count": 4225,
+              "sample_rate_hz": 48000,
+              "samples_available_by_reprocessing_raw": true,
+              "start_delay_s": -0.0039997108800936595,
+              "values_omitted": true
+            },
+            "status": "ok"
+          }
+        ],
+        "provenance": {
+          "coordinates": "right-handed, metres, z up",
+          "evidence_classes": [
+            "simulated"
+          ],
+          "geometry": "inferred from recording-derived excess delays",
+          "implementation_sha256": "fccb2194adb461409130179f0a0181d14ab36fd58767c252ad0a455a76e411a6",
+          "inference": [
+            "simulated"
+          ],
+          "method": "mapper",
+          "physical_validation": false,
+          "poses": "supplied acoustic-center positions",
+          "recordings": [
+            {
+              "capture_id": "view-00",
+              "sha256": "4dfec354012be6034df331479d3168afec942ccd44dd2d53fb9a8047ce94b3b0"
+            },
+            {
+              "capture_id": "view-01",
+              "sha256": "7127d8d3248e278419164f642a88c3e41751b0076e34c587423d976d76fad02f"
+            },
+            {
+              "capture_id": "view-02",
+              "sha256": "c941db2696d3b3a48ba21e69be7a3ac21d5fbedc0e3646ba9537fd379fc7a56d"
+            },
+            {
+              "capture_id": "view-03",
+              "sha256": "3e14cc12cfa313f22dc57d99acf53009e2791adcc6ae6aeccc14e493e0857290"
+            }
+          ],
+          "runtime_versions": {
+            "numpy": "2.3.5",
+            "python": "3.12.14",
+            "scipy": "1.18.1"
+          },
+          "software_version": "0.1.0"
+        },
+        "result_id": "result-29c545d1d3a946fc9bcb",
+        "runtime_s": 0.03449199999886332,
+        "schema_version": "1.0",
+        "score": {
+          "clutter_cost": 5.0,
+          "kind": "dimensionless_full_covariance_ranking_not_posterior",
+          "miss_cost": 1.0,
+          "null": 20.0,
+          "plane_cost": 7.0,
+          "selected": 8.74725704435968
+        },
+        "search": {
+          "anchor_triples": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "complete": true,
+          "global_optimality_proven": false,
+          "max_candidates_per_view": 18,
+          "max_proposals": 24000,
+          "max_refinements": 72,
+          "proposals": 8,
+          "refined": 1
+        },
+        "session_id": "A_return",
+        "shared_image_source_covariance_m2": [
+          [
+            0.0013040782254117522,
+            -0.0018793623445450783,
+            0.006657992766607956
+          ],
+          [
+            -0.0018793623445450718,
+            0.014802260572901276,
+            -0.015925483231988762
+          ],
+          [
+            0.006657992766607961,
+            -0.015925483231988755,
+            0.04013400322555188
+          ]
+        ],
+        "status": "ambiguous",
+        "surfaces": [],
+        "uncertainty_semantics": "Local covariance conditional on path associations and point-source/plane model; includes declared shared calibration uncertainty, not unmodeled bias."
+      }
+    }
+  ],
+  "intervention_description": "Move one large planar reflector0.2m toward the surveyed source, then restore it.",
+  "physical_scene_change_established": false,
+  "physical_validation": false,
+  "protocol_id": "controlled-development",
+  "protocol_sha256": "b4f03d6d4485150040bd2b9d91230d2a0e84a8fd47801447baa44949776fbaaf",
+  "receiver_evidence": [
+    {
+      "A_return_relative_difference": 0.013172713654358173,
+      "B_repeat_relative_difference": 0.003481193753329403,
+      "capture_id": "view-00",
+      "change_gate": 0.8090628187244735,
+      "cross_state_relative_difference": 1.8363299331697327,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-00:echo:00",
+            "view-00:echo:00"
+          ],
+          "A_delay_s": 0.007171631237743353,
+          "B_candidate_ids": [
+            "view-00:echo:00",
+            "view-00:echo:00"
+          ],
+          "B_delay_s": 0.006103245613061102,
+          "delay_change_s": -0.001068385624682251,
+          "differential_std_bound_s": 0.00010210615446136254,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2696876062414912
+    },
+    {
+      "A_return_relative_difference": 0.06266578236350527,
+      "B_repeat_relative_difference": 0.1042678260285814,
+      "capture_id": "view-01",
+      "change_gate": 0.8428486360836239,
+      "cross_state_relative_difference": 1.8740985547676217,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-01:echo:00",
+            "view-01:echo:00"
+          ],
+          "A_delay_s": 0.010547247092588098,
+          "B_candidate_ids": [
+            "view-01:echo:00",
+            "view-01:echo:00"
+          ],
+          "B_delay_s": 0.009408690815932427,
+          "delay_change_s": -0.0011385562766556712,
+          "differential_std_bound_s": 0.00010210615514973956,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.280949545361208
+    },
+    {
+      "A_return_relative_difference": 0.053952837970506755,
+      "B_repeat_relative_difference": 0.07624297198762925,
+      "capture_id": "view-02",
+      "change_gate": 0.829461809909422,
+      "cross_state_relative_difference": 1.8818255330157927,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-02:echo:00",
+            "view-02:echo:00"
+          ],
+          "A_delay_s": 0.01371319519945579,
+          "B_candidate_ids": [
+            "view-02:echo:00",
+            "view-02:echo:00"
+          ],
+          "B_delay_s": 0.012555893324159736,
+          "delay_change_s": -0.0011573018752960539,
+          "differential_std_bound_s": 0.00010210615605389173,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2764872699698073
+    },
+    {
+      "A_return_relative_difference": 0.010620703420668065,
+      "B_repeat_relative_difference": 0.008154550106729703,
+      "capture_id": "view-03",
+      "change_gate": 0.8054775672236463,
+      "cross_state_relative_difference": 1.871390815195157,
+      "gate_semantics": "Engineering consistency bounds, not calibrated p-values; common uncertainty is not divided by capture count.",
+      "repeat_consistent": true,
+      "repeatable_change": true,
+      "shifted_positive_echoes": [
+        {
+          "A_candidate_ids": [
+            "view-03:echo:00",
+            "view-03:echo:00"
+          ],
+          "A_delay_s": 0.012130030098506574,
+          "B_candidate_ids": [
+            "view-03:echo:00",
+            "view-03:echo:00"
+          ],
+          "B_delay_s": 0.01099503132877843,
+          "delay_change_s": -0.001134998769728144,
+          "differential_std_bound_s": 0.00010210615557260364,
+          "interpretation": "Persistent observed paths shifted; cross-state identity remains a conditional nearest-delay association."
+        }
+      ],
+      "timing_relative_difference_bound": 0.2684925224078821
+    }
+  ],
+  "schema_version": "1.0",
+  "status": "repeatable_acoustic_change_unlocalized"
+}

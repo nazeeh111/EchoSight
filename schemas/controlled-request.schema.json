@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/controlled-request-1.0.json",
+  "title": "EchoSight controlled HTTP job request v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "coordinate_frame_id",
+    "intervention_description",
+    "controls",
+    "epochs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "protocol_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "coordinate_frame_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "intervention_description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "controls": {
+      "type": "object",
+      "required": [
+        "devices_and_source_stationary",
+        "only_declared_intervention",
+        "restoration_attempted",
+        "differential_timing_std_s"
+      ],
+      "properties": {
+        "devices_and_source_stationary": {
+          "const": true
+        },
+        "only_declared_intervention": {
+          "const": true
+        },
+        "restoration_attempted": {
+          "const": true
+        },
+        "differential_timing_std_s": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.01
+        }
+      }
+    },
+    "epochs": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "type": "object",
+          "required": [
+            "epoch",
+            "session_id",
+            "expected_revision",
+            "calibration_id",
+            "source_configuration_id",
+            "route_ids"
+          ],
+          "properties": {
+            "epoch": {
+              "const": "A_before"
+            },
+            "session_id": {
+              "$ref": "session.schema.json#/$defs/id"
+            },
+            "expected_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "calibration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "source_configuration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "route_ids": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "epoch",
+            "session_id",
+            "expected_revision",
+            "calibration_id",
+            "source_configuration_id",
+            "route_ids"
+          ],
+          "properties": {
+            "epoch": {
+              "const": "B_first"
+            },
+            "session_id": {
+              "$ref": "session.schema.json#/$defs/id"
+            },
+            "expected_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "calibration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "source_configuration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "route_ids": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "epoch",
+            "session_id",
+            "expected_revision",
+            "calibration_id",
+            "source_configuration_id",
+            "route_ids"
+          ],
+          "properties": {
+            "epoch": {
+              "const": "B_repeat"
+            },
+            "session_id": {
+              "$ref": "session.schema.json#/$defs/id"
+            },
+            "expected_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "calibration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "source_configuration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "route_ids": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "epoch",
+            "session_id",
+            "expected_revision",
+            "calibration_id",
+            "source_configuration_id",
+            "route_ids"
+          ],
+          "properties": {
+            "epoch": {
+              "const": "A_return"
+            },
+            "session_id": {
+              "$ref": "session.schema.json#/$defs/id"
+            },
+            "expected_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "calibration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "source_configuration_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "route_ids": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

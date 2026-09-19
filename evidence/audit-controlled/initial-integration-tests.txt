@@ -1,0 +1,68 @@
+test_clock_uncertainty_and_duplicate_bytes_cannot_strengthen_evidence (tests.test_controlled.ControlledAcquisitionTests.test_clock_uncertainty_and_duplicate_bytes_cannot_strengthen_evidence) ... ok
+test_failure_to_restore_A_prevents_change_claim (tests.test_controlled.ControlledAcquisitionTests.test_failure_to_restore_A_prevents_change_claim) ... ok
+test_four_stationary_phones_keep_ambiguous_geometry_unlocalized (tests.test_controlled.ControlledAcquisitionTests.test_four_stationary_phones_keep_ambiguous_geometry_unlocalized) ... ok
+test_missing_controls_and_cancellation_are_explicit (tests.test_controlled.ControlledAcquisitionTests.test_missing_controls_and_cancellation_are_explicit) ... ok
+test_raw_null_and_gain_only_do_not_claim_spatial_change (tests.test_controlled.ControlledAcquisitionTests.test_raw_null_and_gain_only_do_not_claim_spatial_change) ... ok
+test_reversible_reflector_move_is_supported_by_positive_echoes (tests.test_controlled.ControlledAcquisitionTests.test_reversible_reflector_move_is_supported_by_positive_echoes) ... ok
+test_route_and_calibration_drift_rejected_before_processing (tests.test_controlled.ControlledAcquisitionTests.test_route_and_calibration_drift_rejected_before_processing) ... ok
+test_shared_timing_budget_does_not_shrink_across_receivers (tests.test_controlled.ControlledAcquisitionTests.test_shared_timing_budget_does_not_shrink_across_receivers) ... ok
+test_cancellation_and_failed_publication_never_serve_result (tests.test_controlled_jobs.ControlledJobTests.test_cancellation_and_failed_publication_never_serve_result) ... ok
+test_process_crash_marks_controlled_job_interrupted (tests.test_controlled_jobs.ControlledJobTests.test_process_crash_marks_controlled_job_interrupted) ... ok
+test_raw_job_snapshot_result_and_restart_preserve_separate_session_results (tests.test_controlled_jobs.ControlledJobTests.test_raw_job_snapshot_result_and_restart_preserve_separate_session_results) ... ok
+test_api_and_cli_process_same_four_phone_recordings (tests.test_controlled_http.ControlledHTTPTests.test_api_and_cli_process_same_four_phone_recordings) ... ERROR
+test_archive_hash_uses_the_parsed_snapshot_when_source_is_replaced (tests.test_storage.StorageTests.test_archive_hash_uses_the_parsed_snapshot_when_source_is_replaced) ... ok
+test_calibration_revision_preserves_raw_and_prior_input (tests.test_storage.StorageTests.test_calibration_revision_preserves_raw_and_prior_input) ... ok
+test_cancel_before_publication_wins_over_completed_result (tests.test_storage.StorageTests.test_cancel_before_publication_wins_over_completed_result) ... ok
+test_checksum_failure_is_atomic (tests.test_storage.StorageTests.test_checksum_failure_is_atomic) ... ok
+test_completed_job_is_immutable_and_result_can_be_stale (tests.test_storage.StorageTests.test_completed_job_is_immutable_and_result_can_be_stale) ... ok
+test_coordinate_frame_identity_is_a_bounded_string (tests.test_storage.StorageTests.test_coordinate_frame_identity_is_a_bounded_string) ... ok
+test_export_replay_preserves_raw_and_hashes (tests.test_storage.StorageTests.test_export_replay_preserves_raw_and_hashes) ... ok
+test_failed_final_commit_preserves_previous_completed_result (tests.test_storage.StorageTests.test_failed_final_commit_preserves_previous_completed_result) ... ok
+test_failed_session_creation_does_not_reserve_identifier (tests.test_storage.StorageTests.test_failed_session_creation_does_not_reserve_identifier) ... ok
+test_foreign_archived_geometry_is_quarantined_until_recomputed (tests.test_storage.StorageTests.test_foreign_archived_geometry_is_quarantined_until_recomputed) ... ok
+test_import_checks_revision_and_recomputes_audio_metadata (tests.test_storage.StorageTests.test_import_checks_revision_and_recomputes_audio_metadata) ... ok
+test_import_uses_same_bytes_for_decode_hash_and_preservation (tests.test_storage.StorageTests.test_import_uses_same_bytes_for_decode_hash_and_preservation) ... ok
+test_invalid_and_nonfinite (tests.test_storage.StorageTests.test_invalid_and_nonfinite) ... ok
+test_jobs_cancel_and_recover (tests.test_storage.StorageTests.test_jobs_cancel_and_recover) ... ok
+test_joint_calibration_rejects_invalid_matrices_and_incomplete_pairs (tests.test_storage.StorageTests.test_joint_calibration_rejects_invalid_matrices_and_incomplete_pairs) ... ok
+test_joint_source_speed_covariance_preserves_cross_correlation (tests.test_storage.StorageTests.test_joint_source_speed_covariance_preserves_cross_correlation) ... ok
+test_lossless_and_decode (tests.test_storage.StorageTests.test_lossless_and_decode) ... ok
+test_maximum_response_shape_exports_and_reloads (tests.test_storage.StorageTests.test_maximum_response_shape_exports_and_reloads) ... ok
+test_only_one_process_owns_store (tests.test_storage.StorageTests.test_only_one_process_owns_store) ... ok
+test_oversized_result_archive_rejected_before_publication (tests.test_storage.StorageTests.test_oversized_result_archive_rejected_before_publication) ... ok
+test_path_injection_and_zip_traversal (tests.test_storage.StorageTests.test_path_injection_and_zip_traversal) ... ok
+test_pcm_widths_and_rates_preserve_signed_samples (tests.test_storage.StorageTests.test_pcm_widths_and_rates_preserve_signed_samples) ... ok
+test_phyphox_never_closes_an_explicit_sample_gap (tests.test_storage.StorageTests.test_phyphox_never_closes_an_explicit_sample_gap) ... ok
+test_phyphox_rejects_inconsistent_rate_and_nonfinite (tests.test_storage.StorageTests.test_phyphox_rejects_inconsistent_rate_and_nonfinite) ... ok
+test_phyphox_zip_preserves_decimal_values_and_source (tests.test_storage.StorageTests.test_phyphox_zip_preserves_decimal_values_and_source) ... ok
+test_result_budget_does_not_expand_raw_session_budget (tests.test_storage.StorageTests.test_result_budget_does_not_expand_raw_session_budget) ... ok
+test_compare_accepts_two_results_above_session_limit (tests.test_api.APITests.test_compare_accepts_two_results_above_session_limit) ... ok
+test_compare_endpoint_and_size_limit (tests.test_api.APITests.test_compare_endpoint_and_size_limit) ... ok
+test_concurrent_upload_and_calibration_do_not_change_running_input (tests.test_api.APITests.test_concurrent_upload_and_calibration_do_not_change_running_input) ... ok
+test_errors_and_host_guard (tests.test_api.APITests.test_errors_and_host_guard) ... ok
+test_http_cancellation_waits_for_worker_without_publishing (tests.test_api.APITests.test_http_cancellation_waits_for_worker_without_publishing) ... ok
+test_http_recording_to_result_and_export (tests.test_api.APITests.test_http_recording_to_result_and_export) ... ok
+test_interrupted_upload_does_not_publish_capture (tests.test_api.APITests.test_interrupted_upload_does_not_publish_capture) ... ok
+test_revision_update_uses_optimistic_concurrency (tests.test_api.APITests.test_revision_update_uses_optimistic_concurrency) ... ok
+test_real_recordings_through_http_and_replayed_processing (tests.test_end_to_end_api.EndToEndAPITests.test_real_recordings_through_http_and_replayed_processing) ... ok
+test_bad_input_has_nonzero_exit_without_traceback (tests.test_cli.CLITests.test_bad_input_has_nonzero_exit_without_traceback) ... ok
+test_export_and_replay_are_real_processing_commands (tests.test_cli.CLITests.test_export_and_replay_are_real_processing_commands) ... ok
+test_inspect_prints_result_evidence_summary (tests.test_cli.CLITests.test_inspect_prints_result_evidence_summary) ... ok
+test_probe_has_explicit_channel_and_file_hash (tests.test_cli.CLITests.test_probe_has_explicit_channel_and_file_hash) ... ok
+test_triangles_coordinates_and_evidence_match_recording_results (tests.test_frontend.FrontendContractTests.test_triangles_coordinates_and_evidence_match_recording_results) ... ok
+
+======================================================================
+ERROR: test_api_and_cli_process_same_four_phone_recordings (tests.test_controlled_http.ControlledHTTPTests.test_api_and_cli_process_same_four_phone_recordings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_controlled_http.py", line 24, in test_api_and_cli_process_same_four_phone_recordings
+    capture['recording_path']=str(Path(capture['recording_path']).relative_to(root))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeeh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/private/var/folders/ss/tml7487n205dg94kb7__tth80000gn/T/tmp8zcmukxk/recordings/A_before/phone-00.wav' is not in the subpath of '/var/folders/ss/tml7487n205dg94kb7__tth80000gn/T/tmp8zcmukxk'
+
+----------------------------------------------------------------------
+Ran 52 tests in 14.018s
+
+FAILED (errors=1)

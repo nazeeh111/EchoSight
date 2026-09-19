@@ -1,0 +1,5 @@
+Controlled integration verification
+
+52 selected tests: first assembled invocation passed51 and failed1 due to macOS /var versus /private/var test-path normalization. That fixture path was corrected; the HTTP/CLI raw test passed independently (1test). Subsequent CLI export regression exposed omitted receiver_pose_group_id; repaired export preserves it and all4CLItests passed. All52 distinct checks therefore have passing evidence for the final affected code; logs retain the initial failure.
+
+Scope: controlled core8, controlled jobs3, controlled HTTP1, storage26, API8, HTTP end-to-end1, CLI4, frontend1. Includes actual process crash(exit17), cancelled/failed publication, duplicate recordings, declaredclock uncertainty, unchanged/gain/failedrestoration controls, partial4phone and conditional12device geometry. These are software and simulation checks; no own-device or externalmeasured change validation.

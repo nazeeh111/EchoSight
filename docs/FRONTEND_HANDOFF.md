@@ -65,3 +65,15 @@ Use the held-out reports for performance claims. A useful narrative is: start wi
 Use revision-checked `PATCH /v1/sessions/{id}` with `expected_revision`, `calibration` and/or capture pose updates. Raw files, hashes and evidence provenance remain immutable. Active jobs keep their old calibration snapshot and their outputs become stale; a new job processes the revised session. A shared source/effective-speed covariance must remain a complete pair with its effective speed. `calibrate-reference` creates an inspectable proposal with held-out recording evidence, not a physical-validation certificate.
 
 Comparison offsets use the shared source position as their physical reference: `offset_change_m` is the signed plane-offset change there, with `offset_reference_point_m` and `offset_semantics` explicit. This avoids changing associations when the coordinate origin moves and fitted normals differ slightly. Effective propagation speed must also match; missing calibration metadata returns `incomparable`. This display comparison does not establish a controlled physical scene change.
+
+
+### Controlled acoustic change
+
+The recording protocol now has its own API/CLI result. Show `no_repeatable_change` as insufficient evidence for change, not proof of an unchanged room. `repeatable_acoustic_change_unlocalized` supports a repeatable difference but supplies no new physical object. Only `conditional_spatial_change` contains a displacement backed by positive echoes and four geometry fits; display its conditional model and uncertainty. `inconclusive` includes failed return/repeat, changed controls or rejected recording quality. Never animate a disappeared object from missing echoes.
+
+```sh
+python -m evaluation.controlled_development --output work/controlled-demo --receivers 4 --scenario moved
+python -m echosight controlled work/controlled-demo/protocol.json --output work/controlled-demo/result.json
+```
+
+This four-fixed-phone synthetic demo yields repeatable unlocalized change. `--receivers 12` generates a separate twelve-static-device geometry demonstration; it does not simulate four phones occupying twelve simultaneous positions. For that run use `--receivers 12`. The API request and actual compact four-phone result are in `examples/frontend/controlled-*.json`. Epoch response arrays are explicitly omitted; full waveforms remain reproducible from preserved raw inputs. No own-device measurement exists yet.

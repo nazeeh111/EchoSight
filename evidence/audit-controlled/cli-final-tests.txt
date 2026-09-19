@@ -1,0 +1,9 @@
+test_bad_input_has_nonzero_exit_without_traceback (tests.test_cli.CLITests.test_bad_input_has_nonzero_exit_without_traceback) ... ok
+test_export_and_replay_are_real_processing_commands (tests.test_cli.CLITests.test_export_and_replay_are_real_processing_commands) ... ok
+test_inspect_prints_result_evidence_summary (tests.test_cli.CLITests.test_inspect_prints_result_evidence_summary) ... ok
+test_probe_has_explicit_channel_and_file_hash (tests.test_cli.CLITests.test_probe_has_explicit_channel_and_file_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.473s
+
+OK

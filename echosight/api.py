@@ -100,6 +100,8 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                         if isinstance(offset, bool) or not isinstance(offset, (int, float)) or not math.isfinite(offset): raise ValueError('surface offset must be finite')
                         if not isinstance(surface.get('surface_id'), str): raise ValueError('surface_id required')
                 return self._reply(200, compare_results(body['previous'], body['current']))
+            if p == ['v1', 'controlled-jobs'] and method == 'POST':
+                return self._reply(202,store.start_controlled_job(self._json_body()))
             if p == ['v1', 'sessions'] and method == 'POST': return self._reply(201, store.create_session(self._json_body()))
             if p == ['v1', 'imports'] and method == 'POST':
                 raw = self._body(MAX_EXPORT_BYTES)
@@ -131,6 +133,8 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                         return self._reply(200, path.read_bytes(), 'application/zip')
             if len(p) >= 3 and p[:2] == ['v1', 'jobs']:
                 if len(p) == 3 and method == 'GET': return self._reply(200, store.get_job(p[2]))
+                if len(p) == 4 and p[3] == 'result' and method == 'GET':
+                    return self._reply(200,store.get_job_result(p[2]))
                 if len(p) == 4 and p[3] == 'cancel' and method == 'POST':
                     self._json_body(); return self._reply(202, store.cancel_job(p[2]))
             raise KeyError('route not found')

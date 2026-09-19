@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "controlled-development",
+  "coordinate_frame_id": "survey-one",
+  "intervention_description": "Move one large planar reflector0.2m toward the surveyed source, then restore it.",
+  "controls": {
+    "devices_and_source_stationary": true,
+    "only_declared_intervention": true,
+    "restoration_attempted": true,
+    "differential_timing_std_s": 3e-06
+  },
+  "epochs": [
+    {
+      "epoch": "A_before",
+      "calibration_id": "cal-one",
+      "source_configuration_id": "qualified-source-one",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "session_id": "A_before",
+      "expected_revision": 4
+    },
+    {
+      "epoch": "B_first",
+      "calibration_id": "cal-one",
+      "source_configuration_id": "qualified-source-one",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "session_id": "B_first",
+      "expected_revision": 4
+    },
+    {
+      "epoch": "B_repeat",
+      "calibration_id": "cal-one",
+      "source_configuration_id": "qualified-source-one",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "session_id": "B_repeat",
+      "expected_revision": 4
+    },
+    {
+      "epoch": "A_return",
+      "calibration_id": "cal-one",
+      "source_configuration_id": "qualified-source-one",
+      "route_ids": {
+        "phone-00": "raw-lossless-one",
+        "phone-01": "raw-lossless-one",
+        "phone-02": "raw-lossless-one",
+        "phone-03": "raw-lossless-one"
+      },
+      "session_id": "A_return",
+      "expected_revision": 4
+    }
+  ]
+}
