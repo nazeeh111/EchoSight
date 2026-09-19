@@ -1,0 +1,16 @@
+{
+  "original": {
+    "testsRun": 1,
+    "failures": [
+      "Traceback (most recent call last):\n  File \"/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/spatial-finish/test_multisource_support_recovery.py\", line 22, in test_weak_candidate_cannot_erase_supported_room\n    self.assertEqual(metrics['matched_count'], 6, result['diagnostics'])\nAssertionError: 0 != 6 : ['joint_refit_lost_required_support']\n"
+    ],
+    "errors": [],
+    "seconds": 3.4155292499926873
+  },
+  "candidate": {
+    "testsRun": 1,
+    "failures": [],
+    "errors": [],
+    "seconds": 4.733845124996151
+  }
+}

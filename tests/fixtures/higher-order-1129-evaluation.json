@@ -1,0 +1,59 @@
+{
+  "surfaces": [
+    {
+      "surface_id": "wall-0-0",
+      "normal": [
+        0.9991460559136539,
+        -0.04131778009755083,
+        0.0
+      ],
+      "offset_m": -0.025641947415409625
+    },
+    {
+      "surface_id": "wall-0-1",
+      "normal": [
+        0.9991460559136539,
+        -0.04131778009755083,
+        0.0
+      ],
+      "offset_m": 5.468349875505761
+    },
+    {
+      "surface_id": "wall-1-0",
+      "normal": [
+        0.04131778009755083,
+        0.9991460559136539,
+        0.0
+      ],
+      "offset_m": 1.0941028774904857
+    },
+    {
+      "surface_id": "wall-1-1",
+      "normal": [
+        0.04131778009755083,
+        0.9991460559136539,
+        0.0
+      ],
+      "offset_m": 5.988321192159561
+    },
+    {
+      "surface_id": "wall-2-0",
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset_m": -0.7331061175186364
+    },
+    {
+      "surface_id": "wall-2-1",
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset_m": 2.473964796566114
+    }
+  ],
+  "source": "Evaluation-only geometry from frozen source-relocation seed1129; not provided to inference."
+}

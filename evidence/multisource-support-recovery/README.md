@@ -1,0 +1,15 @@
+# Multi-source support recovery
+
+The final refit previously discarded the complete scene when one provisional plane lost required support. The repaired loop removes unsupported candidates, recomputes exclusive assignments and refits survivors before unchanged covariance and physical-model ambiguity checks. It checks cancellation before each pass and fit.
+
+The exposed higher-order1129 regression now recovers all six planes, including floor and ceiling, with zero false surfaces from the same raw recordings in5.20seconds (baseline0planes in3.84seconds). Across all12 retained relocation cases, matched counts increase34→40, false counts remain0, and the other11case counts are unchanged. The independent15case mismatch/null comparison retains exactly the same surfaces, including all prior synthetic and measured failures. No acceptance criterion changed. Two-source1103 remains failed. These are synthetic/external hybrid regression results, not own-device accuracy or a newly blind test.
+
+## Reproduction and evidence
+
+Run `.venv/bin/python -m unittest tests.test_multisource_support_recovery -v` from the repository root. The compact fixture is derived from retained raw-recording observations and contains no path labels; evaluation geometry is separate and read only after fitting. It reproduces recovery and cancellation behavior in a clean checkout. Original WAV hashes are retained in the raw reports; those WAVs are not in Git. Fixture replay is therefore not new raw verification.
+
+The immutable first candidate/freeze and its all12case report are preserved, followed by the cancellation-only v2freeze and actual raw1129/1193checks. Final production source matches v2 SHA256`b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085`. The original large diagnostic trace remains in ignored work with its identity preserved here. Unused response-display arrays and duplicate full geometry outputs are not packaged.
+
+`raw_check.py`, `raw_check_v2.py` and `run_experiment.py` are original experiment scripts: they require the original retained data tree, original runtime snapshot and candidate files under their declared work paths. Do not run them against a changed baseline and describe it as the archived comparison. The mismatch folder has its own original source copies, freeze, reproduction instructions and manifest. [Independent review](../multisource-support-review/REVIEW.md) covers candidate mathematics, support, covariance and cancellation; its report gives exact scope and probes.
+
+Integrated focused checks cover25 distinct tests:23 existing multi-source/admission tests pass in `integrated-focused.txt`; its new fixture test initially fails because the coordinator had not created `tests/fixtures/` before copying. After creating the directory and copying the unchanged fixtures, both recovery and cancellation tests pass in `integrated-recovery-tests.txt`. The original setup failure is retained. Final full-suite verification follows at an exact integrated commit.

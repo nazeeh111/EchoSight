@@ -1,0 +1,41 @@
+--- a/echosight/multisource.py
++++ b/echosight/multisource.py
+@@ -357,17 +357,28 @@
+             if winner is None:break
+             qs.append(winner)
+         if not qs:out['diagnostics'].append('no_joint_plane_beats_null');return out
+-        # Refit the complete model to its exclusive assignments; proposals
+-        # alone used a robust loss. Freeze links for covariance propagation.
+-        for _ in range(2):
++        # Remove unsupported candidates monotonically,
++        # then refit/reassign the surviving complete model before any output.
++        pruned=0
++        while qs:
++            single._check(cancel)
++            for _ in range(2):
++                score,links=_assign(qs,reference,sources,receivers,v,allrows)
++                for k,q in enumerate(qs):
++                    single._check(cancel)
++                    selected=[(i,l) for kk,i,l in links if kk==k]
++                    indices=np.array([i for i,l in selected]);target=np.array([allrows[i]['t'][l] for i,l in selected])
++                    if not len(indices):continue
++                    fit=least_squares(lambda x:(_predict(x,reference,sources[indices],receivers[indices],v)[0]-target)*v,q,max_nfev=35)
++                    qs[k]=fit.x
+             score,links=_assign(qs,reference,sources,receivers,v,allrows)
+-            for k,q in enumerate(qs):
+-                selected=[(i,l) for kk,i,l in links if kk==k]
+-                indices=np.array([i for i,l in selected]);target=np.array([allrows[i]['t'][l] for i,l in selected])
+-                fit=least_squares(lambda x:(_predict(x,reference,sources[indices],receivers[indices],v)[0]-target)*v,q,max_nfev=35)
+-                qs[k]=fit.x
+-        score,links=_assign(qs,reference,sources,receivers,v,allrows)
+-        if not _supported(links,allrows,len(qs)):
++            keep=[k for k in range(len(qs)) if _supported([(0,i,l) for kk,i,l in links if kk==k],allrows,1)]
++            if len(keep)==len(qs):break
++            pruned+=len(qs)-len(keep)
++            qs=[qs[k] for k in keep]
++            if pruned>MAX_PLANES:raise ValueError('support pruning exceeded plane bound')
++        if pruned:out['diagnostics'].append('joint_refit_pruned_unsupported_candidates:'+str(pruned))
++        if not qs:
+             out['diagnostics'].append('joint_refit_lost_required_support');return out
+         pcov,rank,chi2=_covariance(qs,reference,sources,receivers,v,allrows,links,calcov,receiver_calibration)
+         surfaces=[]

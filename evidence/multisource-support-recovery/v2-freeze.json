@@ -1,0 +1,5 @@
+{
+  "candidate_sha256": "b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085",
+  "previous_candidate_sha256": "b1ac9e0e34f542d8f890797fd109db29ea4c3dbca7698bf30edb6abef28754ce",
+  "changes": "Cancellation check on each prune pass and each fit; comment updated; identical arithmetic and policy."
+}

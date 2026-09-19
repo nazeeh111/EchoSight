@@ -1,0 +1,130 @@
+{
+  "original": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+  "candidate": "b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085",
+  "cases": [
+    {
+      "name": "direct_null-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "direct_null-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "dual_phase-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "dual_phase-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "dual_room-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "dual_room-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "near_reflector-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "near_reflector-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "receiver_filter-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "receiver_filter-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "single_room-2441",
+      "kind": "synthetic"
+    },
+    {
+      "name": "single_room-2459",
+      "kind": "synthetic"
+    },
+    {
+      "name": "measured-joint_mapper",
+      "kind": "measured"
+    },
+    {
+      "name": "measured-shuffled_geometry",
+      "kind": "measured"
+    },
+    {
+      "name": "measured-null",
+      "kind": "measured"
+    }
+  ],
+  "inputhash": {
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2441/baseline.json": "6c467fcf60065a26ac15083058d49275d76df803f9ce0b0b3053bd48b95127ea",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2441/bundle.json": "0c43a7a10c2fa2ed21b7d4bcff88d39c0e712639cfaa5cf9ebc3dd4990b9fa1f",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2441/truth.json": "8cafa569ffc7ce532b4f5ada3a33a99e154ef0945ec3ee91509e8a60637aef5e",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2459/baseline.json": "1cbad3802755b08503504677b691a56bb205589d58b702f09aa34c8bf584a6b3",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2459/bundle.json": "d2a75ebe19390253274ba3f046de4fe38ef88d17e0f9d85824d040b07f1176a5",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/direct_null-2459/truth.json": "72384b9c845e97805a8adb2eb1518029ec982f47786aa44188382cf55e092f8a",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2441/baseline.json": "f3d76060281e0eb9d26e4bd6b27bdf5928bf6a2cd2011ec372e2afdec0587132",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2441/bundle.json": "9a27ec93cafdc85f5f0a33fdef597f786e71357e60a020f26dadf9cba0b3c0ba",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2441/truth.json": "646870b7474e9e9408db9ef700418b706f75c2e1bc79e8f24b9c84224401e226",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2459/baseline.json": "7af84e2a4e0637de836cd161200d9d89b5b2fdaf259b6fe56a8ae99f6afb9b27",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2459/bundle.json": "9a7c3cb7f661c4f0ae35d9925c932a7c3ad49e5f5f60e1566d5952e61fbb3021",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_phase-2459/truth.json": "98d51f0c3d634039acc8b0a5449b7ee981e937bf7e1d83f510a171b30198e63c",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2441/baseline.json": "d482c097cec47f701c34925709d258e01bbdd2fbbdaee8b827773e69a0940c09",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2441/bundle.json": "f762e206dc501e705c07dd43aa114758c0be497c191d38b732119dc26fd11767",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2441/truth.json": "636647b58821fc3485f8852e0b8c7e245f7c6d2c8baae406f993c9e6576424d2",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2459/baseline.json": "b88331e035281a4830c4d98852ba74e9855acb15deb467ad0212272223b6b5b1",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2459/bundle.json": "3af9f58a230700adeb112bc532e607e250febe107c683266d401e9c73bfe904e",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/dual_room-2459/truth.json": "807724270e3ecdc6dbe46285eded2ba8b217ecfca0f3627594ecd9ddcfa395f2",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2441/baseline.json": "153d3229427fc6286aacb3526bc2cf114e8f22780fd0ea5d527f7a481f11f6dd",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2441/bundle.json": "6050184f694d882cfd76f02e57a4a43b7d5ebb173a519259c92931dba7f4a62f",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2441/truth.json": "fb15caf4eb724e5c6b427da36014990b23e5493be9ccb3f524268669a7930ec4",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2459/baseline.json": "00e375e37c5665a692fc34f5f1a08eb6a66fd3f5b03561df17846b2be792c88e",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2459/bundle.json": "3b477878464c818c3a38eb4bf6204a13a07354942e90137b867de633707d342c",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/near_reflector-2459/truth.json": "0cff316fc474e7e99a1cd3144cfff75b1491de84ac357edfdd9b6b400baee337",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2441/baseline.json": "cd4bd41b54af71bc984b791d520cbe3946069f04b8ef24fb5e91945a7cc375a0",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2441/bundle.json": "9be5bf92da62042368a7f7e9ceeb8a2676932cda40109248abbe143c38500114",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2441/truth.json": "493e02af4b1275edec64360e3e7554521ea3793ca949d399ac7180b6a13aee71",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2459/baseline.json": "b6b8f8e4cf3148d72fc9834d257d09d2e93819df0c70c5982ba981e24591c3f9",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2459/bundle.json": "e2c2a1ad7f079e6fbeac7739fc03033178dabfc95e78df83813130de45af19b9",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/receiver_filter-2459/truth.json": "765ed4bfb892b8df49bf93b8b7cf0e3c34d79937fc54c00061b7e969fcdbdd3c",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2441/baseline.json": "c632150bdb0b84a91ead6d93a6da26b01b79210691204f3568ccbd854e8a8091",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2441/bundle.json": "b975be622b5bd34342e6527ccd973b53f600516ce810a30f34f759c109f9eced",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2441/truth.json": "ccf0e131ed18d5b23fcabeda3ad394bf46cfce991996aa1f1a125ef43f0af0a6",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2459/baseline.json": "15799fbeb6486bf5db98d947368f716708563f79595666540996756df4269bf4",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2459/bundle.json": "d546be68ef8b537425f6fffe518841f31a88f9a9b5f9c76305198b5107f86788",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/source-model-diagnostic/run-v4/fresh/single_room-2459/truth.json": "ec9e0c8f8a99a5e3d6faad8252ab551fdb168fd40daf9d07a594a0608f1d9aa9",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/results/joint_mapper.json": "808d438fe638b66ec2500cf25a1820ff66c7c032d8ea664b0a4334cdcbcd9ed0",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/bundle.json": "5fe0045d749fc3d58e2c7210f05c02727f7a3abbd109252f499843e69203dbd5",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/protocol.json": "e77618d246594b15af132fad1781224af3b7bcf67cbd892a7646539fbec7751f",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/results/shuffled_geometry.json": "bb11e1c01ef87dc387f42d996d7d2ccf5396358d66e19e772a6da16ce3c3700e",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/results/null.json": "16408eea7bb091c38c3dd4ca3f2d8d559e45975000a9d311fee2bdcebff419a7",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/measured-multisource/null-bundle.json": "a9120077de63fe8fb2845a8ab97649654bf495a1d3b1081c88b319dee52de692"
+  },
+  "codehash": {
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/path_alternatives.py": "7391ac4713905166e5d1ac5601d77b1e3de41eb851fc8adcae2ec3530b278b50",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/receiver_covariance.py": "31bb616f55b6951874a1a72d28655c1c6ab4ae15706d3d9f786a1006fa9ef97b",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/evolution.py": "21caa2ba190a637b26c9188ee90bed3a34d6b90228a28699181d85a7b921b7c5",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/multisource.py": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/controlled.py": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/api.py": "734c309b59ad19a3cf9c44a33d9365f1b6062408c8945a816e9cfc6f33cae1e3",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/cli.py": "94efd77383ec0ee43c770e078cf25bffdc7339ace7c8b353d5e26e719b49c4cb",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/pipeline.py": "cd78d4b9de5faa96d194f19cdcb9b2398af7760e5a90fe59e388043470572520",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/storage.py": "df884e5a1c8746934ef752dd6e4d90dcdf0654becf5dad6581c4b58911fcae63",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/inference.py": "fe031cc0e6795906d8b6b411704dd81e8096370ce3d84c9e663898c747ad4b66",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/acquisition.py": "ca2effe95ae170b25a7eb8944a3bf16a255263668aca9c7b0da63b14b7503279",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/echosight/calibration.py": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931"
+  },
+  "scope": "15 prespecified retained processed-observation comparisons; no raw generation or parameter changes; geometry truth after both fits."
+}

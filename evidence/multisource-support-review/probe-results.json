@@ -1,0 +1,42 @@
+{
+  "candidate_sha256": "b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085",
+  "real_fixture": {
+    "status": "partial",
+    "surfaces": 6,
+    "diagnostics": [
+      "joint_refit_pruned_unsupported_candidates:1",
+      "joint_first_order_vs_second_order_parent_models"
+    ],
+    "fit_planes": 9,
+    "links": 343,
+    "rank": 27,
+    "minimum_covariance_eigenvalue": 6.159503285612451e-06,
+    "score": -1494.6861673459014,
+    "seconds": 5.052660000001197
+  },
+  "cancel_after_pruning": {
+    "status": "cancelled",
+    "assign_calls": 529,
+    "geometry_cleared": true
+  },
+  "boundary_loop": {
+    "cascade": {
+      "pruned": 9,
+      "remaining": 1,
+      "assignment_calls": 30,
+      "fit_calls": 110
+    },
+    "all_removed": {
+      "pruned": 10,
+      "remaining": 0,
+      "assignment_calls": 3,
+      "fit_calls": 20
+    },
+    "empty_assignment": {
+      "pruned": 10,
+      "remaining": 0,
+      "assignment_calls": 3,
+      "fit_calls": 0
+    }
+  }
+}

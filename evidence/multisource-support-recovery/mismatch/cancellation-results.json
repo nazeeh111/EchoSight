@@ -1,0 +1,22 @@
+[
+  {
+    "module": "original",
+    "cancelled": true,
+    "ols_fits": 20,
+    "post_request_fits": 19,
+    "status": "no_result",
+    "surfaces": 0,
+    "hypotheses": 0,
+    "seconds": 3.8016206250031246
+  },
+  {
+    "module": "candidate",
+    "cancelled": true,
+    "ols_fits": 1,
+    "post_request_fits": 0,
+    "status": "cancelled",
+    "surfaces": 0,
+    "hypotheses": 0,
+    "seconds": 3.859694250000757
+  }
+]

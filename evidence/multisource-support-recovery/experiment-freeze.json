@@ -1,0 +1,6 @@
+{
+  "original_sha256": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+  "experimental_sha256": "b1ac9e0e34f542d8f890797fd109db29ea4c3dbca7698bf30edb6abef28754ce",
+  "acceptance_sha256": "626166532905ca48a53639f6521df93aecc6f2bcf8dd77618bd20b8272fd35f7",
+  "plan": "Replay original saved processed observations, all twelve frozen relocation cases; baseline and experimental mapper only; truth after both inference calls; unchanged acceptance; no raw generation. Retain seed1129 first then all others. Count/prune-only support repair; full existing downstream guards retained."
+}

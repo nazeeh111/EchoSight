@@ -357,15 +357,13 @@ def infer_scene_bundle(processed_sessions,bundle,method='mapper',cancel=None,pro
             if winner is None:break
             qs.append(winner)
         if not qs:out['diagnostics'].append('no_joint_plane_beats_null');return out
-        # Remove unsupported candidates monotonically,
+        # Isolated experiment: remove unsupported candidates monotonically,
         # then refit/reassign the surviving complete model before any output.
         pruned=0
         while qs:
-            single._check(cancel)
             for _ in range(2):
                 score,links=_assign(qs,reference,sources,receivers,v,allrows)
                 for k,q in enumerate(qs):
-                    single._check(cancel)
                     selected=[(i,l) for kk,i,l in links if kk==k]
                     indices=np.array([i for i,l in selected]);target=np.array([allrows[i]['t'][l] for i,l in selected])
                     if not len(indices):continue

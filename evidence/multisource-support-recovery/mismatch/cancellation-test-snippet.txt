@@ -1,0 +1,29 @@
+# Additional imports in tests/test_multisource_support_recovery.py:
+from unittest.mock import patch
+from echosight import multisource
+
+# Add inside MultisourceSupportRecovery:
+    def test_cancel_after_first_refit_stops_before_next_fit(self):
+        folder = Path(__file__).with_name('fixtures')
+        data = json.loads((folder / 'higher-order-1129-observations.json').read_text())
+        real_fit = multisource.least_squares
+        state = {'cancelled': False, 'post_request_fits': 0}
+
+        def request_after_fit(*args, **kwargs):
+            ordinary_fit = kwargs.get('loss', 'linear') == 'linear'
+            if ordinary_fit and state['cancelled']:
+                state['post_request_fits'] += 1
+            result = real_fit(*args, **kwargs)
+            if ordinary_fit:
+                state['cancelled'] = True
+            return result
+
+        with patch.object(multisource, 'least_squares', side_effect=request_after_fit):
+            result = multisource.infer_scene_bundle(
+                data['processed_sessions'], data['bundle'],
+                cancel=lambda: state['cancelled'])
+        self.assertTrue(state['cancelled'])
+        self.assertEqual(state['post_request_fits'], 0)
+        self.assertEqual(result['status'], 'cancelled')
+        self.assertEqual(result['surfaces'], [])
+        self.assertEqual(result['hypotheses'], [])
