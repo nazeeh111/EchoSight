@@ -47,6 +47,24 @@ def generate_probe(config=None):
     return out, p
 
 
+
+def generate_playback(config=None, channel='mono'):
+    """Route the canonical probe to a mono stream or one explicit stereo channel.
+
+    A software channel is not proof that only one physical driver radiates.
+    """
+    if channel not in ('mono','left','right'):
+        raise ValueError('playback channel must be mono, left or right')
+    samples,metadata=generate_probe(config)
+    if channel != 'mono':
+        stereo=np.zeros((len(samples),2))
+        stereo[:,0 if channel=='left' else 1]=samples
+        samples=stereo
+    metadata['playback']=dict(channel=channel,channels=1 if channel=='mono' else 2,
+                              single_continuous_buffer=True,physical_driver_calibrated=False)
+    return samples,metadata
+
+
 def _peak_time(y, index):
     """Quadratic localization of an isolated correlation-envelope maximum."""
     if index <= 0 or index >= len(y)-1:
@@ -79,6 +97,9 @@ def process_recording(samples, sample_rate_hz, probe, capture_id, sound_speed_m_
     x,p = generate_probe(probe)
     if p['high_hz'] > .45*fs:
         return reject('receiver_band_unsupported','Delivered recording rate cannot support the full emitted probe band; regenerate a compatible probe.')
+    for field in ('sample_count','pilot_start_samples'):
+        if field in probe and probe[field] != p[field]:
+            raise ValueError(f'probe {field} does not match rendered configuration')
     if probe.get('kind',p['kind']) != p['kind']:
         raise ValueError('unsupported probe kind')
     if probe.get('waveform_sha256',p['waveform_sha256']) != p['waveform_sha256']:
@@ -136,6 +157,24 @@ def process_recording(samples, sample_rate_hz, probe, capture_id, sound_speed_m_
         return reject('clock_rate_out_of_bounds','Relative rate exceeds validated 5000 ppm range.')
     if np.max(np.abs(residual))>max(2/fs,.00010):
         return reject('nonaffine_clock_or_motion','Pilots violate affine timing; movement, clock warp, gaps or overlapping reverberant tails are possible.')
+    # Detect a weak earlier repeatable arrival without silently promoting it to direct.
+    # Guard against the emitted pulse's own sidelobes using its autocorrelation.
+    guard_s=.001
+    autocorrelation=np.abs(correlate(template,template,mode='full',method='fft'))
+    center=len(template)-1
+    sidelobe_bound=float(np.max(autocorrelation[:max(1,center-round(guard_s*fs))])/max(autocorrelation[center],1e-15))
+    earlier_threshold=max(float(envelope.max())*max(.015,5*sidelobe_bound),floor+15*max(spread,1e-12))
+    weaker_peaks,_=find_peaks(envelope,height=earlier_threshold,distance=max(1,round(fs*.0003)))
+    prior=weaker_peaks[(weaker_peaks/fs<train[0]-guard_s)&(weaker_peaks/fs>train[0]-p['max_echo_delay_s'])]
+    suspect=[]
+    for early in prior[:128]:
+        expected=early/fs+alpha*(starts-starts[0])
+        support=sum(bool(np.any(np.abs(weaker_peaks/fs-arrival)<max(3/fs,.00015))) for arrival in expected)
+        if support>=math.ceil(.7*len(starts)):
+            suspect.append(float(early/fs-train[0]))
+    if suspect:
+        result['direct_reference_alternatives_s']=suspect[:8]
+        return reject('direct_reference_ambiguous','Weaker repeatable arrivals precede the selected reference; direct sound is not reliably identified. Reposition for clear line of sight or qualify source/band.')
     # Reacquire after rate correction: local segments avoid interpolating long silence.
     margin=.004
     local_t=np.arange(-round(margin*src_fs),round((p['duration_s']+p['max_echo_delay_s']+margin)*src_fs))/src_fs
@@ -188,7 +227,7 @@ def process_recording(samples, sample_rate_hz, probe, capture_id, sound_speed_m_
             left=max(0,index-radius);right=min(len(r),index+radius+1)
             j=left+int(np.argmax(np.abs(r[left:right])))
             local_delays.append((_peak_time(np.abs(r),j)-direct_sample)/src_fs)
-        std=max(timing_floor,float(np.std(local_delays,ddof=1)),delay*slope_std/alpha)
+        std=max(timing_floor,float(np.std(local_delays,ddof=1)))
         candidates.append(dict(delay_s=float(delay),delay_std_s=float(std),amplitude=float(envelope[index]/direct_amp),
                                repeat_support=repeat_support,repeat_count=len(responses)))
     if len(candidates)>18:

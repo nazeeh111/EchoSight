@@ -44,6 +44,18 @@ class PipelineTests(unittest.TestCase):
                 save_result({"value": float("nan")}, Path(temp) / "result.json")
             self.assertFalse((Path(temp) / "result.json").exists())
 
+    def test_declared_recording_checksum_mismatch_is_rejected(self):
+        from echosight.simulation import simulate_session
+        from echosight.pipeline import process_session
+        from echosight.storage import load_session
+        with tempfile.TemporaryDirectory() as temp:
+            session = load_session(simulate_session(temp, seed=1))
+            for capture in session["captures"]: capture["sha256"] = "0" * 64
+            result = process_session(session)
+            self.assertEqual(result["status"], "no_result")
+            self.assertTrue(all(o["status"] == "rejected" for o in result["observations"]))
+            self.assertIn("checksum", str(result["observations"]))
+
 
 if __name__ == "__main__":
     unittest.main()

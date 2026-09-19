@@ -10,9 +10,11 @@ from .signals import generate_probe
 SCENARIOS=('room','partial','coplanar','null','clutter','mismatch','reflector','warp','four_views')
 
 
-def simulate_session(output_dir, scenario='room', seed=1):
+def simulate_session(output_dir, scenario='room', seed=1, capture_count=None):
     if scenario not in SCENARIOS:
         raise ValueError(f'unknown scenario {scenario}; choose {SCENARIOS}')
+    if capture_count is not None and (not isinstance(capture_count,int) or isinstance(capture_count,bool) or not 4 <= capture_count <= 24):
+        raise ValueError('capture_count must be an integer from 4 to 24')
     root=Path(output_dir)
     root.mkdir(parents=True,exist_ok=True)
     rng=np.random.default_rng(seed)
@@ -27,6 +29,14 @@ def simulate_session(output_dir, scenario='room', seed=1):
                    offset_m=float(dimensions[axis] if side else 0.)) for axis in range(3) for side in range(2)]
     if scenario=='partial': surfaces=surfaces[1:2]+surfaces[3:4]+surfaces[5:6]
     if scenario in ('null','clutter'): surfaces=[]
+    if capture_count is not None:
+        if capture_count > len(receivers):
+            # Separate stream preserves all original eight frozen waveform fixtures.
+            extra_rng=np.random.default_rng(np.random.SeedSequence([int(seed),9124]))
+            extra=extra_rng.uniform([.5,.5,.4],dimensions-[.5,.5,.4],size=(capture_count-len(receivers),3))
+            receivers=np.vstack([receivers,extra])
+        else:
+            receivers=receivers[:capture_count]
     if scenario=='coplanar': receivers[:,2]=source[2]
     if scenario=='four_views': receivers=receivers[:4]
     if scenario=='reflector':

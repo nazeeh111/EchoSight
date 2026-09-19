@@ -63,7 +63,10 @@ def run(output_dir):
         newpath=append_view(session,truth,position,output/label)
         result=process_session(newpath)
         (output/label/'result.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
-        results[label]={'position_m':position,'status':result['status'],'metrics':score_surfaces(result,truth),
+        invariant=[p for h in result.get('hypotheses',[]) if h.get('hypothesis_id')=='invariant_supported_surfaces' for p in h.get('surfaces',[])]
+        unresolved=[p for h in result.get('hypotheses',[]) if h.get('hypothesis_id')=='primary' for p in h.get('surfaces',[])]
+        results[label]={'invariant_hypothesis_metrics':score_surfaces({'surfaces':invariant},truth),
+                        'unresolved_mirror_surfaces':len(unresolved),'position_m':position,'status':result['status'],'metrics':score_surfaces(result,truth),
                         'diagnostics':result['diagnostics']}
     report={'schema_version':'1.0','split':'exploratory_development','before_status':before['status'],
             'recommendation':recommendation,'results':results,

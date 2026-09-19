@@ -101,18 +101,27 @@ def run(data_dir, output_dir, probe_period_s=None):
         start=time.perf_counter();result=process_session(session);elapsed=time.perf_counter()-start
         (case_dir/'result.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
         observations=result.get('observations',[])
+        supplied=json.loads(session.read_text())
+        direct_errors=[]
+        for obs,capture in zip(observations,supplied['captures']):
+            arrival=obs.get('direct_arrival_receiver_s')
+            expected=supplied['probe']['lead_s']+float(np.linalg.norm(np.asarray(supplied['source_position_m'])-capture['receiver_position_m']))/supplied['sound_speed_m_s']
+            direct_errors.append(None if arrival is None else arrival-expected)
         cases.append({**entry,**audit,'status':result['status'],'surface_count':len(result.get('surfaces',[])),
+                      'direct_arrival_model_residual_s':direct_errors,
+                      'direct_arrival_score_semantics':'Compatibility with supplied coordinate propagation model only; includes dataset/system impulse-response latency and possible wrong direct-path reference, not independently labeled echo error.',
                       'runtime_seconds':elapsed,'diagnostics':result.get('diagnostics',[]),
                       'recording_status':[{'capture_id':o['capture_id'],'status':o['status'],
                                            'candidate_count':len(o.get('candidates',[])),
                                            'clock':o.get('clock',{}),'diagnostics':o.get('diagnostics',[])} for o in observations],
                       'passed':not result.get('surfaces') and result['status'] in ['ambiguous','no_result']})
-    report={'schema_version':'1.0','git_commit':commit,'source_sha256':code_hashes,'evidence_class':'hybrid replay derived from measured laboratory impulse responses',
+    final_hashes={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for folder in ['echosight','evaluation'] for p in sorted((root/folder).glob('*.py'))}
+    report={'schema_version':'1.0','source_unchanged_during_run':code_hashes==final_hashes,'git_commit':commit,'source_sha256':code_hashes,'evidence_class':'hybrid replay derived from measured laboratory impulse responses',
             'not_established':['iPhone capture performance','blind room-geometry accuracy','independently measured echo recall'],
             'annotation_policy':'No echo annotations loaded. Collinear receiver poses cannot establish unique unconstrained 3D reflector geometry.',
             'sound_speed_policy':'345.844 m/s is an explicit inherited model constant with 1 m/s uncertainty, not a measured temperature conversion.',
             'probe_period_s':probe_period_s if probe_period_s is not None else .22,
-            'h5py_version':h5py.__version__,'cases':cases,'passed':all(c['passed'] for c in cases)}
+            'h5py_version':h5py.__version__,'cases':cases,'passed':all(c['passed'] for c in cases) and code_hashes==final_hashes}
     (output_dir/'results.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
     return report
 

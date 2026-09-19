@@ -5,7 +5,7 @@ import tempfile
 import unittest
 import numpy as np
 from scipy.io import wavfile
-from echosight.signals import generate_probe, process_recording
+from echosight.signals import generate_probe, process_recording, generate_playback
 from echosight.simulation import simulate_session
 
 
@@ -78,12 +78,54 @@ class SignalTests(unittest.TestCase):
         self.assertEqual(result['status'], 'rejected')
         self.assertTrue(any(d['code'] == 'nonaffine_clock_or_motion' for d in result['diagnostics']), result)
 
+    def test_weak_earlier_direct_does_not_silently_reference_echo(self):
+        x,probe=generate_probe();fs=probe['sample_rate_hz'];t=np.arange(len(x))/fs
+        u=np.arange(len(x)+round(.25*fs))/fs
+        # Earlier path is 4% of the strongest: detectable but below initial10% acquisition gate.
+        y=.02*np.interp(u-.06,t,x,left=0,right=0)+.5*np.interp(u-.08,t,x,left=0,right=0)
+        result=process_recording(y,fs,probe,'r1')
+        self.assertEqual(result['status'],'rejected')
+        self.assertIn('direct_reference_ambiguous',[d['code'] for d in result['diagnostics']])
+
     def test_empty_clipping_and_noise_rejected(self):
         _, probe = generate_probe()
         for y in [np.zeros(100), np.ones(100000), np.random.default_rng(4).normal(0,.02,90000)]:
             self.assertEqual(process_recording(y,48000,probe,'r1')['status'],'rejected')
         with self.assertRaises(ValueError):
             process_recording(np.array([np.nan]),48000,probe,'r1')
+
+    def test_left_right_playback_and_long_period_timing(self):
+        for channel,index in [('left',0),('right',1)]:
+            samples,probe=generate_playback({'period_s':1.0},channel=channel)
+            self.assertEqual(samples.shape[1],2)
+            self.assertEqual(np.count_nonzero(samples[:,1-index]),0)
+            self.assertGreater(np.count_nonzero(samples[:,index]),100)
+            y=np.pad(.5*samples[:,index],(2400,4800))
+            result=process_recording(y,48000,probe,'r1')
+            self.assertEqual(result['status'],'ok',result)
+            self.assertEqual(len(result['candidates']),0)
+            self.assertAlmostEqual(result['clock']['alpha'],1,places=6)
+            self.assertEqual(probe['playback']['channel'],channel)
+        with self.assertRaises(ValueError):
+            generate_playback(channel='all_devices')
+
+    def test_contradictory_probe_indices_rejected(self):
+        y,fs,probe=waveform()
+        probe['pilot_start_samples'][3]+=10
+        with self.assertRaises(ValueError):
+            process_recording(y,fs,probe,'r1')
+
+    def test_more_receiver_stops_preserve_original_recordings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            a=Path(directory)/'a';b=Path(directory)/'b'
+            first=json.loads(simulate_session(a,'room',3).read_text())
+            extended=json.loads(simulate_session(b,'room',3,capture_count=12).read_text())
+            self.assertEqual(len(extended['captures']),12)
+            self.assertEqual(first['captures'],extended['captures'][:8])
+            for cap in first['captures']:
+                self.assertEqual((a/cap['recording_path']).read_bytes(),(b/cap['recording_path']).read_bytes())
+            with self.assertRaises(ValueError):
+                simulate_session(b,'room',3,capture_count=1000)
 
     def test_cancelled_processing(self):
         y, fs, probe = waveform()

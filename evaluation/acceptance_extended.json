@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "frozen_before_execution": "2026-09-18; after development seeds1-5 only, before extended held-out runs",
+  "development_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "held_out_cases": [
+    {
+      "scenario": "room",
+      "seed": 211,
+      "capture_count": 12,
+      "required": true
+    },
+    {
+      "scenario": "room",
+      "seed": 223,
+      "capture_count": 12,
+      "required": true
+    },
+    {
+      "scenario": "room",
+      "seed": 227,
+      "capture_count": 12,
+      "required": true
+    },
+    {
+      "scenario": "clutter",
+      "seed": 229,
+      "capture_count": 12,
+      "required": true
+    },
+    {
+      "scenario": "reflector",
+      "seed": 233,
+      "capture_count": 12,
+      "required": false
+    }
+  ],
+  "matching": {
+    "maximum_normal_error_deg": 5.0,
+    "maximum_offset_error_m": 0.15,
+    "one_to_one": true
+  },
+  "requirements": {
+    "room": {
+      "minimum_matched_surfaces": 6,
+      "minimum_horizontal_surfaces": 2,
+      "maximum_false_surfaces": 0,
+      "maximum_runtime_seconds": 60
+    },
+    "partial": {
+      "minimum_matched_surfaces": 2,
+      "maximum_false_surfaces": 0,
+      "forbid_closed_room_claim": true
+    },
+    "coplanar": {
+      "allowed_status": [
+        "ambiguous",
+        "no_result"
+      ],
+      "maximum_definitive_surfaces": 0
+    },
+    "null": {
+      "allowed_status": [
+        "no_result"
+      ],
+      "maximum_false_surfaces": 0
+    },
+    "clutter": {
+      "allowed_status": [
+        "no_result",
+        "ambiguous"
+      ],
+      "maximum_false_surfaces": 0
+    },
+    "mismatch": {
+      "minimum_matched_surfaces": 3,
+      "minimum_horizontal_surfaces": 1,
+      "maximum_false_surfaces": 0
+    },
+    "warp": {
+      "allowed_status": [
+        "no_result",
+        "partial",
+        "ambiguous"
+      ],
+      "maximum_definitive_surfaces": 0,
+      "require_diagnostics": true
+    },
+    "reflector": {
+      "minimum_matched_surfaces": 7,
+      "maximum_false_surfaces": 0,
+      "minimum_horizontal_surfaces": 2
+    }
+  },
+  "comparison": {
+    "report_all_cases_and_methods": true,
+    "require_mapper_recall_above_baseline_on_room_aggregate": true,
+    "serious_competitor": "direct_plane_grid_initializer_with_shared_physical_scorer"
+  },
+  "external": {
+    "data": "dEchorate SOFA five files, five channels each",
+    "expectation": "finite diagnostics, preserved provenance, abstain from unique 3D surfaces on collinear array",
+    "not_a_geometry_accuracy_benchmark": true
+  },
+  "interpretation": "Additional acquisition arrangement comparison, separately frozen after 12-view development tests. Does not replace original 8-view acceptance or hide its misses. Three four-phone placements; no physical validation."
+}

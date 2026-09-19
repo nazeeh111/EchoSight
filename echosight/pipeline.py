@@ -81,6 +81,8 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
             path = Path(capture["recording_path"])
             samples, rate = read_recording(path)
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if capture.get("sha256") is not None and digest != capture["sha256"]:
+                raise ValueError("recording checksum differs from its imported manifest")
             observation = process_recording(samples, rate, session["probe"], capture_id,
                                             sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
                                             cancel=cancel)

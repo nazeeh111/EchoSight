@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import signal
 import sys
@@ -24,10 +25,13 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     command = sub.add_parser("probe", help="write a probe WAV and its exact metadata")
     command.add_argument("directory", type=Path)
+    command.add_argument("--channel", choices=("mono", "left", "right"), default="left")
+    command.add_argument("--period", type=float, default=1.0, help="seconds between chirps; 1 s for reverberant rooms")
     command = sub.add_parser("simulate", help="generate synthetic raw recordings, separate evaluation truth")
     command.add_argument("directory", type=Path)
     command.add_argument("--scenario", default="room")
     command.add_argument("--seed", type=int, default=1)
+    command.add_argument("--captures", type=int, default=8)
     command = sub.add_parser("process", help="infer structure from a recording session")
     command.add_argument("session", type=Path)
     command.add_argument("--output", type=Path, required=True)
@@ -36,6 +40,12 @@ def main(argv=None):
     command.add_argument("directory", type=Path)
     command.add_argument("--scenario", default="room")
     command.add_argument("--seed", type=int, default=1)
+    command.add_argument("--captures", type=int, default=8)
+    command = sub.add_parser("refine-demo", help="show what additional independent recording positions establish")
+    command.add_argument("directory", type=Path)
+    command.add_argument("--seed", type=int, default=1)
+    command.add_argument("--initial-captures", type=int, default=4)
+    command.add_argument("--captures", type=int, default=12)
     command = sub.add_parser("inspect", help="summarize a saved result")
     command.add_argument("result", type=Path)
     command = sub.add_parser("compare", help="explain changes in inference from two saved results")
@@ -51,20 +61,21 @@ def main(argv=None):
         if args.command == "probe":
             import numpy as np
             from scipy.io.wavfile import write
-            from .signals import generate_probe
+            from .signals import generate_playback
             args.directory.mkdir(parents=True, exist_ok=True)
-            samples, metadata = generate_probe()
+            samples, metadata = generate_playback({"period_s": args.period}, channel=args.channel)
             rate = metadata["sample_rate_hz"]
             write(args.directory / "probe.wav", rate, np.round(np.clip(samples, -1, 1) * 32767).astype(np.int16))
+            metadata["playback_wav_sha256"] = hashlib.sha256((args.directory / "probe.wav").read_bytes()).hexdigest()
             save_result(metadata, args.directory / "probe.json")
             print(args.directory / "probe.wav")
         elif args.command == "simulate":
             from .simulation import simulate_session
-            print(simulate_session(args.directory, scenario=args.scenario, seed=args.seed))
+            print(simulate_session(args.directory, scenario=args.scenario, seed=args.seed, capture_count=args.captures))
         elif args.command in ("process", "demo"):
             if args.command == "demo":
                 from .simulation import simulate_session
-                session = simulate_session(args.directory, scenario=args.scenario, seed=args.seed)
+                session = simulate_session(args.directory, scenario=args.scenario, seed=args.seed, capture_count=args.captures)
                 destination = args.directory / "result.json"
             else:
                 session, destination = args.session, args.output
@@ -87,6 +98,20 @@ def main(argv=None):
             result = compare_results(json.loads(args.previous.read_text()), json.loads(args.current.read_text()))
             save_result(result, args.output)
             print(json.dumps(result, indent=2, allow_nan=False))
+        elif args.command == "refine-demo":
+            from .simulation import simulate_session
+            from .storage import load_session
+            from .evolution import compare_results
+            if not 3 <= args.initial_captures < args.captures:
+                raise ValueError("initial capture count must be at least 3 and below final count")
+            session = load_session(simulate_session(args.directory, seed=args.seed, capture_count=args.captures))
+            initial = dict(session, captures=session["captures"][:args.initial_captures])
+            before, after = process_session(initial), process_session(session)
+            comparison = compare_results(before, after)
+            save_result(before, args.directory / "initial-result.json")
+            save_result(after, args.directory / "result.json")
+            save_result(comparison, args.directory / "comparison.json")
+            print(json.dumps({"initial": _summary(before), "refined": _summary(after), "comparison": comparison}, indent=2, allow_nan=False))
         elif args.command == "serve":
             from .api import create_server
             server = create_server(args.root, host=args.host, port=args.port, processor=process_session)

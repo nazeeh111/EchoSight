@@ -16,13 +16,14 @@ import scipy
 from .metrics import score_surfaces, acceptance_failures
 
 
-def run(output_dir, development=False):
+def run(output_dir, development=False, extended=False):
     from echosight.simulation import simulate_session
     from echosight.pipeline import process_session
     from echosight.storage import load_session
     from echosight.inference import infer_baseline, infer_first_echo
     root=Path(__file__).resolve().parents[1]
-    acceptance_path=Path(__file__).with_name('acceptance.json')
+    initial_hashes={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for folder in ['echosight','evaluation'] for p in sorted((root/folder).glob('*.py'))}
+    acceptance_path=Path(__file__).with_name('acceptance_extended.json' if extended else 'acceptance.json')
     acceptance=json.loads(acceptance_path.read_text())
     output=Path(output_dir); output.mkdir(parents=True,exist_ok=True)
     cases=acceptance['held_out_cases']
@@ -31,7 +32,7 @@ def run(output_dir, development=False):
     rows=[]
     for case in cases:
         case_dir=output/f"{case['scenario']}-{case['seed']}"
-        path=simulate_session(case_dir, scenario=case['scenario'], seed=case['seed'])
+        path=simulate_session(case_dir, scenario=case['scenario'], seed=case['seed'],capture_count=case.get('capture_count',8))
         start=time.perf_counter()
         result=process_session(path)
         elapsed=time.perf_counter()-start
@@ -76,9 +77,11 @@ def run(output_dir, development=False):
         failures.append({'comparison':'mapper room recall must exceed simple first-echo baseline'})
     commit=subprocess.run(['git','rev-parse','HEAD'],cwd=root,capture_output=True,text=True).stdout.strip() or 'uncommitted'
     hashes={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for folder in ['echosight','evaluation'] for p in sorted((root/folder).glob('*.py'))}
-    report={'schema_version':'1.0','split':'development' if development else 'frozen_held_out',
+    if hashes!=initial_hashes:
+        failures.append({'verification':'source changed during evaluation; rerun against a stable tree'})
+    report={'schema_version':'1.0','split':'development' if development else ('frozen_extended_held_out' if extended else 'frozen_held_out'),
             'acceptance_sha256':hashlib.sha256(acceptance_path.read_bytes()).hexdigest(),
-            'git_commit':commit,'source_sha256':hashes,
+            'git_commit':commit,'source_sha256':initial_hashes,'source_unchanged_during_run':hashes==initial_hashes,
             'versions':{'python':platform.python_version(),'numpy':np.__version__,'scipy':scipy.__version__},
             'claims':'Synthetic software evaluation. Not physical-device validation. Alternative inference timings exclude shared waveform extraction; mapper timing includes it.',
             'aggregate':aggregate,'cases':rows,'required_failures':failures,'passed':not failures}
@@ -90,8 +93,9 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',required=True)
     parser.add_argument('--development',action='store_true')
+    parser.add_argument('--extended',action='store_true',help='Separate frozen 12-view evaluation; never replaces original eight-view cases')
     args=parser.parse_args()
-    result=run(args.output,args.development)
+    result=run(args.output,args.development,args.extended)
     print(json.dumps({'passed':result['passed'],'aggregate':result['aggregate'],'required_failures':result['required_failures']},indent=2))
     raise SystemExit(0 if result['passed'] else 1)
 

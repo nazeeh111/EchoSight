@@ -7,6 +7,20 @@ from pathlib import Path
 
 
 class CLITests(unittest.TestCase):
+    def test_probe_has_explicit_channel_and_file_hash(self):
+        import hashlib
+        import numpy as np
+        from scipy.io.wavfile import read
+        from echosight.cli import main
+        with tempfile.TemporaryDirectory() as temp, contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(main(["probe",temp,"--channel","left","--period","1.0"]),0)
+            p=Path(temp);rate,samples=read(p/"probe.wav")
+            self.assertEqual(samples.shape[1],2)
+            self.assertFalse(np.any(samples[:,1]))
+            metadata=json.loads((p/"probe.json").read_text())
+            self.assertEqual(metadata["period_s"],1.)
+            self.assertEqual(metadata["playback_wav_sha256"],hashlib.sha256((p/"probe.wav").read_bytes()).hexdigest())
+
     def test_inspect_prints_result_evidence_summary(self):
         from echosight.cli import main
         with tempfile.TemporaryDirectory() as temp:

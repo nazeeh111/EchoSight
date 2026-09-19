@@ -52,3 +52,41 @@ Reproduce the diagnostic without replacing the default run:
 ```sh
 python -m evaluation.external --data work/external-data --output work/external-spacing --probe-period 1
 ```
+
+A further direct-reference diagnostic compares detected direct arrival with supplied source/receiver distance divided by the declared sound speed plus probe lead. On the 1-second replay the source-1 differences were 0.29–0.43 ms, source-5 in `000000` 0.41–0.85 ms, and source-5 in `011111` 2.61–5.58 ms. Stable pilots therefore do not certify a correct direct-path reference. Dataset/system latency and source-dependent obscured or weak direct sound remain possible; these are model-compatibility residuals, not errors against independently timed echo labels. The collinear geometry gate prevents a false unique map here. On future nondegenerate measured captures, direct reference qualification remains essential. The external runner now includes these residuals explicitly after processing, without using them to pick peaks.
+
+The subsequent direct-reference gate detects substantial repeatable energy before the selected reference and abstains instead of relabeling it as a valid direct arrival. Final instrumented external runs accept 20/25 waveforms at either spacing and reject all five `011111/source5` responses with direct-reference diagnostics. Four files remain geometrically ambiguous; that source-5 file returns no result. This is a more honest failure boundary, not improved measured reconstruction. `evidence/external-final-default.json` and `evidence/external-final-spacing.json` record exact source hashes and confirm that code stayed unchanged during each run. The earlier 23/25 and 25/25 exploratory records remain available as the evidence that exposed the issue.
+
+## Additional acquisition and guidance
+
+Twelve surveyed views (approximately four phones at three stationary placements) are a concrete improvement over the initial eight-view arrangement. Before any new extended held-out evaluation, `evaluation/acceptance_extended.json` separately freezes three new room seeds requiring all six room planes, both horizontal surfaces and zero false surfaces, plus a clutter control. It does not replace or edit the original eight-view benchmark. A tilted reflector case is retained as a reported opportunity with a seven-surface target. Development cases showed six room surfaces consistently, while the tilted reflector remained dependent on visibility and association support.
+
+```sh
+python -m evaluation.run --extended --output work/held-out-extended
+python -m evaluation.guidance --output work/guidance
+```
+
+The guidance experiment ranks proposed receiver positions using competing hypotheses before reading truth. It then independently renders an additional recording at the selected position and a same-height control, and sends both through the ordinary pipeline. A global ambiguous scene keeps `surfaces` empty; invariant supported planes are reported separately as hypotheses. The evaluation reports that evidence separately, so a partially resolved ambiguity is not relabeled as a wholly resolved room. Predicted separation is conditional on audible echoes and supplied calibration, not a promise that an operator can place a phone there or hear a given reflection.
+
+## Frozen results
+
+The frozen runs completed at repository checkpoint `965c0cfc09bdf02576af0d0a19f58c436ffe4e70` with exact working-source hashes in their reports and `source_unchanged_during_run: true`. Both original and extended mandatory criteria passed without changing thresholds or held-out seeds. A later integrity-only pipeline change can require a recorded reproduction; the source hashes specify exactly what these results verify.
+
+| Case | Views | Main matched / present | False main surfaces | Serious plane-grid competitor |
+|---|---:|---:|---:|---:|
+| Rooms 101, 107, 113 | 8 each | 5/6 each | 0 | 5/6 each |
+| Partial 127 | 8 | 3/3 | 0 | 3/3 |
+| Mismatch 149 | 8 | 4/6 | 0 | 4/6 |
+| Tilted-reflector scene 151 | 8 | 5/7 | 0 | 5/7 |
+| Rooms 211, 223, 227 | 12 each | 6/6 each, including floor and ceiling | 0 | 6/6 each |
+| Tilted-reflector scene 233 | 12 | 7/7, including the tilted plane | 0 | 6/7 |
+| Direct-only 137, clutter 139/229 | 8 / 12 | No surfaces, as required | 0 | No surfaces |
+| Coplanar 131 / warped clock 157 | 8 | Ambiguous / no result, no definitive surfaces | 0 | Same abstention |
+
+The simple earliest-echo baseline matched no true surfaces and generated one false plane on the extended tilted case. The serious competitor tied the main method on most cases and missed one tilted plane the main method recovered; this small comparison supports that specific gain, not general dominance. Its timing excludes shared extraction, so totals are not direct end-to-end speed comparisons.
+
+Across matched main surfaces, the maximum offset errors were 17.3 mm in the eight-view suite and 14.4 mm in the twelve-view suite; maximum normal errors were 0.61 and 1.50 degrees. Every reported 95% local offset interval covered its matched plane (27/27 and 25/25). Those conditional intervals and small synthetic counts do not establish 95% coverage on physical rooms. All main recording-to-result runs took less than 0.8 seconds on the local test machine. Geometry does not imply full room enclosure or known physical edges even when six model planes match.
+
+Frozen reports: `evidence/frozen-held-out.json` and `evidence/frozen-extended-held-out.json`. The original eight-view misses remain visible. The twelve-view scenario uses additional information rather than pretending those misses disappeared in the original acquisition. Development tilted cases 2–4 still missed the tilted plane, so its detectability is explicitly conditional.
+
+The final exploratory guidance recording comparison (`evidence/guidance.json`) selected a receiver 0.8 m above the original plane. The added recording yielded five supported invariant plane hypotheses and one unresolved mirror pair; a same-height added recording yielded no invariant plane hypotheses and four unresolved mirror pairs. Both outputs retained the global `ambiguous` status and empty definitive `surfaces`. This demonstrates partial information gain rather than claiming a single extra recording always resolves a room.
