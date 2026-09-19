@@ -1,0 +1,192 @@
+{
+  "commit": "5f778a887817761b9db0626256698c5f678b497f",
+  "source_hashes": {
+    "echosight/controlled.py": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646",
+    "echosight/pipeline.py": "cd78d4b9de5faa96d194f19cdcb9b2398af7760e5a90fe59e388043470572520",
+    "echosight/inference.py": "fe031cc0e6795906d8b6b411704dd81e8096370ce3d84c9e663898c747ad4b66",
+    "echosight/multisource.py": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+    "schemas/result.schema.json": "fb826b0a18bf502b097d4e7fd78af23d069c1cc94c5300585858ba2a9a224934",
+    "schemas/controlled-result.schema.json": "af808c60fde6347b21d36df7f6e4caeb2e0f9229399ead5855b7f532f500ba48"
+  },
+  "scope": "Four raw development epochs, exact cached epoch boundary injections, no held-out evaluation or scientific threshold changes",
+  "cases": [
+    {
+      "boundary": "spatial",
+      "cli": false,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "boundary": "spatial",
+      "cli": true,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "boundary": "first_receiver",
+      "cli": false,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "boundary": "first_receiver",
+      "cli": true,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "boundary": "last_receiver_no_change",
+      "cli": false,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "boundary": "last_receiver_no_change",
+      "cli": true,
+      "status": "cancelled",
+      "conditional_changes": 0,
+      "receiver_evidence": 0,
+      "retained_epochs": 4,
+      "input_unchanged": true
+    },
+    {
+      "schema": "controlled-result",
+      "cancelled_claims_rejected": true
+    },
+    {
+      "schema": "result",
+      "cancelled_claims_rejected": true
+    },
+    {
+      "boundary": "outer_terminal_callback",
+      "method": "mapper",
+      "cli": false,
+      "status": "cancelled",
+      "surfaces": 0,
+      "observations": 12,
+      "recording_hashes_preserved": true
+    },
+    {
+      "boundary": "outer_terminal_callback",
+      "method": "mapper",
+      "cli": true,
+      "status": "cancelled",
+      "surfaces": 0,
+      "observations": 12,
+      "recording_hashes_preserved": true
+    },
+    {
+      "boundary": "outer_terminal_callback",
+      "method": "baseline",
+      "cli": false,
+      "status": "cancelled",
+      "surfaces": 0,
+      "observations": 12,
+      "recording_hashes_preserved": true
+    },
+    {
+      "boundary": "outer_terminal_callback",
+      "method": "baseline",
+      "cli": true,
+      "status": "cancelled",
+      "surfaces": 0,
+      "observations": 12,
+      "recording_hashes_preserved": true
+    }
+  ],
+  "raw_epoch_statuses": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+  ],
+  "raw_epoch_surfaces": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "recording_hashes": [
+    [
+      "f51bde32fd3b7822c9d7a96d23ffd425f1485ca7cda3ab4b479787a31e70e476",
+      "a33cdcf76e012b293e8f290afe016f007b58aed688e6ae028c199f0600a8cdfe",
+      "70569b8e5f5b323c09486d619188355501d1714c4557cb804f35544df079908e",
+      "0b9a015794e3f1320dce7abb72ef1262d8c65e81dbdd6aa312651f0ca5686b8c",
+      "fda12c0c3d56f448e6c9c490d452f8a3f1044b40a6ba51e56c73a88656997298",
+      "90ea2960431c6a8e6fb95bc9cc046f8ab466247f7be3cd7815598cdd6b817dff",
+      "4df831605675b08030a359d3b7441749dc9a116817c4bcf4b37ad7c77674d4ed",
+      "5c175d6f5390c2740234ec582d6872068362a7b2651cbdaa6e33beb1ff55bbf2",
+      "872d35066004bebb8bc7b4c31e321069eb56ade369daa72db6bbda9c43c09d22",
+      "506f8a7d3245bc0f75d065b63f5b83250de0d1830b3690a7b4ff41c5c7ddcbfb",
+      "4493932ba8ffbbfabd455c1362b2ecca11b0f2d7461ad2f76a379219dbd42511",
+      "c7acf4879ef46443156a9d0c416ea5cd381f4f983b92c84e5f883d18167c11ce"
+    ],
+    [
+      "7a009ab412eed0d08fa0464212c795b4a0863d38809eea797afeb768e7d322f1",
+      "5afaf75cdcf2aa07d758babcf91f0e9ba38dbc22d8498a22b20f634cfc8ee60d",
+      "709eb91602b402943d44eb3603445f4f94608c7321db524bacde0af58f0f6be5",
+      "cdadc003f6d5fd59c11da5ae2311983b3633d1726bada8f1eb3925014af13395",
+      "64704f60ad33ac7ec7e6ed8f898c9398615d1fbd1025f61e71252108fe49a077",
+      "68fa6a490056a5ff39b7afca54bb01f5612f89fb68549bc251a8a192f45ce4aa",
+      "36377053d69ba6f6750cdde90b5077c2f7c0c7f7c14332433718c810cb7fb86a",
+      "577845539b90f3c9f97c822df4f8117dbd6e17215103fdbd523afde9f080b571",
+      "f5cd000a623c22b09f0b403f105f81027b1514519f680f2d0ce4e13cc46109a9",
+      "263fac12be73607701f7d29d2cda2b6915a791108654745aff33515eacb1bc47",
+      "5a1f07fef9c98ed288234288b2bfb8a6161b191f637912a96ccf87201d6a6b28",
+      "2ad73a9b251cece47094b1a071eddfc3b2f54c88ad7b2f9b5c4eba2a24166527"
+    ],
+    [
+      "16aefff8651d8c1742b47781e95d0c038c581c13cc3e85c75399956db0bf03f1",
+      "6f1c5e31e06e348cc553c51c02d516c2791fcab906f34140a6c9f8e3c2cc9234",
+      "0f481d367ab61199e0f181fc6be6eaf3e016c10f2023c7d76bb9f47486261fa1",
+      "1527c120f8a4b1eb714e0572736953804653e9601150d66d4f79fe8f1a446971",
+      "48cb20cd9d8004051a54387980d6de9c907428849deecf25b9088c0c77d48317",
+      "7f38739f4532aa4f77f57edca97320ecf5308404665d1f5ae0c210da229d9b25",
+      "853d0694740259a84b937295efa43706af3053495391c8fd86c912719c3034a0",
+      "ae3693a05469cfbaefee6e9d8d7af0ded45cf946266af2c4cf44a7c7f3116fc8",
+      "c62b51bc2131e9954a6c087bfb3d367ac26542c7e60164bdd5a5bcbc55921d6d",
+      "04c095be23fa682aa47ebc58e05b9223f8b0864335b189bc423d2b40cb4a95f3",
+      "9f88bc2baafbbd84de79db6fece25e7d128e3262309b0d6b5d82d537c684a2a9",
+      "23a96fc9d9e88d3d67bfb3b7723665e5f240a1f36238a780d80b9bbec156c9f3"
+    ],
+    [
+      "c3f85a9813893dad09438ed5d3365581781674a1fb5da1a4611484f69a9bf23f",
+      "8f5d26c59d27e75253dc048d02f695ec2582154b14cf0229f5b0534a7956fba4",
+      "186d8a1848864b1b47abf65424ac4a606573c8272f7e1eebbf7fced3cbc25b46",
+      "2f33e08fdb7c0cfb79e2547fffe2def3aa6b0ac7f9b3f3275557b183fc8398be",
+      "c0545d9edfff62c9710a8596d1373cfe36c0e2c394686f06179f2c219d995cc2",
+      "d2db831091b99206c2889f9e98580e38dab727d96f256ab844a9137a92410572",
+      "7922575d0d5c972c76562f7aaf09249146d590b513393634c4b363d974fa12b7",
+      "e2e44f9798e1ee5271e4f27847ebbc826d0ff8fee86b8cb94c9088aa297ca132",
+      "a25bb6f92dc33dc7d131dd9fb4590212d785ed18fb999e70ea07fa75c74a0ee0",
+      "840d50c5f9735574cf798af499638601eb8b1f4f5fc8991ea0f24685198a90f2",
+      "4a8b67ac33f85176ff04b0004798530a7d7d9f201216f93a933f01aa00c436a6",
+      "4e82b8f1a187130ffa7a04f4bf2ae2661cff01bc539720085a7068cceb7ba4f7"
+    ]
+  ],
+  "helper": {
+    "input_preserved": true,
+    "idempotent": true,
+    "single_finally_runtime_s": 3.0,
+    "joint_finally_runtime_s": 5.0
+  },
+  "findings_closed": [
+    "controlled_cancelled_claims",
+    "outer_pipeline_terminal_callback"
+  ]
+}

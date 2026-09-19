@@ -1,0 +1,21 @@
+{
+  "commit": "5f778a887817761b9db0626256698c5f678b497f",
+  "parent": "f5bf0fa412db9479779a7e944e14ea8c4ea983b7",
+  "source_sha256": {
+    "echosight/controlled.py": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646",
+    "echosight/pipeline.py": "cd78d4b9de5faa96d194f19cdcb9b2398af7760e5a90fe59e388043470572520",
+    "echosight/inference.py": "fe031cc0e6795906d8b6b411704dd81e8096370ce3d84c9e663898c747ad4b66",
+    "echosight/multisource.py": "55e060183836b11b9976fe0f2187c3b97101687ff34d35d65c6319489e66f6aa",
+    "echosight/storage.py": "df884e5a1c8746934ef752dd6e4d90dcdf0654becf5dad6581c4b58911fcae63",
+    "echosight/api.py": "734c309b59ad19a3cf9c44a33d9365f1b6062408c8945a816e9cfc6f33cae1e3",
+    "echosight/cli.py": "94efd77383ec0ee43c770e078cf25bffdc7339ace7c8b353d5e26e719b49c4cb",
+    "schemas/result.schema.json": "fb826b0a18bf502b097d4e7fd78af23d069c1cc94c5300585858ba2a9a224934",
+    "schemas/controlled-result.schema.json": "af808c60fde6347b21d36df7f6e4caeb2e0f9229399ead5855b7f532f500ba48"
+  },
+  "unchanged_reviewed_publication_files": [
+    "echosight/storage.py",
+    "echosight/api.py",
+    "echosight/cli.py"
+  ],
+  "publication_checks_reused": "Parent f5bf0fa independent controlled-store failure/publication, cancellation/recovery and actual HTTP cancellation checks all passed; identical runtime byte comparison supports no redundant rerun."
+}
