@@ -1,0 +1,13 @@
+{
+  "commit": "37d355f786e1fa337a0f50f1fda4d6eb3c5eb0f9",
+  "sha256": {
+    "echosight/receiver_covariance.py": "31bb616f55b6951874a1a72d28655c1c6ab4ae15706d3d9f786a1006fa9ef97b",
+    "echosight/multisource.py": "581799b2971877719b0c07530cdc8111b1ca9f07073d363871d66ae05d8e43cd",
+    "echosight/path_alternatives.py": "7391ac4713905166e5d1ac5601d77b1e3de41eb851fc8adcae2ec3530b278b50",
+    "echosight/inference.py": "cff221ac12c693420ee5140ca6e90433ab51855320abc19cbd4af8dc10fd3452",
+    "echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "docs/RECEIVER_COVARIANCE.md": "ee632fc29bc323e1df9990c2966b3d6ad9ea8748e3a33bc9e8b7a6c2f3d524ee",
+    "tests/test_receiver_covariance.py": "ef70e288e65ae60586a713b5623463ca56b2161a8595bd918db059cb48d6f093",
+    "tests/test_multisource.py": "6458a66495d004d3a824c2a29a5ea6fbebb3250eefc5dca659b5e56fd6e6962e"
+  }
+}

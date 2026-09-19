@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "original_and_portable_all_contrasts_exact": true,
+  "all_catalog_bytes_exact": true,
+  "all_opportunity_bytes_exact": true,
+  "new_data": 0,
+  "inverse_fits": 0,
+  "helper_sha256": "21c8349084919bbd0d1f3708ee00cfdd3dbd39987218788b6ef83e29075983de",
+  "catalogs_sha256": "6b4fd6a003ca79ad5f37abe2e080ff6a46af94ae47da8b6c0e12381b4cb03ada"
+}

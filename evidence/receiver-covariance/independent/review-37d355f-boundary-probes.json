@@ -1,0 +1,8 @@
+{
+  "parent_paths_checked": 9,
+  "parent_receiver_gradient_max_error": 2.0544536124406099e-13,
+  "parent_marginals_match_independent_block_projection": true,
+  "raw_invalid_and_oversized_declarations_fail_before_read": 3,
+  "rejected_observation_coverage_enforced": true,
+  "validation_cancelled_on_callback": 3
+}

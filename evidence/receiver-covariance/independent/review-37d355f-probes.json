@@ -1,0 +1,11 @@
+{
+  "commit": "37d355f786e1fa337a0f50f1fda4d6eb3c5eb0f9",
+  "tilted_two_plane_rank": 6,
+  "plane_covariance_relative_error": 3.546345933687472e-11,
+  "plane_cross_block_norm": 0.0003491642322624086,
+  "group_order_invariant": true,
+  "point_receiver_derivative_max_abs_error": 1.7811316657678766e-13,
+  "point_nonlinear_refits": 350,
+  "point_refit_covariance_relative_error": 0.0593777021418566,
+  "common_translation_contrast_variance": 0.0
+}

@@ -1,0 +1,13 @@
+test_actual_point_and_fixed_plane_use_full_array_and_keep_source_terms (tests.test_receiver_covariance.ReceiverCovarianceTests.test_actual_point_and_fixed_plane_use_full_array_and_keep_source_terms) ... ok
+test_declared_and_observed_positions_must_agree_even_for_rejected_capture (tests.test_receiver_covariance.ReceiverCovarianceTests.test_declared_and_observed_positions_must_agree_even_for_rejected_capture) ... ok
+test_full_diagonal_equivalent_legacy_and_explicit_scalar_replacement (tests.test_receiver_covariance.ReceiverCovarianceTests.test_full_diagonal_equivalent_legacy_and_explicit_scalar_replacement) ... ok
+test_nonlinear_plane_refits_preserve_rigid_array_uncertainty (tests.test_receiver_covariance.ReceiverCovarianceTests.test_nonlinear_plane_refits_preserve_rigid_array_uncertainty) ... ok
+test_plane_covariance_matches_independent_full_nuisance_projection (tests.test_receiver_covariance.ReceiverCovarianceTests.test_plane_covariance_matches_independent_full_nuisance_projection) ... ok
+test_raw_entry_keeps_matrix_and_recording_bytes_and_validates_before_read (tests.test_receiver_covariance.ReceiverCovarianceTests.test_raw_entry_keeps_matrix_and_recording_bytes_and_validates_before_read) ... ok
+test_rigid_array_projection_matches_finite_difference_and_monte_carlo (tests.test_receiver_covariance.ReceiverCovarianceTests.test_rigid_array_projection_matches_finite_difference_and_monte_carlo) ... ok
+test_validation_before_proposals_and_no_mutation (tests.test_receiver_covariance.ReceiverCovarianceTests.test_validation_before_proposals_and_no_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 7.634s
+
+OK

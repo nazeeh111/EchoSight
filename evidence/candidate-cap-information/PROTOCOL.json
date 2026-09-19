@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "declared_before_contrast_calculation": true,
+  "date": "2026-09-19",
+  "question": "Does the pre-cap catalog's additional first-order timing compatibility exceed the same increase under the already frozen wrong-receiver control?",
+  "fitting": "none; no proposals, inverse solver, new data, pose changes, threshold changes or candidate reassignment",
+  "input": "Original40 survey-only dEchorate recordings and frozen de8442b signals.py. Re-expose the same pre-budget candidates by instrumentation immediately before strongest18 selection. Require exact equality of all retained candidate dictionaries to the prior primary results and equality of all40 pre-budget counts to the prior path diagnostic. Preserve existing retained candidate IDs; pre-budget candidates without an original ID retain their original detector-order index, not an invented inferred path ID.",
+  "predictions": "Exactly240 source/capture/room-surface opportunities, four sources times ten receiver recordings times six supplied rectangularroom planes,346.98m/s. First-order geometry-generated predictions only, with same-side/finite-bounce validity. No independent measured echo labels and no echo-refined arm.",
+  "control": "Existing frozen cyclic receiver permutation: receiver for recording j becomes receivers[np.roll(np.arange(10),3)[j]] consistently across allfour sources. Source positions and every catalog waveform/timing/amplitude/count/ID stay unchanged. Confirm matches stored shuffled_geometry processed receiver positions.",
+  "matching": "For each predicted excessdelay, any candidate within absolute pathlengthresidual0.075m counts as compatible. Same threshold and same catalogs in both geometry arms. Multiple opportunities can match the samecandidate; this is a compatibility diagnostic, not exclusive inference or recall.",
+  "contrasts": [
+    "Nominal pre-minus-capped compatibility count",
+    "Permuted pre-minus-capped compatibility count",
+    "Difference of those increases, nominalminuspermuted",
+    "Nominalminuspermuted excess separately for capped andprecap catalogs",
+    "Paired counts of nominal-only,control-only,both,neither newlycompatible opportunities"
+  ],
+  "strata": ["all240", "eachsource60", "eachsurface40", "eachsource-surface10", "eachsource-capture6", "all240individualopportunities"],
+  "interpretation": "No pvalue, confidence interval, permutation probability or detectionrecall. The fixed wrong-posecontrol has equal candidate density perrecord but is not perfectly exchangeable: room symmetries, structuredpaths, shortwithinarraydisplacements and pose-dependent clutter may remain. Positiveexcess is only descriptive potentialinformation; zero/negativeextraexcess provides no evidenceforliftingthecap. Do not infer mapperimprovement or recommend a larger catalog solely from counts.",
+  "stop": "One calculation on the fixedinputs/contrasts, preserve allstrata. No additionalpermutations, selectedsubsets, refitting or threshold search after observing results."
+}
