@@ -1,6 +1,6 @@
 # Evaluation and useful demonstration
 
-The selected useful scenario is surveying room layout and locating consequential early reflectors for room/audio setup. EchoSight should answer which surfaces the sound supports, what separations follow from supported parallel surfaces, and where an additional receiver measurement could distinguish alternatives. It does not establish a closed room, safe free space, finite object edges or material identity.
+The selected useful scenario is surveying room layout and locating consequential early reflectors for room/audio setup. EchoSight should answer which surfaces the sound supports, what local separations follow from supported surfaces, and where an additional receiver measurement could distinguish alternatives. It does not establish a closed room, safe free space, finite object edges or material identity.
 
 The central demonstration claim is acoustic recovery of several independent 3D reflectors, including height-dependent structure, from imported recordings with unlabeled echoes. Supplied device poses are calibration. Returned polygons visualize limited supporting reflection regions; they are not surveyed wall outlines. A second measurement can add evidence or resolve an ambiguity. This is useful because a user can relate a problematic early reflection to a physical region rather than seeing only an unexplained peak.
 
@@ -90,3 +90,7 @@ Across matched main surfaces, the maximum offset errors were 17.3 mm in the eigh
 Frozen reports: `evidence/frozen-held-out.json` and `evidence/frozen-extended-held-out.json`. The original eight-view misses remain visible. The twelve-view scenario uses additional information rather than pretending those misses disappeared in the original acquisition. Development tilted cases 2–4 still missed the tilted plane, so its detectability is explicitly conditional.
 
 The final exploratory guidance recording comparison (`evidence/guidance.json`) selected a receiver 0.8 m above the original plane. The added recording yielded five supported invariant plane hypotheses and one unresolved mirror pair; a same-height added recording yielded no invariant plane hypotheses and four unresolved mirror pairs. Both outputs retained the global `ambiguous` status and empty definitive `surfaces`. This demonstrates partial information gain rather than claiming a single extra recording always resolves a room.
+
+## Baseline clean-checkout reproduction and reopened audit
+
+Commit `1c773367f787a551aec0f15fc244b5fe9290dee3` reproduced all69 tests, both frozen suites, guidance and both external replay settings from a separate GitHub clone. Reports are `evidence/reproduced-*.json`, with setup/code/runtime fingerprints in `evidence/final-reproduction.json`. These are regressions on already-seen frozen cases, not new blind tests. Earlier reports remain preserved. This checkpoint is a baseline research prototype; the [coverage audit](audit/COVERAGE.md) identifies missing physical-model and measured-spatial evidence.

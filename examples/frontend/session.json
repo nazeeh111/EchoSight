@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "session_id": "sim-room-1",
+  "sound_speed_m_s": 343.0,
+  "sound_speed_std_m_s": 0.6,
+  "source_clock_scale": 1.0,
+  "source_clock_std_ppm": 100.0,
+  "source_position_m": [
+    2.1,
+    1.7,
+    1.25
+  ],
+  "source_position_std_m": 0.01,
+  "probe": {
+    "sample_rate_hz": 48000,
+    "duration_s": 0.04,
+    "low_hz": 2000.0,
+    "high_hz": 15000.0,
+    "repetitions": 7,
+    "period_s": 0.22,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08,
+    "schema_version": "1.0",
+    "kind": "repeated_linear_chirp",
+    "pilot_start_samples": [
+      4800,
+      15360,
+      25920,
+      36480,
+      47040,
+      57600,
+      68160
+    ],
+    "sample_count": 78720,
+    "waveform_sha256": "7c4bbea61648ebdc9dc6952c17143910a5a95440baa437f5a0baea931f740c4e",
+    "timing_unit": "source_buffer_seconds"
+  },
+  "captures": [
+    {
+      "capture_id": "capture-00",
+      "receiver_position_m": [
+        0.8518914599520411,
+        1.0220741914121496,
+        0.6430655380351413
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-00.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-01",
+      "receiver_position_m": [
+        3.721783911541959,
+        0.6698930323216776,
+        1.637732231835612
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-01.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-02",
+      "receiver_position_m": [
+        4.65243241501127,
+        3.385471861819066,
+        0.8579349900276895
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-02.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-03",
+      "receiver_position_m": [
+        1.024409458118891,
+        3.690562097387969,
+        2.2561029301150843
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-03.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-04",
+      "receiver_position_m": [
+        2.722757074639855,
+        2.9961485925485447,
+        0.4185111726866632
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-04.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-05",
+      "receiver_position_m": [
+        4.442559662316905,
+        1.7914466715595465,
+        2.3844980778315406
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-05.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-06",
+      "receiver_position_m": [
+        0.602552838508184,
+        2.111970134470696,
+        1.4900583476208085
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-06.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-07",
+      "receiver_position_m": [
+        3.1648654012777664,
+        3.7976305559090613,
+        1.976917951968198
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-07.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-08",
+      "receiver_position_m": [
+        2.3762290993076416,
+        2.049895250803779,
+        2.1222364322685054
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-08.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-09",
+      "receiver_position_m": [
+        4.161312362119726,
+        3.316761604480972,
+        0.7514883680416985
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-09.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-10",
+      "receiver_position_m": [
+        1.1168219118083624,
+        3.255493897652555,
+        0.9248402961237017
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-10.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    },
+    {
+      "capture_id": "capture-11",
+      "receiver_position_m": [
+        3.438958325187896,
+        1.6436739812738583,
+        1.3653172424431488
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_path": "capture-11.wav",
+      "provenance": "simulated",
+      "sample_rate_hz": 48000
+    }
+  ]
+}

@@ -1,45 +1,25 @@
-# EchoSight implementation state
+# EchoSight active implementation state
 
-Objective: deliver verified backend in nazeeh111/EchoSight; hardware validation follows later. Current charter is docs/CHARTER.md plus the implementation-task user instructions, which supersede historical research restrictions.
+**Status: baseline research prototype; charter objective unmet and native goal active.** User explicitly rejected the near-completion framing and requested full requirement audit plus continued specialist implementation. [Original charter](docs/CHARTER.md), [continued-work instruction](docs/CHARTER_ADDENDUM.md), [coverage matrix](docs/audit/COVERAGE.md).
 
-Authority: private repository, project branches/commits/push/default-branch integration authorized; no deployment, paid services, credential/global changes. On 2026-09-18 GitHub verified nazeeh111 owner/admin; sinha-ritwik accepted write; littleapple08 pending write invitation 333732214. No invitations duplicated.
+Authority: private repo branches/ordinary commits/push/default-branch integration and missing write invitations authorized. No deployment, public publication, paid services, global configuration or credential changes. One existing EchoSight vault index note authorized. Current model/effort unchanged.
 
-Checkout: this repository, branch backend/implementation, initially empty remote. Shared module boundaries and writer ownership: docs/CONTRACT.md. No physical recordings from our devices exist.
+Checkout: this directory, branch `backend/implementation`, GitHub's current default. Last pushed/verified code: `1c773367f787a551aec0f15fc244b5fe9290dee3`. Collaborator `Oltans_UI/UX` branch untouched. Prior access check: nazeeh111 owner/admin, sinha-ritwik accepted write, littleapple08 pending write invitation333732214; no duplicates sent.
 
-Architecture: small Python package, raw lossless imports, clock-aware signal processing, unlabeled multi-view 3D reflector inference, local HTTP/CLI and JSON evidence. First delivery targets useful room-layout evidence and consequential reflectors with unknown physical extents. Surveyed acoustic-center poses are supplied inputs, not recovered scene geometry.
+Verified baseline: 69 tests in a clean GitHub clone; original/extended frozen suites and external-response replay reproduced; independent assembled review at565769a plus bounded review at1c77336. [Reproduction](evidence/final-reproduction.json), [review](evidence/independent-review-565769a.md), [baseline history](evidence/BASELINE_STATE_HISTORY.md). “Final” in historical filenames refers to the earlier verification pass, **not charter completion**.
 
-Prioritized risks: (1) unlabeled echoes/false surfaces and direct-path timing; (2) coplanar mirror ambiguity and shared timing/pose error; (3) simulator mismatch/external measured response failures; (4) processing limits/cancellation/recovery; (5) source model and iPhone acquisition remain hardware acceptance.
+Physics conventions: n·x=d; reflected source q=s+2(d−n·s)n; excess source-buffer delay=(|r−q|−|r−s|)/(c/kappa). Never halve a bistatic delay. Surveyed acoustic-center poses are supplied. Source physical rate is not established by relative clock correction. Support meshes are not physical edges/enclosure/empty space. Local covariance is conditional on model/path identity. Ground truth stays outside fitting.
 
-Plan: establish recording-to-result baseline in parallel owned modules; integrate/import-test; freeze evaluation and compare serious alternative; investigate strongest failure and capability improvement; independent assembled-commit review; clean-checkout reproduction; verified remote delivery and one vault index note.
+Separate evidence: synthetic twelve-view cases6/6 room planes and designated tilted case7/7, zero false in those narrow suites; eight-view misses remain. External data are measured RIRs convolved with probes,20/25accepted5rejected; no measured spatial accuracy. No own-device recordings. Unresolved coherent multipath, source/direct-reference assumptions and wrong-model reliability materially limit the demonstration.
 
-Current evidence: prior research at ../.. /astra-chatgpt-work-open-ended-acoustic/outputs/research (external local reference, not a portable dependency). Prior model uses q=s+2(d-n.s)n and excess delay (|r-q|-|r-s|)/(c/kappa); no bistatic divide-by-two. Source-buffer seconds are not physical seconds. Supported footprints are not object edges.
+Active specialists and exclusive ownership: physics_audit(signals/simulation/test_signals), inference(inference/geometry/test_inference), backend(storage/API and their tests), evaluation(evaluation modules/new frozen families/measured-data search). Coordinator owns pipeline/evolution/CLI/architecture/matrix/state/commits. Independent reviewer idle until a new assembled milestone; no implementation ownership. No daemon/automation is running.
 
-Next: specialists implement owned modules; coordinator integrates and pins local environment. Active jobs recorded in native specialist controls.
+Prioritized work:
+1. Reproduce higher-order phantom planes and wrong-model confidence; implement justified competing interpretations/guards.
+2. Stress signal extraction with source distortion, overlapping paths and clock/discontinuity effects.
+3. Fix immutable raw decode/hash/store snapshot; verify cancellation publication; implement safe calibration revisions.
+4. Find external measured geometry and independently freeze harder simulation families without editing old acceptance.
+5. Add controlled repeat-acquisition scene comparison and exact hardware qualification thresholds.
+6. Integrate/review/reproduce and push coherent verified checkpoints continuously.
 
-## Checkpoint 1: connected backend (2026-09-18)
-
-Implemented: lossless PCM/phyphox ZIP import, repeated probe and affine clock correction, unlabeled multi-view image-source inference, support triangles/conditional uncertainty, local HTTP jobs/cancellation/export/reload, CLI and inference-revision comparison. First strict eight-view synthetic room result: 4/6 true surfaces including ceiling, zero false surfaces, ~0.83 s. Earlier permissive version found6/6 but failed clutter controls; seven-view confirmation deliberately supersedes that claim. Checkpoint evidence: evidence/checkpoint-1.json. Final acceptance remains pending.
-
-Development controls now pass declared scenario criteria; serious direct-plane competitor currently ties supported surfaces. External measured-RIR hybrid replay requires1s probe spacing to avoid reverberant pilot overlap (25/25 accepted versus23/25 default); laboratory array is collinear and supports no unique3D map. Raw external data stays outside Git.
-
-Unresolved in priority order: per-surface supporting-view ambiguity (an unused elevated capture cannot resolve a plane's mirror), missing2/6 room surfaces under conservative confirmation and extra-view improvement, frozen held-out evaluation, independent integrated review, physical source/iPhone qualification. API/schema and source-playback refinements follow. No final completion or physical accuracy claimed.
-
-Active workers: acoustics, inference, backend, evaluation. Coordinator owns commits; checkpoint uses a brief writer freeze. Repository checkpoints should remain frequent and coherent per current user steering. Current context remains grounded in files; no coordinator handoff needed at this milestone.
-
-## Checkpoint 2: durable store and comparison safety
-
-Prior remote checkpoint: ea5975d6ad9c9d39139d6de9b2379c554aab0868. Added exclusive process ownership for the local store, stricter archive/revision/metadata validation, bounded API comparison, and explicit coordinate-frame identity before relating maps. 24 targeted storage/API/evolution/pipeline tests passed. This checkpoint changes safety/recovery semantics, not acoustic acceptance. Physics/playback/additional-view work continues independently and will be the next coherent checkpoint.
-
-## Checkpoint 3: independent-view confirmation and frozen acoustic evaluation
-
-Scientific changes: per-support receiver-plane mirror checks, explicit unresolved hypotheses, local information-rank guard, shared relative-clock covariance, local+global image-source proposals, scored next-view choices, weak-direct ambiguity rejection and left/right playback with1s spacing option. Additional12-view acquisition preserves original8-view fixtures and recovers all6 room planes; held-out tilted case recovers7/7. Original frozen8-view room cases retain5/6, with misses reported. No false main surfaces in frozen suites. Serious competitor mostly ties and misses the extended tilted plane; simple baseline performs poorly. Evidence: evidence/frozen-held-out.json, frozen-extended-held-out.json, guidance.json, external-final-*.json. Exact source hashes identify tested code; later checksum-only pipeline guard separately tested.
-
-38 focused signal/inference/CLI/pipeline/frontend/evaluation tests pass. Assembled59-test run exposed one real archive limit error:12-capture result JSON exceeds the1MiB session metadata bound. Backend specialist is fixing a distinct bounded result size; actual HTTP-to-geometry succeeded before reload. This remains explicitly unresolved at this checkpoint, so no final completion claim.
-
-Next: fix/recheck full HTTP export/replay; independent assembled-commit review; clean checkout setup/tests/demos/frozen regression; publish final verified default branch and handoff. Selected user model/effort unchanged. All scientific workers have completed; backend limit fix active. No physical device measurements have occurred.
-
-## Checkpoint 4: assembled review findings resolved in code
-
-Independent immutable-commit review of a9fc6b established3 P2 findings and no P1: origin-dependent near-parallel dimension, untrusted archive-result publication, and ordinary result exceeding reload size. Report: evidence/independent-review-a9.md. Corrections now use a physically anchored measurement line with conservative uncertainty; quarantine imported computations pending recomputation; and bound result/compare/archive metadata separately from session/raw limits. Added explicit CLI export/replay, imported-recording checksum checks, exact implementation/runtime fingerprints, and importer diagnostics in results.
-
-Full assembled suite:67 tests passed with localhost permission (work/checkpoint-4-final-tests.log); real12-recording HTTP upload→geometry→export→quarantine→recompute preserved exact geometry. Independent follow-up at this checkpoint and final clean-checkout evidence remain pending. No additional mapping features are planned before those gates. Code writers are done; reviewer follow-up and coordinator verification active.
+Next coordinator action: finish coverage matrix against specialist evidence; adopt immutable read snapshot into pipeline after backend interface lands; develop controlled-comparison contract after physical priorities are grounded. Preserve runnable baseline and all failure reports. Do not report completion while these tractable gaps remain.

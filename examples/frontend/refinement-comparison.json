@@ -1,0 +1,37 @@
+{
+  "ambiguity_reduced": true,
+  "association_gates": {
+    "angle_deg": 10.0,
+    "offset_m": 0.3
+  },
+  "correspondences": [],
+  "current_result_id": "result-053b4353c40b6352fb7b",
+  "interpretation": "Changes describe inference and acoustic support; missing echoes do not establish absence.",
+  "new_capture_ids": [
+    "capture-04",
+    "capture-05",
+    "capture-06",
+    "capture-07",
+    "capture-08",
+    "capture-09",
+    "capture-10",
+    "capture-11"
+  ],
+  "newly_supported_surface_ids": [
+    "reflector-4de59ede9fa1",
+    "reflector-b1b9e976003c",
+    "reflector-9fb935b9aef1",
+    "reflector-74eb4fdab3c5",
+    "reflector-bd3bf7b08a9b",
+    "reflector-2f2a8c8fc324"
+  ],
+  "physical_scene_change_established": false,
+  "previous_result_id": "result-5a478cb4598c7e89c83a",
+  "schema_version": "1.0",
+  "status": "comparable",
+  "status_transition": [
+    "ambiguous",
+    "partial"
+  ],
+  "unconfirmed_previous_surface_ids": []
+}

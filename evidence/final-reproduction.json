@@ -1,0 +1,158 @@
+{
+  "verified_code_commit": "1c773367f787a551aec0f15fc244b5fe9290dee3",
+  "implementation_sha256": "dfd52f712d7ef131fbdf62932c48a947d71656d9d4d8e30b43b6029fd5a64640",
+  "versions": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.18.1"
+  },
+  "optional_evaluation_dependency": {
+    "h5py": "3.16.0"
+  },
+  "clean_checkout": "Independent clone fetched from GitHub; tracked source clean before execution; all package/evaluation source bytes rechecked against Git commit when packaging.",
+  "setup": "New Python 3.12.14 project venv, pinned requirements installed from existing cached wheels; optional h5py likewise. No global installs, paid services or credentials.",
+  "tests": {
+    "passed": 69,
+    "log": "evidence/final-tests.txt",
+    "localhost_permission": "Native approval granted for HTTP loopback tests."
+  },
+  "checks": [
+    {
+      "check": "eight",
+      "exit_code": 0,
+      "wall_s": 7.182005750000826,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "evaluation.run",
+        "--output",
+        "work/final-reproduction/eight"
+      ]
+    },
+    {
+      "check": "twelve",
+      "exit_code": 0,
+      "wall_s": 7.154308791999938,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "evaluation.run",
+        "--extended",
+        "--output",
+        "work/final-reproduction/twelve"
+      ]
+    },
+    {
+      "check": "guidance",
+      "exit_code": 0,
+      "wall_s": 2.3016529999986233,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "evaluation.guidance",
+        "--output",
+        "work/final-reproduction/guidance"
+      ]
+    },
+    {
+      "check": "external-default",
+      "exit_code": 0,
+      "wall_s": 1.1039077499990526,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "evaluation.external",
+        "--data",
+        "work/external-data",
+        "--output",
+        "work/final-reproduction/external-default"
+      ]
+    },
+    {
+      "check": "external-spacing",
+      "exit_code": 0,
+      "wall_s": 1.4819976670005417,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "evaluation.external",
+        "--data",
+        "work/external-data",
+        "--output",
+        "work/final-reproduction/external-spacing",
+        "--probe-period",
+        "1"
+      ]
+    },
+    {
+      "check": "demo",
+      "exit_code": 0,
+      "wall_s": 1.4627290409989655,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "echosight",
+        "demo",
+        "work/final-reproduction/demo",
+        "--seed",
+        "1",
+        "--captures",
+        "12"
+      ]
+    },
+    {
+      "check": "refinement",
+      "exit_code": 0,
+      "wall_s": 1.7856765409997024,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "echosight",
+        "refine-demo",
+        "work/final-reproduction/refinement",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "check": "export",
+      "exit_code": 0,
+      "wall_s": 1.6686956669982465,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "echosight",
+        "export",
+        "work/final-reproduction/demo/session.json",
+        "--output",
+        "work/final-reproduction/survey.zip"
+      ]
+    },
+    {
+      "check": "replay",
+      "exit_code": 0,
+      "wall_s": 1.7143802499995218,
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "echosight",
+        "replay",
+        "work/final-reproduction/survey.zip",
+        "--store",
+        "work/final-reproduction/replay-store",
+        "--output",
+        "work/final-reproduction/replayed.json"
+      ]
+    }
+  ],
+  "demo_surfaces": 6,
+  "demo_runtime_s": 0.6215419999971346,
+  "replay_geometry_identical": true,
+  "independent_review": [
+    "evidence/independent-review-a9.md",
+    "evidence/independent-review-565769a.md",
+    "evidence/independent-review-1c77336.md"
+  ],
+  "physical_validation": false,
+  "evaluation_interpretation": "Final regression reproduction of previously frozen and executed cases; not a new blind test. Earlier evidence preserved. No our-device measurements."
+}

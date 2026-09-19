@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "split": "exploratory_development",
+  "before_status": "ambiguous",
+  "recommendation": {
+    "status": "predicted_ambiguity_separation",
+    "suggested_position_m": [
+      3.1,
+      2.2,
+      2.05
+    ],
+    "score_sigma": 1.20326169869909,
+    "candidates": [
+      {
+        "position_m": [
+          3.1,
+          2.2,
+          2.05
+        ],
+        "score_sigma": 1.20326169869909,
+        "predicted_differences": [
+          {
+            "delay_separation_s": 8.5100177304143e-05,
+            "conditional_std_s": 7.07245791968192e-05
+          },
+          {
+            "delay_separation_s": 0.004494773277363013,
+            "conditional_std_s": 0.00010657730439421859
+          },
+          {
+            "delay_separation_s": 0.004233593599891392,
+            "conditional_std_s": 0.00010270888717645131
+          }
+        ]
+      },
+      {
+        "position_m": [
+          3.1,
+          2.2,
+          0.65
+        ],
+        "score_sigma": 0.9067303321376655,
+        "predicted_differences": [
+          {
+            "delay_separation_s": 6.412807052460709e-05,
+            "conditional_std_s": 7.072452332483652e-05
+          },
+          {
+            "delay_separation_s": 0.003372981515529938,
+            "conditional_std_s": 0.00010651866145152212
+          },
+          {
+            "delay_separation_s": 0.0031859477349947315,
+            "conditional_std_s": 0.0001029810058316969
+          }
+        ]
+      },
+      {
+        "position_m": [
+          3.1,
+          2.2,
+          1.65
+        ],
+        "score_sigma": 0.6065519734032857,
+        "predicted_differences": [
+          {
+            "delay_separation_s": 4.289807566355136e-05,
+            "conditional_std_s": 7.072448453651174e-05
+          },
+          {
+            "delay_separation_s": 0.002249538630550667,
+            "conditional_std_s": 0.00010647490185757766
+          },
+          {
+            "delay_separation_s": 0.0021288558359477726,
+            "conditional_std_s": 0.00010315693939615589
+          }
+        ]
+      },
+      {
+        "position_m": [
+          3.1,
+          2.2,
+          1.25
+        ],
+        "score_sigma": 0.0,
+        "predicted_differences": [
+          {
+            "delay_separation_s": 0.0,
+            "conditional_std_s": 7.072445421636781e-05
+          },
+          {
+            "delay_separation_s": 0.0,
+            "conditional_std_s": 0.00010643880982145332
+          },
+          {
+            "delay_separation_s": 0.0,
+            "conditional_std_s": 0.00010328721188931123
+          }
+        ]
+      }
+    ],
+    "uncertainty_semantics": "Shared calibration terms propagated through hypothesis difference; conditional on point-source specular model.",
+    "limitation": "Prediction does not establish audibility, accessibility, or guaranteed resolution."
+  },
+  "results": {
+    "suggested": {
+      "invariant_hypothesis_metrics": {
+        "predicted_count": 5,
+        "truth_count": 6,
+        "matched_count": 5,
+        "false_surfaces": 0,
+        "missed_surfaces": 1,
+        "horizontal_matched": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "matches": [
+          {
+            "predicted_id": "reflector-b98d9e7e3e46",
+            "truth_id": "truth-0-0",
+            "normal_error_deg": 0.018614234726225132,
+            "offset_error_m": 0.00016266665740607132,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-cc8decc2b9d2",
+            "truth_id": "truth-2-1",
+            "normal_error_deg": 0.009375356489897499,
+            "offset_error_m": 1.1128479134203673e-05,
+            "horizontal": true,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-8e49694427a1",
+            "truth_id": "truth-1-1",
+            "normal_error_deg": 0.013240128660599232,
+            "offset_error_m": 0.0002603070902180704,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-31495ee06646",
+            "truth_id": "truth-1-0",
+            "normal_error_deg": 0.16231302637166095,
+            "offset_error_m": 0.0085194503998714,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          },
+          {
+            "predicted_id": "reflector-a5eeed599d12",
+            "truth_id": "truth-0-1",
+            "normal_error_deg": 0.3396647611943595,
+            "offset_error_m": 0.012157766964923766,
+            "horizontal": false,
+            "offset_95pct_covered": true,
+            "normal_95pct_covered": true
+          }
+        ]
+      },
+      "unresolved_mirror_surfaces": 1,
+      "position_m": [
+        3.1,
+        2.2,
+        2.05
+      ],
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "diagnostics": [
+        "refinement_budget_reached",
+        "support_coplanar_mirror_ambiguity"
+      ]
+    },
+    "coplanar_control": {
+      "invariant_hypothesis_metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "unresolved_mirror_surfaces": 4,
+      "position_m": [
+        3.1,
+        2.2,
+        1.25
+      ],
+      "status": "ambiguous",
+      "metrics": {
+        "predicted_count": 0,
+        "truth_count": 6,
+        "matched_count": 0,
+        "false_surfaces": 0,
+        "missed_surfaces": 6,
+        "horizontal_matched": 0,
+        "precision": null,
+        "recall": 0.0,
+        "matches": []
+      },
+      "diagnostics": [
+        "refinement_budget_reached",
+        "local_geometry_rank_deficient",
+        "support_coplanar_mirror_ambiguity"
+      ]
+    }
+  },
+  "claim": "Conditional geometric discrimination under visible first-order echoes, not guaranteed real-world audibility.",
+  "source_sha256": {
+    "echosight/simulation.py": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7",
+    "echosight/signals.py": "fbd65ae7d98ca73c62b19dd29433a78db38598d60393feec6761ee5f4e85668b",
+    "echosight/evolution.py": "8b05097619beb38859c3e573e0ea20c59daa7a876df0438d1375b6037eb5eeba",
+    "echosight/__init__.py": "9d10fca4836351c8b7ec71ef01f4b868ae4bcf415dbe0f39a4e979b1fb13827d",
+    "echosight/api.py": "d9e47498670c3ed909a27d30dfba3b9dce32c045100e464109e5d90211a82c2e",
+    "echosight/cli.py": "ad9b83276257e1d44672efe1ed4e6cf18bb378f9856ad2e96cdb204bfbc55b4d",
+    "echosight/pipeline.py": "1b4d3c4e2788239897b4481ea54faf2b05f8ca5188d7225275839b3dfae854ba",
+    "echosight/geometry.py": "93a9fd33ae4dac5a47679799a0b7ca47d33f4c3dce18ba3dad428b46c846f245",
+    "echosight/storage.py": "dd0518c860654c6739a7aa3aab30c87bf71373d22233773a201973a4a11c39dc",
+    "echosight/inference.py": "9714b2e7c6ef343193ad68e0f88908cf4568b26bb08de4c369bc384a1edbf513",
+    "echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  }
+}

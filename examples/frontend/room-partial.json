@@ -1,0 +1,4910 @@
+{
+  "acquisition": {
+    "captures": [
+      {
+        "capture_id": "capture-00",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          0.8518914599520411,
+          1.0220741914121496,
+          0.6430655380351413
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-01",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          3.721783911541959,
+          0.6698930323216776,
+          1.637732231835612
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-02",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          4.65243241501127,
+          3.385471861819066,
+          0.8579349900276895
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-03",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          1.024409458118891,
+          3.690562097387969,
+          2.2561029301150843
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-04",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          2.722757074639855,
+          2.9961485925485447,
+          0.4185111726866632
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-05",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          4.442559662316905,
+          1.7914466715595465,
+          2.3844980778315406
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-06",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          0.602552838508184,
+          2.111970134470696,
+          1.4900583476208085
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-07",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          3.1648654012777664,
+          3.7976305559090613,
+          1.976917951968198
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-08",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          2.3762290993076416,
+          2.049895250803779,
+          2.1222364322685054
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-09",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          4.161312362119726,
+          3.316761604480972,
+          0.7514883680416985
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-10",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          1.1168219118083624,
+          3.255493897652555,
+          0.9248402961237017
+        ],
+        "receiver_position_std_m": 0.01
+      },
+      {
+        "capture_id": "capture-11",
+        "provenance": "simulated",
+        "receiver_position_m": [
+          3.438958325187896,
+          1.6436739812738583,
+          1.3653172424431488
+        ],
+        "receiver_position_std_m": 0.01
+      }
+    ],
+    "coordinate_frame_id": "session:sim-room-1",
+    "probe": {
+      "duration_s": 0.04,
+      "high_hz": 15000.0,
+      "kind": "repeated_linear_chirp",
+      "lead_s": 0.1,
+      "low_hz": 2000.0,
+      "max_echo_delay_s": 0.08,
+      "period_s": 0.22,
+      "pilot_start_samples": [
+        4800,
+        15360,
+        25920,
+        36480,
+        47040,
+        57600,
+        68160
+      ],
+      "repetitions": 7,
+      "sample_count": 78720,
+      "sample_rate_hz": 48000,
+      "schema_version": "1.0",
+      "tail_s": 0.18,
+      "timing_unit": "source_buffer_seconds",
+      "waveform_sha256": "7c4bbea61648ebdc9dc6952c17143910a5a95440baa437f5a0baea931f740c4e"
+    },
+    "schema_version": "1.0",
+    "session_id": "sim-room-1",
+    "sound_speed_m_s": 343.0,
+    "sound_speed_std_m_s": 0.6,
+    "source_clock_scale": 1.0,
+    "source_clock_std_ppm": 100.0,
+    "source_position_m": [
+      2.1,
+      1.7,
+      1.25
+    ],
+    "source_position_std_m": 0.01
+  },
+  "assumptions": [
+    "stationary effective point source",
+    "first-order specular reflectors",
+    "surveyed acoustic-center poses"
+  ],
+  "diagnostics": [
+    "refinement_budget_reached"
+  ],
+  "dimensions": [
+    {
+      "direction": [
+        0.999988235360149,
+        0.0029384748569871036,
+        0.0038593402040044125
+      ],
+      "geometry_std_m": 0.010868672728681833,
+      "intersection_points_m": [
+        [
+          5.812709709840785,
+          1.710909832483909,
+          1.2643287784219037
+        ],
+        [
+          0.0029598665416146197,
+          1.6938378277980028,
+          1.2419067134889323
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.00787376072475235,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 7.873801403532057e-05,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.010947410742717153,
+      "surface_ids": [
+        "reflector-4de59ede9fa1",
+        "reflector-bd3bf7b08a9b"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 5.8098181937178195
+    },
+    {
+      "direction": [
+        0.0003374017477686211,
+        -3.90666364246894e-05,
+        0.9999999423169277
+      ],
+      "geometry_std_m": 0.008058665189290508,
+      "intersection_points_m": [
+        [
+          2.1006949358190594,
+          1.6999195356717585,
+          3.309668580762305
+        ],
+        [
+          2.0995777218103298,
+          1.7000488941999115,
+          -0.0015589148681081078
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.0022656775201831993,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 2.265678489332585e-05,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.008081321974183833,
+      "surface_ids": [
+        "reflector-b1b9e976003c",
+        "reflector-9fb935b9aef1"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 3.3112276866321997
+    },
+    {
+      "direction": [
+        0.0002012698604665434,
+        0.9999981142663867,
+        0.0019315677864664592
+      ],
+      "geometry_std_m": 0.008293136624320262,
+      "intersection_points_m": [
+        [
+          2.1005943246734886,
+          4.6528691050549975,
+          1.2557036775965928
+        ],
+        [
+          2.099657663150984,
+          -0.0008816057537919253,
+          1.246714625686392
+        ]
+      ],
+      "kind": "local_plane_intersection_separation",
+      "normal_angle_rad": 0.000782146019158769,
+      "reference_kind": "surveyed_source_acoustic_center",
+      "reference_point_m": [
+        2.1,
+        1.7,
+        1.25
+      ],
+      "reference_std_bound_m": 7.821460589845415e-06,
+      "semantics": "Distance between intersections along the mean-normal line through the stated source reference. Nonparallel planes have no unique global separation; this is not a proven room dimension.",
+      "std_m": 0.008300958084910107,
+      "surface_ids": [
+        "reflector-74eb4fdab3c5",
+        "reflector-2f2a8c8fc324"
+      ],
+      "uncertainty_kind": "first_order_conservative_standard_deviation_bound",
+      "uncertainty_note": "Joint plane covariance includes shared calibration. Add the reference-location standard-deviation contribution conservatively because reference/geometry cross-covariance is not separately retained; do not interpret as a calibrated confidence interval.",
+      "value_m": 4.653759486559482
+    }
+  ],
+  "guidance": [
+    {
+      "action": "Add surveyed views around weakly supported reflectors with a different height.",
+      "reason": "Finite support and missing echoes do not establish physical edges or empty space.",
+      "suggested_position_m": [
+        3.0397144933158753,
+        2.2275851559699897,
+        2.0023919649164825
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "unconfirmed_candidates",
+      "reason": "Alternative individual fits; not independent resolved structure. Candidate evidence may overlap other hypotheses.",
+      "surfaces": [
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.013613011358934963,
+            "supporting_views": 8
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            2.0407373402764666,
+            2.630567782061014,
+            -1.6705238396434199
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            0.019330450632557946,
+            -0.3035350531902659,
+            0.9526241678453916
+          ],
+          "offset_m": -0.8175189880664,
+          "support": [
+            {
+              "candidate_id": "capture-00:echo:01",
+              "capture_id": "capture-00",
+              "observed_delay_s": 0.004403555848841999,
+              "predicted_delay_s": 0.004413226601339182,
+              "reflection_point_m": [
+                1.358008882047201,
+                1.706844726457141,
+                -0.34187953432182183
+              ],
+              "residual_s": -9.670752497182439e-06
+            },
+            {
+              "candidate_id": "capture-01:echo:02",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.006523114237394341,
+              "predicted_delay_s": 0.006521805893547596,
+              "reflection_point_m": [
+                2.72259601082908,
+                1.8352875672856905,
+                -0.32864365303552323
+              ],
+              "residual_s": 1.308343846745559e-06
+            },
+            {
+              "candidate_id": "capture-02:echo:00",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.001841081936072793,
+              "predicted_delay_s": 0.0018336268775825634,
+              "reflection_point_m": [
+                3.8359817435010397,
+                3.1494787901903427,
+                0.06750507753854973
+              ],
+              "residual_s": 7.4550584902295484e-06
+            },
+            {
+              "candidate_id": "capture-03:echo:01",
+              "capture_id": "capture-03",
+              "observed_delay_s": 0.004965200475951837,
+              "predicted_delay_s": 0.005003096643702805,
+              "reflection_point_m": [
+                1.5824210878120648,
+                3.1085755497932954,
+                0.10020084235747628
+              ],
+              "residual_s": -3.789616775096757e-05
+            },
+            {
+              "candidate_id": "capture-04:echo:00",
+              "capture_id": "capture-04",
+              "observed_delay_s": 0.0015787094405701125,
+              "predicted_delay_s": 0.001652084785780114,
+              "reflection_point_m": [
+                2.5932219139921453,
+                2.926714283495267,
+                0.021743348697737308
+              ],
+              "residual_s": -7.337534521000152e-05
+            },
+            {
+              "candidate_id": "capture-08:echo:02",
+              "capture_id": "capture-08",
+              "observed_delay_s": 0.008397255909386492,
+              "predicted_delay_s": 0.00837329112679808,
+              "reflection_point_m": [
+                2.1762207162263154,
+                2.396071784057189,
+                -0.13887380063502652
+              ],
+              "residual_s": 2.396478258841206e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:00",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.0018366969047212205,
+              "predicted_delay_s": 0.0018214344088150554,
+              "reflection_point_m": [
+                3.559724402370843,
+                3.122094621530712,
+                0.06438540422310679
+              ],
+              "residual_s": 1.5262495906165135e-05
+            },
+            {
+              "candidate_id": "capture-10:echo:00",
+              "capture_id": "capture-10",
+              "observed_delay_s": 0.0028572930213090647,
+              "predicted_delay_s": 0.002787845048787582,
+              "reflection_point_m": [
+                1.4154206242667362,
+                3.053525050994542,
+                0.086048816490502
+              ],
+              "residual_s": 6.944797252148244e-05
+            }
+          ],
+          "surface_id": "reflector-a007f620bb5c",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.00036622835340982155,
+                -9.214308920187018e-05,
+                -6.004996780587937e-05
+              ],
+              [
+                -9.214308920187037e-05,
+                0.0007391288145965262,
+                -4.201650460197031e-05
+              ],
+              [
+                -6.004996780587917e-05,
+                -4.2016504601970585e-05,
+                0.00016088657996404627
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.010462466073011675,
+            "offset_std_m": 0.02389819871145328,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              1.4154206242667362,
+              3.053525050994542,
+              0.086048816490502
+            ],
+            [
+              1.358008882047201,
+              1.706844726457141,
+              -0.34187953432182183
+            ],
+            [
+              2.72259601082908,
+              1.8352875672856905,
+              -0.32864365303552323
+            ],
+            [
+              3.8359817435010397,
+              3.1494787901903427,
+              0.06750507753854973
+            ],
+            [
+              1.5824210878120648,
+              3.1085755497932954,
+              0.10020084235747628
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.017256049728190805,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            1.1479151125665532,
+            -0.3506837950429461,
+            3.360353277799996
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            -0.3078399627034902,
+            -0.6630526661172326,
+            0.6823457476364483
+          ],
+          "offset_m": 0.6256745899800189,
+          "support": [
+            {
+              "candidate_id": "capture-00:echo:01",
+              "capture_id": "capture-00",
+              "observed_delay_s": 0.004403555848841999,
+              "predicted_delay_s": 0.00441439200653253,
+              "reflection_point_m": [
+                0.9766718155515165,
+                0.44342708605753756,
+                1.7884609395150675
+              ],
+              "residual_s": -1.0836157690530951e-05
+            },
+            {
+              "candidate_id": "capture-02:echo:04",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.007639061497575504,
+              "predicted_delay_s": 0.0076308067661983656,
+              "reflection_point_m": [
+                2.17750659771587,
+                0.7469606790802521,
+                2.625168275410372
+              ],
+              "residual_s": 8.254731377138613e-06
+            },
+            {
+              "candidate_id": "capture-03:echo:01",
+              "capture_id": "capture-03",
+              "observed_delay_s": 0.004965200475951837,
+              "predicted_delay_s": 0.005000099884368572,
+              "reflection_point_m": [
+                1.091659577844053,
+                1.4900614699453008,
+                2.8573787860300985
+              ],
+              "residual_s": -3.489940841673502e-05
+            },
+            {
+              "candidate_id": "capture-04:echo:01",
+              "capture_id": "capture-04",
+              "observed_delay_s": 0.008939376943642895,
+              "predicted_delay_s": 0.008935852632218398,
+              "reflection_point_m": [
+                1.6648297661040177,
+                0.747856087525471,
+                2.39474445536007
+              ],
+              "residual_s": 3.5243114244968426e-06
+            },
+            {
+              "candidate_id": "capture-06:echo:01",
+              "capture_id": "capture-06",
+              "observed_delay_s": 0.004600896438406083,
+              "predicted_delay_s": 0.00457303548664157,
+              "reflection_point_m": [
+                0.8402562959602357,
+                1.0385894086696632,
+                2.3052514632910253
+              ],
+              "residual_s": 2.78609517645129e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:03",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.008103793582447193,
+              "predicted_delay_s": 0.00801640217368714,
+              "reflection_point_m": [
+                2.0545993694858065,
+                0.7527933543280305,
+                2.5753864957211774
+              ],
+              "residual_s": 8.739140876005275e-05
+            },
+            {
+              "candidate_id": "capture-11:echo:01",
+              "capture_id": "capture-11",
+              "observed_delay_s": 0.006584602988142251,
+              "predicted_delay_s": 0.00667341545255094,
+              "reflection_point_m": [
+                2.1933323631536505,
+                0.5593540478568346,
+                2.4500059410866895
+              ],
+              "residual_s": -8.881246440868833e-05
+            }
+          ],
+          "surface_id": "reflector-594036e94305",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.00077529435743309,
+                -1.614268690707226e-05,
+                5.918673509286358e-05
+              ],
+              [
+                -1.614268690707232e-05,
+                0.0006997121219476316,
+                0.0005602061080760793
+              ],
+              [
+                5.9186735092863626e-05,
+                0.000560206108076079,
+                0.0009181616943805042
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.014897693594383832,
+            "offset_std_m": 0.032285481911969026,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              0.9766718155515165,
+              0.44342708605753756,
+              1.7884609395150675
+            ],
+            [
+              2.1933323631536505,
+              0.5593540478568346,
+              2.4500059410866895
+            ],
+            [
+              2.17750659771587,
+              0.7469606790802521,
+              2.625168275410372
+            ],
+            [
+              1.091659577844053,
+              1.4900614699453008,
+              2.8573787860300985
+            ],
+            [
+              0.8402562959602357,
+              1.0385894086696632,
+              2.3052514632910253
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.019132208046932657,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            2.153789043111483,
+            -1.1083602586293737,
+            3.2963028409123045
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            -0.015477893048850387,
+            0.8081106710825237,
+            -0.5888272905609265
+          ],
+          "offset_m": -1.1323582436536894,
+          "support": [
+            {
+              "candidate_id": "capture-01:echo:00",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.00273321297358936,
+              "predicted_delay_s": 0.002721195622924522,
+              "reflection_point_m": [
+                3.294074549308728,
+                0.18483048761887783,
+                2.090148366422233
+              ],
+              "residual_s": 1.2017350664837896e-05
+            },
+            {
+              "candidate_id": "capture-02:echo:04",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.007639061497575504,
+              "predicted_delay_s": 0.007600296641877136,
+              "reflection_point_m": [
+                3.0171803149548233,
+                0.4444565513079368,
+                2.453739414825416
+              ],
+              "residual_s": 3.8764855698368225e-05
+            },
+            {
+              "candidate_id": "capture-05:echo:00",
+              "capture_id": "capture-05",
+              "observed_delay_s": 0.003473224321128066,
+              "predicted_delay_s": 0.0035004896754325054,
+              "reflection_point_m": [
+                3.5517567927709153,
+                0.6628249071651682,
+                2.739377807850106
+              ],
+              "residual_s": -2.726535430443936e-05
+            },
+            {
+              "candidate_id": "capture-08:echo:01",
+              "capture_id": "capture-08",
+              "observed_delay_s": 0.0070617635140562025,
+              "predicted_delay_s": 0.006988931352074064,
+              "reflection_point_m": [
+                2.273079758019596,
+                0.5853569792881093,
+                2.666671543241655
+              ],
+              "residual_s": 7.283216198213874e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:03",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.008103793582447193,
+              "predicted_delay_s": 0.0082172551176088,
+              "reflection_point_m": [
+                2.845447293391802,
+                0.41624073411432283,
+                2.4195299990091472
+              ],
+              "residual_s": -0.00011346153516160647
+            },
+            {
+              "candidate_id": "capture-10:echo:04",
+              "capture_id": "capture-10",
+              "observed_delay_s": 0.009311792336838405,
+              "predicted_delay_s": 0.00934408845477359,
+              "reflection_point_m": [
+                1.7889629065336914,
+                0.426932427479783,
+                2.461974064100514
+              ],
+              "residual_s": -3.229611793518529e-05
+            },
+            {
+              "candidate_id": "capture-11:echo:01",
+              "capture_id": "capture-11",
+              "observed_delay_s": 0.006584602988142251,
+              "predicted_delay_s": 0.006571661206042276,
+              "reflection_point_m": [
+                2.8221734088792223,
+                0.3229038445998358,
+                2.292045578822915
+              ],
+              "residual_s": 1.2941782099975749e-05
+            }
+          ],
+          "surface_id": "reflector-e325e60457ea",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.0008952170819295466,
+                -0.00019377615127955618,
+                0.00038360750269221273
+              ],
+              [
+                -0.0001937761512795565,
+                0.001462528531463508,
+                0.0020881554626223076
+              ],
+              [
+                0.00038360750269221116,
+                0.0020881554626223076,
+                0.004281560957588549
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.02261171012001055,
+            "offset_std_m": 0.05466673142473768,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              3.5517567927709153,
+              0.6628249071651682,
+              2.739377807850106
+            ],
+            [
+              3.294074549308728,
+              0.18483048761887783,
+              2.090148366422233
+            ],
+            [
+              1.7889629065336914,
+              0.426932427479783,
+              2.461974064100514
+            ],
+            [
+              2.273079758019596,
+              0.5853569792881093,
+              2.666671543241655
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.012541983747059301,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            8.332754762107824,
+            4.423600902127379,
+            -2.3063106320235196
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            0.8120373798569531,
+            0.3548456220009527,
+            -0.4633356000371775
+          ],
+          "offset_m": 5.5670730666137205,
+          "support": [
+            {
+              "candidate_id": "capture-00:echo:04",
+              "capture_id": "capture-00",
+              "observed_delay_s": 0.020911780658548353,
+              "predicted_delay_s": 0.02095202181580251,
+              "reflection_point_m": [
+                5.013087394689225,
+                2.914157838556088,
+                -0.9975114426085363
+              ],
+              "residual_s": -4.02411572541575e-05
+            },
+            {
+              "candidate_id": "capture-01:echo:04",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.015088568943347131,
+              "predicted_delay_s": 0.015087152913960752,
+              "reflection_point_m": [
+                5.769536667839399,
+                2.336931468660242,
+                -0.11383482576824089
+              ],
+              "residual_s": 1.4160293863793583e-06
+            },
+            {
+              "candidate_id": "capture-02:echo:01",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.0054393262929905385,
+              "predicted_delay_s": 0.005479944542552695,
+              "reflection_point_m": [
+                5.404298164715493,
+                3.5975548250945266,
+                0.2115003349902781
+              ],
+              "residual_s": -4.061824956215661e-05
+            },
+            {
+              "candidate_id": "capture-05:echo:04",
+              "capture_id": "capture-05",
+              "observed_delay_s": 0.011768483268700653,
+              "predicted_delay_s": 0.011760239474871923,
+              "reflection_point_m": [
+                5.950289729801048,
+                2.811595526277914,
+                0.5664727214567176
+              ],
+              "residual_s": 8.243793828729973e-06
+            },
+            {
+              "candidate_id": "capture-06:echo:04",
+              "capture_id": "capture-06",
+              "observed_delay_s": 0.021458897561645752,
+              "predicted_delay_s": 0.02141524185765243,
+              "reflection_point_m": [
+                4.983070916129307,
+                3.421915264828942,
+                -0.6612519427199768
+              ],
+              "residual_s": 4.3655703993322054e-05
+            },
+            {
+              "candidate_id": "capture-07:echo:02",
+              "capture_id": "capture-07",
+              "observed_delay_s": 0.012453257326396018,
+              "predicted_delay_s": 0.012475491666208689,
+              "reflection_point_m": [
+                5.235412616809976,
+                4.048429492742317,
+                0.2608156133052133
+              ],
+              "residual_s": -2.2234339812670506e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:02",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.007705999683327839,
+              "predicted_delay_s": 0.007645833815064705,
+              "reflection_point_m": [
+                5.252299093460274,
+                3.6062410870364467,
+                -0.04823935591945894
+              ],
+              "residual_s": 6.016586826313331e-05
+            }
+          ],
+          "surface_id": "reflector-cbf4a0982caa",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.002342500145053438,
+                -0.0006858009016001036,
+                0.0023204328460814873
+              ],
+              [
+                -0.0006858009016001046,
+                0.004204677308212683,
+                0.0010569532405200516
+              ],
+              [
+                0.002320432846081486,
+                0.0010569532405200512,
+                0.0035199448759530264
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.012848984644035569,
+            "offset_std_m": 0.02997946858551672,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              5.235412616809976,
+              4.048429492742317,
+              0.2608156133052133
+            ],
+            [
+              5.950289729801048,
+              2.811595526277914,
+              0.5664727214567176
+            ],
+            [
+              5.769536667839399,
+              2.336931468660242,
+              -0.11383482576824089
+            ],
+            [
+              5.013087394689225,
+              2.914157838556088,
+              -0.9975114426085363
+            ],
+            [
+              4.983070916129307,
+              3.421915264828942,
+              -0.6612519427199768
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.012879205743981314,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            -2.054833606434134,
+            1.9652486343435336,
+            2.0482409869044864
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            0.9801156588376935,
+            -0.06257154067561628,
+            -0.1883032065543066
+          ],
+          "offset_m": -0.40307065912294876,
+          "support": [
+            {
+              "candidate_id": "capture-01:echo:03",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.011562954079343726,
+              "predicted_delay_s": 0.01158681581791536,
+              "reflection_point_m": [
+                0.04889177214359419,
+                1.4935067463310188,
+                1.8987421351146052
+              ],
+              "residual_s": -2.3861738571634428e-05
+            },
+            {
+              "candidate_id": "capture-02:echo:05",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.011332538194969223,
+              "predicted_delay_s": 0.011296798296739286,
+              "reflection_point_m": [
+                0.06412801311679672,
+                2.413926009088077,
+                1.6721991369407496
+              ],
+              "residual_s": 3.573989822993652e-05
+            },
+            {
+              "candidate_id": "capture-04:echo:02",
+              "capture_id": "capture-04",
+              "observed_delay_s": 0.010188645617435519,
+              "predicted_delay_s": 0.010177891671630392,
+              "reflection_point_m": [
+                0.0013016524009943353,
+                2.408917816970223,
+                1.3468529532534315
+              ],
+              "residual_s": 1.0753945805127424e-05
+            },
+            {
+              "candidate_id": "capture-06:echo:00",
+              "capture_id": "capture-06",
+              "observed_delay_s": 0.0034192206059700586,
+              "predicted_delay_s": 0.0033463885982924157,
+              "reflection_point_m": [
+                0.030911239748216968,
+                2.080408254163531,
+                1.6101313678348879
+              ],
+              "residual_s": 7.283200767764291e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:05",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.011134798736473413,
+              "predicted_delay_s": 0.011152970335839885,
+              "reflection_point_m": [
+                0.05252061710610967,
+                2.4234290857352088,
+                1.6086250058654965
+              ],
+              "residual_s": -1.8171599366472238e-05
+            },
+            {
+              "candidate_id": "capture-10:echo:01",
+              "capture_id": "capture-10",
+              "observed_delay_s": 0.005012819263953259,
+              "predicted_delay_s": 0.0050581957593997555,
+              "reflection_point_m": [
+                0.020405809317130874,
+                2.809466365747405,
+                1.3131909854836712
+              ],
+              "residual_s": -4.537649544649608e-05
+            },
+            {
+              "candidate_id": "capture-11:echo:03",
+              "capture_id": "capture-11",
+              "observed_delay_s": 0.012231207242328831,
+              "predicted_delay_s": 0.01224580969667635,
+              "reflection_point_m": [
+                0.049607054759015945,
+                1.8420669077780172,
+                1.7866416190677805
+              ],
+              "residual_s": -1.4602454347518654e-05
+            }
+          ],
+          "surface_id": "reflector-cdcad15ada7a",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.0012585465572950945,
+                0.001753666053397092,
+                0.005380247840964784
+              ],
+              [
+                0.0017536660533970926,
+                0.006892895840530615,
+                0.011719379455027115
+              ],
+              [
+                0.005380247840964783,
+                0.01171937945502711,
+                0.030003568181534882
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.045851640283008394,
+            "offset_std_m": 0.10263421572538825,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              0.0013016524009943353,
+              2.408917816970223,
+              1.3468529532534315
+            ],
+            [
+              0.020405809317130874,
+              2.809466365747405,
+              1.3131909854836712
+            ],
+            [
+              0.06412801311679672,
+              2.413926009088077,
+              1.6721991369407496
+            ],
+            [
+              0.04889177214359419,
+              1.4935067463310188,
+              1.8987421351146052
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.00578887962258661,
+            "supporting_views": 6
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            1.8444790571696141,
+            7.6005091698701,
+            2.868849862154634
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            -0.04172529687739966,
+            0.9635237492219028,
+            0.2643501168637168
+          ],
+          "offset_m": 4.94274767387176,
+          "support": [
+            {
+              "candidate_id": "capture-02:echo:03",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.0069025879025677575,
+              "predicted_delay_s": 0.006896694778598235,
+              "reflection_point_m": [
+                3.6698984400753663,
+                4.860360092856433,
+                1.5615763724783267
+              ],
+              "residual_s": 5.893123969522886e-06
+            },
+            {
+              "candidate_id": "capture-05:echo:03",
+              "capture_id": "capture-05",
+              "observed_delay_s": 0.010983933882552099,
+              "predicted_delay_s": 0.011013313383346726,
+              "reflection_point_m": [
+                3.2081576274685872,
+                4.551452867775725,
+                2.614623666301089
+              ],
+              "residual_s": -2.9379500794627506e-05
+            },
+            {
+              "candidate_id": "capture-07:echo:00",
+              "capture_id": "capture-07",
+              "observed_delay_s": 0.004857810900807641,
+              "predicted_delay_s": 0.004842606297821889,
+              "reflection_point_m": [
+                2.86670582611692,
+                4.656367604339198,
+                2.178327214189262
+              ],
+              "residual_s": 1.520460298575204e-05
+            },
+            {
+              "candidate_id": "capture-08:echo:04",
+              "capture_id": "capture-08",
+              "observed_delay_s": 0.01356599688054457,
+              "predicted_delay_s": 0.013545876001876423,
+              "reflection_point_m": [
+                2.136913507954861,
+                4.54796454492436,
+                2.4582518912738616
+              ],
+              "residual_s": 2.012087866814713e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:02",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.007705999683327839,
+              "predicted_delay_s": 0.007707794070893657,
+              "reflection_point_m": [
+                3.3273756583865985,
+                4.858682776225498,
+                1.5136258344012012
+              ],
+              "residual_s": -1.7943875658182548e-06
+            },
+            {
+              "candidate_id": "capture-10:echo:03",
+              "capture_id": "capture-10",
+              "observed_delay_s": 0.008577857854986357,
+              "predicted_delay_s": 0.008590969139372172,
+              "reflection_point_m": [
+                1.3673881460119854,
+                4.751684955841476,
+                1.5942533010277677
+              ],
+              "residual_s": -1.3111284385814923e-05
+            }
+          ],
+          "surface_id": "reflector-3b7282151b71",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.0018589129702806205,
+                0.00043480512931877923,
+                0.0003649784555950999
+              ],
+              [
+                0.00043480512931878053,
+                0.0007237438126745718,
+                -0.001338891780877821
+              ],
+              [
+                0.0003649784555950962,
+                -0.0013388917808778219,
+                0.004750035275201369
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.013711604906447515,
+            "offset_std_m": 0.02353206751798983,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              3.3273756583865985,
+              4.858682776225498,
+              1.5136258344012012
+            ],
+            [
+              1.3673881460119854,
+              4.751684955841476,
+              1.5942533010277677
+            ],
+            [
+              2.136913507954861,
+              4.54796454492436,
+              2.4582518912738616
+            ],
+            [
+              3.2081576274685872,
+              4.551452867775725,
+              2.614623666301089
+            ],
+            [
+              3.6698984400753663,
+              4.860360092856433,
+              1.5615763724783267
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.017493998733898865,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            2.934834366005177,
+            0.47762418876002494,
+            4.42118774728006
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            0.23854764141817722,
+            -0.34928469475119656,
+            0.9061430487436231
+          ],
+          "offset_m": 2.789672209102842,
+          "support": [
+            {
+              "candidate_id": "capture-01:echo:00",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.00273321297358936,
+              "predicted_delay_s": 0.0027374191428457713,
+              "reflection_point_m": [
+                3.5082032108849126,
+                0.6177106344089789,
+                2.393171233748803
+              ],
+              "residual_s": -4.206169256411492e-06
+            },
+            {
+              "candidate_id": "capture-02:echo:01",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.0054393262929905385,
+              "predicted_delay_s": 0.005322713034683162,
+              "reflection_point_m": [
+                3.718587291732022,
+                1.8044969822211079,
+                2.7952486777656156
+              ],
+              "residual_s": 0.00011661325830737614
+            },
+            {
+              "candidate_id": "capture-04:echo:01",
+              "capture_id": "capture-04",
+              "observed_delay_s": 0.008939376943642895,
+              "predicted_delay_s": 0.008958508409171057,
+              "reflection_point_m": [
+                2.8534043363517116,
+                1.444646709479609,
+                2.8843043305595306
+              ],
+              "residual_s": -1.9131465528161515e-05
+            },
+            {
+              "candidate_id": "capture-06:echo:02",
+              "capture_id": "capture-06",
+              "observed_delay_s": 0.007378325557747266,
+              "predicted_delay_s": 0.00733323360695643,
+              "reflection_point_m": [
+                1.8561040821691768,
+                1.2335442803600996,
+                3.065477464461921
+              ],
+              "residual_s": 4.509195079083553e-05
+            },
+            {
+              "candidate_id": "capture-07:echo:00",
+              "capture_id": "capture-07",
+              "observed_delay_s": 0.004857810900807641,
+              "predicted_delay_s": 0.004859904313652747,
+              "reflection_point_m": [
+                3.0560878668834097,
+                2.2276593284871584,
+                3.1327691240222255
+              ],
+              "residual_s": -2.0934128451060782e-06
+            },
+            {
+              "candidate_id": "capture-09:echo:01",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.00618166392485859,
+              "predicted_delay_s": 0.0062169124351167376,
+              "reflection_point_m": [
+                3.4681170020595133,
+                1.7121042935582151,
+                2.825572526553003
+              ],
+              "residual_s": -3.5248510258147243e-05
+            },
+            {
+              "candidate_id": "capture-10:echo:03",
+              "capture_id": "capture-10",
+              "observed_delay_s": 0.008577857854986357,
+              "predicted_delay_s": 0.008608624693163695,
+              "reflection_point_m": [
+                2.239053558790455,
+                1.5407568553865925,
+                3.083082804020222
+              ],
+              "residual_s": -3.076683817733808e-05
+            }
+          ],
+          "surface_id": "reflector-da71772503a2",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.0007379523270997019,
+                -2.7131091038810518e-05,
+                7.596929250768701e-05
+              ],
+              [
+                -2.7131091038810332e-05,
+                0.0010641351205896642,
+                0.0005520509061266278
+              ],
+              [
+                7.596929250768725e-05,
+                0.0005520509061266275,
+                0.0005652499604183459
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.012916957996750987,
+            "offset_std_m": 0.030748470111565895,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              1.8561040821691768,
+              1.2335442803600996,
+              3.065477464461921
+            ],
+            [
+              3.5082032108849126,
+              0.6177106344089789,
+              2.393171233748803
+            ],
+            [
+              3.718587291732022,
+              1.8044969822211079,
+              2.7952486777656156
+            ],
+            [
+              3.0560878668834097,
+              2.2276593284871584,
+              3.1327691240222255
+            ]
+          ]
+        },
+        {
+          "confidence": {
+            "kind": "evidence_summary_not_probability",
+            "rms_residual_m": 0.02078810890420146,
+            "supporting_views": 7
+          },
+          "extent_status": "unknown",
+          "image_source_m": [
+            0.5322979785180676,
+            -0.08729315160195636,
+            2.702885048098344
+          ],
+          "kind": "unclassified_planar_reflector",
+          "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+          "normal": [
+            0.5626641505758042,
+            0.6414776336292788,
+            -0.5214551746892435
+          ],
+          "offset_m": 0.22718135785538168,
+          "support": [
+            {
+              "candidate_id": "capture-00:echo:00",
+              "capture_id": "capture-00",
+              "observed_delay_s": 0.0023965510347874865,
+              "predicted_delay_s": 0.0023810794840025693,
+              "reflection_point_m": [
+                0.7588122209860751,
+                0.6989791534340939,
+                1.2429727437255729
+              ],
+              "residual_s": 1.5471550784917215e-05
+            },
+            {
+              "candidate_id": "capture-01:echo:01",
+              "capture_id": "capture-01",
+              "observed_delay_s": 0.004397555704084898,
+              "predicted_delay_s": 0.004334779262038158,
+              "reflection_point_m": [
+                2.099178852952602,
+                0.2846854602777298,
+                2.179613395174062
+              ],
+              "residual_s": 6.277644204673999e-05
+            },
+            {
+              "candidate_id": "capture-02:echo:04",
+              "capture_id": "capture-02",
+              "observed_delay_s": 0.007639061497575504,
+              "predicted_delay_s": 0.007614651318234486,
+              "reflection_point_m": [
+                1.5743773613364866,
+                0.7910512028456997,
+                2.2362535710241507
+              ],
+              "residual_s": 2.441017934101848e-05
+            },
+            {
+              "candidate_id": "capture-03:echo:00",
+              "capture_id": "capture-03",
+              "observed_delay_s": 0.003984802015597369,
+              "predicted_delay_s": 0.0039641362131115875,
+              "reflection_point_m": [
+                0.7660171052897359,
+                1.706928414982712,
+                2.4906942523116955
+              ],
+              "residual_s": 2.066580248578139e-05
+            },
+            {
+              "candidate_id": "capture-05:echo:01",
+              "capture_id": "capture-05",
+              "observed_delay_s": 0.0051051095605371116,
+              "predicted_delay_s": 0.005088695037152178,
+              "reflection_point_m": [
+                2.057602968230853,
+                0.6455609278356027,
+                2.578689463843816
+              ],
+              "residual_s": 1.641452338493367e-05
+            },
+            {
+              "candidate_id": "capture-09:echo:02",
+              "capture_id": "capture-09",
+              "observed_delay_s": 0.007705999683327839,
+              "predicted_delay_s": 0.007807351358768165,
+              "reflection_point_m": [
+                1.4965359520868842,
+                0.8171725002164631,
+                2.184394190385262
+              ],
+              "residual_s": -0.00010135167544032646
+            },
+            {
+              "candidate_id": "capture-11:echo:01",
+              "capture_id": "capture-11",
+              "observed_delay_s": 0.006584602988142251,
+              "predicted_delay_s": 0.006684440104591783,
+              "reflection_point_m": [
+                1.708277268229239,
+                0.6130231071466303,
+                2.1617306473658804
+              ],
+              "residual_s": -9.983711644953163e-05
+            }
+          ],
+          "surface_id": "reflector-81efbcfa7ff9",
+          "triangles": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "conditional_on": "associations and first-order point-source model",
+            "image_source_covariance_m2": [
+              [
+                0.00042936597140156435,
+                -9.096463673243675e-05,
+                0.0001524957709343504
+              ],
+              [
+                -9.096463673243658e-05,
+                0.0005634297418148955,
+                0.0002991933306585672
+              ],
+              [
+                0.00015249577093435048,
+                0.0002991933306585671,
+                0.0008696879563056663
+              ]
+            ],
+            "local_information_rank": 3,
+            "normal_angular_std_rad": 0.014416992174321715,
+            "offset_std_m": 0.030018602595337115,
+            "rank_deficient": false
+          },
+          "vertices_m": [
+            [
+              0.7588122209860751,
+              0.6989791534340939,
+              1.2429727437255729
+            ],
+            [
+              0.7660171052897359,
+              1.706928414982712,
+              2.4906942523116955
+            ],
+            [
+              2.057602968230853,
+              0.6455609278356027,
+              2.578689463843816
+            ],
+            [
+              2.099178852952602,
+              0.2846854602777298,
+              2.179613395174062
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "method": "image_source_consensus",
+  "observations": [
+    {
+      "candidates": [
+        {
+          "amplitude": 0.2464477131469322,
+          "candidate_id": "capture-00:echo:00",
+          "delay_s": 0.0023965510347874865,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3432045085626801,
+          "candidate_id": "capture-00:echo:01",
+          "delay_s": 0.004403555848841999,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2970494518288704,
+          "candidate_id": "capture-00:echo:02",
+          "delay_s": 0.00988560896681057,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.28211291485030954,
+          "candidate_id": "capture-00:echo:03",
+          "delay_s": 0.015119105998763786,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2347616320503829,
+          "candidate_id": "capture-00:echo:04",
+          "delay_s": 0.020911780658548353,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-00",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0001664921753664,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.08015762049850528,
+        "pilot_arrivals_receiver_s": [
+          0.18017384204643752,
+          0.4002102657944424,
+          0.6202485031431563,
+          0.8402856403416287,
+          1.0603200189410469,
+          1.2803563010567678,
+          1.5003945105390093
+        ],
+        "pilot_residual_max_s": 1.4857898449349705e-06,
+        "pilot_residual_rms_s": 9.088573023790178e-07,
+        "pilot_residuals_s": [
+          -4.276696043969963e-07,
+          -6.322001800951327e-07,
+          9.768699531509384e-07,
+          1.4857898449349705e-06,
+          -7.638893173567141e-07,
+          -1.1100521770668337e-06,
+          4.7115148382737004e-07
+        ],
+        "relative_rate_ppm": 166.49217536635064
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.1801707768998682,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.30112688111432323,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.775770335912473e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        0.8518914599520411,
+        1.0220741914121496,
+        0.6430655380351413
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003996507765256068
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.25702901794539634,
+          "candidate_id": "capture-01:echo:00",
+          "delay_s": 0.00273321297358936,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.28349072794282165,
+          "candidate_id": "capture-01:echo:01",
+          "delay_s": 0.004397555704084898,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.248319607436476,
+          "candidate_id": "capture-01:echo:02",
+          "delay_s": 0.006523114237394341,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.17347384052622541,
+          "candidate_id": "capture-01:echo:03",
+          "delay_s": 0.011562954079343726,
+          "delay_std_s": 4.7156700063525894e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.29813958321341383,
+          "candidate_id": "capture-01:echo:04",
+          "delay_s": 0.015088568943347131,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-01",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.000024530029568,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.09418190651143997,
+        "pilot_arrivals_receiver_s": [
+          0.19418508487400526,
+          0.41418882140489255,
+          0.6341939454134866,
+          0.8542018287812617,
+          1.0742069361399513,
+          1.2942106744838822,
+          1.5142165542399038
+        ],
+        "pilot_residual_max_s": 1.279447350066576e-06,
+        "pilot_residual_rms_s": 9.223749901413345e-07,
+        "pilot_residuals_s": [
+          7.253596084888514e-07,
+          -9.347160092043616e-07,
+          -1.207313920170705e-06,
+          1.279447350066576e-06,
+          9.901995348116088e-07,
+          -6.680630393329778e-07,
+          -1.849135227161014e-07
+        ],
+        "relative_rate_ppm": 24.530029568037293
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.19418397749271427,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.32455174719160135,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.825925419865388e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        3.721783911541959,
+        0.6698930323216776,
+        1.637732231835612
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003999617987688265
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.21007021744577026,
+          "candidate_id": "capture-02:echo:00",
+          "delay_s": 0.001841081936072793,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.30197406683543976,
+          "candidate_id": "capture-02:echo:01",
+          "delay_s": 0.0054393262929905385,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.225851459900052,
+          "candidate_id": "capture-02:echo:02",
+          "delay_s": 0.006076201474005139,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2637034706458645,
+          "candidate_id": "capture-02:echo:03",
+          "delay_s": 0.0069025879025677575,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2904287504184229,
+          "candidate_id": "capture-02:echo:04",
+          "delay_s": 0.007639061497575504,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.32883753111740904,
+          "candidate_id": "capture-02:echo:05",
+          "delay_s": 0.011332538194969223,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-02",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 0.9997874879950418,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.07261052753817546,
+        "pilot_arrivals_receiver_s": [
+          0.17258856314000393,
+          0.39254263293073005,
+          0.612497258808904,
+          0.8324494712079825,
+          1.0524007609531596,
+          1.2723549463935477,
+          1.4923094954665264
+        ],
+        "pilot_residual_max_s": 1.5048201569278774e-06,
+        "pilot_residual_rms_s": 9.30812279767269e-07,
+        "pilot_residuals_s": [
+          -7.131976757224212e-07,
+          1.0923414123231723e-07,
+          1.4877534060264708e-06,
+          4.5279357530070286e-07,
+          -1.5048201569278774e-06,
+          -5.667386777652439e-07,
+          7.349753916585655e-07
+        ],
+        "relative_rate_ppm": -212.51200495819856
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.17259354318533293,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.31224963892463353,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.740105336122136e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        4.65243241501127,
+        3.385471861819066,
+        0.8579349900276895
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.0040042677546023725
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.37830768180129204,
+          "candidate_id": "capture-03:echo:00",
+          "delay_s": 0.003984802015597369,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3578694472629272,
+          "candidate_id": "capture-03:echo:01",
+          "delay_s": 0.004965200475951837,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3102794508174235,
+          "candidate_id": "capture-03:echo:02",
+          "delay_s": 0.009072680552507071,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3586404866498656,
+          "candidate_id": "capture-03:echo:03",
+          "delay_s": 0.018393426184377105,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-03",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0000146263358751,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.06491549384880285,
+        "pilot_arrivals_receiver_s": [
+          0.16491764417890875,
+          0.38491978728622334,
+          0.6049225761659663,
+          0.8249263524790026,
+          1.0449304994612443,
+          1.264933546388515,
+          1.4849358630886187
+        ],
+        "pilot_residual_max_s": 8.159042091948621e-07,
+        "pilot_residual_rms_s": 5.627759609935077e-07,
+        "pilot_residuals_s": [
+          6.87696518397729e-07,
+          -3.869900595532272e-07,
+          -8.159042091948621e-07,
+          -2.5738506537198447e-07,
+          6.718032838914922e-07,
+          5.009366621511191e-07,
+          -4.00157126767553e-07
+        ],
+        "relative_rate_ppm": 14.626335875123075
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.16491662116425132,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.3089800885189965,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.579442518856099e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        1.024409458118891,
+        3.690562097387969,
+        2.2561029301150843
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003999664686765354
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.2993478318449493,
+          "candidate_id": "capture-04:echo:00",
+          "delay_s": 0.0015787094405701125,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.4479480459541213,
+          "candidate_id": "capture-04:echo:01",
+          "delay_s": 0.008939376943642895,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.27636995631667616,
+          "candidate_id": "capture-04:echo:02",
+          "delay_s": 0.010188645617435519,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3863344275398497,
+          "candidate_id": "capture-04:echo:03",
+          "delay_s": 0.015480729827827343,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-04",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0000932830288718,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.056175184967987624,
+        "pilot_arrivals_receiver_s": [
+          0.1561844886351844,
+          0.3762050353432147,
+          0.5962255725347883,
+          0.8162460997744926,
+          1.0362666171470647,
+          1.2562871257267556,
+          1.4763076213280153
+        ],
+        "pilot_residual_max_s": 2.554097022766655e-08,
+        "pilot_residual_rms_s": 1.7259354808302107e-08,
+        "pilot_residuals_s": [
+          -2.4635690404339883e-08,
+          -1.9401191764245596e-10,
+          1.4731209807550272e-08,
+          1.9704562315148166e-08,
+          1.481078282239423e-08,
+          1.1241219066704389e-09,
+          -2.554097022766655e-08
+        ],
+        "relative_rate_ppm": 93.2830288717934
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.15618178880121175,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.32513664472035775,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.666613560806157e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        2.722757074639855,
+        2.9961485925485447,
+        0.4185111726866632
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003997275784460016
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.2907604005192991,
+          "candidate_id": "capture-05:echo:00",
+          "delay_s": 0.003473224321128066,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.22425083179291033,
+          "candidate_id": "capture-05:echo:01",
+          "delay_s": 0.0051051095605371116,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.33866135993397645,
+          "candidate_id": "capture-05:echo:02",
+          "delay_s": 0.007582140992790728,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.32660749990155624,
+          "candidate_id": "capture-05:echo:03",
+          "delay_s": 0.010983933882552099,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3311312564831653,
+          "candidate_id": "capture-05:echo:04",
+          "delay_s": 0.011768483268700653,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-05",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0000594741817497,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.08663784095002093,
+        "pilot_arrivals_receiver_s": [
+          0.1866443678875756,
+          0.4066570694691129,
+          0.6266687481443606,
+          0.846684098115966,
+          1.06669498688074,
+          1.2867086915737596,
+          1.5067233272255445
+        ],
+        "pilot_residual_max_s": 1.208863805168825e-06,
+        "pilot_residual_rms_s": 8.932445897731159e-07,
+        "pilot_residuals_s": [
+          5.795193797064613e-07,
+          1.9678093210462322e-07,
+          -1.208863805168825e-06,
+          1.0567878153677768e-06,
+          -1.138767395492124e-06,
+          -5.183943609932129e-07,
+          1.0329374389161927e-06
+        ],
+        "relative_rate_ppm": 59.47418174967467
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.18664246249068903,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.3176307187503116,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.735177511532588e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        4.442559662316905,
+        1.7914466715595465,
+        2.3844980778315406
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003998674201343923
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.3889893588945952,
+          "candidate_id": "capture-06:echo:00",
+          "delay_s": 0.0034192206059700586,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3568862484254265,
+          "candidate_id": "capture-06:echo:01",
+          "delay_s": 0.004600896438406083,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.33367829183455117,
+          "candidate_id": "capture-06:echo:02",
+          "delay_s": 0.007378325557747266,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.32653738835804685,
+          "candidate_id": "capture-06:echo:03",
+          "delay_s": 0.012040622860927011,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.30853813986893097,
+          "candidate_id": "capture-06:echo:04",
+          "delay_s": 0.021458897561645752,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-06",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0001691169577303,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.07747335406950542,
+        "pilot_arrivals_receiver_s": [
+          0.1774908776972339,
+          0.3975262470712502,
+          0.6175638943462483,
+          0.8376026834699811,
+          1.0576406166440215,
+          1.2776764190227452,
+          1.4977124424501855
+        ],
+        "pilot_residual_max_s": 1.5279559404390852e-06,
+        "pilot_residual_rms_s": 9.707362548174366e-07,
+        "pilot_residuals_s": [
+          6.119319554409586e-07,
+          -1.2244247288850652e-06,
+          -7.828804314824467e-07,
+          8.005126007626373e-07,
+          1.5279559404390852e-06,
+          1.246039635915963e-07,
+          -1.0576992968136523e-06
+        ],
+        "relative_rate_ppm": 169.11695773025315
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.17748632438541462,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.28064223749129097,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.892182931550542e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        0.602552838508184,
+        2.111970134470696,
+        1.4900583476208085
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003996059286577621
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.31577908671646165,
+          "candidate_id": "capture-07:echo:00",
+          "delay_s": 0.004857810900807641,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2939699025777508,
+          "candidate_id": "capture-07:echo:01",
+          "delay_s": 0.009480207285744597,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3272502982413939,
+          "candidate_id": "capture-07:echo:02",
+          "delay_s": 0.012453257326396018,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-07",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 0.9997962849951602,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.06612084359224088,
+        "pilot_arrivals_receiver_s": [
+          0.1661010665325212,
+          0.3860563601048992,
+          0.606010457643616,
+          0.8259648169181418,
+          1.0459202381926624,
+          1.2658763509557949,
+          1.4858328509723042
+        ],
+        "pilot_residual_max_s": 1.282686935999422e-06,
+        "pilot_residual_rms_s": 8.468506221164565e-07,
+        "pilot_residuals_s": [
+          5.944407643065919e-07,
+          7.053142070390095e-07,
+          -3.7984601142238006e-07,
+          -1.2032704208575495e-06,
+          -9.646948353481122e-07,
+          -3.463063813491374e-08,
+          1.282686935999422e-06
+        ],
+        "relative_rate_ppm": -203.71500483984394
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.16610458213990453,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.30155861096629966,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.624490808245536e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        3.1648654012777664,
+        3.7976305559090613,
+        1.976917951968198
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.004004110885596704
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.3044712876781762,
+          "candidate_id": "capture-08:echo:00",
+          "delay_s": 0.006701917693030649,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3648246766536213,
+          "candidate_id": "capture-08:echo:01",
+          "delay_s": 0.0070617635140562025,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.36789208475479473,
+          "candidate_id": "capture-08:echo:02",
+          "delay_s": 0.008397255909386492,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.38506775561558887,
+          "candidate_id": "capture-08:echo:03",
+          "delay_s": 0.010478883141989309,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.23697676291440709,
+          "candidate_id": "capture-08:echo:04",
+          "delay_s": 0.01356599688054457,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.31375048885363116,
+          "candidate_id": "capture-08:echo:05",
+          "delay_s": 0.018157047999966213,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-08",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 0.9999278983621182,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.08315303197419895,
+        "pilot_arrivals_receiver_s": [
+          0.1831459539287818,
+          0.40312882663562627,
+          0.623114027461386,
+          0.8430998333852673,
+          1.0630829804900102,
+          1.2830656476747544,
+          1.503050373530038
+        ],
+        "pilot_residual_max_s": 1.5986558584701882e-06,
+        "pilot_residual_rms_s": 8.493564253455236e-07,
+        "pilot_residuals_s": [
+          1.3211837102122814e-07,
+          -1.132814450466313e-06,
+          -6.962835685797586e-08,
+          1.5986558584701882e-06,
+          6.081209353858696e-07,
+          -8.623339862179336e-07,
+          -2.741183686705284e-07
+        ],
+        "relative_rate_ppm": -72.10163788184954
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.18314738278287704,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.31628861917803847,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.85121452648501e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        2.3762290993076416,
+        2.049895250803779,
+        2.1222364322685054
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.004001561085023063
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.22565729103898546,
+          "candidate_id": "capture-09:echo:00",
+          "delay_s": 0.0018366969047212205,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.382923367640006,
+          "candidate_id": "capture-09:echo:01",
+          "delay_s": 0.00618166392485859,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.34259613729899496,
+          "candidate_id": "capture-09:echo:02",
+          "delay_s": 0.007705999683327839,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3380051836142903,
+          "candidate_id": "capture-09:echo:03",
+          "delay_s": 0.008103793582447193,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2852613735435552,
+          "candidate_id": "capture-09:echo:04",
+          "delay_s": 0.008613275365550436,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.23615632185846408,
+          "candidate_id": "capture-09:echo:05",
+          "delay_s": 0.011134798736473413,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-09",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 0.9999783782188844,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.0931156480342112,
+        "pilot_arrivals_receiver_s": [
+          0.1931132643888121,
+          0.4131077296115609,
+          0.6331042346372735,
+          0.8531007702297664,
+          1.0730952821805368,
+          1.2930886672733692,
+          1.5130845600426277
+        ],
+        "pilot_residual_max_s": 1.5547492030476562e-06,
+        "pilot_residual_rms_s": 8.808187321671579e-07,
+        "pilot_residuals_s": [
+          -2.2146728753669187e-07,
+          -9.99452693273284e-07,
+          2.6236486472264176e-07,
+          1.5547492030476562e-06,
+          8.23491818957578e-07,
+          -1.034623503093357e-06,
+          -3.8506239929958497e-07
+        ],
+        "relative_rate_ppm": -21.621781115643834
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.1931141846390906,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.304115256679315,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.619287444839806e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        4.161312362119726,
+        3.316761604480972,
+        0.7514883680416985
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.004000698798100233
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.24683421339372486,
+          "candidate_id": "capture-10:echo:00",
+          "delay_s": 0.0028572930213090647,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.31501012600871936,
+          "candidate_id": "capture-10:echo:01",
+          "delay_s": 0.005012819263953259,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.22203423910094952,
+          "candidate_id": "capture-10:echo:02",
+          "delay_s": 0.007595740468803932,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.28457230154663526,
+          "candidate_id": "capture-10:echo:03",
+          "delay_s": 0.008577857854986357,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.2533011563206865,
+          "candidate_id": "capture-10:echo:04",
+          "delay_s": 0.009311792336838405,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.3271778790359491,
+          "candidate_id": "capture-10:echo:05",
+          "delay_s": 0.019489413570491738,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-10",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0000394019631056,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.07333206192978109,
+        "pilot_arrivals_receiver_s": [
+          0.17333537295243703,
+          0.39334561767300597,
+          0.6133537145241438,
+          0.833360917534599,
+          1.0533717980498922,
+          1.27337790688404,
+          1.493388724334075
+        ],
+        "pilot_residual_max_s": 1.4374014676299396e-06,
+        "pilot_residual_rms_s": 9.601794549721056e-07,
+        "pilot_residuals_s": [
+          -6.291736546204518e-07,
+          9.471150310691456e-07,
+          3.755342855571442e-07,
+          -1.0898871424247503e-06,
+          1.1221962676888353e-06,
+          -1.4374014676299396e-06,
+          7.116166842457972e-07
+        ],
+        "relative_rate_ppm": 39.40196310558974
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.1733351252232293,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.30800232654747334,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.7720372245229875e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        1.1168219118083624,
+        3.255493897652555,
+        0.9248402961237017
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.003999123131688006
+      },
+      "status": "ok"
+    },
+    {
+      "candidates": [
+        {
+          "amplitude": 0.3426045818821687,
+          "candidate_id": "capture-11:echo:00",
+          "delay_s": 0.004645956367995358,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.30349802976768236,
+          "candidate_id": "capture-11:echo:01",
+          "delay_s": 0.006584602988142251,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.34616457217792823,
+          "candidate_id": "capture-11:echo:02",
+          "delay_s": 0.008389507740798975,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.26482107263185506,
+          "candidate_id": "capture-11:echo:03",
+          "delay_s": 0.012231207242328831,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        },
+        {
+          "amplitude": 0.4228427513362332,
+          "candidate_id": "capture-11:echo:04",
+          "delay_s": 0.013814295691814072,
+          "delay_std_s": 3.846153846153846e-05,
+          "repeat_count": 7,
+          "repeat_support": 7
+        }
+      ],
+      "capture_id": "capture-11",
+      "clock": {
+        "absolute_source_rate_calibrated": false,
+        "alpha": 1.0001397124661449,
+        "alpha_std": 1.7896045123542957e-06,
+        "correction": "affine_waveform_resampling",
+        "intercept_includes_propagation": true,
+        "intercept_s": 0.07023117956940847,
+        "pilot_arrivals_receiver_s": [
+          0.1702462274522696,
+          0.3902743604402465,
+          0.6103077489256862,
+          0.8303359467780284,
+          1.0503691667674873,
+          1.2703976166391535,
+          1.4904304603028822
+        ],
+        "pilot_residual_max_s": 1.5271183282927758e-06,
+        "pilot_residual_rms_s": 1.2054943795600482e-06,
+        "pilot_residuals_s": [
+          1.076636246655216e-06,
+          -1.5271183282927758e-06,
+          1.1246245593676818e-06,
+          -1.4142656502569295e-06,
+          1.068981256846513e-06,
+          -1.2178896287018404e-06,
+          8.890315481568933e-07
+        ],
+        "relative_rate_ppm": 139.71246614485898
+      },
+      "diagnostics": [
+        {
+          "code": "direct_path_assumed",
+          "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+        }
+      ],
+      "direct_arrival_receiver_s": 0.1702419734769286,
+      "direct_std_s": 3.846153846153846e-05,
+      "input_diagnostics": [],
+      "input_format": "unspecified_lossless",
+      "provenance": "simulated",
+      "quality": {
+        "clipped_fraction": 0.0,
+        "direct_response_amplitude": 0.3014557626827146,
+        "minimum_resolved_excess_delay_s": 0.00035,
+        "noise_response_amplitude": 4.782728625209844e-06,
+        "usable_band_hz": [
+          2000.0,
+          15000.0
+        ]
+      },
+      "receiver_position_m": [
+        3.438958325187896,
+        1.6436739812738583,
+        1.3653172424431488
+      ],
+      "receiver_position_std_m": 0.01,
+      "recording_sha256": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae",
+      "response": {
+        "delay_unit": "source_buffer_seconds",
+        "sample_rate_hz": 48000,
+        "start_delay_s": -0.0039968231047574874
+      },
+      "status": "ok"
+    }
+  ],
+  "provenance": {
+    "coordinates": "right-handed, metres, z up",
+    "evidence_classes": [
+      "simulated"
+    ],
+    "geometry": "inferred from recording-derived excess delays",
+    "implementation_sha256": "dfd52f712d7ef131fbdf62932c48a947d71656d9d4d8e30b43b6029fd5a64640",
+    "inference": [
+      "simulated"
+    ],
+    "method": "mapper",
+    "physical_validation": false,
+    "poses": "supplied acoustic-center positions",
+    "recordings": [
+      {
+        "capture_id": "capture-00",
+        "sha256": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65"
+      },
+      {
+        "capture_id": "capture-01",
+        "sha256": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d"
+      },
+      {
+        "capture_id": "capture-02",
+        "sha256": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698"
+      },
+      {
+        "capture_id": "capture-03",
+        "sha256": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc"
+      },
+      {
+        "capture_id": "capture-04",
+        "sha256": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc"
+      },
+      {
+        "capture_id": "capture-05",
+        "sha256": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced"
+      },
+      {
+        "capture_id": "capture-06",
+        "sha256": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14"
+      },
+      {
+        "capture_id": "capture-07",
+        "sha256": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563"
+      },
+      {
+        "capture_id": "capture-08",
+        "sha256": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918"
+      },
+      {
+        "capture_id": "capture-09",
+        "sha256": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242"
+      },
+      {
+        "capture_id": "capture-10",
+        "sha256": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c"
+      },
+      {
+        "capture_id": "capture-11",
+        "sha256": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae"
+      }
+    ],
+    "runtime_versions": {
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.18.1"
+    },
+    "software_version": "0.1.0"
+  },
+  "result_id": "result-053b4353c40b6352fb7b",
+  "runtime_s": 0.6215419999971346,
+  "schema_version": "1.0",
+  "score": {
+    "clutter_cost": 5.0,
+    "kind": "dimensionless_full_covariance_ranking_not_posterior",
+    "miss_cost": 1.0,
+    "null": 300.0,
+    "plane_cost": 7.0,
+    "selected": 78.26695015998064
+  },
+  "search": {
+    "anchor_triples": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        0,
+        6,
+        10
+      ],
+      [
+        1,
+        5,
+        11
+      ],
+      [
+        2,
+        7,
+        9
+      ],
+      [
+        3,
+        6,
+        10
+      ],
+      [
+        4,
+        9,
+        10
+      ],
+      [
+        5,
+        8,
+        11
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        4,
+        7,
+        9
+      ]
+    ],
+    "complete": false,
+    "global_optimality_proven": false,
+    "max_candidates_per_view": 18,
+    "max_proposals": 24000,
+    "max_refinements": 72,
+    "proposals": 700,
+    "refined": 72
+  },
+  "session_id": "sim-room-1",
+  "shared_image_source_covariance_m2": [
+    [
+      0.0002139173677686184,
+      0.0003534076553620604,
+      0.00013621673507999528,
+      1.3028494452017148e-05,
+      3.253576567841578e-05,
+      6.152191566519979e-05,
+      -2.0861668235055746e-07,
+      6.490290829624858e-06,
+      -5.1213402659764566e-05,
+      1.3974450481292774e-05,
+      6.353069737821241e-05,
+      1.8379612990727207e-05,
+      1.4797213332296833e-06,
+      -1.109223568219447e-05,
+      -2.8088538712814284e-06,
+      1.4272198274731892e-05,
+      -7.135708943962133e-05,
+      -1.1440328339226814e-06
+    ],
+    [
+      0.0003534076553620586,
+      0.0019751681198858367,
+      0.0003212742988591565,
+      8.282535142928354e-05,
+      0.00020677087338490194,
+      7.478188563223737e-05,
+      4.283162930781884e-05,
+      7.767536598778781e-05,
+      -3.645575388944958e-05,
+      8.347821799835148e-05,
+      4.3175745312490285e-05,
+      -2.5848540912057682e-05,
+      4.028025076042446e-05,
+      3.518516748920647e-05,
+      8.784300169212762e-05,
+      7.661599812306491e-05,
+      -1.933366115007933e-05,
+      -4.642067118865572e-05
+    ],
+    [
+      0.00013621673507999398,
+      0.0003212742988591477,
+      0.003718048302999394,
+      6.859146612917844e-05,
+      8.722490288009987e-05,
+      4.8539032445850474e-05,
+      2.8861947901817318e-05,
+      -0.00013247183332633198,
+      1.420922042758989e-05,
+      5.114212189752519e-05,
+      3.488159733067788e-05,
+      0.0008658635742659307,
+      5.3113645580073155e-05,
+      -3.159626226561886e-05,
+      0.00015006352809936383,
+      7.085652288775356e-07,
+      1.3513342201089106e-05,
+      0.000520344207993658
+    ],
+    [
+      1.3028494452017119e-05,
+      8.282535142928333e-05,
+      6.85914661291781e-05,
+      0.0003565225650924264,
+      5.1428267472854645e-05,
+      8.353772880384085e-05,
+      1.5525123555252927e-05,
+      -8.942405566264547e-06,
+      1.702347580482826e-05,
+      9.574154038899514e-05,
+      7.960307956372356e-06,
+      6.971447027454537e-05,
+      2.9632744279191176e-05,
+      -6.074397924062658e-05,
+      2.767141885694295e-06,
+      6.892038444405805e-05,
+      -5.160094739730068e-06,
+      2.4634073359976092e-05
+    ],
+    [
+      3.253576567841558e-05,
+      0.00020677087338490186,
+      8.722490288010017e-05,
+      5.142826747285443e-05,
+      0.0005309979750956233,
+      0.00012186638447514945,
+      -1.1514265931931086e-06,
+      -7.751901877721045e-07,
+      8.485823349386e-06,
+      9.312662449084638e-06,
+      6.617674643555708e-07,
+      -5.678142130509737e-07,
+      -2.4172001497990664e-05,
+      0.00015282790082154498,
+      9.11702375359657e-05,
+      -1.0235145777535291e-05,
+      -1.7160461397838967e-05,
+      2.7415000791045978e-05
+    ],
+    [
+      6.152191566519967e-05,
+      7.478188563223686e-05,
+      4.8539032445849275e-05,
+      8.353772880384069e-05,
+      0.0001218663844751494,
+      0.00017828287219385724,
+      3.702247119328695e-06,
+      -1.6700316314674123e-05,
+      4.823938007501931e-05,
+      1.9739778434210366e-05,
+      3.974499571685575e-05,
+      5.595333553440808e-06,
+      -5.599396387319599e-05,
+      3.069132130982498e-05,
+      4.6688505235735204e-05,
+      4.722369277805888e-06,
+      -5.46975622441849e-05,
+      1.757361455127855e-05
+    ],
+    [
+      -2.0861668235056317e-07,
+      4.283162930781861e-05,
+      2.8861947901818812e-05,
+      1.5525123555253124e-05,
+      -1.1514265931930726e-06,
+      3.7022471193286605e-06,
+      0.00018314846273407822,
+      -6.043148852512156e-05,
+      -1.1148750025764093e-05,
+      5.8401948043770284e-05,
+      1.9074341592666966e-07,
+      2.7153488639811555e-05,
+      1.5387668132174786e-05,
+      -6.9627508326583e-05,
+      -9.457804138919857e-05,
+      5.294580040136371e-05,
+      -9.171956350410287e-06,
+      -5.408072462543244e-06
+    ],
+    [
+      6.490290829625008e-06,
+      7.76753659877894e-05,
+      -0.0001324718333263313,
+      -8.942405566264571e-06,
+      -7.751901877721211e-07,
+      -1.6700316314674143e-05,
+      -6.043148852512145e-05,
+      0.0003388799297539709,
+      -7.814201603766391e-05,
+      -8.375108234514083e-07,
+      -1.3697832297364449e-05,
+      -0.00011172581631944159,
+      -2.5852185174732308e-05,
+      9.436470616582823e-05,
+      -7.689128602827113e-05,
+      -4.789366136479723e-06,
+      -2.7234961349921334e-05,
+      -7.993954565867178e-05
+    ],
+    [
+      -5.121340265976501e-05,
+      -3.6455753889451445e-05,
+      1.420922042758572e-05,
+      1.7023475804828235e-05,
+      8.485823349385909e-06,
+      4.8239380075019095e-05,
+      -1.1148750025764173e-05,
+      -7.814201603766388e-05,
+      0.0001777514865757623,
+      -1.615234654522439e-06,
+      -3.487655685486205e-05,
+      3.168195406593713e-07,
+      5.599309641408275e-05,
+      -2.7125712725023194e-05,
+      1.5989575164962043e-05,
+      -6.5611583854962886e-06,
+      5.9804411643792904e-05,
+      1.958359538343491e-06
+    ],
+    [
+      1.3974450481292716e-05,
+      8.347821799835142e-05,
+      5.1142121897524924e-05,
+      9.574154038899529e-05,
+      9.312662449084955e-06,
+      1.9739778434210536e-05,
+      5.8401948043770114e-05,
+      -8.375108234514147e-07,
+      -1.6152346545223603e-06,
+      0.00048310675117217906,
+      4.049673183196055e-05,
+      0.00013504278737642004,
+      3.6882284608185215e-05,
+      -6.96901627078248e-05,
+      -9.291184524380436e-05,
+      1.384295885739243e-05,
+      5.428733916146239e-06,
+      -4.108030298707169e-06
+    ],
+    [
+      6.353069737821257e-05,
+      4.3175745312490895e-05,
+      3.488159733067802e-05,
+      7.960307956372417e-06,
+      6.617674643556956e-07,
+      3.974499571685584e-05,
+      1.907434159266341e-07,
+      -1.3697832297364359e-05,
+      -3.4876556854862036e-05,
+      4.0496731831960504e-05,
+      0.00012640902716264528,
+      3.0498468021691628e-05,
+      -6.023187500410047e-05,
+      2.85858661033024e-05,
+      4.447085005919298e-05,
+      -7.972443606826995e-06,
+      1.7661130953193607e-05,
+      -1.1527010703862956e-06
+    ],
+    [
+      1.837961299072623e-05,
+      -2.584854091206267e-05,
+      0.0008658635742659148,
+      6.971447027454537e-05,
+      -5.678142130509656e-07,
+      5.595333553441438e-06,
+      2.7153488639810684e-05,
+      -0.00011172581631944153,
+      3.168195406603972e-07,
+      0.00013504278737641926,
+      3.0498468021691936e-05,
+      0.0024488241957321363,
+      6.923935109968767e-05,
+      -0.00014277775206218325,
+      0.00037546094067896104,
+      4.971875383684513e-06,
+      4.677639203425691e-06,
+      7.534896144562533e-05
+    ],
+    [
+      1.4797213332293354e-06,
+      4.028025076042273e-05,
+      5.311364558007082e-05,
+      2.9632744279191294e-05,
+      -2.4172001497990867e-05,
+      -5.599396387319612e-05,
+      1.5387668132174762e-05,
+      -2.5852185174732348e-05,
+      5.5993096414082864e-05,
+      3.688228460818524e-05,
+      -6.023187500410044e-05,
+      6.923935109968929e-05,
+      0.0002739937187323043,
+      -0.00034899531155530814,
+      -0.0004317817330543685,
+      3.255056232325628e-05,
+      6.580768477678426e-05,
+      -1.5058535164515739e-05
+    ],
+    [
+      -1.1092235682194333e-05,
+      3.5185167489208886e-05,
+      -3.159626226561543e-05,
+      -6.074397924062674e-05,
+      0.00015282790082154528,
+      3.0691321309824994e-05,
+      -6.96275083265828e-05,
+      9.436470616582851e-05,
+      -2.7125712725023292e-05,
+      -6.969016270782504e-05,
+      2.8585866103302224e-05,
+      -0.00014277775206218707,
+      -0.0003489953115553079,
+      0.0013692989424929553,
+      0.0010157677983979464,
+      -9.182285253018252e-05,
+      8.864285099863915e-06,
+      -4.8564721290427706e-05
+    ],
+    [
+      -2.8088538712808392e-06,
+      8.784300169213342e-05,
+      0.00015006352809936537,
+      2.7671418856940185e-06,
+      9.117023753596712e-05,
+      4.6688505235735536e-05,
+      -9.457804138919853e-05,
+      -7.689128602827078e-05,
+      1.5989575164961935e-05,
+      -9.291184524380478e-05,
+      4.447085005919272e-05,
+      0.0003754609406789499,
+      -0.0004317817330543688,
+      0.001015767798397949,
+      0.00400088283304661,
+      -0.000104271865670725,
+      1.7441835650224136e-05,
+      0.00038509986350595947
+    ],
+    [
+      1.4272198274731865e-05,
+      7.661599812306467e-05,
+      7.085652288795448e-07,
+      6.892038444405813e-05,
+      -1.0235145777535359e-05,
+      4.722369277805921e-06,
+      5.2945800401363686e-05,
+      -4.7893661364798935e-06,
+      -6.56115838549624e-06,
+      1.3842958857392478e-05,
+      -7.972443606826981e-06,
+      4.9718753836851564e-06,
+      3.255056232325641e-05,
+      -9.182285253018274e-05,
+      -0.00010427186567072517,
+      0.00026084224665778784,
+      -3.2146765863620976e-05,
+      -0.00014064134126764622
+    ],
+    [
+      -7.135708943962148e-05,
+      -1.933366115008012e-05,
+      1.3513342201088268e-05,
+      -5.1600947397298955e-06,
+      -1.716046139783898e-05,
+      -5.469756224418492e-05,
+      -9.171956350410272e-06,
+      -2.723496134992124e-05,
+      5.980441164379282e-05,
+      5.428733916146249e-06,
+      1.7661130953193692e-05,
+      4.677639203425461e-06,
+      6.58076847767842e-05,
+      8.864285099863666e-06,
+      1.7441835650223695e-05,
+      -3.214676586362098e-05,
+      0.00018428466311543097,
+      -6.474775737888816e-05
+    ],
+    [
+      -1.1440328339224985e-06,
+      -4.6420671188655496e-05,
+      0.0005203442079936575,
+      2.463407335997647e-05,
+      2.741500079104645e-05,
+      1.7573614551278884e-05,
+      -5.408072462543304e-06,
+      -7.993954565867209e-05,
+      1.958359538343978e-06,
+      -4.1080302987071386e-06,
+      -1.1527010703863104e-06,
+      7.534896144562667e-05,
+      -1.5058535164515481e-05,
+      -4.8564721290427584e-05,
+      0.00038509986350595816,
+      -0.0001406413412676462,
+      -6.474775737888827e-05,
+      0.0015703296751059636
+    ]
+  ],
+  "status": "partial",
+  "surfaces": [
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.0028865315177173984,
+        "supporting_views": 11
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        9.525426771486678,
+        1.7182609195034477,
+        1.2496417240863018
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        0.9999969749147172,
+        0.0024592343072764337,
+        -4.824972906052457e-05
+      ],
+      "offset_m": 5.816838650533888,
+      "support": [
+        {
+          "candidate_id": "capture-00:echo:04",
+          "capture_id": "capture-00",
+          "observed_delay_s": 0.020911780658548353,
+          "predicted_delay_s": 0.02092701699732442,
+          "reflection_point_m": [
+            5.813411121914235,
+            1.420313665370197,
+            0.9900451219619615
+          ],
+          "residual_s": -1.5236338776068031e-05
+        },
+        {
+          "candidate_id": "capture-02:echo:02",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.006076201474005139,
+          "predicted_delay_s": 0.006068347822594888,
+          "reflection_point_m": [
+            5.809550020260616,
+            2.9895840376408542,
+            0.9509477712700171
+          ],
+          "residual_s": 7.853651410250767e-06
+        },
+        {
+          "candidate_id": "capture-03:echo:03",
+          "capture_id": "capture-03",
+          "observed_delay_s": 0.018393426184377105,
+          "predicted_delay_s": 0.018392061853633703,
+          "reflection_point_m": [
+            5.810592597201075,
+            2.5801309225286,
+            1.6894522015181184
+          ],
+          "residual_s": 1.3643307434016427e-06
+        },
+        {
+          "candidate_id": "capture-04:echo:03",
+          "capture_id": "capture-04",
+          "observed_delay_s": 0.015480729827827343,
+          "predicted_delay_s": 0.015481901227804205,
+          "reflection_point_m": [
+            5.810953047785295,
+            2.4160281777856043,
+            0.7958180443079956
+          ],
+          "residual_s": -1.1713999768618588e-06
+        },
+        {
+          "candidate_id": "capture-05:echo:02",
+          "capture_id": "capture-05",
+          "observed_delay_s": 0.007582140992790728,
+          "predicted_delay_s": 0.007592142644612621,
+          "reflection_point_m": [
+            5.8125994514930825,
+            1.7717201294005454,
+            2.078608050365461
+          ],
+          "residual_s": -1.0001651821892402e-05
+        },
+        {
+          "candidate_id": "capture-06:echo:04",
+          "capture_id": "capture-06",
+          "observed_delay_s": 0.021458897561645752,
+          "predicted_delay_s": 0.021467242932283935,
+          "reflection_point_m": [
+            5.8122928360258355,
+            1.8820977121981697,
+            1.3496878673132637
+          ],
+          "residual_s": -8.34537063818322e-06
+        },
+        {
+          "candidate_id": "capture-07:echo:02",
+          "capture_id": "capture-07",
+          "observed_delay_s": 0.012453257326396018,
+          "predicted_delay_s": 0.012446165865422493,
+          "reflection_point_m": [
+            5.809724125336233,
+            2.932983773449193,
+            1.6745007966015188
+          ],
+          "residual_s": 7.091460973525712e-06
+        },
+        {
+          "candidate_id": "capture-08:echo:05",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.018157047999966213,
+          "predicted_delay_s": 0.01816422865469355,
+          "reflection_point_m": [
+            5.81228920148577,
+            1.8905045685838715,
+            1.702848411452629
+          ],
+          "residual_s": -7.18065472733731e-06
+        },
+        {
+          "candidate_id": "capture-09:echo:04",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.008613275365550436,
+          "predicted_delay_s": 0.008608223567203973,
+          "reflection_point_m": [
+            5.809951382635602,
+            2.8254688388059175,
+            0.9045938013527293
+          ],
+          "residual_s": 5.051798346462563e-06
+        },
+        {
+          "candidate_id": "capture-10:echo:05",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.019489413570491738,
+          "predicted_delay_s": 0.019491148805530236,
+          "reflection_point_m": [
+            5.811014036232251,
+            2.397317415364115,
+            1.1061641103101612
+          ],
+          "residual_s": -1.7352350384983173e-06
+        },
+        {
+          "candidate_id": "capture-11:echo:04",
+          "capture_id": "capture-11",
+          "observed_delay_s": 0.013814295691814072,
+          "predicted_delay_s": 0.013827783283680084,
+          "reflection_point_m": [
+            5.8128062144757155,
+            1.6727644213947501,
+            1.3202014109036524
+          ],
+          "residual_s": -1.3487591866012325e-05
+        }
+      ],
+      "surface_id": "reflector-4de59ede9fa1",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.0002139173677686184,
+            0.0003534076553620604,
+            0.00013621673507999528
+          ],
+          [
+            0.0003534076553620586,
+            0.0019751681198858367,
+            0.0003212742988591565
+          ],
+          [
+            0.00013621673507999398,
+            0.0003212742988591477,
+            0.003718048302999394
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.010159910985077892,
+        "offset_std_m": 0.01978517730595452,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          5.8125994514930825,
+          1.7717201294005454,
+          2.078608050365461
+        ],
+        [
+          5.813411121914235,
+          1.420313665370197,
+          0.9900451219619615
+        ],
+        [
+          5.810953047785295,
+          2.4160281777856043,
+          0.7958180443079956
+        ],
+        [
+          5.809951382635602,
+          2.8254688388059175,
+          0.9045938013527293
+        ],
+        [
+          5.809550020260616,
+          2.9895840376408542,
+          0.9509477712700171
+        ],
+        [
+          5.809724125336233,
+          2.932983773449193,
+          1.6745007966015188
+        ]
+      ]
+    },
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.001413465312870109,
+        "supporting_views": 11
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        2.0976135325995102,
+        1.7025805822050908,
+        5.369333256328513
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        -0.0005793332035131601,
+        0.0006264560561344547,
+        0.9999996359628582
+      ],
+      "offset_m": 3.3095152984813057,
+      "support": [
+        {
+          "candidate_id": "capture-00:echo:02",
+          "capture_id": "capture-00",
+          "observed_delay_s": 0.00988560896681057,
+          "predicted_delay_s": 0.009884102098456587,
+          "reflection_point_m": [
+            1.554704292784185,
+            1.4060030265632562,
+            3.309536395982996
+          ],
+          "residual_s": 1.5068683539825461e-06
+        },
+        {
+          "candidate_id": "capture-01:echo:02",
+          "capture_id": "capture-01",
+          "observed_delay_s": 0.006523114237394341,
+          "predicted_delay_s": 0.006526840369850773,
+          "reflection_point_m": [
+            2.9936978343307423,
+            1.132828101774831,
+            3.3105411851730535
+          ],
+          "residual_s": -3.7261324564320103e-06
+        },
+        {
+          "candidate_id": "capture-02:echo:03",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.0069025879025677575,
+          "predicted_delay_s": 0.0069012462112592555,
+          "reflection_point_m": [
+            3.263899918584782,
+            2.4708280701265375,
+            3.309859523780689
+          ],
+          "residual_s": 1.3416913085019522e-06
+        },
+        {
+          "candidate_id": "capture-03:echo:00",
+          "capture_id": "capture-03",
+          "observed_delay_s": 0.003984802015597369,
+          "predicted_delay_s": 0.003995278482536432,
+          "reflection_point_m": [
+            1.3871711686272885,
+            3.0185896440073514,
+            3.3084291234258565
+          ],
+          "residual_s": -1.0476466939063518e-05
+        },
+        {
+          "candidate_id": "capture-04:echo:02",
+          "capture_id": "capture-04",
+          "observed_delay_s": 0.010188645617435519,
+          "predicted_delay_s": 0.010186551395220225,
+          "reflection_point_m": [
+            2.3577127207348423,
+            2.240786556772217,
+            3.3094786502089266
+          ],
+          "residual_s": 2.0942222152941364e-06
+        },
+        {
+          "candidate_id": "capture-05:echo:00",
+          "capture_id": "capture-05",
+          "observed_delay_s": 0.003473224321128066,
+          "predicted_delay_s": 0.00347639398809628,
+          "reflection_point_m": [
+            3.715023974772263,
+            1.763875355272767,
+            3.310563749991327
+          ],
+          "residual_s": -3.16966696821408e-06
+        },
+        {
+          "candidate_id": "capture-07:echo:00",
+          "capture_id": "capture-07",
+          "observed_delay_s": 0.004857810900807641,
+          "predicted_delay_s": 0.0048552896866633265,
+          "reflection_point_m": [
+            2.7457165358530107,
+            2.974827761875336,
+            3.3092435890581546
+          ],
+          "residual_s": 2.5212141443143807e-06
+        },
+        {
+          "candidate_id": "capture-08:echo:00",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.006701917693030649,
+          "predicted_delay_s": 0.006699500819837967,
+          "reflection_point_m": [
+            2.274345413442192,
+            1.9228897894433212,
+            3.3096295011697583
+          ],
+          "residual_s": 2.4168731926820994e-06
+        },
+        {
+          "candidate_id": "capture-09:echo:02",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.007705999683327839,
+          "predicted_delay_s": 0.007704361133292324,
+          "reflection_point_m": [
+            3.018035314217934,
+            2.4225147853578,
+            3.3097473523608114
+          ],
+          "residual_s": 1.6385500355145174e-06
+        },
+        {
+          "candidate_id": "capture-10:echo:03",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.008577857854986357,
+          "predicted_delay_s": 0.008572549601233334,
+          "reflection_point_m": [
+            1.642937165055629,
+            2.4224817012711672,
+            3.308950732780639
+          ],
+          "residual_s": 5.30825375302281e-06
+        },
+        {
+          "candidate_id": "capture-11:echo:02",
+          "capture_id": "capture-11",
+          "observed_delay_s": 0.008389507740798975,
+          "predicted_delay_s": 0.008390770722564387,
+          "reflection_point_m": [
+            2.787461819827386,
+            1.6722851518404562,
+            3.310083759499533
+          ],
+          "residual_s": -1.2629817654121606e-06
+        }
+      ],
+      "surface_id": "reflector-b1b9e976003c",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.0003565225650924264,
+            5.1428267472854645e-05,
+            8.353772880384085e-05
+          ],
+          [
+            5.142826747285443e-05,
+            0.0005309979750956233,
+            0.00012186638447514945
+          ],
+          [
+            8.353772880384069e-05,
+            0.0001218663844751494,
+            0.00017828287219385724
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.007231833266269575,
+        "offset_std_m": 0.018499010836081686,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          2.9936978343307423,
+          1.132828101774831,
+          3.3105411851730535
+        ],
+        [
+          3.715023974772263,
+          1.763875355272767,
+          3.310563749991327
+        ],
+        [
+          3.263899918584782,
+          2.4708280701265375,
+          3.309859523780689
+        ],
+        [
+          2.7457165358530107,
+          2.974827761875336,
+          3.3092435890581546
+        ],
+        [
+          1.3871711686272885,
+          3.0185896440073514,
+          3.3084291234258565
+        ],
+        [
+          1.554704292784185,
+          1.4060030265632562,
+          3.309536395982996
+        ]
+      ]
+    },
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.0028635845362843543,
+        "supporting_views": 9
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        2.096860750984775,
+        1.7017636689565814,
+        -1.25311377811319
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        0.001254136266054804,
+        -0.0007045892788487001,
+        0.9999989653475518
+      ],
+      "offset_m": -0.00012359291522184778,
+      "support": [
+        {
+          "candidate_id": "capture-00:echo:00",
+          "capture_id": "capture-00",
+          "observed_delay_s": 0.0023965510347874865,
+          "predicted_delay_s": 0.002400639993287344,
+          "reflection_point_m": [
+            1.2746583857748859,
+            1.2528832828534577,
+            -0.0008394209634146055
+          ],
+          "residual_s": -4.088958499857357e-06
+        },
+        {
+          "candidate_id": "capture-01:echo:01",
+          "capture_id": "capture-01",
+          "observed_delay_s": 0.004397555704084898,
+          "predicted_delay_s": 0.004411214535981075,
+          "reflection_point_m": [
+            2.7996808713419647,
+            1.2554536755756538,
+            -0.002750197874948901
+          ],
+          "residual_s": -1.365883189617667e-05
+        },
+        {
+          "candidate_id": "capture-02:echo:00",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.001841081936072793,
+          "predicted_delay_s": 0.00184869802441935,
+          "reflection_point_m": [
+            3.6105132805437137,
+            2.6990157519406206,
+            -0.0027499738424301423
+          ],
+          "residual_s": -7.6160883465570695e-06
+        },
+        {
+          "candidate_id": "capture-04:echo:00",
+          "capture_id": "capture-04",
+          "observed_delay_s": 0.0015787094405701125,
+          "predicted_delay_s": 0.0015854184547169892,
+          "reflection_point_m": [
+            2.5655101441970825,
+            2.670954070143258,
+            -0.0014591681356025399
+          ],
+          "residual_s": -6.7090141468767375e-06
+        },
+        {
+          "candidate_id": "capture-06:echo:01",
+          "capture_id": "capture-06",
+          "observed_delay_s": 0.004600896438406083,
+          "predicted_delay_s": 0.0046036844688999825,
+          "reflection_point_m": [
+            1.4145517139304498,
+            1.8890661493500112,
+            -0.0005666183502570643
+          ],
+          "residual_s": -2.7880304938991685e-06
+        },
+        {
+          "candidate_id": "capture-08:echo:01",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.0070617635140562025,
+          "predicted_delay_s": 0.007070503866553469,
+          "reflection_point_m": [
+            2.200445623173972,
+            1.8308447392608989,
+            -0.0015932596466763371
+          ],
+          "residual_s": -8.740352497266755e-06
+        },
+        {
+          "candidate_id": "capture-09:echo:00",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.0018366969047212205,
+          "predicted_delay_s": 0.001845658090162437,
+          "reflection_point_m": [
+            3.384854409871168,
+            2.7093470333961447,
+            -0.0024596872584667917
+          ],
+          "residual_s": -8.961185441216457e-06
+        },
+        {
+          "candidate_id": "capture-10:echo:00",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.0028572930213090647,
+          "predicted_delay_s": 0.0028587363918440296,
+          "reflection_point_m": [
+            1.5330807100875006,
+            2.595567115168645,
+            -0.0002174764956641706
+          ],
+          "residual_s": -1.4433705349649675e-06
+        },
+        {
+          "candidate_id": "capture-11:echo:00",
+          "capture_id": "capture-11",
+          "observed_delay_s": 0.004645956367995358,
+          "predicted_delay_s": 0.004658384021521686,
+          "reflection_point_m": [
+            2.737935366996892,
+            1.674016189979446,
+            -0.002377845553251934
+          ],
+          "residual_s": -1.242765352632829e-05
+        }
+      ],
+      "surface_id": "reflector-9fb935b9aef1",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.00018314846273407822,
+            -6.043148852512156e-05,
+            -1.1148750025764093e-05
+          ],
+          [
+            -6.043148852512145e-05,
+            0.0003388799297539709,
+            -7.814201603766391e-05
+          ],
+          [
+            -1.1148750025764173e-05,
+            -7.814201603766388e-05,
+            0.0001777514865757623
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.009127078075069898,
+        "offset_std_m": 0.017983265531320396,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          3.6105132805437137,
+          2.6990157519406206,
+          -0.0027499738424301423
+        ],
+        [
+          3.384854409871168,
+          2.7093470333961447,
+          -0.0024596872584667917
+        ],
+        [
+          2.5655101441970825,
+          2.670954070143258,
+          -0.0014591681356025399
+        ],
+        [
+          1.5330807100875006,
+          2.595567115168645,
+          -0.0002174764956641706
+        ],
+        [
+          1.2746583857748859,
+          1.2528832828534577,
+          -0.0008394209634146055
+        ],
+        [
+          2.7996808713419647,
+          1.2554536755756538,
+          -0.002750197874948901
+        ]
+      ]
+    },
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.002306540854436657,
+        "supporting_views": 10
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        2.1014957418510116,
+        7.605741666586394,
+        1.2591182859673522
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        0.00025326878564614527,
+        0.9999987760084705,
+        0.0015439677726231992
+      ],
+      "offset_m": 4.655334190966544,
+      "support": [
+        {
+          "candidate_id": "capture-00:echo:03",
+          "capture_id": "capture-00",
+          "observed_delay_s": 0.015119105998763786,
+          "predicted_delay_s": 0.015116284611634865,
+          "reflection_point_m": [
+            1.541136528238623,
+            4.65343205744537,
+            0.9828621636288127
+          ],
+          "residual_s": 2.8213871289210074e-06
+        },
+        {
+          "candidate_id": "capture-01:echo:04",
+          "capture_id": "capture-01",
+          "observed_delay_s": 0.015088568943347131,
+          "predicted_delay_s": 0.015080579144600115,
+          "reflection_point_m": [
+            2.791418500041333,
+            4.652439957881571,
+            1.4203330517781614
+          ],
+          "residual_s": 7.989798747016358e-06
+        },
+        {
+          "candidate_id": "capture-02:echo:01",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.0054393262929905385,
+          "predicted_delay_s": 0.005434045646307319,
+          "reflection_point_m": [
+            3.8863703754955705,
+            4.652844951854012,
+            0.9784128118179213
+          ],
+          "residual_s": 5.280646683219863e-06
+        },
+        {
+          "candidate_id": "capture-03:echo:01",
+          "capture_id": "capture-03",
+          "observed_delay_s": 0.004965200475951837,
+          "predicted_delay_s": 0.004971000373387863,
+          "reflection_point_m": [
+            1.288880740156455,
+            4.651908069119525,
+            2.0113000661366467
+          ],
+          "residual_s": -5.799897436025575e-06
+        },
+        {
+          "candidate_id": "capture-04:echo:01",
+          "capture_id": "capture-04",
+          "observed_delay_s": 0.008939376943642895,
+          "predicted_delay_s": 0.008937420994130132,
+          "reflection_point_m": [
+            2.499373632787759,
+            4.653594037919822,
+            0.7207635426628543
+          ],
+          "residual_s": 1.9559495127632193e-06
+        },
+        {
+          "candidate_id": "capture-05:echo:03",
+          "capture_id": "capture-05",
+          "observed_delay_s": 0.010983933882552099,
+          "predicted_delay_s": 0.010972899813832189,
+          "reflection_point_m": [
+            3.290917367552507,
+            4.651679564806352,
+            1.8308886891028333
+          ],
+          "residual_s": 1.1034068719910015e-05
+        },
+        {
+          "candidate_id": "capture-06:echo:03",
+          "capture_id": "capture-06",
+          "observed_delay_s": 0.012040622860927011,
+          "predicted_delay_s": 0.012034240358850737,
+          "reflection_point_m": [
+            1.295823900312992,
+            4.6528760054608895,
+            1.3832470331946836
+          ],
+          "residual_s": 6.382502076273874e-06
+        },
+        {
+          "candidate_id": "capture-08:echo:04",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.01356599688054457,
+          "predicted_delay_s": 0.013555816822137008,
+          "reflection_point_m": [
+            2.2475506978470365,
+            4.65211815581231,
+            1.7179729516126991
+          ],
+          "residual_s": 1.0180058407562032e-05
+        },
+        {
+          "candidate_id": "capture-09:echo:01",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.00618166392485859,
+          "predicted_delay_s": 0.006175614519939995,
+          "reflection_point_m": [
+            3.5195521517739548,
+            4.653044028722464,
+            0.90964646799104
+          ],
+          "residual_s": 6.04940491859534e-06
+        },
+        {
+          "candidate_id": "capture-10:echo:02",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.007595740468803932,
+          "predicted_delay_s": 0.0075922275117256645,
+          "reflection_point_m": [
+            1.4332326110724656,
+            4.653383124058462,
+            1.032255695302582
+          ],
+          "residual_s": 3.512957078267119e-06
+        }
+      ],
+      "surface_id": "reflector-74eb4fdab3c5",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          7
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.00048310675117217906,
+            4.049673183196055e-05,
+            0.00013504278737642004
+          ],
+          [
+            4.0496731831960504e-05,
+            0.00012640902716264528,
+            3.0498468021691628e-05
+          ],
+          [
+            0.00013504278737641926,
+            3.0498468021691936e-05,
+            0.0024488241957321363
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.009168387858787404,
+        "offset_std_m": 0.015617584626983672,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          1.288880740156455,
+          4.651908069119525,
+          2.0113000661366467
+        ],
+        [
+          3.290917367552507,
+          4.651679564806352,
+          1.8308886891028333
+        ],
+        [
+          3.8863703754955705,
+          4.652844951854012,
+          0.9784128118179213
+        ],
+        [
+          3.5195521517739548,
+          4.653044028722464,
+          0.90964646799104
+        ],
+        [
+          2.499373632787759,
+          4.653594037919822,
+          0.7207635426628543
+        ],
+        [
+          1.541136528238623,
+          4.65343205744537,
+          0.9828621636288127
+        ],
+        [
+          1.4332326110724656,
+          4.653383124058462,
+          1.032255695302582
+        ],
+        [
+          1.295823900312992,
+          4.6528760054608895,
+          1.3832470331946836
+        ]
+      ]
+    },
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.004036342614081271,
+        "supporting_views": 9
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        -2.0939461067610594,
+        1.6856659607141156,
+        1.2174249916563387
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        0.9999639969809515,
+        0.003417669863255485,
+        0.00776687032112863
+      ],
+      "offset_m": 0.018394466869398156,
+      "support": [
+        {
+          "candidate_id": "capture-01:echo:03",
+          "capture_id": "capture-01",
+          "observed_delay_s": 0.011562954079343726,
+          "predicted_delay_s": 0.011541408992126951,
+          "reflection_point_m": [
+            0.0032526357939026695,
+            1.3193701214228017,
+            1.3689911429076176
+          ],
+          "residual_s": 2.154508721677502e-05
+        },
+        {
+          "candidate_id": "capture-02:echo:05",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.011332538194969223,
+          "predicted_delay_s": 0.011320020597747048,
+          "reflection_point_m": [
+            0.0022404132907025698,
+            2.213817502330339,
+            1.1057268275116154
+          ],
+          "residual_s": 1.2517597222174576e-05
+        },
+        {
+          "candidate_id": "capture-05:echo:04",
+          "capture_id": "capture-05",
+          "observed_delay_s": 0.011768483268700653,
+          "predicted_delay_s": 0.011767620183168546,
+          "reflection_point_m": [
+            0.0001580184628764414,
+            1.719554988089943,
+            1.5913208697505556
+          ],
+          "residual_s": 8.630855321076908e-07
+        },
+        {
+          "candidate_id": "capture-06:echo:00",
+          "capture_id": "capture-06",
+          "observed_delay_s": 0.0034192206059700586,
+          "predicted_delay_s": 0.003417033601137243,
+          "reflection_point_m": [
+            0.0004015854636197913,
+            2.016772770178747,
+            1.4291769898870088
+          ],
+          "residual_s": 2.18700483281542e-06
+        },
+        {
+          "candidate_id": "capture-07:echo:01",
+          "capture_id": "capture-07",
+          "observed_delay_s": 0.009480207285744597,
+          "predicted_delay_s": 0.009491327979246738,
+          "reflection_point_m": [
+            -0.0020400111367750995,
+            2.5257857489357325,
+            1.5195441968857764
+          ],
+          "residual_s": -1.112069350214101e-05
+        },
+        {
+          "candidate_id": "capture-08:echo:03",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.010478883141989309,
+          "predicted_delay_s": 0.010483366292537002,
+          "reflection_point_m": [
+            -0.0006958943627188852,
+            1.8562237137540458,
+            1.6411213017406907
+          ],
+          "residual_s": -4.483150547693673e-06
+        },
+        {
+          "candidate_id": "capture-09:echo:05",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.011134798736473413,
+          "predicted_delay_s": 0.011120880217758079,
+          "reflection_point_m": [
+            0.0025224748710019895,
+            2.2323325433670895,
+            1.0612649389104138
+          ],
+          "residual_s": 1.391851871533449e-05
+        },
+        {
+          "candidate_id": "capture-10:echo:01",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.005012819263953259,
+          "predicted_delay_s": 0.005006629422241269,
+          "reflection_point_m": [
+            0.0011598222018007753,
+            2.7100177043186484,
+            1.0265062062476857
+          ],
+          "residual_s": 6.189841711990232e-06
+        },
+        {
+          "candidate_id": "capture-11:echo:03",
+          "capture_id": "capture-11",
+          "observed_delay_s": 0.012231207242328831,
+          "predicted_delay_s": 0.012215583367681982,
+          "reflection_point_m": [
+            0.0027970271023067816,
+            1.6697527282244524,
+            1.273470069825096
+          ],
+          "residual_s": 1.562387464684907e-05
+        }
+      ],
+      "surface_id": "reflector-bd3bf7b08a9b",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.0002739937187323043,
+            -0.00034899531155530814,
+            -0.0004317817330543685
+          ],
+          [
+            -0.0003489953115553079,
+            0.0013692989424929553,
+            0.0010157677983979464
+          ],
+          [
+            -0.0004317817330543688,
+            0.001015767798397949,
+            0.00400088283304661
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.017486850126528904,
+        "offset_std_m": 0.03364795929538598,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          0.0011598222018007753,
+          2.7100177043186484,
+          1.0265062062476857
+        ],
+        [
+          -0.0020400111367750995,
+          2.5257857489357325,
+          1.5195441968857764
+        ],
+        [
+          -0.0006958943627188852,
+          1.8562237137540458,
+          1.6411213017406907
+        ],
+        [
+          0.0001580184628764414,
+          1.719554988089943,
+          1.5913208697505556
+        ],
+        [
+          0.0032526357939026695,
+          1.3193701214228017,
+          1.3689911429076176
+        ],
+        [
+          0.0025224748710019895,
+          2.2323325433670895,
+          1.0612649389104138
+        ]
+      ]
+    },
+    {
+      "confidence": {
+        "kind": "evidence_summary_not_probability",
+        "rms_residual_m": 0.002336002788137633,
+        "supporting_views": 10
+      },
+      "extent_status": "unknown",
+      "image_source_m": [
+        2.0994922148097883,
+        -1.7017601800248874,
+        1.2421107270267262
+      ],
+      "kind": "unclassified_planar_reflector",
+      "mesh_semantics": "reflection_support_convex_hull_not_physical_edges",
+      "normal": [
+        0.00014927090450511215,
+        0.9999972995864945,
+        0.002319167504899418
+      ],
+      "offset_m": 0.002323154473212483,
+      "support": [
+        {
+          "candidate_id": "capture-00:echo:01",
+          "capture_id": "capture-00",
+          "observed_delay_s": 0.004403555848841999,
+          "predicted_delay_s": 0.004404325373662084,
+          "reflection_point_m": [
+            1.3199812052316915,
+            0.00011349433378304852,
+            0.8678224635453726
+          ],
+          "residual_s": -7.695248200843829e-07
+        },
+        {
+          "candidate_id": "capture-01:echo:00",
+          "capture_id": "capture-01",
+          "observed_delay_s": 0.00273321297358936,
+          "predicted_delay_s": 0.0027420461722837434,
+          "reflection_point_m": [
+            3.262389872137311,
+            -0.0017021878730362205,
+            1.5257017249079146
+          ],
+          "residual_s": -8.83319869438362e-06
+        },
+        {
+          "candidate_id": "capture-02:echo:04",
+          "capture_id": "capture-02",
+          "observed_delay_s": 0.007639061497575504,
+          "predicted_delay_s": 0.007641651365293209,
+          "reflection_point_m": [
+            2.9531399037018247,
+            -0.0007004078316832363,
+            1.1136507145314316
+          ],
+          "residual_s": -2.5898677177048704e-06
+        },
+        {
+          "candidate_id": "capture-03:echo:02",
+          "capture_id": "capture-03",
+          "observed_delay_s": 0.009072680552507071,
+          "predicted_delay_s": 0.009081583214906638,
+          "reflection_point_m": [
+            1.7605187822369492,
+            -0.0015617715416591516,
+            1.5618223171752974
+          ],
+          "residual_s": -8.902662399567357e-06
+        },
+        {
+          "candidate_id": "capture-05:echo:01",
+          "capture_id": "capture-05",
+          "observed_delay_s": 0.0051051095605371116,
+          "predicted_delay_s": 0.005114248419017373,
+          "reflection_point_m": [
+            3.239384514039787,
+            -0.002329976265688316,
+            1.7978772907701766
+          ],
+          "residual_s": -9.138858480261386e-06
+        },
+        {
+          "candidate_id": "capture-06:echo:02",
+          "capture_id": "capture-06",
+          "observed_delay_s": 0.007378325557747266,
+          "predicted_delay_s": 0.0073847355900174315,
+          "reflection_point_m": [
+            1.4319323143233222,
+            -0.0010276924361969364,
+            1.3526829329223191
+          ],
+          "residual_s": -6.4100322701658025e-06
+        },
+        {
+          "candidate_id": "capture-08:echo:02",
+          "capture_id": "capture-08",
+          "observed_delay_s": 0.008397255909386492,
+          "predicted_delay_s": 0.00840781435737662,
+          "reflection_point_m": [
+            2.224886904367909,
+            -0.0018145116640497783,
+            1.6409122448698286
+          ],
+          "residual_s": -1.0558447990126688e-05
+        },
+        {
+          "candidate_id": "capture-09:echo:03",
+          "capture_id": "capture-09",
+          "observed_delay_s": 0.008103793582447193,
+          "predicted_delay_s": 0.008107772268146162,
+          "reflection_point_m": [
+            2.7984047778186665,
+            -0.0005895286947339429,
+            1.0758003285009028
+          ],
+          "residual_s": -3.978685698969794e-06
+        },
+        {
+          "candidate_id": "capture-10:echo:04",
+          "capture_id": "capture-10",
+          "observed_delay_s": 0.009311792336838405,
+          "predicted_delay_s": 0.009314843186928013,
+          "reflection_point_m": [
+            1.7622670187626794,
+            -0.0005680578104438894,
+            1.1332323138555611
+          ],
+          "residual_s": -3.0508500896073154e-06
+        },
+        {
+          "candidate_id": "capture-11:echo:01",
+          "capture_id": "capture-11",
+          "observed_delay_s": 0.006584602988142251,
+          "predicted_delay_s": 0.006590769148671358,
+          "reflection_point_m": [
+            2.7804061787563663,
+            -0.0011177985246952904,
+            1.3047424249444584
+          ],
+          "residual_s": -6.166160529106658e-06
+        }
+      ],
+      "surface_id": "reflector-2f2a8c8fc324",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          7
+        ]
+      ],
+      "uncertainty": {
+        "conditional_on": "associations and first-order point-source model",
+        "image_source_covariance_m2": [
+          [
+            0.00026084224665778784,
+            -3.2146765863620976e-05,
+            -0.00014064134126764622
+          ],
+          [
+            -3.214676586362098e-05,
+            0.00018428466311543097,
+            -6.474775737888816e-05
+          ],
+          [
+            -0.0001406413412676462,
+            -6.474775737888827e-05,
+            0.0015703296751059636
+          ]
+        ],
+        "local_information_rank": 3,
+        "normal_angular_std_rad": 0.012580432443846646,
+        "offset_std_m": 0.01830680406916558,
+        "rank_deficient": false
+      },
+      "vertices_m": [
+        [
+          3.239384514039787,
+          -0.002329976265688316,
+          1.7978772907701766
+        ],
+        [
+          3.262389872137311,
+          -0.0017021878730362205,
+          1.5257017249079146
+        ],
+        [
+          2.9531399037018247,
+          -0.0007004078316832363,
+          1.1136507145314316
+        ],
+        [
+          2.7984047778186665,
+          -0.0005895286947339429,
+          1.0758003285009028
+        ],
+        [
+          1.3199812052316915,
+          0.00011349433378304852,
+          0.8678224635453726
+        ],
+        [
+          1.4319323143233222,
+          -0.0010276924361969364,
+          1.3526829329223191
+        ],
+        [
+          1.7605187822369492,
+          -0.0015617715416591516,
+          1.5618223171752974
+        ],
+        [
+          2.224886904367909,
+          -0.0018145116640497783,
+          1.6409122448698286
+        ]
+      ]
+    }
+  ],
+  "uncertainty_semantics": "Local covariance conditional on path associations and point-source/plane model; includes declared shared calibration uncertainty, not unmodeled bias.",
+  "example_metadata": {
+    "generated_by_commit": "1c773367f787a551aec0f15fc244b5fe9290dee3",
+    "source_artifact": "work/final-reproduction/demo/result.json",
+    "omitted_response_arrays": [
+      {
+        "json_pointer": "/observations/0/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/1/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/2/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/3/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/4/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/5/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/6/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/7/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/8/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/9/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/10/response/values",
+        "sample_count": 4225
+      },
+      {
+        "json_pointer": "/observations/11/response/values",
+        "sample_count": 4225
+      }
+    ],
+    "note": "Geometry, candidates, hypotheses and IDs are actual output. Only dense response sample arrays are omitted for a small integration example. This excerpt is not an archive for replay."
+  }
+}
