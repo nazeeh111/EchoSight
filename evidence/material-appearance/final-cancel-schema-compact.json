@@ -1,0 +1,8 @@
+{
+  "wrongly_accepted": false,
+  "error_count": 1,
+  "full_error_receipt_sha256": "39b9485b3127dbc5bc6c4939d3c0ec08c25678f2cfe064fd79b7515a23cd61dd",
+  "scene_status": "cancelled",
+  "material_status": "estimated",
+  "appearance_status": "estimated"
+}

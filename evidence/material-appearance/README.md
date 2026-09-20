@@ -1,5 +1,9 @@
 # Material and appearance implementation evidence
 
+**Independent final review:** [ab5ea75](FINAL-ab5ea75-REVIEW.md) closes both P2 findings at the exact delivered runtime. [Binding and commands](final-receipt.json), [cancelled-payload rejection](final-cancel-schema-compact.json), [bounded palette output](final-palette-schema-probe.json) and [independent probes](final-probe-results.json) record the follow-up.
+
+[Clean GitHub reproduction](../reproduction-ab5ea75/) passes244 tests, both demos, exact profile/context/export/replay and offline schemas at the reviewed commit.
+
 Version 0.2.0 adds recording-derived reference profiles, conditional material comparisons and supplied contextual color distributions to the existing API/CLI/session/replay route. No new dependency, trained model or semantic material catalogue is used. Geometry inputs and frozen scientific criteria are unchanged.
 
 The controlled development demo recovers six room surfaces; three get correct synthetic-filter estimates and supplied colors, three remain material unknowns. Null, reused-reference and out-of-domain controls retain their unknown states. These results do not establish real building-material accuracy, calibrated confidence or optical measurement.

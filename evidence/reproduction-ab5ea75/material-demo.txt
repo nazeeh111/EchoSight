@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": {
+    "six_room_planes": true,
+    "both_reference_classes_demonstrated": true,
+    "no_wrong_material_estimates_in_controlled_case": true,
+    "null_has_no_geometry_or_materials": true,
+    "reused_reference_is_unknown": true,
+    "out_of_domain_is_unknown": true,
+    "context_does_not_change_geometry": true,
+    "original_inputs_preserved": true
+  },
+  "unknown_material_surfaces": 3
+}

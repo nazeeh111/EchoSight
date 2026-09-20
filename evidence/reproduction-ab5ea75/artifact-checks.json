@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "archives": {
+    "room": {
+      "raw_sha256": {
+        "capture-00": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65",
+        "capture-01": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d",
+        "capture-02": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698",
+        "capture-03": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc",
+        "capture-04": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc",
+        "capture-05": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced",
+        "capture-06": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14",
+        "capture-07": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563",
+        "capture-08": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918",
+        "capture-09": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242",
+        "capture-10": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c",
+        "capture-11": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae"
+      },
+      "archive_sha256": "8a46b550673b2738b9bc8110a63716f4129db77047bd66b30d528eb3cf2d30e1",
+      "result_id": "result-e5f8e806d1ce0bf2c34c",
+      "context_id": null,
+      "exact_geometry_and_interpretation_equal": true,
+      "archived_binding_issues": []
+    },
+    "material": {
+      "raw_sha256": {
+        "capture-00": "20a8f911fc5c9b97c0bbbf04ff9b371ab5fa448308e9b9f00c55a5afd18c3801",
+        "capture-01": "43324c1cab303e296cd9b8f07b582e888c6b8f015a22c3b843fa32ecd819eaec",
+        "capture-02": "d1ac61a34871a325a788932209cfeef1bde326e9d39f2ef7a601ff694e02f667",
+        "capture-03": "008d24983da20d915d7cc4ec66091f34e2668e59c3c3ff4d147917fefb9df863",
+        "capture-04": "5095661e3d8cfb029753da6b9f890d45d0dd874adb446d0ee09a49117955b1b8",
+        "capture-05": "dbe03fe1d13e8fc44158f18f959be55103cb34f4b317e44ff6015724da607d94",
+        "capture-06": "425d1e89b2916b3d8ca0a395f14b9d02a56c0d9b424379a5c5a2fb8ae0a95473",
+        "capture-07": "6718fd2d1fbadc85c4f9f5e552ae94b94272829fec8052fcd399b5e7b58583b2",
+        "capture-08": "c397e219a124462361e9df4b83939c5601f5f705d6540e5dd2a78186fa7c54f1",
+        "capture-09": "999ae58657ce354c07239b982d197bd9d950445f1283a2a9088513b537cfbe51",
+        "capture-10": "5045ba1011f9708a9df22c3b9c210cab6f821a92b02fdf0559ef639c6697924e",
+        "capture-11": "d643e8c4e61da9520b17783aac83a0b665fb304db9240d21adde0c04567031dc"
+      },
+      "archive_sha256": "e281d53f863ba2a8dce31bb9b6021dd061ec48a89e5f49ebf5e767d2addb6305",
+      "result_id": "result-782e95e965b8aab1ca11",
+      "context_id": "8784180dc45ed283e5778ad5a6681e059bef4e6bc0741e1a81e9968a793c624b",
+      "exact_geometry_and_interpretation_equal": true,
+      "archived_binding_issues": []
+    }
+  },
+  "rebuilt_reference_profile_exact_equal": true,
+  "reference_profile_sha256": "f9017bee57a07cb740f54110d5459e327e6ef3567a2fa14b9d7b0e1f73940f07",
+  "material_demo_checks": {
+    "six_room_planes": true,
+    "both_reference_classes_demonstrated": true,
+    "no_wrong_material_estimates_in_controlled_case": true,
+    "null_has_no_geometry_or_materials": true,
+    "reused_reference_is_unknown": true,
+    "out_of_domain_is_unknown": true,
+    "context_does_not_change_geometry": true,
+    "original_inputs_preserved": true
+  },
+  "unknown_material_surfaces": 3,
+  "offline_schemas": "passed",
+  "physical_validation": false
+}

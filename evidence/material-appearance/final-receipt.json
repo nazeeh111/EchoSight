@@ -1,0 +1,119 @@
+{
+  "commit": "ab5ea75de446b653fec058103030759fc7fbcdfa",
+  "status": "passed",
+  "cancelled_interpretation_p2": "closed",
+  "palette_probability_p2": "closed",
+  "remaining_findings": [],
+  "commands": [
+    {
+      "command": [
+        "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+        "work/material-review/probe.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+        "work/material-review/cancel_schema_probe.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+        "work/material-review/palette_schema_probe.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+        "-m",
+        "unittest",
+        "tests.test_interpretation.InterpretationTests.test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass",
+        "tests.test_schemas.SchemaTests.test_cancelled_scene_cannot_publish_material_or_color_claims",
+        "tests.test_interpretation_pipeline",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "exact_commit_file_binding": [
+    {
+      "path": "echosight/material_features.py",
+      "sha256": "1870793d9f837f2f96d51f4a592f0736474ac2cd2d71dba1995a712caff94a04",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/interpretation.py",
+      "sha256": "9e03423a325bb5ef4880c4a6de5d42c884593bc061391a4dfa5156b2f21ddbbf",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/pipeline.py",
+      "sha256": "349c9f8f9b642f7cb61ee453b2f2593bd1b367ddfd93da6ecfd36e101024bb71",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/inference.py",
+      "sha256": "c48b500f70883fa3d1b40a31f4b690e4d2453ee257059bd18755aca145793c7d",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/storage.py",
+      "sha256": "5a833bc7e99683ef177d201ff1ef2f21dbb7e6e311b660574cc532a6916a3d5f",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/api.py",
+      "sha256": "2e9a69b1ed5fddfcd6e7ab5a72dbe5f811be7dcbe04cba949ae3350c41c1ae11",
+      "equals_commit": true
+    },
+    {
+      "path": "echosight/cli.py",
+      "sha256": "21c4d72eb3b65749f208c75aeb8ee359e266eb215f1de036a070324de50deb63",
+      "equals_commit": true
+    },
+    {
+      "path": "schemas/interpretation-context.schema.json",
+      "sha256": "4b43738d4085df3eeb1a4f53dc1a653c777c77d0cd3d2ee4c36c4b703c4a66a7",
+      "equals_commit": true
+    },
+    {
+      "path": "schemas/interpretation-result.schema.json",
+      "sha256": "372ed61d94c6fae9331d767b5b323a61aa2f15f64f21c155c8c8b923b0cacb61",
+      "equals_commit": true
+    },
+    {
+      "path": "schemas/session.schema.json",
+      "sha256": "f846abd2be85445d8669fb9f046fe9e04a2ad831569605f41916a8fcf04c98ca",
+      "equals_commit": true
+    },
+    {
+      "path": "schemas/calibration-patch.schema.json",
+      "sha256": "002909227cf5252d4a4753a95257b6f4c33ecfe9469de13d745e4d05e7e82906",
+      "equals_commit": true
+    },
+    {
+      "path": "schemas/result.schema.json",
+      "sha256": "346c9eb59156f617f191a659c3f6683bf0d79ce8312c333fc734e5bf93fdf4b0",
+      "equals_commit": true
+    },
+    {
+      "path": "tests/test_interpretation.py",
+      "sha256": "208ee05a124a8f57e6a743339666bdcf6105a5b1aa5adea3a5f5ceefd5e8d542",
+      "equals_commit": true
+    },
+    {
+      "path": "tests/test_schemas.py",
+      "sha256": "ceda8edc999860da19d888f46d07dc9253c9d7fe1fbb64ceaff414f62eea7aad",
+      "equals_commit": true
+    },
+    {
+      "path": "tests/test_interpretation_pipeline.py",
+      "sha256": "9c955457b4dc6956aef4563cbc53a245ccfba9c6985074e65bf51a4d91fb097c",
+      "equals_commit": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # EchoSight
 
-EchoSight is a local Python backend that turns lossless audio recordings into supported 3D reflector patches. A known sound probe, one fixed source and surveyed microphone positions drive the public recording → API/CLI → geometry → export/replay workflow. Version **0.2.0** adds calibrated-reference material comparisons and contextual color distributions.
+EchoSight is a local Python backend that turns lossless audio recordings into supported 3D reflector patches. A known sound probe, one fixed source and surveyed microphone positions drive the public recording → API/CLI → geometry → export/replay workflow. Version **0.2.0** adds reference-based material comparisons and contextual color distributions.
 
 | Capability | What it returns |
 | --- | --- |
@@ -11,6 +11,8 @@ EchoSight is a local Python backend that turns lossless audio recordings into su
 | Integration | Local HTTP API, CLI, versioned JSON schemas, examples and raw-data export/replay |
 
 The twelve-view room demo reconstructs six surfaces, including floor and ceiling. The separate material demo learns two synthetic reference filters and identifies three of six room surfaces; the others remain unknown. These are controlled software demonstrations. Harder synthetic and external measured-room cases still fail, and our iPhones/MacBook have not been physically validated. Sound does not measure optical color. [Evidence and remaining limits](STATE.md) stay visible.
+
+**Verified:** [244 tests and both recording demos](evidence/reproduction-ab5ea75/) pass from a clean GitHub checkout. [Independent review](evidence/material-appearance/FINAL-ab5ea75-REVIEW.md) covers the delivered runtime.
 
 ## Install
 
