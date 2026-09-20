@@ -128,6 +128,8 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                         self._json_body()
                         return self._reply(202, store.start_job(sid, processor))
                     if p[3] == 'result' and method == 'GET': return self._reply(200, store.get_result(sid))
+                    if p[3] == 'material-reference' and method == 'POST':
+                        return self._reply(200, store.material_reference(sid, self._json_body()))
                     if p[3] == 'export' and method == 'GET':
                         path = store.export_session(sid)
                         return self._reply(200, path.read_bytes(), 'application/zip')

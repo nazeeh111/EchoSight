@@ -32,7 +32,7 @@ def _cancelled_result(result):
     out.update(status='cancelled',surfaces=[],hypotheses=[],dimensions=[],guidance=[])
     for key in ('shared_image_source_covariance_m2','higher_order_explanations',
                 'shared_plane_parameter_covariance_m2','score',
-                'parent_model_comparison','path_model_comparison'):
+                'parent_model_comparison','path_model_comparison','interpretation'):
         out.pop(key,None)
     if 'search' in out:out['search']=dict(out['search'],complete=False)
     out['diagnostics']=list(out.get('diagnostics',[]))

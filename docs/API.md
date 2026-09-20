@@ -1,6 +1,6 @@
 # Local backend API v1
 
-Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help for current command options). The service binds only loopback, has no account system, and is intended for one trusted local user. One running process owns a store, enforced by a POSIX file lock on macOS/Linux; a second opener fails before recovering jobs. The operating system releases ownership after a process crash. Do not expose it through a public proxy. Session/job/scene JSON uses schema version `1.0`; new comparisons use `1.1` (see [tracking migration](TRACKING.md)); positions are right-handed metres, z up; durations are seconds; sample rates are Hz. See CONTRACT.md and schemas/.
+Run `python -m echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help for current command options). The service binds only loopback, has no account system, and is intended for one trusted local user. One running process owns a store, enforced by a POSIX file lock on macOS/Linux; a second opener fails before recovering jobs. The operating system releases ownership after a process crash. Do not expose it through a public proxy. Session/job/scene JSON uses schema version `1.0`; new comparisons use `1.1` (see [tracking migration](TRACKING.md)); positions are right-handed metres, z up; durations are seconds; sample rates are Hz. See CONTRACT.md and schemas/.
 
 ## HTTP routes
 
@@ -8,7 +8,7 @@ Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help f
 | --- | --- |
 | GET `/v1/health` | health/schema version |
 | POST `/v1/sessions` | session JSON with empty captures; returns 201 session |
-| PATCH `/v1/sessions/{session_id}` | version-checked calibration/pose update; see calibration-patch schema below |
+| PATCH `/v1/sessions/{session_id}` | version-checked calibration/pose/context update; see calibration-patch schema below |
 | GET `/v1/sessions/{session_id}` | session including relative raw paths and recording hashes |
 | POST `/v1/sessions/{session_id}/recordings` | original mono integer PCM/IEEE Float32 WAV, native capture ZIP or phyphox CSV ZIP bytes; `X-Capture-Metadata` header contains capture JSON; returns 201 capture |
 | POST `/v1/sessions/{session_id}/jobs` | `{}`; returns 202 job |
@@ -16,7 +16,8 @@ Run `echosight serve --root ./data --host 127.0.0.1 --port 8765` (see CLI help f
 | GET `/v1/jobs/{job_id}/result` | immutable completed job result, including controlled protocols |
 | GET `/v1/jobs/{job_id}` | job status/progress/error |
 | POST `/v1/jobs/{job_id}/cancel` | `{}`; requests cooperative cancellation; 202 current state |
-| GET `/v1/sessions/{session_id}/result` | latest completed result; `stale` says whether new captures were added afterward |
+| GET `/v1/sessions/{session_id}/result` | latest completed result; `stale` says whether it predates the current session revision |
+| POST `/v1/sessions/{session_id}/material-reference` | supplied label and profile options; builds one profile from a selected surface in the current nonstale result; returns 200 profile |
 | GET `/v1/sessions/{session_id}/export` | ZIP containing session, original recordings and latest locally computed result, or explicitly quarantined archived computation if no current result exists |
 | POST `/v1/compare` | JSON `previous` and `current` result objects; explains new/changed/unconfirmed support in a shared calibration frame |
 | POST `/v1/imports` | exported ZIP bytes; atomic reload; 201 session; existing session ID is a 409 conflict |
@@ -93,3 +94,47 @@ CLI form: `python -m echosight controlled protocol.json --output controlled-resu
 Imports now expose `waveform_sha256` separately from the original-container `sha256`; processed observations retain both the waveform identity and `recording_sha256`. The versioned waveform digest includes nominal rate, frame count and exact decoded mono Float64 values in little-endian order; signed zero is canonicalized only in the digest. PCM padding, exact Float32 conversion or ZIP metadata cannot turn the same sample sequence into independent evidence. All members of an exact-equivalent group are rejected before mapping, with `recording_waveform_reused` diagnostics; original files remain exportable. Multi-source raw processing groups across source sessions. Calibration and controlled protocols also check waveform identity across their independence sets. Different hashes do not prove independence; gain changes, near-duplicates and shifted copies are outside this exact check. Legacy prepared numerical/result interfaces cannot authenticate raw acquisition.
 
 Controlled jobs return inconclusive on known contradictions in native device/recorder/input-route/active-format evidence across epochs, different known source/probe/playback declarations, mixed native-evidence coverage, or an inner source configuration conflicting with its outer epoch declaration. Receiver route IDs and source playback route IDs remain different namespaces. Legacy WAV relies on its existing operator declarations; no metadata is treated as authenticated hardware truth. Native unavailable sample/host timestamps are explicit JSON null, with false validity flags.
+
+## Conditional material and appearance context
+
+Sessions may contain `interpretation_context`, validated by the shared [context v1.0 schema](../schemas/interpretation-context.schema.json) and runtime validator. It contains a supplied reference-profile library, query `route_id`, explicit `maximum_squared_distance` cutoff and `minimum_views`. The context is optional; null disables it. Profiles, labels, route identity and color palettes are supplied evidence/assumptions, not built-in material knowledge. At most 32 profiles and 1 MiB of context are accepted, within the existing session metadata limit. Unknown fields and malformed/nonfinite values reject the request.
+
+Interpretation runs after geometric fitting and appears in `result.interpretation`; geometry and its evidence are retained separately. Material probabilities compare the compatible supplied reference library conditional on usable observations. Inspect view coverage and unknown states alongside those probabilities. Appearance mixes explicitly supplied contextual sRGB palettes; unassigned palette mass stays unassigned. It is not an optical measurement or acoustic false-color map. See [material and appearance](MATERIALS_APPEARANCE.md) for assumptions and [result schema](../schemas/interpretation-result.schema.json) for the complete output.
+
+Create a session with this field, or replace it using the existing revision-checked PATCH route:
+
+```json
+{
+  "expected_revision": 12,
+  "interpretation_context": {
+    "schema_version": "1.0",
+    "route_id": "declared-route",
+    "profiles": [],
+    "maximum_squared_distance": 16,
+    "minimum_views": 3
+  }
+}
+```
+
+The example's empty library intentionally yields unknown material and appearance, not a guess. Replace the entire context to change a library or palette; send `"interpretation_context": null` to clear it. A changed context increments the session revision, marks prior session results stale and requires another job. Raw bytes and prior jobs remain immutable. New result identity and acquisition metadata bind the canonical context. Archives preserve it, and reloaded computations remain quarantined until recomputed. Changing only an archived context while retaining old result metadata is reported as `acquisition_mismatch`.
+
+### Build a reference profile from a processed session
+
+POST `/v1/sessions/{session_id}/material-reference` with a surface ID from the session's completed result and your known reference label:
+
+```json
+{
+  "surface_id": "SURFACE_ID_FROM_RESULT",
+  "material_id": "known-reference",
+  "label": "Known reference sample",
+  "route_id": "declared-route",
+  "provenance": {"kind": "supplied", "note": "Operator-supplied identity of the reference sample."},
+  "regularization_std_db": 1
+}
+```
+
+Required fields are `surface_id`, `material_id`, `label`, `route_id`, and `provenance`. Optional fields are `prior_weight` (default 1), `regularization_std_db` (default 0), and `appearance` using the profile's palette/provenance shape. Unknown keys, embedded results and filesystem paths are rejected. The example's 1 dB regularization is an explicit modeling assumption, not a measured noise level; choose and record a justified value for your use.
+
+The builder uses the same recording-derived feature extractor as query interpretation. It requires a definitive supported surface and at least five independent valid reference observations, calculates their sample mean/covariance, and returns a profile including training hashes and an unqualified reference summary. No stored session or result is changed, and the returned profile is not automatically added to a library. Save it, inspect the evidence, and qualify it with independent query recordings. Exact reference/query byte or waveform overlap cannot establish material evidence.
+
+The route holds the session's publication/revision lock while selecting and building from the current result. No current result returns 404; a stale result returns 409; an absent/unsupported surface, insufficient valid references or malformed metadata returns 400. A current result alone does not guarantee usable material features. The same builder is exposed by `python -m echosight material-reference`; [USAGE.md](USAGE.md#7-material-profiles-and-contextual-appearance) shows the command.

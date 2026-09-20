@@ -8,6 +8,10 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "interpretation_context": {
+      "$ref": "https://echosight.local/schemas/interpretation-context-1.0.json",
+      "description": "Replace the complete optional interpretation context; null clears it. A change increments the session revision without altering raw recordings."
+    },
     "expected_revision": {
       "type": "integer",
       "minimum": 0

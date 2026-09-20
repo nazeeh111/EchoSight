@@ -27,3 +27,9 @@ Each checkpoint must separately report software implementation coverage, synthet
 The deferred interpretation order is acoustic evidence → geometry → material probabilities → plausible appearance probabilities → adjudication. Each later layer requires sufficient evidence, explicit provenance and unknown states. Acoustic false color remains distinct from plausible appearance; agent reasoning cannot overwrite raw evidence or numerical results. These additions do not accelerate their implementation ahead of reliable geometry.
 
 Completion still requires a clean GitHub checkout, full relevant tests/demos, exact contracts/examples, fresh independent assembled review, verified remote commit and resolution of known tractable material defects. Remaining hardware dependencies require exact experiments, thresholds and failure consequences after independent work is finished.
+
+## Material and appearance implementation, latest user instruction
+
+The user now explicitly requires material and color features to be implemented and the GitHub repository to provide a clear installation-to-use handoff. This supersedes their earlier deferral. Implement acoustic material comparison with real recording-derived evidence and declared reference profiles, followed by contextual appearance/color probabilities. Keep unknown states, provenance and conditional probability semantics explicit; optical color is not measured by sound. Preserve the geometry stage and its frozen failures. No fabricated semantic library, calibrated-confidence claim or physical qualification is authorized. The separate adjudication stage remains deferred.
+
+The implementation must be connected through the public API/CLI, revisioned sessions, raw export/replay and frontend schemas/examples, with meaningful tests and independent review. Current implementation status and verification remain in STATE.md.

@@ -15,11 +15,30 @@ from .pipeline import process_session, save_result
 
 
 def _summary(result):
-    return {"session_id": result.get("session_id"), "result_id": result.get("result_id"),
+    summary = {"session_id": result.get("session_id"), "result_id": result.get("result_id"),
             "status": result.get("status"), "surface_count": len(result.get("surfaces", [])),
             "hypothesis_count": len(result.get("hypotheses", [])),
             "dimensions": result.get("dimensions", []), "runtime_s": result.get("runtime_s"),
             "provenance": result.get("provenance"), "diagnostics": result.get("diagnostics", [])}
+    if isinstance(result.get('interpretation'), dict):
+        interpretation = result['interpretation']
+        entries = interpretation.get('surface_interpretations', [])
+        if not isinstance(entries, list) or any(not isinstance(entry, dict) for entry in entries):
+            raise ValueError('invalid interpretation surface summaries')
+        summary['interpretation'] = {key: interpretation.get(key) for key in ('status', 'context_id')}
+        summary['interpretation']['surface_interpretations'] = [
+            {key: entry.get(key) for key in ('surface_id', 'material', 'appearance')}
+            for entry in entries]
+    return summary
+
+
+def _read_json_file(path):
+    from .storage import MAX_JSON_BYTES
+    with Path(path).open('rb') as stream:
+        raw = stream.read(MAX_JSON_BYTES + 1)
+    if len(raw) > MAX_JSON_BYTES:
+        raise ValueError('input metadata exceeds 1 MiB')
+    return json.loads(raw)
 
 
 def _run_stored_session(store, session_id):
@@ -52,11 +71,13 @@ def main(argv=None):
     command.add_argument("session", type=Path)
     command.add_argument("--output", type=Path, required=True)
     command.add_argument("--method", choices=("mapper", "baseline"), default="mapper")
+    command.add_argument("--interpretation-context", type=Path, help="bounded material/appearance context JSON for this processing run")
     command = sub.add_parser("demo", help="generate and process reproducible synthetic recordings")
     command.add_argument("directory", type=Path)
     command.add_argument("--scenario", default="room")
     command.add_argument("--seed", type=int, default=1)
     command.add_argument("--captures", type=int, default=None)
+    command.add_argument("--interpretation-context", type=Path, help="material/appearance context JSON saved in the generated demo session")
     command = sub.add_parser("refine-demo", help="show what additional independent recording positions establish")
     command.add_argument("directory", type=Path)
     command.add_argument("--seed", type=int, default=1)
@@ -69,6 +90,17 @@ def main(argv=None):
     command.add_argument("current", type=Path)
     command.add_argument("--output", type=Path, required=True)
     command.add_argument("--previous-comparison", type=Path, help="carry declared display tracks from the comparison ending at previous")
+    command = sub.add_parser("material-reference", help="process raw reference recordings and build a supplied-label material profile")
+    command.add_argument("session", type=Path)
+    command.add_argument("--surface-id", required=True)
+    command.add_argument("--material-id", required=True)
+    command.add_argument("--label", required=True)
+    command.add_argument("--route-id", required=True)
+    command.add_argument("--provenance", type=Path, required=True, help="JSON object with kind and note for the supplied reference label")
+    command.add_argument("--appearance", type=Path, help="optional supplied palette/provenance JSON")
+    command.add_argument("--prior-weight", type=float, default=1.)
+    command.add_argument("--regularization-std-db", type=float, default=0., help="explicit diagonal regularization assumption, in dB")
+    command.add_argument("--output", type=Path, required=True)
     command = sub.add_parser("controlled", help="process declared A-before/B-first/B-repeat/A-return recordings")
     command.add_argument("protocol",type=Path)
     command.add_argument("--output",type=Path,required=True)
@@ -104,12 +136,26 @@ def main(argv=None):
             from .simulation import simulate_session
             print(simulate_session(args.directory, scenario=args.scenario, seed=args.seed, capture_count=args.captures))
         elif args.command in ("process", "demo"):
+            supplied_context = None
+            if args.interpretation_context is not None:
+                from .interpretation import validate_context
+                supplied_context = validate_context(_read_json_file(args.interpretation_context))
             if args.command == "demo":
                 from .simulation import simulate_session
                 session = simulate_session(args.directory, scenario=args.scenario, seed=args.seed, capture_count=args.captures)
                 destination = args.directory / "result.json"
             else:
                 session, destination = args.session, args.output
+            if args.interpretation_context is not None:
+                from .storage import load_session
+                session_path = session
+                session = load_session(session_path)
+                session['interpretation_context'] = supplied_context
+                if args.command == 'demo':
+                    # Keep the generated demo reproducible, including its interpretation input.
+                    saved = _read_json_file(session_path)
+                    saved['interpretation_context'] = supplied_context
+                    save_result(saved, session_path)
             cancelled = threading.Event()
             previous_handler = signal.signal(signal.SIGINT, lambda *_: cancelled.set())
             try:
@@ -156,6 +202,23 @@ def main(argv=None):
                               "calibration_id": result.get("calibration_id")}, indent=2))
             if result["status"] != "calibration_proposal":
                 return 2
+        elif args.command == "material-reference":
+            from .interpretation import build_material_profile
+            provenance = _read_json_file(args.provenance)
+            appearance = _read_json_file(args.appearance) if args.appearance else None
+            cancelled = threading.Event()
+            previous_handler = signal.signal(signal.SIGINT, lambda *_: cancelled.set())
+            try:
+                result = process_session(args.session, cancel=cancelled.is_set)
+            finally:
+                signal.signal(signal.SIGINT, previous_handler)
+            if result.get('status') == 'cancelled':
+                return 130
+            profile = build_material_profile(result, args.surface_id, material_id=args.material_id,
+                label=args.label, route_id=args.route_id, prior_weight=args.prior_weight,
+                regularization_std_db=args.regularization_std_db, appearance=appearance, provenance=provenance)
+            save_result(profile, args.output)
+            print(json.dumps({'material_id': profile['material_id'], 'reference_summary': profile['reference_summary']}, indent=2))
         elif args.command == "refine-demo":
             from .simulation import simulate_session
             from .storage import load_session

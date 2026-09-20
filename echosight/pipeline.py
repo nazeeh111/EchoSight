@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import copy
 import importlib.metadata
 import json
 import os
@@ -125,6 +126,7 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     fitting_session["captures"] = [{key: capture[key] for key in
         ("capture_id", "receiver_position_m", "receiver_position_std_m", "provenance")
         if key in capture} for capture in captures]
+    geometry_progress_span = .33 if session.get("interpretation_context") is not None else .35
     if cancel():
         result = _empty(session, "cancelled", [])
     elif source_consistency['status']=='contradictory':
@@ -132,15 +134,21 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
             "message":"Known native source declarations disagree across recordings: " + ", ".join(source_consistency['conflicting_fields']) + ". A common source calibration cannot be assumed; preserve and reconcile the declarations or acquire a supported calibrated configuration. This does not establish actual hardware change."}])
     elif method == "baseline":
         result = infer_baseline(fitting_session, observations, cancel=cancel,
-                                progress=lambda value, message="": progress(0.65 + 0.35 * value, message))
+                                progress=lambda value, message="": progress(0.65 + geometry_progress_span * value, message))
     else:
         result = infer_scene(fitting_session, observations, cancel=cancel,
-                             progress=lambda value, message="": progress(0.65 + 0.35 * value, message))
+                             progress=lambda value, message="": progress(0.65 + geometry_progress_span * value, message))
     result["schema_version"] = "1.0"
     result["session_id"] = session["session_id"]
     result["observations"] = observations
     result["source_declaration_consistency"] = source_consistency
-    result["acquisition"] = fitting_session
+    # Interpretation inputs never enter the geometry solver. Preserve them in
+    # the completed acquisition snapshot so revisions and replay bind the same
+    # profile library and appearance context that produced the result.
+    acquisition = copy.deepcopy(fitting_session)
+    if "interpretation_context" in session:
+        acquisition["interpretation_context"] = copy.deepcopy(session["interpretation_context"])
+    result["acquisition"] = acquisition
     provenance = result.setdefault("provenance", {})
     if not isinstance(provenance, dict):
         provenance = result["provenance"] = {"inference": provenance}
@@ -157,11 +165,17 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
     provenance["implementation_sha256"] = implementation.hexdigest()
     provenance["runtime_versions"] = {"python": platform.python_version(),
         "numpy": importlib.metadata.version("numpy"), "scipy": importlib.metadata.version("scipy")}
-    fingerprint = json.dumps({"session": fitting_session, "recordings": fingerprints,
+    fingerprint = json.dumps({"session": acquisition, "recordings": fingerprints,
                               "method": method, "software": __version__,
                               "implementation": provenance["implementation_sha256"],
                               "runtime": provenance["runtime_versions"]}, sort_keys=True, allow_nan=False)
     result["result_id"] = "result-" + hashlib.sha256(fingerprint.encode()).hexdigest()[:20]
+    from .interpretation import interpret_scene
+    if session.get("interpretation_context") is not None:
+        progress(.98, "Interpreting materials and appearance")
+    result["interpretation"] = interpret_scene(result, session.get("interpretation_context"), cancel=cancel)
+    if result["interpretation"].get("context_id") is not None:
+        provenance["interpretation_context_id"] = result["interpretation"]["context_id"]
     result["runtime_s"] = time.perf_counter() - start
     progress(1.0, result.get("status", "complete"))
     # The caller may request cancellation from this final callback, after the

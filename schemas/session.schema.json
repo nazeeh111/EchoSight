@@ -4,6 +4,10 @@
   "title": "EchoSight session v1",
   "type": "object",
   "properties": {
+    "interpretation_context": {
+      "$ref": "https://echosight.local/schemas/interpretation-context-1.0.json",
+      "description": "Optional versioned conditional material/appearance context. Null disables interpretation. Raw recordings and geometric fitting remain separate."
+    },
     "schema_version": {
       "const": "1.0",
       "default": "1.0"

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "echosight"
-version = "0.1.0"
+version = "0.2.0"
 description = "Evidence-linked acoustic spatial inference from lossless recordings"
 requires-python = ">=3.12"
 dependencies = ["numpy==2.3.5", "scipy==1.18.1"]

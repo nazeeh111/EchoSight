@@ -65,6 +65,9 @@ def validate_session(spec):
         raise ValueError('session must contain finite JSON values') from exc
     if len(encoded.encode()) > MAX_JSON_BYTES: raise ValueError('session metadata too large')
     s = copy.deepcopy(spec)
+    if 'interpretation_context' in s:
+        from .interpretation import validate_context
+        s['interpretation_context'] = validate_context(s['interpretation_context'])
     if s.get('schema_version', SCHEMA_VERSION) != SCHEMA_VERSION: raise ValueError('unsupported schema_version')
     s.setdefault('schema_version', SCHEMA_VERSION)
     if 'session_id' in s: _id(s['session_id'])
@@ -365,7 +368,7 @@ def _archived_result_issues(result, session):
         if len(actual) != len(manifest) or actual != expected_manifest:
             issues.append('recording_manifest_mismatch')
     keys = ('schema_version', 'session_id', 'sound_speed_m_s', 'sound_speed_std_m_s',
-            'source_clock_scale', 'source_clock_std_ppm', 'source_position_m',
+            'source_clock_scale', 'source_clock_std_ppm', 'source_position_m', 'interpretation_context',
             'source_position_std_m', 'probe', 'effective_speed_m_s', 'source_effective_speed_covariance')
     acquisition = {key: session[key] for key in keys if key in session}
     acquisition['coordinate_frame_id'] = session.get('coordinate_frame_id', 'session:' + session['session_id'])
@@ -475,7 +478,7 @@ class SessionStore:
         expected_revision prevents concurrent clients from silently overwriting
         a newer survey. Active processing retains its prior input snapshot.
         """
-        if not isinstance(changes, dict) or set(changes) - {'expected_revision', 'calibration', 'captures'}:
+        if not isinstance(changes, dict) or set(changes) - {'expected_revision', 'calibration', 'captures', 'interpretation_context'}:
             raise ValueError('unsupported calibration update fields')
         expected = changes.get('expected_revision')
         if isinstance(expected, bool) or not isinstance(expected, int) or expected < 0:
@@ -496,6 +499,8 @@ class SessionStore:
             before = self._raw_session(sid)
             if before['revision'] != expected: raise FileExistsError('session revision changed; reload before updating calibration')
             updated = copy.deepcopy(before); updated.update(copy.deepcopy(calibration))
+            if 'interpretation_context' in changes:
+                updated['interpretation_context'] = copy.deepcopy(changes['interpretation_context'])
             captures = {c['capture_id']: c for c in updated['captures']}
             seen = set()
             for change in capture_changes:
@@ -649,6 +654,20 @@ class SessionStore:
             if p.stat().st_size > MAX_RESULT_BYTES: raise ValueError('result metadata too large')
             result = json.loads(p.read_text()); result['stale'] = result.get('session_revision') != s['revision']
             return result
+    def material_reference(self, sid, request):
+        """Build one supplied-label profile from current, revision-bound geometry."""
+        from .interpretation import build_material_profile
+        required = {'surface_id', 'material_id', 'label', 'route_id', 'provenance'}
+        allowed = required | {'prior_weight', 'regularization_std_db', 'appearance'}
+        if not isinstance(request, dict) or set(request) - allowed or not required <= request.keys():
+            raise ValueError('material reference requires surface_id, material_id, label, route_id and provenance; unsupported fields rejected')
+        if len(json.dumps(request, allow_nan=False).encode()) > MAX_JSON_BYTES:
+            raise ValueError('material reference metadata too large')
+        with self._lock:
+            result = self.get_result(sid)
+            if result['stale']:
+                raise FileExistsError('session result is stale; process the current revision before building a material reference')
+            return build_material_profile(result, **copy.deepcopy(request))
     def export_session(self, sid, destination=None):
         with self._lock:
             s = self._raw_session(sid); directory = self._session_dir(sid)

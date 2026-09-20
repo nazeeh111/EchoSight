@@ -1,6 +1,6 @@
 # Evaluation and useful demonstration
 
-The selected useful scenario is surveying room layout and locating consequential early reflectors for room/audio setup. EchoSight should answer which surfaces the sound supports, what local separations follow from supported surfaces, and where an additional receiver measurement could distinguish alternatives. It does not establish a closed room, safe free space, finite object edges or material identity.
+The selected useful scenario is surveying room layout and locating consequential early reflectors for room/audio setup. EchoSight should answer which surfaces the sound supports, what local separations follow from supported surfaces, and where an additional receiver measurement could distinguish alternatives. It does not establish a closed room, safe free space, finite object edges or verified physical material identity. Version 0.2.0 separately compares reflection features with supplied reference profiles; see the controlled material demonstration below.
 
 The central demonstration claim is acoustic recovery of several independent 3D reflectors, including height-dependent structure, from imported recordings with unlabeled echoes. Supplied device poses are calibration. Returned polygons visualize limited supporting reflection regions; they are not surveyed wall outlines. A second measurement can add evidence or resolve an ambiguity. This is useful because a user can relate a problematic early reflection to a physical region rather than seeing only an unexplained peak.
 
@@ -94,3 +94,13 @@ The final exploratory guidance recording comparison (`evidence/guidance.json`) s
 ## Baseline clean-checkout reproduction and reopened audit
 
 Commit `1c773367f787a551aec0f15fc244b5fe9290dee3` reproduced all69 tests, both frozen suites, guidance and both external replay settings from a separate GitHub clone. Reports are `evidence/reproduced-*.json`, with setup/code/runtime fingerprints in `evidence/final-reproduction.json`. These are regressions on already-seen frozen cases, not new blind tests. Earlier reports remain preserved. This checkpoint is a baseline research prototype; the [coverage audit](audit/COVERAGE.md) identifies missing physical-model and measured-spatial evidence.
+
+## Controlled material and appearance development check
+
+```sh
+python -m evaluation.material_development --output work/material-demo
+```
+
+This additional recording-to-result check learns two synthetic reference-filter profiles from distinct raw reference sessions, then processes independent room and null recordings. Query truth is read only after all query results are saved. It checks six surfaces including height, both reference classes with no wrong estimates in this case, explicit unknowns for insufficient usable views, training reuse and out-of-domain inputs, and original-input preservation. The output `summary.json` retains all decisions. Settings, seeds and raw byte hashes are written alongside the inputs. Direct and reflected amplitudes obey the explicitly declared inverse-distance pressure model; the older geometry simulator is not used as material-training truth.
+
+This is a controlled development demonstration, not a held-out building-material benchmark. Three of six room surfaces remain material unknowns under the fixed guards. Color palettes are supplied contextual priors. It does not change the existing frozen geometry criteria or external-data failures, qualify physical probabilities, or measure optical color. See [material assumptions and qualification](MATERIALS_APPEARANCE.md).

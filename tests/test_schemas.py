@@ -26,7 +26,7 @@ class SchemaTests(unittest.TestCase):
     def test_published_schemas_and_frontend_examples(self):
         for path in (ROOT/'schemas').glob('*.json'):
             with self.subTest(schema=path.name):Draft202012Validator.check_schema(json.loads(path.read_text()))
-        contracts={'session':'session','controlled-request':'controlled-request','controlled-change':'controlled-result','ambiguous':'result','no-result':'result','reflector-partial':'result','room-partial':'result'}
+        contracts={'session':'session','controlled-request':'controlled-request','controlled-change':'controlled-result','ambiguous':'result','no-result':'result','reflector-partial':'result','room-partial':'result','material-room':'result'}
         for name,schema in contracts.items():
             with self.subTest(example=name):validator(schema).validate(json.loads((ROOT/'examples/frontend'/f'{name}.json').read_text()))
 

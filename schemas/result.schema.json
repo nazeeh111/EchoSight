@@ -144,9 +144,19 @@
             }
           },
           "description": "Joint source xyz/effective speed covariance, replacing independent source/speed/clock terms."
+        },
+        "interpretation_context": {
+          "anyOf": [
+            {
+              "$ref": "https://echosight.local/schemas/interpretation-context-1.0.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
-      "description": "Supplied calibration, poses and exact probe. Contains no scene truth or raw filesystem paths.",
+      "description": "Supplied calibration, poses, exact probe and optional material/appearance reference context. Interpretation context is added after geometry fitting. Contains no scene truth or raw filesystem paths.",
       "dependentRequired": {
         "effective_speed_m_s": [
           "source_effective_speed_covariance"
@@ -331,6 +341,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "interpretation": {
+      "$ref": "https://echosight.local/schemas/interpretation-result-1.0.json"
     }
   },
   "$defs": {

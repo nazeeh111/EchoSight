@@ -1,0 +1,514 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "context_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source_result_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "status": {
+      "enum": [
+        "not_configured",
+        "no_geometry",
+        "complete",
+        "cancelled"
+      ]
+    },
+    "surface_interpretations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "surface_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "material": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "estimated",
+                  "unknown"
+                ]
+              },
+              "probabilities": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "material_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160,
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "material_id",
+                    "label",
+                    "probability"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 32
+              },
+              "total_views": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 64
+              },
+              "valid_views": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 64
+              },
+              "required_views": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 64
+              },
+              "semantics": {
+                "const": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence"
+              },
+              "diagnostic_codes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048
+                },
+                "minItems": 0,
+                "maxItems": 128
+              },
+              "evidence_coverage": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "unassigned_view_weight": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "status",
+              "probabilities",
+              "total_views",
+              "valid_views",
+              "required_views",
+              "semantics",
+              "diagnostic_codes",
+              "evidence_coverage",
+              "unassigned_view_weight"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "unknown"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "probabilities": {
+                      "maxItems": 0
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "appearance": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "estimated",
+                  "unknown"
+                ]
+              },
+              "colors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "color_srgb": {
+                      "type": "string",
+                      "pattern": "^#[0-9a-fA-F]{6}$"
+                    },
+                    "probability": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "color_srgb",
+                    "probability"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 1024
+              },
+              "unassigned_probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "semantics": {
+                "const": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+              }
+            },
+            "required": [
+              "status",
+              "colors",
+              "unassigned_probability",
+              "semantics"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "unknown"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "colors": {
+                      "maxItems": 0
+                    },
+                    "unassigned_probability": {
+                      "const": 1
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "feature_records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "capture_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 160
+                },
+                "candidate_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 160
+                },
+                "recording_sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "waveform_sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "status": {
+                  "enum": [
+                    "ok",
+                    "unknown"
+                  ]
+                },
+                "diagnostic_codes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 2048
+                  },
+                  "minItems": 0,
+                  "maxItems": 128
+                },
+                "feature_version": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160,
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+                },
+                "probe_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "incidence_angle_deg": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 90
+                },
+                "feature_db": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -500,
+                    "maximum": 500
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "uncorrected_ratio_db": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -1000,
+                    "maximum": 1000
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "bands_hz": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 96000
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "direct_length_m": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000.0
+                },
+                "reflected_length_m": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000.0
+                },
+                "window_change_max_db": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1000000.0
+                },
+                "window_duration_s": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "noise_guard_semantics": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048
+                },
+                "semantics": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048
+                },
+                "profile_distances": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "material_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 160,
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+                      },
+                      "squared_distance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1.7976931348623157e+308
+                      }
+                    },
+                    "required": [
+                      "material_id",
+                      "squared_distance"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0,
+                  "maxItems": 32
+                },
+                "material_probabilities": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "material_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 160,
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+                      },
+                      "probability": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    },
+                    "required": [
+                      "material_id",
+                      "probability"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0,
+                  "maxItems": 32
+                },
+                "source_direct_bearing": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "source_reflection_bearing": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "receiver_direct_bearing": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "receiver_reflection_bearing": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "capture_id",
+                "candidate_id",
+                "recording_sha256",
+                "waveform_sha256",
+                "status",
+                "diagnostic_codes"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 64
+          }
+        },
+        "required": [
+          "surface_id",
+          "material",
+          "appearance",
+          "feature_records"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 32
+    }
+  },
+  "required": [
+    "schema_version",
+    "context_id",
+    "source_result_id",
+    "status",
+    "surface_interpretations"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/interpretation-result-1.0.json",
+  "title": "EchoSight conditional material and contextual appearance v1",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "not_configured",
+              "no_geometry",
+              "cancelled"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "surface_interpretations": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

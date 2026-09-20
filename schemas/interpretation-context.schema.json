@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echosight.local/schemas/interpretation-context-1.0.json",
+  "title": "EchoSight supplied interpretation context v1",
+  "anyOf": [
+    {
+      "type": "null"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "route_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/profile"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "maximum_squared_distance": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000.0
+        },
+        "minimum_views": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        }
+      },
+      "required": [
+        "schema_version",
+        "route_id",
+        "profiles",
+        "maximum_squared_distance",
+        "minimum_views"
+      ],
+      "additionalProperties": false
+    }
+  ],
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "material_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "feature_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+        },
+        "probe_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "route_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,159}$"
+        },
+        "incidence_angle_range_deg": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 90
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "mean_db": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -500,
+            "maximum": 500
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "predictive_covariance_db2": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": -1000000.0,
+              "maximum": 1000000.0
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "prior_weight": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000000.0
+        },
+        "training_recording_sha256": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "training_waveform_sha256": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "appearance": {
+          "type": "object",
+          "properties": {
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "colors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/color"
+              },
+              "minItems": 0,
+              "maxItems": 32
+            }
+          },
+          "required": [
+            "provenance",
+            "colors"
+          ],
+          "additionalProperties": false
+        },
+        "reference_summary": {
+          "type": "object",
+          "properties": {
+            "source_result_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "sample_count": {
+              "type": "integer",
+              "minimum": 5,
+              "maximum": 64
+            },
+            "regularization_std_db": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "qualification": {
+              "const": "not_evaluated"
+            },
+            "spreading_model": {
+              "const": "spherical_pressure_inverse_distance"
+            },
+            "capture_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 5,
+              "maxItems": 64
+            }
+          },
+          "required": [
+            "source_result_id",
+            "sample_count",
+            "regularization_std_db",
+            "qualification",
+            "spreading_model",
+            "capture_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "material_id",
+        "label",
+        "feature_version",
+        "probe_sha256",
+        "route_id",
+        "incidence_angle_range_deg",
+        "mean_db",
+        "predictive_covariance_db2",
+        "prior_weight",
+        "training_recording_sha256",
+        "training_waveform_sha256",
+        "provenance"
+      ],
+      "additionalProperties": false,
+      "description": "Full covariance must be symmetric positive definite at runtime; no automatic floor. Appearance probability sum must not exceed one. Cross-field identity/count/domain rules are validated by runtime."
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "measured",
+            "simulated",
+            "supplied"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "kind",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "color_srgb": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "color_srgb",
+        "probability"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

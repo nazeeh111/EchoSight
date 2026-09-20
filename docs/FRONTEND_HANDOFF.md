@@ -1,4 +1,4 @@
-# Frontend handoff v1
+# Frontend handoff: EchoSight 0.2.0
 
 The backend's central claim is that sound can support several independently located 3D reflectors, including height-dependent structure, and that additional surveyed recording positions can resolve or strengthen that inference. It does not claim complete object meshes, measured edges, safe free space or hardware accuracy. The useful demonstration is understanding room layout and consequential early reflections, with visible evidence behind every surface.
 
@@ -16,7 +16,10 @@ flowchart LR
   G --> R[Scene result and uncertainty]
   R --> N[Suggested new surveyed view]
   N --> U
+  R --> M[Optional material reference comparison]
+  M --> C[Supplied contextual color distributions]
   R --> X[Export original data and result]
+  C --> X
 ```
 
 Job status and scene status mean different things. A `completed` job may legitimately return `no_result`. Job statuses are `queued`, `running`, `completed`, `failed`, `cancelled`, `interrupted`; scene statuses are `ok`, `partial`, `ambiguous`, `no_result`, `cancelled`. A percentage describes work progress, never confidence. On restart, interrupted jobs retain input and recordings; start a new job. After another capture is uploaded, an earlier scene is marked `stale=true` until reprocessed.
@@ -90,6 +93,31 @@ Exact waveform reuse produces rejected observations and `duplicate_waveform_grou
 
 Comparison outputs now use version `1.1`; scene outputs stay `1.0`, and previous comparison versions1.0/1.1 can carry display tracks. Use `(session_id, capture_id)` references for recording evidence, never a bare capture name across sessions. Read `support_comparison_status` before displaying counts: `unavailable` has null additional-support counts and empty delta arrays. [Tracking contract](TRACKING.md) and [schema](../schemas/comparison.schema.json) define the migration. This change does not authenticate measurements or imply their physical independence.
 
-### Deferred interpretation layers
+## Materials and contextual colors
 
-After acoustic geometry, later material inference may consume acoustic evidence; a separate appearance stage may estimate plausible real-world colors from material/geometry/context. Neither exists in the current output. Keep acoustic false-color styling separate from any future predicted appearance, and display unknown states when evidence is insufficient. Later five-perspective reasoning/adjudication must cite immutable inputs and remain a separate interpretation, never rewrite measured evidence or fitted geometry. [Current steering and boundaries](CHARTER_ADDENDUM.md) preserve these later stages without introducing premature schema fields or model dependencies.
+Version 0.2.0 implements a separate `result.interpretation` after geometry. Link entries in `surface_interpretations` to meshes by unchanged `surface_id`. The interpretation's `source_result_id` must equal `result.result_id`; `context_id` identifies the supplied profiles and palettes. Scene/session schemas remain version 1.0; [interpretation context](../schemas/interpretation-context.schema.json) and [interpretation result](../schemas/interpretation-result.schema.json) have their own version 1.0 contracts. Older results may omit interpretation entirely.
+
+| Field/state | Frontend behavior |
+| --- | --- |
+| `interpretation.status=not_configured` | Offer reference-profile configuration; do not invent a material or color |
+| `interpretation.status=no_geometry` | There is no supported surface to interpret |
+| `material.status=estimated` | Show the supplied label and `probabilities` as conditional reference-library weights |
+| `material.status=unknown` | Show unknown and the recorded diagnostic; keep the acoustic geometry visible |
+| `material.evidence_coverage` | Display usable/total views separately from material probabilities |
+| `appearance.status=estimated` | Use supplied `color_srgb` swatches and their probabilities as contextual appearance predictions |
+| `appearance.unassigned_probability` | Retain missing palette mass; do not force a color |
+
+Material probabilities sum to one over the usable evidence and in-domain reference profiles. Even a weight of 1.0 is not verified physical certainty: an incomplete library can omit the real material. `unassigned_view_weight` is the rejected-view fraction, not an unknown-material probability. `feature_records` retains each supporting path, its recording hashes, four-band features or rejection, and per-profile comparison. Reference provenance distinguishes measured, simulated and supplied declarations; it does not authenticate those declarations.
+
+Appearance is a mixture of explicitly supplied material palettes. Keep these predicted colors visually distinct from any acoustic confidence/support heatmap. Acoustic frequency is not optical color, and a material name does not supply a default palette. The backend never changes mesh geometry to agree with an interpretation. Cancellation retracts interpretation claims along with geometry.
+
+Attach `interpretation_context` at session creation, pass `--interpretation-context FILE` to `process`, or replace/clear it through revision-checked session PATCH. It is a top-level session field, separate from `calibration`; `null` clears it. Changing context makes an old result stale without altering raw recordings. New jobs and raw export/replay bind the context to the result identity. Build profiles from a current reference session through `material-reference` or `POST /v1/sessions/{id}/material-reference`; stale results are rejected. See [the complete workflow](MATERIALS_APPEARANCE.md) and [API contract](API.md).
+
+```sh
+python -m evaluation.material_development --output work/material-demo
+python -m echosight inspect work/material-demo/room-result.json
+```
+
+This controlled development demonstration produces six acoustic surfaces, three material/appearance estimates and three material unknowns. The labels describe two synthetic reflection filters; the palettes are supplied examples. It also records null, reused-training and out-of-domain controls. [The compact actual result](../examples/frontend/material-room.json) retains geometry, features, probabilities, IDs and hashes; only dense response arrays are omitted. It is an integration fixture, not a raw replay archive or evidence of real material accuracy.
+
+Product-level five-perspective reasoning/adjudication remains deferred. It must remain an attributed interpretation if later implemented and cannot rewrite raw evidence or numerical results. [Current scope](CHARTER_ADDENDUM.md) records that boundary.
