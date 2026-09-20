@@ -1,0 +1,9 @@
+{
+  "package_directory": "portable",
+  "files": 40,
+  "uncompressed_bytes": 679191,
+  "manifest_sha256": "42f2828a8b7ac87e4f506371e14352bee9f56264ab98fd1564254a569937edbc",
+  "archive": "portable-gate-replay.tar.gz",
+  "archive_bytes": 53003,
+  "archive_sha256": "9b44ab4385255466cec899c9f6b59249756901e464811a5cc84e4dc1fd7f31f4"
+}

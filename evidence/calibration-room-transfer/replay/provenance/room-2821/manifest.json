@@ -1,0 +1,27 @@
+{
+  "seed": 2821,
+  "family": "room",
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "files": {
+    "capture-00.wav": "b1a97d39a6c59878e472f88887f88b2743f958678423f9a3dd565fb87021813e",
+    "capture-01.wav": "ec224357a9302952f15e5e852dfef273c47e18dd2e1c8dc31d4a237a233609ff",
+    "capture-02.wav": "1a29a6048de31b72fa6ee53878b18c2942933656e84c08cf6616e314097b3e19",
+    "capture-03.wav": "67bcba951b479fa0f3a239732fad82b9eb33a5db6d502c2bb251d4e261f5dbc2",
+    "capture-04.wav": "089c45a923f0648659c28846bbe2e2fa5e10c2e0adac6ec8e8c92db9713c9a5a",
+    "capture-05.wav": "e211aad99304035a7306ff4259b5bbb20226943cacf8d3f67e1256456008c797",
+    "capture-06.wav": "e602afe9c4e7d00d9a786c8bed001ff89e1e2c2463b43bd7002dcefbcf49b8f8",
+    "capture-07.wav": "b9d53ee0d2772189bad3f2773a42ee3cf1959b7964c159961ff2c37a37b32552",
+    "capture-08.wav": "7ea3c75dc73b31391c20e0efd17845517ace6cedd6ffb0ad515d858869884247",
+    "capture-09.wav": "e5f7fe4b3accb85b12c926aaac42d235dd565346a7ce47289d6c3f2505e7af25",
+    "capture-10.wav": "87b470758826561c79afed77bc55f2ac8bd4c7323a9a69cf4d8253c225304f3a",
+    "capture-11.wav": "c6cc76811f0db44ca6f4d9c26ecdf1d2a7f7294856e9c74cbf865e0ee6234885",
+    "capture-12.wav": "1f0029330851b18b60a932de654be7bbe103ba0167506ff9d31f9f7153e05471",
+    "capture-13.wav": "b8e0820ab8c145827ec69b70eb01f902a4c9a59d4071d839dda3dafe6eebcb2d",
+    "capture-14.wav": "160eca2f38b6c7dea815356e638fbb486e2fa23adaab516d00d55720493440d4",
+    "capture-15.wav": "d5326a8552bab65bc42e7b3a14fd114a0a37054ed9bfcc09f61b273cfab15d2f",
+    "mapping.json": "07781a4bf0c84d9cbbb04f3ffd9e90d7d549c6c0651ccd1f6fce0be5a2d2bde3",
+    "truth.json": "93991f868141de19aa52c04d447d72a4a3d6c003f63fd1a4a0ca3b2d6d4ffc6b",
+    "withheld.json": "2f5c94c5c8b6557e9c8a2c36d0852202cd11add676ccda4b4f3c7dfa7a6fde6f"
+  },
+  "waveforms": 16
+}

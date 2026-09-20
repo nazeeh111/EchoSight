@@ -1,0 +1,22 @@
+{
+  "command": [
+    "env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/portable/replay.py",
+    "--repo",
+    "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "--output",
+    "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/replay-result.json"
+  ],
+  "cwd": "/private/tmp",
+  "exit_code": 0,
+  "checkout_head": "37b875df688b6d772e98b52ca57ddfe5d76a1c05",
+  "existing_environment_reused": true,
+  "comparison_passed": true,
+  "rows_compared": 20,
+  "replay_result_sha256": "f2ac6158ded936b8987df6e58387ee7617e59a48a19a88a3640d612703b256e4",
+  "executed_package_manifest_sha256": "590af9747358cc33ce0384863ef82e6c421d6b1b5a0834ad148093407cdbadf4",
+  "final_package_manifest_sha256": "42f2828a8b7ac87e4f506371e14352bee9f56264ab98fd1564254a569937edbc",
+  "post_execution_change": "README added separately reviewed post-fit candidate-window caveat; manifest regenerated. No executable or data changes."
+}

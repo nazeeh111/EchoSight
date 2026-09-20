@@ -1,0 +1,28 @@
+{
+  "command": [
+    "env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+    "work/calibration-room-transfer/run.py",
+    "check"
+  ],
+  "cwd": "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/extraction-check",
+  "exit_code": 0,
+  "stdout_json": {
+    "status": "static_checks_passed",
+    "source_config_verified_against_retained_inputs": true,
+    "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+    "runtime_files_checked": 17,
+    "generation_executed": false,
+    "calibration_fit_executed": false,
+    "mapping_executed": false,
+    "limitations": "Syntax, fixed settings, input integrity and runtime identity only. Renderer and fit workers have not executed."
+  },
+  "existing_environment_reused": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "installation_performed": false,
+  "rendering_or_inference_performed": false
+}

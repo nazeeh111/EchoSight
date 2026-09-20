@@ -1,0 +1,926 @@
+{
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+  "scope": "saved median response diagnostics only; no generation, signal pipeline, mapper or calibration rerun",
+  "rows": [
+    {
+      "seed": 2821,
+      "capture_id": "capture-14",
+      "surface_id": "reflector-0cbb635f6b90",
+      "truth_wall": "wall-1-0",
+      "frozen_status": "candidate_reused_by_multiple_surfaces",
+      "predicted_delay_s": 0.008514520615001585,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.011705908168544131,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6101169837259228e-06,
+      "local_peaks": [
+        {
+          "index": 600,
+          "delay_s": 0.008507006123209286,
+          "residual_to_prediction_us": -7.514491792299724,
+          "amplitude_over_direct": 0.29968768995594935,
+          "height_over_threshold": 4.281252713656419,
+          "prominence_over_threshold": 6.586359446876219,
+          "screen_stage": "retained_by_saved_envelope_peak_screen",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 592,
+          "delay_s": 0.008333115266827189,
+          "residual_to_prediction_us": -181.40534817439638,
+          "amplitude_over_direct": 0.29594141559383796,
+          "height_over_threshold": 4.227734508483399,
+          "prominence_over_threshold": 4.6194286004976854,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 600,
+              "delay_s": 0.008507006123209286,
+              "separation_us": 166.66666666666666,
+              "amplitude_over_direct": 0.29968768995594935
+            }
+          ]
+        },
+        {
+          "index": 594,
+          "delay_s": 0.0083886210879798,
+          "residual_to_prediction_us": -125.89952702178608,
+          "amplitude_over_direct": 0.15680137278350376,
+          "height_over_threshold": 2.2400196111929103,
+          "prominence_over_threshold": 1.514658751024679,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 600,
+              "delay_s": 0.008507006123209286,
+              "separation_us": 125.0,
+              "amplitude_over_direct": 0.29968768995594935
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-14:echo:00",
+          "delay_s": 0.0032352550180509247,
+          "amplitude": 0.4555766627641461
+        },
+        {
+          "candidate_id": "capture-14:echo:01",
+          "delay_s": 0.004492339011726577,
+          "amplitude": 0.3558916205630158
+        },
+        {
+          "candidate_id": "capture-14:echo:02",
+          "delay_s": 0.0073944502749532185,
+          "amplitude": 0.29406878088241556
+        },
+        {
+          "candidate_id": "capture-14:echo:03",
+          "delay_s": 0.008507006123209286,
+          "amplitude": 0.29968768995594935
+        },
+        {
+          "candidate_id": "capture-14:echo:04",
+          "delay_s": 0.018582736928573075,
+          "amplitude": 0.15889433716996987
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "capture_id": "capture-12",
+      "surface_id": "reflector-fe06790f5153",
+      "truth_wall": "wall-2-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.007138196960720186,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.012218694382833595,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6090995183376976e-06,
+      "local_peaks": [
+        {
+          "index": 533,
+          "delay_s": 0.007107618295279921,
+          "residual_to_prediction_us": -30.578665440265247,
+          "amplitude_over_direct": 0.18232027818790908,
+          "height_over_threshold": 2.6045754026844152,
+          "prominence_over_threshold": 3.772840020895894,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.006878278412552403,
+              "separation_us": 229.16666666666666,
+              "amplitude_over_direct": 0.1889465613454322
+            }
+          ]
+        },
+        {
+          "index": 536,
+          "delay_s": 0.007167406444432323,
+          "residual_to_prediction_us": 29.209483712136844,
+          "amplitude_over_direct": 0.08199862686045588,
+          "height_over_threshold": 1.1714089551493696,
+          "prominence_over_threshold": 1.3681250392759496,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.006878278412552403,
+              "separation_us": 291.6666666666667,
+              "amplitude_over_direct": 0.1889465613454322
+            }
+          ]
+        },
+        {
+          "index": 525,
+          "delay_s": 0.006943505672312889,
+          "residual_to_prediction_us": -194.6912884072966,
+          "amplitude_over_direct": 0.07786268426032235,
+          "height_over_threshold": 1.1123240608617477,
+          "prominence_over_threshold": 0.7101412940959021,
+          "screen_stage": "prominence",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.006878278412552403,
+              "separation_us": 62.5,
+              "amplitude_over_direct": 0.1889465613454322
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-12:echo:00",
+          "delay_s": 0.00499954180572416,
+          "amplitude": 0.22773672992138058
+        },
+        {
+          "candidate_id": "capture-12:echo:01",
+          "delay_s": 0.005466442454748935,
+          "amplitude": 0.18948345201155548
+        },
+        {
+          "candidate_id": "capture-12:echo:02",
+          "delay_s": 0.0068782784125524035,
+          "amplitude": 0.1889465613454322
+        },
+        {
+          "candidate_id": "capture-12:echo:03",
+          "delay_s": 0.018231180556540716,
+          "amplitude": 0.08175775378709485
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "capture_id": "capture-12",
+      "surface_id": "reflector-48c11924ebb4",
+      "truth_wall": "wall-0-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.021770808320108657,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.012218694382833595,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6090995183376976e-06,
+      "local_peaks": [
+        {
+          "index": 1239,
+          "delay_s": 0.021807711101558398,
+          "residual_to_prediction_us": 36.902781449740104,
+          "amplitude_over_direct": 0.06940074020638662,
+          "height_over_threshold": 0.991439145805523,
+          "prominence_over_threshold": 1.5252775274486587,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 1236,
+          "delay_s": 0.02174749934743537,
+          "residual_to_prediction_us": -23.308972673288796,
+          "amplitude_over_direct": 0.034392319421682756,
+          "height_over_threshold": 0.49131884888118216,
+          "prominence_over_threshold": 0.5376932290932624,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 1242,
+          "delay_s": 0.02186563771226258,
+          "residual_to_prediction_us": 94.82939215392159,
+          "amplitude_over_direct": 0.028827514510279616,
+          "height_over_threshold": 0.41182163586113735,
+          "prominence_over_threshold": 0.1516092087871425,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-12:echo:00",
+          "delay_s": 0.00499954180572416,
+          "amplitude": 0.22773672992138058
+        },
+        {
+          "candidate_id": "capture-12:echo:01",
+          "delay_s": 0.005466442454748935,
+          "amplitude": 0.18948345201155548
+        },
+        {
+          "candidate_id": "capture-12:echo:02",
+          "delay_s": 0.0068782784125524035,
+          "amplitude": 0.1889465613454322
+        },
+        {
+          "candidate_id": "capture-12:echo:03",
+          "delay_s": 0.018231180556540716,
+          "amplitude": 0.08175775378709485
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "capture_id": "capture-14",
+      "surface_id": "reflector-a1661e502b63",
+      "truth_wall": "wall-1-1",
+      "frozen_status": "candidate_reused_by_multiple_surfaces",
+      "predicted_delay_s": 0.008362201852607642,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.011705908168544131,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6101169837259228e-06,
+      "local_peaks": [
+        {
+          "index": 600,
+          "delay_s": 0.008507006123209286,
+          "residual_to_prediction_us": 144.80427060164362,
+          "amplitude_over_direct": 0.29968768995594935,
+          "height_over_threshold": 4.281252713656419,
+          "prominence_over_threshold": 6.586359446876219,
+          "screen_stage": "retained_by_saved_envelope_peak_screen",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 592,
+          "delay_s": 0.008333115266827189,
+          "residual_to_prediction_us": -29.086585780453007,
+          "amplitude_over_direct": 0.29594141559383796,
+          "height_over_threshold": 4.227734508483399,
+          "prominence_over_threshold": 4.6194286004976854,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 600,
+              "delay_s": 0.008507006123209286,
+              "separation_us": 166.66666666666666,
+              "amplitude_over_direct": 0.29968768995594935
+            }
+          ]
+        },
+        {
+          "index": 594,
+          "delay_s": 0.0083886210879798,
+          "residual_to_prediction_us": 26.419235372157278,
+          "amplitude_over_direct": 0.15680137278350376,
+          "height_over_threshold": 2.2400196111929103,
+          "prominence_over_threshold": 1.514658751024679,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 600,
+              "delay_s": 0.008507006123209286,
+              "separation_us": 125.0,
+              "amplitude_over_direct": 0.29968768995594935
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-14:echo:00",
+          "delay_s": 0.0032352550180509247,
+          "amplitude": 0.4555766627641461
+        },
+        {
+          "candidate_id": "capture-14:echo:01",
+          "delay_s": 0.004492339011726577,
+          "amplitude": 0.3558916205630158
+        },
+        {
+          "candidate_id": "capture-14:echo:02",
+          "delay_s": 0.0073944502749532185,
+          "amplitude": 0.29406878088241556
+        },
+        {
+          "candidate_id": "capture-14:echo:03",
+          "delay_s": 0.008507006123209286,
+          "amplitude": 0.29968768995594935
+        },
+        {
+          "candidate_id": "capture-14:echo:04",
+          "delay_s": 0.018582736928573075,
+          "amplitude": 0.15889433716996987
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "capture_id": "capture-15",
+      "surface_id": "reflector-a1661e502b63",
+      "truth_wall": "wall-1-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.008013949967860834,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.012598122878852033,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.634440504245179e-06,
+      "local_peaks": [
+        {
+          "index": 576,
+          "delay_s": 0.008004662387903445,
+          "residual_to_prediction_us": -9.287579957389589,
+          "amplitude_over_direct": 0.3345371958157227,
+          "height_over_threshold": 4.779102797367467,
+          "prominence_over_threshold": 6.397316513514783,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.007809765110519789,
+              "separation_us": 187.5,
+              "amplitude_over_direct": 0.37330068459276383
+            }
+          ]
+        },
+        {
+          "index": 570,
+          "delay_s": 0.007870733864297305,
+          "residual_to_prediction_us": -143.21610356352912,
+          "amplitude_over_direct": 0.2246706347264698,
+          "height_over_threshold": 3.2095804960924257,
+          "prominence_over_threshold": 2.4996096305247506,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.007809765110519789,
+              "separation_us": 62.5,
+              "amplitude_over_direct": 0.37330068459276383
+            }
+          ]
+        },
+        {
+          "index": 574,
+          "delay_s": 0.007947355336622441,
+          "residual_to_prediction_us": -66.59463123839284,
+          "amplitude_over_direct": 0.21989285894922028,
+          "height_over_threshold": 3.1413265564174324,
+          "prominence_over_threshold": 3.678922259496758,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.007809765110519789,
+              "separation_us": 145.83333333333334,
+              "amplitude_over_direct": 0.37330068459276383
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-15:echo:00",
+          "delay_s": 0.002959539288457803,
+          "amplitude": 0.5049418416717982
+        },
+        {
+          "candidate_id": "capture-15:echo:01",
+          "delay_s": 0.004787606924446408,
+          "amplitude": 0.4511198883104644
+        },
+        {
+          "candidate_id": "capture-15:echo:02",
+          "delay_s": 0.006602251841854825,
+          "amplitude": 0.39190964339492457
+        },
+        {
+          "candidate_id": "capture-15:echo:03",
+          "delay_s": 0.007809765110519788,
+          "amplitude": 0.37330068459276383
+        },
+        {
+          "candidate_id": "capture-15:echo:04",
+          "delay_s": 0.009507019253416992,
+          "amplitude": 0.28445230501511914
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "capture_id": "capture-12",
+      "surface_id": "reflector-5a76684333b8",
+      "truth_wall": "wall-2-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.007110664938815165,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.012243029076776067,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.5730889256777807e-06,
+      "local_peaks": [
+        {
+          "index": 533,
+          "delay_s": 0.007107644423786809,
+          "residual_to_prediction_us": -3.02051502835618,
+          "amplitude_over_direct": 0.18474528677150218,
+          "height_over_threshold": 2.639218382450031,
+          "prominence_over_threshold": 3.67570472065015,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.0068783156913864146,
+              "separation_us": 229.16666666666666,
+              "amplitude_over_direct": 0.1909103293186101
+            }
+          ]
+        },
+        {
+          "index": 536,
+          "delay_s": 0.007167057356847421,
+          "residual_to_prediction_us": 56.39241803225524,
+          "amplitude_over_direct": 0.08320050895446793,
+          "height_over_threshold": 1.1885786993495417,
+          "prominence_over_threshold": 1.2070807184984733,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.0068783156913864146,
+              "separation_us": 291.6666666666667,
+              "amplitude_over_direct": 0.1909103293186101
+            }
+          ]
+        },
+        {
+          "index": 525,
+          "delay_s": 0.006943244290694102,
+          "residual_to_prediction_us": -167.4206481210635,
+          "amplitude_over_direct": 0.07999553313996223,
+          "height_over_threshold": 1.1427933305708888,
+          "prominence_over_threshold": 0.7692411153467084,
+          "screen_stage": "prominence",
+          "nearby_retained_peaks": [
+            {
+              "index": 522,
+              "delay_s": 0.0068783156913864146,
+              "separation_us": 62.5,
+              "amplitude_over_direct": 0.1909103293186101
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-12:echo:00",
+          "delay_s": 0.004999510319619094,
+          "amplitude": 0.2270041096075651
+        },
+        {
+          "candidate_id": "capture-12:echo:01",
+          "delay_s": 0.005466218692080521,
+          "amplitude": 0.1953737297503264
+        },
+        {
+          "candidate_id": "capture-12:echo:02",
+          "delay_s": 0.006878315691386415,
+          "amplitude": 0.1909103293186101
+        },
+        {
+          "candidate_id": "capture-12:echo:03",
+          "delay_s": 0.018231083170900206,
+          "amplitude": 0.08173520269611846
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "capture_id": "capture-12",
+      "surface_id": "reflector-48c11924ebb4",
+      "truth_wall": "wall-0-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.0217841248544282,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.012243029076776067,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.5730889256777807e-06,
+      "local_peaks": [
+        {
+          "index": 1239,
+          "delay_s": 0.021807133065690175,
+          "residual_to_prediction_us": 23.008211261974637,
+          "amplitude_over_direct": 0.06736922602884968,
+          "height_over_threshold": 0.9624175146978525,
+          "prominence_over_threshold": 1.480628465421552,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 1236,
+          "delay_s": 0.02174732753119691,
+          "residual_to_prediction_us": -36.79732323129056,
+          "amplitude_over_direct": 0.03452634514618671,
+          "height_over_threshold": 0.4932335020883814,
+          "prominence_over_threshold": 0.5974009954978872,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 1241,
+          "delay_s": 0.021864144034565998,
+          "residual_to_prediction_us": 80.01918013779766,
+          "amplitude_over_direct": 0.028494416918544027,
+          "height_over_threshold": 0.4070630988363432,
+          "prominence_over_threshold": 0.21553662348368252,
+          "screen_stage": "height",
+          "nearby_retained_peaks": []
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-12:echo:00",
+          "delay_s": 0.004999510319619094,
+          "amplitude": 0.2270041096075651
+        },
+        {
+          "candidate_id": "capture-12:echo:01",
+          "delay_s": 0.005466218692080521,
+          "amplitude": 0.1953737297503264
+        },
+        {
+          "candidate_id": "capture-12:echo:02",
+          "delay_s": 0.006878315691386415,
+          "amplitude": 0.1909103293186101
+        },
+        {
+          "candidate_id": "capture-12:echo:03",
+          "delay_s": 0.018231083170900206,
+          "amplitude": 0.08173520269611846
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "capture_id": "capture-14",
+      "surface_id": "reflector-21fa2e93adaf",
+      "truth_wall": "wall-1-0",
+      "frozen_status": "candidate_reused_by_multiple_surfaces",
+      "predicted_delay_s": 0.0085013110045732,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.011939346916504202,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6655617205602164e-06,
+      "local_peaks": [
+        {
+          "index": 592,
+          "delay_s": 0.008332772778889955,
+          "residual_to_prediction_us": -168.5382256832457,
+          "amplitude_over_direct": 0.31952064681220277,
+          "height_over_threshold": 4.564580668745754,
+          "prominence_over_threshold": 7.018347504451193,
+          "screen_stage": "retained_by_saved_envelope_peak_screen",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 601,
+          "delay_s": 0.008508459633265388,
+          "residual_to_prediction_us": 7.148628692187076,
+          "amplitude_over_direct": 0.30947732005929346,
+          "height_over_threshold": 4.421104572275621,
+          "prominence_over_threshold": 5.253144562465313,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 592,
+              "delay_s": 0.008332772778889955,
+              "separation_us": 187.5,
+              "amplitude_over_direct": 0.31952064681220277
+            }
+          ]
+        },
+        {
+          "index": 598,
+          "delay_s": 0.00845246401429275,
+          "residual_to_prediction_us": -48.84699028044962,
+          "amplitude_over_direct": 0.20667765266657992,
+          "height_over_threshold": 2.9525378952368557,
+          "prominence_over_threshold": 2.7137838158667837,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 592,
+              "delay_s": 0.008332772778889955,
+              "separation_us": 125.0,
+              "amplitude_over_direct": 0.31952064681220277
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-14:echo:00",
+          "delay_s": 0.0032368773429312806,
+          "amplitude": 0.44408437449327165
+        },
+        {
+          "candidate_id": "capture-14:echo:01",
+          "delay_s": 0.0044935487672615754,
+          "amplitude": 0.4273162046342086
+        },
+        {
+          "candidate_id": "capture-14:echo:02",
+          "delay_s": 0.0073940203273073525,
+          "amplitude": 0.3288739123328665
+        },
+        {
+          "candidate_id": "capture-14:echo:03",
+          "delay_s": 0.008332772778889953,
+          "amplitude": 0.31952064681220277
+        },
+        {
+          "candidate_id": "capture-14:echo:04",
+          "delay_s": 0.01858185880502848,
+          "amplitude": 0.17543486022019847
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "capture_id": "capture-14",
+      "surface_id": "reflector-a1661e502b63",
+      "truth_wall": "wall-1-1",
+      "frozen_status": "candidate_reused_by_multiple_surfaces",
+      "predicted_delay_s": 0.008331108381956836,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.011939346916504202,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.6655617205602164e-06,
+      "local_peaks": [
+        {
+          "index": 592,
+          "delay_s": 0.008332772778889955,
+          "residual_to_prediction_us": 1.6643969331184976,
+          "amplitude_over_direct": 0.31952064681220277,
+          "height_over_threshold": 4.564580668745754,
+          "prominence_over_threshold": 7.018347504451193,
+          "screen_stage": "retained_by_saved_envelope_peak_screen",
+          "nearby_retained_peaks": []
+        },
+        {
+          "index": 601,
+          "delay_s": 0.008508459633265388,
+          "residual_to_prediction_us": 177.3512513085513,
+          "amplitude_over_direct": 0.30947732005929346,
+          "height_over_threshold": 4.421104572275621,
+          "prominence_over_threshold": 5.253144562465313,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 592,
+              "delay_s": 0.008332772778889955,
+              "separation_us": 187.5,
+              "amplitude_over_direct": 0.31952064681220277
+            }
+          ]
+        },
+        {
+          "index": 598,
+          "delay_s": 0.00845246401429275,
+          "residual_to_prediction_us": 121.3556323359146,
+          "amplitude_over_direct": 0.20667765266657992,
+          "height_over_threshold": 2.9525378952368557,
+          "prominence_over_threshold": 2.7137838158667837,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 592,
+              "delay_s": 0.008332772778889955,
+              "separation_us": 125.0,
+              "amplitude_over_direct": 0.31952064681220277
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-14:echo:00",
+          "delay_s": 0.0032368773429312806,
+          "amplitude": 0.44408437449327165
+        },
+        {
+          "candidate_id": "capture-14:echo:01",
+          "delay_s": 0.0044935487672615754,
+          "amplitude": 0.4273162046342086
+        },
+        {
+          "candidate_id": "capture-14:echo:02",
+          "delay_s": 0.0073940203273073525,
+          "amplitude": 0.3288739123328665
+        },
+        {
+          "candidate_id": "capture-14:echo:03",
+          "delay_s": 0.008332772778889953,
+          "amplitude": 0.31952064681220277
+        },
+        {
+          "candidate_id": "capture-14:echo:04",
+          "delay_s": 0.01858185880502848,
+          "amplitude": 0.17543486022019847
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "capture_id": "capture-15",
+      "surface_id": "reflector-a1661e502b63",
+      "truth_wall": "wall-1-1",
+      "frozen_status": "missing_or_ambiguous",
+      "predicted_delay_s": 0.008032567212683112,
+      "minimum_peak_spacing_samples": 17,
+      "minimum_peak_spacing_us": 354.1666666666667,
+      "threshold": 0.011607374935809362,
+      "threshold_source": "relative_peak_height",
+      "noise_floor": 1.646968749643336e-06,
+      "local_peaks": [
+        {
+          "index": 576,
+          "delay_s": 0.008004666407896507,
+          "residual_to_prediction_us": -27.900804786604517,
+          "amplitude_over_direct": 0.33568124960171136,
+          "height_over_threshold": 4.795446422881591,
+          "prominence_over_threshold": 6.44836039003069,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.00780927292644653,
+              "separation_us": 187.5,
+              "amplitude_over_direct": 0.3785977800976693
+            }
+          ]
+        },
+        {
+          "index": 570,
+          "delay_s": 0.007870796609734566,
+          "residual_to_prediction_us": -161.7706029485456,
+          "amplitude_over_direct": 0.23349183173592605,
+          "height_over_threshold": 3.335597596227515,
+          "prominence_over_threshold": 2.8854939067394954,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.00780927292644653,
+              "separation_us": 62.5,
+              "amplitude_over_direct": 0.3785977800976693
+            }
+          ]
+        },
+        {
+          "index": 574,
+          "delay_s": 0.00794637651440748,
+          "residual_to_prediction_us": -86.19069827563163,
+          "amplitude_over_direct": 0.2215045203961933,
+          "height_over_threshold": 3.16435029137419,
+          "prominence_over_threshold": 3.5637335620273016,
+          "screen_stage": "minimum_peak_spacing",
+          "nearby_retained_peaks": [
+            {
+              "index": 567,
+              "delay_s": 0.00780927292644653,
+              "separation_us": 145.83333333333334,
+              "amplitude_over_direct": 0.3785977800976693
+            }
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "candidate_id": "capture-15:echo:00",
+          "delay_s": 0.002959705311257105,
+          "amplitude": 0.49601951201828615
+        },
+        {
+          "candidate_id": "capture-15:echo:01",
+          "delay_s": 0.0047872526408873056,
+          "amplitude": 0.45284988499402495
+        },
+        {
+          "candidate_id": "capture-15:echo:02",
+          "delay_s": 0.006601945980167445,
+          "amplitude": 0.3970806286361194
+        },
+        {
+          "candidate_id": "capture-15:echo:03",
+          "delay_s": 0.00780927292644653,
+          "amplitude": 0.3785977800976693
+        },
+        {
+          "candidate_id": "capture-15:echo:04",
+          "delay_s": 0.009506362273465588,
+          "amplitude": 0.2969338120733982
+        }
+      ]
+    }
+  ],
+  "covariance_and_held_boundary": [
+    {
+      "seed": 2821,
+      "held_status": "cancelled",
+      "held_observations": 4,
+      "held_catalog_candidates": 20,
+      "held_surfaces": 0,
+      "source_position_m": [
+        1.5418192092319156,
+        1.4835772804987744,
+        1.3103000742986768
+      ],
+      "effective_speed_m_s": 346.44680131485916,
+      "full_covariance_preserved_from_original_fit_through_mapping_acquisition": true,
+      "source_speed_cross_terms": [
+        0.06087198825839764,
+        0.08638684427905527,
+        -0.0116425261854639
+      ],
+      "source_speed_correlations": [
+        0.9309410833933328,
+        0.9012317411290588,
+        -0.1603396454140056
+      ],
+      "covariance_eigenvalues": [
+        3.7605560083592044e-05,
+        0.00011473504229083531,
+        0.00034169220427313784,
+        15.044912156011856
+      ]
+    },
+    {
+      "seed": 2833,
+      "held_status": "cancelled",
+      "held_observations": 4,
+      "held_catalog_candidates": 20,
+      "held_surfaces": 0,
+      "source_position_m": [
+        1.5421729620721625,
+        1.4804307034375608,
+        1.3111110863101627
+      ],
+      "effective_speed_m_s": 346.5383286886248,
+      "full_covariance_preserved_from_original_fit_through_mapping_acquisition": true,
+      "source_speed_cross_terms": [
+        0.061164542099052956,
+        0.08656137786623079,
+        -0.011636767610472741
+      ],
+      "source_speed_correlations": [
+        0.9311812257369977,
+        0.9017386935150794,
+        -0.159857268840499
+      ],
+      "covariance_eigenvalues": [
+        3.7613015061505625e-05,
+        0.0001138735475140973,
+        0.00034157295281744105,
+        15.128624137315967
+      ]
+    }
+  ],
+  "input_sha256": {
+    "work/frozen-transfer-runtime/evidence/joint-reference-trial/results.json": "f06eac4f7dffab08b36d87291513228fc7403dd32bbf0a696d77a4a39b526d75",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/fits/room-2821-joint_mapper.json": "66a9a9a8b4aaafeb48de8c713014dac573faef83e23381636f1e9fd22f22eeb6",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/fits/room-2833-joint_mapper.json": "832fbed6c51a7c911707ccc35e42301578f3b41b10e1b2cba3992a23616a1373",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/settings.json": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/results.json": "7acbd36695af09e0924cc5e40054ff80cb17c135186784d45eeaa7f093c4bf5b",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/PROTOCOL.md": "2a62129479cd8af5c38fa43c3efb73414b00aca385e469fd76ec740b4a6cc17f",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/run.py": "458eb6b54959c91135f6413929b7b47526cc1cace3441837db4773f382edc6b6",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/freeze.json": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+    "work/frozen-transfer-runtime/echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816",
+    "work/frozen-transfer-runtime/echosight/inference.py": "fe031cc0e6795906d8b6b411704dd81e8096370ce3d84c9e663898c747ad4b66"
+  },
+  "limits": [
+    "Median response cannot reconstruct per-repeat admission counts.",
+    "Local envelope peaks show available structure, not correct new independent echo labels or a qualified replacement detector.",
+    "Prediction labels are post-hoc evaluator associations, never fitting inputs."
+  ]
+}

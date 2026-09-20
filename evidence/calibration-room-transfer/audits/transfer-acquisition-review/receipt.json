@@ -1,0 +1,444 @@
+{
+  "status": "passed",
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "frozen_inputs_verified": 94,
+  "original_and_copied_reference_wavs_verified": 48,
+  "new_wavs_verified": 56,
+  "partitions": {
+    "mapping": 24,
+    "withheld": 8,
+    "direct_only": 24
+  },
+  "canonical_probe_declaration": {
+    "sample_rate_hz": 48000,
+    "duration_s": 0.04,
+    "low_hz": 2000.0,
+    "high_hz": 14000.0,
+    "repetitions": 7,
+    "period_s": 0.35,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08,
+    "schema_version": "1.0",
+    "kind": "repeated_linear_chirp",
+    "pilot_start_samples": [
+      4800,
+      21600,
+      38400,
+      55200,
+      72000,
+      88800,
+      105600
+    ],
+    "sample_count": 116160,
+    "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b",
+    "timing_unit": "source_buffer_seconds"
+  },
+  "maximum_metadata_path_delay_error_s": 0.0,
+  "unique_query_survey_groups": 32,
+  "minimum_pcm_peak": 0.15134128849147008,
+  "maximum_pcm_peak": 0.49482711264381846,
+  "files": [
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-00.wav",
+      "sha256": "5a241b2d5363ef939edec69834ef567c0f74baadb5554c14bb0a827b24ff038c",
+      "pcm_payload_sha256": "041797effb2f5728aa713046df5a6524766dbfc3f1f85306fdc130a46efa6bbb",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15268410290841394
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-01.wav",
+      "sha256": "8c61f27ea53ce44da45b3e8ee20b4c710d9614a434539b559704700b9b12fd0a",
+      "pcm_payload_sha256": "88ef9a1b9a5513b1dbbec71f74ee748b03c09514eac691dfa86fe2e862c703ae",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1532334360789819
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-02.wav",
+      "sha256": "4ac6d46c1564e739854089d135b7b454f8adfba53037036290a7aeceeeefef95",
+      "pcm_payload_sha256": "21ea3bdd7c882770b78779b67152f86d0f6a517d848ed68fbd38bdeb20f147eb",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15280617694631793
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-03.wav",
+      "sha256": "125049b6d55b02587214840a09659326ddf544ff0978d45993707720c1d059cf",
+      "pcm_payload_sha256": "c60d65e02a18c628c7de0a57a8c36dcf510d646c14b7d88a6a5259d0605ae64c",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15256202887050996
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-04.wav",
+      "sha256": "38c058b7b18b931cf92ee2cd011aa8dc9e5e9e034239427e96da1823c67dfd98",
+      "pcm_payload_sha256": "d9a50635776d176a7a8072f085f96edd71f873b718b08a772b42ce38a00f8af8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15262306588946195
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-05.wav",
+      "sha256": "750f649093de161bea5cf903c445ce7707cc38d21d04992ecf4499121428b658",
+      "pcm_payload_sha256": "41b89d947b3ce135057b4eaba0b07f124c30ed806ef4bf8e585063e6fc147ff6",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1531723990600299
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-06.wav",
+      "sha256": "576642679b6e3ff1b6e605cb056063891e333d24ad1bf591db637205f0e1b65d",
+      "pcm_payload_sha256": "2e202718e7ab5854b593c897797510c35aa3bb29a0ee699f30f8c9907d18651f",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15347758415478988
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-07.wav",
+      "sha256": "d5c14dc1616e3d33388e8b3a313bef8079b1a64a50b92ea1a4dfb1dcf558e32d",
+      "pcm_payload_sha256": "9680ad1147c8354db7c647fbaaaf0d4a77b2238ed9053f00d4bcd2d4b98ee533",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1531723990600299
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-08.wav",
+      "sha256": "1f31cad472faa9f687161d7e562881140dd0e273336f98a7ec0795d5f99d5265",
+      "pcm_payload_sha256": "2846a5fae16cf43967aebd5dcb6095abbcbd2019833a1a607e505b9f10fd2838",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15372173223059785
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-09.wav",
+      "sha256": "7c07a89345def2586b1655ad2690d92a537c9ae3dcbd1a03d9618f35977df23e",
+      "pcm_payload_sha256": "24d60eded1dd02c14e0d31b2634558d4f8befa3be9c02f881fa4a05abc49944f",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15198217719046603
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-10.wav",
+      "sha256": "1dcc74d2e91800ae09f8870026cefdabdc838dbb36c652485995dfe8ea40a235",
+      "pcm_payload_sha256": "4737f0042c8db86fc5808929ed1f2a05cbae699477c98647c9ba43012e73b688",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15359965819269386
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2821/capture-11.wav",
+      "sha256": "4368595d3f4636f2fdbac1260bb9d3b874b00c623c2e9ca3f28167356ea98fa6",
+      "pcm_payload_sha256": "20d3402a5a5faa58e62b2e7974af3e4d91cf7ad0800031f944e64c2c72764c7c",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15311136204107792
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-00.wav",
+      "sha256": "43ffc91427268c325ceecfe88c148c5777c055712b9fdab0ef96bca0425c718e",
+      "pcm_payload_sha256": "9d1f29a54ae7355b068dc401b034fa7d050cda92288a1f143485035980d9223f",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15347758415478988
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-01.wav",
+      "sha256": "ae64ffc9cd58059f45ba77ac30806f1238da47a115223b0027d0af34b76b226d",
+      "pcm_payload_sha256": "d83a9f5deaef7dccfa6201340ab72168039405c4a2e88499fbf18badf6ead402",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15134128849147008
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-02.wav",
+      "sha256": "a2cf197520444f1f76d357a5263b60b546580f4db9b50279631be026643277e3",
+      "pcm_payload_sha256": "27950336dc7d476fb080e47639cfa8b93cb7c2629cd38c38fe75eb3af50542e8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1533860286263619
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-03.wav",
+      "sha256": "c94e381041fc3e29f2e4d7fde937c66411b7424565353980192f151564eba313",
+      "pcm_payload_sha256": "bd9fd89cd33b5188fd239ba7ff948208a62763a03c6a7830672e46589ffdad23",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15134128849147008
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-04.wav",
+      "sha256": "7bde4691fbdeda7b501470372d273f6e9b1e117f56fe0d902247e41f39a7dfaf",
+      "pcm_payload_sha256": "aa6ba707a72ef9ef22b02766be9bc95fe54c60c566b792cd23c4ff266c4234e8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15341654713583788
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-05.wav",
+      "sha256": "6b97089ae0de42d2e8a3790290e71ad5402a75ce41bcdb6a57ee3c456c4ef1ca",
+      "pcm_payload_sha256": "0c9ad23d09f4b2c3040a79e0ff60da1921a5c544dd23fd4477942326fa7e34eb",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15286721396526995
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-06.wav",
+      "sha256": "d74cb16d83166ac902518d28e06d2b8a7454dda92e74e35c3fca00450ea6ca48",
+      "pcm_payload_sha256": "fdf100b0d938983fcdaa90cea173ec984f1046fdeafd0067bfeaa126431c8705",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15347758415478988
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-07.wav",
+      "sha256": "eb9dd133e2d64a05410c0ce9b3beb99191c8351c66ddc89faa104f847faee5f7",
+      "pcm_payload_sha256": "71e74d3b1ce36ca14f12b85dd23ca23cbd47cff29ff370dad6ba50ad1d28507b",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.152317880794702
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-08.wav",
+      "sha256": "c2d07dfcb994d93f15156343d9b11f7f750135efd16b10f11c77d9fcb3f075ab",
+      "pcm_payload_sha256": "57eb73990096da1382c10d86155e5420c9811c10350fefcdc2c1184d60663332",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1532334360789819
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-09.wav",
+      "sha256": "4df6b3838deb666a0ad9fea2a4c459ef5ebf16ab5fe68143ec4fb756d257f698",
+      "pcm_payload_sha256": "4c0d64e8a5f5d7a5e484c6a0da1016264939f50c4bdb0866521d75df18246a45",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1533860286263619
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-10.wav",
+      "sha256": "4f141abb1ef9474844e51cabef5de235c55c09e5ca731d854de3b25b537856bc",
+      "pcm_payload_sha256": "4847e42d57d4d60d57664d31bd703a0453a2867d7ead85322d43f80ef31e22f8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.15277565843684193
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/direct_only-2833/capture-11.wav",
+      "sha256": "03bc7849056f6997ba878f240fc8ed29347fca97139fb2332b7364d15727341a",
+      "pcm_payload_sha256": "8443ecd7719f1633f08d8d1bca899389717a2242ac096f6afe143f37659d6eb2",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.1532334360789819
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-00.wav",
+      "sha256": "b1a97d39a6c59878e472f88887f88b2743f958678423f9a3dd565fb87021813e",
+      "pcm_payload_sha256": "32bd4f77e5013968a9b0779a982b099251765b78f294507b0b3bf6232399b9cd",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3088167973876156
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-01.wav",
+      "sha256": "ec224357a9302952f15e5e852dfef273c47e18dd2e1c8dc31d4a237a233609ff",
+      "pcm_payload_sha256": "8364d51733b891f4d5e30f0e02b057097e91e450338b4a945ae59e02e48da74c",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.478530228583636
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-02.wav",
+      "sha256": "1a29a6048de31b72fa6ee53878b18c2942933656e84c08cf6616e314097b3e19",
+      "pcm_payload_sha256": "e6ae5ba4a94257f87661bf27764edef5ee236987c68275fc6ccc408cceefa046",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4281441694387646
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-03.wav",
+      "sha256": "67bcba951b479fa0f3a239732fad82b9eb33a5db6d502c2bb251d4e261f5dbc2",
+      "pcm_payload_sha256": "874881a09042d44d9d7417c4b2adee8a9b63105775ea0c803ad7cec0e583dcd8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.49482711264381846
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-04.wav",
+      "sha256": "089c45a923f0648659c28846bbe2e2fa5e10c2e0adac6ec8e8c92db9713c9a5a",
+      "pcm_payload_sha256": "62ab8242c228913ae48007e40c113de3a72630075fa4fb3c57a2281e693d94cf",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.34949797051911985
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-05.wav",
+      "sha256": "e211aad99304035a7306ff4259b5bbb20226943cacf8d3f67e1256456008c797",
+      "pcm_payload_sha256": "3f991959a1bd6fd6aca5795c192ac332cbc3b7ac6ab2311a8528aab6af6704ac",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.46818445387127294
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-06.wav",
+      "sha256": "e602afe9c4e7d00d9a786c8bed001ff89e1e2c2463b43bd7002dcefbcf49b8f8",
+      "pcm_payload_sha256": "51680754d60458865a5e04c9756d74e4911ea041fb8f6c05ef62b9132fa64e1a",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.40900906399731435
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-07.wav",
+      "sha256": "b9d53ee0d2772189bad3f2773a42ee3cf1959b7964c159961ff2c37a37b32552",
+      "pcm_payload_sha256": "04431a87ed2f999a0f0517f8147fa7ead1fb29c94dcb8cb2bbf4972f045b1704",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4543290505691702
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-08.wav",
+      "sha256": "7ea3c75dc73b31391c20e0efd17845517ace6cedd6ffb0ad515d858869884247",
+      "pcm_payload_sha256": "da5e2c54c57d5e327103fefd08d7cbc3f9d420f4437a4eca0de88e11584131dd",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3023468733787042
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-09.wav",
+      "sha256": "e5f7fe4b3accb85b12c926aaac42d235dd565346a7ce47289d6c3f2505e7af25",
+      "pcm_payload_sha256": "1778ed1235a1f8205448dbfa9c0811c584ff250b63e31469be0fd3b3efd253c4",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4054994354075747
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-10.wav",
+      "sha256": "87b470758826561c79afed77bc55f2ac8bd4c7323a9a69cf4d8253c225304f3a",
+      "pcm_payload_sha256": "2c17f202a2625e278e30c675fd9e101f3fc80bd1b0e542f5fc6ae48ab40585c5",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.31394390697958313
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-11.wav",
+      "sha256": "c6cc76811f0db44ca6f4d9c26ecdf1d2a7f7294856e9c74cbf865e0ee6234885",
+      "pcm_payload_sha256": "0a6723f0c3b320276a540931a63a4ec403df2955a7ede8b32772439551f4d9e3",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.41026032288583025
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-12.wav",
+      "sha256": "1f0029330851b18b60a932de654be7bbe103ba0167506ff9d31f9f7153e05471",
+      "pcm_payload_sha256": "83c48392b5595b2930383672be18079cb1bc7172fd3316faf7497b9bbda57b1c",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.2508316293832209
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-13.wav",
+      "sha256": "b8e0820ab8c145827ec69b70eb01f902a4c9a59d4071d839dda3dafe6eebcb2d",
+      "pcm_payload_sha256": "b042e53af6d8625dae347fc66ccfe21bc352be6495afc331a97a17c53e1c5be7",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3681142612994781
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-14.wav",
+      "sha256": "160eca2f38b6c7dea815356e638fbb486e2fa23adaab516d00d55720493440d4",
+      "pcm_payload_sha256": "7bd7bdfa4b7555b9590a1991baf1441e7e5c370d653f337f3320872ed606c6f6",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3434553056428724
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2821/capture-15.wav",
+      "sha256": "d5326a8552bab65bc42e7b3a14fd114a0a37054ed9bfcc09f61b273cfab15d2f",
+      "pcm_payload_sha256": "2d442b8fa502b7602a2cac75654653d7bbc9c49960bbc957851e8106bb327b6b",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.44404431287575913
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-00.wav",
+      "sha256": "8e8e87ee98fac99ef76019304a3320b0da9c8bf82a3fabc96da098f35e6dc89c",
+      "pcm_payload_sha256": "cefd5bd5ad789f703ca9a82b1fe6584bf4212c48065ff7b91146320a2bbe6491",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3078096865749077
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-01.wav",
+      "sha256": "8ce820f1c6aa5f46a6161d8967bfd96006e1f78d13471e95e2bb9782438efc39",
+      "pcm_payload_sha256": "91247fb6b43f766900695748a2e785546578bfd6d59f296ae9ba2ca25e3d382d",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4628742332224494
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-02.wav",
+      "sha256": "0e617d43d6511466378b1e876f218b593a429eda1db47afdefeb75d272c846c6",
+      "pcm_payload_sha256": "03ba1003fa4eb6ae26a5909b9d0b52fa33d4e68a631b2bb4441447d2369c5351",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4076967680898465
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-03.wav",
+      "sha256": "90ec1745fc59443f05af7eaefeb3bd505316aa602dadb3f0e2bc45f845d08e8f",
+      "pcm_payload_sha256": "221b52ea251a66512ba95d84201fd6f1e6aaffdcf4ed3ec04e95bccc2a4b3e10",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4900967436750389
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-04.wav",
+      "sha256": "f7745f7a49035f4912ab6116655d8f7f33a69d847b6c4dda1ad12d115406f096",
+      "pcm_payload_sha256": "91484072dbf08aec9112cb7045af7da3d8c6a317f02f1aad8422d1242d872bd4",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.34730063783684806
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-05.wav",
+      "sha256": "32d843a02a95dc1454a712ce3adf2cee6d36b60f0a9602c6c9430e0b01f2ffbf",
+      "pcm_payload_sha256": "b18895aeadfd3fe0853d520f4a3c285eefbadbe50458e33ce970d4997f4f4dad",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.46555986205633715
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-06.wav",
+      "sha256": "998d3741e08ad7d5fc5edf835b0d3ab0aadbf5f0d9ee6c88bcf15cc71c2b8f5a",
+      "pcm_payload_sha256": "ba80e0cd4b92f0de5eae1cfe6dd39a0919ac771e4313e3910158ea3a5df8a3a8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4104739524521622
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-07.wav",
+      "sha256": "284949a15786519b01556c2cb77c0020a32226dc0e300fd39865f37b00958b39",
+      "pcm_payload_sha256": "4f8cdca6039ab6e22bd0f2abe22beb54bd0a45c70bd2b57e779244711559cc36",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4691915646839808
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-08.wav",
+      "sha256": "c4d49bcaed0f81281b53facb65ccd8ed65889ad829111576d322eed21380c67c",
+      "pcm_payload_sha256": "229bda305817511d11dd94117c3c7802ec0cd1e4046d07c01ff528ea8b6203cb",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3051545762504959
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-09.wav",
+      "sha256": "c202169798fdbbfce5ac328ebdbfd25beaa6d1812c2aa300400e9f371c3f53fc",
+      "pcm_payload_sha256": "a2a808caf913b23909d44841b589da1dd4d4f1ba4fd0378e1ed67ce6e5432edd",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4041261024811548
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-10.wav",
+      "sha256": "acc2d62e08e6906d7a5a4e01424cfad313e9e16952f00dff550c1091891ea332",
+      "pcm_payload_sha256": "58d60cf63d42752099966e50ddd63988fef0a88b48d6e88951a04d5ca23a2bc8",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3161107211523789
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-11.wav",
+      "sha256": "c7b667e91a8553c8f6b91aa46a52dbfef8be436da35b6bfdbcb680cd0670480e",
+      "pcm_payload_sha256": "f81e75ecd2d5d034d1d109d2d4ab274bf2c15cdcb7d309fb352bf561793ba396",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.37232581560716577
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-12.wav",
+      "sha256": "fd0396579f87217281b0a9b5bd6ebbf0e33dd9562fd3251b39f74d778c44eba2",
+      "pcm_payload_sha256": "d49a779f708523e9f597a0d829868a080a2868bae3f17acdd697792341c18c6f",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.2512283700064089
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-13.wav",
+      "sha256": "264bf5d1f0ad0046f291f79c1e0b263a26dac26b084bd5fa26bfb618a41dfb1d",
+      "pcm_payload_sha256": "f867ebf55f33dab2f10239e36effeb37fe14c32581d89a7fe82214ab4b93a67c",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.36777855769524215
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-14.wav",
+      "sha256": "f7294d4f7c416dd038862293dd88805a6e74081cf2aac9ede995778f525dc01f",
+      "pcm_payload_sha256": "7d107ab218edd744a900d37baca309c8d80d794db45981bd5c7a595cef97d762",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.3403118991668447
+    },
+    {
+      "file": "work/calibration-room-transfer/raw/room-2833/capture-15.wav",
+      "sha256": "bab124a580e068a71ca2523e1cc23f9607cc270edcafa400e90fde9001bea7b0",
+      "pcm_payload_sha256": "d002830dd174d3d6707bb6350147b871ec37129e9ede09a3ecf98fdc0cd39af9",
+      "frames": 131042,
+      "peak_pcm_fraction": 0.4632099368266854
+    }
+  ],
+  "limits": [
+    "Metadata path arithmetic and WAV/container bytes audited; no waveform synthesis, deconvolution, mapping or fit rerun.",
+    "The probe waveform hash is a common bound declaration, not independently regenerated in this read-only audit.",
+    "Independent survey errors follow separate deterministic RNG streams and a stipulated exact common frame. This does not establish physical survey independence.",
+    "Same source/receiver FIR is established by frozen generator provenance, not identified independently from recordings.",
+    "Room/null reuse the same 12 surveyed poses per seed intentionally; audio waveform hashes are distinct.",
+    "Calibration x/y reference survey dependence is retained; this audit makes no new calibration validation claim."
+  ],
+  "audit_script_sha256": "079cc8d51ba66fea64fe9bdc6042b8ad9174e9c6fdb781a430cd82f72f7d2e7a"
+}

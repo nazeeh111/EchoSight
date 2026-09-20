@@ -1,0 +1,218 @@
+{
+  "candidate_window_s": 0.0002,
+  "expected": 24,
+  "unique": 20,
+  "ideal_gate_pass": false,
+  "captures": [
+    {
+      "capture_id": "capture-12",
+      "expected": 6,
+      "unique": 6,
+      "ideal_gate_pass": true,
+      "associations": [
+        {
+          "path_id": "wall-0-0",
+          "eligible_path_ids": [
+            "wall-0-0"
+          ]
+        },
+        {
+          "path_id": "wall-0-1",
+          "eligible_path_ids": [
+            "wall-0-1"
+          ]
+        },
+        {
+          "path_id": "wall-1-0",
+          "eligible_path_ids": [
+            "wall-1-0"
+          ]
+        },
+        {
+          "path_id": "wall-1-1",
+          "eligible_path_ids": [
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-2-0",
+          "eligible_path_ids": [
+            "wall-2-0"
+          ]
+        },
+        {
+          "path_id": "wall-2-1",
+          "eligible_path_ids": [
+            "wall-2-1"
+          ]
+        }
+      ],
+      "conflicting_pairs": [],
+      "minimum_pair_separation_s": 0.00022657005117182084,
+      "all_windows_disjoint": false
+    },
+    {
+      "capture_id": "capture-13",
+      "expected": 6,
+      "unique": 6,
+      "ideal_gate_pass": true,
+      "associations": [
+        {
+          "path_id": "wall-0-0",
+          "eligible_path_ids": [
+            "wall-0-0"
+          ]
+        },
+        {
+          "path_id": "wall-0-1",
+          "eligible_path_ids": [
+            "wall-0-1"
+          ]
+        },
+        {
+          "path_id": "wall-1-0",
+          "eligible_path_ids": [
+            "wall-1-0"
+          ]
+        },
+        {
+          "path_id": "wall-1-1",
+          "eligible_path_ids": [
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-2-0",
+          "eligible_path_ids": [
+            "wall-2-0"
+          ]
+        },
+        {
+          "path_id": "wall-2-1",
+          "eligible_path_ids": [
+            "wall-2-1"
+          ]
+        }
+      ],
+      "conflicting_pairs": [],
+      "minimum_pair_separation_s": 0.0012096254453338555,
+      "all_windows_disjoint": true
+    },
+    {
+      "capture_id": "capture-14",
+      "expected": 6,
+      "unique": 4,
+      "ideal_gate_pass": false,
+      "associations": [
+        {
+          "path_id": "wall-0-0",
+          "eligible_path_ids": [
+            "wall-0-0"
+          ]
+        },
+        {
+          "path_id": "wall-0-1",
+          "eligible_path_ids": [
+            "wall-0-1"
+          ]
+        },
+        {
+          "path_id": "wall-1-0",
+          "eligible_path_ids": [
+            "wall-1-0",
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-1-1",
+          "eligible_path_ids": [
+            "wall-1-0",
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-2-0",
+          "eligible_path_ids": [
+            "wall-2-0"
+          ]
+        },
+        {
+          "path_id": "wall-2-1",
+          "eligible_path_ids": [
+            "wall-2-1"
+          ]
+        }
+      ],
+      "conflicting_pairs": [
+        {
+          "path_ids": [
+            "wall-1-0",
+            "wall-1-1"
+          ],
+          "separation_s": 0.00017302145329619462
+        }
+      ],
+      "minimum_pair_separation_s": 0.00017302145329619462,
+      "all_windows_disjoint": false
+    },
+    {
+      "capture_id": "capture-15",
+      "expected": 6,
+      "unique": 4,
+      "ideal_gate_pass": false,
+      "associations": [
+        {
+          "path_id": "wall-0-0",
+          "eligible_path_ids": [
+            "wall-0-0",
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-0-1",
+          "eligible_path_ids": [
+            "wall-0-1"
+          ]
+        },
+        {
+          "path_id": "wall-1-0",
+          "eligible_path_ids": [
+            "wall-1-0"
+          ]
+        },
+        {
+          "path_id": "wall-1-1",
+          "eligible_path_ids": [
+            "wall-0-0",
+            "wall-1-1"
+          ]
+        },
+        {
+          "path_id": "wall-2-0",
+          "eligible_path_ids": [
+            "wall-2-0"
+          ]
+        },
+        {
+          "path_id": "wall-2-1",
+          "eligible_path_ids": [
+            "wall-2-1"
+          ]
+        }
+      ],
+      "conflicting_pairs": [
+        {
+          "path_ids": [
+            "wall-0-0",
+            "wall-1-1"
+          ],
+          "separation_s": 0.0001969867830714199
+        }
+      ],
+      "minimum_pair_separation_s": 0.0001969867830714199,
+      "all_windows_disjoint": false
+    }
+  ],
+  "scope": "Ideal declared catalog only; no audio processing or acceptance rescore. A pass does not qualify real extraction or physical accuracy.",
+  "plan_sha256": "6cebabda39401c09be7b3e00d70fe591f448add4e3a4477bc9eec38a0cd68137"
+}

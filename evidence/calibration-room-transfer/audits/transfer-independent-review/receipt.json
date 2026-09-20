@@ -1,0 +1,35 @@
+{
+  "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "review_status": "complete",
+  "actual_transfer_pass": false,
+  "actual_promotion_criteria_pass": false,
+  "perfect_oracle_unique_by_seed": {
+    "2821": 20,
+    "2833": 20
+  },
+  "findings": [
+    {
+      "priority": "P2",
+      "scope": "frozen evaluation design",
+      "description": "Exact-one +/-200us gate rejects four exact true paths at the chosen held positions, even with perfect geometry and a complete perfect-peak catalog."
+    }
+  ],
+  "production_defect_demonstrated": false,
+  "no_raw_pipeline_or_mapper_rerun": true,
+  "diagnostic_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "artifact_sha256": {
+    "work/transfer-independent-review/REVIEW.md": "876e5063548ce14d5f4b86cfda473ed795c2b5de64425a49e21cbb972adf8e5e",
+    "work/transfer-independent-review/diagnose_saved.py": "75a4e9fabd1bd3ca56a290fb5e05e77455ddc20acf4b3efc11b3259155b9b0e1",
+    "work/transfer-independent-review/diagnostic.json": "12aeb99b89e0a5416315e90d86e17066be47ee23c6f6f3309d0225651734cc9a",
+    "work/transfer-independent-review/oracle-feasibility.json": "0d6b16d778cb4ed926fc075675c8ef6e1b44ffe90a5c30a0c6b76d0c6b6e6d8c",
+    "work/transfer-independent-review/oracle-run.log": "624159da2bc3834a6478ce85bcda90594356681ff3dfe12258dc6b7ddecd620c",
+    "work/transfer-independent-review/oracle_feasibility.py": "fb3ef04c72ffd1c456716d57b3c318766e21cd67d03081a3f80187ad3e669bc8",
+    "work/transfer-independent-review/run.log": "9d3d06e18eb031100a9eb6503022e62b8ede319bb4eb63f74ab158c8e8706681",
+    "work/transfer-evaluation-review/held-failure-diagnostics.json": "0554f2c2dc0ed9b3fb812d3946b229d2f7354e00d326dfb484fd4dbf9d3ee631"
+  }
+}

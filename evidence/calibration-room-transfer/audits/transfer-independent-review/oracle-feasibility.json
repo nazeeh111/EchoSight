@@ -1,0 +1,507 @@
+{
+  "scope": "POST-HOC ORACLE FEASIBILITY DIAGNOSTIC; does not replace or rescore any actual row",
+  "window_s": 0.0002,
+  "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "variants": [
+    {
+      "seed": 2821,
+      "mode": "perfect_geometry_calibration_poses_and_peaks",
+      "expected": 24,
+      "unique": 20,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.00850635370833963,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.0
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.00017302145329619462
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.008333332255043433,
+          "own_true_excess_delay_s": 0.008333332255043435,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.00017302145329619635
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": 1.734723475976807e-18
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.007808460596558792,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -1.734723475976807e-18
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.00019698678307141816
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.008005447379630213,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00019698678307142337
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": -3.469446951953614e-18
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "mode": "true_planes_saved_joint_calibration_actual_poses_perfect_peaks",
+      "expected": 24,
+      "unique": 20,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.008515466904860956,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": -9.113196521326819e-06
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.00018213464981752144
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.00832206721623698,
+          "own_true_excess_delay_s": 0.008333332255043435,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.00018428649210264908
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": 1.1265038806454464e-05
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.007810256552939428,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -1.7959563806384943e-06
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.0001951908266907814
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.007993616505477166,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00018515590891837568
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 1.1830874153044221e-05
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "mode": "true_planes_saved_joint_calibration_surveyed_poses_perfect_peaks",
+      "expected": 24,
+      "unique": 20,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.008515174682838236,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": -8.820974498606471e-06
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.0001818424277948011
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.008326143399290727,
+          "own_true_excess_delay_s": 0.008333332255043435,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.00018021030904890288
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": 7.188855752708265e-06
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.0078093531035525205,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -8.925069937305852e-07
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.0001960942760776893
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.007989526309343648,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00018106571278485827
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 1.592107028656163e-05
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "mode": "perfect_geometry_calibration_poses_and_peaks",
+      "expected": 24,
+      "unique": 20,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.00850635370833963,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.0
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.00017302145329619462
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.008333332255043433,
+          "own_true_excess_delay_s": 0.008333332255043435,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.00017302145329619635
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": 1.734723475976807e-18
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.007808460596558792,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -1.734723475976807e-18
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.00019698678307141816
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.008005447379630213,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00019698678307142337
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": -3.469446951953614e-18
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "mode": "true_planes_saved_joint_calibration_actual_poses_perfect_peaks",
+      "expected": 24,
+      "unique": 20,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.008494952715946092,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 1.140099239353709e-05
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.00016162046090265753
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.00831972520607275,
+          "own_true_excess_delay_s": 0.008333332255043435,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 0.0001866285022668803
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": 1.3607048970685695e-05
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.007807837302430471,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": 6.232941283188659e-07
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.00019761007719973876
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.007995474765267786,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00018701416870899566
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 9.972614362424234e-06
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "mode": "true_planes_saved_joint_calibration_surveyed_poses_perfect_peaks",
+      "expected": 24,
+      "unique": 21,
+      "complete": false,
+      "failed_rows": [
+        {
+          "capture_id": "capture-14",
+          "wall": "wall-1-0",
+          "predicted_delay_s": 0.008493684560978355,
+          "own_true_excess_delay_s": 0.00850635370833963,
+          "eligible": [
+            {
+              "wall": "wall-1-0",
+              "true_excess_delay_s": 0.00850635370833963,
+              "residual_s": 1.26691473612741e-05
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.008333332255043435,
+              "residual_s": -0.00016035230593492052
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-0-0",
+          "predicted_delay_s": 0.007807050850329653,
+          "own_true_excess_delay_s": 0.00780846059655879,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": 1.409746229136602e-06
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": 0.0001983965293005565
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        },
+        {
+          "capture_id": "capture-15",
+          "wall": "wall-1-1",
+          "predicted_delay_s": 0.00800826177738391,
+          "own_true_excess_delay_s": 0.00800544737963021,
+          "eligible": [
+            {
+              "wall": "wall-0-0",
+              "true_excess_delay_s": 0.00780846059655879,
+              "residual_s": -0.00019980118082511995
+            },
+            {
+              "wall": "wall-1-1",
+              "true_excess_delay_s": 0.00800544737963021,
+              "residual_s": -2.814397753700057e-06
+            }
+          ],
+          "status": "missing_or_ambiguous"
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/settings.json": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/raw/room-2821/truth.json": "93991f868141de19aa52c04d447d72a4a3d6c003f63fd1a4a0ca3b2d6d4ffc6b",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/fits/room-2821-joint_mapper.json": "66a9a9a8b4aaafeb48de8c713014dac573faef83e23381636f1e9fd22f22eeb6",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/raw/room-2833/truth.json": "c496b171a6c9e85d442f745963d96d45ca72ccc0712386652a6ef0131d55582f",
+    "work/frozen-transfer-runtime/work/calibration-room-transfer/fits/room-2833-joint_mapper.json": "832fbed6c51a7c911707ccc35e42301578f3b41b10e1b2cba3992a23616a1373"
+  },
+  "conclusion": "The fixed exact-one-candidate +/-200us gate fails even with exact true planes, calibration, poses and all six perfect peaks. The actual transfer remains failed; improved peak extraction alone cannot establish closure under this frozen design."
+}

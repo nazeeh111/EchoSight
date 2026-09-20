@@ -1,0 +1,14 @@
+{
+  "status": "all20_workers_completed",
+  "frozen_criteria_unchanged": true,
+  "results_sha256": "7acbd36695af09e0924cc5e40054ff80cb17c135186784d45eeaa7f093c4bf5b",
+  "new_raw_count": 56,
+  "fit_count": 20,
+  "transfer_pass": false,
+  "promotion_criteria_pass": false,
+  "load_average_after": [
+    1.7421875,
+    2.38818359375,
+    2.29638671875
+  ]
+}

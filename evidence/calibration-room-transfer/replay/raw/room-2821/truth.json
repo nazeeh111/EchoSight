@@ -1,0 +1,88 @@
+{
+  "surfaces": [
+    {
+      "surface_id": "wall-0-0",
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "offset_m": 0.0,
+      "anchor_m": [
+        0.0,
+        2.4,
+        1.6
+      ]
+    },
+    {
+      "surface_id": "wall-0-1",
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "offset_m": 5.5,
+      "anchor_m": [
+        5.5,
+        2.4,
+        1.6
+      ]
+    },
+    {
+      "surface_id": "wall-1-0",
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "offset_m": 0.0,
+      "anchor_m": [
+        2.75,
+        0.0,
+        1.6
+      ]
+    },
+    {
+      "surface_id": "wall-1-1",
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "offset_m": 4.8,
+      "anchor_m": [
+        2.75,
+        4.8,
+        1.6
+      ]
+    },
+    {
+      "surface_id": "wall-2-0",
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset_m": 0.0,
+      "anchor_m": [
+        2.75,
+        2.4,
+        0.0
+      ]
+    },
+    {
+      "surface_id": "wall-2-1",
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset_m": 3.2,
+      "anchor_m": [
+        2.75,
+        2.4,
+        3.2
+      ]
+    }
+  ]
+}

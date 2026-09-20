@@ -1,0 +1,291 @@
+{
+  "seed": 2833,
+  "family": "direct_only",
+  "method": "joint_first_echo",
+  "raw_processing_s": 0.3224812090047635,
+  "runtime_scope": "raw pipeline plus additional first-echo inference",
+  "observation_hash": "2262a473c0e45430ff3a11f54a977f900a1aeb0b77df0bab517c7b5de4518fc6",
+  "physical_validation": false,
+  "result": {
+    "status": "no_result",
+    "provenance": [],
+    "acquisition": {
+      "source_position_m": [
+        1.5421729620721625,
+        1.4804307034375608,
+        1.3111110863101627
+      ],
+      "effective_speed_m_s": 346.5383286886248,
+      "sound_speed_m_s": 343.0,
+      "source_clock_scale": 1.0
+    },
+    "surfaces": [],
+    "observations": [
+      {
+        "capture_id": "capture-00",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          0.6979985912882463,
+          0.7489283427975747,
+          0.4009611771730217
+        ],
+        "recording_sha256": "43ffc91427268c325ceecfe88c148c5777c055712b9fdab0ef96bca0425c718e",
+        "waveform_sha256": "45f40a9e753d4548ab62b71b2792cc2c53f402dac3840149476a8241863a207d",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-01",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          4.597046949079071,
+          0.855051611773462,
+          0.5538012558646181
+        ],
+        "recording_sha256": "ae64ffc9cd58059f45ba77ac30806f1238da47a115223b0027d0af34b76b226d",
+        "waveform_sha256": "f7ef71113fe1c03f3b53b6a7386a49dab7429f3e8862165de83e602f14d3abdf",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-02",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          0.8495471968622257,
+          3.9005519200420014,
+          0.6518894032198838
+        ],
+        "recording_sha256": "a2cf197520444f1f76d357a5263b60b546580f4db9b50279631be026643277e3",
+        "waveform_sha256": "6bb1110ea46a7d84ae4d7c79c2216397009f5906acf9ee7d78a0eefed2af3a60",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-03",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          4.748375531414098,
+          3.7505158075907725,
+          0.35196513377551636
+        ],
+        "recording_sha256": "c94e381041fc3e29f2e4d7fde937c66411b7424565353980192f151564eba313",
+        "waveform_sha256": "462d83fa562737328e3861f96102f5f988d23647d57076d4696845b11811bae1",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-04",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          0.8956212486223483,
+          0.8967352439429492,
+          2.645565613120322
+        ],
+        "recording_sha256": "7bde4691fbdeda7b501470372d273f6e9b1e117f56fe0d902247e41f39a7dfaf",
+        "waveform_sha256": "83d354d61121615aea70bd923254ce6c6bd230f743bc3f59009abb742c89921f",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-05",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          4.650778672066406,
+          0.6512272790572309,
+          2.494684660599227
+        ],
+        "recording_sha256": "6b97089ae0de42d2e8a3790290e71ad5402a75ce41bcdb6a57ee3c456c4ef1ca",
+        "waveform_sha256": "fad5631228b622bbba51b8517f93e80756046f3188c87204c2637766b3857ac4",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-06",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          0.6491664920302015,
+          3.844972765837457,
+          2.4526086827997475
+        ],
+        "recording_sha256": "d74cb16d83166ac902518d28e06d2b8a7454dda92e74e35c3fca00450ea6ca48",
+        "waveform_sha256": "fe7887b6e00dbfde227eabd05dfa68301d669ecec1b117eb4b8521c10358caf2",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-07",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          4.503996265800742,
+          3.9508779054244645,
+          2.7036890663482325
+        ],
+        "recording_sha256": "eb9dd133e2d64a05410c0ce9b3beb99191c8351c66ddc89faa104f847faee5f7",
+        "waveform_sha256": "4b31d4c992f04df4e8fe4f09135d65d24e63aa2d26bcfbca63a1f9ce77b2e549",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-08",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          2.555563549473081,
+          0.6998825381674743,
+          1.199433915104402
+        ],
+        "recording_sha256": "c2d07dfcb994d93f15156343d9b11f7f750135efd16b10f11c77d9fcb3f075ab",
+        "waveform_sha256": "8e37b72d81ae6b4a8fe789ec5bdc994e58bfb48bf425291c89b433c103ab5416",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-09",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          3.000421422414092,
+          4.100095179467835,
+          1.7970459940820522
+        ],
+        "recording_sha256": "4df6b3838deb666a0ad9fea2a4c459ef5ebf16ab5fe68143ec4fb756d257f698",
+        "waveform_sha256": "d74b3d0bad0c2bb02898a9ecaa36def319505e2c8293d3deb38f1bada429d05b",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-10",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          0.7492691981832785,
+          2.498254894775412,
+          1.5456086942857843
+        ],
+        "recording_sha256": "4f141abb1ef9474844e51cabef5de235c55c09e5ca731d854de3b25b537856bc",
+        "waveform_sha256": "57f3fe3afedffbae7feac00375aff6d481f547271c12d716768886457e1c633d",
+        "candidates": []
+      },
+      {
+        "capture_id": "capture-11",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          },
+          {
+            "code": "no_resolved_echoes",
+            "message": "No repeatable separated echoes; this does not establish empty space."
+          }
+        ],
+        "receiver_position_m": [
+          4.607078303139477,
+          2.199096077682002,
+          1.0995460373264785
+        ],
+        "recording_sha256": "03bc7849056f6997ba878f240fc8ed29347fca97139fb2332b7364d15727341a",
+        "waveform_sha256": "e552e0123a654fead700518b88069c2ab9f748d9b5c3a0e2ee910d02262cae40",
+        "candidates": []
+      }
+    ]
+  },
+  "withheld_extraction": null
+}

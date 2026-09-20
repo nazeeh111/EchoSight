@@ -1,0 +1,135 @@
+{
+  "candidate_window_s": 0.0002,
+  "required_path_ids": [
+    "wall-0-0",
+    "wall-0-1",
+    "wall-1-0",
+    "wall-1-1",
+    "wall-2-0",
+    "wall-2-1"
+  ],
+  "captures": [
+    {
+      "capture_id": "capture-12",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.005465743628345164
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.0218070247918014
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.005000099419018885
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.018231388593469976
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.0068799414263290785
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.007106511477500899
+        }
+      ]
+    },
+    {
+      "capture_id": "capture-13",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.008822202372254274
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.01003182781758813
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.004165215178127202
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.013826786917005347
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.0024070504170445733
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.007294566661754515
+        }
+      ]
+    },
+    {
+      "capture_id": "capture-14",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.004492827081022138
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.018581894361693607
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.00850635370833963
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.008333332255043435
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.003235626697772845
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.007394003999561707
+        }
+      ]
+    },
+    {
+      "capture_id": "capture-15",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.00780846059655879
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.00950604773949947
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.00660185139914405
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.00800544737963021
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.004786889035564379
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.0029596052621066894
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "scope": "Post-hoc exact-path diagnostic, not a new freeze or replacement score. Both seeds use the same actual geometry.",
+    "seed": 2821,
+    "original_truth_sha256": "93991f868141de19aa52c04d447d72a4a3d6c003f63fd1a4a0ca3b2d6d4ffc6b",
+    "original_freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "seed": 2821,
+  "family": "direct_only",
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "files": {
+    "capture-00.wav": "5a241b2d5363ef939edec69834ef567c0f74baadb5554c14bb0a827b24ff038c",
+    "capture-01.wav": "8c61f27ea53ce44da45b3e8ee20b4c710d9614a434539b559704700b9b12fd0a",
+    "capture-02.wav": "4ac6d46c1564e739854089d135b7b454f8adfba53037036290a7aeceeeefef95",
+    "capture-03.wav": "125049b6d55b02587214840a09659326ddf544ff0978d45993707720c1d059cf",
+    "capture-04.wav": "38c058b7b18b931cf92ee2cd011aa8dc9e5e9e034239427e96da1823c67dfd98",
+    "capture-05.wav": "750f649093de161bea5cf903c445ce7707cc38d21d04992ecf4499121428b658",
+    "capture-06.wav": "576642679b6e3ff1b6e605cb056063891e333d24ad1bf591db637205f0e1b65d",
+    "capture-07.wav": "d5c14dc1616e3d33388e8b3a313bef8079b1a64a50b92ea1a4dfb1dcf558e32d",
+    "capture-08.wav": "1f31cad472faa9f687161d7e562881140dd0e273336f98a7ec0795d5f99d5265",
+    "capture-09.wav": "7c07a89345def2586b1655ad2690d92a537c9ae3dcbd1a03d9618f35977df23e",
+    "capture-10.wav": "1dcc74d2e91800ae09f8870026cefdabdc838dbb36c652485995dfe8ea40a235",
+    "capture-11.wav": "4368595d3f4636f2fdbac1260bb9d3b874b00c623c2e9ca3f28167356ea98fa6",
+    "mapping.json": "34e33b1db0b0d187ed83188ecee527d7e44f24b7a2883d6c0d870c7c4b5dd34e",
+    "truth.json": "9497ee9adbf596eb1f35c33e4f0764f376ea9fdd725dbfbcfcb353e59b6700d4"
+  },
+  "waveforms": 12
+}

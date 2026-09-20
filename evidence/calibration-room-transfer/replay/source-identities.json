@@ -1,0 +1,229 @@
+{
+  "source_prefix": "work/calibration-room-transfer",
+  "files": {
+    "fits/direct_only-2821-joint_first_echo.json": {
+      "sha256": "e3c6f14dac279b312ac706d1453a6ae88d9877d831818605055d06da5e2c1019",
+      "bytes": 1858217,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2821-joint_grid.json": {
+      "sha256": "89679e891dc9f1f01d3b4af2590d4960c8f55f9a984b0dfd3496d02a749add67",
+      "bytes": 1861108,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2821-joint_mapper.json": {
+      "sha256": "1a05e3af3ca01308fa35308ae54adfe95e3c5c2daf18161616c82c051f082b4e",
+      "bytes": 1861103,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2821-nominal_mapper.json": {
+      "sha256": "3bf3942c4251fac1141b2154bfc955fc5d67e08a6133c928b06ddd1cac4bd89b",
+      "bytes": 1859594,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2821-one_x_mapper.json": {
+      "sha256": "626fd3d84794d34ab8313c68e58e3d7aaad2a5bc4d0932e0df1fd6c59a23c51b",
+      "bytes": 1861093,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2833-joint_first_echo.json": {
+      "sha256": "8803ecc918d4f07551ee63a442977ba3275025c93550703e23eda96353630f3b",
+      "bytes": 1858502,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2833-joint_grid.json": {
+      "sha256": "d6b591fb9a89a4e1c6e41ef453a3053c18131c3df8e4896895cb477932c1c1fe",
+      "bytes": 1861391,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2833-joint_mapper.json": {
+      "sha256": "ac607cbe12dfb3f4876a2836b60953dad95ec3dde574fd1be5888ff7e957f9ca",
+      "bytes": 1861388,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2833-nominal_mapper.json": {
+      "sha256": "f21c7cc32efc582fd4c7414a4af7e683cd34f7c27be0144ccbe080b550034acb",
+      "bytes": 1859877,
+      "included": "field projection only"
+    },
+    "fits/direct_only-2833-one_x_mapper.json": {
+      "sha256": "9701ac078f1585dae0b0243a878cb35da4e4f1ed07f6efb4838a5d326f76c84d",
+      "bytes": 1861355,
+      "included": "field projection only"
+    },
+    "fits/room-2821-joint_first_echo.json": {
+      "sha256": "96fe0ce05d1d3cb39ec79301845a8f17b88ef9844c74709597ed5b605843c6fb",
+      "bytes": 2518050,
+      "included": "field projection only"
+    },
+    "fits/room-2821-joint_grid.json": {
+      "sha256": "157013c849012d8ee7fe95d5745198e8f3ef5a02fcda79ec60674789ed4332be",
+      "bytes": 2605084,
+      "included": "field projection only"
+    },
+    "fits/room-2821-joint_mapper.json": {
+      "sha256": "66a9a9a8b4aaafeb48de8c713014dac573faef83e23381636f1e9fd22f22eeb6",
+      "bytes": 2614742,
+      "included": "field projection only"
+    },
+    "fits/room-2821-nominal_mapper.json": {
+      "sha256": "ce98428aa5676927c05821a395f29011fbc1dcfe2a54b0157eaf0d9b84c36922",
+      "bytes": 2610158,
+      "included": "field projection only"
+    },
+    "fits/room-2821-one_x_mapper.json": {
+      "sha256": "ceb8b810e697c8e224775f4dc65fbd1e22e3b819b967e9a6550c1f440e5f1e76",
+      "bytes": 2614213,
+      "included": "field projection only"
+    },
+    "fits/room-2833-joint_first_echo.json": {
+      "sha256": "1466ce257637cb0fa8c2863017d7bfec0f5629ce09ffb8b4ab420409553168cd",
+      "bytes": 2518042,
+      "included": "field projection only"
+    },
+    "fits/room-2833-joint_grid.json": {
+      "sha256": "d3c6f8fa7128330d93d8640f5181674ce0b4969348ad40a5f4125352ab9dfe4e",
+      "bytes": 2608623,
+      "included": "field projection only"
+    },
+    "fits/room-2833-joint_mapper.json": {
+      "sha256": "832fbed6c51a7c911707ccc35e42301578f3b41b10e1b2cba3992a23616a1373",
+      "bytes": 2615183,
+      "included": "field projection only"
+    },
+    "fits/room-2833-nominal_mapper.json": {
+      "sha256": "4a63943dc469525dc740de0f74e43cc0ee44f7ec43dba1832dfa3e65f3597d95",
+      "bytes": 2608435,
+      "included": "field projection only"
+    },
+    "fits/room-2833-one_x_mapper.json": {
+      "sha256": "809be1d8710788de364e56d8f11e54c82d8ef935843adcf99dfe7f90c73bdfb4",
+      "bytes": 2613631,
+      "included": "field projection only"
+    },
+    "raw/direct_only-2821/truth.json": {
+      "sha256": "9497ee9adbf596eb1f35c33e4f0764f376ea9fdd725dbfbcfcb353e59b6700d4",
+      "bytes": 7549,
+      "included": "surface projection only"
+    },
+    "raw/direct_only-2821/manifest.json": {
+      "sha256": "f6264585c9151baab06ad3ffd1abb397b92a2bfd01b41c047552a4fe3fb126a0",
+      "bytes": 1423,
+      "included": "full provenance copy"
+    },
+    "raw/direct_only-2821/mapping.json": {
+      "sha256": "34e33b1db0b0d187ed83188ecee527d7e44f24b7a2883d6c0d870c7c4b5dd34e",
+      "bytes": 6382,
+      "included": "omitted"
+    },
+    "raw/direct_only-2833/truth.json": {
+      "sha256": "2364b446fb94d8e27065b4904d063e0ecbb184e32a11301d6146a6699ec53927",
+      "bytes": 7553,
+      "included": "surface projection only"
+    },
+    "raw/direct_only-2833/manifest.json": {
+      "sha256": "cc5fe69f241221904326a09ee5a2cef03aef4182a4f7d2d3d168e9941f71776f",
+      "bytes": 1423,
+      "included": "full provenance copy"
+    },
+    "raw/direct_only-2833/mapping.json": {
+      "sha256": "3e49a93818416bddfeecf35b54567d6139765f731154f0b08acd9f47be88e37f",
+      "bytes": 6381,
+      "included": "omitted"
+    },
+    "raw/room-2821/truth.json": {
+      "sha256": "93991f868141de19aa52c04d447d72a4a3d6c003f63fd1a4a0ca3b2d6d4ffc6b",
+      "bytes": 36080,
+      "included": "surface projection only"
+    },
+    "raw/room-2821/manifest.json": {
+      "sha256": "be16c0008bc119eae07408b88514539dc49691b50c5afc98bce75db1109f4abc",
+      "bytes": 1865,
+      "included": "full provenance copy"
+    },
+    "raw/room-2821/mapping.json": {
+      "sha256": "07781a4bf0c84d9cbbb04f3ffd9e90d7d549c6c0651ccd1f6fce0be5a2d2bde3",
+      "bytes": 6375,
+      "included": "omitted"
+    },
+    "raw/room-2821/withheld.json": {
+      "sha256": "2f5c94c5c8b6557e9c8a2c36d0852202cd11add676ccda4b4f3c7dfa7a6fde6f",
+      "bytes": 2755,
+      "included": "omitted"
+    },
+    "raw/room-2833/truth.json": {
+      "sha256": "c496b171a6c9e85d442f745963d96d45ca72ccc0712386652a6ef0131d55582f",
+      "bytes": 36085,
+      "included": "surface projection only"
+    },
+    "raw/room-2833/manifest.json": {
+      "sha256": "abacb1d1c6163e1cecf365e1ea3e45b14017d12a4cfca9f328a22f96153113df",
+      "bytes": 1865,
+      "included": "full provenance copy"
+    },
+    "raw/room-2833/mapping.json": {
+      "sha256": "b2cd6551f4ad9ec1ffdd12d736d95e01e1a390ec29e47a8593f9951a8c035ad4",
+      "bytes": 6374,
+      "included": "omitted"
+    },
+    "raw/room-2833/withheld.json": {
+      "sha256": "5c30d0518a7dd342467ca99989d4588dc74561db94a32610c37825c8908b9655",
+      "bytes": 2755,
+      "included": "omitted"
+    },
+    "settings.json": {
+      "sha256": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+      "bytes": 2947,
+      "included": "full copy"
+    },
+    "freeze.json": {
+      "sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+      "bytes": 13023,
+      "included": "full copy"
+    },
+    "static-check.json": {
+      "sha256": "a2e512ff2122febb9455f354c69c4a7856056c5d848876a829505f4765070c2e",
+      "bytes": 421,
+      "included": "full copy"
+    },
+    "render-start.json": {
+      "sha256": "4ebd017dc52a7dd072b31cbf5f04dcb970228e7997bcfc833382c9f5877b1229",
+      "bytes": 90,
+      "included": "full copy"
+    },
+    "render-complete.json": {
+      "sha256": "3add19badab33e46ac4ffc81fff592caebc7711ba02d9ccfe0d59df7e1a935c5",
+      "bytes": 537,
+      "included": "full copy"
+    },
+    "run-start.json": {
+      "sha256": "12634079709673bf23287ba4abf16b9307785e713009242cd9d0783efadf3090",
+      "bytes": 254,
+      "included": "full copy"
+    },
+    "results.json": {
+      "sha256": "7acbd36695af09e0924cc5e40054ff80cb17c135186784d45eeaa7f093c4bf5b",
+      "bytes": 243071,
+      "included": "full copy as expected-results.json"
+    },
+    "run.py": {
+      "sha256": "458eb6b54959c91135f6413929b7b47526cc1cace3441837db4773f382edc6b6",
+      "bytes": 22190,
+      "included": "score/withheld_metrics/summarize functions copied without modification"
+    }
+  },
+  "projections": {
+    "fits": "Keep result status/identity/provenance, surface ID/normal/offset and three uncertainty fields, four source/speed acquisition fields; capture ID/status/diagnostics/receiver position/raw and waveform hashes; candidate ID/delay/merged. Keep full-observation hash and observed processing seconds. All other fields omitted.",
+    "truth": "Only planar surface truth retained; original per-capture path/clock/noise truth omitted."
+  },
+  "omitted": [
+    "All 56 experiment WAVs; all 48 retained reference WAVs; original dense responses, full observations and fit artifacts; source-calibration fit inputs; inference search/hypotheses/support meshes; mapping and withheld session originals."
+  ],
+  "limits": [
+    "Hashes identify omitted bytes, but cannot verify omitted bytes on a clean machine.",
+    "Recorded admission decisions and timing are inputs, not newly measured or inferred.",
+    "Observation identity gate compares retained original full-observation hashes; full hashes were checked against originals at projection, and cannot be recomputed from projected records.",
+    "This replays evaluation arithmetic, not rendering, raw audio processing, calibration or geometry fitting.",
+    "Incomplete withheld rms_s/max_abs_s are unique-only subset statistics, not complete 24-path errors."
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "seed": 2821,
+  "family": "room",
+  "method": "joint_mapper",
+  "raw_processing_s": 0.8778497080056695,
+  "runtime_scope": "raw recording to result",
+  "observation_hash": "a8ee6b61325caeedd390adc8752632ee855bfbedf23ffc9753dffdb0719085f2",
+  "physical_validation": false,
+  "result": {
+    "status": "partial",
+    "result_id": "result-6b430d74c16561f7e41f",
+    "provenance": {
+      "inference": [
+        "simulated"
+      ],
+      "software_version": "0.1.0",
+      "physical_validation": false,
+      "evidence_classes": [
+        "simulated"
+      ],
+      "recordings": [
+        {
+          "capture_id": "capture-00",
+          "sha256": "b1a97d39a6c59878e472f88887f88b2743f958678423f9a3dd565fb87021813e"
+        },
+        {
+          "capture_id": "capture-01",
+          "sha256": "ec224357a9302952f15e5e852dfef273c47e18dd2e1c8dc31d4a237a233609ff"
+        },
+        {
+          "capture_id": "capture-02",
+          "sha256": "1a29a6048de31b72fa6ee53878b18c2942933656e84c08cf6616e314097b3e19"
+        },
+        {
+          "capture_id": "capture-03",
+          "sha256": "67bcba951b479fa0f3a239732fad82b9eb33a5db6d502c2bb251d4e261f5dbc2"
+        },
+        {
+          "capture_id": "capture-04",
+          "sha256": "089c45a923f0648659c28846bbe2e2fa5e10c2e0adac6ec8e8c92db9713c9a5a"
+        },
+        {
+          "capture_id": "capture-05",
+          "sha256": "e211aad99304035a7306ff4259b5bbb20226943cacf8d3f67e1256456008c797"
+        },
+        {
+          "capture_id": "capture-06",
+          "sha256": "e602afe9c4e7d00d9a786c8bed001ff89e1e2c2463b43bd7002dcefbcf49b8f8"
+        },
+        {
+          "capture_id": "capture-07",
+          "sha256": "b9d53ee0d2772189bad3f2773a42ee3cf1959b7964c159961ff2c37a37b32552"
+        },
+        {
+          "capture_id": "capture-08",
+          "sha256": "7ea3c75dc73b31391c20e0efd17845517ace6cedd6ffb0ad515d858869884247"
+        },
+        {
+          "capture_id": "capture-09",
+          "sha256": "e5f7fe4b3accb85b12c926aaac42d235dd565346a7ce47289d6c3f2505e7af25"
+        },
+        {
+          "capture_id": "capture-10",
+          "sha256": "87b470758826561c79afed77bc55f2ac8bd4c7323a9a69cf4d8253c225304f3a"
+        },
+        {
+          "capture_id": "capture-11",
+          "sha256": "c6cc76811f0db44ca6f4d9c26ecdf1d2a7f7294856e9c74cbf865e0ee6234885"
+        }
+      ],
+      "method": "mapper",
+      "coordinates": "right-handed, metres, z up",
+      "poses": "supplied acoustic-center positions",
+      "geometry": "inferred from recording-derived excess delays",
+      "implementation_sha256": "4ea69860dca8e6783fbbd257f011243b678a38fc98b8494a0af4f96fa2599cff",
+      "runtime_versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.18.1"
+      }
+    },
+    "acquisition": {
+      "source_position_m": [
+        1.5418192092319156,
+        1.4835772804987744,
+        1.3103000742986768
+      ],
+      "effective_speed_m_s": 346.44680131485916,
+      "sound_speed_m_s": 343.0,
+      "source_clock_scale": 1.0
+    },
+    "surfaces": [
+      {
+        "surface_id": "reflector-0cbb635f6b90",
+        "normal": [
+          -0.0011540740483348521,
+          0.9999957173374004,
+          -0.0026895018030654956
+        ],
+        "offset_m": -0.004915179128135009,
+        "uncertainty": {
+          "offset_std_m": 0.0139181784321985,
+          "normal_angular_std_rad": 0.008595974384812924
+        }
+      },
+      {
+        "surface_id": "reflector-0c2ef5c93600",
+        "normal": [
+          -0.0011278357229696063,
+          -0.0019762541186174832,
+          0.9999974111997694
+        ],
+        "offset_m": -0.006354800508857216,
+        "uncertainty": {
+          "offset_std_m": 0.013602748921366306,
+          "normal_angular_std_rad": 0.006702387232784036
+        }
+      },
+      {
+        "surface_id": "reflector-fe06790f5153",
+        "normal": [
+          0.0004699518759427925,
+          -0.0009570670086836386,
+          0.999999431583826
+        ],
+        "offset_m": 3.20166636934691,
+        "uncertainty": {
+          "offset_std_m": 0.011831358750521997,
+          "normal_angular_std_rad": 0.005280487722803175
+        }
+      },
+      {
+        "surface_id": "reflector-48c11924ebb4",
+        "normal": [
+          0.9999945923603768,
+          -0.0016623348306717702,
+          0.002837585754573979
+        ],
+        "offset_m": 5.5026619032512665,
+        "uncertainty": {
+          "offset_std_m": 0.00993755491462127,
+          "normal_angular_std_rad": 0.006406632184799374
+        }
+      },
+      {
+        "surface_id": "reflector-a1661e502b63",
+        "normal": [
+          0.0028311208263195023,
+          0.9999907777589164,
+          -0.0032294197596833872
+        ],
+        "offset_m": 4.806574594591055,
+        "uncertainty": {
+          "offset_std_m": 0.010764018489387926,
+          "normal_angular_std_rad": 0.006292423939772344
+        }
+      },
+      {
+        "surface_id": "reflector-91695d4c63b0",
+        "normal": [
+          0.999933744718377,
+          0.002863156111724121,
+          -0.01114937265335905
+        ],
+        "offset_m": -0.00866627492111503,
+        "uncertainty": {
+          "offset_std_m": 0.01939371028831505,
+          "normal_angular_std_rad": 0.012350365725821778
+        }
+      }
+    ],
+    "observations": [
+      {
+        "capture_id": "capture-00",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          0.6999474959617462,
+          0.7471316289961332,
+          0.396598225267929
+        ],
+        "recording_sha256": "b1a97d39a6c59878e472f88887f88b2743f958678423f9a3dd565fb87021813e",
+        "waveform_sha256": "93d4a9bbb74595d965ea133efd40ee007748a5a620036387c709a7482c216da1",
+        "candidates": [
+          {
+            "candidate_id": "capture-00:echo:00",
+            "delay_s": 0.0017425045011187491
+          },
+          {
+            "candidate_id": "capture-00:echo:01",
+            "delay_s": 0.00322392857976492
+          },
+          {
+            "candidate_id": "capture-00:echo:02",
+            "delay_s": 0.00977631535281864
+          },
+          {
+            "candidate_id": "capture-00:echo:03",
+            "delay_s": 0.01744418081421916
+          },
+          {
+            "candidate_id": "capture-00:echo:04",
+            "delay_s": 0.021387116320129455
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-01",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          4.596011431821595,
+          0.8494474000440791,
+          0.5550730605330334
+        ],
+        "recording_sha256": "ec224357a9302952f15e5e852dfef273c47e18dd2e1c8dc31d4a237a233609ff",
+        "waveform_sha256": "7ac2d105060975fcc07076a6d47eca8d64ad13888af172fb2ae065a91a8239c4",
+        "candidates": [
+          {
+            "candidate_id": "capture-01:echo:00",
+            "delay_s": 0.0012149482196421684
+          },
+          {
+            "candidate_id": "capture-01:echo:01",
+            "delay_s": 0.0020385437610937734
+          },
+          {
+            "candidate_id": "capture-01:echo:02",
+            "delay_s": 0.005040597091815527
+          },
+          {
+            "candidate_id": "capture-01:echo:03",
+            "delay_s": 0.006634856840402922
+          },
+          {
+            "candidate_id": "capture-01:echo:04",
+            "delay_s": 0.008681141106583572
+          },
+          {
+            "candidate_id": "capture-01:echo:05",
+            "delay_s": 0.013608968765501302
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-02",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          0.8539718936141476,
+          3.899123167882736,
+          0.6503569147442914
+        ],
+        "recording_sha256": "1a29a6048de31b72fa6ee53878b18c2942933656e84c08cf6616e314097b3e19",
+        "waveform_sha256": "6182edfcc1a4a16956adf56acf7cea46b09855f9aba6214bedc7195aef8cc635",
+        "candidates": [
+          {
+            "candidate_id": "capture-02:echo:00",
+            "delay_s": 0.0016986761965514193
+          },
+          {
+            "candidate_id": "capture-02:echo:01",
+            "delay_s": 0.0024942295565568225
+          },
+          {
+            "candidate_id": "capture-02:echo:02",
+            "delay_s": 0.004985087281114679
+          },
+          {
+            "candidate_id": "capture-02:echo:03",
+            "delay_s": 0.007231182838855119
+          },
+          {
+            "candidate_id": "capture-02:echo:04",
+            "delay_s": 0.008273071397190442
+          },
+          {
+            "candidate_id": "capture-02:echo:05",
+            "delay_s": 0.01839934927904768
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-03",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          4.752899186939445,
+          3.7461101976605717,
+          0.34862932268876495
+        ],
+        "recording_sha256": "67bcba951b479fa0f3a239732fad82b9eb33a5db6d502c2bb251d4e261f5dbc2",
+        "waveform_sha256": "42aeac526eae4334c3179a6ce81cc02a81a8ebb2abbbf79fa9e0712e57eaf336",
+        "candidates": [
+          {
+            "candidate_id": "capture-03:echo:00",
+            "delay_s": 0.0006368176298608148
+          },
+          {
+            "candidate_id": "capture-03:echo:01",
+            "delay_s": 0.0036668522230195724
+          },
+          {
+            "candidate_id": "capture-03:echo:02",
+            "delay_s": 0.004217707155546429
+          },
+          {
+            "candidate_id": "capture-03:echo:03",
+            "delay_s": 0.006256628711001772
+          },
+          {
+            "candidate_id": "capture-03:echo:04",
+            "delay_s": 0.007828356733841892
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-04",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          0.8950783671154037,
+          0.9031019912097402,
+          2.6495878480250394
+        ],
+        "recording_sha256": "089c45a923f0648659c28846bbe2e2fa5e10c2e0adac6ec8e8c92db9713c9a5a",
+        "waveform_sha256": "16c6848f6e3acdc207294520429068616b853ddf2958c386c0ab7bc4bfb67141",
+        "candidates": [
+          {
+            "candidate_id": "capture-04:echo:00",
+            "delay_s": 0.0028734991041914977
+          },
+          {
+            "candidate_id": "capture-04:echo:01",
+            "delay_s": 0.0035008723955553453
+          },
+          {
+            "candidate_id": "capture-04:echo:02",
+            "delay_s": 0.007106265400192573
+          },
+          {
+            "candidate_id": "capture-04:echo:03",
+            "delay_s": 0.01669513412674437
+          },
+          {
+            "candidate_id": "capture-04:echo:04",
+            "delay_s": 0.020488872051506915
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-05",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          4.645513679848532,
+          0.6531364677149262,
+          2.4934442383022426
+        ],
+        "recording_sha256": "e211aad99304035a7306ff4259b5bbb20226943cacf8d3f67e1256456008c797",
+        "waveform_sha256": "e3132586ae8e9094a071ecc8d5e10e20ae3e5bfd748b671f645758ba20a8571a",
+        "candidates": [
+          {
+            "candidate_id": "capture-05:echo:00",
+            "delay_s": 0.0015052564751018298
+          },
+          {
+            "candidate_id": "capture-05:echo:01",
+            "delay_s": 0.0020221316039994654
+          },
+          {
+            "candidate_id": "capture-05:echo:02",
+            "delay_s": 0.00449765487589152
+          },
+          {
+            "candidate_id": "capture-05:echo:03",
+            "delay_s": 0.008456843177177632
+          },
+          {
+            "candidate_id": "capture-05:echo:04",
+            "delay_s": 0.013719345651616524
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-06",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          0.6460956636638542,
+          3.8508180264811007,
+          2.451990326369055
+        ],
+        "recording_sha256": "e602afe9c4e7d00d9a786c8bed001ff89e1e2c2463b43bd7002dcefbcf49b8f8",
+        "waveform_sha256": "d25476d941b4f745a1feebdfbc1e9d3f1e4a1db7824c685ce11cbe5ccaf6d661",
+        "candidates": [
+          {
+            "candidate_id": "capture-06:echo:00",
+            "delay_s": 0.0018664359297831522
+          },
+          {
+            "candidate_id": "capture-06:echo:01",
+            "delay_s": 0.0025462326971564635
+          },
+          {
+            "candidate_id": "capture-06:echo:02",
+            "delay_s": 0.005081951901311334
+          },
+          {
+            "candidate_id": "capture-06:echo:03",
+            "delay_s": 0.007937422426623942
+          },
+          {
+            "candidate_id": "capture-06:echo:04",
+            "delay_s": 0.018548028663451406
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-07",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          4.503067657757361,
+          3.947143227113549,
+          2.6963581570603075
+        ],
+        "recording_sha256": "b9d53ee0d2772189bad3f2773a42ee3cf1959b7964c159961ff2c37a37b32552",
+        "waveform_sha256": "54406b0cdcb966ad99f9da089c92ace93ff1f8bf367867853893184a3a076b64",
+        "candidates": [
+          {
+            "candidate_id": "capture-07:echo:00",
+            "delay_s": 0.0012658953883413933
+          },
+          {
+            "candidate_id": "capture-07:echo:01",
+            "delay_s": 0.003472100081549821
+          },
+          {
+            "candidate_id": "capture-07:echo:02",
+            "delay_s": 0.004232595290519115
+          },
+          {
+            "candidate_id": "capture-07:echo:03",
+            "delay_s": 0.0046661610231374835
+          },
+          {
+            "candidate_id": "capture-07:echo:04",
+            "delay_s": 0.006476002366906702
+          },
+          {
+            "candidate_id": "capture-07:echo:05",
+            "delay_s": 0.007438399428296843
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-08",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          2.551519417750595,
+          0.701392094797436,
+          1.1982143351268641
+        ],
+        "recording_sha256": "7ea3c75dc73b31391c20e0efd17845517ace6cedd6ffb0ad515d858869884247",
+        "waveform_sha256": "f845dbae293cb9828d7d7d1ab016391ce94e3633e718d56e1a801deba38a402a",
+        "candidates": [
+          {
+            "candidate_id": "capture-08:echo:00",
+            "delay_s": 0.00324904815473498
+          },
+          {
+            "candidate_id": "capture-08:echo:01",
+            "delay_s": 0.0044358977864332174
+          },
+          {
+            "candidate_id": "capture-08:echo:02",
+            "delay_s": 0.008129747408885172
+          },
+          {
+            "candidate_id": "capture-08:echo:03",
+            "delay_s": 0.016398420203552155
+          },
+          {
+            "candidate_id": "capture-08:echo:04",
+            "delay_s": 0.01794254193277446
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-09",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          3.0002825275406253,
+          4.096691604771172,
+          1.8034279671475562
+        ],
+        "recording_sha256": "e5f7fe4b3accb85b12c926aaac42d235dd565346a7ce47289d6c3f2505e7af25",
+        "waveform_sha256": "e78b246f5b18ee25a8afcb1384f1afbcccad8ee8a7058474c2056163661ed8ac",
+        "candidates": [
+          {
+            "candidate_id": "capture-09:echo:00",
+            "delay_s": 0.003681868364694329
+          },
+          {
+            "candidate_id": "capture-09:echo:01",
+            "delay_s": 0.004083387706948347
+          },
+          {
+            "candidate_id": "capture-09:echo:02",
+            "delay_s": 0.006432699044896896
+          },
+          {
+            "candidate_id": "capture-09:echo:03",
+            "delay_s": 0.007946214622332899
+          },
+          {
+            "candidate_id": "capture-09:echo:04",
+            "delay_s": 0.01141432819082956
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-10",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          0.7501153956409957,
+          2.50412858538486,
+          1.5530768988903922
+        ],
+        "recording_sha256": "87b470758826561c79afed77bc55f2ac8bd4c7323a9a69cf4d8253c225304f3a",
+        "waveform_sha256": "6ad585aa6660ba1b4f35e8fea9f3310ae1f26effcd05005f1c9b981a4a4a9a9c",
+        "candidates": [
+          {
+            "candidate_id": "capture-10:echo:00",
+            "delay_s": 0.0034858034770342988
+          },
+          {
+            "candidate_id": "capture-10:echo:01",
+            "delay_s": 0.005274973360000896
+          },
+          {
+            "candidate_id": "capture-10:echo:02",
+            "delay_s": 0.007097563910202829
+          },
+          {
+            "candidate_id": "capture-10:echo:03",
+            "delay_s": 0.007955510547107608
+          },
+          {
+            "candidate_id": "capture-10:echo:04",
+            "delay_s": 0.012624386140433838
+          },
+          {
+            "candidate_id": "capture-10:echo:05",
+            "delay_s": 0.021562117097647184
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-11",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          4.594743923791343,
+          2.2033080498403215,
+          1.0993678038389956
+        ],
+        "recording_sha256": "c6cc76811f0db44ca6f4d9c26ecdf1d2a7f7294856e9c74cbf865e0ee6234885",
+        "waveform_sha256": "86aa454d88713521b866d548cc7f5d0b9e873a75d7d770ffdd5661604d9bff5a",
+        "candidates": [
+          {
+            "candidate_id": "capture-11:echo:00",
+            "delay_s": 0.002341688470339206
+          },
+          {
+            "candidate_id": "capture-11:echo:01",
+            "delay_s": 0.0047392661695464565
+          },
+          {
+            "candidate_id": "capture-11:echo:02",
+            "delay_s": 0.005105693409333994
+          },
+          {
+            "candidate_id": "capture-11:echo:03",
+            "delay_s": 0.0055755036748503075
+          },
+          {
+            "candidate_id": "capture-11:echo:04",
+            "delay_s": 0.00877172342950873
+          },
+          {
+            "candidate_id": "capture-11:echo:05",
+            "delay_s": 0.010164590242024193
+          }
+        ]
+      }
+    ]
+  },
+  "withheld_extraction": {
+    "status": "cancelled",
+    "observations": [
+      {
+        "capture_id": "capture-12",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          1.1046195868929456,
+          0.9986945572756984,
+          1.8432458351122598
+        ],
+        "recording_sha256": "1f0029330851b18b60a932de654be7bbe103ba0167506ff9d31f9f7153e05471",
+        "waveform_sha256": "9eb064e010309c6599cb3d1348736cb7c4cb65a2c905c44eb147e82ef3c31e0c",
+        "candidates": [
+          {
+            "candidate_id": "capture-12:echo:00",
+            "delay_s": 0.00499954180572416
+          },
+          {
+            "candidate_id": "capture-12:echo:01",
+            "delay_s": 0.005466442454748935
+          },
+          {
+            "candidate_id": "capture-12:echo:02",
+            "delay_s": 0.0068782784125524035
+          },
+          {
+            "candidate_id": "capture-12:echo:03",
+            "delay_s": 0.018231180556540716
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-13",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          3.7497231522277814,
+          1.4517275870430506,
+          0.8480718130873306
+        ],
+        "recording_sha256": "b8e0820ab8c145827ec69b70eb01f902a4c9a59d4071d839dda3dafe6eebcb2d",
+        "waveform_sha256": "380c496ebbe63d4ee9151427b478b33ffac96efae2cebbe866958da49ddb41ac",
+        "candidates": [
+          {
+            "candidate_id": "capture-13:echo:00",
+            "delay_s": 0.002407064589352931
+          },
+          {
+            "candidate_id": "capture-13:echo:01",
+            "delay_s": 0.004165435659057447
+          },
+          {
+            "candidate_id": "capture-13:echo:02",
+            "delay_s": 0.007294211740103485
+          },
+          {
+            "candidate_id": "capture-13:echo:03",
+            "delay_s": 0.008821869843270904
+          },
+          {
+            "candidate_id": "capture-13:echo:04",
+            "delay_s": 0.010031839226797073
+          },
+          {
+            "candidate_id": "capture-13:echo:05",
+            "delay_s": 0.013827515564229181
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-14",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          1.3491164946046033,
+          3.349241979534567,
+          1.0495565106304259
+        ],
+        "recording_sha256": "160eca2f38b6c7dea815356e638fbb486e2fa23adaab516d00d55720493440d4",
+        "waveform_sha256": "88e10784cba28d7083ec1778602f8f98521e8b86146b13e262d755e3e9569e11",
+        "candidates": [
+          {
+            "candidate_id": "capture-14:echo:00",
+            "delay_s": 0.0032352550180509247
+          },
+          {
+            "candidate_id": "capture-14:echo:01",
+            "delay_s": 0.004492339011726577
+          },
+          {
+            "candidate_id": "capture-14:echo:02",
+            "delay_s": 0.0073944502749532185
+          },
+          {
+            "candidate_id": "capture-14:echo:03",
+            "delay_s": 0.008507006123209286
+          },
+          {
+            "candidate_id": "capture-14:echo:04",
+            "delay_s": 0.018582736928573075
+          }
+        ]
+      },
+      {
+        "capture_id": "capture-15",
+        "status": "ok",
+        "diagnostics": [
+          {
+            "code": "direct_path_assumed",
+            "message": "Earliest significant repeatable arrival is assumed direct; obstruction and directional source bias remain uncalibrated."
+          }
+        ],
+        "receiver_position_m": [
+          3.653234112716176,
+          3.04938674811987,
+          2.3063272952394103
+        ],
+        "recording_sha256": "d5326a8552bab65bc42e7b3a14fd114a0a37054ed9bfcc09f61b273cfab15d2f",
+        "waveform_sha256": "89cbc5b897e883da487f8f8cb0f6c536ab88b9fc8aa67a7b71eb9df4090ae79c",
+        "candidates": [
+          {
+            "candidate_id": "capture-15:echo:00",
+            "delay_s": 0.002959539288457803
+          },
+          {
+            "candidate_id": "capture-15:echo:01",
+            "delay_s": 0.004787606924446408
+          },
+          {
+            "candidate_id": "capture-15:echo:02",
+            "delay_s": 0.006602251841854825
+          },
+          {
+            "candidate_id": "capture-15:echo:03",
+            "delay_s": 0.007809765110519788
+          },
+          {
+            "candidate_id": "capture-15:echo:04",
+            "delay_s": 0.009507019253416992
+          }
+        ]
+      }
+    ]
+  }
+}

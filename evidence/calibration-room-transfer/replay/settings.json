@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "runtime_commit": "5d6423486be5fd448a4d7b42fbbaee264eb07c9c",
+  "seeds": [
+    2821,
+    2833
+  ],
+  "room_size_m": [
+    5.5,
+    4.8,
+    3.2
+  ],
+  "physical_source_m": [
+    1.54,
+    1.48,
+    1.31
+  ],
+  "nominal_source_m": [
+    1.5,
+    1.5,
+    1.3
+  ],
+  "effective_speed_m_s": 346.0,
+  "source_fir": [
+    0.82,
+    0.13,
+    -0.045,
+    0.025
+  ],
+  "receiver_fir": [
+    0.94,
+    0.045,
+    -0.018,
+    0.006
+  ],
+  "probe": {
+    "sample_rate_hz": 48000,
+    "duration_s": 0.04,
+    "low_hz": 2000.0,
+    "high_hz": 14000.0,
+    "repetitions": 7,
+    "period_s": 0.35,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08
+  },
+  "mapping_positions_m": [
+    [
+      0.7,
+      0.75,
+      0.4
+    ],
+    [
+      4.6,
+      0.85,
+      0.55
+    ],
+    [
+      0.85,
+      3.9,
+      0.65
+    ],
+    [
+      4.75,
+      3.75,
+      0.35
+    ],
+    [
+      0.9,
+      0.9,
+      2.65
+    ],
+    [
+      4.65,
+      0.65,
+      2.5
+    ],
+    [
+      0.65,
+      3.85,
+      2.45
+    ],
+    [
+      4.5,
+      3.95,
+      2.7
+    ],
+    [
+      2.55,
+      0.7,
+      1.2
+    ],
+    [
+      3.0,
+      4.1,
+      1.8
+    ],
+    [
+      0.75,
+      2.5,
+      1.55
+    ],
+    [
+      4.6,
+      2.2,
+      1.1
+    ]
+  ],
+  "withheld_positions_m": [
+    [
+      1.1,
+      1.0,
+      1.85
+    ],
+    [
+      3.75,
+      1.45,
+      0.85
+    ],
+    [
+      1.35,
+      3.35,
+      1.05
+    ],
+    [
+      3.65,
+      3.05,
+      2.3
+    ]
+  ],
+  "receiver_survey_std_m": 0.003,
+  "mapping_survey_stream_namespace": 419730,
+  "room_audio_stream_namespace": 419731,
+  "null_audio_stream_namespace": 419732,
+  "direct_amplitude": 0.55,
+  "room_reflection_coefficient": 0.7,
+  "recording_alpha_ppm_bounds": [
+    -250,
+    250
+  ],
+  "recording_offset_s_bounds": [
+    0.04,
+    0.1
+  ],
+  "noise_std": 0.00012,
+  "recording_scale": 0.45,
+  "tail_capture_s": 0.15,
+  "methods": [
+    "nominal_mapper",
+    "one_x_mapper",
+    "joint_mapper",
+    "joint_grid",
+    "joint_first_echo"
+  ],
+  "acceptance": {
+    "normal_error_deg": 5.0,
+    "anchor_error_m": 0.1,
+    "six_planes_required": 6,
+    "horizontal_required": 2,
+    "maximum_unmatched": 0,
+    "withheld_candidate_window_s": 0.0002,
+    "withheld_rms_s": 0.0001,
+    "withheld_max_s": 0.0002,
+    "raw_processing_s": 10.0,
+    "minimum_withheld_rms_gain_s": 2.0833333333333333e-05,
+    "minimum_mean_anchor_gain_m": 0.003
+  },
+  "limits": [
+    "Exactly two exposed calibration-development fits, not independent generalization or physical-device qualification.",
+    "First-order point-source rectangular-room simulation with no higher orders, diffraction, occlusion or spatial source directivity.",
+    "Coordinate frame exact by construction; mapping receiver survey errors independent of reference/source calibration and audio errors.",
+    "No new calibration fit, raw-reference regeneration, seed search or threshold tuning."
+  ]
+}

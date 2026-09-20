@@ -1,0 +1,9 @@
+{
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "manifests": {
+    "raw/direct_only-2821/manifest.json": "f6264585c9151baab06ad3ffd1abb397b92a2bfd01b41c047552a4fe3fb126a0",
+    "raw/direct_only-2833/manifest.json": "cc5fe69f241221904326a09ee5a2cef03aef4182a4f7d2d3d168e9941f71776f",
+    "raw/room-2821/manifest.json": "be16c0008bc119eae07408b88514539dc49691b50c5afc98bce75db1109f4abc",
+    "raw/room-2833/manifest.json": "abacb1d1c6163e1cecf365e1ea3e45b14017d12a4cfca9f328a22f96153113df"
+  }
+}

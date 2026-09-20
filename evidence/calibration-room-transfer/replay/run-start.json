@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.3.5"
+  }
+}
