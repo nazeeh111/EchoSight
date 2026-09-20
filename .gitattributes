@@ -1,0 +1,2 @@
+# Keep bundled third-party code distinct from EchoSight source in GitHub reviews.
+demo/vendor/** linguist-vendored=true linguist-generated=true -whitespace

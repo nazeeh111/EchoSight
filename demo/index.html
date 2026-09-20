@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#08100c" />
+    <meta
+      name="description"
+      content="EchoSight. Hear space. See sound. An interactive acoustic room reconstruction demo."
+    />
+    <title>EchoSight | hear space. see sound.</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="echo-bot.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three.module.js",
+          "three/addons/": "./vendor/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body data-page="welcome">
+    <header class="topbar">
+      <button class="brand" id="home" aria-label="EchoSight home">
+        <img src="assets/logo.png" alt="" width="34" height="34" /><span
+          >Echo<b>Sight</b></span
+        >
+      </button>
+      <div class="top-actions">
+        <span class="demo-badge">Interactive demo</span
+        ><button
+          class="icon-btn"
+          id="sound-toggle"
+          aria-label="Mute sound"
+          title="Sound on"
+        ></button
+        ><button
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Switch to light theme"
+          title="Switch theme"
+        ></button
+        ><button
+          class="icon-btn"
+          id="help-toggle"
+          aria-label="Keyboard shortcuts"
+          title="Keyboard shortcuts"
+        ></button
+        ><button
+          class="icon-btn"
+          id="fullscreen"
+          aria-label="Enter fullscreen"
+          title="Fullscreen"
+        ></button>
+      </div>
+    </header>
+    <nav class="steps" aria-label="Scan journey">
+      <button data-page="welcome" class="active">
+        <span>01</span>Welcome<i>›</i></button
+      ><button data-page="connect"><span>02</span>Connect phones<i>›</i></button
+      ><button data-page="reconstruct">
+        <span>03</span>Reconstruct<i>›</i></button
+      ><button data-page="explore"><span>04</span>Explore room<i>›</i></button>
+    </nav>
+    <main id="main">
+      <section id="welcome" class="page welcome-page">
+        <div class="welcome-copy">
+          <div class="eyebrow">ACOUSTIC SPATIAL MAPPING</div>
+          <h1>Echo<span>Sight</span></h1>
+          <p class="motto">hear space. see sound.</p>
+          <p class="intro">
+            We made EchoSight to see how far sound waves can be leveraged for
+            unique applications. A computer plays a sound, nearby phones listen
+            for its echoes, and their timing sketches the room fully in 3D.
+          </p>
+          <div class="welcome-buttons">
+            <button class="primary" id="start-scan">
+              Start a scan <span>↗</span></button
+            ><button class="text-btn" id="explore-demo">
+              Explore demo <span>→</span>
+            </button>
+          </div>
+          <p class="welcome-note">
+            <span class="small-line"></span>27 seconds · sound on · simulated
+            scan
+          </p>
+          <p id="load-status" role="status" class="load-status">
+            Preparing your room…
+          </p>
+        </div>
+        <div class="hero-diagram">
+          <canvas
+            id="network-canvas"
+            aria-label="A computer sends sound to three nearby phones"
+          ></canvas>
+          <div class="diagram-label">
+            <span>01 / EMIT</span><span>02 / LISTEN</span
+            ><span>03 / RECONSTRUCT</span>
+          </div>
+          <button class="pulse-btn" id="send-pulse">
+            <span class="status-dot"></span>Send a pulse ↗
+          </button>
+        </div>
+      </section>
+      <section id="workspace" class="page workspace-page" hidden>
+        <div class="workspace-heading">
+          <div>
+            <div class="eyebrow" id="stage-kicker">PHONE ARRAY</div>
+            <h2 id="stage-title">Connect 3 phones</h2>
+            <p id="stage-description">
+              Place phones at different corners of the room.
+            </p>
+          </div>
+          <div class="heading-right">
+            <span class="pill" id="stage-status">Demo session</span
+            ><button class="text-btn compact" id="cancel-scan">
+              Cancel scan ↗</button
+            ><button class="primary compact" id="new-scan" hidden>
+              New scan ↗
+            </button>
+          </div>
+        </div>
+        <div class="workspace-grid" id="workspace-grid">
+          <aside id="left-panel" class="left-panel"></aside>
+          <div class="center-panel">
+            <div id="phone-cards" class="phone-cards"></div>
+            <div class="viewport" id="viewport">
+              <canvas
+                id="room-canvas"
+                aria-label="Interactive 3D room. Drag to orbit, scroll to zoom, right-drag to pan."
+                tabindex="0"
+              ></canvas>
+              <div class="view-corner">
+                <span class="status-dot"></span
+                ><span id="view-label">PHONE ARRAY</span
+                ><small id="view-subtitle">SIMULATED SPATIAL FIELD</small>
+              </div>
+              <div class="view-top-right">
+                <span id="view-counter"></span
+                ><button
+                  id="reset-camera"
+                  class="icon-btn"
+                  aria-label="Reset camera"
+                  title="Reset view"
+                ></button>
+              </div>
+              <div id="view-message" class="view-message"></div>
+              <div id="object-hint" class="object-hint" hidden></div>
+              <div class="view-toolbar">
+                <button
+                  class="icon-btn"
+                  id="orbit-toggle"
+                  aria-label="Start auto orbit"
+                  title="Auto orbit"
+                ></button
+                ><button
+                  class="icon-btn"
+                  id="zoom-in"
+                  aria-label="Zoom in"
+                  title="Zoom in"
+                >
+                  +</button
+                ><button
+                  class="icon-btn"
+                  id="zoom-out"
+                  aria-label="Zoom out"
+                  title="Zoom out"
+                >
+                  −</button
+                ><span class="toolbar-divider"></span
+                ><span id="view-help">Drag to orbit · scroll to zoom</span>
+              </div>
+              <div class="axis-key">
+                <span>Y</span
+                ><svg width="32" height="28" viewBox="0 0 32 28">
+                  <path d="M16 2V18L3 25M16 18L29 25" /></svg
+                ><small>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z</small>
+              </div>
+            </div>
+            <div class="timeline-panel" id="timeline-panel">
+              <div class="transport">
+                <button
+                  class="icon-btn"
+                  id="play-pause"
+                  aria-label="Pause scan"
+                ></button
+                ><button
+                  class="icon-btn"
+                  id="restart"
+                  aria-label="Restart scan"
+                ></button
+                ><span id="time-display" class="mono">00.0 / 27.0</span
+                ><span class="transport-status" id="transport-status"></span
+                ><span id="progress-number" class="mono">0%</span>
+              </div>
+              <input
+                id="timeline"
+                type="range"
+                min="0"
+                max="27"
+                step="0.01"
+                value="0"
+                aria-label="Scan timeline"
+              />
+              <div class="timeline-markers">
+                <span>Pair</span><span>Calibrate</span><span>Listen</span
+                ><span>Resolve</span><span>Reveal</span>
+              </div>
+            </div>
+          </div>
+          <aside id="inspector" class="inspector" hidden></aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span id="footer-left"></span
+      ><button id="motion-toggle">Motion on <span>∿</span></button
+      ><span>Simulated acoustic scan</span>
+    </footer>
+    <dialog id="help-dialog">
+      <button
+        id="close-help"
+        class="dialog-close icon-btn"
+        aria-label="Close help"
+      >
+        ×
+      </button>
+      <div class="eyebrow">ECHOSIGHT</div>
+      <h2>A few helpful controls.</h2>
+      <dl>
+        <dt>Space</dt>
+        <dd>Pause / resume reconstruction</dd>
+        <dt>R</dt>
+        <dd>Reset room view</dd>
+        <dt>M</dt>
+        <dd>Mute / unmute sound</dd>
+        <dt>Esc</dt>
+        <dd>Close this guide</dd>
+        <dt>Drag</dt>
+        <dd>Orbit the room</dd>
+        <dt>Right-drag</dt>
+        <dd>Pan the room</dd>
+        <dt>Scroll / pinch</dt>
+        <dd>Zoom in or out</dd>
+      </dl>
+      <p>
+        Phones, echoes, materials, and confidence levels are illustrative. No
+        devices are connected and no measurements are collected.
+      </p>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

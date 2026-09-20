@@ -1,10 +1,10 @@
 # Install and use EchoSight
 
-EchoSight is a local backend for processing lossless recordings into supported 3D reflector patches. The public CLI and HTTP workflow uses one fixed source and surveyed receiver positions. It produces JSON and raw-data archives; a graphical room viewer is not included. Synthetic room reconstruction works on the documented demo. Harder synthetic and external measured-room cases still fail, and our devices have not been physically qualified. See [current status](../STATE.md).
+EchoSight is a local backend for processing lossless recordings into supported 3D reflector patches. The public CLI and HTTP workflow uses one fixed source and surveyed receiver positions. It produces JSON and raw-data archives. The separate [interactive demo](../demo/README.md) uses a supplied room model and simulated arrivals; it does not visualize live backend results. Synthetic room reconstruction works on the documented demo. Harder synthetic and external measured-room cases still fail, and our devices have not been physically qualified. See [current status](../STATE.md).
 
 ## 1. Install
 
-Use macOS or Linux, Git, and Python 3.12 or later with compatible NumPy/SciPy wheels. Clone with an account that has access to the private repository:
+Use macOS or Linux, Git, and Python 3.12 or later with compatible NumPy/SciPy wheels. Clone the repository:
 
 ```sh
 git clone --branch backend/implementation https://github.com/nazeeh111/EchoSight.git
