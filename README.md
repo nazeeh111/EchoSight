@@ -2,13 +2,18 @@
 
 **hear space. see sound.**
 
-EchoSight combines an acoustic research backend with a separate interactive room demo. The backend processes lossless recordings into supported 3D surface patches. The demo presents the idea through a 27-second simulated scan and an explorable room model.
+EchoSight combines an acoustic research backend with an interactive room demo. The backend processes lossless recordings into supported 3D surface patches. The room demo is one of the examples we built and tested: a 27-second simulated scan followed by an explorable room model.
 
 | Part | Purpose |
 | --- | --- |
 | [Room demo](demo/) | Animated phone connection, sound emission, reconstruction, room exploration and echo replay. Uses a supplied 3D model and illustrative estimates, without real phone connections or backend processing. |
 | [Acoustic backend](docs/USAGE.md) | Python CLI and local HTTP API for recording import, calibration, geometry, reference-based material comparisons and export/replay. |
 | Echo Bot | Optional local Qwen assistant in the demo, served through Ollama. It does not perform acoustic measurements. |
+
+## Room examples
+
+- [Interactive room demo](demo/): the tested scan experience and explorable room model.
+- [Room 2 Blender animation](examples/rooms/room_2_final_animated.blend): an additional room example. Download the file and open it in Blender to explore the scene and play its animation. The supplied file is preserved unchanged and is available here on GitHub only.
 
 ## Open the demo
 
