@@ -1,0 +1,156 @@
+[
+  {
+    "name": "head",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.01995549999992363
+  },
+  {
+    "name": "origin-head",
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/backend/implementation"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.019684374987264164
+  },
+  {
+    "name": "clean-before",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.04066641601093579
+  },
+  {
+    "name": "environment",
+    "argv": [
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+      "-c",
+      "import sys,platform,numpy,scipy,json; print(json.dumps(dict(python=sys.version,platform=platform.platform(),numpy=numpy.__version__,scipy=scipy.__version__),indent=2))"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.07616625000082422
+  },
+  {
+    "name": "installed-versions",
+    "argv": [
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.30127812499995343
+  },
+  {
+    "name": "all-changed-paths",
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "ab5ea75de446b653fec058103030759fc7fbcdfa",
+      "c5d19a8ced43f0692539e34d124376d6f4f20ee7"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.02032241599226836
+  },
+  {
+    "name": "production-equality",
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "ab5ea75de446b653fec058103030759fc7fbcdfa",
+      "c5d19a8ced43f0692539e34d124376d6f4f20ee7",
+      "--",
+      "echosight",
+      "schemas",
+      "acquisition",
+      "requirements.txt",
+      "requirements-test.txt",
+      "examples/echosight_audio_capture.zip"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.0201735419977922
+  },
+  {
+    "name": "full-suite",
+    "argv": [
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 69.36951308399148
+  },
+  {
+    "name": "saved-output-replay",
+    "argv": [
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+      "evidence/calibration-room-transfer/replay/replay.py",
+      "--repo",
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+      "--output",
+      "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/final-c5d19a8/replay-result.json"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.23778224999841768
+  },
+  {
+    "name": "ideal-preflight",
+    "argv": [
+      "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/reproduction-venv/bin/python",
+      "-m",
+      "evaluation.held_path_preflight",
+      "evidence/calibration-room-transfer/ideal-held-catalog.json",
+      "--output",
+      "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/final-c5d19a8/ideal-result.json"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "seconds": 0.04032566699606832
+  },
+  {
+    "name": "clean-after",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/Users/nazeeh/Documents/Codex/2026-09-19/goal-deliver-echosight-s-verified-backend/work/material-reproduction/checkout",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.019484791991999373
+  }
+]

@@ -1,0 +1,1 @@
+{"comparison_passed": true, "rows_compared": 20, "transfer_pass": false, "promotion_criteria_pass": false, "output": "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/work/transfer-runtime-review/final-c5d19a8/replay-result.json"}

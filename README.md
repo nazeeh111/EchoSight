@@ -12,7 +12,7 @@ EchoSight is a local Python backend that turns lossless audio recordings into su
 
 The twelve-view room demo reconstructs six surfaces, including floor and ceiling. The separate material demo learns two synthetic reference filters and identifies three of six room surfaces; the others remain unknown. These are controlled software demonstrations. Harder synthetic and external measured-room cases still fail, and our iPhones/MacBook have not been physically validated. Sound does not measure optical color. [Evidence and remaining limits](STATE.md) stay visible.
 
-**Verified:** [244 tests and both recording demos](evidence/reproduction-ab5ea75/) pass from a clean GitHub checkout. [Independent review](evidence/material-appearance/FINAL-ab5ea75-REVIEW.md) covers the delivered runtime.
+**Verified:** [249 tests](evidence/reproduction-c5d19a8/) pass from a clean GitHub checkout. [Both recording demos and API/CLI replay](evidence/reproduction-ab5ea75/) are verified at the unchanged production checkpoint. [Independent review](evidence/material-appearance/FINAL-ab5ea75-REVIEW.md) covers that runtime; the [completed calibration-transfer study](evidence/calibration-room-transfer/) preserves its failed criteria and reproducible evidence.
 
 ## Install
 

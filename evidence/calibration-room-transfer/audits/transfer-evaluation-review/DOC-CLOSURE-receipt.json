@@ -1,0 +1,22 @@
+{
+  "finding": "Overbroad historical unchanged-code claim in STATE.md:5 and docs/audit/COVERAGE.md:63",
+  "status": "closed",
+  "binding": "Reviewed corrected working-tree bytes, not a new final commit",
+  "evaluated_commit": "c5d19a8ced43f0692539e34d124376d6f4f20ee7",
+  "corrected_file_sha256": {
+    "STATE.md": "9b1d7ac1be4aeece5c0b8ad47ca9b07f7c8a6bfa953be5e4960c970cae9ad230",
+    "README.md": "16a2c5abb2da2fb0c60ab89782b1abb4bf1a713e92c9d0a01d69479ca0659cbf",
+    "docs/audit/COVERAGE.md": "3c5158876005e1291ec01d2d0f683f48ce9a1a35438f93caf87f370bb4f9b9bb",
+    "evidence/reproduction-c5d19a8/README.md": "3dc39d88e2361591d73369e47d2f47e7d2587391314d7b5516bbcb1147e96eaa",
+    "evidence/reproduction-c5d19a8/full-suite.txt": "20254c598ec8ff52b5ff6fef3b1462d92ba536e699401f74f9b825dab11e769b",
+    "evidence/reproduction-c5d19a8/summary.json": "d3b5e9ae0322d68c56bc7ab31453a90b6e4efefb1e5ac1fb96da0c4d591240fc"
+  },
+  "suite_report_matches": {
+    "tests": 249,
+    "unittest_duration_s": 68.737,
+    "exit_code": 0
+  },
+  "asset_download_receipt_sha256": "6676474160495cb798cdc0aeba0de8b9cfaaa909b66f1ee4e20626857e6dbd0d",
+  "asset_receipt_status": "Independent lane reports verified authenticated download; no additional download by this reviewer.",
+  "scope": "Documentation closure only; no repeated suite, replay, inference or numerical review."
+}

@@ -1,0 +1,9 @@
+# Exact-commit review: c5d19a8
+
+Reviewed commit **c5d19a8ced43f0692539e34d124376d6f4f20ee7** against the preceding ea74 checkpoint. Git object bytes match the independently executed helper, its tests, ideal catalog and entire reviewed portable package. The earlier 20-case replay, five focused tests and 512 independent boundary checks therefore apply to these exact bytes; no arithmetic or inference was rerun.
+
+**One documentation finding:** STATE.md line 5 says later delivery commits contain only documentation/examples/receipts, and docs/audit/COVERAGE.md line 63 says runtime/tests/schemas/evaluation remain equal to the 244-test ab5ea75 checkpoint. This commit adds an evaluation helper and its tests. Narrow the unchanged claim to production echosight runtime and schemas, and identify the new helper/tests with their focused verification. The later state paragraphs already describe the correct distinction.
+
+No additional material issue was found in the new evidence README, RAW_REPLAY instructions or evaluation-study explanation. They preserve the failed transfer/promotion, label incomplete errors correctly, distinguish actual extraction censoring from the ideal-window flaw, retain the selected synthetic scope, and leave the eight-record follow-up explicitly unfrozen and unexecuted. The raw archive release link was not checked here because coordinator publication was pending; local packaging/static verification is not a claim that remote publication already succeeded.
+
+Git confirms all production echosight and schema files are unchanged from ab5ea75de446b653fec058103030759fc7fbcdfa. Every original transfer-plan file is unchanged from the review base. Committed expected-results.json is byte-identical to the completed original frozen results.json. Full bindings and the finding are in FINAL-c5d19a8-receipt.json. Only this review work directory was written.
