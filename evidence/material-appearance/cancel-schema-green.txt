@@ -1,0 +1,12 @@
+test_actual_raw_pipeline_outputs_and_job_match_contract (tests.test_schemas.SchemaTests.test_actual_raw_pipeline_outputs_and_job_match_contract) ... ok
+test_cancelled_scene_cannot_publish_material_or_color_claims (tests.test_schemas.SchemaTests.test_cancelled_scene_cannot_publish_material_or_color_claims) ... ok
+test_capture_manifest_structural_boundaries (tests.test_schemas.SchemaTests.test_capture_manifest_structural_boundaries) ... ok
+test_controlled_frame_matches_session_bound (tests.test_schemas.SchemaTests.test_controlled_frame_matches_session_bound) ... ok
+test_published_schemas_and_frontend_examples (tests.test_schemas.SchemaTests.test_published_schemas_and_frontend_examples) ... ok
+test_context_is_bound_after_geometry_and_preserved_for_replay (tests.test_interpretation_pipeline.InterpretationPipelineTests.test_context_is_bound_after_geometry_and_preserved_for_replay) ... ok
+test_shared_cancellation_retracts_interpretation_claims (tests.test_interpretation_pipeline.InterpretationPipelineTests.test_shared_cancellation_retracts_interpretation_claims) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.504s
+
+OK

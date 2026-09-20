@@ -37,6 +37,15 @@ class SchemaTests(unittest.TestCase):
         request['coordinate_frame_id']='x'*161
         with self.assertRaises(ValidationError):validator('controlled-request').validate(request)
 
+    def test_cancelled_scene_cannot_publish_material_or_color_claims(self):
+        from echosight.inference import _cancelled_result
+        scene=json.loads((ROOT/'examples/frontend/material-room.json').read_text())
+        cancelled=_cancelled_result(scene)
+        check=validator('result')
+        check.validate(cancelled)
+        cancelled['interpretation']=copy.deepcopy(scene['interpretation'])
+        with self.assertRaises(ValidationError):check.validate(cancelled)
+
     def test_capture_manifest_structural_boundaries(self):
         raw,_,_=capture_bytes()
         with zipfile.ZipFile(io.BytesIO(raw)) as z:manifest=json.loads(z.read('manifest.json'))

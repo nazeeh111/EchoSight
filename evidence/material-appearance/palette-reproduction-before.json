@@ -1,0 +1,17 @@
+{
+  "appearance": {
+    "status": "estimated",
+    "colors": [
+      {
+        "color_srgb": "#FF0000",
+        "probability": 1.0000000000000002
+      }
+    ],
+    "unassigned_probability": 0.0,
+    "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+  },
+  "errors": [
+    "1.0000000000000002 is greater than the maximum of 1"
+  ],
+  "schema_valid": false
+}

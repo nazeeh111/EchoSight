@@ -515,6 +515,11 @@
           "anyOf": [
             {
               "required": [
+                "interpretation"
+              ]
+            },
+            {
+              "required": [
                 "shared_image_source_covariance_m2"
               ]
             },

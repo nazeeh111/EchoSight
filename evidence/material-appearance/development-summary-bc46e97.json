@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "status": "passed",
+  "checks": {
+    "six_room_planes": true,
+    "both_reference_classes_demonstrated": true,
+    "no_wrong_material_estimates_in_controlled_case": true,
+    "null_has_no_geometry_or_materials": true,
+    "reused_reference_is_unknown": true,
+    "out_of_domain_is_unknown": true,
+    "context_does_not_change_geometry": true,
+    "original_inputs_preserved": true
+  },
+  "geometry": {
+    "predicted_count": 6,
+    "truth_count": 6,
+    "matched_count": 6,
+    "false_surfaces": 0,
+    "missed_surfaces": 0,
+    "horizontal_matched": 2,
+    "precision": 1.0,
+    "recall": 1.0,
+    "matches": [
+      {
+        "predicted_id": "reflector-343a706ff39e",
+        "truth_id": "wall-0-0",
+        "normal_error_deg": 0.04167152733473455,
+        "offset_error_m": 0.0010096647536032054,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-0c2ef5c93600",
+        "truth_id": "wall-2-0",
+        "normal_error_deg": 0.06723459981179343,
+        "offset_error_m": 0.0012197009707651002,
+        "horizontal": true,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-1d1641d8227d",
+        "truth_id": "wall-2-1",
+        "normal_error_deg": 0.029379013448025206,
+        "offset_error_m": 0.002925917045075721,
+        "horizontal": true,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-a1661e502b63",
+        "truth_id": "wall-1-1",
+        "normal_error_deg": 0.23599230473367874,
+        "offset_error_m": 0.00132133761158304,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-2bed3ba214f9",
+        "truth_id": "wall-1-0",
+        "normal_error_deg": 0.7425747256839983,
+        "offset_error_m": 0.023228392500507882,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      },
+      {
+        "predicted_id": "reflector-d41ffa8bff3d",
+        "truth_id": "wall-0-1",
+        "normal_error_deg": 0.28092975526733516,
+        "offset_error_m": 0.0021107404982592115,
+        "horizontal": false,
+        "offset_95pct_covered": true,
+        "normal_95pct_covered": true
+      }
+    ]
+  },
+  "materials": [
+    {
+      "surface_id": "reflector-343a706ff39e",
+      "expected_material_id": "flat_reflector",
+      "estimated_material_id": "flat_reflector",
+      "correct": true,
+      "material": {
+        "status": "estimated",
+        "probabilities": [
+          {
+            "material_id": "flat_reflector",
+            "label": "Synthetic flat_reflector",
+            "probability": 1.0
+          }
+        ],
+        "total_views": 12,
+        "valid_views": 4,
+        "required_views": 3,
+        "evidence_coverage": 0.3333333333333333,
+        "unassigned_view_weight": 0.6666666666666667,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": []
+      },
+      "appearance": {
+        "status": "estimated",
+        "colors": [
+          {
+            "color_srgb": "#E6E6E6",
+            "probability": 0.8
+          }
+        ],
+        "unassigned_probability": 0.19999999999999996,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    },
+    {
+      "surface_id": "reflector-0c2ef5c93600",
+      "expected_material_id": "flat_reflector",
+      "estimated_material_id": null,
+      "correct": null,
+      "material": {
+        "status": "unknown",
+        "probabilities": [],
+        "total_views": 11,
+        "valid_views": 2,
+        "required_views": 3,
+        "evidence_coverage": 0.18181818181818182,
+        "unassigned_view_weight": 0.8181818181818181,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": [
+          "insufficient_independent_material_views"
+        ]
+      },
+      "appearance": {
+        "status": "unknown",
+        "colors": [],
+        "unassigned_probability": 1.0,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    },
+    {
+      "surface_id": "reflector-1d1641d8227d",
+      "expected_material_id": "lowpass_reflector",
+      "estimated_material_id": null,
+      "correct": null,
+      "material": {
+        "status": "unknown",
+        "probabilities": [],
+        "total_views": 11,
+        "valid_views": 1,
+        "required_views": 3,
+        "evidence_coverage": 0.09090909090909091,
+        "unassigned_view_weight": 0.9090909090909091,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": [
+          "insufficient_independent_material_views"
+        ]
+      },
+      "appearance": {
+        "status": "unknown",
+        "colors": [],
+        "unassigned_probability": 1.0,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    },
+    {
+      "surface_id": "reflector-a1661e502b63",
+      "expected_material_id": "flat_reflector",
+      "estimated_material_id": "flat_reflector",
+      "correct": true,
+      "material": {
+        "status": "estimated",
+        "probabilities": [
+          {
+            "material_id": "flat_reflector",
+            "label": "Synthetic flat_reflector",
+            "probability": 1.0
+          }
+        ],
+        "total_views": 11,
+        "valid_views": 6,
+        "required_views": 3,
+        "evidence_coverage": 0.5454545454545454,
+        "unassigned_view_weight": 0.4545454545454546,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": []
+      },
+      "appearance": {
+        "status": "estimated",
+        "colors": [
+          {
+            "color_srgb": "#E6E6E6",
+            "probability": 0.8
+          }
+        ],
+        "unassigned_probability": 0.19999999999999996,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    },
+    {
+      "surface_id": "reflector-2bed3ba214f9",
+      "expected_material_id": "lowpass_reflector",
+      "estimated_material_id": null,
+      "correct": null,
+      "material": {
+        "status": "unknown",
+        "probabilities": [],
+        "total_views": 9,
+        "valid_views": 2,
+        "required_views": 3,
+        "evidence_coverage": 0.2222222222222222,
+        "unassigned_view_weight": 0.7777777777777778,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": [
+          "insufficient_independent_material_views"
+        ]
+      },
+      "appearance": {
+        "status": "unknown",
+        "colors": [],
+        "unassigned_probability": 1.0,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    },
+    {
+      "surface_id": "reflector-d41ffa8bff3d",
+      "expected_material_id": "lowpass_reflector",
+      "estimated_material_id": "lowpass_reflector",
+      "correct": true,
+      "material": {
+        "status": "estimated",
+        "probabilities": [
+          {
+            "material_id": "lowpass_reflector",
+            "label": "Synthetic lowpass_reflector",
+            "probability": 1.0
+          }
+        ],
+        "total_views": 9,
+        "valid_views": 4,
+        "required_views": 3,
+        "evidence_coverage": 0.4444444444444444,
+        "unassigned_view_weight": 0.5555555555555556,
+        "semantics": "equal_mixture_over_usable_views_conditional_on_reference_library_not_physical_confidence",
+        "diagnostic_codes": []
+      },
+      "appearance": {
+        "status": "estimated",
+        "colors": [
+          {
+            "color_srgb": "#426B8A",
+            "probability": 0.8
+          }
+        ],
+        "unassigned_probability": 0.19999999999999996,
+        "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+      }
+    }
+  ],
+  "unknown_material_surfaces": 3,
+  "physical_validation": false,
+  "source_sha256": "5597e5ca433b4a10e392fdc3b67bb1c6dc3cf64d281a4574aed00cca19f1a8f0",
+  "evidence_scope": "Controlled synthetic material profiles and supplied contextual palettes; no real material/color accuracy or generalization claim.",
+  "results": {
+    "room-result": {
+      "result_id": "result-266aa1638e2b40209c32",
+      "runtime_s": 0.7364800840005046
+    },
+    "null-result": {
+      "result_id": "result-a993c42b65a3d7d53669",
+      "runtime_s": 0.13347404199885204
+    },
+    "reused-reference-result": {
+      "result_id": "result-2a88d1cb310ed0eb2f70",
+      "runtime_s": 0.11600679199909791
+    },
+    "out-of-domain-result": {
+      "result_id": "result-c831cc69792cbca053a8",
+      "runtime_s": 0.7475142500043148
+    }
+  }
+}

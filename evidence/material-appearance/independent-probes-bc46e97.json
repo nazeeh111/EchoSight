@@ -1,0 +1,156 @@
+{
+  "non_diagonal_gaussian_equal_view_mixture": {
+    "expected": [
+      0.06581962291636842,
+      0.9341803770836317
+    ],
+    "actual": [
+      0.0658196229163685,
+      0.9341803770836314
+    ]
+  },
+  "palette_mass": {
+    "status": "estimated",
+    "colors": [
+      {
+        "color_srgb": "#0000FF",
+        "probability": 0.04999999999999999
+      },
+      {
+        "color_srgb": "#FF0000",
+        "probability": 0.14999999999999994
+      }
+    ],
+    "unassigned_probability": 0.8,
+    "semantics": "supplied_contextual_srgb_prediction_not_optical_measurement_or_acoustic_false_color"
+  },
+  "negative_admission": {
+    "route": [
+      [
+        "no_compatible_reference_profile"
+      ]
+    ],
+    "angle": [
+      [
+        "no_compatible_reference_profile"
+      ]
+    ],
+    "missing_angle": [
+      [
+        "invalid_feature_or_identity"
+      ]
+    ],
+    "probe": [
+      [
+        "no_compatible_reference_profile"
+      ]
+    ],
+    "training_overlap_in_incompatible_profile": [
+      [
+        "reference_query_overlap"
+      ]
+    ],
+    "duplicate_bytes": [
+      [
+        "duplicate_query_recording_sha256"
+      ],
+      [
+        "duplicate_query_recording_sha256"
+      ]
+    ],
+    "duplicate_waves": [
+      [
+        "duplicate_query_waveform_sha256"
+      ],
+      [
+        "duplicate_query_waveform_sha256"
+      ]
+    ],
+    "minimum_views": [
+      []
+    ],
+    "outlier": [
+      [
+        "out_of_reference_domain"
+      ]
+    ]
+  },
+  "profile_fit": {
+    "mean": [
+      1.1666666666666667,
+      1.1666666666666667,
+      1.5,
+      1.1666666666666667
+    ],
+    "covariance": [
+      [
+        2.3266666666666675,
+        -1.2333333333333334,
+        -0.7000000000000001,
+        0.9666666666666667
+      ],
+      [
+        -1.2333333333333334,
+        2.3266666666666675,
+        -0.5,
+        -1.2333333333333334
+      ],
+      [
+        -0.7000000000000001,
+        -0.5,
+        1.2600000000000002,
+        0.1
+      ],
+      [
+        0.9666666666666667,
+        -1.2333333333333334,
+        0.1,
+        3.126666666666667
+      ]
+    ],
+    "sample_count": 6,
+    "regularization_variance": 0.16
+  },
+  "raw_inverse_distance_and_polarity": {
+    "feature_db": [
+      [
+        -10.463035776100757,
+        -10.458306026368696,
+        -10.455753582869885,
+        -10.449300978760991
+      ],
+      [
+        -10.456483603902177,
+        -10.457252923004495,
+        -10.456772540143083,
+        -10.45818736854448
+      ],
+      [
+        -4.435528331633523,
+        -4.437257929242347,
+        -4.437319685508549,
+        -4.4394959874854285
+      ]
+    ],
+    "expected_db": [
+      -10.457574905606752,
+      -10.457574905606752,
+      -4.436974992327128
+    ],
+    "max_abs_error_db": 0.008273926845760116
+  },
+  "reviewed_file_sha256": {
+    "echosight/material_features.py": "1870793d9f837f2f96d51f4a592f0736474ac2cd2d71dba1995a712caff94a04",
+    "echosight/interpretation.py": "9e86a0c2199016832d1908a89b65c679e15cdc8176e33eaf979fbfb94c931e10",
+    "echosight/pipeline.py": "349c9f8f9b642f7cb61ee453b2f2593bd1b367ddfd93da6ecfd36e101024bb71",
+    "echosight/inference.py": "c48b500f70883fa3d1b40a31f4b690e4d2453ee257059bd18755aca145793c7d",
+    "echosight/storage.py": "5a833bc7e99683ef177d201ff1ef2f21dbb7e6e311b660574cc532a6916a3d5f",
+    "echosight/api.py": "2e9a69b1ed5fddfcd6e7ab5a72dbe5f811be7dcbe04cba949ae3350c41c1ae11",
+    "echosight/cli.py": "21c4d72eb3b65749f208c75aeb8ee359e266eb215f1de036a070324de50deb63",
+    "schemas/interpretation-context.schema.json": "4b43738d4085df3eeb1a4f53dc1a653c777c77d0cd3d2ee4c36c4b703c4a66a7",
+    "schemas/interpretation-result.schema.json": "372ed61d94c6fae9331d767b5b323a61aa2f15f64f21c155c8c8b923b0cacb61",
+    "schemas/session.schema.json": "f846abd2be85445d8669fb9f046fe9e04a2ad831569605f41916a8fcf04c98ca",
+    "schemas/calibration-patch.schema.json": "002909227cf5252d4a4753a95257b6f4c33ecfe9469de13d745e4d05e7e82906",
+    "schemas/result.schema.json": "9a399bcb439c1d126fa4595b2fa299dd40df0272b95ebef2fafed60405a822f9"
+  }
+}

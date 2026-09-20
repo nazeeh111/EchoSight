@@ -251,13 +251,23 @@ def interpret_scene(result, context, cancel=None):
             total_views=total, valid_views=valid, required_views=context['minimum_views'],
             evidence_coverage=coverage, unassigned_view_weight=1 - coverage, semantics=MATERIAL_SEMANTICS,
             diagnostic_codes=[] if enough else ['insufficient_independent_material_views'])
-        colors = {}
+        color_terms = {}
         for p, weight in zip(profiles, mass):
             for color in p.get('appearance', {}).get('colors', []):
-                rgb = color['color_srgb']; colors[rgb] = colors.get(rgb, 0.) + weight * color['probability']
-        colors = [dict(color_srgb=rgb, probability=float(w)) for rgb, w in sorted(colors.items()) if w > 0]
+                color_terms.setdefault(color['color_srgb'], []).append(float(weight) * color['probability'])
+        colors = [dict(color_srgb=rgb, probability=math.fsum(terms))
+                  for rgb, terms in sorted(color_terms.items()) if math.fsum(terms) > 0]
+        assigned_color_mass = math.fsum(c['probability'] for c in colors)
+        if assigned_color_mass > 1:
+            if assigned_color_mass > 1 + 1e-12:
+                raise ValueError('contextual color mixture exceeds probability mass')
+            # Repair only positive roundoff above one. Genuine missing palette
+            # mass is never normalized away, including tiny deficits below one.
+            for color in colors:
+                color['probability'] /= assigned_color_mass
+            assigned_color_mass = math.fsum(c['probability'] for c in colors)
         appearance = dict(status='estimated' if colors else 'unknown', colors=colors,
-            unassigned_probability=max(0., 1 - math.fsum(c['probability'] for c in colors)), semantics=APPEARANCE_SEMANTICS)
+            unassigned_probability=max(0., 1 - assigned_color_mass), semantics=APPEARANCE_SEMANTICS)
         out['surface_interpretations'].append(dict(surface_id=surface['surface_id'], material=material, appearance=appearance, feature_records=rows))
     return cancelled_result() if _cancelled(cancel) else out
 

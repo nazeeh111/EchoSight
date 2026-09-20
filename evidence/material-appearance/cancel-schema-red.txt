@@ -1,0 +1,15 @@
+test_cancelled_scene_cannot_publish_material_or_color_claims (tests.test_schemas.SchemaTests.test_cancelled_scene_cannot_publish_material_or_color_claims) ... FAIL
+
+======================================================================
+FAIL: test_cancelled_scene_cannot_publish_material_or_color_claims (tests.test_schemas.SchemaTests.test_cancelled_scene_cannot_publish_material_or_color_claims)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_schemas.py", line 47, in test_cancelled_scene_cannot_publish_material_or_color_claims
+    with self.assertRaises(ValidationError):check.validate(cancelled)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValidationError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.297s
+
+FAILED (failures=1)

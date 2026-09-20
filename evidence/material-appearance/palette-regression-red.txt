@@ -1,0 +1,23 @@
+test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass (tests.test_interpretation.InterpretationTests.test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass) ... 
+  test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass (tests.test_interpretation.InterpretationTests.test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass) (palette_weight=1.0, missing_palette=False) ... ERROR
+
+======================================================================
+ERROR: test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass (tests.test_interpretation.InterpretationTests.test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass) (palette_weight=1.0, missing_palette=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/tests/test_interpretation.py", line 84, in test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass
+    Draft202012Validator(schema).validate(out)
+  File "/Users/nazeeh/Documents/Codex/2026-09-18/echosight-autonomous-backend-implementation-lead-a/backend/.venv/lib/python3.12/site-packages/jsonschema/validators.py", line 451, in validate
+    raise error
+jsonschema.exceptions.ValidationError: 1.0000000000000002 is greater than the maximum of 1
+
+Failed validating 'maximum' in schema['properties']['surface_interpretations']['items']['properties']['appearance']['properties']['colors']['items']['properties']['probability']:
+    {'type': 'number', 'minimum': 0, 'maximum': 1}
+
+On instance['surface_interpretations'][0]['appearance']['colors'][0]['probability']:
+    1.0000000000000002
+
+----------------------------------------------------------------------
+Ran 1 test in 0.036s
+
+FAILED (errors=1)

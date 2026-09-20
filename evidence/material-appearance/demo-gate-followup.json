@@ -1,0 +1,7 @@
+{
+  "original_runner_sha256": "5597e5ca433b4a10e392fdc3b67bb1c6dc3cf64d281a4574aed00cca19f1a8f0",
+  "revised_runner_sha256": "2527c478c9d5ca3c1d18c0d5416fb71922237a94a2c9a26c51f812bda67659ce",
+  "only_nonvacuous_reuse_gate_changed": true,
+  "revised_gate_passes_existing_saved_outputs": true,
+  "raw_rerun_required": false
+}

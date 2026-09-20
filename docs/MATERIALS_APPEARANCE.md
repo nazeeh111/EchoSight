@@ -116,4 +116,34 @@ Appearance is optional. Supply an `appearance` object in a profile, or pass `--a
 
 These are contextual color predictions. They are neither optical measurements nor acoustic false-color visualization. A palette can describe an externally justified prior for a material/context, but sound frequency does not measure visible color.
 
+## Planned physical qualification: two known samples
+
+**Planned and unexecuted. No acquisition is requested or authorized by this plan.** Freeze the software commit, this protocol, sample identities, poses, evaluation script and operating settings before recording. This tests whether the implemented library comparison is useful for two particular samples under one measurement chain; it cannot establish general material accuracy or calibrated confidence.
+
+**Prerequisites.** Pass [H0–H3](HARDWARE_ACCEPTANCE.md) for the chosen source/phone routes, probe, levels, timing and source calibration. Retain their failed attempts. Using the existing H1 repeated-level recordings, additionally require each of the four normalized echo/direct band ratios to vary by no more than **1 dB** across the three levels and repeats; timing alone does not qualify spectral linearity. Use the same extractor windows and quality screens. Follow the [calibration transfer restrictions](CALIBRATION.md): material receiver surveys must not silently reuse source-calibration errors that the mapper cannot represent. Record survey uncertainties and shared errors; fresh IDs or audio do not establish independence.
+
+Choose two already available, independently identified, large uniform planar samples **A/B**, and a third sample **C** excluded from the library. Mount each in the same independently surveyed target plane, one at a time, without changing the qualified source/receiver chain. Freeze twelve noncoplanar reference stops and twelve different query stops, spanning height and with predicted incidence angles inside the reference range. Use twelve views as sequential placements of the available phones, not twelve invented simultaneous devices. Keep each session static. This experiment uses the fixed-source public workflow; H5 remains necessary for any later source-relocation claim, and H6 remains necessary for any later physical-change claim.
+
+| Session | Recordings | Use |
+| --- | ---: | --- |
+| A reference, B reference | 12 each | Build two labelled profiles only |
+| A query, B query | 12 each | Held-out identification; never refit profiles |
+| C query | 12 | Out-of-library rejection |
+| No-probe silence at query stops | 12 | Null control, expecting no material claim |
+
+The experiment has **72 records plus two drift-check shots** of A at one fixed reference stop, before and after the complete sequence. Preserve every raw recording, rejection, hash, route declaration and result. Put sample identities and surveyed target geometry in separate evaluation truth. Query fitting receives only ordinary acquisition calibration, the frozen profile library and context; it does not receive the correct query label or target plane.
+
+**Frozen settings and pass gates:**
+
+- Each reference must produce a definitive target plane within **5 degrees / 0.10 m** of independent survey and at least **8 valid feature views out of its 12 planned records**. Build profiles once, with equal prior weights and explicitly declared **1 dB regularization**. Freeze the resulting profiles and hashes before processing queries. Keep their learned angle domains unchanged.
+- Use `maximum_squared_distance: 16` and `minimum_views: 6`. Both A and B queries must independently recover the target within **5 degrees / 0.10 m**, produce at least **6 valid material views out of all 12 planned records**, and give the correct sample the unique highest surface probability. Any wrong per-view top label fails this bounded test; ties/unknowns count as unavailable, not correct. Report the complete probability vectors and coverage, without treating a probability threshold as physical confidence.
+- C must have a recovered target within the same geometry tolerance and at least **6 quality-valid extracted feature views before profile matching**. It must yield **zero accepted library matches** and unknown target material/appearance. Failure to recover/extract C is inconclusive rejection evidence and fails qualification. Every silence recording must yield no definitive geometry or material/appearance claim; its expected signal rejection is retained.
+- Drift shots must agree in isolated excess delay within **100 microseconds**, consistent with H1, and in every normalized band ratio within **1 dB**. Each 12-record raw-to-result run must take **≤10 seconds** on the declared machine, matching H4's processing target; record acquisition time separately.
+
+For every case report all twelve planned records, import/signal/feature acceptance, unknown reasons, correct/wrong/tied assignments, supported-view coverage, target geometry error, other inferred surfaces and runtime. Missing target support stays in the planned-record denominator. Surveyed background structures may be reported separately; any unmatched definitive geometry must remain unverified and fails a broader room-layout claim under H4. This target experiment does not replace H4's six-plane room gate.
+
+The counts require useful coverage rather than a single favorable echo. The 1 dB spectral limit matches the feature window-stability scale; the distance cutoff and regularization are fixed engineering choices, not significance levels or measured noise. The geometry, timing and runtime limits reuse the hardware plan. **Any failed gate leaves this physical configuration unqualified.** Preserve it; do not change samples, angles, profiles, covariance or thresholds to rescue the same test. A redesigned attempt requires a new declared protocol.
+
+Color has no acoustic physical-qualification gate. If palettes are supplied, check only that output colors equal the stated material-weighted palette mixture and that missing palette mass remains unassigned, to **1e-12 absolute numerical tolerance**. With no palette, appearance must remain unknown. Actual visual appearance requires independent visual/context evidence; this experiment cannot validate optical sensing.
+
 Historical [NBS measurements](https://nvlpubs.nist.gov/nistpubs/jres/4/jresv4n2p289_A2b.pdf) report dependence of absorption on incidence angle, supporting the need to preserve measurement conditions. [Published work on learned material detection from impulse responses](https://arxiv.org/abs/1901.05852) explores a trained neural approach; EchoSight does not include that model or its trained weights. Neither source establishes the accuracy of this implementation. Current software and controlled synthetic results remain separate from later physical qualification.

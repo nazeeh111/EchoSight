@@ -66,6 +66,26 @@ class InterpretationTests(unittest.TestCase):
   schema=json.loads((Path(__file__).resolve().parents[1]/'schemas/interpretation-result.schema.json').read_text())
   Draft202012Validator(schema).validate(result)
   self.assertEqual(result['surface_interpretations'][0]['material']['status'],'unknown')
+ def test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass(self):
+  from tests.test_material_features import MaterialFeatureTests
+  from echosight.material_features import extract_surface_features
+  from jsonschema import Draft202012Validator
+  MaterialFeatureTests.setUpClass();result=copy.deepcopy(MaterialFeatureTests.result)
+  feature=extract_surface_features(result,result['surfaces'][0])[0];self.assertEqual(feature['status'],'ok')
+  schema=json.loads((Path(__file__).resolve().parents[1]/'schemas/interpretation-result.schema.json').read_text())
+  for palette_weight,missing_palette in [(1.,False),(.8,False),(.8,True),(1.-1e-10,False)]:
+   with self.subTest(palette_weight=palette_weight,missing_palette=missing_palette):
+    c=context();c['profiles']=[]
+    for i in range(9):
+     p=profile('profile'+str(i));p.update(mean_db=feature['feature_db'],probe_sha256=feature['probe_sha256'])
+     if not (missing_palette and i==8):p['appearance']={'provenance':{'kind':'supplied','note':'Regression palette'},'colors':[{'color_srgb':'#FF0000','probability':palette_weight}]}
+     c['profiles'].append(p)
+    out=interpret_scene(result,c);appearance=out['surface_interpretations'][0]['appearance'];expected=palette_weight*(8/9 if missing_palette else 1)
+    Draft202012Validator(schema).validate(out)
+    self.assertLessEqual(appearance['colors'][0]['probability'],1)
+    self.assertAlmostEqual(appearance['colors'][0]['probability'],expected)
+    self.assertAlmostEqual(appearance['unassigned_probability'],1-expected,delta=1e-15)
+    if expected<1:self.assertGreater(appearance['unassigned_probability'],0)
  def test_offline_schemas(self):
   from jsonschema import Draft202012Validator
   root=Path(__file__).resolve().parents[1];c=context();Draft202012Validator(json.loads((root/'schemas/interpretation-context.schema.json').read_text())).validate(c)

@@ -1,0 +1,18 @@
+test_absence_and_cancellation (tests.test_interpretation.InterpretationTests.test_absence_and_cancellation) ... ok
+test_actual_feature_rows_satisfy_output_schema (tests.test_interpretation.InterpretationTests.test_actual_feature_rows_satisfy_output_schema) ... ok
+test_context_strict_and_canonical (tests.test_interpretation.InterpretationTests.test_context_strict_and_canonical) ... ok
+test_covariance_determinant (tests.test_interpretation.InterpretationTests.test_covariance_determinant) ... ok
+test_extreme_narrow_profile_abstains_without_nonfinite_output (tests.test_interpretation.InterpretationTests.test_extreme_narrow_profile_abstains_without_nonfinite_output) ... ok
+test_gaussian_and_color_mixture (tests.test_interpretation.InterpretationTests.test_gaussian_and_color_mixture) ... ok
+test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass (tests.test_interpretation.InterpretationTests.test_nine_profile_palette_mass_stays_bounded_without_filling_missing_mass) ... ok
+test_offline_schemas (tests.test_interpretation.InterpretationTests.test_offline_schemas) ... ok
+test_outlier_and_missing_view_mass (tests.test_interpretation.InterpretationTests.test_outlier_and_missing_view_mass) ... ok
+test_overlap_across_library_and_duplicate_queries (tests.test_interpretation.InterpretationTests.test_overlap_across_library_and_duplicate_queries) ... ok
+test_profile_builder_sample_covariance (tests.test_interpretation.InterpretationTests.test_profile_builder_sample_covariance) ... ok
+test_profile_builder_singular_and_reused (tests.test_interpretation.InterpretationTests.test_profile_builder_singular_and_reused) ... ok
+test_route_angle_and_minimum_views (tests.test_interpretation.InterpretationTests.test_route_angle_and_minimum_views) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.063s
+
+OK
