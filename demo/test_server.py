@@ -92,19 +92,53 @@ class EchoBotServerTests(unittest.TestCase):
         if isinstance(body, (dict, list)):
             body = json.dumps(body).encode()
         h = {"Content-Type": "application/json", "Origin": self.origin}
-        h.update(headers or {})
+        for key, value in (headers or {}).items():
+            if value is None:
+                h.pop(key, None)
+            else:
+                h[key] = value
         connection = http.client.HTTPConnection("127.0.0.1", self.server.server_port, timeout=3)
         connection.request(method, path, body, headers=h)
         response = connection.getresponse()
         data = response.read()
         status, response_headers = response.status, dict(response.getheaders())
         connection.close()
-        return status, (json.loads(data) if "application/json" in response_headers.get("Content-Type", "") else data), response_headers
+        return status, (json.loads(data) if method != "HEAD" and "application/json" in response_headers.get("Content-Type", "") else data), response_headers
 
     def test_static_demo_and_javascript_are_served(self):
         self.assertEqual(self.request("/", "GET")[1], b"<h1>EchoSight</h1>")
         self.assertIn("javascript", self.request("/scene.js", "GET")[2]["Content-Type"])
         self.assertEqual(self.server.server_address[0], "127.0.0.1")
+
+    def test_cross_site_document_navigation_can_open_only_the_html_entry(self):
+        navigation = {"Sec-Fetch-Site": "cross-site", "Sec-Fetch-Mode": "navigate",
+                      "Sec-Fetch-Dest": "document"}
+        for origin in (None, self.origin):
+            for path in ("/", "/index.html", "/?from=readme"):
+                with self.subTest(path=path, origin=origin):
+                    status, body, _ = self.request(path, "GET", headers=navigation | {"Origin": origin})
+                    self.assertEqual(status, 200)
+                    self.assertEqual(body, b"<h1>EchoSight</h1>")
+
+    def test_cross_site_navigation_does_not_relax_api_write_or_origin_guards(self):
+        navigation = {"Sec-Fetch-Site": "cross-site", "Sec-Fetch-Mode": "navigate",
+                      "Sec-Fetch-Dest": "document"}
+        cases = [
+            ("/api/echo-bot/status", "GET", navigation),
+            ("/api/echo-bot/chat", "POST", navigation),
+            ("/", "POST", navigation),
+            ("/", "HEAD", navigation),
+            ("/scene.js", "GET", navigation),
+            ("/", "GET", navigation | {"Host": "attacker.invalid"}),
+            ("/", "GET", navigation | {"Origin": "https://attacker.invalid"}),
+            ("/", "GET", navigation | {"Sec-Fetch-Mode": "cors"}),
+            ("/", "GET", navigation | {"Sec-Fetch-Dest": "iframe"}),
+            ("/", "GET", {"Sec-Fetch-Site": "cross-site"}),
+        ]
+        for path, method, headers in cases:
+            with self.subTest(path=path, method=method, headers=headers):
+                self.assertEqual(self.request(path, method, headers=headers)[0], 403)
+        self.assertIsNone(self.ollama.request_body)
 
     def test_source_hidden_paths_traversal_and_symlink_escape_are_denied(self):
         outside = self.root.parent / (self.root.name + "-secret")
