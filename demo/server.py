@@ -231,13 +231,20 @@ class DemoHandler(BaseHTTPRequestHandler):
     def log_message(self, _format, *_args):
         pass  # Do not log conversation content or request headers.
 
-    def _trusted(self):
+    def _trusted(self, *, document_entry=False):
         hosts = self.headers.get_all("Host", [])
         origins = self.headers.get_all("Origin", [])
         valid_hosts = {f"127.0.0.1:{self.server.server_port}", f"localhost:{self.server.server_port}"}
+        # A normal link into the static shell is read-only, even when its
+        # navigation originated on another site. API calls and writes remain
+        # subject to the strict cross-site guard.
+        document_navigation = (document_entry and self.command == "GET"
+                and self.headers.get("Sec-Fetch-Mode", "").lower() == "navigate"
+                and self.headers.get("Sec-Fetch-Dest", "").lower() == "document")
         if (len(hosts) != 1 or hosts[0].lower() not in valid_hosts
                 or len(origins) > 1 or (origins and origins[0].lower() != "http://" + hosts[0].lower())
-                or self.headers.get("Sec-Fetch-Site", "").lower() == "cross-site"):
+                or (self.headers.get("Sec-Fetch-Site", "").lower() == "cross-site"
+                    and not document_navigation)):
             raise ServiceError(403, "Use this demo from its own localhost address.")
 
     def _send(self, status, data, content_type="application/json; charset=utf-8", head=False):
@@ -262,7 +269,7 @@ class DemoHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         try:
-            self._trusted()
+            self._trusted(document_entry=self.path.split("?", 1)[0] in ("/", "/index.html"))
             parsed = urllib.parse.urlsplit(self.path)
             if parsed.scheme or parsed.netloc:
                 raise ServiceError(404, "Not found.")
