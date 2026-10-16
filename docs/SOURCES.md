@@ -1,5 +1,13 @@
 # Scientific sources and dataset provenance
 
+The PHANTOM measured-NLOS route adapts Li et al. (2025), DOI 10.1038/s42005-025-02335-3,
+using the exact official [Glasgow dataset/code](https://researchdata.gla.ac.uk/2046/),
+CC BY 4.0. [Packaged attribution and changes](../echosight/notices/li2025/NOTICE.md)
+and [exact input/execution limits](MEASURED_NLOS.md) distinguish this released-code
+baseline from a complete paper-pipeline, calibration or new-method claim. Raw
+measurements/full output volumes are excluded from Git. Existing room evidence
+below remains separate and unchanged.
+
 Access checked 2026-09-18. Theory, published measurements, our simulation, hybrid measured-response replay, and our future phone recordings are distinct evidence classes. No paper's reported accuracy is transferred to this backend.
 
 | Source | Access and use | Transfer limit |

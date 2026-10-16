@@ -1,0 +1,8 @@
+include STATE.md
+include requirements.txt requirements-test.txt requirements-evaluation.txt
+recursive-include docs *.md
+include docs/assets/nlos-fig2-measured.png
+recursive-include schemas *.json
+recursive-include evaluation *.py *.json
+recursive-include examples/frontend *.json
+recursive-include echosight/notices/li2025 *.md *.m *.json
