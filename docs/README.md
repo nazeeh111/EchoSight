@@ -1,9 +1,10 @@
 # EchoSight documentation
 
-Start with the [repository README](../README.md) for the simulated room demo, optional local Echo Bot and backend setup. The demo is a presentation of the concept; these backend guides describe processing actual recording inputs.
+Start with the [repository README](../README.md) for measured ultrasound, backend setup and the separate simulated room demo. These guides distinguish published measurements, room-recording research and supplied demo geometry.
 
 | Task | Guide |
 | --- | --- |
+| Reconstruct the pinned external measured ultrasound scene | [Measured NLOS / PHANTOM](MEASURED_NLOS.md), actual native-volume inspection and source provenance |
 | Install, process recordings and replay results | [Usage](USAGE.md) |
 | Call the local recording API | [API routes and errors](API.md) |
 | Build a frontend for backend results | [Frontend handoff](FRONTEND_HANDOFF.md), [JSON schemas](../schemas/) and [result examples](../examples/frontend/) |

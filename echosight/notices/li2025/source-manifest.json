@@ -1,0 +1,57 @@
+{
+  "record": "https://researchdata.gla.ac.uk/2046/",
+  "dataset_doi": "10.5525/gla.researchdata.2046",
+  "paper_doi": "10.1038/s42005-025-02335-3",
+  "license": "CC BY4.0",
+  "code_archive": {
+    "url": "https://researchdata.gla.ac.uk/2046/2/Code.zip",
+    "bytes": 6558,
+    "sha256": "a66b0de38f08ae92243855dd522e9acf1b11f563e37b0c9416e0a99f5c4e5446"
+  },
+  "files": {
+    "fk_us.m": {
+      "bytes": 5658,
+      "sha256": "fb2677af9620f5f416f97f869e601edfba0a77ae9068f94ceaedda7c64271546"
+    },
+    "generate_figures.m": {
+      "bytes": 3098,
+      "sha256": "c080568976f6c21f5af49138ace041f370ffdab31d4822c6bfeaa0d754090719"
+    }
+  },
+  "input": {
+    "url": "https://researchdata.gla.ac.uk/2046/3/Fig2.zip",
+    "headers": {
+      "Date": "Thu, 15 Oct 2026 23:38:13 GMT",
+      "Server": "Apache",
+      "X-Frame-Options": "SAMEORIGIN",
+      "ETag": "a655840335f57d89f5cc643bebf34420",
+      "Content-MD5": "plWEAzX1fYn1zGQ76/NEIA==",
+      "Last-Modified": "Mon, 08 Sep 2025 09:40:22 GMT",
+      "Expires": "Fri, 15 Oct 2027 23:38:13 GMT",
+      "Content-Disposition": "inline; filename=Fig2.zip",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "234048284",
+      "Content-Security-Policy": "frame-ancestors'self';",
+      "Connection": "close",
+      "Content-Type": "application/zip"
+    },
+    "archive_bytes": 234048284,
+    "archive_sha256": "ad6f7a44562e4fc74b4a61cd15223ce9f49338f879a16142bf4bb25782c656fd",
+    "paths_types_duplicates": "passed",
+    "crc": "all members passed before extraction",
+    "extraction": "fresh destination, exclusive-create files",
+    "entries": [
+      {
+        "name": "2024_2_29_22_26_32641_star_dig_H.mat",
+        "compressed_bytes": 234048042,
+        "bytes": 239719404,
+        "crc": 932003365,
+        "mode": 33206,
+        "sha256": "bddb46d4c26457b8364bb63c646c6d558c4db0d3004f36de0bd87d34f2a702f4"
+      }
+    ],
+    "license": "CC BY4.0 per official dataset page sources/dataset.html",
+    "dataset_doi": "10.5525/gla.researchdata.2046"
+  },
+  "reviewed_private_baseline_source_sha256": "029851a7a8ffa7cfe4803fd5a65007d2a48d8447f175a9b9b10f9c595a9849c8"
+}

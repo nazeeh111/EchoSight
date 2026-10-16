@@ -58,6 +58,13 @@ def _run_stored_session(store, session_id):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="EchoSight acoustic backend")
     sub = parser.add_subparsers(dest="command", required=True)
+    command = sub.add_parser("nlos-fig2", help="reconstruct the pinned external measured Fig2 ultrasound scene offline")
+    command.add_argument("--input", type=Path, required=True, help="caller-provided exact official Fig2 MAT; never downloaded automatically")
+    command.add_argument("--output", type=Path, required=True, help="new directory; preserves partial output on failure")
+    command.add_argument("--preset", choices=("li2025-fig2-phase-native",), required=True)
+    command.add_argument("--sample-rate-hz", type=int, choices=(1000000,), required=True)
+    command.add_argument("--memory-budget-gib", type=float, default=6, help="declared budget, minimum6GiB estimate; not a hard RAM ceiling")
+    command.add_argument("--estimate-only", action="store_true", help="verify exact input and print resources without decoding or creating output")
     command = sub.add_parser("probe", help="write a probe WAV and its exact metadata")
     command.add_argument("directory", type=Path)
     command.add_argument("--channel", choices=("mono", "left", "right"), default="left")
@@ -121,7 +128,16 @@ def main(argv=None):
     command.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
     try:
-        if args.command == "probe":
+        if args.command == "nlos-fig2":
+            from .nlos import process_fig2
+            from subprocess import TimeoutExpired
+            try:
+                result=process_fig2(args.input,args.output,preset=args.preset,sample_rate_hz=args.sample_rate_hz,
+                    memory_budget_gib=args.memory_budget_gib,estimate_only=args.estimate_only)
+            except TimeoutExpired:
+                raise RuntimeError('Measured NLOS exceeded300s wall deadline; worker stopped and partial output retained') from None
+            print(json.dumps(result,indent=2,allow_nan=False))
+        elif args.command == "probe":
             import numpy as np
             from scipy.io.wavfile import write
             from .signals import generate_playback
