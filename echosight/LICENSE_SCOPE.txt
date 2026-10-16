@@ -1,0 +1,19 @@
+EchoSight backend licensing
+
+This notice grants the MIT License in LICENSE only to the original Python
+source files listed in LICENSE_SCOPE.json, as held by Nazeeh Abdul-Hadi. These are the
+pre-existing backend/runtime files and their current original CLI changes.
+
+The PHANTOM adaptation files nlos.py, nlos_display.py and _nlos_worker.py are
+excluded from this new MIT grant. Their existing published-method attribution
+and CC BY 4.0 notices remain in force. The unchanged upstream MATLAB scripts,
+source-derived figures, external measurements, Three.js and other third-party
+material retain their own notices and terms. No existing grant is removed.
+
+Room GLB/Blender assets, acquisition projects, evaluation datasets, other
+repository directories and any material outside the exact source list are
+excluded from this scope. Their permissions are not changed or asserted.
+
+The copyright holder approved this exact source scope on 2026-10-15. The
+license and scope are included with the runtime. Existing 0.3.0 release assets
+remain unchanged. This is not a whole-repository MIT grant.

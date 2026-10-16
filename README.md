@@ -43,7 +43,7 @@ echosight nlos-fig2 --input /your/data/2024_2_29_22_26_32641_star_dig_H.mat \
   --sample-rate-hz 1000000
 ```
 
-Use a new output directory. Open its self-contained `inspection.html` to scrub actual depth bins and inspect source-array locations. `report.json` records provenance, resource use and artifact hashes; NumPy arrays retain full precision. [Method, evidence and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits) distinguish this released-code baseline from calibrated room geometry and future adaptive work.
+Use a new output directory. Open its self-contained `inspection.html` to scrub native depth bins and inspect a pixel’s amplitude profile, source-array location and threshold sensitivity. Crossings use full-precision arrays; the displayed curve is quantized. `report.json` records provenance, resource use and artifact hashes; NumPy arrays retain full precision. [Method, evidence and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits) distinguish this released-code baseline from calibrated room geometry and future adaptive work.
 
 ## Other local routes
 
@@ -92,3 +92,7 @@ Surface patches describe observed acoustic support, not complete wall edges or s
 - [Materials and appearance](docs/MATERIALS_APPEARANCE.md), [hardware acceptance](docs/HARDWARE_ACCEPTANCE.md) and [source/license provenance](docs/SOURCES.md)
 
 Keep generated recordings and local experiments in ignored `work/`. The full repository retains frozen scientific results and failure evidence in `evidence/`.
+
+## Reuse permissions
+
+The 19 original Python backend files [listed in the scope](echosight/LICENSE_SCOPE.json) use the [MIT License](echosight/LICENSE). The [scope notice](echosight/LICENSE_SCOPE.txt) preserves the PHANTOM adaptation's CC BY 4.0 terms and upstream notices. Room assets and other unlisted material are outside this MIT grant.
