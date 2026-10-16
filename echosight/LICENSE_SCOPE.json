@@ -1,0 +1,73 @@
+{
+  "status": "APPROVED by copyright holder on 2026-10-15; applied to exact listed original source files",
+  "repository": "nazeeh111/EchoSight",
+  "source_commit": "6a57781cb123922bb77abb4268b02212f437f860",
+  "proposed_license": "MIT",
+  "exact_source_files": {
+    "echosight/__init__.py": {
+      "sha256": "79ee956df91fd679f8aa4cd1797741406e89184c599f0c89a781cb9f3dba5480"
+    },
+    "echosight/__main__.py": {
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    "echosight/acquisition.py": {
+      "sha256": "ca2effe95ae170b25a7eb8944a3bf16a255263668aca9c7b0da63b14b7503279"
+    },
+    "echosight/api.py": {
+      "sha256": "2e9a69b1ed5fddfcd6e7ab5a72dbe5f811be7dcbe04cba949ae3350c41c1ae11"
+    },
+    "echosight/calibration.py": {
+      "sha256": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931"
+    },
+    "echosight/cli.py": {
+      "sha256": "ebb0e1d64a985442dfed1b03c352f1d84d88c6fe733e89f4692991a9c1d02406"
+    },
+    "echosight/controlled.py": {
+      "sha256": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646"
+    },
+    "echosight/evolution.py": {
+      "sha256": "21caa2ba190a637b26c9188ee90bed3a34d6b90228a28699181d85a7b921b7c5"
+    },
+    "echosight/geometry.py": {
+      "sha256": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce"
+    },
+    "echosight/inference.py": {
+      "sha256": "c48b500f70883fa3d1b40a31f4b690e4d2453ee257059bd18755aca145793c7d"
+    },
+    "echosight/interpretation.py": {
+      "sha256": "9e03423a325bb5ef4880c4a6de5d42c884593bc061391a4dfa5156b2f21ddbbf"
+    },
+    "echosight/material_features.py": {
+      "sha256": "1870793d9f837f2f96d51f4a592f0736474ac2cd2d71dba1995a712caff94a04"
+    },
+    "echosight/multisource.py": {
+      "sha256": "b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085"
+    },
+    "echosight/path_alternatives.py": {
+      "sha256": "7391ac4713905166e5d1ac5601d77b1e3de41eb851fc8adcae2ec3530b278b50"
+    },
+    "echosight/pipeline.py": {
+      "sha256": "349c9f8f9b642f7cb61ee453b2f2593bd1b367ddfd93da6ecfd36e101024bb71"
+    },
+    "echosight/receiver_covariance.py": {
+      "sha256": "31bb616f55b6951874a1a72d28655c1c6ab4ae15706d3d9f786a1006fa9ef97b"
+    },
+    "echosight/signals.py": {
+      "sha256": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816"
+    },
+    "echosight/simulation.py": {
+      "sha256": "dc3d324d7a40fcc2ec9478c4e93cbc74f11f50790890d99ac542cbb336b22ba7"
+    },
+    "echosight/storage.py": {
+      "sha256": "5a833bc7e99683ef177d201ff1ef2f21dbb7e6e311b660574cc532a6916a3d5f"
+    }
+  },
+  "exceptions_notice": "LICENSE_SCOPE.txt",
+  "license_text": "LICENSE",
+  "same_files_in_next_release": "New changes require provenance review; this is not a grant over unknown third-party or future imports.",
+  "approval_required_by": "Goal objective authority section reserves licensing changes for required approval.",
+  "source_identity_note": "source_commit and file hashes identify the approved 0.3.0 baseline, not checksums for every future distribution. The MIT grant covers only the listed original source files; first-party changes require provenance review, and third-party material is excluded.",
+  "provenance_reviewed_first_party_changes": {
+    "echosight/__init__.py": "Version string0.3.0 to0.3.1 only; no third-party content added."
+  }
+}

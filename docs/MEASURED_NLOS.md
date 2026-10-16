@@ -111,3 +111,13 @@ hidden solid geometry or an adaptive-method advantage. The paper already propose
 adaptive selection. Existing room/simulation failures remain in the
 [frozen room state](https://github.com/nazeeh111/EchoSight/blob/backend/implementation/STATE.md)
 and [evaluation guide](EVALUATION.md); the new route does not erase those results.
+
+## Inspect a pixel profile and threshold sensitivity
+
+Select a pixel on the axial slice image, or focus it and use arrow keys. The linked curve uses the existing 8-bit, globally normalized display frames in the approximately 1.0–1.7 m source-depth window. Moving the depth slider moves its amber slice marker. The curve adds no measurements or interpolated voxels.
+
+The table uses the full-precision, full reconstructed volume before display quantization. It reports the first strict crossing above the global volume maximum divided by each fixed divisor **3, 4, 4.5, 5 and 6**, plus the first full-volume axial maximum. The default 4.5 rule agrees with `depth_m.npy`. Native zero-based indices are retained in `threshold-diagnostics.json`; displayed source bins count from 1. Reversed spatial display axes still point to the original `volume.npy` indices.
+
+A crossing or maximum outside the plotted window is labeled **outside**, rather than clipped or treated as missing. Missing crossings remain **unknown**. The range across detected rules is threshold sensitivity; the summary also counts rules with no crossing. This is not confidence, physical surface truth, uncertainty or resolution. An all-zero profile has no detected return, even though the mathematical first-maximum index is 0.
+
+Crossing markers come from native precision. A rounded display curve can appear to cross at a different bin. The diagnostic grid's schema, size and SHA-256 are bound in `report.json`; no new FFT or change to the reconstruction is required for this inspection. This feature has no validated reliability advantage.

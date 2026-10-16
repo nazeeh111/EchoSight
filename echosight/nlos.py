@@ -73,7 +73,7 @@ PRESET='li2025-fig2-phase-native'
 INPUT_BYTES=239719404
 INPUT_SHA256='bddb46d4c26457b8364bb63c646c6d558c4db0d3004f36de0bd87d34f2a702f4'
 ESTIMATED_MEMORY_BYTES=6*1024**3
-FILES=('volume.npy','depth_m.npy','maximum_amplitude.npy','depth-amplitude.png','amplitude.png','axial-display.bin','inspection.html')
+FILES=('volume.npy','depth_m.npy','maximum_amplitude.npy','depth-amplitude.png','amplitude.png','axial-display.bin','inspection.html','threshold-diagnostics.json')
 LIMITS=[
     'Published released-code route port, not a new f-k or adaptive-sampling method.',
     'Paper Methods describes a ±30 kHz band-pass absent from released Fig2 scripts; input prefilter status is unknown.',

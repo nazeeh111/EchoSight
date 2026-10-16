@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "echosight"
-version = "0.3.0"
+version = "0.3.1"
 description = "Evidence-linked acoustic spatial inference from lossless recordings"
 requires-python = ">=3.12"
 dependencies = ["numpy==2.3.5", "scipy==1.18.1"]
@@ -16,4 +16,4 @@ echosight = "echosight.cli:main"
 include = ["echosight*"]
 
 [tool.setuptools.package-data]
-echosight = ["notices/li2025/*.md", "notices/li2025/*.m", "notices/li2025/*.json"]
+echosight = ["LICENSE", "LICENSE_SCOPE.txt", "LICENSE_SCOPE.json", "notices/li2025/*.md", "notices/li2025/*.m", "notices/li2025/*.json"]
