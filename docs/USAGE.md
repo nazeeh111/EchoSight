@@ -97,6 +97,8 @@ python -m echosight process work/my-room/session.json --output work/my-room/resu
 python -m echosight inspect work/my-room/result.json
 ```
 
+The `process` output must be separate from the session manifest, any supplied `--interpretation-context` JSON and every declared recording. Input aliases through normalized paths, symbolic links and hard links are rejected before processing. A distinct existing result file can still be replaced. This check protects the selected local inputs; it is not a lock against concurrent file changes.
+
 Read recording-level diagnostics even if processing finishes. Import permits more formats/rates/durations than acoustic processing: processing requires 16–96 kHz, at most 30 seconds, and a probe band compatible with the delivered rate. Recordings must contain the complete probe. Original native ZIP evidence is checked again during processing; relabeling a capture cannot repair an interruption or contradictory source declaration. Exact waveform copies cannot provide independent positions. [Import and processing limits](API.md#jobs-recovery-and-limits) give the full bounds.
 
 ## 4. Use the local HTTP API

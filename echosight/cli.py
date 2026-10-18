@@ -41,6 +41,39 @@ def _read_json_file(path):
     return json.loads(raw)
 
 
+def _process_input_paths(session, context):
+    """Find protected paths without reading recordings or validating the session."""
+    inputs = [session]
+    if context is not None:
+        inputs.append(context)
+    try:
+        spec = _read_json_file(session)
+    except (ValueError, OSError, TypeError):
+        # The pipeline retains its ordinary invalid_session result behavior.
+        return inputs
+    captures = spec.get("captures", []) if isinstance(spec, dict) else []
+    if isinstance(captures, list):
+        for capture in captures:
+            recording = capture.get("recording_path") if isinstance(capture, dict) else None
+            if isinstance(recording, str) and recording and "\0" not in recording:
+                inputs.append(session.parent / recording)
+    return inputs
+
+
+def _require_distinct_output(destination, inputs):
+    """Protect named inputs, including normalized, symlink and hardlink aliases."""
+    resolved = destination.resolve()
+    for source in inputs:
+        aliases = resolved == source.resolve()
+        if not aliases:
+            try:
+                aliases = destination.samefile(source)
+            except FileNotFoundError:
+                pass
+        if aliases:
+            raise ValueError(f"output must be distinct from input: {source}")
+
+
 def _run_stored_session(store, session_id):
     job = store.start_job(session_id, process_session)
     try:
@@ -128,6 +161,10 @@ def main(argv=None):
     command.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
     try:
+        protected_inputs = []
+        if args.command == "process":
+            protected_inputs = _process_input_paths(args.session, args.interpretation_context)
+            _require_distinct_output(args.output, protected_inputs)
         if args.command == "nlos-fig2":
             from .nlos import process_fig2
             from subprocess import TimeoutExpired
@@ -179,6 +216,8 @@ def main(argv=None):
                                          method=getattr(args, "method", "mapper"))
             finally:
                 signal.signal(signal.SIGINT, previous_handler)
+            if protected_inputs:
+                _require_distinct_output(destination, protected_inputs)
             save_result(result, destination)
             print(json.dumps(_summary(result), indent=2, allow_nan=False))
             print(f"Saved: {destination}")
