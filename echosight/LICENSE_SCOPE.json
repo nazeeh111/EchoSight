@@ -68,6 +68,7 @@
   "approval_required_by": "Goal objective authority section reserves licensing changes for required approval.",
   "source_identity_note": "source_commit and file hashes identify the approved 0.3.0 baseline, not checksums for every future distribution. The MIT grant covers only the listed original source files; first-party changes require provenance review, and third-party material is excluded.",
   "provenance_reviewed_first_party_changes": {
-    "echosight/__init__.py": "Version string0.3.0 to0.3.1 only; no third-party content added."
+    "echosight/__init__.py": "Version string0.3.0 to0.3.2 only; no third-party content added.",
+    "echosight/cli.py": "Original 0.3.2 process output/input alias preflight and final write check; standard-library code authored in this change, no third-party source imported. Existing exact source scope preserved."
   }
 }
