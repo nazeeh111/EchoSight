@@ -1,12 +1,8 @@
 # EchoSight
 
-[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](pyproject.toml)
-[![NumPy and SciPy](https://img.shields.io/badge/NumPy%20%2F%20SciPy-2.3.5%20%2F%201.18.1-555)](requirements.txt)
-[![Published measured case: 55 by 55](https://img.shields.io/badge/Published%20measured%20case-55%C3%9755-6446A0)](docs/MEASURED_NLOS.md)
-[![Measured route runs offline](https://img.shields.io/badge/Measured%20route-offline-555)](docs/MEASURED_NLOS.md#exact-input-and-execution)
-[![Checks](https://github.com/nazeeh111/EchoSight/actions/workflows/ci.yml/badge.svg?branch=backend%2Fimplementation)](https://github.com/nazeeh111/EchoSight/actions/workflows/ci.yml)
-
 Reconstruct a scene from published ultrasound measurements, inspect native depth slices, and retain the arrays and source provenance. PHANTOM is this measured non-line-of-sight imaging direction inside EchoSight. The room-recording backend and simulated room demo remain separate routes.
+
+[Inspect the published measured case](https://nazeeh111.github.io/EchoSight/) · [Reproduce it from the official input](docs/MEASURED_NLOS.md#exact-input-and-execution) · [Read the method and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits)
 
 ![Actual measured ultrasound scene reconstructed with the published native-grid method](docs/assets/nlos-fig2-measured.png)
 
@@ -14,7 +10,7 @@ Reconstruct a scene from published ultrasound measurements, inspect native depth
 
 | Route | What you can do |
 | --- | --- |
-| [Measured NLOS / PHANTOM](docs/MEASURED_NLOS.md) | Reconstruct the exact official Figure 2 MAT file; save volume, depth, amplitude and source hashes; inspect native axial slices. |
+| [Measured NLOS / PHANTOM](https://nazeeh111.github.io/EchoSight/) | Explore the hosted measured reconstruction and native axial slices; [reproduce the exact official Figure 2 MAT case](docs/MEASURED_NLOS.md) to save volume, depth, amplitude and source hashes. |
 | [Room-recording backend](docs/USAGE.md) | Import lossless recordings, inspect calibration and supported surface patches, compare reference-based materials, and export/replay results. |
 | [Room demo](https://github.com/nazeeh111/EchoSight/tree/backend/implementation/demo) | Explore a supplied room model and simulated scan. It does not connect phones or process acoustic measurements. |
 
@@ -66,6 +62,8 @@ python3 demo/server.py --open
 Its confidence labels, echo directions and material/color estimates are simulated. [Demo controls and optional local Qwen/Ollama assistant](https://github.com/nazeeh111/EchoSight/blob/backend/implementation/demo/README.md), [model provenance](https://github.com/nazeeh111/EchoSight/blob/backend/implementation/demo/MODEL.md). The assistant performs no acoustic measurements; the demo works without it. An additional [Blender room animation](https://github.com/nazeeh111/EchoSight/blob/backend/implementation/examples/rooms/room_2_final_animated.blend) remains available in the repository.
 
 ## Checks
+
+[![Checks](https://github.com/nazeeh111/EchoSight/actions/workflows/ci.yml/badge.svg?branch=backend%2Fimplementation)](https://github.com/nazeeh111/EchoSight/actions/workflows/ci.yml)
 
 From a full Git checkout, with the virtual environment active:
 
