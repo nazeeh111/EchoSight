@@ -53,6 +53,18 @@ class APITests(unittest.TestCase):
         self.assertEqual(code, 400)
         code, _ = self.request('POST', '/v1/sessions', b'', {'Content-Length': str(1024 * 1024 + 1)})
         self.assertEqual(code, 413)
+    def test_compare_uses_shared_typed_geometry_validation(self):
+        for normal, offset in [([True, 0, 0], 2), (['1', 0, 0], 2),
+                               ([1, 0, 0], True), ([1, 0, 0], '2'), ([1, 0, 0], 10 ** 1000)]:
+            surface = {'surface_id': 's', 'normal': normal, 'offset_m': offset}
+            with self.subTest(normal=normal, offset=offset):
+                code, body = self.request('POST', '/v1/compare', {'previous': {'surfaces': [surface]}, 'current': {'surfaces': []}})
+                self.assertEqual(code, 400, body)
+                self.assertEqual(json.loads(body)['error']['code'], 'invalid_request')
+        surfaces = [{'surface_id': str(i), 'normal': [1, 0, 0], 'offset_m': i} for i in range(65)]
+        code, body = self.request('POST', '/v1/compare', {'previous': {'surfaces': surfaces}, 'current': {'surfaces': []}})
+        self.assertEqual(code, 400); self.assertIn('at most 64', json.loads(body)['error']['message'])
+
     def test_compare_accepts_two_results_above_session_limit(self):
         padding = 'x' * (1024 * 1024)
         result = {'surfaces': [], 'transport_test_padding': padding}

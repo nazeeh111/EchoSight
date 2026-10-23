@@ -12,6 +12,18 @@ def result(surface_offset=2., count=4):
 
 
 class EvolutionTests(unittest.TestCase):
+    def test_plane_types_reject_boolean_string_and_unrepresentable_geometry(self):
+        from echosight.evolution import compare_results
+        for normal, offset in [([True, 0, 0], 2), (['1', 0, 0], 2),
+                               ([1, 0, 0], True), ([1, 0, 0], '2'),
+                               ([1, 0, 0], 10 ** 1000), ([10 ** 1000, 0, 0], 2)]:
+            bad = result(); bad['surfaces'][0].update(normal=normal, offset_m=offset)
+            with self.subTest(normal=normal, offset=offset), self.assertRaises(ValueError):
+                compare_results(bad, result())
+        import numpy as np
+        native = result(); native['surfaces'][0].update(normal=np.array([1., 0., 0.]), offset_m=np.float64(2.))
+        self.assertEqual(compare_results(native, result())['status'], 'comparable')
+
     def test_legacy_cancelled_geometry_cannot_continue_display_tracks(self):
         from echosight.evolution import compare_results
         prior, unfinished = result(), result()

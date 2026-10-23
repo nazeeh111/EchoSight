@@ -72,7 +72,9 @@ let context,
   lastFrame = performance.now(),
   toastTimer,
   heroPulse = 0;
-const audioReady = fetch("./assets/scan-sweep.wav")
+const audioReady = fetch("./assets/scan-sweep.wav", {
+  signal: AbortSignal.timeout(15000),
+})
   .then((r) => {
     if (!r.ok) throw Error("Sound file unavailable");
     return r.arrayBuffer();
@@ -84,10 +86,19 @@ const audioReady = fetch("./assets/scan-sweep.wav")
     gain.connect(context.destination);
     return context.decodeAudioData(b);
   })
-  .then((b) => (buffer = b))
+  .then((b) => {
+    buffer = b;
+    // A click may have happened while the sound was still downloading.
+    if (state.playing || state.replayAt !== null) unlockAudio();
+    if (state.replayAt !== null)
+      playAudio((performance.now() - state.replayAt) / 1000);
+  })
   .catch((e) => {
     state.muted = true;
     $("#sound-toggle").title = "Sound unavailable";
+    $("#sound-toggle").innerHTML = svg("mute");
+    $("#sound-toggle").setAttribute("aria-label", "Sound unavailable");
+    $("#sound-toggle").disabled = true;
     console.warn(e);
   });
 function toast(message) {
@@ -438,10 +449,21 @@ function finish() {
   $("#view-message").innerHTML = "";
   view.blend = 1;
   view.nodesEnabled = false;
+  view.dimensions.visible = false;
   view.setPreset("front");
   renderInspector();
 }
 function seek(t) {
+  // Leaving object exploration must restore the complete scan scene.
+  view.hidden.clear();
+  view.isolated = null;
+  view.selected = null;
+  view.visibility();
+  view.box.visible = false;
+  view.dimensions.visible = false;
+  view.nodesEnabled = true;
+  view.blend = 1;
+  state.selected = null;
   stopAudio();
   state.replayAt = null;
   view.setReplay(-1, [], null);
@@ -470,7 +492,7 @@ function renderInspector() {
     categories.get(c).push(g);
   });
   $("#inspector").innerHTML =
-    `<section class="inspector-section"><h3>Scene controls <button id="scene-reset" class="inspector-reset">Reset</button></h3><div class="eyebrow">RENDER MODE</div><div class="inspector-label"><span>Scan</span><span id="blend-value">100% model</span></div><input type="range" id="blend" min="0" max="100" value="100" aria-label="Scan to model blend"><button class="plain-button" id="raw-scan">Hold for raw scan</button><div class="segmented" aria-label="Camera presets"><button data-view="3d">3D</button><button data-view="top">Top</button><button data-view="front" class="active">Inside</button><button data-view="source">Source</button></div><button class="toggle-row" id="nodes-toggle" aria-pressed="false"><span>Phone nodes</span><span class="switch"></span></button><button class="toggle-row" id="dimensions-toggle" aria-pressed="false"><span>Dimensions (model)</span><span class="switch"></span></button><p class="estimate-note">Original ceiling transparency retained.</p></section><section class="inspector-section"><h3>Scene objects <span class="muted-count">${view.groups.length}</span></h3><label class="sr-only" for="object-select">Inspect a room object</label><select class="object-select" id="object-select"><option value="">Select an object to inspect</option>${[...categories].map(([cat, groups]) => `<optgroup label="${escape(cat)}">${groups.map((g) => `<option value="${escape(g.id)}">${escape(g.name)}</option>`).join("")}</optgroup>`).join("")}</select><div id="selected-object"><p class="echo-note">Click an object in the room, or choose one above.</p></div><button class="plain-button" id="show-all-objects">Show all objects</button></section><section class="inspector-section"><h3>Signal sources</h3><div class="echo-phone-tabs"><button data-phone="-1">HUB</button>${Array.from({ length: state.count }, (_, i) => `<button data-phone="${i}" class="${i === state.phone ? "active" : ""}">0${i + 1}</button>`).join("")}</div><div id="echo-details"></div></section><section class="inspector-section"><a class="download-link" href="assets/room-corrected.glb" download>Download room model <span>↓</span></a></section>`;
+    `<section class="inspector-section"><h3>Scene controls <button id="scene-reset" class="inspector-reset">Reset</button></h3><div class="eyebrow">RENDER MODE</div><div class="inspector-label"><span>Scan</span><span id="blend-value">100% model</span></div><input type="range" id="blend" min="0" max="100" value="100" aria-label="Scan to model blend"><button class="plain-button" id="raw-scan">Hold for raw scan</button><div class="segmented" aria-label="Camera presets"><button data-view="3d">3D</button><button data-view="top">Top</button><button data-view="front" class="active">Inside</button><button data-view="source">Source</button></div><button class="toggle-row" id="nodes-toggle" aria-pressed="${view.nodesEnabled}"><span>Phone nodes</span><span class="switch"></span></button><button class="toggle-row" id="dimensions-toggle" aria-pressed="${view.dimensions.visible}"><span>Dimensions (model)</span><span class="switch"></span></button><p class="estimate-note">Original ceiling transparency retained.</p></section><section class="inspector-section"><h3>Scene objects <span class="muted-count">${view.groups.length}</span></h3><label class="sr-only" for="object-select">Inspect a room object</label><select class="object-select" id="object-select"><option value="">Select an object to inspect</option>${[...categories].map(([cat, groups]) => `<optgroup label="${escape(cat)}">${groups.map((g) => `<option value="${escape(g.id)}">${escape(g.name)}</option>`).join("")}</optgroup>`).join("")}</select><div id="selected-object"><p class="echo-note">Click an object in the room, or choose one above.</p></div><button class="plain-button" id="show-all-objects">Show all objects</button></section><section class="inspector-section"><h3>Signal sources</h3><div class="echo-phone-tabs"><button data-phone="-1" class="${state.phone < 0 ? "active" : ""}">HUB</button>${Array.from({ length: state.count }, (_, i) => `<button data-phone="${i}" class="${i === state.phone ? "active" : ""}">0${i + 1}</button>`).join("")}</div><div id="echo-details"></div></section><section class="inspector-section"><a class="download-link" href="assets/room-corrected.glb" download>Download room model <span>↓</span></a></section>`;
   $("#blend").oninput = (e) => {
     view.blend = +e.target.value / 100;
     $("#blend-value").textContent = `${e.target.value}% model`;
@@ -561,6 +583,8 @@ function selectObject(id) {
   state.selected = id;
   const g = view.groupMap.get(id);
   view.select(id);
+  $("#object-select").value = g ? id : "";
+  $("#object-hint").hidden = true;
   if (!g) {
     $("#selected-object").innerHTML =
       '<p class="echo-note">Choose an object to see its estimates.</p>';
@@ -667,6 +691,7 @@ function drawWave(progress) {
   }
 }
 function toggleMute() {
+  if ($("#sound-toggle").disabled) return;
   state.muted = !state.muted;
   $("#sound-toggle").innerHTML = svg(state.muted ? "mute" : "sound");
   $("#sound-toggle").setAttribute(
@@ -712,13 +737,22 @@ $("#theme-toggle").onclick = () => {
 };
 $("#help-toggle").onclick = () => $("#help-dialog").showModal();
 $("#close-help").onclick = () => $("#help-dialog").close();
-$("#fullscreen").onclick = () => {
-  if (document.fullscreenElement) document.exitFullscreen();
-  else
-    document.documentElement
-      .requestFullscreen?.()
-      .catch(() => toast("Fullscreen is unavailable in this browser."));
+$("#fullscreen").onclick = async () => {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else if (document.documentElement.requestFullscreen)
+      await document.documentElement.requestFullscreen();
+    else toast("Fullscreen is unavailable in this browser.");
+  } catch {
+    toast("Fullscreen is unavailable in this browser.");
+  }
 };
+document.addEventListener("fullscreenchange", () => {
+  $("#fullscreen").setAttribute(
+    "aria-label",
+    document.fullscreenElement ? "Exit fullscreen" : "Enter fullscreen",
+  );
+});
 $("#reset-camera").onclick = () =>
   view.setPreset(state.page === "explore" ? "front" : "3d");
 $("#orbit-toggle").onclick = (e) => {
@@ -746,7 +780,7 @@ $("#zoom-out").onclick = () => {
 };
 $("#motion-toggle").onclick = () => {
   state.motion = !state.motion;
-  view.motion = state.motion;
+  if (view) view.motion = state.motion;
   document.body.classList.toggle("reduced-motion", !state.motion);
   $("#motion-toggle").innerHTML =
     `Motion ${state.motion ? "on" : "reduced"} <span>∿</span>`;
@@ -798,8 +832,7 @@ if (view) {
   view.motion = state.motion;
   view
     .load()
-    .then(async () => {
-      await audioReady;
+    .then(() => {
       state.ready = true;
       $("#start-scan").disabled = false;
       $("#explore-demo").disabled = false;

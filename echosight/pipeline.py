@@ -14,8 +14,8 @@ from pathlib import Path
 from . import __version__
 
 
-def save_result(result: dict, destination: str | Path) -> Path:
-    """Atomically persist JSON; never emit nonstandard NaN/Infinity values."""
+def save_result(result: dict, destination: str | Path, *, overwrite: bool = True) -> Path:
+    """Atomically persist JSON; optionally require an unused destination name."""
     payload = json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n"
     destination = Path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -25,7 +25,12 @@ def save_result(result: dict, destination: str | Path) -> Path:
             stream.write(payload)
             stream.flush()
             os.fsync(stream.fileno())
-        os.replace(temp, destination)
+        if overwrite:
+            os.replace(temp, destination)
+        else:
+            # Same-directory hard linking publishes complete bytes atomically
+            # and fails if another writer claimed this name after preflight.
+            os.link(temp, destination)
     finally:
         if os.path.exists(temp):
             os.unlink(temp)

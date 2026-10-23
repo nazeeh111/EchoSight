@@ -22,11 +22,15 @@ class CLITests(unittest.TestCase):
             self.assertEqual(metadata["playback_wav_sha256"],hashlib.sha256((p/"probe.wav").read_bytes()).hexdigest())
 
     def test_export_and_replay_are_real_processing_commands(self):
+        import hashlib
         from echosight.cli import main
         from echosight.simulation import simulate_session
         with tempfile.TemporaryDirectory() as temp, contextlib.redirect_stdout(io.StringIO()):
             p=Path(temp);session=simulate_session(p/"input",seed=1,capture_count=12)
             spec=json.loads(Path(session).read_text())
+            for capture in spec['captures']:
+                recording=Path(session).parent/capture['recording_path']
+                capture['sha256']=hashlib.sha256(recording.read_bytes()).hexdigest()
             spec['captures'][0]['device_id']='phone-0'
             spec['captures'][0]['receiver_pose_group_id']='survey-stop-0'
             Path(session).write_text(json.dumps(spec))
@@ -41,6 +45,29 @@ class CLITests(unittest.TestCase):
             result=json.loads((p/"result.json").read_text())
             self.assertEqual(len(result["surfaces"]),6)
             self.assertEqual(result["provenance"]["evidence_classes"],["simulated"])
+
+    def test_export_rejects_replacement_before_import_snapshot(self):
+        import hashlib
+        from unittest.mock import patch
+        from echosight.cli import main
+        from echosight.storage import SessionStore
+        from tests.test_storage import wav_bytes
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);recording=root/'recording.wav';recording.write_bytes(wav_bytes())
+            expected=hashlib.sha256(recording.read_bytes()).hexdigest()
+            session=root/'session.json'
+            session.write_text(json.dumps({'session_id':'replacement','captures':[
+                {'capture_id':'phone','recording_path':'recording.wav','sha256':expected}]}))
+            original=SessionStore.add_recording
+            def replace_before_import(store,sid,path,metadata,**kwargs):
+                changed=bytearray(recording.read_bytes());changed[-1]^=1
+                recording.write_bytes(changed)
+                return original(store,sid,path,metadata,**kwargs)
+            stream=io.StringIO();archive=root/'archive.zip'
+            with patch.object(SessionStore,'add_recording',replace_before_import), contextlib.redirect_stderr(stream):
+                self.assertEqual(main(['export',str(session),'--output',str(archive)]),2)
+            self.assertIn('checksum differs',stream.getvalue())
+            self.assertFalse(archive.exists())
 
     def test_inspect_prints_result_evidence_summary(self):
         from echosight.cli import main

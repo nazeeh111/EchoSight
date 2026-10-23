@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import json
-import math
+import secrets
 import threading
 import tempfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -10,6 +10,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from .storage import MAX_EXPORT_BYTES, MAX_COMPARE_BYTES, MAX_JSON_BYTES, MAX_RECORDING_BYTES, SessionStore
+from .fileio import parse_json_object as _strict_object
+
 
 
 class _Server(ThreadingHTTPServer):
@@ -34,12 +36,16 @@ class _Server(ThreadingHTTPServer):
         if hasattr(self, 'store'): self.store.close()
 
 
-def create_server(root, host='127.0.0.1', port=8765, processor=None):
+def create_server(root, host='127.0.0.1', port=8765, processor=None, *, ui=False):
     """Bind only loopback. Explicit networking/authentication requires a separate design."""
     if host not in {'127.0.0.1', 'localhost'}: raise ValueError('only loopback binding is supported')
     if processor is None:
         from .pipeline import process_session
         processor = process_session
+    assets = None
+    if ui:
+        from .webui import ui_directory
+        assets = ui_directory()
     store = SessionStore(root)
 
     class Handler(BaseHTTPRequestHandler):
@@ -47,24 +53,47 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
         def log_message(self, *args): pass
         def setup(self):
             super().setup(); self.connection.settimeout(15)
-        def _reply(self, code, data, content_type='application/json'):
+        def _reply(self, code, data, content_type='application/json', headers=None):
             if content_type == 'application/json': data = json.dumps(data, allow_nan=False).encode()
             self.send_response(code); self.send_header('Content-Type', content_type)
             self.send_header('Content-Length', str(len(data)))
             self.send_header('Cache-Control', 'no-store'); self.send_header('X-Content-Type-Options', 'nosniff')
-            self.end_headers(); self.wfile.write(data)
-        def _guard(self):
-            # Protect a local unauthenticated service against browser DNS rebinding/CSRF.
-            authority = self.headers.get('Host', '')
+            self.send_header('X-Frame-Options', 'DENY')
+            self.send_header('Referrer-Policy', 'no-referrer')
+            for name, value in (headers or {}).items(): self.send_header(name, value)
+            self.end_headers()
+            try: self.wfile.write(data)
+            except (BrokenPipeError, ConnectionResetError): pass
+        def _guard(self, ui_read=False):
+            # Default remains native local clients only. --ui opts into a same-origin,
+            # process-token browser client; no CORS or remotely chosen proxy target.
+            hosts = self.headers.get_all('Host', [])
             allowed = {f'127.0.0.1:{self.server.server_address[1]}', f'localhost:{self.server.server_address[1]}'}
-            if authority not in allowed: raise PermissionError('Host must identify this loopback service')
-            if self.headers.get('Origin') or self.headers.get('Sec-Fetch-Site') == 'cross-site':
-                raise PermissionError('browser cross-origin requests are disabled; use the local API client')
-            if self.headers.get('Transfer-Encoding'): raise ValueError('transfer encoding unsupported; use Content-Length')
+            if len(hosts) != 1 or hosts[0].lower() not in allowed:
+                raise PermissionError('Host must identify this loopback service')
+            origins = self.headers.get_all('Origin', [])
+            sites = self.headers.get_all('Sec-Fetch-Site', [])
+            tokens = self.headers.get_all('X-EchoSight-UI-Token', [])
+            if (len(origins) > 1 or len(sites) > 1 or len(tokens) > 1
+                    or (origins and origins[0] != 'http://' + hosts[0].lower())
+                    or (sites and sites[0] not in {'same-origin', 'none'})):
+                raise PermissionError('cross-origin browser requests are disabled')
+            if ui_read:
+                if not self.server.ui_assets or self.command != 'GET':
+                    raise PermissionError('UI is not enabled')
+            elif origins or sites or tokens:
+                if (not self.server.ui_assets or len(tokens) != 1 or
+                        not secrets.compare_digest(tokens[0].encode(), self.server.ui_token.encode())):
+                    raise PermissionError('browser API access requires this process UI token; start with --ui')
+            if self.headers.get_all('Transfer-Encoding'):
+                raise ValueError('transfer encoding unsupported; use Content-Length')
         def _body(self, limit):
-            try: count = int(self.headers.get('Content-Length', '0'))
-            except ValueError: raise ValueError('invalid Content-Length')
-            if count < 0: raise ValueError('Content-Length must be nonnegative')
+            lengths = self.headers.get_all('Content-Length', [])
+            if not lengths: count = 0
+            elif (len(lengths) != 1 or len(lengths[0]) > 10
+                    or not lengths[0].isascii() or not lengths[0].isdigit()):
+                raise ValueError('invalid Content-Length')
+            else: count = int(lengths[0])
             if count > limit: raise OverflowError('request body exceeds resource limit')
             raw = self.rfile.read(count)
             if len(raw) != count: raise ValueError('incomplete request body')
@@ -72,14 +101,23 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
         def _json_body(self, limit=MAX_JSON_BYTES):
             raw = self._body(limit)
             if not raw: return {}
-            try: value = json.loads(raw)
-            except (ValueError, UnicodeError): raise ValueError('invalid JSON')
-            if not isinstance(value, dict): raise ValueError('JSON body must be an object')
-            return value
+            return _strict_object(raw)
         def _dispatch(self):
-            self._guard()
             route = urlsplit(self.path)
-            if route.query or route.fragment: raise ValueError('query strings unsupported')
+            ui_read = bool(self.server.ui_assets) and (route.path.startswith('/ui/') or route.path == '/') and self.command == 'GET'
+            self._guard(ui_read=ui_read)
+            if route.scheme or route.netloc or route.query or route.fragment:
+                raise ValueError('absolute URLs, query strings and fragments unsupported')
+            if ui_read:
+                if route.path == '/': return self._reply(303, {}, headers={'Location': '/ui/results.html'})
+                if route.path == '/ui/config':
+                    return self._reply(200, {'schema_version': '1.0', 'enabled': True,
+                        'token': self.server.ui_token, 'limits': {'recording_bytes': MAX_RECORDING_BYTES,
+                        'archive_bytes': MAX_EXPORT_BYTES, 'json_bytes': MAX_JSON_BYTES}})
+                from .webui import read_asset
+                data, content_type, headers = read_asset(self.server.ui_assets, route.path)
+                return self._reply(200, data, content_type, headers)
+
             p = route.path.strip('/').split('/')
             method = self.command
             if p == ['v1', 'health'] and method == 'GET': return self._reply(200, {'schema_version': '1.0', 'status': 'ok'})
@@ -91,14 +129,6 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                     if not isinstance(result, dict): raise ValueError('previous/current must be result objects')
                     surfaces = result.get('surfaces', [])
                     if not isinstance(surfaces, list) or len(surfaces) > 64: raise ValueError('comparison supports at most 64 surfaces')
-                    for surface in surfaces:
-                        if not isinstance(surface, dict): raise ValueError('surface must be an object')
-                        normal = surface.get('normal')
-                        if not isinstance(normal, list) or len(normal) != 3 or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) for v in normal): raise ValueError('surface normal must contain three finite numbers')
-                        if not .999 <= sum(v*v for v in normal) <= 1.001: raise ValueError('surface normal must have unit length')
-                        offset = surface.get('offset_m')
-                        if isinstance(offset, bool) or not isinstance(offset, (int, float)) or not math.isfinite(offset): raise ValueError('surface offset must be finite')
-                        if not isinstance(surface.get('surface_id'), str): raise ValueError('surface_id required')
                 return self._reply(200, compare_results(body['previous'], body['current'], previous_comparison=body.get('previous_comparison')))
             if p == ['v1', 'controlled-jobs'] and method == 'POST':
                 return self._reply(202,store.start_controlled_job(self._json_body()))
@@ -115,18 +145,24 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
                 if len(p) == 3 and method == 'PATCH': return self._reply(200, store.update_calibration(sid, self._json_body()))
                 if len(p) == 4:
                     if p[3] == 'recordings' and method == 'POST':
-                        metadata_raw = self.headers.get('X-Capture-Metadata', '{}')
+                        metadata_headers = self.headers.get_all('X-Capture-Metadata', [])
+                        if len(metadata_headers) > 1: raise ValueError('duplicate capture metadata header')
+                        metadata_raw = metadata_headers[0] if metadata_headers else '{}'
                         if len(metadata_raw) > 8192: raise ValueError('capture metadata exceeds header limit')
-                        try: metadata = json.loads(metadata_raw)
-                        except ValueError: raise ValueError('invalid X-Capture-Metadata JSON')
+                        metadata = _strict_object(metadata_raw)
                         raw = self._body(MAX_RECORDING_BYTES)
                         with tempfile.TemporaryDirectory(prefix='echosight-upload-', dir=store.root) as d:
                             path = Path(d) / 'recording.wav'; path.write_bytes(raw)
-                            capture = store.add_recording(sid, path, metadata)
+                            checksums = self.headers.get_all('X-Recording-SHA256', [])
+                            if len(checksums) > 1: raise ValueError('duplicate recording checksum header')
+                            capture = store.add_recording(sid, path, metadata,
+                                expected_sha256=checksums[0] if checksums else None)
                         return self._reply(201, capture)
                     if p[3] == 'jobs' and method == 'POST':
-                        self._json_body()
-                        return self._reply(202, store.start_job(sid, processor))
+                        body = self._json_body()
+                        if set(body) - {'request_id'} or ('request_id' in body and not isinstance(body['request_id'], str)):
+                            raise ValueError('job start accepts only an optional request_id string')
+                        return self._reply(202, store.start_job(sid, processor, request_id=body.get('request_id')))
                     if p[3] == 'result' and method == 'GET': return self._reply(200, store.get_result(sid))
                     if p[3] == 'material-reference' and method == 'POST':
                         return self._reply(200, store.material_reference(sid, self._json_body()))
@@ -156,4 +192,6 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None):
     try: server = _Server((host, port), Handler)
     except BaseException: store.close(); raise
     server.store = store
+    server.ui_assets = assets
+    server.ui_token = secrets.token_urlsafe(32) if assets else ''
     return server

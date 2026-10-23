@@ -76,10 +76,28 @@ class StorageTests(unittest.TestCase):
             self.wav.write_bytes(changed)
             return decoded
         with patch('echosight.storage._read_wav', side_effect=mutate_source_after_decode):
-            meta = import_recording(self.wav, self.root / 'raw')
+            import hashlib
+            meta = import_recording(self.wav, self.root / 'raw',
+                                    expected_sha256=hashlib.sha256(original).hexdigest())
         self.assertEqual(Path(meta['recording_path']).read_bytes(), original)
         _, actual_rate = read_recording(meta['recording_path'])
         self.assertEqual(meta['sample_rate_hz'], actual_rate)
+    def test_expected_checksum_rejection_never_persists_or_publishes_input(self):
+        import hashlib
+        expected = hashlib.sha256(self.wav.read_bytes()).hexdigest()
+        changed = bytearray(self.wav.read_bytes()); changed[-1] ^= 1
+        self.wav.write_bytes(changed)
+        with SessionStore(self.root / 'store') as store:
+            sid = store.create_session({})['session_id']
+            before = store.public_session(sid)
+            with self.assertRaisesRegex(ValueError, 'checksum differs'):
+                store.add_recording(sid, self.wav, {'capture_id': 'phone'}, expected_sha256=expected)
+            self.assertEqual(store.public_session(sid), before)
+            self.assertFalse((store._session_dir(sid) / 'raw').exists())
+        for invalid in ('', 'x' * 64, True):
+            with self.subTest(checksum=invalid), self.assertRaisesRegex(ValueError, 'lowercase SHA256'):
+                import_recording(self.wav, self.root / 'raw', expected_sha256=invalid)
+        self.assertFalse((self.root / 'raw').exists())
     def test_cancel_before_publication_wins_over_completed_result(self):
         import threading
         from unittest.mock import patch

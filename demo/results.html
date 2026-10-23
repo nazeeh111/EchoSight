@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f0c"><title>EchoSight | Backend results</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="results.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body class="results-page">
+<header class="topbar"><a class="brand" href="./"><img src="assets/logo.png" width="34" height="34" alt=""><span>Echo<b>Sight</b></span></a><a class="back-link" href="./">Simulated room demo ↗</a></header>
+<main class="results-main">
+  <div class="results-heading"><div><div class="eyebrow">RECORDINGS → GEOMETRY → EVIDENCE</div><h1>Inspect the acoustic result.</h1><p>Open a backend result to explore its supported patches and the echoes behind them.</p></div>
+    <div class="result-import"><label for="result-file">Open result JSON · up to 32 MiB</label><input id="result-file" type="file" accept=".json,application/json"></div>
+  </div>
+  <details id="workspace-launch" class="workspace-launch"><summary>Process original recordings locally</summary><p>Start the backend with <code>python -m echosight serve --root work/store --ui</code>, then open its printed processing-workspace address. The standalone demo server supports result inspection; processing needs the backend's installed Python dependencies.</p></details>
+  <section id="workspace-panel" class="workspace-panel" hidden aria-label="Local recording processing">
+    <div class="workspace-title"><div><div class="eyebrow">LOCAL PROCESSING WORKSPACE</div><h2>From original recordings to evidence.</h2></div><span id="workspace-session-label">No session selected</span></div>
+    <p>Choose original WAV or capture ZIP files. They are copied only to this local backend store. No microphone, phone pairing or cloud service is used. Missing calibration remains missing; positions and provenance are your supplied declarations.</p>
+    <p id="workspace-status" role="status">Ready.</p>
+    <div class="workspace-forms">
+      <details open><summary>1 · Create or resume a session</summary>
+        <label for="workspace-definition">Load a session definition JSON (optional)</label><input id="workspace-definition" type="file" accept=".json,application/json">
+        <label for="workspace-spec">Session calibration JSON · captures are uploaded separately</label><textarea id="workspace-spec" rows="5" spellcheck="false">{"source_position_m":null,"probe":{},"captures":[]}</textarea>
+        <button id="workspace-create" class="plain-button">Create session</button>
+        <div class="workspace-inline"><label for="workspace-resume-id">Existing session ID</label><input id="workspace-resume-id" autocomplete="off" spellcheck="false"><button id="workspace-resume" class="plain-button">Load / refresh session</button></div>
+        <p class="estimate-note">Keep a generated probe definition and surveyed acoustic-center poses with your session. An empty probe or absent pose can produce a diagnostic result; it is not a qualified acquisition setup.</p>
+      </details>
+      <details open><summary>2 · Import selected original files</summary>
+        <label for="workspace-plan">Capture plan JSON array</label><textarea id="workspace-plan" rows="5" spellcheck="false">[]</textarea>
+        <p class="estimate-note">Each entry needs capture_id, recording_path (matching a selected filename), explicit provenance, and any surveyed receiver pose/uncertainty. A loaded session definition fills this plan. Paths are never read from the server filesystem.</p>
+        <label for="workspace-recordings">Original mono WAV or native/phyphox ZIP files</label><input id="workspace-recordings" type="file" multiple accept=".wav,.zip,application/zip,audio/wav">
+        <button id="workspace-upload" class="plain-button">Import recordings</button>
+        <p class="estimate-note">Already stored IDs are retained only if selected bytes and supplied metadata match. Files cannot overwrite an original recording. Partial batches remain stored and can be retried.</p>
+      </details>
+    </div>
+    <div class="workspace-actions"><button id="workspace-run" class="primary">Process session</button><button id="workspace-cancel" class="plain-button" disabled>Request cancellation</button><button id="workspace-observe" class="plain-button" disabled>Retry job status</button><button id="workspace-show" class="plain-button" disabled>View completed job result</button><button id="workspace-export" class="plain-button" disabled>Export raw archive</button></div>
+    <div class="workspace-job"><progress id="workspace-progress" max="1" value="0" aria-label="Processing progress"></progress><p id="workspace-job-label">No job selected. Progress is work completed, not confidence.</p></div>
+    <details><summary>Calibration revisions and current session evidence</summary><pre id="workspace-session-data">No session selected.</pre><label for="workspace-patch">Revision-checked patch JSON</label><textarea id="workspace-patch" rows="5" spellcheck="false">{}</textarea><div class="workspace-actions"><button id="workspace-patch-reset" class="plain-button">Use loaded revision in a new patch template</button><button id="workspace-patch-apply" class="plain-button">Apply calibration patch</button></div><p class="estimate-note">Raw bytes remain immutable. A changed revision makes older results stale and requires reprocessing. Conflicts keep your draft; inspect the refreshed session before replacing expected_revision.</p></details>
+    <details><summary>Reload an exported raw archive</summary><label for="workspace-archive">EchoSight archive ZIP</label><input id="workspace-archive" type="file" accept=".zip,application/zip"><button id="workspace-import" class="plain-button">Import archive</button><p class="estimate-note">Archived computations stay quarantined. Process the retained raw recordings to create a current result. Existing session IDs are never overwritten.</p></details>
+  </section>
+  <div class="example-row" aria-label="Backend examples"><span>Try actual backend outputs:</span><button data-example="material-room" class="plain-button">Synthetic room + materials</button><button data-example="ambiguous" class="plain-button">Ambiguous geometry</button><button data-example="no-result" class="plain-button">No result</button></div>
+  <p class="result-notice" id="result-notice" role="status">Choose an example or open a result exported by the CLI or local API. Files are inspected in this page. Workspace actions use the local backend.</p>
+  <section id="result-summary" class="result-summary" hidden aria-label="Result summary"><div><span class="eyebrow">SCENE STATUS</span><strong id="result-status"></strong></div><div><span class="eyebrow">RECORDING EVIDENCE</span><strong id="result-provenance"></strong></div><div><span class="eyebrow">PHYSICAL VALIDATION</span><strong>Not established</strong></div><div><span class="eyebrow">REVISION</span><strong id="result-revision"></strong></div></section>
+  <section id="comparison-panel" class="result-details" hidden aria-label="Compare successive acoustic results">
+    <h2>What changed in the inference?</h2>
+    <p>Keep the displayed result as the previous snapshot, then open or process a newer result and compare. Both result JSON objects are sent only to this local backend. Calibration and coordinate frames must agree. This does not establish that a physical object moved or disappeared.</p>
+    <p id="comparison-previous">No previous snapshot kept.</p>
+    <div class="workspace-actions"><button id="comparison-keep" class="plain-button" disabled>Keep displayed result as previous</button><button id="comparison-run" class="plain-button" disabled>Compare with displayed result</button><button id="comparison-download" class="plain-button" disabled>Download comparison JSON</button></div>
+    <p id="comparison-status" role="status">Load a result to begin.</p>
+    <div id="comparison-output" hidden></div>
+  </section>
+  <div class="result-grid">
+    <section class="result-model" aria-label="Acoustic geometry">
+      <div class="result-toolbar"><label for="result-choice">Interpretation</label><select id="result-choice" disabled><option>Load a result first</option></select><button id="result-fit" class="plain-button">Fit view</button><button id="result-top" class="plain-button">Top view</button></div>
+      <p id="hypothesis-notice" class="hypothesis-notice" hidden></p>
+      <div class="result-viewport"><canvas id="result-canvas" tabindex="0" aria-label="Backend surface patches in metres, z up. Drag to orbit, scroll to zoom, right-drag to pan."></canvas><p id="result-empty" class="result-empty">No result loaded.</p></div>
+      <p id="render-status" class="estimate-note" role="status"></p>
+      <p class="result-caption">Metres · right-handed · Z up. Colored patches show reflection support, not physical edges, enclosed rooms or safe free space. Display colors identify patches; they are not material estimates. Drag to orbit · scroll to zoom.</p>
+    </section>
+    <aside class="result-inspector"><label for="result-surface">Inspect a surface</label><select id="result-surface" disabled><option>No surface selected</option></select><div id="surface-detail"><p>Geometry, uncertainty and linked echoes will appear here.</p></div></aside>
+  </div>
+  <section id="result-details" class="result-details" hidden><h2>Diagnostics and provenance</h2><dl id="result-identity"></dl><h3>Diagnostics</h3><ul id="result-diagnostics"></ul><h3>Guidance</h3><ul id="result-guidance"></ul><h3>Local plane separations</h3><ul id="result-dimensions"></ul><p class="estimate-note">Separations are along supplied reference lines. They do not establish enclosed room dimensions. Uncertainty is conditional on the selected acoustic model; it is not a calibrated probability of correctness.</p></section>
+</main>
+<script type="module" src="results.js"></script>
+<script type="module" src="workspace.js"></script>
+</body></html>

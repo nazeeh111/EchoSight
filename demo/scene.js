@@ -29,7 +29,6 @@ export class RoomView {
       antialias: true,
       alpha: true,
       powerPreference: "high-performance",
-      preserveDrawingBuffer: true,
     });
     this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     this.renderer.setClearColor(0x080f0c, 0);
@@ -487,6 +486,20 @@ export class RoomView {
   }
   makeNodes(count) {
     this.phoneCount = count;
+    // Removing an object from the scene does not release its GPU resources.
+    const geometries = new Set(),
+      materials = new Set(),
+      textures = new Set();
+    this.nodes.traverse((object) => {
+      if (object.geometry) geometries.add(object.geometry);
+      for (const material of [object.material].flat().filter(Boolean)) {
+        materials.add(material);
+        if (material.map) textures.add(material.map);
+      }
+    });
+    geometries.forEach((geometry) => geometry.dispose());
+    materials.forEach((material) => material.dispose());
+    textures.forEach((texture) => texture.dispose());
     this.nodes.clear();
     this.phonePositions = [
       [1.8, 0.9, -2.5],
@@ -667,6 +680,9 @@ export class RoomView {
     this.isolated = this.isolated === id ? null : id;
     this.visibility();
     if (this.isolated) {
+      this.cameraMove = null;
+      this.orbit = false;
+      this.userCamera = true;
       const b = this.groupMap.get(id).bounds,
         s = b.getSize(new THREE.Vector3()).length();
       const center = b.getCenter(new THREE.Vector3());
@@ -679,41 +695,49 @@ export class RoomView {
     } else this.setPreset("front");
   }
   setReplay(phone, echoes, progress) {
-    this.rayGroup.traverse((o) => {
-      o.geometry?.dispose();
-      if (o.material) o.material.dispose();
-    });
-    this.rayGroup.clear();
-    if (phone < 0 || !this.phonePositions[phone]) return;
-    const center = this.phonePositions[phone];
-    echoes.forEach((echo, i) => {
-      const a = (echo.angle * Math.PI) / 180,
-        start = center
-          .clone()
-          .add(new THREE.Vector3(Math.sin(a) * 4, 0, -Math.cos(a) * 4)),
-        end = center.clone();
+    // Reuse geometry throughout a replay; animation only changes properties.
+    if (!this.replay || this.replay.phone !== phone || this.replay.echoes !== echoes) {
+      this.rayGroup.traverse((object) => {
+        object.geometry?.dispose();
+        object.material?.dispose();
+      });
+      this.rayGroup.clear();
+      this.replay = { phone, echoes, paths: [] };
+      if (phone < 0 || !this.phonePositions[phone]) return;
+      const center = this.phonePositions[phone];
+      for (const echo of echoes) {
+        const angle = (echo.angle * Math.PI) / 180;
+        const start = center.clone().add(
+          new THREE.Vector3(Math.sin(angle) * 4, 0, -Math.cos(angle) * 4),
+        );
+        const line = new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints([start, center]),
+          new THREE.LineDashedMaterial({
+            color: 0xbcfa70,
+            transparent: true,
+            opacity: 0.8,
+            dashSize: 0.15,
+            gapSize: 0.12,
+          }),
+        );
+        line.computeLineDistances();
+        const marker = new THREE.Mesh(
+          new THREE.SphereGeometry(0.065, 8, 8),
+          new THREE.MeshBasicMaterial({ color: 0xbcfa70 }),
+        );
+        this.rayGroup.add(line, marker);
+        this.replay.paths.push({ line, marker, start, end: center.clone() });
+      }
+    }
+    this.replay.paths.forEach(({ line, marker, start, end }, i) => {
       const active =
         progress === null || Math.abs(progress - i / echoes.length) < 0.13;
-      const line = new THREE.Line(
-        new THREE.BufferGeometry().setFromPoints([start, end]),
-        new THREE.LineDashedMaterial({
-          color: active ? 0xbcfa70 : 0x405d3c,
-          transparent: true,
-          opacity: active ? 0.8 : 0.18,
-          dashSize: 0.15,
-          gapSize: 0.12,
-        }),
-      );
-      line.computeLineDistances();
-      this.rayGroup.add(line);
-      if (active && progress !== null) {
-        const k = (((progress * echoes.length - i) % 1) + 1) % 1,
-          p = new THREE.Mesh(
-            new THREE.SphereGeometry(0.065, 8, 8),
-            new THREE.MeshBasicMaterial({ color: 0xbcfa70 }),
-          );
-        p.position.lerpVectors(start, end, k);
-        this.rayGroup.add(p);
+      line.material.color.setHex(active ? 0xbcfa70 : 0x405d3c);
+      line.material.opacity = active ? 0.8 : 0.18;
+      marker.visible = active && progress !== null;
+      if (marker.visible) {
+        const fraction = (((progress * echoes.length - i) % 1) + 1) % 1;
+        marker.position.lerpVectors(start, end, fraction);
       }
     });
   }

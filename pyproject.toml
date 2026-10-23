@@ -15,5 +15,14 @@ echosight = "echosight.cli:main"
 [tool.setuptools.packages.find]
 include = ["echosight*"]
 
+# Offline UI assets include the bundled Three.js license.
+[tool.setuptools.data-files]
+"share/echosight/demo" = ["demo/*.html", "demo/*.css", "demo/*.js", "demo/MODEL.md"]
+"share/echosight/demo/assets" = ["demo/assets/*.png", "demo/assets/*.svg", "demo/assets/*.glb", "demo/assets/*.wav"]
+"share/echosight/demo/assets/results" = ["demo/assets/results/*.json"]
+"share/echosight/demo/vendor" = ["demo/vendor/*.js", "demo/vendor/*LICENSE.txt"]
+"share/echosight/demo/vendor/addons/controls" = ["demo/vendor/addons/controls/*.js"]
+"share/echosight/demo/vendor/addons/loaders" = ["demo/vendor/addons/loaders/*.js"]
+"share/echosight/demo/vendor/addons/utils" = ["demo/vendor/addons/utils/*.js"]
 [tool.setuptools.package-data]
 echosight = ["LICENSE", "LICENSE_SCOPE.txt", "LICENSE_SCOPE.json", "notices/li2025/*.md", "notices/li2025/*.m", "notices/li2025/*.json"]

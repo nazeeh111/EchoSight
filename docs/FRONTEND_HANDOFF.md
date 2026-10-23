@@ -2,6 +2,10 @@
 
 The backend's central claim is that sound can support several independently located 3D reflectors, including height-dependent structure, and that additional surveyed recording positions can resolve or strengthen that inference. It does not claim complete object meshes, measured edges, safe free space or hardware accuracy. The useful demonstration is understanding room layout and consequential early reflections, with visible evidence behind every surface.
 
+## Included result viewer
+
+The repository now includes an artifact-based viewer at `demo/results.html`, served by `python3 demo/server.py`. It imports CLI/API scene-result JSON locally, renders supplied support meshes, separates hypotheses, and exposes linked delay/pose evidence, conditional uncertainty and diagnostics. It does not upload data, connect devices, start processing jobs, authenticate provenance or complete physical qualification. [Viewer contract, limits and checks](RESULT_VIEWER.md).
+
 ## Start with these interfaces
 
 Run `python -m echosight serve --root work/store --port 8765`. [API.md](API.md) specifies the routes, error codes and limits. The pure processing interface is `echosight.pipeline.process_session(session_or_path, cancel, progress)`. JSON schemas are in `schemas/`: session, job and scene result, all `schema_version="1.0"`. Keep session IDs, capture IDs, candidate IDs and result IDs in frontend state. The API currently accepts trusted local clients; a browser frontend needs a deliberate allowed-origin/authentication design or a same-machine server proxy. Do not make this unauthenticated local service public.

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from numbers import Real
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
@@ -61,9 +62,13 @@ def _validate_result(result):
     surface_ids, track_ids = set(), set()
     for surface in result.get("surfaces", []):
         try:
-            n = np.asarray(surface["normal"], dtype=float)
-            d = float(surface["offset_m"])
-        except (KeyError, ValueError, TypeError) as exc:
+            normal, offset = surface["normal"], surface["offset_m"]
+            if (len(normal) != 3 or any(isinstance(v, (bool, np.bool_)) or not isinstance(v, Real) for v in normal)
+                    or isinstance(offset, (bool, np.bool_)) or not isinstance(offset, Real)):
+                raise ValueError('plane geometry requires real numbers, not booleans or numeric strings')
+            n = np.asarray(normal, dtype=float)
+            d = float(offset)
+        except (KeyError, ValueError, TypeError, OverflowError) as exc:
             raise ValueError("invalid plane geometry") from exc
         if n.shape != (3,) or not np.all(np.isfinite(n)) or not np.isfinite(d) or abs(np.linalg.norm(n) - 1) > 1e-5:
             raise ValueError("plane normal must be finite and unit length; offset must be finite")

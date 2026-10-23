@@ -296,3 +296,13 @@ CLI invalid input returns exit 2; cooperative cancellation returns 130. `process
 The fixed-source Python interface is `echosight.pipeline.process_session(session_or_path, cancel, progress)`. The [multi-source Python interface](../echosight/multisource.py) is experimental; moving the source within a public single-session recording set does not enable it. [Controlled acoustic change](audit/CONTROLLED.md) has a separate declared recording protocol and CLI/API route. Both retain their documented scientific limits.
 
 For integration details use [frontend handoff](FRONTEND_HANDOFF.md), [API reference](API.md), and the [schemas](../schemas/); for capability evidence and unresolved work use [coverage](audit/COVERAGE.md).
+
+## Repeated runs and output paths
+
+Use a fresh subdirectory for each generated probe or simulation/demo. Existing generated filenames are retained and cause refusal. Explicit result outputs can replace unrelated results, but may not replace an input manifest, original recording, reference, comparison or archive. [File-preservation behavior and limits](FILE_PRESERVATION.md).
+
+The CI distribution check builds a wheel from the source archive, installs it into a separate environment, then runs `tools/check_distribution.py` with Python `-I` to prevent source-tree imports. It checks packaged assets, synthetic CLI round-trip, input preservation and isolated worker rejection before reconstruction. This is not physical or full measured-case validation.
+
+## Malformed JSON and inspection limits
+
+`inspect` reads at most 32 MiB of result JSON and requires an object with array-shaped surface/hypothesis summaries. Metadata/reference/context inputs are limited to 1 MiB; comparison inputs retain their result/metadata limits. Duplicate keys, nonfinite numbers and excessive nesting produce a concise error and exit 2. Unrepresentable geometry values also return an error; failed reads and comparisons retain an existing output. Inspection summarizes supplied fields rather than performing full offline schema or scientific validation. Conservative path discovery still protects named original recordings in malformed session/protocol definitions.

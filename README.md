@@ -6,11 +6,14 @@ Reconstruct a scene from published ultrasound measurements, inspect native depth
 
 ![Actual measured ultrasound scene reconstructed with the published native-grid method](docs/assets/nlos-fig2-measured.png)
 
+
 *Actual external measured data, ported from the released method. H, dinosaur and resolution star from Li et al. (2025), CC BY 4.0. [Reproduce this case](docs/MEASURED_NLOS.md).*
 
 | Route | What you can do |
 | --- | --- |
 | [Measured NLOS / PHANTOM](https://nazeeh111.github.io/EchoSight/) | Explore the hosted measured reconstruction and native axial slices; [reproduce the exact official Figure 2 MAT case](docs/MEASURED_NLOS.md) to save volume, depth, amplitude and source hashes. |
+| [Local recording workspace](docs/WORKSPACE.md) | Import original recordings, edit calibration with revision checks, run/recover/cancel jobs and inspect their actual backend results. |
+| [Backend result viewer](demo/results.html) | Inspect scene JSON, supported patches, linked echoes and separate hypotheses. |
 | [Room-recording backend](docs/USAGE.md) | Import lossless recordings, inspect calibration and supported surface patches, compare reference-based materials, and export/replay results. |
 | [Room demo](https://github.com/nazeeh111/EchoSight/tree/backend/implementation/demo) | Explore a supplied room model and simulated scan. It does not connect phones or process acoustic measurements. |
 
@@ -26,9 +29,10 @@ source .venv/bin/activate
 python -m pip install .
 ```
 
-The source distribution includes backend code, text guides, schemas and evaluation scripts. The [full repository](https://github.com/nazeeh111/EchoSight/tree/backend/implementation) retains the room demo, Blender assets, complete tests and frozen evidence. Wheels include the backend and the [upstream attribution/source notice](echosight/notices/li2025/NOTICE.md).
+The distribution includes backend code, the local processing/result UI with bundled Three.js assets, and upstream attribution/source notices. The full repository retains Blender assets, complete tests and frozen evidence.
 
 ## Reconstruct measured ultrasound
+
 
 Obtain the [exact official input](docs/MEASURED_NLOS.md#exact-input-and-execution) yourself. This fixed **55 × 55 × 25,000** case estimates **6 GiB** working memory. No data are downloaded automatically. Add `--estimate-only` to verify the input and inspect resource estimates without decoding or creating output.
 
@@ -48,8 +52,10 @@ Generate and process twelve **synthetic** room recordings, or start the separate
 ```sh
 python -m echosight demo work/room --seed 1 --captures 12
 python -m echosight inspect work/room/result.json
-python -m echosight serve --root work/store --port 8766
+python -m echosight serve --root work/store --port 8766 --ui
 ```
+
+Open the printed processing-workspace address. The UI is opt-in and stays on loopback; omit `--ui` for the native-client-only API. [Workspace instructions and recovery](docs/WORKSPACE.md).
 
 The room-recording workflow uses one fixed sound source and surveyed microphone positions. Its JSON geometry and evidence do not drive the animated room demo. [Recording inputs, calibration and replay](docs/USAGE.md).
 
@@ -71,6 +77,8 @@ From a full Git checkout, with the virtual environment active:
 python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 python -m unittest discover -s demo -p 'test_*.py' -v
+# Node.js 24, no npm packages needed:
+node --experimental-vm-modules --test tests/demo-*.test.mjs
 python -m evaluation.run --output work/held-out
 python -m evaluation.run --extended --output work/held-out-extended
 ```

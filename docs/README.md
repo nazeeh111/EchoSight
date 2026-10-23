@@ -4,7 +4,10 @@ Start with the [repository README](../README.md) for measured ultrasound, backen
 
 | Task | Guide |
 | --- | --- |
+| Import original recordings and process/recover local jobs | [Local workspace](WORKSPACE.md) |
+| Inspect backend scene JSON in 3D | [Backend result viewer](RESULT_VIEWER.md) |
 | Reconstruct the pinned external measured ultrasound scene | [Measured NLOS / PHANTOM](MEASURED_NLOS.md), actual native-volume inspection and source provenance |
+| Preserve originals when choosing output paths | [Output file policy](FILE_PRESERVATION.md) |
 | Install, process recordings and replay results | [Usage](USAGE.md) |
 | Call the local recording API | [API routes and errors](API.md) |
 | Build a frontend for backend results | [Frontend handoff](FRONTEND_HANDOFF.md), [JSON schemas](../schemas/) and [result examples](../examples/frontend/) |

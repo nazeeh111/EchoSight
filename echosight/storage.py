@@ -23,6 +23,8 @@ from pathlib import Path
 
 import numpy as np
 
+from .fileio import require_distinct_output, require_store_output
+
 SCHEMA_VERSION = '1.0'
 MAX_RECORDING_BYTES = 64 * 1024 * 1024
 MAX_ARCHIVE_BYTES = 256 * 1024 * 1024
@@ -312,11 +314,16 @@ def read_recording(path):
     return samples, rate
 
 
-def import_recording(path, destination_dir, *, max_bytes=MAX_RECORDING_BYTES):
-    """Decode, hash and preserve a single bounded immutable source snapshot."""
+def import_recording(path, destination_dir, *, max_bytes=MAX_RECORDING_BYTES, expected_sha256=None):
+    """Decode, hash and preserve one bounded snapshot, checking any expected digest."""
+    if expected_sha256 is not None and (not isinstance(expected_sha256, str) or
+            not re.fullmatch(r'[a-f0-9]{64}', expected_sha256)):
+        raise ValueError('expected recording checksum must be a lowercase SHA256 digest')
     raw = _recording_bytes(path, min(max_bytes, MAX_RECORDING_BYTES))
-    samples, rate, evidence = _decode_recording_evidence(raw)
     sha = hashlib.sha256(raw).hexdigest()
+    if expected_sha256 is not None and sha != expected_sha256:
+        raise ValueError('recording checksum differs from manifest')
+    samples, rate, evidence = _decode_recording_evidence(raw)
     dest = Path(destination_dir); dest.mkdir(parents=True, exist_ok=True)
     is_zip = raw.startswith(b'PK\x03\x04')
     target = dest / (sha + ('.zip' if is_zip else '.wav'))
@@ -399,13 +406,28 @@ class SessionStore:
             self._ownership_file.close()
             raise RuntimeError('store already open by another process') from exc
         self._lock = threading.RLock(); self._events = {}; self._closed = False
-        self._current_jobs = {}; completed_order = {}
+        self._current_jobs = {}; completed_order = {}; self._request_jobs = {}
         self._max_jobs = max_jobs
         self._pool = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix='echosight')
         for p in (self.root / 'jobs').glob('*.json'):
             if not re.fullmatch(r'job_[a-f0-9]{32}\.json', p.name): continue
             try: job = json.loads(p.read_text())
             except (ValueError, OSError): continue
+            if not isinstance(job, dict): continue
+            if job.get('job_type', 'session') == 'session' and 'request_id' in job:
+                try:
+                    key = (_id(job.get('session_id')), _id(job['request_id']))
+                    jid = _id(job.get('job_id'))
+                except ValueError: continue
+                if p.name != jid + '.json': continue
+                # Published request identities survive every job terminal state.
+                # Duplicate identities indicate corrupt storage; never silently
+                # pick a newer revision and potentially repeat accepted work.
+                if key in self._request_jobs:
+                    self._pool.shutdown(wait=True)
+                    self._ownership_file.close()
+                    raise ValueError('duplicate stored job request identity')
+                self._request_jobs[key] = jid
             if job.get('status') not in TERMINAL:
                 job.update(status='interrupted', error={'code': 'process_interrupted', 'message': 'Restart detected. Raw recordings retained; start a new job.'}, updated_at=time.time())
                 _write_json(p, job)
@@ -457,7 +479,7 @@ class SessionStore:
     def public_session(self, sid):
         """No server filesystem paths leave the HTTP interface."""
         with self._lock: return self._raw_session(sid)
-    def add_recording(self, sid, path, metadata):
+    def add_recording(self, sid, path, metadata, *, expected_sha256=None):
         allowed = {'capture_id', 'receiver_position_m', 'receiver_position_std_m', 'provenance', 'device_id', 'receiver_pose_group_id', 'notes'}
         if not isinstance(metadata, dict) or set(metadata) - allowed: raise ValueError('unsupported capture metadata fields')
         cap = dict(metadata); cap.setdefault('capture_id', 'capture_' + uuid.uuid4().hex)
@@ -467,7 +489,8 @@ class SessionStore:
             if len(s['captures']) >= MAX_CAPTURES: raise ValueError('capture limit reached')
             if any(c['capture_id'] == cap['capture_id'] for c in s['captures']): raise FileExistsError('capture already exists')
             remaining = MAX_ARCHIVE_BYTES - sum(c.get('byte_count', 0) for c in s['captures'])
-            meta = import_recording(path, self._session_dir(sid) / 'raw', max_bytes=remaining)
+            meta = import_recording(path, self._session_dir(sid) / 'raw', max_bytes=remaining,
+                                    expected_sha256=expected_sha256)
             cap.update(meta); cap['recording_path'] = str(Path(meta['recording_path']).relative_to(self._session_dir(sid)))
             s['captures'].append(cap); s = validate_session(s); s['revision'] += 1
             _write_json(self._session_dir(sid) / 'session.json', s)
@@ -517,9 +540,19 @@ class SessionStore:
             _write_json(self._session_dir(sid) / 'session.json', updated)
             return copy.deepcopy(updated)
 
-    def start_job(self, sid, processor):
+    def start_job(self, sid, processor, *, request_id=None):
+        """Admit a frozen session job, or recover its per-session request identity.
+
+        Reusing an accepted request_id returns that job in any state. Callers
+        must choose a new token to intentionally process a newer revision.
+        """
+        sid = _id(sid)
+        if request_id is not None: request_id = _id(request_id)
         with self._lock:
             if self._closed: raise RuntimeError('store is closed')
+            key = (sid, request_id) if request_id is not None else None
+            if key in self._request_jobs:
+                return self.get_job(self._request_jobs[key])
             if len(self._events) >= self._max_jobs: raise RuntimeError('job queue full')
             session = self.get_session(sid)
             # Serialize processing per session to prevent older results replacing newer ones.
@@ -529,10 +562,47 @@ class SessionStore:
             job = {'schema_version': SCHEMA_VERSION, 'job_id': jid, 'session_id': sid,
                    'session_revision': session['revision'], 'status': 'queued', 'progress': 0.,
                    'created_at': time.time(), 'updated_at': time.time()}
-            _write_json(self._job_path(jid), job)
-            _write_json(self.root / 'jobs' / (jid + '.input.json'), self._raw_session(sid))
+            if request_id is not None: job['request_id'] = request_id
+            # An accepted job always has its frozen input. Publishing metadata
+            # first could leave a queued request with no usable snapshot.
+            snapshot = self.root / 'jobs' / (jid + '.input.json')
+            _write_json(snapshot, self._raw_session(sid))
+            try:
+                _write_json(self._job_path(jid), job)
+            except Exception:
+                # A filesystem operation may fail after its atomic replacement.
+                # Retain the identity if metadata exists, but launch no worker.
+                # Recovery marks an unfinalized record interrupted on restart.
+                if self._job_path(jid).exists():
+                    if key is not None: self._request_jobs[key] = jid
+                    try:
+                        self._update_job(jid, status='failed', error={
+                            'code': 'job_admission_failed',
+                            'message': 'Job publication failed; processing was not started.'})
+                    except OSError: pass
+                else:
+                    try: snapshot.unlink()
+                    except OSError: pass
+                raise
+            if key is not None: self._request_jobs[key] = jid
             event = threading.Event(); self._events[jid] = event
-            self._pool.submit(self._run, jid, session, processor, event)
+            ready = threading.Event(); submitted = False
+            def run_admitted():
+                # Executor admission can enqueue work before thread creation
+                # raises. An ambiguous submit must never start computation.
+                ready.wait()
+                if submitted: self._run(jid, session, processor, event)
+            try:
+                self._pool.submit(run_admitted)
+                submitted = True
+            except Exception:
+                self._events.pop(jid, None)
+                self._update_job(jid, status='failed', error={
+                    'code': 'job_admission_failed',
+                    'message': 'Worker submission failed; processing was not started.'})
+                raise
+            finally:
+                ready.set()
             return copy.deepcopy(job)
     def start_controlled_job(self, request, processor=None):
         """Resolve stored session references only; callers cannot inject server paths."""
@@ -674,6 +744,10 @@ class SessionStore:
             try: result = self._current_result_path(sid); result_name = 'result.json'
             except KeyError: result = directory / 'archived-result.json'; result_name = 'archived-result.json'
             target = Path(destination) if destination else self.root / 'exports' / (sid + '.zip')
+            require_store_output(target, self.root)
+            inputs = [directory / 'session.json', result, self.root / '.store.lock',
+                      *(directory / c['recording_path'] for c in s['captures'])]
+            require_distinct_output(target, inputs)
             target.parent.mkdir(parents=True, exist_ok=True)
             fd, tmp = tempfile.mkstemp(prefix='.export-', dir=target.parent); os.close(fd)
             try:
@@ -686,6 +760,8 @@ class SessionStore:
                         path = (directory / relative).resolve()
                         if not path.is_relative_to(directory): raise ValueError('recording path escapes session')
                         z.write(path, relative)
+                require_store_output(target, self.root)
+                require_distinct_output(target, inputs)
                 os.replace(tmp, target)
             finally:
                 if os.path.exists(tmp): os.unlink(tmp)

@@ -6,17 +6,20 @@ import numpy as np
 from scipy.io import wavfile
 from scipy.signal import fftconvolve
 from .signals import generate_probe
+from .fileio import require_new_outputs
 
 SCENARIOS=('room','partial','coplanar','null','clutter','mismatch','reflector','warp','four_views')
 
 
-def simulate_session(output_dir, scenario='room', seed=1, capture_count=None):
+def simulate_session(output_dir, scenario='room', seed=1, capture_count=None, *, interpretation_context=None):
     if scenario not in SCENARIOS:
         raise ValueError(f'unknown scenario {scenario}; choose {SCENARIOS}')
     if capture_count is not None and (not isinstance(capture_count,int) or isinstance(capture_count,bool) or not 4 <= capture_count <= 24):
         raise ValueError('capture_count must be an integer from 4 to 24')
+    if interpretation_context is not None:
+        from .interpretation import validate_context
+        interpretation_context = validate_context(interpretation_context)
     root=Path(output_dir)
-    root.mkdir(parents=True,exist_ok=True)
     rng=np.random.default_rng(seed)
     x,probe=generate_probe()
     fs=probe['sample_rate_hz']; c=343.; source=np.array([2.1,1.7,1.25])
@@ -42,9 +45,14 @@ def simulate_session(output_dir, scenario='room', seed=1, capture_count=None):
     if scenario=='reflector':
         normal=np.array([.8,.35,.487339717]);normal/=np.linalg.norm(normal)
         surfaces.append(dict(surface_id='truth-tilted-reflector',normal=normal.tolist(),offset_m=4.5))
+    outputs=[root/f'capture-{i:02d}.wav' for i in range(len(receivers))]
+    require_new_outputs([*outputs, root/'probe.wav', root/'session.json', root/'truth.json'])
+    root.mkdir(parents=True,exist_ok=True)
     session=dict(schema_version='1.0',session_id=f'sim-{scenario}-{seed}',sound_speed_m_s=c,
         sound_speed_std_m_s=.6,source_clock_scale=1.,source_clock_std_ppm=100.,
         source_position_m=source.tolist(),source_position_std_m=.01,probe=probe,captures=[])
+    if interpretation_context is not None:
+        session['interpretation_context'] = interpretation_context
     truth=dict(schema_version='1.0',scenario=scenario,seed=int(seed),surfaces=surfaces,
         source_position_m=source.tolist(),receiver_positions_m=receivers.tolist(),
         simulation=dict(method='first_order_image_sources_fractional_delay',sample_rate_hz=fs,
@@ -85,12 +93,15 @@ def simulate_session(output_dir, scenario='room', seed=1, capture_count=None):
         recording*=.65
         if np.max(np.abs(recording))>=.98: raise RuntimeError('synthetic overload')
         filename=f'capture-{i:02d}.wav'
-        wavfile.write(root/filename,fs,np.round(recording*32767).astype(np.int16))
+        with (root/filename).open('xb') as stream:
+            wavfile.write(stream,fs,np.round(recording*32767).astype(np.int16))
         session['captures'].append(dict(capture_id=f'capture-{i:02d}',receiver_position_m=receiver.tolist(),
             receiver_position_std_m=.01,recording_path=filename,provenance='simulated',sample_rate_hz=fs))
         truth['paths'].append(dict(capture_id=f'capture-{i:02d}',alpha=alpha,offset_s=offset,
             arrivals=[dict(delay_s=float(delay),amplitude=float(amplitude),surface_id=label) for delay,amplitude,label in paths]))
-    wavfile.write(root/'probe.wav',fs,np.round(x*32767).astype(np.int16))
-    (root/'session.json').write_text(json.dumps(session,indent=2)+'\n')
-    (root/'truth.json').write_text(json.dumps(truth,indent=2)+'\n')
+    with (root/'probe.wav').open('xb') as stream:
+        wavfile.write(stream,fs,np.round(x*32767).astype(np.int16))
+    for name, value in [('session.json',session), ('truth.json',truth)]:
+        with (root/name).open('x',encoding='utf-8') as stream:
+            stream.write(json.dumps(value,indent=2)+'\n')
     return root/'session.json'

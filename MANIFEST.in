@@ -7,3 +7,4 @@ recursive-include evaluation *.py *.json
 recursive-include examples/frontend *.json
 recursive-include echosight/notices/li2025 *.md *.m *.json
 include echosight/LICENSE echosight/LICENSE_SCOPE.txt echosight/LICENSE_SCOPE.json
+include tools/check_distribution.py
