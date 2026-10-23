@@ -1,0 +1,1898 @@
+{
+  "selected_catalog_sha256": "c5b3992a1d6c57016252d618c2bdbefc5cba490f3f51eca600c1bf3fec261552",
+  "policy_sha256": "51ec0563279cdfd33f522f6838117910f2bc15300c80ccbc1fa4958237d3192f",
+  "input_hashes": {
+    "fits/room-2821-nominal_mapper.json": "3228ed5644b3ed6f6fedd385426e898b065bee520830346772341603139545fc",
+    "fits/room-2821-one_x_mapper.json": "47d7477c0b47c6fbedb913ce4fadd599b05ce8991007346e0796b9864f1301e4",
+    "fits/room-2821-joint_mapper.json": "0c42ebe3de18ca0241e2acc89bf9e1bdbc458313ff9be378084041e134f6764a",
+    "fits/room-2821-joint_grid.json": "3688f198319a9b2c75dd210b67f6287ef9e36a61ebce8725174358767bcbca11",
+    "fits/room-2821-joint_first_echo.json": "e883cb01d67d27f7b8240f82b78e79ccf60773d1affc36ba935947305604028b",
+    "fits/room-2833-nominal_mapper.json": "c1553816eacfc10995fd8db6e28e60395d95f24ef570af3db5bac5036a8cc5a1",
+    "fits/room-2833-one_x_mapper.json": "0f7c584bf5b0fcf7718269210fa1109aab936505e6b8e9d578f7bbb51ecbe357",
+    "fits/room-2833-joint_mapper.json": "d59e1f6853067247c0c938c262167d470f4c71507c594b3d19e6362dc7e59b1a",
+    "fits/room-2833-joint_grid.json": "1565a198c8578c8ec84a02279f8362fd7bd747ba1827249fee5e46ddc04d4db7",
+    "fits/room-2833-joint_first_echo.json": "570290a499ea35de5d65091e131bac515ee3d60ae9813386a65defe4214a4970"
+  },
+  "script_sha256": "969c56e5daafbe6d65266420fa801f18f79ba26005a4e3e9c2df87d9a82940e3",
+  "rows": [
+    {
+      "seed": 2821,
+      "method": "nominal_mapper",
+      "surfaces": 6,
+      "unique": 22,
+      "required": 24,
+      "complete": false,
+      "complete_rms_s": null,
+      "complete_max_s": null,
+      "oracle_prediction_gate_only": false,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.002420658218558642,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -1.1291367530130107e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-79a98e61ad95",
+          "prediction_s": 0.007774153413962877,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -4.774508036244161e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010235081421410178,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -9.472112039935962e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.013880521506998988,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -7.094090141804461e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.00545887738196682,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -0.00010942042808623383
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-81262265017d",
+          "prediction_s": 0.020885301876006925,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.004441703560074136,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 2.704431381534908e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-79a98e61ad95",
+          "prediction_s": 0.001947140813876247,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 7.240831433251546e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.006398718463804393,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 4.309707962985628e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017271432139142413,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 4.7327034504759946e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.008254392440372706,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 6.875151045971674e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-81262265017d",
+          "prediction_s": 0.013742742640537901,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 3.769064813800502e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.005630489631214529,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -2.2283824239464553e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-79a98e61ad95",
+          "prediction_s": 0.0076157137453382855,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -2.4798151108153255e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.003790231119548961,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.657603858269685e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.009407464904424333,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -4.129814908646577e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.001888825609952767,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.648879410515931e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-81262265017d",
+          "prediction_s": 0.020633548620934635,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.002655488236392118,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 2.394634802714915e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-79a98e61ad95",
+          "prediction_s": 0.00471093967118872,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 6.561806236545994e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010580009976607881,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -1.60531001651993e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017937301363127465,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -5.721569499406165e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.007132823405589174,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -3.0513341349907783e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-81262265017d",
+          "prediction_s": 0.019814890731700275,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": -0.00015419303264978257
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "method": "one_x_mapper",
+      "surfaces": 6,
+      "unique": 24,
+      "required": 24,
+      "complete": true,
+      "complete_rms_s": 3.266134889661458e-05,
+      "complete_max_s": 6.742748091840244e-05,
+      "oracle_prediction_gate_only": true,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0024088327484872714,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 5.341025412406407e-07
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-ac2a5c0fefd5",
+          "prediction_s": 0.007743099297976084,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -1.6690964375648543e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02062782328739806,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": -1.7658177704375777e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010163912152239177,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -2.355185122835876e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.013849145323214032,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -3.956471763308898e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-1d95f92e03ae",
+          "prediction_s": 0.005385682075182,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -3.622512130141333e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.004467400490042742,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 1.347383846743086e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-ac2a5c0fefd5",
+          "prediction_s": 0.00196894039968,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 5.0608728528762654e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013738076324110324,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 4.235696456558226e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.0064350932714284164,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 6.722272005832593e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.017275366718935013,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 4.339245471216002e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-1d95f92e03ae",
+          "prediction_s": 0.008285728797440313,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 3.741515339211049e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0056226146051903845,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -1.4408798215319839e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-ac2a5c0fefd5",
+          "prediction_s": 0.0076057474284029385,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -1.4831834172806223e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02043605953969519,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": -6.158290770486713e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.0038233822601394293,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -1.6575102007771597e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.00943359423625627,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -6.742748091840244e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-1d95f92e03ae",
+          "prediction_s": 0.0018279735349833125,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 3.4363280864295074e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0026483162554654443,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 9.566615729388397e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-ac2a5c0fefd5",
+          "prediction_s": 0.004726040454967482,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 5.0517278586697904e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.019616270794941607,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 4.442690410888517e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.01053612960557249,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 2.782727087019196e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.01788981207132434,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 4.176772230371842e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-1d95f92e03ae",
+          "prediction_s": 0.007085267510416447,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 1.70425538228193e-05
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "method": "joint_mapper",
+      "surfaces": 6,
+      "unique": 24,
+      "required": 24,
+      "complete": true,
+      "complete_rms_s": 1.5638345151973603e-05,
+      "complete_max_s": 4.173368212530802e-05,
+      "oracle_prediction_gate_only": true,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.007735425556142083,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -9.017222541647489e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.002413103112308949,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -3.7362612804368e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010145461440355075,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -5.10113934425703e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02060041621881552,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 9.748890878163302e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.01381798267495344,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -8.402069372496698e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.005373573054862839,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.4116100982252316e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.0020113316411842354,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 8.217487024527077e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0044720660271635885,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -3.3181532741030292e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.006439850519429648,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.965024004600864e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013758210191669623,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.222309700628325e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017311854061297552,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 6.9051123496206845e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.008298623551619302,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.452039921312099e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.007592703619864901,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -1.7880256347685766e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.005609703091302227,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -1.4972843271621183e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.003821194233569281,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -1.4387075437623416e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020409584467662768,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.031678126193648e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.009407900437463175,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -4.173368212530802e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.001835393982363584,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.694283348402362e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.004779470979039259,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -2.9132454850786665e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0026648167874136126,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -6.933916218779864e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010557793219896475,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 6.163656546206292e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.0196386488561013,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.2048842949193292e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017921827831382835,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 9.751962245223289e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.007104966266828133,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.6562025888668753e-06
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "method": "joint_grid",
+      "surfaces": 6,
+      "unique": 24,
+      "required": 24,
+      "complete": true,
+      "complete_rms_s": 1.5638345573450706e-05,
+      "complete_max_s": 4.1733677376542405e-05,
+      "oracle_prediction_gate_only": true,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.007735425556749145,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -9.017223148709633e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0024131031017970853,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -3.736250768573285e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02060041623580575,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 9.748873887934634e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.0101454614397991,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -5.101138788281626e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.013817982678410829,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -8.402072829885587e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.005373573058729758,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.4116104849171253e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.002011331641220387,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 8.21748698837544e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.004472066033599394,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -3.3181597099089105e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013758210175942902,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.2223112733003522e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.006439850519835714,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.965023598535058e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017311854061410187,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 6.905112236985089e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.008298623553170664,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.452039766175952e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.007592703619016451,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -1.788024786318794e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.005609703079459491,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -1.497272484426125e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020409584451650746,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.0316797273958048e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.003821194232551293,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -1.4387074419635205e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.00940790043271441,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -4.1733677376542405e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.0018353939793984313,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.6942836449176267e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0cbb635f6b90",
+          "prediction_s": 0.0047794709800646,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -2.9132465104199368e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0026648167885084356,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -6.933917313602881e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.019638648867869604,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.2048831180888212e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-fe06790f5153",
+          "prediction_s": 0.010557793219552348,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 6.163656890333796e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017921827834484497,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 9.751959143562e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.007104966271014423,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.6562067751562113e-06
+        }
+      ]
+    },
+    {
+      "seed": 2821,
+      "method": "joint_first_echo",
+      "surfaces": 0,
+      "unique": 0,
+      "required": 24,
+      "complete": false,
+      "complete_rms_s": null,
+      "complete_max_s": null,
+      "oracle_prediction_gate_only": false,
+      "paths": []
+    },
+    {
+      "seed": 2833,
+      "method": "nominal_mapper",
+      "surfaces": 6,
+      "unique": 22,
+      "required": 24,
+      "complete": false,
+      "complete_rms_s": null,
+      "complete_max_s": null,
+      "oracle_prediction_gate_only": false,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0024188506277822864,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -9.483776753774383e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.010222049046066672,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -8.168874505585372e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.005464157342090627,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -0.00011470038821004107
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.013880352213146676,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -7.077160756573282e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-4f0ea6e51c23",
+          "prediction_s": 0.00775345310262164,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -2.704476902120473e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-20041b5be7c3",
+          "prediction_s": 0.020515800034533304,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 9.436507516038042e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.00444171386442192,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 2.7034009467565186e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.0063949634648862805,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 4.685207854796848e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.008252859215046537,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 7.028473578588566e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.01727423814682111,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 4.452102682606096e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-4f0ea6e51c23",
+          "prediction_s": 0.0019422417342922688,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 7.730739391649359e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-20041b5be7c3",
+          "prediction_s": 0.013196384639490709,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.005628040484885496,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -1.9834677910431607e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.003773139902814326,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 3.366725531733176e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.0018842604555532952,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.192363970568759e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.00939322057660083,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -2.705382126296299e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-4f0ea6e51c23",
+          "prediction_s": 0.007621205694526325,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -3.0290100296192883e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-20041b5be7c3",
+          "prediction_s": 0.020406550326848433,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 2.3350922076271347e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0026536255316438593,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 4.257339550973408e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.010571589275595579,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -7.632399152896971e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-404b575aee40",
+          "prediction_s": 0.0071363543137752386,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -3.404424953597218e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-f4f26185760e",
+          "prediction_s": 0.017938948385477785,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -7.3685918497261305e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-4f0ea6e51c23",
+          "prediction_s": 0.004683692533891788,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 9.286519966239179e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-20041b5be7c3",
+          "prediction_s": 0.01929919314567974,
+          "eligible_path_ids": [],
+          "residual_s": null
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "method": "one_x_mapper",
+      "surfaces": 6,
+      "unique": 20,
+      "required": 24,
+      "complete": false,
+      "complete_rms_s": null,
+      "complete_max_s": null,
+      "oracle_prediction_gate_only": false,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.0023813546305322154,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 2.801222049629657e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.01000703675963811,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 0.00013332354137270824
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-062af903ce6d",
+          "prediction_s": 0.005318582321144941,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 3.087463273564531e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02045173187108343,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 0.00015843323861025604
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-dc58d121d910",
+          "prediction_s": 0.013506903051755035,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-188192d7fa91",
+          "prediction_s": 0.007747655404193839,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -2.1247070593403798e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.004495785981730699,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -2.7038107841213452e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.006467940805421127,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -2.612526198687761e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-062af903ce6d",
+          "prediction_s": 0.00837957865516059,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -5.6434704328166274e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013798656695191567,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": -1.8223406515660914e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-dc58d121d910",
+          "prediction_s": 0.0174211316002299,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -0.00010237242658272735
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-188192d7fa91",
+          "prediction_s": 0.0022217728341624634,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.005554058299852362,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 5.414750712270239e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.0037954587567533187,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.1348401378338986e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-062af903ce6d",
+          "prediction_s": 0.0018527803070272257,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 9.556508820381853e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.02028349834132401,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 0.00014640290760069286
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-dc58d121d910",
+          "prediction_s": 0.009051367248869163,
+          "eligible_path_ids": [],
+          "residual_s": null
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-188192d7fa91",
+          "prediction_s": 0.007659656326003881,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -6.874073177374866e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-1a4b96bc136e",
+          "prediction_s": 0.00269180693914289,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -3.3924067948057184e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.01061469075248672,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -5.073387604403838e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-062af903ce6d",
+          "prediction_s": 0.0072035684535370756,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -0.00010125838929780917
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.019703695516573593,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": -4.299781752310078e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-dc58d121d910",
+          "prediction_s": 0.017940718585292073,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -9.138791664014406e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-188192d7fa91",
+          "prediction_s": 0.005054401002871998,
+          "eligible_path_ids": [],
+          "residual_s": null
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "method": "joint_mapper",
+      "surfaces": 6,
+      "unique": 24,
+      "required": 24,
+      "complete": true,
+      "complete_rms_s": 1.2617182670750387e-05,
+      "complete_max_s": 2.904629023163497e-05,
+      "oracle_prediction_gate_only": true,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0024099703260269767,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -6.034749984646683e-07
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.01012911971954599,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.1240581464828578e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020597239910570754,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.2925199122930386e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.007718236349769917,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 8.171983830518315e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.013808236815389991,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 1.343790190951738e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.005375378035244897,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.5921081364311052e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.004473936640310236,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -5.1887664207503695e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.006439660460319285,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 2.1550831149639085e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013772986838958154,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 7.4464497177521155e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.0020138001323241283,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 5.748995884634171e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017318821458729865,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -6.228508269215394e-08
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.008300407636393824,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.2736314438599053e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.005607182571043793,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 1.0232359312720846e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.0038090857782117006,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -2.278620080042957e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020410950290882357,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.895095804234706e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.00759759278305705,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -6.6771888269177154e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.009383722793424929,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -1.755603808706145e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.0018332905256159726,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.904629023163497e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0026636320801473926,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -5.749208952559887e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.010551552980880436,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.2403895562245262e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.019646566628200794,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.4131070849698196e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.004767394308097192,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 9.163425456987749e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.01792400508923327,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 7.5747043947888e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.007110027313114185,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -7.717248874918904e-06
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "method": "joint_grid",
+      "surfaces": 6,
+      "unique": 24,
+      "required": 24,
+      "complete": true,
+      "complete_rms_s": 1.2617182067234197e-05,
+      "complete_max_s": 2.9046296169191622e-05,
+      "oracle_prediction_gate_only": true,
+      "paths": [
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0024099703331435965,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -6.034821150844617e-07
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.010129119721248234,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.124057976258433e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020597239922131656,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.2925187562028845e-05
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.007718236352990037,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 8.171980610397964e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.013808236816393612,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 1.3437891873309404e-06
+        },
+        {
+          "capture_id": "proposed-held-00",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.005375378040797988,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -2.5921086917402025e-05
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.004473936621670321,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -5.188747780835237e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.006439660467889437,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 2.155075544811938e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.013772986831970232,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 7.446456705674509e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.0020138001328505396,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 5.7489953582227915e-06
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017318821458802616,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -6.228515544298707e-08
+        },
+        {
+          "capture_id": "proposed-held-01",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.008300407639840019,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.2736310992404335e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.005607182579721628,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": 1.0232272534367245e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.003809085774642036,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": -2.2786165103784277e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.020410950282610474,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.895096631423024e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.0075975927791247745,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": -6.677184894642203e-06
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.009383722793829216,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": -1.7556038491349166e-05
+        },
+        {
+          "capture_id": "proposed-held-02",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.001833290519678416,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": 2.9046296169191622e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-0c2ef5c93600",
+          "prediction_s": 0.0026636320666743366,
+          "eligible_path_ids": [
+            "wall-2-0"
+          ],
+          "residual_s": -5.749195479503883e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-5a76684333b8",
+          "prediction_s": 0.010551552987524498,
+          "eligible_path_ids": [
+            "wall-2-1"
+          ],
+          "residual_s": 1.2403888918183226e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-48c11924ebb4",
+          "prediction_s": 0.01964656663721497,
+          "eligible_path_ids": [
+            "wall-0-1"
+          ],
+          "residual_s": 1.4131061835523373e-05
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-21fa2e93adaf",
+          "prediction_s": 0.004767394313374361,
+          "eligible_path_ids": [
+            "wall-1-0"
+          ],
+          "residual_s": 9.16342017981929e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-a1661e502b63",
+          "prediction_s": 0.017924005090016435,
+          "eligible_path_ids": [
+            "wall-1-1"
+          ],
+          "residual_s": 7.574703611623601e-06
+        },
+        {
+          "capture_id": "proposed-held-03",
+          "surface_id": "reflector-91695d4c63b0",
+          "prediction_s": 0.007110027320383189,
+          "eligible_path_ids": [
+            "wall-0-0"
+          ],
+          "residual_s": -7.71725614392288e-06
+        }
+      ]
+    },
+    {
+      "seed": 2833,
+      "method": "joint_first_echo",
+      "surfaces": 0,
+      "unique": 0,
+      "required": 24,
+      "complete": false,
+      "complete_rms_s": null,
+      "complete_max_s": null,
+      "oracle_prediction_gate_only": false,
+      "paths": []
+    }
+  ],
+  "benefits": [
+    {
+      "seed": 2821,
+      "comparator": "nominal_mapper",
+      "ideal_complete_rms_improvement_s": null,
+      "minimum_required_gain_s": 2.0833333333333333e-05,
+      "ideal_rms_gain_threshold_met": null,
+      "scope": "Oracle arrivals and exact receiver poses only; comparator-failure alternative, acoustic extraction, survey noise, geometry/time/null gates and actual transfer not reevaluated."
+    },
+    {
+      "seed": 2821,
+      "comparator": "one_x_mapper",
+      "ideal_complete_rms_improvement_s": 1.7023003744640976e-05,
+      "minimum_required_gain_s": 2.0833333333333333e-05,
+      "ideal_rms_gain_threshold_met": false,
+      "scope": "Oracle arrivals and exact receiver poses only; comparator-failure alternative, acoustic extraction, survey noise, geometry/time/null gates and actual transfer not reevaluated."
+    },
+    {
+      "seed": 2833,
+      "comparator": "nominal_mapper",
+      "ideal_complete_rms_improvement_s": null,
+      "minimum_required_gain_s": 2.0833333333333333e-05,
+      "ideal_rms_gain_threshold_met": null,
+      "scope": "Oracle arrivals and exact receiver poses only; comparator-failure alternative, acoustic extraction, survey noise, geometry/time/null gates and actual transfer not reevaluated."
+    },
+    {
+      "seed": 2833,
+      "comparator": "one_x_mapper",
+      "ideal_complete_rms_improvement_s": null,
+      "minimum_required_gain_s": 2.0833333333333333e-05,
+      "ideal_rms_gain_threshold_met": null,
+      "scope": "Oracle arrivals and exact receiver poses only; comparator-failure alternative, acoustic extraction, survey noise, geometry/time/null gates and actual transfer not reevaluated."
+    }
+  ],
+  "saved_maps_used_for_position_selection": false,
+  "audio_generated": false,
+  "fit_executed": false,
+  "transfer_or_promotion_evaluated": false,
+  "scope": "Diagnostic after positions were fixed, not held-recording evidence or a replacement study. Exact true candidate catalog and exact poses are deliberately optimistic. No seed or position changes permitted in response."
+}

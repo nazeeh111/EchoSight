@@ -1,0 +1,286 @@
+{
+  "status": "passed",
+  "ideal_preflight": {
+    "candidate_window_s": 0.0002,
+    "expected": 24,
+    "unique": 24,
+    "ideal_gate_pass": true,
+    "captures": [
+      {
+        "capture_id": "proposed-held-00",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.002376951379719849,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-01",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.001881328407398174,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-02",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.001775251161107735,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-03",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.0017291179054224337,
+        "all_windows_disjoint": true
+      }
+    ],
+    "scope": "Ideal declared catalog only; no audio processing or acceptance rescore. A pass does not qualify real extraction or physical accuracy."
+  },
+  "uncertainty_bound_status": "UNKNOWN",
+  "uncertainty_scope": "No validated extraction/systematic-error bound or correlated prediction interval; empirical development permitted, no guarantee.",
+  "runtime_commit": "c9a2edb4ab7aced7cb4747e741ea0d02cb70e88b",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "python_executable_sha256": "494f72dd95d0dc196169c5821219fc6cfa9c1ef582332b95b53874b10acea6e0"
+  },
+  "input_hashes": {
+    "local/PROTOCOL.md": "d30c64b6d8f3b11a181301f605e14bc2083679d60e89299382d85c4635ee85cb",
+    "local/design-assessment.json": "39b69cfd177cca922452e2fa96b9103bf8b570d77ebdd5edbf5377073c45c620",
+    "local/policy.json": "51ec0563279cdfd33f522f6838117910f2bc15300c80ccbc1fa4958237d3192f",
+    "local/proposed-catalog.json": "c5b3992a1d6c57016252d618c2bdbefc5cba490f3f51eca600c1bf3fec261552",
+    "local/run.py": "38340f5a469e080777a4c33014df75142a7ce030808f93f51cba81f121f35f05",
+    "local/saved-map-oracle-diagnostic.json": "2cb1032c4d98fb529a90104a2b6d74db57c0e2241b62627f49a3eb85bd08d504",
+    "local/settings.json": "b520bb929ac680076389fcc31f6efaddbd6f8d1cde1a5936b44c4e660690974f",
+    "replay/README.md": "9270455663c9c9ae295aa13b56f05fbabf87d4722fe3ff26019da9c3f4db0309",
+    "replay/expected-results.json": "7acbd36695af09e0924cc5e40054ff80cb17c135186784d45eeaa7f093c4bf5b",
+    "replay/fits/direct_only-2821-joint_first_echo.json": "fd54b55d8e78f8b7b3130bc9bef9c6b22140581a693abcfbff860d2d2f447767",
+    "replay/fits/direct_only-2821-joint_grid.json": "174b2d2896f171ded862ac73784e263754d33721f3a9fec880da519377589ac8",
+    "replay/fits/direct_only-2821-joint_mapper.json": "95529de2002805338e5d5c5e4851f86a1d2cc31ab867c7ed06110f97c4c1d5f5",
+    "replay/fits/direct_only-2821-nominal_mapper.json": "80323945c97c1682e31fd5a2ae12f56cf502786d7f436cb8e0e77519c74f8d8f",
+    "replay/fits/direct_only-2821-one_x_mapper.json": "701bcc5d20a777e66f02148b3ac9ec7959397bd533ac308f7a49e6cd5e952267",
+    "replay/fits/direct_only-2833-joint_first_echo.json": "8a4db73986fa6cecae62f294258b642ebbecccc4069fa568dc90e0e449dc7c13",
+    "replay/fits/direct_only-2833-joint_grid.json": "c5883b1c0a5b27f8347e1d553ca38fb2fc4bffea24657cd20f3d975dd9d7a04d",
+    "replay/fits/direct_only-2833-joint_mapper.json": "eb0dd963817a09facc8582aeede047a7695a3c713dc7c53d9a911dc428ab8eed",
+    "replay/fits/direct_only-2833-nominal_mapper.json": "aa8b5c060312e3888e82e37d10f87fe2594d1e8fc89b5d1bdd24aacb3e03f7ff",
+    "replay/fits/direct_only-2833-one_x_mapper.json": "ff8c031f9d4d2acf0bba27a5a0505ab71e10aaa17511b86393ba92fdab7a1f1e",
+    "replay/fits/room-2821-joint_first_echo.json": "e883cb01d67d27f7b8240f82b78e79ccf60773d1affc36ba935947305604028b",
+    "replay/fits/room-2821-joint_grid.json": "3688f198319a9b2c75dd210b67f6287ef9e36a61ebce8725174358767bcbca11",
+    "replay/fits/room-2821-joint_mapper.json": "0c42ebe3de18ca0241e2acc89bf9e1bdbc458313ff9be378084041e134f6764a",
+    "replay/fits/room-2821-nominal_mapper.json": "3228ed5644b3ed6f6fedd385426e898b065bee520830346772341603139545fc",
+    "replay/fits/room-2821-one_x_mapper.json": "47d7477c0b47c6fbedb913ce4fadd599b05ce8991007346e0796b9864f1301e4",
+    "replay/fits/room-2833-joint_first_echo.json": "570290a499ea35de5d65091e131bac515ee3d60ae9813386a65defe4214a4970",
+    "replay/fits/room-2833-joint_grid.json": "1565a198c8578c8ec84a02279f8362fd7bd747ba1827249fee5e46ddc04d4db7",
+    "replay/fits/room-2833-joint_mapper.json": "d59e1f6853067247c0c938c262167d470f4c71507c594b3d19e6362dc7e59b1a",
+    "replay/fits/room-2833-nominal_mapper.json": "c1553816eacfc10995fd8db6e28e60395d95f24ef570af3db5bac5036a8cc5a1",
+    "replay/fits/room-2833-one_x_mapper.json": "0f7c584bf5b0fcf7718269210fa1109aab936505e6b8e9d578f7bbb51ecbe357",
+    "replay/freeze.json": "a995d28014c4c055003d34db193f5657a08d185a281d09ff1d7e667e5405da40",
+    "replay/frozen_gates.py": "2f89f668db97ddb0685ff8292581684fefc7fbb5b63c13c6d3b745c3864e6be5",
+    "replay/manifest.json": "42f2828a8b7ac87e4f506371e14352bee9f56264ab98fd1564254a569937edbc",
+    "replay/raw/direct_only-2821/truth.json": "277b3c333effeb1529fba7d72c4961eaec2a1d95da4914ab7682dd7ceecacdcd",
+    "replay/raw/direct_only-2833/truth.json": "277b3c333effeb1529fba7d72c4961eaec2a1d95da4914ab7682dd7ceecacdcd",
+    "replay/raw/room-2821/truth.json": "62d1dc639acefaa3bb7a87a35a95f8a58aae366ac9803d9f9b68c8abd129e367",
+    "replay/raw/room-2833/truth.json": "62d1dc639acefaa3bb7a87a35a95f8a58aae366ac9803d9f9b68c8abd129e367",
+    "replay/render-complete.json": "3add19badab33e46ac4ffc81fff592caebc7711ba02d9ccfe0d59df7e1a935c5",
+    "replay/render-start.json": "4ebd017dc52a7dd072b31cbf5f04dcb970228e7997bcfc833382c9f5877b1229",
+    "replay/replay.py": "8bbb404999aeef645c779ca5fdb205ea1a9d640e618bd848e88bdec7959a3a55",
+    "replay/run-start.json": "12634079709673bf23287ba4abf16b9307785e713009242cd9d0783efadf3090",
+    "replay/settings.json": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+    "replay/source-identities.json": "84d0795f9cf05e390133f6a8810d3f9997516347934bcd5e3f887a1fadda1cc3",
+    "replay/static-check.json": "a2e512ff2122febb9455f354c69c4a7856056c5d848876a829505f4765070c2e",
+    "repo/echosight/__init__.py": "8ff5d4f03bec00b5a6ce107b02b879076aa75fa51e033c2c443f83db376a9d57",
+    "repo/echosight/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "repo/echosight/_nlos_worker.py": "3b5a1f1bc78b13b4bdbf348bcfccd898e6391533d2b9330704499d60c20e4a25",
+    "repo/echosight/acquisition.py": "ca2effe95ae170b25a7eb8944a3bf16a255263668aca9c7b0da63b14b7503279",
+    "repo/echosight/api.py": "c5a41e2df5cca451b9cd5dab5e98260652e6fc109c12e62e10bb1be4bda287c2",
+    "repo/echosight/calibration.py": "4346c68fcf462fc9aabee8c54caffc999d065a64ec7ed9dcba5f7eefa7f12931",
+    "repo/echosight/cli.py": "89e01cfa7a23aa0fd5c9e84d5934b5788a0e88ef4e6ea3cb7675cc5d3133b84e",
+    "repo/echosight/controlled.py": "7eec300e988f5b5b728a8e885a8b0a0a716a67fc5843ee2edc97deae6edc4646",
+    "repo/echosight/evolution.py": "5a2363868c7d4eea11e90521fbd03199e22b755f23cbacdfe08fe82921e31afd",
+    "repo/echosight/fileio.py": "1e83474878cfb24a8800df786fba733369d65f6a5d80a1b9f1a591419b6744ad",
+    "repo/echosight/geometry.py": "e9d278cab1ca44d0e785e69c067441764b9dd6688cd5e27483bc254bd9c237ce",
+    "repo/echosight/inference.py": "c48b500f70883fa3d1b40a31f4b690e4d2453ee257059bd18755aca145793c7d",
+    "repo/echosight/interpretation.py": "9e03423a325bb5ef4880c4a6de5d42c884593bc061391a4dfa5156b2f21ddbbf",
+    "repo/echosight/material_features.py": "1870793d9f837f2f96d51f4a592f0736474ac2cd2d71dba1995a712caff94a04",
+    "repo/echosight/multisource.py": "b61f4742927c8270a5133526bddbff5080b806242f6ff2e08310bc9499622085",
+    "repo/echosight/nlos.py": "ddf1911be7f35b698894457bd46126840990859fb3c099c2953361d1340d8364",
+    "repo/echosight/nlos_display.py": "e126c969b18f3cf2b366b7f60c60e17f9b148ea5c13dea40c113e01d22d150ba",
+    "repo/echosight/path_alternatives.py": "7391ac4713905166e5d1ac5601d77b1e3de41eb851fc8adcae2ec3530b278b50",
+    "repo/echosight/pipeline.py": "48b28de5c380d4637ae616f3a2bd4b360b8e95d27f8aff76fb923a8d973b4dfe",
+    "repo/echosight/receiver_covariance.py": "31bb616f55b6951874a1a72d28655c1c6ab4ae15706d3d9f786a1006fa9ef97b",
+    "repo/echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816",
+    "repo/echosight/simulation.py": "54bf146c30d8f4f3be686923a40e5f263ed46a5673dcd393249b083b80bf3e14",
+    "repo/echosight/storage.py": "aa82192eab5e51658c2ef3e1386c4114c7dc4cf54a68ebff33fc863a8b74a239",
+    "repo/echosight/webui.py": "0a630c360d0a8d9924da6ceb377dc8b7039b3b470f74d7be2074040b93a5689a",
+    "repo/evaluation/held_path_preflight.py": "146ae6b3cae06ffa72932f242f54f0a88d41424a685e7362adc0130b1e44915c",
+    "repo/evaluation/metrics.py": "1c4e037ca814b31fe29a6c8cc106a2730aa46379b261b0f9fc1a72060902ae6c",
+    "repo/evaluation/path_interpretations.py": "853ddd5b9852790214167f3a11abeeddad2766da45d074128f7b2a11016dbc58",
+    "repo/requirements-test.txt": "f5ad390d5aaf3c217bc9d480e25d5a9b4368a7281ef3f11954e64442fc05e8eb",
+    "repo/requirements.txt": "ca8f92f67c36150243ec8e56a5eec5c0344c54057e7c1f4995b20a120209177c"
+  },
+  "audio_generated": false,
+  "audio_processed": false,
+  "mapping_executed": false
+}

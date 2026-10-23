@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "session_id": "held-followup-2833",
+  "coordinate_frame_id": "exact-synthetic-frame",
+  "source_position_m": [
+    1.5,
+    1.5,
+    1.3
+  ],
+  "source_position_std_m": 0.01,
+  "sound_speed_m_s": 343.0,
+  "sound_speed_std_m_s": 0.6,
+  "source_clock_scale": 1.0,
+  "source_clock_std_ppm": 80.0,
+  "probe": {
+    "sample_rate_hz": 48000,
+    "duration_s": 0.04,
+    "low_hz": 2000.0,
+    "high_hz": 14000.0,
+    "repetitions": 7,
+    "period_s": 0.35,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08,
+    "schema_version": "1.0",
+    "kind": "repeated_linear_chirp",
+    "pilot_start_samples": [
+      4800,
+      21600,
+      38400,
+      55200,
+      72000,
+      88800,
+      105600
+    ],
+    "sample_count": 116160,
+    "waveform_sha256": "f8ebd94dfc02c671a147820fcc4711d74faf0ecf6ef8df08600872d4d3327c2b",
+    "timing_unit": "source_buffer_seconds"
+  },
+  "captures": [
+    {
+      "capture_id": "proposed-held-00",
+      "receiver_position_m": [
+        1.2556612527505469,
+        2.252538657616108,
+        0.5049193162462531
+      ],
+      "receiver_position_std_m": 0.003,
+      "receiver_pose_group_id": "followup-2833-0",
+      "device_id": "receiver-0",
+      "recording_path": "capture-00.wav",
+      "sha256": "a444e17285d27aa73078756967e45e7cd15c8477232dafd48d45d18ab608ba73",
+      "provenance": "simulated"
+    },
+    {
+      "capture_id": "proposed-held-01",
+      "receiver_position_m": [
+        2.9989266330584865,
+        0.4991137021047469,
+        1.5032878435814707
+      ],
+      "receiver_position_std_m": 0.003,
+      "receiver_pose_group_id": "followup-2833-1",
+      "device_id": "receiver-1",
+      "recording_path": "capture-01.wav",
+      "sha256": "60228cd4f5cbf811faac9606799b16ffa4e462a617ceef7766eb6a971d3bb78e",
+      "provenance": "simulated"
+    },
+    {
+      "capture_id": "proposed-held-02",
+      "receiver_position_m": [
+        0.500620734633897,
+        2.9954891303853364,
+        2.256765652569815
+      ],
+      "receiver_position_std_m": 0.003,
+      "receiver_pose_group_id": "followup-2833-2",
+      "device_id": "receiver-2",
+      "recording_path": "capture-02.wav",
+      "sha256": "e87cfbb2ebe456af1e47f2be2ed38d4feb8d44999c1bf072e04c2b732b10ee70",
+      "provenance": "simulated"
+    },
+    {
+      "capture_id": "proposed-held-03",
+      "receiver_position_m": [
+        1.7483269991781667,
+        0.9946836849645512,
+        0.4965916171574493
+      ],
+      "receiver_position_std_m": 0.003,
+      "receiver_pose_group_id": "followup-2833-3",
+      "device_id": "receiver-3",
+      "recording_path": "capture-03.wav",
+      "sha256": "75afa48cea654cbbce4f5389814888a756cf086a8173c4a8a15cb906ace18858",
+      "provenance": "simulated"
+    }
+  ]
+}

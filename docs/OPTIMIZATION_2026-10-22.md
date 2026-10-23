@@ -2,7 +2,7 @@
 
 This receipt describes the first optimization pass. The subsequent [actual backend result viewer](RESULT_VIEWER.md) now provides an artifact-based bridge for CLI/API JSON; its separate verification adds sixteen tests. The animated room remains a distinct simulation.
 
-Base: `10929a7`. Changes are local, uncommitted and unpushed. Frozen scientific evidence, thresholds, model assets and the inference algorithms are unchanged.
+Implementation base: `10929a7`. These changes were integrated with remote3308329 and published in reviewed checkpoint `c9a2edb`; its GitHub CI passed. Frozen scientific evidence, thresholds, model assets and the inference algorithms are unchanged.
 
 ## Changes
 

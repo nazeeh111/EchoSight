@@ -1,0 +1,189 @@
+{
+  "status": "passed",
+  "inherited_rows": 20,
+  "geometry": [
+    {
+      "seed": 2821,
+      "family": "room",
+      "method": "nominal_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.010777245481656641
+    },
+    {
+      "seed": 2821,
+      "family": "room",
+      "method": "one_x_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.006666773244382752
+    },
+    {
+      "seed": 2821,
+      "family": "room",
+      "method": "joint_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.0025278125745545658
+    },
+    {
+      "seed": 2821,
+      "family": "room",
+      "method": "joint_grid",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.0025278124158772054
+    },
+    {
+      "seed": 2821,
+      "family": "room",
+      "method": "joint_first_echo",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 6,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2821,
+      "family": "direct_only",
+      "method": "nominal_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2821,
+      "family": "direct_only",
+      "method": "one_x_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2821,
+      "family": "direct_only",
+      "method": "joint_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2821,
+      "family": "direct_only",
+      "method": "joint_grid",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2821,
+      "family": "direct_only",
+      "method": "joint_first_echo",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "room",
+      "method": "nominal_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.015700386734280442
+    },
+    {
+      "seed": 2833,
+      "family": "room",
+      "method": "one_x_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.023913284770218406
+    },
+    {
+      "seed": 2833,
+      "family": "room",
+      "method": "joint_mapper",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.0023240829770821768
+    },
+    {
+      "seed": 2833,
+      "family": "room",
+      "method": "joint_grid",
+      "matched": 6,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": 0.0023240827581523294
+    },
+    {
+      "seed": 2833,
+      "family": "room",
+      "method": "joint_first_echo",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 6,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "direct_only",
+      "method": "nominal_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "direct_only",
+      "method": "one_x_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "direct_only",
+      "method": "joint_mapper",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "direct_only",
+      "method": "joint_grid",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    },
+    {
+      "seed": 2833,
+      "family": "direct_only",
+      "method": "joint_first_echo",
+      "matched": 0,
+      "unmatched": 0,
+      "missed": 0,
+      "mean_anchor_error_m": null
+    }
+  ],
+  "physical_path_declarations": 56,
+  "physical_truth_not_in_extraction_inputs": true,
+  "scope": "Independent saved evidence arithmetic; no new timing, waveform processing or source/geometry fit"
+}

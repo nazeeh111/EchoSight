@@ -1,0 +1,146 @@
+{
+  "status": "cancelled",
+  "surfaces": [],
+  "observations": [
+    {
+      "capture_id": "proposed-held-00",
+      "status": "ok",
+      "receiver_position_m": [
+        1.2507673367556402,
+        2.249835153017272,
+        0.5021010068241033
+      ],
+      "candidates": [
+        {
+          "candidate_id": "proposed-held-00:echo:00",
+          "delay_s": 0.002409963099458435
+        },
+        {
+          "candidate_id": "proposed-held-00:echo:01",
+          "delay_s": 0.005349970492838142
+        },
+        {
+          "candidate_id": "proposed-held-00:echo:02",
+          "delay_s": 0.007726776106778776
+        },
+        {
+          "candidate_id": "proposed-held-00:echo:03",
+          "delay_s": 0.010140983084877727
+        },
+        {
+          "candidate_id": "proposed-held-00:echo:04",
+          "delay_s": 0.01381000287667703
+        },
+        {
+          "candidate_id": "proposed-held-00:echo:05",
+          "delay_s": 0.020609769681933444
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-01",
+      "status": "ok",
+      "receiver_position_m": [
+        3.0030561535416442,
+        0.4987412130036234,
+        1.5039385936797824
+      ],
+      "candidates": [
+        {
+          "candidate_id": "proposed-held-01:echo:00",
+          "delay_s": 0.0020196733395955726
+        },
+        {
+          "candidate_id": "proposed-held-01:echo:01",
+          "delay_s": 0.0044698568371730205
+        },
+        {
+          "candidate_id": "proposed-held-01:echo:02",
+          "delay_s": 0.006441703055485199
+        },
+        {
+          "candidate_id": "proposed-held-01:echo:03",
+          "delay_s": 0.008324179950489698
+        },
+        {
+          "candidate_id": "proposed-held-01:echo:04",
+          "delay_s": 0.013781197842340243
+        },
+        {
+          "candidate_id": "proposed-held-01:echo:05",
+          "delay_s": 0.017318556437726354
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-02",
+      "status": "ok",
+      "receiver_position_m": [
+        0.49926684774726604,
+        2.9994149136871426,
+        2.2510770323194795
+      ],
+      "candidates": [
+        {
+          "candidate_id": "proposed-held-02:echo:00",
+          "delay_s": 0.0018615487719563712
+        },
+        {
+          "candidate_id": "proposed-held-02:echo:01",
+          "delay_s": 0.0038071789023840304
+        },
+        {
+          "candidate_id": "proposed-held-02:echo:02",
+          "delay_s": 0.005607798209427583
+        },
+        {
+          "candidate_id": "proposed-held-02:echo:03",
+          "delay_s": 0.007590128197967514
+        },
+        {
+          "candidate_id": "proposed-held-02:echo:04",
+          "delay_s": 0.009365828872357079
+        },
+        {
+          "candidate_id": "proposed-held-02:echo:05",
+          "delay_s": 0.020429838021616447
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-03",
+      "status": "ok",
+      "receiver_position_m": [
+        1.7538230690391383,
+        1.0055868061866349,
+        0.5009838923518944
+      ],
+      "candidates": [
+        {
+          "candidate_id": "proposed-held-03:echo:00",
+          "delay_s": 0.002658996182760375
+        },
+        {
+          "candidate_id": "proposed-held-03:echo:01",
+          "delay_s": 0.00477777100214088
+        },
+        {
+          "candidate_id": "proposed-held-03:echo:02",
+          "delay_s": 0.007102763531492882
+        },
+        {
+          "candidate_id": "proposed-held-03:echo:03",
+          "delay_s": 0.010564594898179663
+        },
+        {
+          "candidate_id": "proposed-held-03:echo:04",
+          "delay_s": 0.017933050187353222
+        },
+        {
+          "candidate_id": "proposed-held-03:echo:05",
+          "delay_s": 0.019662218274662826
+        }
+      ]
+    }
+  ]
+}

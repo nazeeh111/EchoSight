@@ -1,0 +1,539 @@
+{
+  "policy_sha256": "51ec0563279cdfd33f522f6838117910f2bc15300c80ccbc1fa4958237d3192f",
+  "script_sha256": "5b956162e7f887c89634b8da857e1744e9c167fb719ae91b91294b4d7d47f582",
+  "settings_sha256": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+  "source_snapshot_tree": "4b949dd668508c17b6a0396dee1c03b69940858c",
+  "source_hashes": {
+    "evidence/calibration-room-transfer-plan/settings.json": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+    "evaluation/held_path_preflight.py": "146ae6b3cae06ffa72932f242f54f0a88d41424a685e7362adc0130b1e44915c",
+    "echosight/signals.py": "3f5ee13d05ebcde21b761d2614e1d7e9db3e04721da01df21c777c6c3cd8e816"
+  },
+  "grid_points_considered": 2736,
+  "conditional_candidates": 405,
+  "selected": [
+    {
+      "position_m": [
+        1.25,
+        2.25,
+        0.5
+      ],
+      "delays_s": [
+        0.005349456953880586,
+        0.020610165109693684,
+        0.007726408333600435,
+        0.013809580605580943,
+        0.002409366851028512,
+        0.010140360301010818
+      ],
+      "minimum_all_path_separation_s": 0.002376951379719849,
+      "minimum_reflected_separation_s": 0.002376951379719849,
+      "minimum_direct_excess_s": 0.002409366851028512,
+      "minimum_reflected_peak_index_gap_lower_bound": 93,
+      "minimum_direct_peak_index_gap_lower_bound": 105,
+      "cross_exclusion_slack_s": 0.0017769513797198486,
+      "lower_delay_slack_s": 0.0018593668510285119,
+      "upper_delay_slack_s": 0.05918983489030632,
+      "conditional_spacing_pass": true,
+      "conditional_cross_exclusion_pass": true
+    },
+    {
+      "position_m": [
+        3.0,
+        0.5,
+        1.5
+      ],
+      "delays_s": [
+        0.008323143950832423,
+        0.013780433288675906,
+        0.0020195491282087624,
+        0.017318759173647173,
+        0.004468747873889485,
+        0.006441815543434249
+      ],
+      "minimum_all_path_separation_s": 0.001881328407398174,
+      "minimum_reflected_separation_s": 0.001881328407398174,
+      "minimum_direct_excess_s": 0.0020195491282087624,
+      "minimum_reflected_peak_index_gap_lower_bound": 70,
+      "minimum_direct_peak_index_gap_lower_bound": 86,
+      "cross_exclusion_slack_s": 0.0012813284073981738,
+      "lower_delay_slack_s": 0.0014695491282087623,
+      "upper_delay_slack_s": 0.062481240826352834,
+      "conditional_spacing_pass": true,
+      "conditional_cross_exclusion_pass": true
+    },
+    {
+      "position_m": [
+        0.5,
+        3.0,
+        2.25
+      ],
+      "delays_s": [
+        0.0018623368158476076,
+        0.020429901248924704,
+        0.007590915594230132,
+        0.009366166755337867,
+        0.005608205806975065,
+        0.0038068071581316577
+      ],
+      "minimum_all_path_separation_s": 0.001775251161107735,
+      "minimum_reflected_separation_s": 0.001775251161107735,
+      "minimum_direct_excess_s": 0.0018623368158476076,
+      "minimum_reflected_peak_index_gap_lower_bound": 65,
+      "minimum_direct_peak_index_gap_lower_bound": 78,
+      "cross_exclusion_slack_s": 0.0011752511611077348,
+      "lower_delay_slack_s": 0.0013123368158476075,
+      "upper_delay_slack_s": 0.0593700987510753,
+      "conditional_spacing_pass": true,
+      "conditional_cross_exclusion_pass": true
+    },
+    {
+      "position_m": [
+        1.75,
+        1.0,
+        0.5
+      ],
+      "delays_s": [
+        0.007102310064239266,
+        0.019660697699050492,
+        0.00477655773355418,
+        0.01793157979362806,
+        0.0026578828711948327,
+        0.010563956876442682
+      ],
+      "minimum_all_path_separation_s": 0.0017291179054224337,
+      "minimum_reflected_separation_s": 0.0017291179054224337,
+      "minimum_direct_excess_s": 0.0026578828711948327,
+      "minimum_reflected_peak_index_gap_lower_bound": 62,
+      "minimum_direct_peak_index_gap_lower_bound": 116,
+      "cross_exclusion_slack_s": 0.0011291179054224334,
+      "lower_delay_slack_s": 0.0021078828711948326,
+      "upper_delay_slack_s": 0.060139302300949514,
+      "conditional_spacing_pass": true,
+      "conditional_cross_exclusion_pass": true
+    }
+  ],
+  "ideal_preflight": {
+    "candidate_window_s": 0.0002,
+    "expected": 24,
+    "unique": 24,
+    "ideal_gate_pass": true,
+    "captures": [
+      {
+        "capture_id": "proposed-held-00",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.002376951379719849,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-01",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.001881328407398174,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-02",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.001775251161107735,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "proposed-held-03",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.0017291179054224337,
+        "all_windows_disjoint": true
+      }
+    ],
+    "scope": "Ideal declared catalog only; no audio processing or acceptance rescore. A pass does not qualify real extraction or physical accuracy."
+  },
+  "original_ideal_control": {
+    "candidate_window_s": 0.0002,
+    "expected": 24,
+    "unique": 20,
+    "ideal_gate_pass": false,
+    "captures": [
+      {
+        "capture_id": "original-held-00",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.0002265700511718217,
+        "all_windows_disjoint": false
+      },
+      {
+        "capture_id": "original-held-01",
+        "expected": 6,
+        "unique": 6,
+        "ideal_gate_pass": true,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [],
+        "minimum_pair_separation_s": 0.0012096254453338555,
+        "all_windows_disjoint": true
+      },
+      {
+        "capture_id": "original-held-02",
+        "expected": 6,
+        "unique": 4,
+        "ideal_gate_pass": false,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0",
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-1-0",
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [
+          {
+            "path_ids": [
+              "wall-1-0",
+              "wall-1-1"
+            ],
+            "separation_s": 0.00017302145329619635
+          }
+        ],
+        "minimum_pair_separation_s": 0.00017302145329619635,
+        "all_windows_disjoint": false
+      },
+      {
+        "capture_id": "original-held-03",
+        "expected": 6,
+        "unique": 4,
+        "ideal_gate_pass": false,
+        "associations": [
+          {
+            "path_id": "wall-0-0",
+            "eligible_path_ids": [
+              "wall-0-0",
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-0-1",
+            "eligible_path_ids": [
+              "wall-0-1"
+            ]
+          },
+          {
+            "path_id": "wall-1-0",
+            "eligible_path_ids": [
+              "wall-1-0"
+            ]
+          },
+          {
+            "path_id": "wall-1-1",
+            "eligible_path_ids": [
+              "wall-0-0",
+              "wall-1-1"
+            ]
+          },
+          {
+            "path_id": "wall-2-0",
+            "eligible_path_ids": [
+              "wall-2-0"
+            ]
+          },
+          {
+            "path_id": "wall-2-1",
+            "eligible_path_ids": [
+              "wall-2-1"
+            ]
+          }
+        ],
+        "conflicting_pairs": [
+          {
+            "path_ids": [
+              "wall-0-0",
+              "wall-1-1"
+            ],
+            "separation_s": 0.00019698678307141816
+          }
+        ],
+        "minimum_pair_separation_s": 0.00019698678307141816,
+        "all_windows_disjoint": false
+      }
+    ],
+    "scope": "Ideal declared catalog only; no audio processing or acceptance rescore. A pass does not qualify real extraction or physical accuracy."
+  },
+  "sample_grid_countercheck_cases": 4896,
+  "minimum_sampled_gap_in_counterchecks": 63,
+  "own_candidate_inclusion_with_both_error_budgets": "not guaranteed: maximum candidate-prediction difference is 400us, exceeding the unchanged200us gate",
+  "bounds_verified_on_real_extraction_or_fit": false,
+  "all_uncertainty_terms_qualified": false,
+  "experiment_ready_to_freeze": false,
+  "audio_generated": false,
+  "map_or_calibration_fit_executed": false,
+  "saved_fitted_maps_used_for_selection": false,
+  "scope": "Geometry and conditional interval-budget feasibility only. No probability, acoustic detection or physical accuracy certification; original failed study remains failed."
+}

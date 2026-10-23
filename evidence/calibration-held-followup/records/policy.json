@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scope": "Prospective geometry design only. No waveform generation, no map or calibration fitting, no experiment freeze or promotion.",
+  "source_settings": "/Users/nazeeh/EchoSight/evidence/calibration-room-transfer-plan/settings.json",
+  "source_settings_sha256": "5ad0d78ff56bd9af16b3c1713913f91cf7fbfd5bab14d17ea03172b97ff69f99",
+  "candidate_window_s": 0.0002,
+  "candidate_error_about_ideal_budget_s": 0.0002,
+  "prediction_error_about_ideal_budget_s": 0.0002,
+  "budget_status": "Hypothetical engineering intervals, chosen from the existing window before search; the residual gate does not establish these separate bounds. No calibrated coverage or hard error bound is claimed.",
+  "sample_rate_hz": 48000,
+  "detector_spacing_samples": 17,
+  "per_peak_interpolation_bound_samples": 0.5,
+  "search": {
+    "grid_step_m": 0.25,
+    "room_boundary_clearance_m": 0.5,
+    "source_clearance_m": 0.3,
+    "existing_mapping_or_held_clearance_m": 0.1,
+    "between_selected_stops_clearance_m": 1.0,
+    "minimum_nonzero_centered_singular_value_m": 0.2,
+    "selection": "Sort by descending minimum separation between all six ideal echoes and direct path, then lexicographic xyz; greedy four stops meeting spacing, clearance and rank criteria. No saved fitted maps or audio influence selection."
+  },
+  "error_policy": "Reflected-pair exclusion requires ideal separation > window + candidate_budget + prediction_budget. Peak-index lower bound is floor(fs*(separation - 2*candidate_budget) - 1), conservatively accounting for two half-sample interpolations. Direct-pair lower bound uses one candidate budget. Own-candidate inclusion for nonzero prediction error is unknown and must be tested from actual data.",
+  "unchanged_criteria": "All original geometry, full24path RMS/max, timing, comparator gain and null gates remain; no favorable-subset scoring.",
+  "audio_generated": false,
+  "experiment_frozen": false
+}

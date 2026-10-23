@@ -1,0 +1,209 @@
+{
+  "source_prefix": "work/held-followup",
+  "files": {
+    "work/held-followup/PROTOCOL.md": {
+      "sha256": "d30c64b6d8f3b11a181301f605e14bc2083679d60e89299382d85c4635ee85cb",
+      "bytes": 5543,
+      "included": "records/PROTOCOL.md"
+    },
+    "work/held-followup/settings.json": {
+      "sha256": "b520bb929ac680076389fcc31f6efaddbd6f8d1cde1a5936b44c4e660690974f",
+      "bytes": 3278,
+      "included": "records/settings.json"
+    },
+    "work/held-followup/freeze.json": {
+      "sha256": "a2e5df60b72c7ba996abab223168705297de1f4a23f44bc21c33a6d0d73b05bc",
+      "bytes": 7927,
+      "included": "records/freeze.json"
+    },
+    "work/held-followup/static-check.json": {
+      "sha256": "c99e492f815688f701721da3c5828d70124ac989ab47b2cc4796c2a6b7f13985",
+      "bytes": 13020,
+      "included": "records/static-check.json"
+    },
+    "work/held-followup/root-execution-approval.json": {
+      "sha256": "f41750b408eefb21a3979dd3d2b4ed93dd9ffa5422e24be99bf92152ccf10d26",
+      "bytes": 596,
+      "included": "records/root-execution-approval.json"
+    },
+    "work/held-followup/render-start.json": {
+      "sha256": "3ddd952ef56595fa64191b8e198d1e3fb91ecac305662000b53e17227e6e342d",
+      "bytes": 90,
+      "included": "records/render-start.json"
+    },
+    "work/held-followup/render-complete.json": {
+      "sha256": "ec80213db2c98cb6f7f5f003f9a4d82cff1f193682adc98d61127d599950fa5f",
+      "bytes": 307,
+      "included": "records/render-complete.json"
+    },
+    "work/held-followup/run-start.json": {
+      "sha256": "437039c167b5ff4cf7816db0a3b57d18901c16c8ca0d1cd929d2d5d4819135c0",
+      "bytes": 246,
+      "included": "records/run-start.json"
+    },
+    "work/held-followup/policy.json": {
+      "sha256": "51ec0563279cdfd33f522f6838117910f2bc15300c80ccbc1fa4958237d3192f",
+      "bytes": 1946,
+      "included": "records/policy.json"
+    },
+    "work/held-followup/proposed-catalog.json": {
+      "sha256": "c5b3992a1d6c57016252d618c2bdbefc5cba490f3f51eca600c1bf3fec261552",
+      "bytes": 2962,
+      "included": "records/proposed-catalog.json"
+    },
+    "work/held-followup/design-assessment.json": {
+      "sha256": "39b69cfd177cca922452e2fa96b9103bf8b570d77ebdd5edbf5377073c45c620",
+      "bytes": 14704,
+      "included": "records/design-assessment.json"
+    },
+    "work/held-followup/saved-map-oracle-diagnostic.json": {
+      "sha256": "2cb1032c4d98fb529a90104a2b6d74db57c0e2241b62627f49a3eb85bd08d504",
+      "bytes": 59549,
+      "included": "records/saved-map-oracle-diagnostic.json"
+    },
+    "work/held-followup/run.py": {
+      "sha256": "38340f5a469e080777a4c33014df75142a7ce030808f93f51cba81f121f35f05",
+      "bytes": 15344,
+      "included": "records/original-run.py"
+    },
+    "work/held-followup/results.json": {
+      "sha256": "c3ea25406160ec4fe2da88ed368d67eca131f5169eff1714c94723fd7e16c661",
+      "bytes": 201612,
+      "included": "expected-results.json"
+    },
+    "work/held-followup/extractions/2821.json": {
+      "sha256": "bc433e4616cf442587602591c9bc256a1a33ad88f54db8696619052eb7fd88d4",
+      "bytes": 591574,
+      "included": "extractions/2821.json",
+      "projection_only": true,
+      "omitted": "Dense impulse responses, clocks, amplitudes, diagnostics, acquisition and other unused extraction fields. Full extraction identity is recorded, not recomputable from projection."
+    },
+    "work/held-followup/extractions/2821-timing.json": {
+      "sha256": "adf0a516d6d92aa71fe499ae0aa2d1774591f88a376a4ac32c8251eb66462557",
+      "bytes": 129,
+      "included": "records/extractions/2821-timing.json"
+    },
+    "work/held-followup/raw/2821/session.json": {
+      "sha256": "98d3869c3b4f6b25c5900380269a6a58d57e475381308ba49cf1c735c02707c9",
+      "bytes": 2762,
+      "included": "records/raw/2821/session.json"
+    },
+    "work/held-followup/raw/2821/truth.json": {
+      "sha256": "8450a49bee5e88a65644799aa766494d338a082be39f143a16b1559c63f870d7",
+      "bytes": 7741,
+      "included": "records/raw/2821/truth.json"
+    },
+    "work/held-followup/raw/2821/manifest.json": {
+      "sha256": "0202ceda5801e31473f7138243a861accae86b58e3bd4e01bc4e336116e85d6b",
+      "bytes": 525,
+      "included": "records/raw/2821/manifest.json"
+    },
+    "work/held-followup/raw/2821/capture-00.wav": {
+      "sha256": "a971cce490eb80ea53ee0452dd723de720638fbc057145546866f70ab9283e17",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2821/capture-01.wav": {
+      "sha256": "89c32dc5955150233d3ea14063c30eb94695e88d4b0b195e95ba9875527b2750",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2821/capture-02.wav": {
+      "sha256": "e4ece19bddeb40b0a805f0793b64f27d054bb4b6c08f97e012ab1beb09efbf6b",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2821/capture-03.wav": {
+      "sha256": "ec050b798d498f3b06a01e46322c3db62bf21c20a28821ecc6dd1ad6d0f72397",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/extractions/2833.json": {
+      "sha256": "8c722a69d6d4d35f84f6bb1c25e2486aebc68576627d4cc022e2d7bae386c3ea",
+      "bytes": 591450,
+      "included": "extractions/2833.json",
+      "projection_only": true,
+      "omitted": "Dense impulse responses, clocks, amplitudes, diagnostics, acquisition and other unused extraction fields. Full extraction identity is recorded, not recomputable from projection."
+    },
+    "work/held-followup/extractions/2833-timing.json": {
+      "sha256": "c7ce984eea3ed60ea77228bfedc33664ace0fd55bf2c5f4b655a2184e17f2716",
+      "bytes": 130,
+      "included": "records/extractions/2833-timing.json"
+    },
+    "work/held-followup/raw/2833/session.json": {
+      "sha256": "71ef76c38543f18e85bb831c09449254defb79b198b2e624c43f8c46adea6770",
+      "bytes": 2759,
+      "included": "records/raw/2833/session.json"
+    },
+    "work/held-followup/raw/2833/truth.json": {
+      "sha256": "c9ce0d3f5a36ce2ea8cbbf6f5f91aed056e4b79e24b7fd7f835511009df6c127",
+      "bytes": 7744,
+      "included": "records/raw/2833/truth.json"
+    },
+    "work/held-followup/raw/2833/manifest.json": {
+      "sha256": "b19cdd65d7caa8be15050016e2b29e1a5f40a947d81c8cdc966294ab50dc47a0",
+      "bytes": 525,
+      "included": "records/raw/2833/manifest.json"
+    },
+    "work/held-followup/raw/2833/capture-00.wav": {
+      "sha256": "a444e17285d27aa73078756967e45e7cd15c8477232dafd48d45d18ab608ba73",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2833/capture-01.wav": {
+      "sha256": "60228cd4f5cbf811faac9606799b16ffa4e462a617ceef7766eb6a971d3bb78e",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2833/capture-02.wav": {
+      "sha256": "e87cfbb2ebe456af1e47f2be2ed38d4feb8d44999c1bf072e04c2b732b10ee70",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup/raw/2833/capture-03.wav": {
+      "sha256": "75afa48cea654cbbce4f5389814888a756cf086a8173c4a8a15cb906ace18858",
+      "bytes": 262128,
+      "included": false,
+      "omitted": "Raw audio retained separately; saved-output replay cannot independently verify omitted bytes or repeat extraction."
+    },
+    "work/held-followup-review/REVIEW.md": {
+      "sha256": "f74984b02a82ff9549e6a899dc527fdbc55fb6f8986082a57a64c9eaae07b2c7",
+      "bytes": 3720,
+      "included": "reviews/REVIEW.md"
+    },
+    "work/held-followup-review/execution/REVIEW.md": {
+      "sha256": "336edeac4fa6270243efa9754e9b46fd76cc918aba74dda0c23ba5a2512cc06f",
+      "bytes": 3618,
+      "included": "reviews/execution/REVIEW.md"
+    },
+    "work/held-followup-review/execution/recompute.py": {
+      "sha256": "0a521bbf8fd23162c3827a08067e4db099f404ae8e7556a5522953b237673758",
+      "bytes": 10202,
+      "included": "reviews/execution/recompute.py"
+    },
+    "work/held-followup-review/execution/verification.json": {
+      "sha256": "6c0d73ae849a320f3aa3010cc17eb053bf92b8de6e8733633ba0ab95fa576eae",
+      "bytes": 204359,
+      "included": "reviews/execution/verification.json"
+    },
+    "work/held-followup-review/execution/geometry_check.py": {
+      "sha256": "fc9f8720016e75541164f9ecc71bf327c93e78db9fb8c50101dad710991cba4f",
+      "bytes": 4259,
+      "included": "reviews/execution/geometry_check.py"
+    },
+    "work/held-followup-review/execution/geometry-verification.json": {
+      "sha256": "dad340381a4f89da90462bfc8e2ccef084e0feafe31b989fcd2be23c26c26dfd",
+      "bytes": 4165,
+      "included": "reviews/execution/geometry-verification.json"
+    }
+  },
+  "projection_fields": "status/surfaces; observations capture_id/status/receiver_position_m; candidates candidate_id/delay_s/merged when present",
+  "scope": "Packaging checked full saved bytes locally. Hash identities do not independently verify omitted bytes on another checkout."
+}

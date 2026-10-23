@@ -1,0 +1,362 @@
+[
+  {
+    "capture_id": "proposed-held-00",
+    "position_m": [
+      1.25,
+      2.25,
+      0.5
+    ],
+    "paths": [
+      {
+        "delay_s": 0.0033369927678075684,
+        "amplitude": 0.55,
+        "kind": "direct",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.008686449721688154,
+        "amplitude": 0.14790187668941376,
+        "kind": "wall-0-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.023947157877501256,
+        "amplitude": 0.05364904771488353,
+        "kind": "wall-0-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.011063401101408004,
+        "amplitude": 0.11612543049193153,
+        "kind": "wall-1-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.017146573373388513,
+        "amplitude": 0.07492705321518259,
+        "kind": "wall-1-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.005746359618836081,
+        "amplitude": 0.22357497630232498,
+        "kind": "wall-2-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.013477353068818388,
+        "amplitude": 0.0953260042269229,
+        "kind": "wall-2-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      }
+    ],
+    "alpha": 0.999966611292086,
+    "offset_s": 0.07816785925568237,
+    "recording_sha256": "a971cce490eb80ea53ee0452dd723de720638fbc057145546866f70ab9283e17"
+  },
+  {
+    "capture_id": "proposed-held-01",
+    "position_m": [
+      3.0,
+      0.5,
+      1.5
+    ],
+    "paths": [
+      {
+        "delay_s": 0.005111686555009684,
+        "amplitude": 0.55,
+        "kind": "direct",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.013434830505842108,
+        "amplitude": 0.14648486431019342,
+        "kind": "wall-0-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.01889211984368559,
+        "amplitude": 0.10417038108809705,
+        "kind": "wall-0-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.007131235683218447,
+        "amplitude": 0.2759689079285257,
+        "kind": "wall-1-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.022430445728656857,
+        "amplitude": 0.08773786074007602,
+        "kind": "wall-1-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.009580434428899168,
+        "amplitude": 0.20541858913436137,
+        "kind": "wall-2-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.011553502098443934,
+        "amplitude": 0.17033790333961038,
+        "kind": "wall-2-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      }
+    ],
+    "alpha": 0.9999567424583049,
+    "offset_s": 0.0588167977722162,
+    "recording_sha256": "89c32dc5955150233d3ea14063c30eb94695e88d4b0b195e95ba9875527b2750"
+  },
+  {
+    "capture_id": "proposed-held-02",
+    "position_m": [
+      0.5,
+      3.0,
+      2.25
+    ],
+    "paths": [
+      {
+        "delay_s": 0.005976163014372402,
+        "amplitude": 0.55,
+        "kind": "direct",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.00783849983022001,
+        "amplitude": 0.29352845702221514,
+        "kind": "wall-0-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.026406064263297106,
+        "amplitude": 0.08713236238432491,
+        "kind": "wall-0-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.013567078608602534,
+        "amplitude": 0.16958866583661442,
+        "kind": "wall-1-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.01534232976971027,
+        "amplitude": 0.1499656698212676,
+        "kind": "wall-1-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.011584368821347467,
+        "amplitude": 0.1986144256986587,
+        "kind": "wall-2-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.00978297017250406,
+        "amplitude": 0.2351865251516405,
+        "kind": "wall-2-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      }
+    ],
+    "alpha": 1.0001032617796148,
+    "offset_s": 0.048195229629932,
+    "recording_sha256": "e4ece19bddeb40b0a805f0793b64f27d054bb4b6c08f97e012ab1beb09efbf6b"
+  },
+  {
+    "capture_id": "proposed-held-03",
+    "position_m": [
+      1.75,
+      1.0,
+      0.5
+    ],
+    "paths": [
+      {
+        "delay_s": 0.0027880812469618836,
+        "amplitude": 0.55,
+        "kind": "direct",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.00989039131120115,
+        "amplitude": 0.10853071898830295,
+        "kind": "wall-0-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.02244877894601238,
+        "amplitude": 0.04781602075826924,
+        "kind": "wall-0-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.007564638980516064,
+        "amplitude": 0.14189854702188265,
+        "kind": "wall-1-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.02071966104058994,
+        "amplitude": 0.05180641121384688,
+        "kind": "wall-1-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.005445964118156716,
+        "amplitude": 0.19710215800019637,
+        "kind": "wall-2-0",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      {
+        "delay_s": 0.013352038123404564,
+        "amplitude": 0.08039306584953203,
+        "kind": "wall-2-1",
+        "fir_offsets_samples": [
+          0
+        ],
+        "fir_coefficients": [
+          1.0
+        ]
+      }
+    ],
+    "alpha": 0.9997656038597826,
+    "offset_s": 0.04761025332793317,
+    "recording_sha256": "ec050b798d498f3b06a01e46322c3db62bf21c20a28821ecc6dd1ad6d0f72397"
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "candidate_window_s": 0.0002,
+  "required_path_ids": [
+    "wall-0-0",
+    "wall-0-1",
+    "wall-1-0",
+    "wall-1-1",
+    "wall-2-0",
+    "wall-2-1"
+  ],
+  "captures": [
+    {
+      "capture_id": "proposed-held-00",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.005349456953880586
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.020610165109693684
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.007726408333600435
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.013809580605580943
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.002409366851028512
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.010140360301010818
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-01",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.008323143950832423
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.013780433288675906
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.0020195491282087624
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.017318759173647173
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.004468747873889485
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.006441815543434249
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-02",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.0018623368158476076
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.020429901248924704
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.007590915594230132
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.009366166755337867
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.005608205806975065
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.0038068071581316577
+        }
+      ]
+    },
+    {
+      "capture_id": "proposed-held-03",
+      "paths": [
+        {
+          "path_id": "wall-0-0",
+          "excess_delay_s": 0.007102310064239266
+        },
+        {
+          "path_id": "wall-0-1",
+          "excess_delay_s": 0.019660697699050492
+        },
+        {
+          "path_id": "wall-1-0",
+          "excess_delay_s": 0.00477655773355418
+        },
+        {
+          "path_id": "wall-1-1",
+          "excess_delay_s": 0.01793157979362806
+        },
+        {
+          "path_id": "wall-2-0",
+          "excess_delay_s": 0.0026578828711948327
+        },
+        {
+          "path_id": "wall-2-1",
+          "excess_delay_s": 0.010563956876442682
+        }
+      ]
+    }
+  ]
+}
