@@ -2,7 +2,7 @@
 
 The PHANTOM measured-NLOS route adapts Li et al. (2025), DOI 10.1038/s42005-025-02335-3,
 using the exact official [Glasgow dataset/code](https://researchdata.gla.ac.uk/2046/),
-CC BY 4.0. [Packaged attribution and changes](../echosight/notices/li2025/NOTICE.md)
+CC BY 4.0. [Packaged attribution and changes](../echosight/LICENSE_SCOPE.txt)
 and [exact input/execution limits](MEASURED_NLOS.md) distinguish this released-code
 baseline from a complete paper-pipeline, calibration or new-method claim. Raw
 measurements/full output volumes are excluded from Git. Existing room evidence

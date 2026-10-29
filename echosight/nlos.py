@@ -1,6 +1,6 @@
 """Released Li et al. Fig2 measured-NLOS route, adapted under CC BY4.0.
 
-Published source and changes: notices/li2025/NOTICE.md (packaged with EchoSight). This ports the
+Published source and changes: LICENSE_SCOPE.txt (packaged with EchoSight). This ports the
 released no-envelope/native-grid code; filtering and calibration are unresolved.
 """
 from pathlib import Path

@@ -17,3 +17,16 @@ excluded from this scope. Their permissions are not changed or asserted.
 The copyright holder approved this exact source scope on 2026-10-15. The
 license and scope are included with the runtime. Existing 0.3.0 release assets
 remain unchanged. This is not a whole-repository MIT grant.
+
+Measured-NLOS figures and measurement metadata
+
+Tailin Li, Ilya Starshynov, Khaled Kassem, Zongliang Xie, Ge Ren,
+Yihan Luo and Daniele Faccio (2025). Published method:
+https://doi.org/10.1038/s42005-025-02335-3
+Dataset: https://doi.org/10.5525/gla.researchdata.2046
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Source-derived figures retain those terms. Changes: Python port of the released
+Fig2 full-phase/native55x55 route, bounded-slab Stolt interpolation, one FFT
+worker, omitted MATLAB windows and added quantitative PNG/HTML displays.
+Exact source/input identities are in notices/li2025/source-manifest.json;
+execution and measurement limits remain in docs/MEASURED_NLOS.md.

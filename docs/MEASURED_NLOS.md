@@ -83,7 +83,7 @@ quantized display subset; its native indices, scaling and hash are in the report
 
 ## Method, evidence and limits
 
-This adapts Li et al.'s [released code](../echosight/notices/li2025/NOTICE.md)
+This adapts Li et al.'s [released code](../echosight/LICENSE_SCOPE.txt)
 for [DOI 10.1038/s42005-025-02335-3](https://doi.org/10.1038/s42005-025-02335-3).
 It retains phase and uses three adjacent pairwise sums (K = 3), no envelope,
 no spatial upsampling, a padded FFT, linear Stolt migration, an inverse FFT,
