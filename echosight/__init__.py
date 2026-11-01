@@ -1,3 +1,3 @@
 """EchoSight acoustic backend. No hardware accuracy is implied by this version."""
-__version__ = "0.3.2"
+__version__ = "0.3.3"
 
