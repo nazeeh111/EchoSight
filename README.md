@@ -19,7 +19,16 @@ Reconstruct a scene from published ultrasound measurements, inspect native depth
 
 ## Install the backend
 
-Use macOS or Linux and Python 3.12 with compatible NumPy/SciPy wheels. Native Windows is unsupported because the local store uses POSIX file locking. The default branch is `backend/implementation`.
+Use macOS or Linux and Python 3.12 with compatible NumPy/SciPy wheels. Native Windows is unsupported because the local store uses POSIX file locking. The [v0.3.3 wheel](https://github.com/nazeeh111/EchoSight/releases/tag/v0.3.3) includes the local recording workspace and bundled viewer assets, so a Git checkout is optional:
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install "https://github.com/nazeeh111/EchoSight/releases/download/v0.3.3/echosight-0.3.3-py3-none-any.whl"
+echosight serve --root work/store --port 8766 --ui
+```
+
+Open the printed workspace address. For the full source, tests, Blender assets and frozen evidence, use the `backend/implementation` branch instead:
 
 ```sh
 git clone --branch backend/implementation https://github.com/nazeeh111/EchoSight.git
