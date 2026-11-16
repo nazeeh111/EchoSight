@@ -19,6 +19,8 @@ Reconstruct a scene from published ultrasound measurements, inspect native depth
 
 ## Install the backend
 
+The current source is unreleased `0.3.4.dev0`. It adds a bounded in-memory observation cache and clearer guidance display; the historical `0.3.3` wheel below predates these changes. The measured ultrasound reconstruction and experimental room-recording workflow are separate methods with separate evidence and limitations.
+
 Use macOS or Linux and Python 3.12 with compatible NumPy/SciPy wheels. Native Windows is unsupported because the local store uses POSIX file locking. The [v0.3.3 wheel](https://github.com/nazeeh111/EchoSight/releases/tag/v0.3.3) includes the local recording workspace and bundled viewer assets, so a Git checkout is optional:
 
 ```sh
@@ -52,7 +54,7 @@ echosight nlos-fig2 --input /your/data/2024_2_29_22_26_32641_star_dig_H.mat \
   --sample-rate-hz 1000000
 ```
 
-Use a new output directory. Open its self-contained `inspection.html` to scrub native depth bins and inspect a pixel’s amplitude profile, source-array location and threshold sensitivity. Crossings use full-precision arrays; the displayed curve is quantized. `report.json` records provenance, resource use and artifact hashes; NumPy arrays retain full precision. [Method, evidence and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits) distinguish this released-code baseline from calibrated room geometry and future adaptive work.
+Use a new output directory. Open its self-contained `inspection.html` to scrub native depth bins and inspect a pixel’s amplitude profile, source-array location and threshold sensitivity. The displayed source-depth coordinates are not registered to the room frame; absolute depth calibration remains unresolved. The 1.372 mm bin spacing is not a resolution or uncertainty measurement. Crossings use full-precision arrays; the displayed curve is quantized. `report.json` records provenance, resource use and artifact hashes; NumPy arrays retain full precision. [Method, evidence and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits) distinguish this released-code baseline from calibrated room geometry and future adaptive work.
 
 ## Other local routes
 
@@ -65,6 +67,8 @@ python -m echosight serve --root work/store --port 8766 --ui
 ```
 
 Open the printed processing-workspace address. The UI is opt-in and stays on loopback; omit `--ui` for the native-client-only API. [Workspace instructions and recovery](docs/WORKSPACE.md).
+
+The local server reuses eligible recording-derived observations in a bounded, process-local memory cache. It rechecks recording inputs and recomputes geometry and interpretation; restarting the server clears the cache while the recording store remains. [Cache scope and provenance](docs/WORKSPACE.md#reusing-observation-processing).
 
 The room-recording workflow uses one fixed sound source and surveyed microphone positions. Its JSON geometry and evidence do not drive the animated room demo. [Recording inputs, calibration and replay](docs/USAGE.md).
 

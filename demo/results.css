@@ -34,6 +34,8 @@
 .result-inspector dl,.result-details dl {display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:18px 0;overflow-wrap:anywhere}
 .results-page dt {color:var(--muted)}
 .results-page dd {margin:0}
+.result-details .guidance-position {grid-column:1 / -1}
+.result-details dd.guidance-position div {white-space:nowrap;overflow-x:auto}
 .evidence-scroll {overflow:auto;max-height:320px;margin-top:14px;border-top:1px solid var(--line)}
 .results-page table {border-collapse:collapse;font-size:11px;line-height:1.5;white-space:nowrap;width:100%}
 .results-page th,.results-page td {text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}

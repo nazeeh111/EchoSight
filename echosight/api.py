@@ -41,7 +41,9 @@ def create_server(root, host='127.0.0.1', port=8765, processor=None, *, ui=False
     if host not in {'127.0.0.1', 'localhost'}: raise ValueError('only loopback binding is supported')
     if processor is None:
         from .pipeline import process_session
-        processor = process_session
+        from .observation_cache import ObservationCache
+        from functools import partial
+        processor = partial(process_session, observation_cache=ObservationCache())
     assets = None
     if ui:
         from .webui import ui_directory

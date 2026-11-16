@@ -13,6 +13,23 @@ function pair(dl, name, value) { dl.append(element('dt', name), element('dd', va
 function list(target, values, fallback) {
   target.replaceChildren(...(values.length ? values.map(value => element('li', label(value))) : [element('li', fallback)]));
 }
+function guidanceList(target, values) {
+  if (!values.length) { list(target, values, 'No measurement guidance supplied.'); return; }
+  target.replaceChildren(...values.map(value => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return element('li', label(value));
+    const item = element('li'), fields = element('dl');
+    for (const [key, content] of Object.entries(value)) {
+      if (key === 'suggested_position_m' && Array.isArray(content) && content.length === 3 && content.every(v => typeof v === 'number' && Number.isFinite(v))) {
+        const term = element('dt', 'Suggested position · result coordinate frame (m)');
+        const detail = element('dd');
+        term.className = 'guidance-position'; detail.className = 'guidance-position';
+        content.forEach((coordinate, index) => detail.append(element('div', `${['X', 'Y', 'Z'][index]}: ${String(coordinate)} m`)));
+        fields.append(term, detail);
+      } else pair(fields, key.replaceAll('_', ' '), label(content));
+    }
+    item.append(fields); return item;
+  }));
+}
 function selectSurface(index) {
   const surface = current[index];
   $('#result-surface').value = surface ? String(current.indexOf(surface)) : '';
@@ -90,7 +107,7 @@ function show(value, name) {
   pair(identity, 'Geometry provenance', label(valid.provenance.geometry ?? 'Not supplied'));
   pair(identity, 'Example omissions', label(valid.example_metadata ?? 'None declared'));
   list($('#result-diagnostics'), valid.diagnostics ?? [], 'No diagnostics supplied.');
-  list($('#result-guidance'), valid.guidance ?? [], 'No measurement guidance supplied.');
+  guidanceList($('#result-guidance'), valid.guidance ?? []);
   const dimensions = Array.isArray(valid.dimensions) ? valid.dimensions.slice(0, 64) : [];
   list($('#result-dimensions'), dimensions.map(dimension => `${number(dimension.value_m)} m · standard deviation ${number(dimension.std_m, 5)} m · reference ${label(dimension.reference_point_m)} · direction ${label(dimension.direction)}`), 'No local separations supplied.');
   notice(`Loaded ${name}. Display checks cover the rendering contract; they do not authenticate recordings or establish scientific accuracy.`);

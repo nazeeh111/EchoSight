@@ -134,7 +134,7 @@ def _run_stored_session(store, session_id):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="EchoSight acoustic backend")
+    parser = argparse.ArgumentParser(description="EchoSight: measured ultrasound reconstruction and experimental room-recording tools. Synthetic demos do not validate physical performance.")
     sub = parser.add_subparsers(dest="command", required=True)
     command = sub.add_parser("nlos-fig2", help="reconstruct the pinned external measured Fig2 ultrasound scene offline")
     command.add_argument("--input", type=Path, required=True, help="caller-provided exact official Fig2 MAT; never downloaded automatically")
@@ -163,7 +163,7 @@ def main(argv=None):
     command.add_argument("--seed", type=int, default=1)
     command.add_argument("--captures", type=int, default=None)
     command.add_argument("--interpretation-context", type=Path, help="material/appearance context JSON saved in the generated demo session")
-    command = sub.add_parser("refine-demo", help="show what additional independent recording positions establish")
+    command = sub.add_parser("refine-demo", help="compare synthetic recording positions and reuse eligible observations in memory")
     command.add_argument("directory", type=Path)
     command.add_argument("--seed", type=int, default=1)
     command.add_argument("--initial-captures", type=int, default=4)
@@ -200,7 +200,7 @@ def main(argv=None):
     command.add_argument("archive", type=Path)
     command.add_argument("--store", type=Path, required=True)
     command.add_argument("--output", type=Path, required=True)
-    command = sub.add_parser("serve", help="run the local HTTP API")
+    command = sub.add_parser("serve", help="run the local HTTP API; its observation cache lasts only for this process")
     command.add_argument("--root", type=Path, default=Path("work/store"))
     command.add_argument("--host", default="127.0.0.1")
     command.add_argument("--port", type=int, default=8765)
@@ -346,7 +346,10 @@ def main(argv=None):
                 raise ValueError("initial capture count must be at least 3 and below final count")
             session = load_session(simulate_session(args.directory, seed=args.seed, capture_count=args.captures))
             initial = dict(session, captures=session["captures"][:args.initial_captures])
-            before, after = process_session(initial), process_session(session)
+            from .observation_cache import ObservationCache
+            cache = ObservationCache()
+            before = process_session(initial, observation_cache=cache)
+            after = process_session(session, observation_cache=cache)
             comparison = compare_results(before, after)
             require_new_outputs(generated_results)
             save_result(before, args.directory / "initial-result.json", overwrite=False)
@@ -377,7 +380,7 @@ def main(argv=None):
             print(json.dumps(_summary(result), indent=2, allow_nan=False))
         elif args.command == "serve":
             from .api import create_server
-            server = create_server(args.root, host=args.host, port=args.port, processor=process_session, ui=args.ui)
+            server = create_server(args.root, host=args.host, port=args.port, ui=args.ui)
             print(f"EchoSight API: http://{args.host}:{server.server_address[1]}", flush=True)
             if args.ui: print(f"Processing workspace: http://{args.host}:{server.server_address[1]}/ui/results.html", flush=True)
             try:

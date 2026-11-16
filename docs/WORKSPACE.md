@@ -8,6 +8,10 @@ python -m echosight serve --root work/store --ui
 
 Open the printed `/ui/results.html` address. Keep this server running while jobs process. Omit `--ui` to retain the native-client-only API. Serving `demo/results.html` with the separate demo server remains a file-only result inspector.
 
+![Synthetic recording result with separate position coordinates at phone width](assets/workspace-guidance-0.3.4-dev.png)
+
+This 320 px headless-browser capture shows a completed synthetic five-recording workspace result. The ambiguous result and suggested X/Y/Z position are model output, not a physical room measurement. Capture SHA-256: `824295501c8732572a6d0f783ba51b39bc42e861b1bb63c1f21dfca6d770999e`. The rendered `demo/results.js` and `demo/results.css` hashes are `3cb6d165f97a4eed8fac0feab524ac8e2e52f3078c72baeba7548b9bf251b476` and `eb92df6f7baee6aad7e16af57b1ca1c404e101bc40b03c6d2a789a48af36a576` respectively.
+
 ## Original recordings and calibration
 
 Load a session definition JSON or edit its calibration JSON and create a session. A definition's capture entries become a separate upload plan; computed/unsupported top-level fields are omitted and reported. Inspect the plan before selecting the corresponding original WAV or native/phyphox ZIP files. Each capture needs a unique `capture_id`, `recording_path` matching a selected basename, explicit `provenance` (`measured`, `simulated`, `replayed` or `supplied`), and any surveyed receiver pose and uncertainty. The UI never reads a server path from a definition. Provenance is a supplied declaration, not an authenticity certification.
@@ -41,3 +45,25 @@ The report shows corresponding patches, newly supported patches, previously supp
 The service binds only loopback. Browser mode is explicit, same-origin, with a random per-process token kept in page memory. Tokens are absent from URLs, browser storage and server logs. No CORS, remote paths, microphone or device pairing is added. This boundary protects against other web origins, not software already running as your local user. A separate design is required for remote hosting or multi-user access.
 
 The supplied-model animated demo and measured NLOS/PHANTOM route are separate from room-recording inference. Geometry displays only backend-supported patches, without invented wall edges/enclosure/free space. Synthetic success and software checks do not establish measured-room accuracy, hardware qualification or material accuracy. See [viewer limits](RESULT_VIEWER.md), [acquisition](ACQUISITION.md) and [hardware acceptance](HARDWARE_ACCEPTANCE.md).
+
+### Reusing observation processing
+
+The local server keeps a bounded in-memory cache of successful recording-derived
+observations for its lifetime. Every run still rereads and checks the recording,
+its acquisition eligibility and source declarations, and reruns geometry and
+interpretation for the current session. Changing a recording, probe, nominal
+rate, sound-speed input, capture ID, implementation or numerical runtime causes
+a miss. Cache counts appear in result provenance under `observation_cache`.
+Corrupt entries are discarded and recalculated. The cache is not written to the
+session archive and is empty after server restart; it is neither authentication
+nor a physical-validation claim. Concurrent misses can perform duplicate work.
+
+Library callers can share an explicitly owned cache across session runs:
+
+```python
+from echosight.observation_cache import ObservationCache
+from echosight.pipeline import process_session
+cache = ObservationCache()  # bounded; discard or clear when no longer needed
+first = process_session(session, observation_cache=cache)
+revised = process_session(updated_session, observation_cache=cache)
+```

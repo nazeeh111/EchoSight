@@ -45,7 +45,7 @@ def _empty(session: dict, status: str, diagnostics: list) -> dict:
 
 
 def process_session(session: dict | str | Path, cancel=None, progress=None,
-                    *, method: str = "mapper") -> dict:
+                    *, method: str = "mapper", observation_cache=None) -> dict:
     """Process raw records without accepting scene truth or preassigned echoes.
 
     `cancel` is a zero-argument predicate. `progress` receives fraction/message.
@@ -75,6 +75,14 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
         return _empty(session, "no_result", [{"code": "missing_calibration",
                       "message": "Supply required acquisition metadata: " + ", ".join(missing)}])
 
+    implementation = hashlib.sha256()
+    for module in sorted(Path(__file__).parent.glob("*.py")):
+        implementation.update(module.name.encode())
+        implementation.update(module.read_bytes())
+    implementation_sha256 = implementation.hexdigest()
+    runtime_versions = {"python": platform.python_version(),
+        "numpy": importlib.metadata.version("numpy"), "scipy": importlib.metadata.version("scipy")}
+    cache_counts = {"hit": 0, "miss": 0, "corrupt": 0, "not_stored": 0}
     observations = []
     fingerprints = []
     captures = session.get("captures", [])
@@ -95,9 +103,24 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
                 observation={'capture_id':capture_id,'status':'rejected','candidates':[],
                     'diagnostics':[{'code':'acquisition_not_continuous','message':', '.join(acquisition['rejection_reasons'])}]}
             else:
-                observation = process_recording(samples, rate, session["probe"], capture_id,
-                                                sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
-                                                cancel=cancel)
+                cache_key = None
+                observation = None
+                if observation_cache is not None:
+                    key_data = {"version": 1, "recording": digest, "waveform": input_evidence['waveform_sha256'],
+                                "rate": rate, "probe": session["probe"], "capture_id": capture_id,
+                                "speed": session.get("sound_speed_m_s", 343.0),
+                                "implementation": implementation_sha256, "runtime": runtime_versions}
+                    cache_key = hashlib.sha256(json.dumps(key_data, sort_keys=True, separators=(',', ':'),
+                                                         allow_nan=False).encode()).hexdigest()
+                    observation, outcome = observation_cache.get(cache_key)
+                    cache_counts[outcome] += 1
+                if observation is None:
+                    observation = process_recording(samples, rate, session["probe"], capture_id,
+                                                    sound_speed_m_s=session.get("sound_speed_m_s", 343.0),
+                                                    cancel=cancel)
+                    if observation_cache is not None and observation.get('status') == 'ok' and not cancel():
+                        if not observation_cache.put(cache_key, observation):
+                            cache_counts['not_stored'] += 1
             observation['waveform_sha256']=input_evidence['waveform_sha256']
             observation['input_format']=input_evidence['format']
             observation['input_diagnostics']=list(dict.fromkeys(capture.get('diagnostics',[])+input_evidence['diagnostics']))
@@ -163,13 +186,10 @@ def process_session(session: dict | str | Path, cancel=None, progress=None,
                        "coordinates": "right-handed, metres, z up",
                        "poses": "supplied acoustic-center positions",
                        "geometry": "inferred from recording-derived excess delays"})
-    implementation = hashlib.sha256()
-    for module in sorted(Path(__file__).parent.glob("*.py")):
-        implementation.update(module.name.encode())
-        implementation.update(module.read_bytes())
-    provenance["implementation_sha256"] = implementation.hexdigest()
-    provenance["runtime_versions"] = {"python": platform.python_version(),
-        "numpy": importlib.metadata.version("numpy"), "scipy": importlib.metadata.version("scipy")}
+    provenance["implementation_sha256"] = implementation_sha256
+    provenance["runtime_versions"] = runtime_versions
+    if observation_cache is not None:
+        provenance["observation_cache"] = cache_counts
     fingerprint = json.dumps({"session": acquisition, "recordings": fingerprints,
                               "method": method, "software": __version__,
                               "implementation": provenance["implementation_sha256"],
