@@ -9,13 +9,28 @@ Reconstruct a scene from published ultrasound measurements, inspect native depth
 
 *Actual external measured data, ported from the released method. H, dinosaur and resolution star from Li et al. (2025), CC BY 4.0. [Reproduce this case](docs/MEASURED_NLOS.md).*
 
-| Route | What you can do |
-| --- | --- |
-| [Measured NLOS / PHANTOM](https://nazeeh111.github.io/EchoSight/) | Explore the hosted measured reconstruction and native axial slices; [reproduce the exact official Figure 2 MAT case](docs/MEASURED_NLOS.md) to save volume, depth, amplitude and source hashes. |
-| [Local recording workspace](docs/WORKSPACE.md) | Import original recordings, edit calibration with revision checks, run/recover/cancel jobs and inspect their actual backend results. |
-| [Backend result viewer](demo/results.html) | Inspect scene JSON, supported patches, linked echoes and separate hypotheses. |
-| [Room-recording backend](docs/USAGE.md) | Import lossless recordings, inspect calibration and supported surface patches, compare reference-based materials, and export/replay results. |
-| [Room demo](https://github.com/nazeeh111/EchoSight/tree/backend/implementation/demo) | Explore a supplied room model and simulated scan. It does not connect phones or process acoustic measurements. |
+## Choose a route
+
+- **[Measured NLOS / PHANTOM](https://nazeeh111.github.io/EchoSight/):** inspect the hosted reconstruction and native axial slices. [Reproduce the exact official input](docs/MEASURED_NLOS.md) to retain volume, depth, amplitude and source hashes.
+- **[Local recording workspace](docs/WORKSPACE.md):** import original recordings, edit calibration with revision checks, and run/recover/cancel jobs with their actual backend results.
+
+<details>
+<summary>Additional room viewers and backend routes</summary>
+
+- [Backend result viewer](demo/results.html): scene JSON, supported patches, linked echoes and separate hypotheses.
+- [Room-recording backend](docs/USAGE.md): lossless inputs, calibration, supported surface patches, reference-based materials and export/replay.
+- [Room demo](https://github.com/nazeeh111/EchoSight/tree/backend/implementation/demo): a supplied model and simulated scan. It does not connect phones or process acoustic measurements.
+
+</details>
+
+## A separate synthetic room case
+
+**Original recordings stay intact; interpretations are recomputed.** In the actual synthetic workspace case, five views remain ambiguous and twelve support six partial patches. The archive preserves every WAV, while import quarantines saved geometry until a fresh replay. [Inspect the complete worked case, source-bound plot and reopenable archive](docs/presentation/README.md).
+
+<picture>
+ <source media="(max-width: 600px)" srcset="docs/presentation/echo-support-mobile.png">
+ <img src="docs/presentation/echo-support.png" alt="Separate synthetic room case: native processed echo response and actual reflection-support hulls, with ambiguous five-view and partial twelve-view results. Original WAV bytes survive archive export and replay." width="100%">
+</picture>
 
 ## Install the backend
 
@@ -57,13 +72,6 @@ echosight nlos-fig2 --input /your/data/2024_2_29_22_26_32641_star_dig_H.mat \
 Use a new output directory. Open its self-contained `inspection.html` to scrub native depth bins and inspect a pixel’s amplitude profile, source-array location and threshold sensitivity. The displayed source-depth coordinates are not registered to the room frame; absolute depth calibration remains unresolved. The 1.372 mm bin spacing is not a resolution or uncertainty measurement. Crossings use full-precision arrays; the displayed curve is quantized. `report.json` records provenance, resource use and artifact hashes; NumPy arrays retain full precision. [Method, evidence and limits](docs/MEASURED_NLOS.md#method-evidence-and-limits) distinguish this released-code baseline from calibrated room geometry and future adaptive work.
 
 ## Other local routes
-
-**Original recordings stay intact; interpretations are recomputed.** In the actual synthetic workspace case, five views remain ambiguous and twelve support six partial patches. The archive preserves every WAV, while import quarantines saved geometry until a fresh replay. [Inspect the complete worked case, source-bound plot and reopenable archive](docs/presentation/README.md).
-
-<picture>
- <source media="(max-width: 600px)" srcset="docs/presentation/echo-support-mobile.png">
- <img src="docs/presentation/echo-support.png" alt="Separate synthetic room case: native processed echo response and actual reflection-support hulls, with ambiguous five-view and partial twelve-view results. Original WAV bytes survive archive export and replay." width="100%">
-</picture>
 
 Generate and process twelve **synthetic** room recordings, or start the separate recording API:
 
