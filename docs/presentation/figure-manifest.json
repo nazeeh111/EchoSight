@@ -1,0 +1,13 @@
+{
+  "source": "8759b0faa462b47d35bfc7d46755bc32e21cca1a",
+  "encoding": "All 4,225 signed response values at the nominal 48 kHz processing grid; all actual support triangles with common affine projection with one uniform screen scale; synthetic only",
+  "files": {
+    "five-view-result.json": "31db71202046516ece9a9a50d5c9a6ee3e4ad4de084494f495e3b6dc84271b9e",
+    "twelve-view-result.json": "052c30f7809a057470795e82bcb402b0f35c224c98c6f0aaa1d5f960c32fef6a",
+    "figure.py": "8130cd80a727a5e0ed2ca2cf4f592036325b5649eec68434fdbb2601f63da88f",
+    "echo-support.svg": "9cb5bddaa5739eac2b45f36060fda7fe891c5f8626ba88a2701985f5aaf79e05",
+    "echo-support-mobile.svg": "8be70ecc8504fdbc22c47f8f107ee12d8a3a12d88dca42a9f5c1c17524aae37c",
+    "echo-support.png": "149f82ae49c39c39b0c6e3ee1788015427eff8fd2dcc00bdd5e5fa008a7d3df0",
+    "echo-support-mobile.png": "0ef0bcb8db24de46c1bf7b88bd336d42f570452cd97af71089241f3d0676b244"
+  }
+}
