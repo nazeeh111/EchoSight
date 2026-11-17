@@ -291,11 +291,6 @@ def reject_reused_waveforms(observations):
     return rejected
 
 
-def _decode_recording_bytes(raw):
-    samples,rate,_=_decode_recording_evidence(raw)
-    return samples,rate
-
-
 def read_recording_evidence_snapshot(path):
     """Decode waveform and acquisition evidence from the same immutable bytes."""
     raw=_recording_bytes(path)
