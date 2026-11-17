@@ -58,6 +58,13 @@ Use a new output directory. Open its self-contained `inspection.html` to scrub n
 
 ## Other local routes
 
+**Original recordings stay intact; interpretations are recomputed.** In the actual synthetic workspace case, five views remain ambiguous and twelve support six partial patches. The archive preserves every WAV, while import quarantines saved geometry until a fresh replay. [Inspect the complete worked case, source-bound plot and reopenable archive](docs/presentation/README.md).
+
+<picture>
+ <source media="(max-width: 600px)" srcset="docs/presentation/echo-support-mobile.png">
+ <img src="docs/presentation/echo-support.png" alt="Separate synthetic room case: native processed echo response and actual reflection-support hulls, with ambiguous five-view and partial twelve-view results. Original WAV bytes survive archive export and replay." width="100%">
+</picture>
+
 Generate and process twelve **synthetic** room recordings, or start the separate recording API:
 
 ```sh

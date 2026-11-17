@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "source_position_m": [
+    2.1,
+    1.7,
+    1.25
+  ],
+  "source_position_std_m": 0.01,
+  "sound_speed_m_s": 343,
+  "sound_speed_std_m_s": 0.6,
+  "source_clock_scale": 1,
+  "source_clock_std_ppm": 100,
+  "probe": {
+    "sample_rate_hz": 48000,
+    "duration_s": 0.04,
+    "low_hz": 2000,
+    "high_hz": 15000,
+    "repetitions": 7,
+    "period_s": 0.22,
+    "lead_s": 0.1,
+    "tail_s": 0.18,
+    "max_echo_delay_s": 0.08,
+    "schema_version": "1.0",
+    "kind": "repeated_linear_chirp",
+    "pilot_start_samples": [
+      4800,
+      15360,
+      25920,
+      36480,
+      47040,
+      57600,
+      68160
+    ],
+    "sample_count": 78720,
+    "waveform_sha256": "7c4bbea61648ebdc9dc6952c17143910a5a95440baa437f5a0baea931f740c4e",
+    "timing_unit": "source_buffer_seconds"
+  },
+  "captures": [
+    {
+      "capture_id": "capture-00",
+      "receiver_position_m": [
+        0.8518914599520411,
+        1.0220741914121496,
+        0.6430655380351413
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65.wav",
+      "sha256": "f76a8f6d2dc1dc854765704210d48686ea6d569abb5b366016b0f3e2358f2c65",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "5be30ad0887a14bc5a1cefc3f442e1ef307fd2b5d1f1b8e04c29ce0bd6073ad9",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-01",
+      "receiver_position_m": [
+        3.721783911541959,
+        0.6698930323216776,
+        1.637732231835612
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d.wav",
+      "sha256": "5b078d39727875d2b7f41c54082a0fae4002fa15e7e6a458782f9bf83399532d",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "6f819e5dedd9e3d796e1196d7a4a27575a15d396a7cc9a6ab0fc231f656c17f2",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-02",
+      "receiver_position_m": [
+        4.65243241501127,
+        3.385471861819066,
+        0.8579349900276895
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698.wav",
+      "sha256": "6de7704f475f6c7b7352e6ec60f9e7de3f1ac3e8d7d2f2ed36ce9270f4215698",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "57d5e06f20e77ab3cfd8ae16188a1b4d0ead105fda2723036258994fbe734bb0",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-03",
+      "receiver_position_m": [
+        1.024409458118891,
+        3.690562097387969,
+        2.2561029301150843
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc.wav",
+      "sha256": "3c3f1c3825e3e86521fb8116cb97ce0b5a955018572f809d1bb9a8cdd7ebd8bc",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "bcd7c720aca9454e9b6ae970fbacad259d1154353d9f56a26d2b95e115ea445a",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-04",
+      "receiver_position_m": [
+        2.722757074639855,
+        2.9961485925485447,
+        0.4185111726866632
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc.wav",
+      "sha256": "68c78333777b1f9bf55abcae019e1f89ec281a818db7636c05cdc170f2b575dc",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "0e21b0659eca67b2dfdae465942b9c2dc2380f69b4ad80be1db80b7afdcc2a4a",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-05",
+      "receiver_position_m": [
+        4.442559662316905,
+        1.7914466715595465,
+        2.3844980778315406
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced.wav",
+      "sha256": "0e89f6c14a0c0b111deee6f130093fccf971a962e25fcdb352759ab8fd27eced",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "b62c81a6a2828fa96a912d81bf700e3c2ad908e5452e8cf713bc02ddc5152145",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-06",
+      "receiver_position_m": [
+        0.602552838508184,
+        2.111970134470696,
+        1.4900583476208085
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14.wav",
+      "sha256": "ae6497d960f63d6f4d07cf78db0efb4c0c6d2463a72c9eaa53707e3cfc434d14",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "23f94ef860679f2abf235811a8818fd94a6a6883e8ec4f2ebaf6b6f39f17d6c3",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-07",
+      "receiver_position_m": [
+        3.1648654012777664,
+        3.7976305559090613,
+        1.976917951968198
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563.wav",
+      "sha256": "0abf58c4306e2ffca3d5c992ab7b2ce3ae94e707706c37f2a45444750968b563",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "e174d6009e72e4a9f68bb3f3a1829002277d4daec4fd2b3a18f9ddd3da4eafbd",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-08",
+      "receiver_position_m": [
+        2.3762290993076416,
+        2.049895250803779,
+        2.1222364322685054
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918.wav",
+      "sha256": "8c7a68dec9a0e2811ac474a0536801b1bf5649a8f75c23b5a205172273a44918",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "4540018d5c2dd8e5ec84d0419b1c2faed6a20067d1adab7435a657e1f34c13fc",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-09",
+      "receiver_position_m": [
+        4.161312362119726,
+        3.316761604480972,
+        0.7514883680416985
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242.wav",
+      "sha256": "f90512a95fd575df95144543464898700c0ee5c2279f04c8bb0f3a4a7602a242",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "4324a4fd0c639dfe4f2b65a54264d27c6f6eb1709a75916643b0ceb91595736c",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-10",
+      "receiver_position_m": [
+        1.1168219118083624,
+        3.255493897652555,
+        0.9248402961237017
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c.wav",
+      "sha256": "391f7237906fa0434e34b5b35408f647f06196184316392a9d3367fff3089c4c",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "b68c61a5ca140cb55250a9302310cf26ba1d5d16f98429a92c5efc13334f1d61",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    },
+    {
+      "capture_id": "capture-11",
+      "receiver_position_m": [
+        3.438958325187896,
+        1.6436739812738583,
+        1.3653172424431488
+      ],
+      "receiver_position_std_m": 0.01,
+      "provenance": "simulated",
+      "recording_path": "raw/ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae.wav",
+      "sha256": "ed78b3085a23ba40b036927a03d7ed3518fd67bc0670da1fa53099ee029482ae",
+      "sample_rate_hz": 48000,
+      "sample_count": 93120,
+      "duration_s": 1.94,
+      "byte_count": 186284,
+      "channels": 1,
+      "format": "pcm_wav",
+      "diagnostics": [
+        "sample_grid_unverified"
+      ],
+      "waveform_sha256": "223710db7e90821587720a4fe71d5aaf458a8ffbaa282129f00976b33484c5ad",
+      "waveform_hash_semantics": "Exact nominal rate/count and decoded mono Float64 values; signed zero canonicalized for digest only. Distinct hashes do not prove independence."
+    }
+  ],
+  "session_id": "session_924a47066cfd48e2ab8188a6d1bfffb5",
+  "created_at": 1794909107.410778,
+  "revision": 12
+}
