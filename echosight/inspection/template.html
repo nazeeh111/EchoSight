@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Inspect the saved axial slices and threshold decisions from EchoSight’s port of the published Figure 2 ultrasound reconstruction.">
+<title>PHANTOM ultrasound explorer · EchoSight</title>
+<style>{{STYLE}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to explorer</a>
+<header class="mast wrap">
+  <a class="wordmark" href="https://github.com/nazeeh111/EchoSight">EchoSight</a>
+  <nav aria-label="Explorer"><a id="axial-link" href="#axial-view" hidden>Axial viewer</a><a href="#projections">Projections</a><a href="#sources">Sources</a></nav>
+</header>
+<main id="main">
+<section class="intro wrap" aria-labelledby="title">
+  <div><p class="sample">PHANTOM · Published Figure 2</p><h1 id="title">Ultrasound explorer</h1></div>
+  <p>Inspect a saved reconstruction of Li et al.’s measured scene, one depth at a time. EchoSight ports the authors’ released f-k method and supplies this viewer. <a href="https://doi.org/10.5525/gla.researchdata.2046">Dataset DOI</a></p>
+</section>
+<section class="instrument wrap" id="axial-view" aria-label="Axial viewer" hidden>
+  <div class="workspace">
+    <div class="scan">
+      <div class="scan-head"><h2>Axial amplitude</h2><output id="slice-label" for="depth-bin exact-bin"></output></div>
+      <div class="scan-plane">
+        <div class="y-axis" aria-label="Source y, metres"><span id="y-start">−0.21</span><strong>y (m)</strong><span id="y-end">+0.21</span></div>
+        <div class="raster"><canvas id="axial" width="55" height="55" tabindex="0" role="img" aria-label="Axial amplitude raster" aria-describedby="raster-help"></canvas><span id="pixel-marker" aria-hidden="true"></span></div>
+        <div class="x-axis" aria-label="Source x, metres"><span id="x-start">−0.21</span><strong>x (m)</strong><span id="x-end">+0.21</span></div>
+      </div>
+      <div class="scan-tools"><p id="raster-help">Select a pixel, or focus the raster and use the arrow keys.</p><button type="button" id="zoom" aria-pressed="false">2× crop</button></div>
+    </div>
+    <div class="inspect">
+      <section class="depth" aria-labelledby="depth-title">
+        <h2 id="depth-title">Source depth</h2>
+        <label for="depth-bin" class="sr-only">Source depth slice</label>
+        <input id="depth-bin" type="range" min="0" max="{{MAXFRAME}}" value="{{MIDFRAME}}">
+        <div class="depth-window"><span>{{START}} m</span><span>{{END}} m</span></div>
+        <div class="step-controls"><button type="button" id="prev-bin" aria-label="Previous source bin">−</button><label for="exact-bin">Source bin <input id="exact-bin" type="number" inputmode="numeric" min="{{FIRSTBIN}}" max="{{LASTBIN}}" value="{{INITIALBIN}}" step="1"></label><button type="button" id="next-bin" aria-label="Next source bin">+</button></div>
+      </section>
+      <section class="pixel-info" aria-labelledby="pixel-title">
+        <div class="pixel-head"><h2 id="pixel-title">Selected pixel</h2><label>Column <input id="pixel-column" type="number" inputmode="numeric" min="0" max="54" value="{{INITIALX}}" step="1"></label><label>Row <input id="pixel-row" type="number" inputmode="numeric" min="0" max="54" value="{{INITIALY}}" step="1"></label></div>
+        <dl class="readout"><div><dt>Display amplitude</dt><dd id="amplitude"></dd></div><div><dt>First crossing · 4.5</dt><dd id="first-depth"></dd></div></dl>
+        <output id="pixel" aria-live="polite"></output>
+      </section>
+      <section class="profile-area" aria-labelledby="profile-title">
+        <h2 id="profile-title">Axial profile</h2>
+        <canvas id="profile" role="img" aria-label="Selected pixel axial amplitude profile"></canvas>
+        <ul class="plot-key" aria-label="Profile legend"><li>Display amplitude</li><li>Native threshold crossings</li><li>Current slice</li></ul>
+        <details class="diagnostics">
+          <summary>Threshold decisions and full-volume peak</summary>
+          <p id="profile-summary"></p>
+          <table id="threshold-table"><caption>Strict crossings computed before display quantization</caption><thead><tr><th scope="col">Divisor</th><th scope="col">Threshold</th><th scope="col">Source bin / depth</th><th scope="col">Window</th></tr></thead><tbody></tbody></table>
+          <p id="profile-peak"></p>
+          <p>The range across rules describes threshold sensitivity. Crossings can be unknown or lie outside the displayed depth window. The profile uses 8-bit data while crossing markers use native precision.</p>
+        </details>
+      </section>
+    </div>
+  </div>
+  <p class="instrument-note">Nearest-neighbor view of {{FRAMECOUNT}} saved slices on the native 55 × 55 array. Coordinates use the unregistered source plane. The viewer opens at the strongest saved display sample. An amplitude rounded to zero does not establish free space.</p>
+</section>
+<noscript><p class="wrap fallback">The axial viewer uses JavaScript. The original projection images and source notes are available below.</p></noscript>
+<section class="projections wrap" id="projections" aria-labelledby="projections-title">
+  <div class="section-head"><h2 id="projections-title">Saved projections</h2><p>Two views of the same full reconstruction. The H, dinosaur and star are features of the published Figure 2 scene.</p></div>
+  <div class="projection-pair">
+    <figure>
+      <h3>Depth-colored amplitude</h3>
+      <div class="projection-plane"><div class="y-axis"><span>−0.21</span><strong>y (m)</strong><span>+0.21</span></div><img width="55" height="55" alt="Depth-colored amplitude of the H, dinosaur and resolution star in the saved reconstruction" src="{{IMAGE0}}"><div class="x-axis"><span>−0.21</span><strong>x (m)</strong><span>+0.21</span></div></div>
+      <div class="depth-legend" style="background:{{LEGEND}}"></div><div class="ticks"><span>1.1</span><span>1.2</span><span>1.3</span><span>1.4</span><span>1.5</span><span>1.6 m</span></div>
+      <figcaption>Hue follows the source depth convention. Brightness follows amplitude. Black marks no crossing or zero display amplitude.</figcaption>
+    </figure>
+    <figure>
+      <h3>Maximum amplitude</h3>
+      <div class="projection-plane"><div class="y-axis"><span>−0.21</span><strong>y (m)</strong><span>+0.21</span></div><img width="55" height="55" alt="Normalized axial maximum projection from the same measured ultrasound input" src="{{IMAGE1}}"><div class="x-axis"><span>−0.21</span><strong>x (m)</strong><span>+0.21</span></div></div>
+      <div class="amplitude-legend"></div><div class="ticks"><span>0</span><span>Maximum</span></div>
+      <figcaption>Linear normalized projection of axial maxima. Black is the projection minimum and white its maximum.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="sources wrap" id="sources" aria-labelledby="sources-title">
+  <div class="section-head"><h2 id="sources-title">Source and limits</h2><p>The measurements, scene and released method are from Li et al. (2025). EchoSight contributed a Python port and the inspection display. The separate EchoSight room pipeline is outside this experiment.</p></div>
+  <div class="source-grid">
+    <div><h3>Published experiment</h3><p>Tailin Li, Ilya Starshynov, Khaled Kassem, Zongliang Xie, Ge Ren, Yihan Luo and Daniele Faccio.</p><ul class="source-links"><li><a href="https://doi.org/10.5525/gla.researchdata.2046">Figure 2 dataset · 10.5525/gla.researchdata.2046</a></li><li><a href="https://doi.org/10.1038/s42005-025-02335-3">Original paper · 10.1038/s42005-025-02335-3</a></li><li><a href="https://creativecommons.org/licenses/by/4.0/">Data and source-derived figures · CC BY 4.0</a></li><li><a href="{{NOTICEURL}}">Attribution and port changes</a></li></ul></div>
+    <div><h3>Reconstructed volume</h3><dl class="metadata"><dt>Volume</dt><dd>{{SHAPE}} float64 bins</dd><dt>Threshold depths</dt><dd>{{DEPTHRANGE}} · {{COUNT}} of 3025 pixels</dd><dt>Source bin spacing</dt><dd>{{SPACING}} mm from the released speed and sampling interval. Bin spacing does not measure resolution.</dd></dl><p><a href="https://github.com/nazeeh111/EchoSight/blob/backend/implementation/docs/MEASURED_NLOS.md">Reproduce this case</a> · <a href="https://github.com/nazeeh111/EchoSight/releases/tag/v0.3.2">Download 0.3.2</a></p></div>
+  </div>
+  <details><summary>Interpretation limits</summary><ul>{{LIMITS}}</ul></details>
+  <details><summary>Display encoding and saved array identities</summary>
+    <p>Axial grayscale is <code>round(clip(amplitude / global volume maximum, 0, 1) × 255)</code>. Both lateral display axes reverse their native indices. Display y increases downward. The 1-based source depth is the bin number multiplied by bin spacing. Native array indices shown in the viewer are zero-based.</p>
+    <p>The generated report’s <code>volume.npy</code>, <code>depth_m.npy</code> and <code>maximum_amplitude.npy</code> retain numerical precision. <a href="threshold-diagnostics.json">Threshold diagnostics JSON</a> records native crossings and maxima.</p>
+    <dl class="hashes"><dt>Input SHA-256</dt><dd><code>{{HASH}}</code></dd><dt>Axial display SHA-256</dt><dd><code>{{SLICEHASH}}</code></dd><dt>Threshold diagnostics SHA-256</dt><dd><code>{{DIAGNOSTICHASH}}</code></dd></dl>
+  </details>
+</section>
+</main>
+<script type="application/json" id="inspection-data">{{PAYLOAD}}</script>
+<script>{{SCRIPT}}</script>
+</body>
+</html>
