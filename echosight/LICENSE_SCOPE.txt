@@ -30,3 +30,20 @@ Fig2 full-phase/native55x55 route, bounded-slab Stolt interpolation, one FFT
 worker, omitted MATLAB windows and added quantitative PNG/HTML displays.
 Exact source/input identities are in notices/li2025/source-manifest.json;
 execution and measurement limits remain in docs/MEASURED_NLOS.md.
+
+
+Measured explorer source provenance
+
+The published experiment, released MATLAB method, measurements and
+source-derived figures retain the attribution and terms above. EchoSight's
+Python port and inspection UI are separate contributions.
+
+The adapted inspection logic from echosight/nlos_display.py is now carried in
+echosight/inspection/viewer.js, alongside new viewer controls. The original
+presentation source also includes echosight/nlos_inspection.py,
+echosight/inspection/template.html and echosight/inspection/style.css.
+The repository tool tools/reframe_published_inspection.py carries forward
+the original public slice bytes, projection PNGs and threshold diagnostics
+without performing a reconstruction or altering the hosted attribution notice.
+This inventory does not add any path to LICENSE_SCOPE.json or extend the
+exact MIT grant described above.

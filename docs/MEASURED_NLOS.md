@@ -61,9 +61,10 @@ parent wall deadline.
 Open generated `inspection.html` in a browser. Its native **55 × 55**
 depth-colored image, linear amplitude image and interactive axial slice view
 use actual saved output. Scrub consecutive source depth bins from about
-**1.0 to 1.7 m**. Click a pixel or use arrow keys for its source-array index,
-source coordinates and first threshold depth. Eight-bit slice displays add no
-voxels; `volume.npy` preserves full precision. Source y increases downward in
+**1.0 to 1.7 m**, step a bin at a time, or enter a source bin directly. Select a
+pixel by touch, keyboard arrows or its display row and column. The 2× crop
+enlarges a 27 × 27 block of existing pixels and updates the plotted axis bounds.
+Eight-bit slice displays add no voxels. `volume.npy` preserves full precision. Source y increases downward in
 this display. These coordinates are not registered into the room/world frame.
 
 `report.json` records input/source hashes, method, preset, axes, threshold,
@@ -80,6 +81,15 @@ Load with `numpy.load(path, allow_pickle=False)`. Use `mmap_mode='r'` to avoid
 loading the entire 75.6 MB volume at once. `preflight.json`, `run.json` and
 `worker.log` retain execution evidence. `axial-display.bin` is a bounded,
 quantized display subset; its native indices, scaling and hash are in the report.
+
+The hosted explorer uses the same renderer as `inspection.html`. The two saved
+projections, source notes and links also work with JavaScript disabled. To
+rebuild the first hosted explorer design update from the pinned public snapshot,
+run `python -m tools.reframe_published_inspection /path/to/6a99be15-snapshot index.html`
+from the source repository. The snapshot contains the original `index.html` and
+`threshold-diagnostics.json`. Keep the original sidecar and `NOTICE.md` alongside
+the generated page. Reframing retains the saved signal and introduces no new
+reconstruction or threshold calculation.
 
 ## Method, evidence and limits
 
